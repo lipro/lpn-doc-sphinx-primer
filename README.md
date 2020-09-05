@@ -2,7 +2,7 @@
 
 # Li-Pro.Net Sphinx Primer
 
-Li-Pro.Net how to write documentation with
+This is about how to write Li-Pro.Net documentation with
 [Sphinx](https://www.sphinx-doc.org).
 
 ## Howto build the documentation
@@ -67,7 +67,7 @@ $: sudo apt-get install wamerican-huge wngerman wgerman-medical
 ### Sphinx bootstrap
 
 For the purpose of later comprehension, the steps for setting up this
-document with the help of sphinx-quickstart were recorded here:
+document with the help of `sphinx-quickstart` were recorded here:
 
 ```bash
 $: sphinx-quickstart					\
