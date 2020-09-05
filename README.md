@@ -1,3 +1,5 @@
+[![Build Status](https://readthedocs.org/projects/lpn-doc-sphinx-primer-devel/badge/?version=latest)](https://lpn-doc-sphinx-primer-devel.readthedocs.io/en/latest/?badge=latest)
+
 # Li-Pro.Net Sphinx Primer
 
 Li-Pro.Net how to write documentation with
