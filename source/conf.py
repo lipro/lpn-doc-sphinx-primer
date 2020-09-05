@@ -373,6 +373,14 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['{}/_static'.format(DOCSRC)]
 
+# Add any extra paths that contain custom files (such as robots.txt or
+# .htaccess) here, relative to this directory. These files are copied
+# directly to the root of the documentation.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_extra_path
+#
+html_extra_path = ['{}/_extra'.format(DOCSRC)]
+
 
 # -- Extension configuration -------------------------------------------------
 
