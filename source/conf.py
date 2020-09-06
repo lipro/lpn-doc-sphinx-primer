@@ -579,6 +579,234 @@ extlinks = {
 #
 
 
+# -- Options for LaTeX output ---------------------------------------------
+#
+# http://www.sphinx-doc.org/en/3.x/latex.html
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-latex-output
+#
+# https://www.sphinx-doc.org/en/master/latex.html
+# https://blog.michael.franzl.name/2014/12/10/xelatex-unicode-font-fallback-unsupported-characters/
+# https://tex.stackexchange.com/questions/344100/
+# https://tex.stackexchange.com/questions/323575/
+
+# TODO: evaluate possible admonitionbox override, see:
+#       http://stackoverflow.com/a/13661732
+# Left aligne captions: http://tex.stackexchange.com/questions/136688/how-to-align-caption-with-table
+
+f = open('{}/_templates/extrapackages.tex'.format(DOCSRC), 'r+')
+latex_custom_extrapackages = f.read()
+
+f = open('{}/_templates/passoptstopackages.tex.in'.format(DOCSRC), 'r+')
+latex_custom_passoptionstopackages = f.read().format (
+    producer = r'Sphinx ' + build_sphinx,
+    creator = r'Sphinx ' + build_sphinx,
+    subject = project,
+    keywords = keywords,
+)
+
+f = open('{}/_templates/preamble.tex'.format(DOCSRC), 'r+')
+latex_custom_preamble = f.read()
+
+f = open('{}/_templates/fontpkg.tex'.format(DOCSRC), 'r+')
+latex_custom_fontpkg = f.read()
+
+f = open('{}/_templates/utf8extra.tex'.format(DOCSRC), 'r+')
+latex_custom_utf8extra = f.read()
+
+# The LaTeX engine to build the docs. The setting can have the
+# following values:
+#   'pdflatex' – PDFLaTeX (default, limited Unicode characters support)
+#   'xelatex' – XeLaTeX
+#   'lualatex' – LuaLaTeX
+#   'platex' – pLaTeX (default if language is 'ja')
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_engine
+#
+latex_engine = 'xelatex'
+
+# A dictionary that contains LaTeX snippets overriding those Sphinx
+# usually puts into the generated .tex files.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_elements
+# http://www.sphinx-doc.org/en/3.x/latex.html#latex-elements-confval
+# http://www.sphinx-doc.org/en/3.x/latex.html
+#
+latex_elements = {
+    #
+    # Keys that you may want to override include:
+    #
+    'extraclassoptions': 'table',
+
+    # Paper size option of the document class ('letterpaper' or 'a4paper'),
+    # default 'letterpaper'.
+    'papersize': 'a4paper',
+
+    # Point size option of the document class ('10pt', '11pt' or '12pt'),
+    # default '10pt'.
+    'pointsize': '10pt',
+
+    # "babel" package inclusion, default r'\usepackage{babel}'.
+    'babel': r'\usepackage[english]{babel}',
+
+    # "geometry" package inclusion, default r'\usepackage{geometry}'.
+    'geometry': r'\usepackage[bottom=4cm, left=2.4cm, right=2.4cm]{geometry}',
+
+    # Font package inclusion, default r'\usepackage{times}' (which uses Times
+    # and Helvetica). You can set this to '' to use the Computer Modern fonts.
+    # Defaults to '' when the language uses the Cyrillic script.
+    # For xelatex it defaults to: r'''\setmainfont{FreeSerif}[..]
+    # \setsansfont{FreeSans}[..]\setmonofont{FreeMono}[..]'''
+    'fontpkg': latex_custom_fontpkg,
+
+    # Inclusion of the "fncychap" package (which makes fancy chapter titles),
+    # default r'\usepackage[Bjarne]{fncychap}' for English documentation,
+    # r'\usepackage[Sonny]{fncychap}' for internationalized docs (because the
+    # "Bjarne" style uses numbers spelled out in English). Other "fncychap"
+    # styles you can try include "Lenny", "Glenn", "Conny" and "Rejne". You can
+    # also set this to '' to disable fncychap.
+#   'fncychap': r'\usepackage[Sonny]{fncychap}',
+#   'fncychap': r'\usepackage[Bjarne]{fncychap}',
+    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+
+    # Additional package inclusion, default empty.
+    'extrapackages': latex_custom_extrapackages,
+
+    # "PassOptionsToPackage" call, default empty.
+    'passoptionstopackages': latex_custom_passoptionstopackages,
+
+    # Additional preamble content, default empty.
+    'preamble': latex_custom_preamble,
+
+    # Latex figure (float) alignment, default 'htbp' (here, top, bottom, page).
+    # Whenever an image doesn't fit into the current page, it will be 'floated'
+    # into the next page but may be preceded by any other text. If you don't
+    # like this behavior, use 'H' which will disable floating and position
+    # figures strictly in the order they appear in the source.
+    'figure_align': 'H',
+
+    # Latex number figure format, default empty.
+#   'numfig_format': '',
+
+    #
+    # Keys that don’t need be overridden unless in special cases are:
+    #
+
+    # "inputenc" package inclusion, defaults to r'\usepackage[utf8]{inputenc}'
+    # when using pdflatex. Otherwise unset.
+#   'inputenc': r'\usepackage[utf8]{inputenc}',
+
+    # Unicode character declaration, for xelatex defaults to:
+    # \catcode`^^^^00a0\active\protected\def^^^^00a0{\leavevmode\nobreak\ }
+    'utf8extra': latex_custom_utf8extra,
+
+    # "cmap" package inclusion, default r'\usepackage{cmap}'.
+#   'cmappkg': r'\usepackage{cmap}',
+
+    # "fontenc" package inclusion, default r'\usepackage[T1]{fontenc}' and
+    # r'\usepackage{fontspec}\defaultfontfeatures[\rmfamily,\sffamily,\ttfamily]{}'
+    # in case of xelatex for non-mandarin languages.
+#   'fontenc': r'\usepackage[T1]{fontenc}',
+
+    # "amsmath" package inclusion, default r'\usepackage{amsmath,amssymb,amstext}'.
+#   'amsmath': r'\usepackage{amsmath,amssymb,amstext}',
+
+    # Value that prefixes 'release' element on title page, default 'Release'.
+    'releasename': 'Version',
+
+    # "makeindex" call, default r'\makeindex'. Override if you want to
+    # generate a differently-styled index page.
+#   'makeindex': r'\makeindex',
+
+    # "maketitle" call, default r'\sphinxmaketitle'. Override if you want to
+    # generate a differently-styled title page.
+#   'maketitle': r'\sphinxmaketitle',
+
+    # "tableofcontents" call, default r'\sphinxtableofcontents'. Override if
+    # you want to generate a different table of contents or put content between
+    # the title page and the TOC.
+#   'tableofcontents': r'\sphinxtableofcontents',
+
+    # "printindex" call, the last thing in the file, default r'\printindex'.
+    # Override if you want to generate the index differently or append some
+    # content after the index.
+    'printindex': r'\footnotesize\raggedright\printindex',
+
+    # Commands used to display transitions, default r'\n\n\bigskip\hrule{}\bigskip\n\n'.
+    # Override if you want to display transitions differently.
+#   'transition': r'\n\n\bigskip\hrule{}\bigskip\n\n',
+
+    #
+    # Keys that are set by other options and therefore should not be
+    # overridden are: 'docclass' 'classoptions' 'extraclassoptions'
+    #                 'contentsname' 'title' 'date' 'release'
+    #                 'author' 'logo' 'makeindex' 'shorthandoff'
+    #                 'tocdepth' 'pageautorefname'
+    #
+
+    # Get rid of evenly numbered empty pages (default book style)
+#   'classoptions': ',openany,oneside',
+    'classoptions': ',openany',
+}
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title,
+#  author, documentclass [howto, manual, or own class]).
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_documents
+#
+latex_documents = [
+    (master_doc, basename + '.tex', title, author, 'manual'),
+]
+
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_logo
+#
+#latex_logo = None
+latex_logo = '{}/_images/lpn.pdf'.format(DOCSRC)
+
+# If true, show page references after internal links. Default: False.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_show_pagerefs
+#
+latex_show_pagerefs = True
+
+# If true, show URL addresses after external links. Default: 'no'.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_show_urls
+#
+# latex_show_urls = 'no'
+# latex_show_urls = 'footnote'
+# latex_show_urls = 'inline'
+
+# A list of file names, relative to the configuration directory, to copy
+# to the build directory when building LaTeX output. This overrides the
+# files which is provided from Sphinx such as sphinx.sty.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_additional_files
+#
+#latex_additional_files = [
+#    '{}/_extra/file.ext'.format(DOCSRC),
+#]
+
+# Documents to append as an appendix to all manuals.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_appendices
+#
+#latex_appendices = [
+#    'appendix',
+#    'glossary',
+#    'bibliography',
+#]
+
+# If false, no module index is generated.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_domain_indices
+#
+#latex_domain_indices = True
+
+
 # -- Options for HTML output -------------------------------------------------
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-html-output

@@ -1,0 +1,109 @@
+%
+% START: LDSP latex_custom_preamble
+%
+\cftsetpnumwidth {1.25cm}\cftsetrmarg{1.5cm}
+\setlength{\cftchapnumwidth}{0.75cm}
+\setlength{\cftsecindent}{\cftchapnumwidth}
+\setlength{\cftsecnumwidth}{1.25cm}
+%
+% DO NOT CHANGE TITLE FORMAT -- we use the Bjornstrup fancy chapters
+%titleformat{\chapter}[hang]{\LARGE\bfseries\color{TitleColor}}{\thechapter}{0.5em}{\LARGE\bfseries\color{TitleColor}}
+%titlespacing{\chapter}{0pt}{0em}{6pt}
+%
+% Set up the appendix mode and modify the LaTex toc behavior
+\xpretocmd{\appendix}{\addappheadtotoc}{}{}
+\xpretocmd{\appendix}{\cleardoublepage\phantomsection}{}{}
+%
+% Redefinition, symbol included in link:
+\let\orighref\href
+\renewcommand{\href}[2]{\orighref{#1}{#2\,\faExternalLink}}
+\let\origurl\url
+%renewcommand{\url}[1]{\origurl{#1}~\faExternalLink}
+\renewcommand{\url}[1]{\orighref{#1}{#1\,\faExternalLink}}
+%
+% TABLE FORMATTING -- begin
+%
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+% https://github.com/sphinx-doc/sphinx/issues/2832
+% https://tex.stackexchange.com/questions/58390/tables-colouring-odd-even-mixed-up
+%
+\protected\def\sphinxstyletheadfamily{\cellcolor{gray!25}\bf}
+%protected\def\sphinxstyletheadfamily{\cellcolor{gray!25}\color{black}\bf}
+\makeatletter
+%preto\tabular{\global\rownum=\z@}
+%preto\tabular{\global\rownum=\z@\fontsize{10pt}{16pt}\selectfont}
+\preto\tabular{\global\rownum=\z@\fontsize{10pt}{16pt}\selectfont\rowcolors{1}{gray!10}{white}}
+\preto\longtable{\global\rownum=\z@\fontsize{10pt}{16pt}\selectfont\rowcolors{1}{gray!10}{white}}
+\makeatother
+%setlength\arrayrulewidth{0pt}\arrayrulecolor{white}
+%setlength\doublerulesep{0pt}\doublerulesepcolor{white}
+%setlength{\tabcolsep}{4pt}     % general space between columns (6pt standard)
+%renewcommand{\arraystretch}{1} % general between rows (1 standard)
+%newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash}p{\dimexpr#1}} % left-top
+%newcolumntype{N}[1]{>{\raggedright\let\newline\\\arraybackslash}m{\dimexpr#1}} % left-middle
+%newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash}b{\dimexpr#1}} % left-bottom
+%newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash}p{\dimexpr#1}}   % center-top
+%newcolumntype{E}[1]{>{\centering\let\newline\\\arraybackslash}m{\dimexpr#1}}   % center-middle
+%newcolumntype{G}[1]{>{\centering\let\newline\\\arraybackslash}b{\dimexpr#1}}   % center-bottom
+%newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash}p{\dimexpr#1}}  % right-top
+%newcolumntype{T}[1]{>{\raggedleft\let\newline\\\arraybackslash}m{\dimexpr#1}}  % right-middle
+%newcolumntype{V}[1]{>{\raggedleft\let\newline\\\arraybackslash}b{\dimexpr#1}}  % right-bottom
+% TABLE FORMATTING -- end
+%
+% Listings (Sphinx counts literalblock -- can't use \lstlistoflistings)
+\newcommand{\listoflistings}{\listof{literalblock}{\lstlistlistingname}}
+%xpretocmd{\listoflistings}{\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\lstlistlistingname}}{}{}
+\xpretocmd{\listoflistings}{\addcontentsline{toc}{chapter}{\lstlistlistingname}}{}{}
+\xpretocmd{\listoflistings}{\stepcounter{chapter}}{}{}
+\xpretocmd{\listoflistings}{\cleardoublepage\phantomsection}{}{}
+%
+% List of Tables
+%xpretocmd{\listoftables}{\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\listtablename}}{}{}
+\xpretocmd{\listoftables}{\addcontentsline{toc}{chapter}{\listtablename}}{}{}
+\xpretocmd{\listoftables}{\stepcounter{chapter}}{}{}
+\xpretocmd{\listoftables}{\cleardoublepage\phantomsection}{}{}
+%
+% List of Figures
+%xpretocmd{\listoffigures}{\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\listfigurename}}{}{}
+\xpretocmd{\listoffigures}{\addcontentsline{toc}{chapter}{\listfigurename}}{}{}
+\xpretocmd{\listoffigures}{\stepcounter{chapter}}{}{}
+\xpretocmd{\listoffigures}{\cleardoublepage\phantomsection}{}{}
+%
+% List of Equations (see: https://tex.stackexchange.com/questions/14317)
+\makeatletter
+\newcommand{\listequationsname}{List of Equations}
+\newlistof{equations}{equ}{\listequationsname}
+\newcommand{\equations}[1]{\addcontentsline{equ}{equations}{\protect\numberline{\theequation}#1}}
+\setlength{\cftequationsnumwidth}{3em}
+\let\origequation\equation
+\let\endorigequation\endequation
+\AtBeginDocument{\let\origlabel\label}% \AtBeginDocument because hyperref redefines \label
+%newcommand{\equationlabel}[1]{\equations{#1}\origlabel{#1}}
+%newcommand{\equationlabel}[1]{\equations{\ref{#1}}\origlabel{#1}}
+\newcommand{\equationlabel}[1]{\equations{\autoref{#1}}\origlabel{#1}}
+\renewenvironment{equation}{\origequation\let\label\equationlabel}{\endorigequation}
+%newcommand{\listofequations}{\chapter*{\listequationsname}}
+%xpretocmd{\listofequations}{\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\listequationsname}}{}{}
+\xpretocmd{\listofequations}{\addcontentsline{toc}{chapter}{\listequationsname}}{}{}
+\xpretocmd{\listofequations}{\stepcounter{chapter}}{}{}
+\xpretocmd{\listofequations}{\cleardoublepage\phantomsection}{}{}
+\makeatother
+%
+% List of Downloads
+\newcommand{\listdownloadname}{List of Downloads}
+\newcommand{\listofdownloads}{\chapter*{\listdownloadname}}
+%xpretocmd{\listofdownloads}{\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\listdownloadname}}{}{}
+\xpretocmd{\listofdownloads}{\addcontentsline{toc}{chapter}{\listdownloadname}}{}{}
+\xpretocmd{\listofdownloads}{\stepcounter{chapter}}{}{}
+\xpretocmd{\listofdownloads}{\cleardoublepage\phantomsection}{}{}
+%
+% List of Issues (To-Do)
+\newcommand\listissuesname{List of Issues (To-Do)}
+\newcommand{\listofissues}{\chapter*{\listissuesname}}
+%xpretocmd{\listofissues}{\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}\listissuesname}}{}{}
+\xpretocmd{\listofissues}{\addcontentsline{toc}{chapter}{\listissuesname}}{}{}
+\xpretocmd{\listofissues}{\stepcounter{chapter}}{}{}
+\xpretocmd{\listofissues}{\cleardoublepage\phantomsection}{}{}
+%
+% END: LDSP latex_custom_preamble
+%
