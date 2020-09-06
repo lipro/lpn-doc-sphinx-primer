@@ -37,6 +37,16 @@ if "DOCSRC" not in os.environ:
 else:
     DOCSRC = os.path.abspath(os.environ["DOCSRC"])
 
+if "DOCTOP" not in os.environ:
+    DOCTOP = os.path.abspath(os.path.join(DOCSRC, '..'))
+else:
+    DOCTOP = os.path.abspath(os.environ["DOCTOP"])
+
+if "DOCBLD" not in os.environ:
+    DOCBLD = os.path.abspath(os.path.join(DOCTOP, 'build'))
+else:
+    DOCBLD = os.path.abspath(os.environ["DOCBLD"])
+
 # Add the 'extensions' directory to sys.path, to enable finding Sphinx
 # extensions within. If extensions (or modules to document with autodoc)
 # are in another directory, add these directories to sys.path here. If the
@@ -87,7 +97,6 @@ build_sphinx = sphinx.__version__
 needs_extensions = {
 #   'sphinx.ext.autodoc':                       needs_sphinx,
 #   'sphinx.ext.autosummary':                   needs_sphinx,
-#   'sphinx.ext.autosgen':                      needs_sphinx,
     'sphinx.ext.autosectionlabel':              needs_sphinx,
     'sphinx.ext.doctest':                       needs_sphinx,
     'sphinx.ext.coverage':                      needs_sphinx,
@@ -101,6 +110,7 @@ needs_extensions = {
     'sphinx.ext.mathjax':                       needs_sphinx,
 #   'sphinx.ext.jsmath':                        needs_sphinx,
 #   'sphinx.ext.graphviz':                      needs_sphinx,
+#   'sphinx.ext.imgconverter':                  needs_sphinx,
 #   'sphinx.ext.inheritance_diagram':           needs_sphinx,
 #   'sphinx_rtd_theme':                         '0.5.0',
 }
@@ -114,7 +124,6 @@ needs_extensions = {
 extensions = [
 #   'sphinx.ext.autodoc',
 #   'sphinx.ext.autosummary',
-#   'sphinx.ext.autosgen',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.doctest',
     'sphinx.ext.coverage',
@@ -128,6 +137,7 @@ extensions = [
     'sphinx.ext.mathjax',
 #   'sphinx.ext.jsmath',
 #   'sphinx.ext.graphviz',
+#   'sphinx.ext.imgconverter',
 #   'sphinx.ext.inheritance_diagram',
     'sphinx_rtd_theme',
 ]
@@ -361,6 +371,207 @@ linkcheck_workers = 10
 linkcheck_anchors = False
 
 
+# -- Extension configuration -------------------------------------------------
+
+
+# -- Options for sphinx.ext.autodoc -- Include documentation from docstrings -
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/autodoc.html
+#
+
+
+# -- Options for sphinx.ext.autosummary -- Generate autodoc summaries --------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/autosummary.html
+#
+
+
+# -- Options for sphinx.ext.autosectionlabel -- Allow reference sections -----
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/autosectionlabel.html
+#
+
+# Internally, this extension generates the labels for each section. If same
+# section names are used in whole of document, any one is used for a target
+# by default. The autosectionlabel_prefix_document configuration variable
+# can be used to make headings which appear multiple times but in different
+# documents unique.
+
+# True to prefix each section label with the name of the document it is in,
+# followed by a colon. For example, index:Introduction for a section called
+# Introduction that appears in document index.rst. Useful for avoiding
+# ambiguity when the same section heading appears in different documents.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/autosectionlabel.html#confval-autosectionlabel_prefix_document
+#
+autosectionlabel_prefix_document = True
+
+
+# -- Options for sphinx.ext.doctest -- Test snippets in the ------------------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/doctest.html
+#
+
+
+# -- Options for sphinx.ext.coverage -- Collect doc coverage stats -----------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/coverage.html
+#
+
+
+# -- Options for sphinx.ext.todo -- Support for todo items -------------------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/todo.html
+#
+
+# If this is True, `todo` and `todoList` produce output, else they produce
+# nothing. The default is False.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/todo.html#confval-todo_include_todos
+#
+todo_include_todos = True
+
+
+# -- Options for sphinx.ext.ifconfig -- Include content based on configuration
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/ifconfig.html
+#
+
+
+# -- Options for sphinx.ext.intersphinx -- Link to other projects ------------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/intersphinx.html
+#
+
+# This extension can generate automatic links to the documentation
+# of objects in other projects. Usage is simple: whenever Sphinx
+# encounters a cross-reference that has no matching target in the
+# current documentation set, it looks for targets in the documentation
+# sets configured in intersphinx_mapping.
+
+# This config value contains the locations and names of other projects
+# that should be linked to in this documentation.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/intersphinx.html#confval-intersphinx_mapping
+#
+# Example configuration for intersphinx: refer to the Python standard library.
+# intersphinx_mapping = {'https://docs.python.org/3/': None}
+
+# on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+# if on_rtd:
+#     intersphinx_mapping = {
+#         'sphinx': ('/Users/rexut/checkouts/sphinx/doc/_build/html/', None),
+#     }
+# else:
+intersphinx_mapping = {
+    #
+    # Standard reference to this docs, with local objects.inv
+    #
+
+    # python -m sphinx.ext.intersphinx 'docs/_build/html/objects.inv'
+    # '': ('{}/html/'.format(DOCBLD), None),
+
+    #
+    # Standard reference to web docs, with web objects.inv
+    #
+
+    # python -m sphinx.ext.intersphinx 'https://docs.python.org/3/objects.inv'
+    'pydocs': ('https://docs.python.org/3/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://devguide.python.org/objects.inv'
+    'pydevguide': ('https://devguide.python.org/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://www.sphinx-doc.org/en/3.x/objects.inv'
+    'sphinx': ('https://www.sphinx-doc.org/en/3.x/', None),
+
+    #
+    # Drawing the Docutils objects.inv from a RTD server,
+    # but referring to the 0.16 web docs
+    # Idea comes from https://sphobjinv.readthedocs.io/en/latest/
+    #
+
+    # python -m sphinx.ext.intersphinx 'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'
+    'docutils': ('https://docutils.sourceforge.io/docs/',
+                 'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'),
+}
+
+
+# -- Options for sphinx.ext.extlinks -- Markup to shorten external links -----
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/extlinks.html
+#
+
+# This extension is meant to help with the common pattern of having many
+# external links that point to URLs on one and the same site, e.g. links
+# to bug trackers, version control web interfaces, or simply subpages in
+# other websites. It does so by providing aliases to base URLs, so that
+# you only need to give the subpage name when creating a link.
+
+# This config value must be a dictionary of external sites, mapping unique
+# short alias names to a base URL and a prefix.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/extlinks.html#confval-extlinks
+#
+extlinks = {
+    'wikide':       ('https://de.wikipedia.org/wiki/%s', 'German Wikipedia: '),
+    'wikien':       ('https://en.wikipedia.org/wiki/%s', 'English Wikipedia: '),
+    'dufaq':        ('https://docutils.sourceforge.io/FAQ.html#%s', ''),
+    'dutodo':       ('https://docutils.sourceforge.io/docs/dev/todo.html#%s', ''),
+    'duuser':       ('https://docutils.sourceforge.io/docs/user/rst/%s.html', ''),
+    'durole':       ('https://docutils.sourceforge.io/docs/ref/rst/roles.html#%s', ''),
+    'dudir':        ('https://docutils.sourceforge.io/docs/ref/rst/directives.html#%s', ''),
+    'duref':        ('https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#%s', ''),
+    'spxpanels':    ('https://sphinx-panels.readthedocs.io/en/stable/index.html#%s', ''),
+}
+
+
+# -- Options for sphinx.ext.viewcode -- Add links to highlighted source code -
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/viewcode.html
+#
+
+
+# -- Options for sphinx.ext.linkcode -- Add external links to source code ----
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/linkcode.html
+#
+
+
+# -- Options for sphinx.ext.*math* -- Math support for HTML outputs in Sphinx
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/math.html
+#
+#    sphinx.ext.imgmath -- Render math as images
+#    sphinx.ext.mathjax -- Render math via JavaScript (prefered)
+#    sphinx.ext.jsmath  -- Render math via JavaScript
+#
+
+
+# -- Options for sphinx.ext.graphviz -- Add Graphviz graphs ------------------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/graphviz.html
+#
+
+
+# -- Options for sphinx.ext.imgconverter -- Converter using Imagemagick ------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/inheritance.html
+#
+# Note: Imagemagick rasterizes a SVG image on conversion. As a result, the
+#       image becomes not scalable. To avoid that, please use other image
+#       converters like sphinxcontrib-svg2pdfconverter (which uses Inkscape
+#       or rsvg-convert).
+#
+# https://github.com/missinglinkelectronics/sphinxcontrib-svg2pdfconverter
+#
+
+
+# -- Options for sphinx.ext.inheritance_diagram -- Include inheritance diagrams
+#
+# https://www.sphinx-doc.org/en/3.x/usage/extensions/inheritance.html
+#
+
+
 # -- Options for HTML output -------------------------------------------------
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-html-output
@@ -546,16 +757,3 @@ html_show_license = True
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_search_scorer
 #
 html_search_scorer = '{}/_static/js/scorer.js'.format(DOCSRC)
-
-
-# -- Extension configuration -------------------------------------------------
-
-# -- Options for intersphinx extension ---------------------------------------
-
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/3/': None}
-
-# -- Options for todo extension ----------------------------------------------
-
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
