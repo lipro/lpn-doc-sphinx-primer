@@ -61,6 +61,8 @@ project = 'Li-Pro.Net Sphinx Primer'
 author = 'The LP/N Documentation Team'
 publisher = 'Li–Pro.Net'
 copyright = '2020, ' + publisher + ', ' + author + ' and individual contributors'
+category = 'Miscellaneous'
+about = 'How to write Li-Pro.Net documentation with Sphinx.'
 keywords = 'sphinx,howto,primer'
 
 # The short X.Y version
@@ -780,7 +782,7 @@ epub_title = project
 epub_author = author
 epub_publisher = publisher
 epub_copyright = copyright
-epub_description = 'how to write Li-Pro.Net documentation with Sphinx.'
+epub_description = about
 
 # The basename for the epub file. It defaults to the project name.
 #
@@ -966,8 +968,8 @@ text_sectionchars = '*=-~"+`'
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_documents
 #
 texinfo_documents = [
-    (master_doc, basename, project + u' Documentation', author, publisher,
-     'how to write Li-Pro.Net documentation with Sphinx.', 'Miscellaneous'),
+    (master_doc, basename, project + u' Documentation',
+     author, publisher, about, category),
 ]
 
 # Documents to append as an appendix to all manuals.
