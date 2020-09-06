@@ -792,3 +792,65 @@ qthelp_basename = basename
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-qthelp_namespace
 #
 qthelp_namespace = namespace
+
+
+# -- Options for Text output ----------------------------------------------
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-text-output
+#
+
+# Determines which end-of-line character(s) are used in text
+# output: 'unix', 'windows', or 'native'. Default: 'unix'.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-text_newlines
+#
+# text_newlines = 'unix'
+
+# A string of 7 characters that should be used for underlining
+# sections. The first character is used for first-level headings,
+# the second for second-level headings and so on. The default is '*=-~"+`'.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-text_sectionchars
+#
+text_sectionchars = '*=-~"+`'
+
+
+# -- Options for Texinfo output -------------------------------------------
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-texinfo-output
+#
+
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_documents
+#
+texinfo_documents = [
+    (master_doc, basename, project + u' Documentation', author, publisher,
+     'how to write Li-Pro.Net documentation with Sphinx.', 'Miscellaneous'),
+]
+
+# Documents to append as an appendix to all manuals.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_appendices
+#
+#texinfo_appendices = []
+
+# If false, no module index is generated.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_domain_indices
+#
+#texinfo_domain_indices = True
+
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_show_urls
+#
+#texinfo_show_urls = 'footnote'
+
+# If true, do not generate a @detailmenu in the "Top" node's menu.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_no_detailmenu
+#
+#texinfo_no_detailmenu = False
