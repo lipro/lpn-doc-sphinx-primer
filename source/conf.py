@@ -968,7 +968,7 @@ text_sectionchars = '*=-~"+`'
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_documents
 #
 texinfo_documents = [
-    (master_doc, basename, project + u' Documentation',
+    (master_doc, basename, project + ' Documentation',
      author, publisher, about, category),
 ]
 
@@ -1008,7 +1008,7 @@ texinfo_documents = [
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-man_pages
 #
 man_pages = [
-  (master_doc, basename, project + u' Documentation', author, 1),
+  (master_doc, basename, project + ' Documentation', author, 1),
 ]
 
 # If true, show URL addresses after external links.
