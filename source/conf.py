@@ -69,6 +69,10 @@ version = '0.0'
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
 
+# Single target file names
+namespace = 'net.li-pro.doc.sphinx-primer.' + version + '.'
+basename = 'lpn-doc-sphinx-primer'
+
 
 # -- Specific configuration --------------------------------------------------
 
@@ -757,3 +761,34 @@ html_show_license = True
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_search_scorer
 #
 html_search_scorer = '{}/_static/js/scorer.js'.format(DOCSRC)
+
+
+# -- Options for HTML help output --------------------------------------------
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-html-help-output
+#
+
+# Output file base name for HTML help builder.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-htmlhelp_basename
+#
+htmlhelp_basename = basename
+
+
+# -- Options for QtHelp output -----------------------------------------------
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-qthelp-output
+#
+
+# Output file base name for QtHelp builder.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-qthelp_basename
+#
+qthelp_basename = basename
+
+# The namespace for the qthelp file. It defaults to
+# org.sphinx.<project_name>.<project_version>.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-qthelp_namespace
+#
+qthelp_namespace = namespace
