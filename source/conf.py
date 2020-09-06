@@ -60,7 +60,7 @@ sys.path.insert(0, os.path.join(DOCSRC, '_extensions'))
 project = 'Li-Pro.Net Sphinx Primer'
 author = 'The LP/N Documentation Team'
 publisher = 'Li–Pro.Net'
-copyright = '2020, ' + publisher + ', ' + author + ' and individual contributors'
+copyright = '2020, ' + publisher + ', ' + author + ' and individual contributors.'
 category = 'Miscellaneous'
 about = 'How to write Li-Pro.Net documentation with Sphinx.'
 keywords = 'sphinx,howto,primer'
