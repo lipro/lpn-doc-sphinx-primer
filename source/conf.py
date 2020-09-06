@@ -86,6 +86,11 @@ else:
     is_release = False
     docs_title = 'Docs / Latest'
 
+# Only use SVG converter when it is really needed, e.g. LaTeX.
+if tags.has("svgconvert"):  # pylint: disable=undefined-variable
+    extensions.append('sphinxcontrib.rsvgconverter')
+                   # ('sphinxcontrib.inkscapeconverter')
+
 
 # -- General configuration ---------------------------------------------------
 
@@ -577,6 +582,30 @@ extlinks = {
 #
 # https://www.sphinx-doc.org/en/3.x/usage/extensions/inheritance.html
 #
+
+
+# -- Options for sphinxcontrib-svg2pdfconverter -- Convert SVG images to PDF -
+#
+# https://pypi.org/project/sphinxcontrib-svg2pdfconverter/
+#
+#    sphinxcontrib.inkscapeconverter -- either Inkscape,
+#    sphinxcontrib.rsvgconverter     -- rsvg-convert from libRSVG or
+#    sphinxcontrib.cairosvgconverter -- CairoSVG
+#
+
+# Path to Inkscape binary. By default, this is:
+#inkscape_converter_bin = 'inkscape'
+
+# Additional command-line arguments for Inkscape, as a list.
+# By default, this is:
+#inkscape_converter_args = ['--export-area-drawing']
+
+# Path to RSVG converter binary. By default, this is:
+#rsvg_converter_bin = 'rsvg-convert'
+
+# Additional command-line arguments for the RSVG converter, as a list.
+# By default, this is the emtpy list:
+#rsvg_converter_args = []
 
 
 # -- Options for LaTeX output ---------------------------------------------
