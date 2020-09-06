@@ -854,3 +854,24 @@ texinfo_documents = [
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_no_detailmenu
 #
 #texinfo_no_detailmenu = False
+
+
+# -- Options for manual page output ---------------------------------------
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-manual-page-output
+#
+
+# One entry per manual page. List of tuples
+# (source start file, name, description, authors, manual section).
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-man_pages
+#
+man_pages = [
+  (master_doc, basename, project + u' Documentation', author, 1),
+]
+
+# If true, show URL addresses after external links.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-man_show_urls
+#
+#man_show_urls = False
