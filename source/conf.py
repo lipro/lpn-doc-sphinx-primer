@@ -27,6 +27,7 @@
 
 # -- Path setup --------------------------------------------------------------
 
+import sphinx_rtd_theme
 import sphinx
 import sys
 import os
@@ -101,6 +102,7 @@ needs_extensions = {
 #   'sphinx.ext.jsmath':                        needs_sphinx,
 #   'sphinx.ext.graphviz':                      needs_sphinx,
 #   'sphinx.ext.inheritance_diagram':           needs_sphinx,
+#   'sphinx_rtd_theme':                         '0.5.0',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -127,6 +129,7 @@ extensions = [
 #   'sphinx.ext.jsmath',
 #   'sphinx.ext.graphviz',
 #   'sphinx.ext.inheritance_diagram',
+    'sphinx_rtd_theme',
 ]
 
 
@@ -366,7 +369,60 @@ linkcheck_anchors = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_theme
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_theme_path
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_theme_options
+#
+html_theme = 'sphinx_rtd_theme'
+
+#
+# https://sphinx-rtd-theme.readthedocs.io/en/0.5.0/configuring.html
+#
+html_theme_options = {
+    'canonical_url': 'https://lpn-doc-sphinx-primer-devel.readthedocs.io/',
+    'logo_only': False,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': True,
+    # Toc options
+    'collapse_navigation': False,
+    'sticky_navigation': False,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
+
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_title
+#
+html_title = project
+
+# This value determines the text for the permalink; it defaults to "¶".
+# Set it to None or the empty string to disable permalinks.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_add_permalinks
+#
+#html_add_permalinks = ""
+
+# A shorter title for the navigation bar.  Default is the same as html_title.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_short_title
+#
+#html_short_title = None
+
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_logo
+#
+html_logo = '{}/_images/lpn.svg'.format(DOCSRC)
+
+# The name of an image file (within the static path) to use as favicon of the
+# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_favicon
+#
+html_favicon = '{}/_images/lpn.ico'.format(DOCSRC)
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -380,6 +436,116 @@ html_static_path = ['{}/_static'.format(DOCSRC)]
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_extra_path
 #
 html_extra_path = ['{}/_extra'.format(DOCSRC)]
+
+# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
+# using the given strftime format.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_last_updated_fmt
+#
+html_last_updated_fmt = '%b %d, %Y'
+
+# If true, SmartyPants will be used to convert quotes and dashes to
+# typographically correct entities.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_use_smartypants
+#
+#html_use_smartypants =
+
+# Custom sidebar templates, maps document names to template names.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_sidebars
+#
+#html_sidebars = {}
+
+# Additional templates that should be rendered to pages, maps page names to
+# template names.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_additional_pages
+#
+#html_additional_pages = {}
+
+# If false, no module index is generated.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_domain_indices
+#
+html_domain_indices = False
+
+# If false, no index is generated.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_use_index
+#
+html_use_index = True
+
+# If true, the index is split into individual pages for each letter.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_split_index
+#
+html_split_index = True
+
+# If true, links to the reST sources are added to the pages.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_show_sourcelink
+#
+html_show_sourcelink = True
+
+# Suffix to be appended to source links.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_sourcelink_suffix
+#
+html_sourcelink_suffix = '.txt'
+
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_show_sphinx
+#
+html_show_sphinx = True
+
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_show_copyright
+#
+# html_show_copyright = tags.has('development')
+html_show_copyright = True
+
+# If true, license is shown in the HTML footer. Default is True.
+html_show_license = True
+
+# If true, an OpenSearch description file will be output, and all pages will
+# contain a <link> tag referring to it.  The value of this option must be the
+# base URL from which the finished HTML is served.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_use_opensearch
+#
+#html_use_opensearch = ''
+
+# This is the file name suffix for HTML files (e.g. ".xhtml").
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_file_suffix
+#
+#html_file_suffix = None
+
+# Language to be used for generating the HTML full-text search index.
+# Sphinx supports the following languages:
+#   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
+#   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_search_language
+#
+#html_search_language = 'en'
+
+# A dictionary with options for the search language support, empty by default.
+# Now only 'ja' uses this config value
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_search_options
+#
+#html_search_options = {'type': 'default'}
+
+# The name of a javascript file (relative to the configuration directory) that
+# implements a search results scorer. If empty, the default will be used.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_search_scorer
+#
+html_search_scorer = '{}/_static/js/scorer.js'.format(DOCSRC)
 
 
 # -- Extension configuration -------------------------------------------------
