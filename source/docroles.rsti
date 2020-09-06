@@ -1,0 +1,44 @@
+.. Never add or change more than reST role definitions (ex. LaTeX formatting).
+
+.. Roles:
+
+.. simple class mappings
+
+.. role:: strikethrough
+
+.. conditional raw outputs
+
+.. role:: raw-html(raw)
+   :format: html
+
+.. role:: raw-latex(raw)
+   :format: latex
+
+.. inline syntax highlighting for well known languages
+
+.. role:: console(code)
+   :language: console
+   :class: highlight
+
+.. role:: bash(code)
+   :language: bash
+   :class: highlight
+
+.. role:: c(code)
+   :language: c
+   :class: highlight
+
+.. role:: latex(code)
+   :language: latex
+   :class: highlight
+
+.. role:: rst(code)
+   :language: rst
+   :class: highlight
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,26 @@
+.. Never add or change more than term replacements (ex. LaTeX formatting).
+
+.. Glossary Replacements:
+
+.. Commons:
+
+.. Journals:
+
+.. Devices:
+
+.. Operating Systems:
+
+.. Programming Languages:
+
+.. Network:
+
+.. Technologies:
+
+.. Abbreviations:
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

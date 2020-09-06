@@ -217,6 +217,44 @@ master_doc = 'index'
 #
 exclude_patterns = []
 
+# A string of reStructuredText that will be included at the beginning of every
+# source file that is read.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-rst_prolog
+#
+rst_prolog = u'''
+.. include:: /{docsrc}/docroles.rsti
+.. include:: /{docsrc}/docmeta.rsti
+.. |CREDITS| replace:: :download:`CREDITS </{docsrc}/CREDITS>`
+.. |LICENSE| replace:: :download:`LICENSE </{docsrc}/LICENSE>`
+.. |publisher| replace:: {publisher}
+.. |copyright| replace:: {copyright}
+.. |project| replace:: {project}
+.. |title| replace:: {title}
+.. |author| replace:: {author}
+.. |about| replace:: {about}
+'''.format(
+    docsrc = DOCSRC,
+    publisher = publisher,
+    copyright = copyright,
+    project = project,
+    title = title,
+    author = author,
+    about = about,
+)
+
+# A string of reStructuredText that will be included at the end of every source
+# file that is read. This is the right place to add substitutions that should be
+# available in every file.
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-rst_epilog
+#
+rst_epilog = '''
+.. include:: /{docsrc}/termsgloss.rsti
+.. include:: /{docsrc}/docextlnk.rsti
+.. include:: /{docsrc}/docunicode.rsti
+'''.format(docsrc = DOCSRC)
+
 # This change will allow us to use bare back-tick notation to let
 # Sphinx hunt for a reference, starting with normal "document"
 # references such as :ref:, but also including :c: and :cpp: domains

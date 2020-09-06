@@ -1,0 +1,23 @@
+.. Never add or change more than external links (ex. LaTeX formatting).
+
+.. External Links:
+
+.. _`Lagerplatz von Li-Pro.Net`: http://store.li-pro.net/
+
+.. _`Eric Holscher`: https://www.ericholscher.com/
+.. _`Sphinx Tutorial by Eric Holscher`: https://sphinx-tutorial.readthedocs.io/
+.. _`Bareos GmbH & Co. KG`: https://www.bareos.org/
+.. _`Documentation Style Guide by Bareos GmbH & Co. KG and others`: https://docs.bareos.org/
+
+.. _`reStructuredText`: https://docutils.sourceforge.io/rst.html
+.. _`Sphinx`: https://www.sphinx-doc.org/
+.. _`Sphinx Themes Demo Page`: https://sphinx-themes.org/
+.. _`Sphinx RTD Theme Demo Page`: https://sphinx-themes.org/html/sphinx_rtd_theme/sphinx_rtd_theme/index.html
+.. _`Read the Docs Sphinx Theme`: https://github.com/readthedocs/sphinx_rtd_theme
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
