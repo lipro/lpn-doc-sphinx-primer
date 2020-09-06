@@ -763,6 +763,145 @@ html_show_license = True
 html_search_scorer = '{}/_static/js/scorer.js'.format(DOCSRC)
 
 
+# -- Options for Epub output ----------------------------------------------
+#
+# http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-epub-output
+#
+
+# Bibliographic Dublin Core info.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_title
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_author
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_publisher
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_copyright
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_description
+#
+epub_title = project
+epub_author = author
+epub_publisher = publisher
+epub_copyright = copyright
+epub_description = 'how to write Li-Pro.Net documentation with Sphinx.'
+
+# The basename for the epub file. It defaults to the project name.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_basename
+#
+epub_basename = basename
+
+# The HTML theme for the epub output. Since the default themes are not optimized
+# for small screen space, using the same theme for HTML and epub output is
+# usually not wise. This defaults to 'epub', a theme designed to save visual
+# space.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_theme
+#
+#epub_theme = 'epub'
+
+# The language of the text. It defaults to the language option
+# or en if the language is not set.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_language
+#
+#epub_language = ''
+
+# The scheme of the identifier. Typical schemes are ISBN or URL.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_scheme
+#
+#epub_scheme = ''
+
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_identifier
+#
+#epub_identifier = ''
+
+# A unique identification for the text.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_uid
+#
+#epub_uid = ''
+
+# A tuple containing the cover image and cover page html template filenames.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_cover
+#
+#epub_cover = ()
+
+# A sequence of (type, uri, title) tuples for the guide element of content.opf.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_guide
+#
+#epub_guide = ()
+
+# HTML files that should be inserted before the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_pre_files
+#
+#epub_pre_files = []
+
+# HTML files shat should be inserted after the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_post_files
+#
+#epub_post_files = []
+
+# A list of files that should not be packed into the epub file.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_exclude_files
+#
+epub_exclude_files = [
+    '.nojekyll',
+    '_static/lpn.ico',
+    'search.html',
+]
+
+# The depth of the table of contents in toc.ncx.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_tocdepth
+#
+#epub_tocdepth = 3
+
+# Allow duplicate toc entries.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_tocdup
+#
+#epub_tocdup = True
+
+# Choose between 'default' and 'includehidden'.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_tocscope
+#
+#epub_tocscope = 'default'
+
+# Fix unsupported image types using the PIL.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_fix_images
+#
+#epub_fix_images = False
+
+# Scale large images.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_max_image_width
+#
+#epub_max_image_width = 0
+
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_show_urls
+#
+#epub_show_urls = 'inline'
+
+# If false, no index is generated.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_use_index
+#
+#epub_use_index = True
+
+
 # -- Options for HTML help output --------------------------------------------
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-html-help-output
