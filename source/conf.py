@@ -58,6 +58,7 @@ sys.path.insert(0, os.path.join(DOCSRC, '_extensions'))
 # -- Project information -----------------------------------------------------
 
 project = 'Li-Pro.Net Sphinx Primer'
+title = project
 author = 'The LP/N Documentation Team'
 publisher = 'Li–Pro.Net'
 copyright = '2020, ' + publisher + ', ' + author + ' and individual contributors.'
@@ -614,7 +615,7 @@ html_theme_options = {
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_title
 #
-html_title = project
+html_title = title
 
 # This value determines the text for the permalink; it defaults to "¶".
 # Set it to None or the empty string to disable permalinks.
@@ -778,7 +779,7 @@ html_search_scorer = '{}/_static/js/scorer.js'.format(DOCSRC)
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_copyright
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-epub_description
 #
-epub_title = project
+epub_title = title
 epub_author = author
 epub_publisher = publisher
 epub_copyright = copyright
@@ -968,8 +969,7 @@ text_sectionchars = '*=-~"+`'
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-texinfo_documents
 #
 texinfo_documents = [
-    (master_doc, basename, project + ' Documentation',
-     author, publisher, about, category),
+    (master_doc, basename, title, author, publisher, about, category),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -1008,7 +1008,7 @@ texinfo_documents = [
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-man_pages
 #
 man_pages = [
-  (master_doc, basename, project + ' Documentation', author, 1),
+  (master_doc, basename, title, author, 1),
 ]
 
 # If true, show URL addresses after external links.
