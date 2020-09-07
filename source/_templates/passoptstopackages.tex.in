@@ -9,6 +9,8 @@
     svgnames,%%
     table%%
 }}{{xcolor}}
+%
+% Set up the target PDF meta data
 \PassOptionsToPackage{{%%
     pdfproducer={{{producer}}},%%
     pdfcreator={{{creator}}},%%

@@ -61,10 +61,12 @@ project = 'Li-Pro.Net Sphinx Primer'
 title = project
 author = 'The LP/N Documentation Team'
 publisher = 'Li–Pro.Net'
+contactaddr = 'Jena, Germany'
+contactemail = 'info@li-pro.net'
 copyright = '2020, ' + publisher + ', ' + author + ' and individual contributors.'
 category = 'Miscellaneous'
 about = 'How to write Li-Pro.Net documentation with Sphinx.'
-keywords = 'sphinx,howto,primer'
+keywords = 'Sphinx, Docutils, reStructuredText, howto, primer'
 
 # The short X.Y version
 version = '0.0'
@@ -222,7 +224,7 @@ exclude_patterns = []
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-rst_prolog
 #
-rst_prolog = u'''
+rst_prolog = '''
 .. include:: /{docsrc}/docroles.rsti
 .. include:: /{docsrc}/docmeta.rsti
 .. |CREDITS| replace:: :download:`CREDITS </{docsrc}/CREDITS>`
@@ -233,6 +235,13 @@ rst_prolog = u'''
 .. |title| replace:: {title}
 .. |author| replace:: {author}
 .. |about| replace:: {about}
+.. meta::
+   :subject: {project}
+   :description: {about}
+   :keywords: {keywords}
+   :author: {author}
+   :publisher: {publisher}
+   :copyright: {copyright}
 '''.format(
     docsrc = DOCSRC,
     publisher = publisher,
@@ -241,6 +250,7 @@ rst_prolog = u'''
     title = title,
     author = author,
     about = about,
+    keywords = keywords,
 )
 
 # A string of reStructuredText that will be included at the end of every source
@@ -394,6 +404,7 @@ manpages_url = 'https://manpages.debian.org/{path}'
 #
 #linkcheck_ignore = [r'http://localhost:\d+/']
 linkcheck_ignore = [
+    r'https://www.amazon.com/dp/',  # Causes 503 Server Error: service unavailable
     r'http://localhost:\d+/',
 ]
 
@@ -667,12 +678,17 @@ f = open('{}/_templates/passoptstopackages.tex.in'.format(DOCSRC), 'r+')
 latex_custom_passoptionstopackages = f.read().format (
     producer = r'Sphinx ' + build_sphinx,
     creator = r'Sphinx ' + build_sphinx,
-    subject = project,
+    publisher = publisher,
+    subject = about,
     keywords = keywords,
 )
 
-f = open('{}/_templates/preamble.tex'.format(DOCSRC), 'r+')
-latex_custom_preamble = f.read()
+f = open('{}/_templates/preamble.tex.in'.format(DOCSRC), 'r+')
+latex_custom_preamble = f.read().format (
+    publisher = publisher,
+    contactaddr = contactaddr,
+    contactemail = contactemail,
+)
 
 f = open('{}/_templates/fontpkg.tex'.format(DOCSRC), 'r+')
 latex_custom_fontpkg = f.read()

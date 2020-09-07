@@ -11,7 +11,7 @@
 \usepackage{array}
 \usepackage{pgfplots}
 \usepackage{tikz}
-\usepackage{amsmath}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage{titlesec}
 \usepackage[singlelinecheck=false]{caption}
 \usepackage[section]{placeins}
@@ -20,6 +20,17 @@
 \usepackage[titles]{tocloft}
 \usepackage{appendix}
 \usepackage{fontawesome}
+\usepackage{footnotebackref}
+% reduce spaces for Table of contents, figures and tables
+% it is used "\addtocontents{toc}{\vskip -1.2cm}" etc. in the document
+\usepackage[notlot,nottoc,notlof]{}
+%link at the footnote to go to the place of footnote in the text
+\usepackage{footnotebackref}
+% spacing between line
+\usepackage{setspace}
+\onehalfspacing
+%%\doublespacing
+%%\singlespacing
 %
 % END: LDSP latex_custom_extrapackages
 %

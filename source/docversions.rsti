@@ -1,0 +1,25 @@
+.. Don't change this file, instead edit content in files:
+   docverslog.rsti
+
+.. only:: html
+
+   .. topic:: Version history
+
+      .. include:: docverslog.rsti
+
+.. only:: latex
+
+   .. raw:: latex
+
+      \cleardoublepage\phantomsection
+
+   .. rubric:: Version history of |project|
+
+   .. include:: docverslog.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -4,6 +4,10 @@
 
 .. Commons:
 
+.. |Docutils|                   replace:: :term:`Docutils`
+.. |reStructuredText|           replace:: :term:`reStructuredText`
+.. |Sphinx|                     replace:: :term:`Sphinx`
+
 .. Journals:
 
 .. Devices:
