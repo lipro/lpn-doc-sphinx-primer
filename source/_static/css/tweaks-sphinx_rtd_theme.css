@@ -1,0 +1,54 @@
+/*
+ * Tweaks and fixes for Read the Docs Sphinx theme.
+ */
+
+/*
+ * Text wrapping in argument tables,
+ * override table width restrictions.
+ *
+ * Comes from:
+ *
+ * --> https://github.com/readthedocs/sphinx_rtd_theme/issues/117#issuecomment-41506687
+ * --> https://sphinx-argparse.readthedocs.io/en/stable/misc.html#text-wrapping-in-argument-tables
+ * --> https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
+ */
+@media screen and (min-width: 767px) {
+
+   .wy-table-responsive table th,
+   .wy-table-responsive table td {
+      /* !important prevents the common CSS stylesheets from overriding
+         this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+   }
+
+   .wy-table-responsive {
+      margin-bottom: 24px;
+      max-width: 100%;
+      overflow: visible !important;
+   }
+}
+
+/*
+ * Prevent hard coded max-width,
+ * modify for wider view.
+ *
+ * Comes from:
+ *
+ * --> https://stackoverflow.com/questions/23211695/
+ * --> https://github.com/readthedocs/sphinx_rtd_theme/issues/295
+ */
+@media screen and (min-width: 767px) {
+
+  .wy-nav-content {
+    max-width: 1200px !important;
+  }
+
+  .wy-nav-content-wrap {
+    max-width: 100% !important;
+  }
+
+  /* force the original 40% of 1200px */
+  .rst-content .sidebar {
+    max-width: 480px !important;
+  }
+}

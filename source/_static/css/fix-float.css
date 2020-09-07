@@ -1,0 +1,4 @@
+.rst-content .sidebar,
+.rst-content .topic {
+  overflow: hidden !important;
+}

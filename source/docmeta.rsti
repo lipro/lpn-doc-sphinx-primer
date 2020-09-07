@@ -1,0 +1,60 @@
+.. Never add or change more than meta informations (ex. LaTeX formatting),
+   instead edit content in files:
+   docsummary.rst
+
+.. Abstract:
+
+.. |dm_abstract| replace:: This document has documentation of the |LPN|
+   community which is a effort to improve the technical writing of any
+   kind of documents and publishings. In short words: |about|
+
+
+.. Status:
+
+.. |dm_status| replace:: preliminary
+                         (:emphasis:`some mature, much in progress`)
+
+
+.. Copyright:
+
+.. |dm_copyright| replace:: Copyright |copy| |copyright| |---|
+   all rights reserved. This work is licensed under a Creative Commons
+   Attribution-ShareAlike 3.0 Unported License (`CC-BY-SA-3.0`_).
+   See the file |LICENSE| and |CREDITS| that comes with
+   the documentation.
+
+
+.. Organization:
+
+.. |dm_organization| replace:: |publisher|
+.. |dm_address| replace:: |contactaddr|
+.. |dm_contact_obfuscated| replace:: |slz_obfuscated|
+.. |dm_contact_plain_text| replace:: |slz_plain_text|
+
+
+.. Authors:
+
+.. |dm_authors| replace:: |author|
+
+.. |slz| replace:: Stephan Linz
+.. |slz_plain_text| replace:: Stephan Linz <linz@li-pro.net>
+.. |slz_obfuscated| replace:: |slz_plain_text|
+.. .. |slz_obfuscated| replace:: :email:`Stephan Linz <linz@li-pro.net>`
+
+
+.. Licenses:
+
+.. _`CC-BY-SA-3.0`: http://creativecommons.org/licenses/by-sa/3.0/
+
+
+.. Unicodes:
+
+.. |LPN| unicode:: Li U+02013 Pro.Net
+
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

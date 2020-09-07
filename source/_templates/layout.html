@@ -1,0 +1,14 @@
+{% extends "!layout.html" %}
+  {% block htmltitle %}
+    {%- if meta is mapping %}
+      <meta content="{{ meta.get("topic") }}" name="topic" />
+    {%- endif %}
+    {{ super() }}
+  {% endblock %}
+  {% block menu %}
+    {{ super() }}
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="{{pathto('genindex.html', 1)}}">Index</a>
+    </li></ul>
+  {% endblock %}

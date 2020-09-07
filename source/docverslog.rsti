@@ -1,0 +1,20 @@
+.. Never add or change more than meta informations (ex. LaTeX formatting),
+   instead edit content in files:
+   docversions.rsti
+
+.. tabularcolumns:: c|p{7.5cm}p{3.5cm}c
+.. csv-table:: |project| Document Revisions
+   :delim: ,
+   :quote: '
+   :header: "Version", "Change", "Passed", "Date"
+   :widths: 10, 50, 20, 20
+   :stub-columns: 1
+
+   '0.0', 'preliminary, project created', '|slz|', '2020-09-05'
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

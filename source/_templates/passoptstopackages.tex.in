@@ -1,0 +1,28 @@
+%
+% START: LDSP latex_custom_passoptionstopackages
+%
+\PassOptionsToPackage{{%%
+    justification=centering%%
+}}{{caption}}
+\PassOptionsToPackage{{%%
+    dvipsnames,%%
+    svgnames,%%
+    table%%
+}}{{xcolor}}
+%
+% Set up the target PDF meta data
+\PassOptionsToPackage{{%%
+    pdfproducer={{{producer}}},%%
+    pdfcreator={{{creator}}},%%
+    pdfsubject={{{subject}}},%%
+    pdfkeywords={{{keywords}}},%%
+    pdfdisplaydoctitle=true,%%
+    unicode=true,%%
+    colorlinks=true,%%
+    breaklinks=true,%%
+    bookmarks=true,%%
+    bookmarksnumbered=true,%%
+}}{{hyperref}}
+%
+% END: LDSP latex_custom_passoptionstopackages
+%

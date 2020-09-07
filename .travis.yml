@@ -1,0 +1,51 @@
+# .travis.yml
+# Travis CI configuration file
+# See https://docs.travis-ci.com/ and https://config.travis-ci.com/ for details
+# Inspired by https://sphinxtechnicalwriting.readthedocs.io/
+
+# Python 3.8 on Ubuntu Linux 18.04 "Bionic" (amd64) for Sphinx/DOC
+os: Linux
+dist: bionic
+arch: amd64
+
+branches:
+  only:
+  - master
+
+language: python
+python: "3.8"
+cache:
+  directories:
+  - $HOME/.cache/pip
+  - ./docs/_static/fonts
+before_cache:
+- rm -f $HOME/.cache/pip/log/debug.log
+
+install:
+- pip install -U pip
+- pip install -U pipenv
+- pipenv install --no-site-packages -r tools/requirements.txt
+
+script:
+- skip # Travis requires a `script` property, but we do not need it
+
+stages:
+- build and test
+- deploy
+
+jobs:
+  include:
+  - stage: build and test # This stage builds and lints in parallel
+    name: Build
+    script: pipenv run make html # build the docs
+  - script: pipenv run make doctest linkcheck # run checks
+    name: Test
+  - stage: deploy
+    name: Deploy to GitHub Pages
+    if: (NOT type IN (pull_request)) AND (branch = master) # only deploy if merging on master
+    script: pipenv run make html
+    deploy:
+      provider: pages # deploy on github pages
+      skip_cleanup: true
+      github_token: "$GHT" # defined via the Travis interface
+      local_dir: build/html
