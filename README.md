@@ -1,4 +1,4 @@
-[![Build Status](https://readthedocs.org/projects/lpn-doc-sphinx-primer-devel/badge/?version=latest)](https://lpn-doc-sphinx-primer-devel.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/lpn-doc-sphinx-primer-devel/badge/?version=latest)](https://lpn-doc-sphinx-primer-devel.readthedocs.io/)
 [![Build Status](https://travis-ci.org/rexut/lpn-doc-sphinx-primer.svg?branch=master)](https://travis-ci.org/rexut/lpn-doc-sphinx-primer)
 
 # Li-Pro.Net Sphinx Primer
