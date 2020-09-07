@@ -6,7 +6,7 @@
 
 .. |dm_abstract| replace:: This document has documentation of the |LPN|
    community which is a effort to improve the technical writing of any
-   kind of socuments and publishings. In short words: |about|
+   kind of documents and publishings. In short words: |about|
 
 
 .. Status:
@@ -27,7 +27,7 @@
 .. Organization:
 
 .. |dm_organization| replace:: |publisher|
-.. |dm_address| replace:: Jena, Germany
+.. |dm_address| replace:: |contactaddr|
 .. |dm_contact_obfuscated| replace:: |slz_obfuscated|
 .. |dm_contact_plain_text| replace:: |slz_plain_text|
 

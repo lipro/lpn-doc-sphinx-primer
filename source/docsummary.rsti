@@ -1,0 +1,62 @@
+.. Don't change this file, instead edit content in files:
+   docmeta.rsti, docaudience.rsti, and docsubst.rsti
+
+.. only:: html
+
+   .. sidebar:: Summary
+
+      :Abstract:        .. image:: /_images/lpn.*
+                           :alt: The Li-Pro.Net logo.
+                           :scale: 25 %
+                           :align: right
+
+                        |dm_abstract|
+
+                        .. include:: docinvolcomps.rsti
+
+      :Audience:        .. include:: docaudience.rsti
+      :Status:          |dm_status|
+      :Version:         |version|
+      :Release:         |release|
+      :Date:            |today|
+      :Authors:         |dm_authors|
+
+                        * |slz_obfuscated|
+
+      :Copyright:       |dm_copyright|
+      :Organization:    |dm_organization|
+      :Contact:         |dm_contact_obfuscated|
+      :Address:         |dm_address|
+
+.. only:: latex or man or texinfo or text
+
+   .. raw:: latex
+
+      \cleardoublepage\phantomsection
+
+   .. rubric:: Summary of |project|
+
+   :Abstract:           |dm_abstract|
+
+                        .. include:: docinvolcomps.rsti
+
+   :Audience:           .. include:: docaudience.rsti
+   :Status:             |dm_status|
+   :Version:            |version|
+   :Release:            |release|
+   :Date:               |today|
+   :Authors:            |dm_authors|
+
+                        * |slz_plain_text|
+
+   :Copyright:          |dm_copyright|
+   :Organization:       |dm_organization|
+   :Contact:            |dm_contact_plain_text|
+   :Address:            |dm_address|
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

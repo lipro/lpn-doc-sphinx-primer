@@ -11,6 +11,8 @@
 |project|
 #########
 
+.. include:: docsummary.rsti
+
 .. only:: latex
 
    .. include:: doclegal.rsti

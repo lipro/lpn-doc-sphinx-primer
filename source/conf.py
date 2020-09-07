@@ -235,6 +235,8 @@ rst_prolog = '''
 .. |title| replace:: {title}
 .. |author| replace:: {author}
 .. |about| replace:: {about}
+.. |contactaddr| replace:: {contactaddr}
+.. |contactemail| replace:: {contactemail}
 .. meta::
    :subject: {project}
    :description: {about}
@@ -251,6 +253,8 @@ rst_prolog = '''
     author = author,
     about = about,
     keywords = keywords,
+    contactaddr = contactaddr,
+    contactemail = contactemail,
 )
 
 # A string of reStructuredText that will be included at the end of every source
@@ -956,7 +960,31 @@ html_favicon = '{}/_images/lpn.ico'.format(DOCSRC)
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_static_path
+#
 html_static_path = ['{}/_static'.format(DOCSRC)]
+
+# A list of CSS files. The entry must be a filename string or a tuple
+# containing the filename string and the attributes dictionary. The
+# filename must be relative to the html_static_path, or a full URI
+# with scheme. The attributes is used for attributes of <link> tag.
+# It defaults to an empty list.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_css_files
+#
+html_css_files = [
+    'css/fix-float.css',
+    'css/strikethrough.css',
+    'css/tweaks-sphinx_rtd_theme.css',
+]
+
+# A list of JavaScript filename. The entry must be a filename string or
+# a tuple containing the filename string and the attributes dictionary.
+# The filename must be relative to the html_static_path, or a full URI
+# with scheme. The attributes is used for attributes of <script> tag.
+# It defaults to an empty list.
+#html_css_files = []
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
