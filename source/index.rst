@@ -58,10 +58,10 @@
    :maxdepth: 3
    :includehidden:
 
-   sphinx/concepts
-   sphinx/extensions
-   sphinx/themes
-   sphinx/cheatsheet
+   concepts
+   extensions
+   themes
+   cheatsheet
 
 :raw-latex:`\appendix`
 
