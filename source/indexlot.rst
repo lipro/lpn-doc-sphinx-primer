@@ -8,11 +8,7 @@
 .. index:: pair: Tables; Li-Pro.Net Sphinx Primer
    :name: ldsp-tables
 
-.. only:: latex
-
-  .. raw:: latex
-
-     \listoftables
+:raw-latex:`\listoftables`
 
 .. only:: html
 

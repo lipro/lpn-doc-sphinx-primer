@@ -8,11 +8,7 @@
 .. index:: pair: Listings; Li-Pro.Net Sphinx Primer
    :name: ldsp-listings
 
-.. only:: latex
-
-   .. raw:: latex
-
-      \listoflistings
+:raw-latex:`\listoflistings`
 
 .. only:: html
 

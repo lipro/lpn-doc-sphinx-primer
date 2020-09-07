@@ -1,6 +1,4 @@
-.. raw:: latex
-
-   \cleardoublepage\phantomsection
+:raw-latex:`\cleardoublepage\phantomsection`
 
 .. rubric:: Legal Notice of |project|
 

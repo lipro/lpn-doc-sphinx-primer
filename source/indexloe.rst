@@ -8,15 +8,11 @@
 .. index:: pair: Equations; Li-Pro.Net Sphinx Primer
    :name: ldsp-equations
 
-.. only:: latex
-
-  .. raw:: latex
-
-     \listofequations
+:raw-latex:`\listofequations`
 
 .. only:: html
 
-   .. _equation:
+   .. _equationlist:
 
    List of Equations
    #################

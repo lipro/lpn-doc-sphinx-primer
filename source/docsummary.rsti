@@ -1,6 +1,8 @@
 .. Don't change this file, instead edit content in files:
    docmeta.rsti, docaudience.rsti, and docsubst.rsti
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. only:: html
 
    .. sidebar:: Summary
@@ -29,10 +31,6 @@
       :Address:         |dm_address|
 
 .. only:: latex or man or texinfo or text
-
-   .. raw:: latex
-
-      \cleardoublepage\phantomsection
 
    .. rubric:: Summary of |project|
 

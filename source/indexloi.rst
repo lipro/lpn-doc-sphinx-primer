@@ -8,11 +8,7 @@
 .. index:: pair: Issues; Li-Pro.Net Sphinx Primer
    :name: ldsp-issues
 
-.. only:: latex
-
-   .. raw:: latex
-
-      \listofissues
+:raw-latex:`\listofissues`
 
 .. only:: html
 

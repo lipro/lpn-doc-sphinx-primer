@@ -18,9 +18,7 @@
    .. include:: doclegal.rsti
    .. include:: docversions.rsti
 
-.. raw:: latex
-
-   \cleardoublepage\phantomsection
+:raw-latex:`\cleardoublepage\phantomsection`
 
 .. ...........................................................................
 
@@ -65,9 +63,7 @@
    sphinx/themes
    sphinx/cheatsheet
 
-.. raw:: latex
-
-    \appendix
+:raw-latex:`\appendix`
 
 .. toctree::
    :caption: Lists and References

@@ -8,11 +8,7 @@
 .. index:: pair: Figures; Li-Pro.Net Sphinx Primer
    :name: ldsp-figures
 
-.. only:: latex
-
-  .. raw:: latex
-
-     \listoffigures
+:raw-latex:`\listoffigures`
 
 .. only:: html
 

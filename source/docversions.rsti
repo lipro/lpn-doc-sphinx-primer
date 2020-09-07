@@ -1,6 +1,8 @@
 .. Don't change this file, instead edit content in files:
    docverslog.rsti
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. only:: html
 
    .. topic:: Version history
@@ -8,10 +10,6 @@
       .. include:: docverslog.rsti
 
 .. only:: latex
-
-   .. raw:: latex
-
-      \cleardoublepage\phantomsection
 
    .. rubric:: Version history of |project|
 

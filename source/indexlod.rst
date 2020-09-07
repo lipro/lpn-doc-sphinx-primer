@@ -6,11 +6,9 @@
 .. index:: pair: Downloads; Li-Pro.Net Sphinx Primer
    :name: ldsp-downloads
 
+:raw-latex:`\listofdownloads`
+
 .. only:: latex
-
-   .. raw:: latex
-
-      \listofdownloads
 
    .. note:: *List of Downloads* is not fully supported for LaTeX. All
              entries in the list are not linked and can not be provided
