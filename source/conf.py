@@ -34,6 +34,8 @@ import git
 import sys
 import os
 
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
 if "DOCSRC" not in os.environ:
     DOCSRC = os.path.abspath(os.getcwd())
 else:
@@ -70,9 +72,14 @@ category = 'Miscellaneous'
 about = 'How to write Li-Pro.Net documentation with Sphinx.'
 keywords = 'Sphinx, Docutils, reStructuredText, howto, primer'
 
+if on_rtd:
+    git_describe = ('--dirty=+RTDEXT', '--broken=+broken')
+else:
+    git_describe = ('--dirty=+dirty', '--broken=+broken')
+
 try:
     repo = git.Repo(search_parent_directories=True)
-    semv = semver.VersionInfo.parse(repo.git.describe('--dirty'))
+    semv = semver.VersionInfo.parse(repo.git.describe(git_describe))
 except:
     # fallback to unknown version / release
     semv = semver.VersionInfo.parse('0.0.0-invalid+unknown')
@@ -531,7 +538,6 @@ todo_include_todos = True
 # Example configuration for intersphinx: refer to the Python standard library.
 # intersphinx_mapping = {'https://docs.python.org/3/': None}
 
-# on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # if on_rtd:
 #     intersphinx_mapping = {
 #         'sphinx': ('/Users/rexut/checkouts/sphinx/doc/_build/html/', None),
