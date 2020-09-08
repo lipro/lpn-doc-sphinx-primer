@@ -12,7 +12,32 @@ Cheat Sheet
 
    .. sectionauthor:: |slz_plain_text|
 
-t.b.d.
+We have made a cheat sheet for helping you remember the syntax for
+|reStructuredText| & |Sphinx| programs. The basic
+:duuser:`reStructuredText Cheat Sheet <cheatsheet>`
+could also be very helpful.
+
+.. _cheat-sheet-rst-sphinx-front:
+
+.. figure:: cheatsheet/cheatsheet-full-front.svg
+   :figclass: align-center
+   :align: center
+   :alt: Cheat Sheet reStructuredText & Sphinx 1/2
+
+   *Cheat Sheet* **reStructuredText & Sphinx 1/2**
+
+:raw-latex:`\FloatBarrier`
+
+.. _cheat-sheet-rst-sphinx-back:
+
+.. figure:: cheatsheet/cheatsheet-full-back.svg
+   :figclass: align-center
+   :align: center
+   :alt: Cheat Sheet reStructuredText & Sphinx 2/2
+
+   *Cheat Sheet* **reStructuredText & Sphinx 2/2**
+
+:raw-latex:`\FloatBarrier`
 
 .. Local variables:
    coding: utf-8
