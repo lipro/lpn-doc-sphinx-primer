@@ -1,0 +1,2 @@
+gitpython>=3.1
+semver>=2.10

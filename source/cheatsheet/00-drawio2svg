@@ -1,0 +1,15 @@
+1. Open *.drawio file with draw.io application
+2. Save each page as single PDF file:
+
+   a. "File" --> "Export as" --> "PDF..."
+   b. Select "Current page"
+   c. Check "Crop"
+   d. Click on "Export"
+
+3. Open *.pdf file with Inkscape application
+4. Select "Import settings" --> Select "Poppler/Cairo import"
+5. Save page as Inkscape SVG file:
+
+   a. "File" --> "Save As..."
+   b. Choice file type "Inkscape SVG (*.svg)"
+   c. Click on "Save"

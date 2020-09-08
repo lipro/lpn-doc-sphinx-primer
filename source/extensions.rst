@@ -1,8 +1,11 @@
-:topic: Themes
+:topic: Extensions
 
-######
-Themes
-######
+.. index:: pair: Extensions; Li-Pro.Net Sphinx Primer
+   :name: ldsp-extensions
+
+##########
+Extensions
+##########
 
 .. only:: html
 

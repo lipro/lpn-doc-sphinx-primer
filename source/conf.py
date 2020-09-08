@@ -29,6 +29,8 @@
 
 import sphinx_rtd_theme
 import sphinx
+import semver
+import git
 import sys
 import os
 
@@ -68,30 +70,22 @@ category = 'Miscellaneous'
 about = 'How to write Li-Pro.Net documentation with Sphinx.'
 keywords = 'Sphinx, Docutils, reStructuredText, howto, primer'
 
-# The short X.Y version
-version = '0.0'
+try:
+    repo = git.Repo(search_parent_directories=True)
+    semv = semver.VersionInfo.parse(repo.git.describe('--dirty'))
+except:
+    # fallback to unknown version / release
+    semv = semver.VersionInfo.parse('0.0.0-invalid+unknown')
+
+# The short X.Y.Z version
+version = str(semv.finalize_version())
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = str(semv)
 
 # Single target file names
 namespace = 'net.li-pro.doc.sphinx-primer.' + version + '.'
 basename = 'lpn-doc-sphinx-primer'
-
-
-# -- Specific configuration --------------------------------------------------
-
-if tags.has('release'):  # pylint: disable=undefined-variable
-    is_release = True
-    docs_title = 'Docs / %s' %(version)
-else:
-    is_release = False
-    docs_title = 'Docs / Latest'
-
-# Only use SVG converter when it is really needed, e.g. LaTeX.
-if tags.has("svgconvert"):  # pylint: disable=undefined-variable
-    extensions.append('sphinxcontrib.rsvgconverter')
-                   # ('sphinxcontrib.inkscapeconverter')
 
 
 # -- General configuration ---------------------------------------------------
@@ -127,6 +121,9 @@ needs_extensions = {
 #   'sphinx.ext.imgconverter':                  needs_sphinx,
 #   'sphinx.ext.inheritance_diagram':           needs_sphinx,
 #   'sphinx_rtd_theme':                         '0.5.0',
+#   'sphinxcontrib.inkscapeconverter':          '1.1.0',
+    'sphinxcontrib.rsvgconverter':              '1.1.0',
+#   'sphinxcontrib.cairosvgconverter':          '1.1.0',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -154,8 +151,20 @@ extensions = [
 #   'sphinx.ext.imgconverter',
 #   'sphinx.ext.inheritance_diagram',
     'sphinx_rtd_theme',
+#   'sphinxcontrib.inkscapeconverter',
+    'sphinxcontrib.rsvgconverter',
+#   'sphinxcontrib.cairosvgconverter',
 ]
 
+
+# -- Specific configuration --------------------------------------------------
+
+if tags.has('release'):  # pylint: disable=undefined-variable
+    is_release = True
+    docs_title = 'Docs / %s' %(version)
+else:
+    is_release = False
+    docs_title = 'Docs / Latest'
 
 # -- Sphinx Basic Configuration ----------------------------------------------
 
