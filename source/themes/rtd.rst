@@ -14,21 +14,24 @@ This theme is primarily focused to be used on `Read the Docs`_ but can
 work with your own sphinx projects. You can find a working demo of the
 theme in the `theme documentation`_.
 
+.. tabularcolumns:: CC
 .. list-table::
+   :widths: 50, 50
+   :align: center
 
    * - .. figure:: https://raw.githubusercontent.com/readthedocs/sphinx_rtd_theme/master/docs/demo/static/screen_desktop.png
           :figclass: align-center
-          :height: 200px
+          :height: 160px
           :alt: screen_desktop.png
 
-          Sphinx RTD theme output on Desktop
+          Sphinx RTD theme on Desktop
 
      - .. figure:: https://raw.githubusercontent.com/readthedocs/sphinx_rtd_theme/master/docs/demo/static/screen_mobile.png
           :figclass: align-center
-          :height: 200px
+          :height: 160px
           :alt: screen_mobile.png
 
-          Sphinx RTD theme output on Mobiles
+          Sphinx RTD theme on Mobiles
 
 .. _Read the Docs: https://readthedocs.org/
 .. _theme documentation: https://sphinx-rtd-theme.readthedocs.io/
