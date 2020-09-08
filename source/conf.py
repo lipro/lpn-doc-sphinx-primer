@@ -88,21 +88,6 @@ namespace = 'net.li-pro.doc.sphinx-primer.' + version + '.'
 basename = 'lpn-doc-sphinx-primer'
 
 
-# -- Specific configuration --------------------------------------------------
-
-if tags.has('release'):  # pylint: disable=undefined-variable
-    is_release = True
-    docs_title = 'Docs / %s' %(version)
-else:
-    is_release = False
-    docs_title = 'Docs / Latest'
-
-# Only use SVG converter when it is really needed, e.g. LaTeX.
-if tags.has("svgconvert"):  # pylint: disable=undefined-variable
-    extensions.append('sphinxcontrib.rsvgconverter')
-                   # ('sphinxcontrib.inkscapeconverter')
-
-
 # -- General configuration ---------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -136,6 +121,9 @@ needs_extensions = {
 #   'sphinx.ext.imgconverter':                  needs_sphinx,
 #   'sphinx.ext.inheritance_diagram':           needs_sphinx,
 #   'sphinx_rtd_theme':                         '0.5.0',
+#   'sphinxcontrib.inkscapeconverter':          '1.1.0',
+    'sphinxcontrib.rsvgconverter':              '1.1.0',
+#   'sphinxcontrib.cairosvgconverter':          '1.1.0',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -163,8 +151,20 @@ extensions = [
 #   'sphinx.ext.imgconverter',
 #   'sphinx.ext.inheritance_diagram',
     'sphinx_rtd_theme',
+#   'sphinxcontrib.inkscapeconverter',
+    'sphinxcontrib.rsvgconverter',
+#   'sphinxcontrib.cairosvgconverter',
 ]
 
+
+# -- Specific configuration --------------------------------------------------
+
+if tags.has('release'):  # pylint: disable=undefined-variable
+    is_release = True
+    docs_title = 'Docs / %s' %(version)
+else:
+    is_release = False
+    docs_title = 'Docs / Latest'
 
 # -- Sphinx Basic Configuration ----------------------------------------------
 
