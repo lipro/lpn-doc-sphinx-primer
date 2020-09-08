@@ -27,6 +27,13 @@ the theme by `The Executable Book Project`_.
 .. _`The Sphinx Book Theme`: https://sphinx-book-theme.readthedocs.io/
 .. _`The Executable Book Project`: https://ebp.jupyterbook.org/
 
+.. toctree::
+   :caption: List of Themes
+   :maxdepth: 1
+   :titlesonly:
+
+   themes/rtd
+
 .. Local variables:
    coding: utf-8
    mode: text
