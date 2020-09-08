@@ -8,6 +8,12 @@ os: Linux
 dist: bionic
 arch: amd64
 
+addons:
+  apt:
+    update: true
+    packages:
+    - librsvg2-bin
+
 branches:
   only:
   - master
