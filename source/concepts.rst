@@ -1,5 +1,8 @@
 :topic: Concepts
 
+.. index:: pair: Concepts; Li-Pro.Net Sphinx Primer
+   :name: ldsp-concepts
+
 ########
 Concepts
 ########

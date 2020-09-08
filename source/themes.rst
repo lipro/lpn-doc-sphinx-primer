@@ -1,5 +1,8 @@
 :topic: Themes
 
+.. index:: pair: Themes; Li-Pro.Net Sphinx Primer
+   :name: ldsp-themes
+
 ######
 Themes
 ######

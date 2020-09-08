@@ -1,5 +1,8 @@
 :topic: Extensions
 
+.. index:: pair: Extensions; Li-Pro.Net Sphinx Primer
+   :name: ldsp-extensions
+
 ##########
 Extensions
 ##########

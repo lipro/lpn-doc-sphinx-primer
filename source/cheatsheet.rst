@@ -1,5 +1,8 @@
 :topic: Cheat Sheet
 
+.. index:: pair: Cheat Sheet; Li-Pro.Net Sphinx Primer
+   :name: ldsp-cheatsheet
+
 ###########
 Cheat Sheet
 ###########
