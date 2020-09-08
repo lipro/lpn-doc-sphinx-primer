@@ -29,6 +29,8 @@
 
 import sphinx_rtd_theme
 import sphinx
+import semver
+import git
 import sys
 import os
 
@@ -68,11 +70,18 @@ category = 'Miscellaneous'
 about = 'How to write Li-Pro.Net documentation with Sphinx.'
 keywords = 'Sphinx, Docutils, reStructuredText, howto, primer'
 
-# The short X.Y version
-version = '0.0'
+try:
+    repo = git.Repo(search_parent_directories=True)
+    semv = semver.VersionInfo.parse(repo.git.describe('--dirty'))
+except:
+    # fallback to unknown version / release
+    semv = semver.VersionInfo.parse('0.0.0-invalid+unknown')
+
+# The short X.Y.Z version
+version = str(semv.finalize_version())
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = str(semv)
 
 # Single target file names
 namespace = 'net.li-pro.doc.sphinx-primer.' + version + '.'
