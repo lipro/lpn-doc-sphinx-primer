@@ -15,7 +15,12 @@ Extensions
 
    .. sectionauthor:: |slz_plain_text|
 
-t.b.d.
+.. toctree::
+   :caption: List of Extensions
+   :maxdepth: 2
+   :titlesonly:
+
+   extensions/spelling
 
 .. Local variables:
    coding: utf-8
