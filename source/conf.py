@@ -161,6 +161,7 @@ extensions = [
 #   'sphinxcontrib.inkscapeconverter',
     'sphinxcontrib.rsvgconverter',
 #   'sphinxcontrib.cairosvgconverter',
+    'ldsp',
 ]
 
 
