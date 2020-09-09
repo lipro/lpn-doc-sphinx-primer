@@ -15,7 +15,9 @@ Commons
       community for technical documentation. It is part of the |Docutils|
       project of the Python Doc-SIG (Documentation Special Interest Group)
 
-      - :wikien:`reStructuredText`
+      .. seealso::
+
+         - :wikien:`reStructuredText`
 
    Docutils
       `Docutils`_ is an open-source text processing system for processing
@@ -24,7 +26,9 @@ Commons
       easy to read, easy to use, what-you-see-is-what-you-get plaintext
       markup language.
 
-      - :wikien:`reStructuredText`
+      .. seealso::
+
+         - :wikien:`reStructuredText`
 
    Sphinx
       `Sphinx`_ is a documentation generator written and used by the Python
@@ -37,7 +41,9 @@ Commons
       documentation from source code, writing mathematical notation
       or highlighting source code, etc.
 
-      - :wikien:`Sphinx (documentation generator)`
+      .. seealso::
+
+         - :wikien:`Sphinx (documentation generator)`
 
    PyEnchant
       `PyEnchant`_ is a Python binding for |Enchant|.
@@ -83,7 +89,9 @@ Technologies
       word processor with the aim of unifying access to the various existing
       spell-checker software.
 
-      - :wikien:`Enchant (software)`
+      .. seealso::
+
+         - :wikien:`Enchant (software)`
 
 .. Abbreviations
 .. *************
