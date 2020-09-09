@@ -5,6 +5,7 @@
 .. Commons:
 
 .. |Docutils|                   replace:: :term:`Docutils`
+.. |PyEnchant|                  replace:: :term:`PyEnchant`
 .. |reStructuredText|           replace:: :term:`reStructuredText`
 .. |Sphinx|                     replace:: :term:`Sphinx`
 
@@ -19,6 +20,8 @@
 .. Network:
 
 .. Technologies:
+
+.. |Enchant|                    replace:: :term:`Enchant`
 
 .. Abbreviations:
 

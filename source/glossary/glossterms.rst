@@ -39,6 +39,9 @@ Commons
 
       - :wikien:`Sphinx (documentation generator)`
 
+   PyEnchant
+      `PyEnchant`_ is a Python binding for |Enchant|.
+
 .. Journals
 .. ********
 
@@ -69,11 +72,18 @@ Commons
 .. .. glossary::
    :sorted:
 
-.. Technologies
-.. ************
+Technologies
+************
 
-.. .. glossary::
+.. glossary::
    :sorted:
+
+   Enchant
+      `Enchant`_ is a free software project developed as part of the AbiWord
+      word processor with the aim of unifying access to the various existing
+      spell-checker software.
+
+      - :wikien:`Enchant (software)`
 
 .. Abbreviations
 .. *************

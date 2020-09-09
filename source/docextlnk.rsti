@@ -16,6 +16,9 @@
 .. _`Sphinx RTD Theme Demo Page`: https://sphinx-themes.org/html/sphinx_rtd_theme/sphinx_rtd_theme/index.html
 .. _`Read the Docs Sphinx Theme`: https://github.com/readthedocs/sphinx_rtd_theme
 
+.. _`Enchant`: https://abiword.github.io/enchant/
+.. _`PyEnchant`: https://github.com/pyenchant/pyenchant
+
 .. Local variables:
    coding: utf-8
    mode: text
