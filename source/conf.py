@@ -568,6 +568,9 @@ intersphinx_mapping = {
     # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-spelling.readthedocs.io/en/stable/objects.inv'
     'scspelling': ('https://sphinxcontrib-spelling.readthedocs.io/en/stable/', None),
 
+    # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-bibtex.readthedocs.io/en/stable/objects.inv'
+    'scbibtex': ('https://sphinxcontrib-bibtex.readthedocs.io/en/stable/', None),
+
     #
     # Drawing the Docutils objects.inv from a RTD server,
     # but referring to the 0.16 web docs

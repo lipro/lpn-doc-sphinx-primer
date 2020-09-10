@@ -21,6 +21,7 @@ Extensions
    :titlesonly:
 
    extensions/spelling
+   extensions/bibtex
 
 .. Local variables:
    coding: utf-8
