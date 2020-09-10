@@ -56,6 +56,7 @@
    :caption: Table of Contents
    :numbered: 3
    :maxdepth: 3
+   :hidden:
    :includehidden:
 
    concepts
@@ -66,12 +67,18 @@
 :raw-latex:`\appendix`
 
 .. toctree::
-   :caption: Lists and References
+   :caption: Appendices
    :titlesonly:
    :hidden:
 
    appendix
    glossary
+
+.. toctree::
+   :caption: Lists and References
+   :titlesonly:
+   :hidden:
+
    indexlol
    indexlot
    indexlof
@@ -79,22 +86,6 @@
    indexlod
    indexloi
    bibliography
-
-.. only:: html or man or texinfo or text
-
-   .. rubric:: Lists and References:
-
-   * :doc:`/appendix`
-   * :doc:`/glossary`
-   * :doc:`/indexlol`
-   * :doc:`/indexlot`
-   * :doc:`/indexlof`
-   * :doc:`/indexloe`
-   * :doc:`/indexlod`
-   * :doc:`/indexloi`
-   * :doc:`/bibliography`
-   * :ref:`genindex`
-.. * :ref:`search`
 
 .. ...........................................................................
 
