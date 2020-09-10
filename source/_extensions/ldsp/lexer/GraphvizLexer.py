@@ -1,0 +1,53 @@
+#!/usr/bin/python
+#
+# Contributors Listed Below - COPYRIGHT 2018
+# [+] Peter Suter (https://bitbucket.org/birkenfeld/pygments-main/issues/1024)
+# [+] Niklas Mollenhauer (https://github.com/nikeee/pygments-lexer-graphviz)
+#
+# Public Domain
+#
+
+from pygments.lexer import RegexLexer, bygroups
+from pygments.token import (Comment, Keyword, Operator, Name, String,
+    Number, Punctuation, Whitespace)
+
+__all__ = ['GraphvizLexer']
+
+class GraphvizLexer(RegexLexer):
+    """
+    For graphviz DOT graph description language.
+
+    .. versionadded:: 2.3.0
+    """
+    name = 'Graphviz'
+    aliases = ['graphviz', 'dot']
+    filenames = ['*.gv', '*.dot']
+    mimetypes = ['text/x-graphviz', 'text/vnd.graphviz']
+    tokens = {
+        'root': [
+            (r'\s+', Whitespace),
+            (r'(#|//).*?$', Comment.Single),
+            (r'/(\\\n)?[*](.|\n)*?[*](\\\n)?/', Comment.Multiline),
+            (r'(?i)(node|edge|graph|digraph|subgraph|strict|blockdiag|seqdiag|actdiag|nwdiag)\b', Keyword),
+            (r'--|->', Operator),
+            (r'[{}[\]:;,]', Punctuation),
+            (r'(\b\D\w*)(\s*)(=)(\s*)', bygroups(Name.Attribute, Whitespace, Punctuation, Whitespace), 'attr_id'),
+            (r'\b(n|ne|e|se|s|sw|w|nw|c|_)\b', Name.Builtin),
+            (r'\b\D\w*', Name.Tag), # node
+            (r'[-]?((\.[0-9]+)|([0-9]+(\.[0-9]*)?))', Number),
+            (r'"(\\"|[^"])*?"', Name.Tag), # quoted node
+            (r'<', Punctuation, 'xml'),
+        ],
+        'attr_id': [
+            (r'\b\D\w*', String, '#pop'),
+            (r'[-]?((\.[0-9]+)|([0-9]+(\.[0-9]*)?))', Number, '#pop'),
+            (r'"(\\"|[^"])*?"', String.Double, '#pop'),
+            (r'<', Punctuation, ('#pop', 'xml')),
+        ],
+        'xml': [
+            (r'<', Punctuation, '#push'),
+            (r'>', Punctuation, '#pop'),
+            (r'\s+', Whitespace),
+            (r'[^<>\s]', Name.Tag),
+        ]
+    }
