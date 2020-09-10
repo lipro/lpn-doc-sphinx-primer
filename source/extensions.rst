@@ -24,6 +24,7 @@ Extensions
    extensions/bibtex
    extensions/linuxdoc
    extensions/programoutput
+   extensions/matplotlib
 
 .. Local variables:
    coding: utf-8

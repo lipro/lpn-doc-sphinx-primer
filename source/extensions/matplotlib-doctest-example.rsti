@@ -1,0 +1,15 @@
+.. plot::
+   :format: doctest
+   :align: center
+   :scale: 75
+
+   >>> import matplotlib.pyplot as plt
+   >>> plt.plot([1, 2, 3], [4, 5, 6])  # doctest: +ELLIPSIS
+   [<matplotlib.lines.Line2D object at 0x...>]
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
