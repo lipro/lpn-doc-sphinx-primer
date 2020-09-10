@@ -45,6 +45,16 @@ Commons
 
          - :wikien:`Sphinx (documentation generator)`
 
+   LaTeX
+      `LaTeX`_ is a document preparation system for high-quality
+      typesetting. It is most often used for medium-to-large technical
+      or scientific documents but it can be used for almost any form
+      of publishing.
+
+      .. seealso::
+
+         - :wikien:`LaTeX`
+
    PyEnchant
       `PyEnchant`_ is a Python binding for |Enchant|.
 
@@ -83,6 +93,15 @@ Technologies
 
 .. glossary::
    :sorted:
+
+   BibTeX
+      `BibTeX`_ is a widely used bibliography management tool in |LaTeX|,
+      with BibTeX the bibliography entries are kept in a separate file and
+      then imported into the main document.
+
+      .. seealso::
+
+         - :wikien:`BibTeX`
 
    Enchant
       `Enchant`_ is a free software project developed as part of the AbiWord

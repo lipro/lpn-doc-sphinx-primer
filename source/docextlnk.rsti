@@ -19,6 +19,9 @@
 .. _`Enchant`: https://abiword.github.io/enchant/
 .. _`PyEnchant`: https://github.com/pyenchant/pyenchant
 
+.. _`LaTeX`: https://www.latex-project.org/
+.. _`BibTeX`: http://www.bibtex.org/
+
 .. Local variables:
    coding: utf-8
    mode: text
