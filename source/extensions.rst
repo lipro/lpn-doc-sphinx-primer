@@ -25,6 +25,7 @@ Extensions
    extensions/linuxdoc
    extensions/programoutput
    extensions/matplotlib
+   extensions/tikz
 
 .. Local variables:
    coding: utf-8

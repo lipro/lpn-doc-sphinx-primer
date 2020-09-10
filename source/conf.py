@@ -583,6 +583,9 @@ intersphinx_mapping = {
     # python -m sphinx.ext.intersphinx 'https://matplotlib.org/sampledoc/objects.inv'|less
     'mplsam': ('https://matplotlib.org/sampledoc/', None),
 
+    # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-tikz.readthedocs.io/en/latest/objects.inv'
+    'sctikz': ('https://sphinxcontrib-tikz.readthedocs.io/en/latest/', None),
+
     #
     # Drawing the Docutils objects.inv from a RTD server,
     # but referring to the 0.16 web docs
