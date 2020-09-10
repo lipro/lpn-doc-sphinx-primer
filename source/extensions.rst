@@ -22,6 +22,7 @@ Extensions
 
    extensions/spelling
    extensions/bibtex
+   extensions/linuxdoc
 
 .. Local variables:
    coding: utf-8
