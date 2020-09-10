@@ -1,0 +1,36 @@
+.. tabs::
+
+   .. tab:: Stars
+
+      .. tabs::
+
+         .. tab:: The Sun
+
+            The closest star to us.
+
+         .. tab:: Proxima Centauri
+
+            The second closest star to us.
+
+         .. tab:: Polaris
+
+            The North Star.
+
+   .. tab:: Moons
+
+      .. tabs::
+
+         .. tab:: The Moon
+
+            Orbits the Earth
+
+         .. tab:: Titan
+
+            Orbits Jupiter
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

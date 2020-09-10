@@ -27,6 +27,7 @@ Extensions
    extensions/matplotlib
    extensions/tikz
    extensions/blockdiag
+   extensions/sphinx-tabs
 
 .. Local variables:
    coding: utf-8
