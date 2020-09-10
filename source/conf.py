@@ -574,6 +574,9 @@ intersphinx_mapping = {
     # python -m sphinx.ext.intersphinx 'https://return42.github.io/linuxdoc/objects.inv'
     'lxdoc': ('https://return42.github.io/linuxdoc/', None),
 
+    # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-programoutput.readthedocs.io/en/stable/objects.inv'
+    'scprgout': ('https://sphinxcontrib-programoutput.readthedocs.io/en/stable/', None),
+
     #
     # Drawing the Docutils objects.inv from a RTD server,
     # but referring to the 0.16 web docs

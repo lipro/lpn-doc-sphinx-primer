@@ -23,6 +23,7 @@ Extensions
    extensions/spelling
    extensions/bibtex
    extensions/linuxdoc
+   extensions/programoutput
 
 .. Local variables:
    coding: utf-8
