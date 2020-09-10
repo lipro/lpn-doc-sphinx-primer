@@ -1,0 +1,44 @@
+rackdiag {
+    default_fontsize = 10;
+
+    // define 1st (height) rack
+    rack {
+        16U;
+
+        // define rack items
+        1: UPS [2U, fontsize = 14];
+        3: DB Server;
+        // put 2 units to rack-level 4
+        4: Web\nServer 1;
+        4: Web\nServer 2;
+        5: Web\nServer 3;
+        5: Web\nServer 4;
+        7: Load Balancer;
+        8: L3 Switch;
+    }
+
+    // define 2nd rack
+    rack {
+        12U;
+
+        // define rack items
+        1: UPS [2U, fontsize = 14];
+        3: DB Server;
+        4: Web Server;
+        5: Web Server;
+        6: Web Server;
+        7: Load Balancer;
+        8: L3 Switch;
+    }
+
+    // define 3rd rack (with not available units)
+    rack {
+        12U;
+
+        1: Server;
+        2: Server;
+        3: Server;
+        4: Server;
+        5: N/A [8U, fontsize = 14];
+    }
+}

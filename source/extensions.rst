@@ -26,6 +26,7 @@ Extensions
    extensions/programoutput
    extensions/matplotlib
    extensions/tikz
+   extensions/blockdiag
 
 .. Local variables:
    coding: utf-8

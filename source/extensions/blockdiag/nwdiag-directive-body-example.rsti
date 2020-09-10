@@ -1,0 +1,17 @@
+.. nwdiag::
+   :align: center
+   :scale: 75
+
+   nwdiag {
+       network dmz {
+           web01;
+           web02;
+       }
+   }
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
