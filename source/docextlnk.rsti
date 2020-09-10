@@ -21,6 +21,8 @@
 
 .. _`LaTeX`: https://www.latex-project.org/
 .. _`BibTeX`: http://www.bibtex.org/
+.. _`PGF/TikZ`: https://github.com/pgf-tikz/pgf
+.. _`TeX`: https://tug.org/
 
 .. Local variables:
    coding: utf-8

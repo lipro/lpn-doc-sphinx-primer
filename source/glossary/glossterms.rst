@@ -49,7 +49,9 @@ Commons
       `LaTeX`_ is a document preparation system for high-quality
       typesetting. It is most often used for medium-to-large technical
       or scientific documents but it can be used for almost any form
-      of publishing.
+      of publishing. LaTeX uses the |TeX| typesetting program for
+      formatting its output, and is itself written in the |TeX| macro
+      language.
 
       .. seealso::
 
@@ -111,6 +113,27 @@ Technologies
       .. seealso::
 
          - :wikien:`Enchant (software)`
+
+   PGF
+   TikZ
+   PGF/TikZ
+      `PGF/TikZ`_ is a pair of languages for producing vector graphics (for
+      example: technical illustrations and drawings) from a geometric/algebraic
+      description, with standard features including the drawing of points,
+      lines, arrows, paths, circles, ellipses and polygons. PGF, the *Portable
+      Graphic Format*, is a lower-level language, while TikZ, which is written
+      in |TeX|, is a set of higher-level macros that use PGF.
+
+         - :wikien:`PGF/TikZ`
+
+   TeX
+      `TeX`_ is a computer language designed for use in typesetting system;
+      in particular, for typesetting math and other technical material. It
+      has been noted as one of the most sophisticated digital typographical
+      systems and is also used for many other typesetting tasks, especially
+      in the form of |LaTeX|, ConTeXt, and other macro packages.
+
+         - :wikien:`TeX`
 
 .. Abbreviations
 .. *************

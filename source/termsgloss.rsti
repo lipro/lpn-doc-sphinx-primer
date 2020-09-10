@@ -24,6 +24,10 @@
 
 .. |BibTeX|                     replace:: :term:`BibTeX`
 .. |Enchant|                    replace:: :term:`Enchant`
+.. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
+.. |PGF|                        replace:: :term:`PGF`
+.. |TikZ|                       replace:: :term:`TikZ`
+.. |TeX|                        replace:: :term:`TeX`
 
 .. Abbreviations:
 
