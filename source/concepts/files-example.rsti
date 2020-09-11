@@ -1,0 +1,20 @@
+| :file:`/bin/bash` or :file:`bash` -- but better is :command:`bash`
+
+| :file:`/usr/local/bin/myapp` -- but better is :program:`myapp`
+
+| :file:`filename.txt`
+| :file:`/path/filename.txt`
+| :file:`/path/subdir/` (ends with a ``/``)
+
+| :file:`..\\MyApp\\core.conf`
+| :file:`C:\\ProgramData\\MyApp\\core.conf`
+| :file:`C:\\ProgramData\\MyApp\\` (ends with a ``\``)
+
+| :file:`/usr/share/man/man{N}` (ends with a variable mark, *N* = 1..9)
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

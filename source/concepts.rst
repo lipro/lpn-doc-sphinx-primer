@@ -29,6 +29,8 @@ extended for our needs.
    concepts/heading
    concepts/toctree
    concepts/paragraphs
+   concepts/inline-markup
+   concepts/files
    concepts/lists
    concepts/code-example
 
