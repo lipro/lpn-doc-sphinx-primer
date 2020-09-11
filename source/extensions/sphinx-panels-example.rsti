@@ -1,0 +1,60 @@
+.. dropdown:: :opticon:`alert,text-warning bg-success,size=16` Panels in a drop-down
+   :title: bg-success text-warning
+   :open:
+   :animate: fade-in-slide-down
+
+   :badge:`HTML only,badge-info badge-pill`
+   :link-badge:`panels/example,"this example, see above",ref,badge-success badge-pill text-white,clickable badge`
+
+   .. panels::
+      :container: container-fluid pb-1
+      :column: col-lg-6 col-md-6 col-sm-12 col-xs-12 p-2
+      :card: shadow
+      :header: border-0 text-center
+      :footer: border-0 text-right
+
+      ---
+      :card: + bg-warning
+      :header: text-left
+      :body: text-center + text-danger
+      :img-top: https://github.com/sphinx-doc/sphinx/raw/master/doc/_static/sphinx.png
+
+      header
+      ^^^^^^
+
+      Content of the top-left panel
+
+      ++++++
+      footer
+
+      ---
+      :card: + bg-info
+      :footer: + bg-danger text-white
+      :img-top: https://www.python.org/static/community_logos/python-logo-master-v3-TM.png
+
+      header
+      ^^^^^^
+
+      Content of the top-right panel
+
+      ++++++
+      footer
+
+      ---
+      :column: col-lg-12 p-3
+      :card: + text-center
+
+      .. link-button:: panels/example
+         :type: ref
+         :text: Clickable Panel
+         :classes: btn-link stretched-link font-weight-bold
+
+   :badge:`example,badge-danger`
+   :link-badge:`https://sphinx-panels.readthedocs.io/,"come from, documentation",cls=badge-dark text-white,tooltip=read more`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

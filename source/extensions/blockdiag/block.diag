@@ -1,0 +1,41 @@
+blockdiag {
+    // Set boder-style, backgroun-color and text-color to nodes.
+    A [style = dotted];
+    B [style = dashed];
+    C [color = pink, style = "3,3,3,3,15,3"]; //dashed_array format style
+    D [shape = circle, color = "#888888", textcolor="#FFFFFF"];
+
+    // Set border-style and color to edges.
+    A -> B [style = dotted];
+    B -> C [style = dashed];
+    C -> D [color = "red", style = "3,3,3,3,15,3"]; //dashed_array format style
+
+    // Set numbered-badge to nodes.
+    E [numbered = 99];
+
+    // Set background image to nodes (and erase label).
+    F [label = "", background = "https://github.com/sphinx-doc/sphinx/raw/master/doc/_static/sphinx.png"];
+    G [label = "", background = "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"];
+    H [icon = "https://github.com/blockdiag/blockdiag.com/raw/master/sources/en/_static/help-browser.png"];
+    I [icon = "https://github.com/blockdiag/blockdiag.com/raw/master/sources/en/_static/internet-mail.png"];
+    J [shape = actor]
+
+    // Set arrow direction to edges.
+    E -> F [dir = none, label = edge];
+    F -> G [dir = forward];
+    G -> H [dir = back];
+
+    group {
+        orientation = portrait;
+        color = lightgray;
+        H -> I [dir = both];
+    }
+
+    // Set width and height to nodes.
+    K [width = 192]; // default value is 128
+    L [shape = square, height = 64]; // default value is 40
+
+    // Use thick line
+    J -> K [thick]
+    K -> L;
+}

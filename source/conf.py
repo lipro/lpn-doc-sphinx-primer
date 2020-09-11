@@ -34,6 +34,8 @@ import git
 import sys
 import os
 
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
 if "DOCSRC" not in os.environ:
     DOCSRC = os.path.abspath(os.getcwd())
 else:
@@ -70,9 +72,14 @@ category = 'Miscellaneous'
 about = 'How to write Li-Pro.Net documentation with Sphinx.'
 keywords = 'Sphinx, Docutils, reStructuredText, howto, primer'
 
+if on_rtd:
+    git_describe = ('--dirty=+RTDEXT', '--broken=+broken')
+else:
+    git_describe = ('--dirty=+dirty', '--broken=+broken')
+
 try:
     repo = git.Repo(search_parent_directories=True)
-    semv = semver.VersionInfo.parse(repo.git.describe('--dirty'))
+    semv = semver.VersionInfo.parse(repo.git.describe(git_describe))
 except:
     # fallback to unknown version / release
     semv = semver.VersionInfo.parse('0.0.0-invalid+unknown')
@@ -154,6 +161,7 @@ extensions = [
 #   'sphinxcontrib.inkscapeconverter',
     'sphinxcontrib.rsvgconverter',
 #   'sphinxcontrib.cairosvgconverter',
+    'ldsp',
 ]
 
 
@@ -165,6 +173,19 @@ if tags.has('release'):  # pylint: disable=undefined-variable
 else:
     is_release = False
     docs_title = 'Docs / Latest'
+
+# Use the Sphinx panel extension only when it is really applicable, quite new.
+# There are some cross side effects with the Sphinx tabs extension.
+# tags.add("sphinx_panels")  # pylint: disable=undefined-variable
+# tags.add("sphinx_panels_no_boostrap_css")  # pylint: disable=undefined-variable
+if tags.has("sphinx_panels"):  # pylint: disable=undefined-variable
+    extensions.append('sphinx_panels')
+    if tags.has("sphinx_panels_no_boostrap_css"):  # pylint: disable=undefined-variable
+        panels_add_boostrap_css = False  # default is: True
+else:
+    # use the locally mocked extension instead
+    extensions.append('ldsp.mock_sphinx_panels')
+
 
 # -- Sphinx Basic Configuration ----------------------------------------------
 
@@ -531,7 +552,6 @@ todo_include_todos = True
 # Example configuration for intersphinx: refer to the Python standard library.
 # intersphinx_mapping = {'https://docs.python.org/3/': None}
 
-# on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # if on_rtd:
 #     intersphinx_mapping = {
 #         'sphinx': ('/Users/rexut/checkouts/sphinx/doc/_build/html/', None),
@@ -557,6 +577,36 @@ intersphinx_mapping = {
 
     # python -m sphinx.ext.intersphinx 'https://www.sphinx-doc.org/en/3.x/objects.inv'
     'sphinx': ('https://www.sphinx-doc.org/en/3.x/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-spelling.readthedocs.io/en/stable/objects.inv'
+    'scspelling': ('https://sphinxcontrib-spelling.readthedocs.io/en/stable/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-bibtex.readthedocs.io/en/stable/objects.inv'
+    'scbibtex': ('https://sphinxcontrib-bibtex.readthedocs.io/en/stable/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://return42.github.io/linuxdoc/objects.inv'
+    'lxdoc': ('https://return42.github.io/linuxdoc/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-programoutput.readthedocs.io/en/stable/objects.inv'
+    'scprgout': ('https://sphinxcontrib-programoutput.readthedocs.io/en/stable/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://matplotlib.org/objects.inv'|less
+    'mplref': ('https://matplotlib.org/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://matplotlib.org/sampledoc/objects.inv'|less
+    'mplsam': ('https://matplotlib.org/sampledoc/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-tikz.readthedocs.io/en/latest/objects.inv'
+    'sctikz': ('https://sphinxcontrib-tikz.readthedocs.io/en/latest/', None),
+
+    # python -m sphinx.ext.intersphinx 'http://blockdiag.com/en/objects.inv'|less
+    'bldiag': ('http://blockdiag.com/en/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://sphinx-tabs.readthedocs.io/en/stable/objects.inv'
+    'spxtabs': ('https://sphinx-tabs.readthedocs.io/en/stable/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://sphinx-panels.readthedocs.io/en/stable/objects.inv'
+    'spxpanels': ('https://sphinx-panels.readthedocs.io/en/stable/', None),
 
     #
     # Drawing the Docutils objects.inv from a RTD server,

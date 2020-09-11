@@ -1,0 +1,9 @@
+An example role :tikz:`[thick] \node[blue,draw] (a) {A};
+\node[draw,dotted,right of=a] {B} edge[<-] (a);`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

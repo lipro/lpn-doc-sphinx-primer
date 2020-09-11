@@ -1,0 +1,22 @@
+.. seqdiag::
+   :align: center
+
+   seqdiag {
+       # define order of elements
+       # seqdiag sorts elements by order they appear
+       browser; database; webserver;
+
+       browser  -> webserver [label = "GET /index.html"];
+       browser <-- webserver;
+       browser  -> webserver [label = "POST /blog/comment"];
+                   webserver  -> database [label = "INSERT comment"];
+                   webserver <-- database;
+       browser <-- webserver;
+   }
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

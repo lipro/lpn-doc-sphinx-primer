@@ -1,0 +1,18 @@
+.. actdiag::
+   :align: center
+   :scale: 75
+   :desctable:
+
+   actdiag {
+        A -> B -> C;
+        A [description = "browsers in each client"];
+        B [description = "web server"];
+        C [description = "database server"];
+   }
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

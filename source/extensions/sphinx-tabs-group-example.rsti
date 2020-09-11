@@ -1,0 +1,55 @@
+.. rubric:: operating systems
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      **Linux** is Unix-like, but was developed without any Unix code.
+      The Linux kernel originated in 1991, as a project of Linus
+      Torvalds, while a university student in Finland.
+
+   .. group-tab:: Mac OS X
+
+      **Mac OS X** is a line of open core graphical operating systems
+      developed, marketed, and sold by Apple Inc.
+
+   .. group-tab:: Microsoft Windows
+
+      **Microsoft Windows** is a family of proprietary operating systems
+      designed by Microsoft Corporation and primarily targeted to
+      Intel architecture based computers.
+
+.. rubric:: integrated development environments
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      **There is no dedicated or default integrated development
+      environment (IDE)** on *Linux*. `Here is a list`_ of IDEs
+      which will run natively on *Linux*.
+
+   .. group-tab:: Mac OS X
+
+      **Xcode** is an integrated development environment (IDE) for
+      *Mac OS X* containing a suite of software development tools
+      developed by Apple Inc.
+
+   .. group-tab:: Microsoft Windows
+
+      **Microsoft Visual Studio** is an integrated development
+      environment (IDE) from Microsoft Corporation. It is used to
+      develop computer programs uses Microsoft software development
+      platforms such as *Windows API*, *Windows Forms*, *Windows
+      Presentation Foundation*, *Windows Store* and *Microsoft
+      Silverlight*.
+
+.. _`Here is a list`:
+   https://en.wikipedia.org/wiki/Category:Linux_integrated_development_environments
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,17 @@
+nwdiag {
+    inet [shape = cloud];
+    inet -- router;
+
+    network front {
+        address = "192.168.0.0/24";
+        router;
+        web01;
+        web02;
+
+        // define network using defined nodes
+        group db {
+            web01;
+            web02;
+        }
+    }
+}

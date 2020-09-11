@@ -5,6 +5,8 @@
 .. Commons:
 
 .. |Docutils|                   replace:: :term:`Docutils`
+.. |LaTeX|                      replace:: :term:`LaTeX`
+.. |PyEnchant|                  replace:: :term:`PyEnchant`
 .. |reStructuredText|           replace:: :term:`reStructuredText`
 .. |Sphinx|                     replace:: :term:`Sphinx`
 
@@ -19,6 +21,13 @@
 .. Network:
 
 .. Technologies:
+
+.. |BibTeX|                     replace:: :term:`BibTeX`
+.. |Enchant|                    replace:: :term:`Enchant`
+.. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
+.. |PGF|                        replace:: :term:`PGF`
+.. |TikZ|                       replace:: :term:`TikZ`
+.. |TeX|                        replace:: :term:`TeX`
 
 .. Abbreviations:
 
