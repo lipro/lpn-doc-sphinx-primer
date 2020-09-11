@@ -32,6 +32,8 @@ extended for our needs.
    concepts/inline-markup
    concepts/files
    concepts/lists
+   concepts/explicit-markup
+   concepts/reuse
    concepts/code-example
 
 .. Local variables:

@@ -1,0 +1,10 @@
+.. |RST| replace:: reStructuredText
+
+Here, :rst:`|RST|` will be replaced by |RST|.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
