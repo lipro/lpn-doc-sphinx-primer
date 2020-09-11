@@ -1,0 +1,13 @@
+.. admonition:: Neque porro quisquam
+   :class: error
+
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+   mattis commodo eros, quis posuere enim lobortis quis. Nullam ut
+   tempus nibh.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

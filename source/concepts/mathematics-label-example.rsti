@@ -1,0 +1,12 @@
+.. math:: e^{i\pi} + 1 = 0
+   :label: euler
+
+Euler's identity, :math:numref:`euler`, was elected one
+of the most beautiful mathematical formulas.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

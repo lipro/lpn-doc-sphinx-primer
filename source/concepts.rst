@@ -37,6 +37,8 @@ extended for our needs.
    concepts/images
    concepts/tables
    concepts/code-example
+   concepts/mathematics
+   concepts/admonition
 
 .. Local variables:
    coding: utf-8
