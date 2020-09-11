@@ -26,6 +26,8 @@ extended for our needs.
    :titlesonly:
 
    concepts/whitespace
+   concepts/heading
+   concepts/toctree
    concepts/lists
 
 .. Local variables:
