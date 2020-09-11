@@ -170,8 +170,8 @@ Technologies
       `PGF/TikZ`_ is a pair of languages for producing vector graphics (for
       example: technical illustrations and drawings) from a geometric/algebraic
       description, with standard features including the drawing of points,
-      lines, arrows, paths, circles, ellipses and polygons. PGF, the *Portable
-      Graphic Format*, is a lower-level language, while TikZ, which is written
+      lines, arrows, paths, circles, ellipses and polygons. :abbr:`PGF (Portable
+      Graphic Format)`, is a lower-level language, while TikZ, which is written
       in |TeX|, is a set of higher-level macros that use PGF.
 
          - :wikien:`PGF/TikZ`
