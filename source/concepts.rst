@@ -43,6 +43,7 @@ extended for our needs.
    concepts/referencing
    concepts/downloads
    concepts/semantic-referencing
+   concepts/user-interfaces
 
 .. Local variables:
    coding: utf-8
