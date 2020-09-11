@@ -44,6 +44,8 @@ extended for our needs.
    concepts/downloads
    concepts/semantic-referencing
    concepts/user-interfaces
+   concepts/glossary
+   concepts/index
 
 .. Local variables:
    coding: utf-8
