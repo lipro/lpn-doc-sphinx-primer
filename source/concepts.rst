@@ -28,7 +28,9 @@ extended for our needs.
    concepts/whitespace
    concepts/heading
    concepts/toctree
+   concepts/paragraphs
    concepts/lists
+   concepts/code-example
 
 .. Local variables:
    coding: utf-8

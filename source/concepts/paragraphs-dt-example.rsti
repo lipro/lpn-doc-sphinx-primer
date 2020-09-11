@@ -1,0 +1,19 @@
+>>> print('this is a Doctest block')
+this is a Doctest block
+
+>>> print('Python-specific usage examples; begun with ">>>"')
+Python-specific usage examples; begun with ">>>"
+>>> print('(cut and pasted from interactive Python sessions)')
+(cut and pasted from interactive Python sessions)
+
+>>> a = [51,27,13,56]
+>>> b = dict(enumerate(a))
+>>> print(b)
+{0: 51, 1: 27, 2: 13, 3: 56}
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
