@@ -56,8 +56,8 @@ follows the content of the list item.
       * This is a list item.
 
         This is some additional content related to first item. Notice that
-	it is indented to the same column as the first line of content.
-	In this case, that's three (2) spaces.
+        it is indented to the same column as the first line of content.
+        In this case, that's three (2) spaces.
 
       .
       .
@@ -72,11 +72,11 @@ follows the content of the list item.
    .. code-block:: rst
       :linenos:
 
-      1. This is a list item.
+      1.  This is a list item.
 
-         This is some additional content related to Item 1. Notice that
-	 it is indented to the same column as the first line of content.
-	 In this case, that's three (3) spaces.
+          This is some additional content related to Item 1. Notice that
+          it is indented to the same column as the first line of content.
+          In this case, that's three (3) spaces.
 
       .
       .
