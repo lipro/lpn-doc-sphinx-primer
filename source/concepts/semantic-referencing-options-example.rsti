@@ -1,0 +1,12 @@
+.. seealso:: Working with :ref:`dlapp` (:program:`dlapp`):
+
+   * forcing with :option:`dlapp --force`
+   * ignoring with :option:`dlapp -i`
+   * defaults with :envvar:`DLAPPRC`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

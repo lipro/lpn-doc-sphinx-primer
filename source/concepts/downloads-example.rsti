@@ -1,0 +1,14 @@
+All artifacts were selected and download by using this reference URLs:
+
+* matplotlib example: |ellipses.py| (published as `ellipses.py`_)
+
+.. |ellipses.py| replace:: :download:`ellipses.py </_images/mplplots/ellipses.py>`
+.. _`ellipses.py`:
+   https://matplotlib.org/gallery/shapes_and_collections/ellipse_demo.html#ellipse-rotated
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

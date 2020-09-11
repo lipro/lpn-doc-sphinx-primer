@@ -41,6 +41,8 @@ extended for our needs.
    concepts/admonition
    concepts/hyperlink
    concepts/referencing
+   concepts/downloads
+   concepts/semantic-referencing
 
 .. Local variables:
    coding: utf-8

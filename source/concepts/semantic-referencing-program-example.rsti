@@ -1,0 +1,26 @@
+.. _dlapp:
+
+.. rubric:: Dreamland
+
+A fantasy CLI application.
+
+.. program:: dlapp
+
+.. option:: -f, --force
+
+   Force the operation.
+
+.. option:: -i <regex>, --ignore <regex>
+
+   Ignore things that match a specific pattern.
+
+.. envvar:: DLAPPRC
+
+   Set location of resources.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
