@@ -18,12 +18,19 @@
 
 .. Programming Languages:
 
+.. |ES|                         replace:: :term:`ES`
+.. |ECMAScript|                 replace:: :term:`ECMAScript`
+.. |JS|                         replace:: :term:`JS`
+.. |JavaScript|                 replace:: :term:`JavaScript`
+
 .. Network:
 
 .. Technologies:
 
 .. |BibTeX|                     replace:: :term:`BibTeX`
+.. |CSS|                        replace:: :term:`CSS`
 .. |Enchant|                    replace:: :term:`Enchant`
+.. |HTML|                       replace:: :term:`HTML`
 .. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
 .. |PGF|                        replace:: :term:`PGF`
 .. |TikZ|                       replace:: :term:`TikZ`

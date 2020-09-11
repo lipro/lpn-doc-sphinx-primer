@@ -78,11 +78,39 @@ Commons
 .. .. glossary::
    :sorted:
 
-.. Programming Languages
-.. *********************
+Programming Languages
+*********************
 
-.. .. glossary::
+.. glossary::
    :sorted:
+
+   ES
+   ECMAScript
+      :abbr:`ES (ECMAScript)` is a general-purpose programming language,
+      standardized by `Ecma International`_ according to the document
+      `ECMA-262`_. It is a |JavaScript| standard meant to ensure the
+      interoperability of Web pages across different Web browsers.
+
+      .. seealso::
+
+         - :wikien:`ECMAScript`
+
+   JS
+   JavaScript
+      :abbr:`JS (JavaScript)` is a programming language that conforms to the
+      |ECMAScript| specification. JavaScript is high-level, often just-in-time
+      compiled, and multi-paradigm. It has curly-bracket syntax, dynamic
+      typing, prototype-based object-orientation, and first-class functions.
+
+      Alongside |HTML| and |CSS|, JavaScript is one of the core technologies
+      of the World Wide Web. JavaScript enables interactive web pages and is
+      an essential part of web applications. The vast majority of websites use
+      it for client-side page behavior, and all major web browsers have a
+      dedicated JavaScript engine to execute it.
+
+      .. seealso::
+
+         - :wikien:`JavaScript`
 
 .. Network
 .. *******
@@ -105,6 +133,17 @@ Technologies
 
          - :wikien:`BibTeX`
 
+   CSS
+   Cascading Style Sheets
+      :abbr:`CSS (Cascading Style Sheets)` is a style sheet language used for
+      describing the presentation of a document written in a markup language
+      like |HTML|. CSS is a cornerstone technology of the World Wide Web,
+      alongside |HTML| and |JavaScript|.
+
+      .. seealso::
+
+         - :wikien:`CSS`
+
    Enchant
       `Enchant`_ is a free software project developed as part of the AbiWord
       word processor with the aim of unifying access to the various existing
@@ -113,6 +152,17 @@ Technologies
       .. seealso::
 
          - :wikien:`Enchant (software)`
+
+   HTML
+   Hypertext Markup Language
+      :abbr:`HTML (Hypertext Markup Language)` is the standard markup language
+      for documents designed to be displayed in a web browser. It can be
+      assisted by technologies such as Cascading Style Sheets (|CSS|) and
+      scripting languages such as |JavaScript|.
+
+      .. seealso::
+
+         - :wikien:`HTML`
 
    PGF
    TikZ
