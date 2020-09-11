@@ -29,6 +29,7 @@ Extensions
    extensions/blockdiag
    extensions/sphinx-tabs
    extensions/sphinx-panels
+   extensions/email
 
 .. Local variables:
    coding: utf-8
