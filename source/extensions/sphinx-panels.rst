@@ -63,7 +63,7 @@ Create paneled content in |Sphinx| documentation when building |HTML|.
       The current behavior disturbs the integration, so the extension is
       disabled for now (see :file:`conf.py`). Currently known bugs are:
 
-      * annoying side effects with the :doc:`sphinx-tabs` extension by
+      * annoying side effects with the :doc:`./sphinx-tabs` extension by
 	the automatically integrated and delivered Bootstrap 4.0 CSS
       * no proper and practical LaTeX builder support
 
