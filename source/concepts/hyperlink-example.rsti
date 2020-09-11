@@ -1,0 +1,10 @@
+`A cool website`_ and `The Dino <https://docutils.sourceforge.io/>`_.
+
+.. _A cool website: https://www.sphinx-doc.org/
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

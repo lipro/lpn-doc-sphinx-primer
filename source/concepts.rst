@@ -39,6 +39,8 @@ extended for our needs.
    concepts/code-example
    concepts/mathematics
    concepts/admonition
+   concepts/hyperlink
+   concepts/referencing
 
 .. Local variables:
    coding: utf-8
