@@ -1,0 +1,23 @@
+Definition list
+   a list with several term-definition pairs in the form
+
+   .. parsed-literal::
+
+      **TERM**
+         DEFINITION (*description of term*)
+
+   Terms
+      should not be indented
+
+   Definitions
+      should be indented under the term
+
+Line spacing
+   there should be a blank line between term-definition pairs
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

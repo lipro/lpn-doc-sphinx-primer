@@ -1,0 +1,23 @@
+* This is a bulleted list ...
+* ... use asterisks.
+* It has fife items, the third
+  item uses two lines.
+* Are unindented at the first level.
+* Must have a blank line before and after.
+
+  - This is a bulleted list ...
+  - ... use hyphens.
+  - Are indented at the first level to stand out from the
+    previous paragraph.
+
+    - the blank line requirement means that nested list items
+      will have a blank line before and after as well
+
+    - you may *optionally* put a blank line *between* list items
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

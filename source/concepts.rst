@@ -20,6 +20,14 @@ are covered in the |Sphinx| :ref:`sphinx:rst-primer`. The outline for this
 chapter has been taken from :doc:`pydevguide:documenting` and adapted and
 extended for our needs.
 
+.. toctree::
+   :caption: List of Concepts
+   :maxdepth: 2
+   :titlesonly:
+
+   concepts/whitespace
+   concepts/lists
+
 .. Local variables:
    coding: utf-8
    mode: text

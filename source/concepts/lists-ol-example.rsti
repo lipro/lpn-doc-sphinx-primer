@@ -1,0 +1,18 @@
+1. This is a numbered list.
+2. Start each line with a number and period.
+3. Can begin on any number.
+
+8. Must have a blank line before and after.
+9. Can have nested sub-lists.
+
+   a. nested lists are numbered separately
+   #. nested lists need a blank line before and after
+
+#. Can have automatic number with the ``#`` character.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
