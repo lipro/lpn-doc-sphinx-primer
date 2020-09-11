@@ -1,0 +1,15 @@
+.. csv-table:: Example CSV table from source file
+   :name: tables-csv-srcfile-example
+   :file: tables-csv-srcfile-example.csv
+   :delim: |
+   :encoding: utf-8-sig
+   :header-rows: 1
+   :stub-columns: 1
+   :width: 66%
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

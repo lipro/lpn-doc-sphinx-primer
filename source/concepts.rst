@@ -34,6 +34,8 @@ extended for our needs.
    concepts/lists
    concepts/explicit-markup
    concepts/reuse
+   concepts/images
+   concepts/tables
    concepts/code-example
 
 .. Local variables:

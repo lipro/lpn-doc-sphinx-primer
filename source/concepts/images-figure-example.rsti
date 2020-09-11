@@ -1,0 +1,36 @@
+.. figure:: /_images/lpn.*
+   :name: the-lpn-logo
+   :alt: The Li-Pro.Net logo.
+   :figclass: align-center
+   :align: center
+   :scale: 75 %
+
+   The |ghlpn|_ logo.
+
+   Legend of all elements you can see in the graphic:
+
+   .. list-table:: The legend for the |ghlpn|_ logo.
+      :widths: 10 40
+      :width: 50 %
+      :align: center
+      :header-rows: 1
+      :stub-columns: 1
+
+      * - Letter
+        - Meaning
+      * - L (in blue)
+        - Li
+      * - P (in blue)
+        - Pro
+      * - N (in red)
+        - Net
+
+.. |ghlpn| unicode:: Li U+02013 Pro.Net U+0040 GitHub
+.. _`ghlpn`: https://github.com/lipro
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

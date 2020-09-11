@@ -1,0 +1,26 @@
+.. tabularcolumns:: p{0.132\linewidth}p{0.198\linewidth}p{0.330\linewidth}
+.. table:: Example table in grid style
+   :name: tables-grid-example
+   :widths: 20, 30, 50
+   :class: longtable
+   :align: center
+   :width: 66%
+
+   +------------+------------+-----------+
+   | Header 1   | Header 2   | Header 3  |
+   +============+============+===========+
+   | body row 1 | column 2   | column 3  |
+   +------------+------------+-----------+
+   | body row 2 | Cells may span columns.|
+   +------------+------------+-----------+
+   | body row 3 | Cells may  | - Cells   |
+   +------------+ span rows. | - contain |
+   | body row 4 |            | - blocks. |
+   +------------+------------+-----------+
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
