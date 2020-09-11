@@ -28,6 +28,7 @@ Extensions
    extensions/tikz
    extensions/blockdiag
    extensions/sphinx-tabs
+   extensions/sphinx-panels
 
 .. Local variables:
    coding: utf-8

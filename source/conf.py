@@ -174,6 +174,19 @@ else:
     is_release = False
     docs_title = 'Docs / Latest'
 
+# Use the Sphinx panel extension only when it is really applicable, quite new.
+# There are some cross side effects with the Sphinx tabs extension.
+# tags.add("sphinx_panels")  # pylint: disable=undefined-variable
+# tags.add("sphinx_panels_no_boostrap_css")  # pylint: disable=undefined-variable
+if tags.has("sphinx_panels"):  # pylint: disable=undefined-variable
+    extensions.append('sphinx_panels')
+    if tags.has("sphinx_panels_no_boostrap_css"):  # pylint: disable=undefined-variable
+        panels_add_boostrap_css = False  # default is: True
+else:
+    # use the locally mocked extension instead
+    extensions.append('ldsp.mock_sphinx_panels')
+
+
 # -- Sphinx Basic Configuration ----------------------------------------------
 
 # Add any paths that contain templates here, relative to this directory.
@@ -591,6 +604,9 @@ intersphinx_mapping = {
 
     # python -m sphinx.ext.intersphinx 'https://sphinx-tabs.readthedocs.io/en/stable/objects.inv'
     'spxtabs': ('https://sphinx-tabs.readthedocs.io/en/stable/', None),
+
+    # python -m sphinx.ext.intersphinx 'https://sphinx-panels.readthedocs.io/en/stable/objects.inv'
+    'spxpanels': ('https://sphinx-panels.readthedocs.io/en/stable/', None),
 
     #
     # Drawing the Docutils objects.inv from a RTD server,
