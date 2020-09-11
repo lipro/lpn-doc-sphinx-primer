@@ -79,7 +79,7 @@ Create a citation to a bibliographic entry.
 
       :which needs:
 
-         The example above processed the following BibTeX file content:
+         The example above processed the following |BibTeX| file content:
 
          .. literalinclude:: bibliography.bibtex
             :caption: BibTeX example file (bibliography.bibtex)

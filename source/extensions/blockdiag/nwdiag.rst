@@ -6,7 +6,7 @@
 Network Diagram
 ###############
 
-:doc:`bldiag:nwdiag/sphinxcontrib` is a Sphinx extension for embedding
+:doc:`bldiag:nwdiag/sphinxcontrib` is a |Sphinx| extension for embedding
 network diagrams. You can embed network diagrams with the :rst:`.. nwdiag::`,
 :rst:`.. rackdiag::` and :rst:`.. packetdiag::` directives.
 
@@ -14,7 +14,7 @@ network diagrams. You can embed network diagrams with the :rst:`.. nwdiag::`,
 :Documentation:  http://blockdiag.com/en/nwdiag/sphinxcontrib.html
 :Git Repository: https://github.com/blockdiag/sphinxcontrib-nwdiag
 
-Sphinx extension for embedding network diagrams using
+|Sphinx| extension for embedding network diagrams using
 `nwdiag <https://github.com/blockdiag/nwdiag>`_.
 
 :Features:

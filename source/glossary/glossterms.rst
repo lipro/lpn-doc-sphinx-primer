@@ -21,7 +21,7 @@ Commons
 
    Docutils
       `Docutils`_ is an open-source text processing system for processing
-      plaintext documentation into useful formats, such as HTML, LaTeX,
+      plaintext documentation into useful formats, such as |HTML|, |LaTeX|,
       man-pages, open-document or XML. It includes |reStructuredText|, the
       easy to read, easy to use, what-you-see-is-what-you-get plaintext
       markup language.
@@ -33,7 +33,7 @@ Commons
    Sphinx
       `Sphinx`_ is a documentation generator written and used by the Python
       community. It is written in Python, and also used in other environments.
-      Sphinx converts reStructuredText files into HTML websites and other
+      Sphinx converts |reStructuredText| files into |HTML| websites and other
       formats including PDF, EPub, Texinfo and man.
       
       |reStructuredText| is extensible, and Sphinx exploits its extensible
@@ -137,7 +137,7 @@ Technologies
    Cascading Style Sheets
       :abbr:`CSS (Cascading Style Sheets)` is a style sheet language used for
       describing the presentation of a document written in a markup language
-      like |HTML|. CSS is a cornerstone technology of the World Wide Web,
+      like |HTML|. |CSS| is a cornerstone technology of the World Wide Web,
       alongside |HTML| and |JavaScript|.
 
       .. seealso::

@@ -10,7 +10,7 @@ Spelling Checker
 :Documentation:  https://sphinxcontrib-spelling.readthedocs.io/
 :Git Repository: https://github.com/sphinx-contrib/spelling
 
-Spelling checker for Sphinx. It uses |PyEnchant| to produce a report showing
+Spelling checker for |Sphinx|. It uses |PyEnchant| to produce a report showing
 misspelled words.
 
 :Features:

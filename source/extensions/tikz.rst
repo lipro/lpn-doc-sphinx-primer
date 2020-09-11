@@ -8,13 +8,13 @@ PGF/TikZ LaTeX Pictures
 
 .. attention::
 
-   Only practicable and usable for HTML and |LaTeX| builder.
+   Only practicable and usable for |HTML| and |LaTeX| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinxcontrib-tikz/
 :Documentation:  http://sphinxcontrib-tikz.readthedocs.io/
 :Git Repository: https://bitbucket.org/philexander/tikz
 
-Sphinx extension, which enables the use of the |PGF/TikZ| |LaTeX| package
+|Sphinx| extension, which enables the use of the |PGF/TikZ| |LaTeX| package
 to draw nice pictures.
 
 This extension relies on two software packages being installed

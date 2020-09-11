@@ -16,7 +16,7 @@ Themes
    .. sectionauthor:: |slz_plain_text|
 
 Let's decorate the project documentation. There are a lot of themes
-for the Sphinx HTML builder available on the `Sphinx Themes Demo Page`_.
+for the |Sphinx| |HTML| builder available on the `Sphinx Themes Demo Page`_.
 
 This documentation use the `Read the Docs Sphinx Theme`_ as demonstrate
 at the `Sphinx RTD Theme Demo Page`_.

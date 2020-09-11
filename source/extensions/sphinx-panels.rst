@@ -8,13 +8,13 @@ Paneled Content
 
 .. attention::
 
-   Only practicable and usable for HTML builder.
+   Only practicable and usable for |HTML| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinx-panels/
 :Documentation:  https://sphinx-panels.readthedocs.io/
 :Git Repository: https://github.com/executablebooks/sphinx-panels
 
-Create paneled content in Sphinx documentation when building HTML.
+Create paneled content in |Sphinx| documentation when building |HTML|.
 
 :Features:
 
@@ -59,7 +59,7 @@ Create paneled content in Sphinx documentation when building HTML.
    .. admonition:: Extension not applicable
       :class: danger
 
-      This Sphinx extension is quite new and is under constant development.
+      This |Sphinx| extension is quite new and is under constant development.
       The current behavior disturbs the integration, so the extension is
       disabled for now (see :file:`conf.py`). Currently known bugs are:
 

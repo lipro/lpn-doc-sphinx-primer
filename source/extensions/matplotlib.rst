@@ -23,9 +23,9 @@ Mathematical Plots
 Matplotlib is a comprehensive library for creating static, animated, and
 interactive visualizations in Python. It consists:
 
-* ``matplotlib.sphinxext.mathmpl``: Matplotlib math-text in a Sphinx document
+* ``matplotlib.sphinxext.mathmpl``: Matplotlib math-text in a |Sphinx| document
 * :py:mod:`mplref:matplotlib.sphinxext.plot_directive`:
-  Matplotlib plot in a Sphinx document
+  Matplotlib plot in a |Sphinx| document
 
 .. todo:: activate "Mathematical Plots" extension.
 
@@ -37,7 +37,7 @@ how to writing mathematical expressions in matplotlib.
 
 .. code-block:: rst
 
-   With matplotlib in Sphinx you can include inline math
+   With matplotlib in |Sphinx| you can include inline math
    :mathmpl:`(\alpha^{ic} > \beta_{ic})` (as role
    :rst:`:mathmpl:`(\alpha^{ic} > \beta_{ic})``) or display math:
 
@@ -108,7 +108,7 @@ The source code for the plot may be included in one of three ways:
 
 .. rubric:: source file content
 
-When a path to a source file is given, the Sphinx configuration option
+When a path to a source file is given, the |Sphinx| configuration option
 ``plot_basedir`` will respect. It is the base directory, to which
 :rst:`.. plot::` file names are relative to. If **None or empty**, file names
 are **relative** to the directory where the file containing the directive is.

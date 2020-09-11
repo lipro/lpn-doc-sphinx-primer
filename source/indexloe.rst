@@ -17,7 +17,7 @@
    List of Equations
    #################
 
-   .. note:: *List of Equations* is not supported for HTML.
+   .. note:: *List of Equations* is not supported for |HTML|.
 
 .. Local variables:
    coding: utf-8

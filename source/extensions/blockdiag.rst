@@ -38,7 +38,7 @@ from simple text files:
    2. Generates beautiful diagram images from simple text format
       (similar to Graphviz's ``dot`` format)
    3. Layouts diagram elements automatically
-   4. Embeds to many documentations; Sphinx, Trac, Redmine,
+   4. Embeds to many documentations; |Sphinx|, Trac, Redmine,
       and some Wikis
 
 .. toctree::

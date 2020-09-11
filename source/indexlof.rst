@@ -17,7 +17,7 @@
    List of Figures
    ###############
 
-   .. note:: *List of Figures* is not supported for HTML.
+   .. note:: *List of Figures* is not supported for |HTML|.
 
 .. Local variables:
    coding: utf-8

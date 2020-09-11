@@ -6,7 +6,7 @@
 Block Diagram
 #############
 
-:doc:`bldiag:blockdiag/sphinxcontrib` is a Sphinx extension for embedding
+:doc:`bldiag:blockdiag/sphinxcontrib` is a |Sphinx| extension for embedding
 block diagrams. You can embed block diagrams with the :rst:`.. blockdiag::`
 directive.
 
@@ -14,7 +14,7 @@ directive.
 :Documentation:  http://blockdiag.com/en/blockdiag/sphinxcontrib.html
 :Git Repository: https://github.com/blockdiag/sphinxcontrib-blockdiag
 
-Sphinx extension for embedding block diagrams using
+|Sphinx| extension for embedding block diagrams using
 `blockdiag <https://github.com/blockdiag/blockdiag>`_.
 
 :Features:

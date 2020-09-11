@@ -6,7 +6,7 @@
 Activity Diagram
 ################
 
-:doc:`bldiag:actdiag/sphinxcontrib` is a Sphinx extension for embedding
+:doc:`bldiag:actdiag/sphinxcontrib` is a |Sphinx| extension for embedding
 activity diagrams. You can embed activity diagrams with the :rst:`.. actdiag::``
 directive.
 
@@ -14,7 +14,7 @@ directive.
 :Documentation:  http://blockdiag.com/en/actdiag/sphinxcontrib.html
 :Git Repository: https://github.com/blockdiag/sphinxcontrib-actdiag
 
-Sphinx extension for embedding activity diagrams using
+|Sphinx| extension for embedding activity diagrams using
 `actdiag <https://github.com/blockdiag/actdiag>`_.
 
 :Features:

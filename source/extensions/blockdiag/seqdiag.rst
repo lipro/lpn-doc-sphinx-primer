@@ -6,7 +6,7 @@
 Sequence Diagram
 ################
 
-:doc:`bldiag:seqdiag/sphinxcontrib` is a Sphinx extension for embedding
+:doc:`bldiag:seqdiag/sphinxcontrib` is a |Sphinx| extension for embedding
 sequence diagrams. You can embed sequence diagrams with the :rst:`.. seqdiag::`
 directive.
 
@@ -14,7 +14,7 @@ directive.
 :Documentation:  http://blockdiag.com/en/seqdiag/sphinxcontrib.html
 :Git Repository: https://github.com/blockdiag/sphinxcontrib-seqdiag
 
-Sphinx extension for embedding sequence diagrams using
+|Sphinx| extension for embedding sequence diagrams using
 `seqdiag <https://github.com/blockdiag/seqdiag>`_.
 
 :Features:

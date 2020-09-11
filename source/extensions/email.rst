@@ -8,7 +8,7 @@ Email Obfuscate
 
 .. attention::
 
-   Only practicable and usable for HTML builder.
+   Only practicable and usable for |HTML| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinxcontrib-email/
 :Documentation:  https://github.com/sphinx-contrib/email/blob/master/README.rst

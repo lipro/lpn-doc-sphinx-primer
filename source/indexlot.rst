@@ -17,7 +17,7 @@
    List of Tables
    ##############
 
-   .. note:: *List of Tables* is not supported for HTML.
+   .. note:: *List of Tables* is not supported for |HTML|.
 
 .. Local variables:
    coding: utf-8

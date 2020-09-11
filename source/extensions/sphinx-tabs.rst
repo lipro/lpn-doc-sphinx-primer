@@ -8,13 +8,13 @@ Tabbed Content
 
 .. attention::
 
-   Only practicable and usable for HTML builder.
+   Only practicable and usable for |HTML| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinx-tabs/
 :Documentation:  https://sphinx-tabs.readthedocs.io/
 :Git Repository: https://github.com/executablebooks/sphinx-tabs
 
-Create tabbed content in Sphinx documentation when building HTML.
+Create tabbed content in |Sphinx| documentation when building |HTML|.
 
 :Features:
 
