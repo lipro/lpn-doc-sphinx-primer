@@ -75,6 +75,8 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
 
          .. include:: sphinx-tabs-group-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

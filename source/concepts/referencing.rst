@@ -6,18 +6,18 @@
 Referencing
 ###########
 
-Another important Sphinx feature is that it allows referencing across
+Another important |Sphinx| feature is that it allows referencing across
 documents. This is another powerful way to tie documents together.
 
 The simplest way to do this is to define an explicit reference object which
 can then be referenced directly as internal hyperlink target or with
 :rst:`:ref:`refname`` or in rare cases with :rst:`:numref:`refname`` depending
-on the :rst:dir:`sphinx:toctree` section numbering setup. Sphinx also supports
+on the :rst:dir:`sphinx:toctree` section numbering setup. |Sphinx| also supports
 :rst:`:doc:`docname`` for linking to a document via built-in extension
 :py:mod:`sphinx:sphinx.ext.intersphinx` and also supports auto-generated labels
 for each section via built-in extension :py:mod:`sphinx:sphinx.ext.autosectionlabel`.
 
-The :duref:`Hyperlink Targets <hyperlinks>` in Docutils provides the basic
+The :duref:`Hyperlink Targets <hyperlinks>` in |Docutils| provides the basic
 specification for :duref:`internal <internal-hyperlink-targets>` and
 :duref:`external <external-hyperlink-targets>` hyperlink targets. These are
 also called :duref:`explicit <explicit-hyperlink-targets>` and also available

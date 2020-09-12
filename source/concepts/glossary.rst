@@ -7,7 +7,7 @@
 Glossary
 ########
 
-Sphinx has a built-in Glossary structure that you can use to:
+|Sphinx| has a built-in Glossary structure that you can use to:
 
 * Produce a consolidated glossary of terms.
 * Link terms in other content to their glossary definitions.
@@ -58,7 +58,7 @@ Link a Term to its Glossary Entry
    For more details, see :rst:role:`sphinx:index` role.
 
    When a glossary term is used in text, you can link it to its definition
-   with the :rst:`:term:` role. For example, to link the term Sphinx to its
+   with the :rst:`:term:` role. For example, to link the term |Sphinx| to its
    definition, use the following syntax:
 
    .. code-block:: rst
@@ -76,6 +76,8 @@ Link a Term to its Glossary Entry
 
    The term in angle brackets must exactly match a term in the glossary. The
    text before the angle brackets is what users see on the page.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

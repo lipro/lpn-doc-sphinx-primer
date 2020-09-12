@@ -52,6 +52,10 @@
       consistency and maintainability, this how to guide is *highly opinionated*
       about how documentation source files are organized and marked up.
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
+.. ...........................................................................
+
 .. toctree::
    :caption: Table of Contents
    :numbered: 3

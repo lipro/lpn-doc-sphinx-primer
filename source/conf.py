@@ -615,8 +615,8 @@ intersphinx_mapping = {
     #
 
     # python -m sphinx.ext.intersphinx 'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'
-    'docutils': ('https://docutils.sourceforge.io/docs/',
-                 'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'),
+#   'docutils': ('https://docutils.sourceforge.io/docs/',
+#                'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'),
 }
 
 

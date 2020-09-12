@@ -1,8 +1,9 @@
-All artifacts were selected and download by using this reference URLs:
+All artifacts were selected and download by using this references:
 
 * matplotlib example: |ellipses.py| (published as `ellipses.py`_)
 
-.. |ellipses.py| replace:: :download:`ellipses.py </_images/mplplots/ellipses.py>`
+.. |ellipses.py| replace::
+   :download:`ellipses.py </_images/mplplots/ellipses.py>`
 .. _`ellipses.py`:
    https://matplotlib.org/gallery/shapes_and_collections/ellipse_demo.html#ellipse-rotated
 

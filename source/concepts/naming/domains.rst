@@ -96,6 +96,8 @@ domains are provided by |Sphinx| (without additional extensions):
    * Refer to :doc:`sphinx:usage/restructuredtext/domains`
      for domains provided by |Sphinx|.
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

@@ -100,11 +100,14 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
          .. literalinclude:: tikz/ctrloop.tikz
             :caption: TikZ example file (ctrloop.tikz)
+            :end-before: %Local variables:
             :language: latex
             :linenos:
 
 .. _`Control system principles`:
    http://www.texample.net/tikz/examples/control-system-principles
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

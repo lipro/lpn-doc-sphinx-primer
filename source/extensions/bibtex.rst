@@ -92,6 +92,8 @@ Create a citation to a bibliographic entry.
 
       Hasecke
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

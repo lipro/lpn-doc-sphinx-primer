@@ -7,7 +7,7 @@
 Images and Figures
 ##################
 
-SVG graphics only
+SVG Graphics only
 *****************
 
 All vector graphics or diagrams should be SVG files. This helps us keep our
@@ -23,7 +23,7 @@ These include EPS/PS, AI, DXF, EMF/WMF, or some special XML vector graphics
 schemes. In any case avoid embedded bitmaps, as this is a lossy format for
 vector informations that does not replicate scaling very well.
 
-PNG images only
+PNG Images only
 ***************
 
 All still bitmap images or photos should be PNG files. This helps us keep our
@@ -67,7 +67,7 @@ Use the asterisk, and omit the file extension
 
       .. include:: images-image-example.rsti
 
-Inserting with captions
+Inserting with Captions
 ***********************
 
 Use :rst:`.. figure::` directive to markup a graphic or image with a caption
@@ -81,7 +81,7 @@ Use :rst:`.. figure::` directive to markup a graphic or image with a caption
     The rest of the indented content will be the (optional) caption.
     This can be a short sentence or multiline paragraph.
 
-Captions can contain any other complex reStructuredText markup. Further
+Captions can contain any other complex |reStructuredText| markup. Further
 paragraphs after the caption will be the (optional) legend which are
 also arbitrary body elements.
 
@@ -98,11 +98,13 @@ also arbitrary body elements.
 
       .. include:: images-figure-example.rsti
 
-Inserting inline
+Inserting Inline
 ****************
 
 To information on creating inline images, see
 :ref:`concepts/reuse/substitutions:Inline image`.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

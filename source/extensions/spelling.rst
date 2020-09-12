@@ -49,6 +49,8 @@ For more details, see :doc:`scspelling:customize` section *Private Dictionaries*
    dictionary. The files should contain one word per line. Refer to the
    |PyEnchant| tutorial for details.
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

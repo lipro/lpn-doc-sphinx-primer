@@ -97,6 +97,8 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
 
       .. include:: linuxdoc-flat-table-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

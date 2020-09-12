@@ -6,10 +6,11 @@
 Use of whitespace
 #################
 
-All |reStructuredText| files use an indentation of three 3 spaces; no tabs
-are allowed. The maximum line length is 80 characters for normal text, but
-tables, deeply indented code samples and long links may extend beyond that.
-Code example bodies should use normal four-(4)-space indentation.
+All |reStructuredText| files **use an indentation of three (3) spaces**;
+no tabs are allowed. The maximum **line length is 80 characters** for
+normal text, but tables, deeply indented code samples and long links may
+extend beyond that. *Code example* bodies should use *normal four-(4)-space*
+indentation.
 
 Make generous use of blank lines where applicable; they help group things
 together.
@@ -85,6 +86,8 @@ follows the content of the list item.
       10. The tenth item in a list.
 
           This related content will be indented four (4) spaces.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

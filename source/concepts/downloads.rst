@@ -41,6 +41,8 @@ they appear (that is, the filename without the :file:`.rst` extension).
 
       .. include:: downloads-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

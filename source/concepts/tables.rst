@@ -2,15 +2,11 @@
 
 .. index::
    triple: Sphinx; Syntax; Tables
-   triple: Sphinx; Syntax; Grid Table
-   triple: Sphinx; Syntax; Simple Table
-   triple: Sphinx; Syntax; List Table
-   triple: Sphinx; Syntax; CSV Table
 
 Tables
 ######
 
-For more details, see :dudir:`Table <table>` in Docutils or
+For more details, see :dudir:`Table <table>` in |Docutils| or
 :ref:`Tables Basics <sphinx:rst-tables>` and
 :ref:`Tables Directives <sphinx:table-directives>`.
 
@@ -21,15 +17,21 @@ For more details, see :dudir:`Table <table>` in Docutils or
 
 .. rst:directive:: tabularcolumns
 
-   The :rst:`.. tabularcolumns::` directive gives a ``column spec`` for the
-   next table occurring in the source file. The spec is the second argument
-   to the LaTeX :latex:`tabulary` package’s environment (which Sphinx uses to
-   translate tables). For more details, see :rst:dir:`sphinx:tabularcolumns`.
+   The :rst:`.. tabularcolumns::` directive gives a ``column spec`` for
+   the next table occurring in the source file. The spec is the second
+   argument to the |LaTeX| :latex:`tabulary` package’s environment (which
+   |Sphinx| uses to translate tables). For more details, see
+   :rst:dir:`sphinx:tabularcolumns`.
+
+.. index::
+   triple: Sphinx; Syntax; Grid Table
+
+:raw-latex:`\clearpage\phantomsection`
 
 Grid Style
 **********
 
-For more details, see :duref:`Grid Tables <grid-tables>` in Docutils.
+For more details, see :duref:`Grid Tables <grid-tables>` in |Docutils|.
 
 :the example:
 
@@ -42,10 +44,15 @@ For more details, see :duref:`Grid Tables <grid-tables>` in Docutils.
 
    .. include:: tables-grid-example.rsti
 
+.. index::
+   triple: Sphinx; Syntax; Simple Table
+
+:raw-latex:`\clearpage\phantomsection`
+
 Simple Style
 ************
 
-For more details, see :duref:`Simple Tables <simple-tables>` in Docutils.
+For more details, see :duref:`Simple Tables <simple-tables>` in |Docutils|.
 
 :the example:
 
@@ -58,12 +65,17 @@ For more details, see :duref:`Simple Tables <simple-tables>` in Docutils.
 
    .. include:: tables-simple-example.rsti
 
+.. index::
+   triple: Sphinx; Syntax; List Table
+
+:raw-latex:`\clearpage\phantomsection`
+
 List Table
 **********
 
 .. rst:directive:: list-table
 
-   For more details, see :dudir:`List Tables <list-table>` in Docutils.
+   For more details, see :dudir:`List Tables <list-table>` in |Docutils|.
 
    .. hint::
 
@@ -81,12 +93,17 @@ List Table
 
       .. include:: tables-list-example.rsti
 
+.. index::
+   triple: Sphinx; Syntax; CSV Table
+
+:raw-latex:`\clearpage\phantomsection`
+
 CSV Table
 *********
 
 .. rst:directive:: csv-table
 
-   For more details, see :dudir:`CSV Tables <csv-table>` in Docutils.
+   For more details, see :dudir:`CSV Tables <csv-table>` in |Docutils|.
 
    .. hint::
 
@@ -185,6 +202,8 @@ CSV Table
    row is the same. However, this directive supports CSV generators that
    do not insert "empty" entries at the end of short rows, by automatically
    adding empty entries.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

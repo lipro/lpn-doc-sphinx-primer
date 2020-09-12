@@ -37,7 +37,10 @@ additional predefined :ref:`sphinx:default-substitutions`.
 
       .. include:: substitutions-replace-example.rsti
 
-Styled reference
+.. index::
+   triple: Sphinx; Syntax; Styled Reference
+
+Styled Reference
 ****************
 
 You can also create a reference with styled text,
@@ -54,32 +57,40 @@ You can also create a reference with styled text,
 
    .. include:: substitutions-nested-inline-markup-example.rsti
 
-Use prolog and epilog
+.. index::
+   triple: Sphinx; Syntax; RST Prolog
+   triple: Sphinx; Syntax; RST Epilog
+
+Use Prolog and Epilog
 *********************
 
 The |Sphinx| configuration values :confval:`sphinx:rst_prolog` and
 :confval:`sphinx:rst_epilog` in :file:`conf.py` contains a list of global
-substitutions that can be used from any file.
-The (incomplete) list is given below:
+substitutions that can be used from any file. The (incomplete) list for this
+document is given below:
 
-:|f_project|:   will be replaced by |project|
-:|f_author|:    will be replaced by |author|
-:|f_publisher|: will be replaced by |publisher|
-:|f_copyright|: will be replaced by |copyright|
-:|f_LICENSE|:   will be replaced by |LICENSE|
-:|f_CREDITS|:   will be replaced by |CREDITS|
+:|f_project|:   |CRT| leads to: "|project|"
+:|f_author|:    |CRT| leads to: "|author|"
+:|f_publisher|: |CRT| leads to: "|publisher|"
+:|f_copyright|: |CRT| leads to: "|copyright|"
+:|f_LICENSE|:   |CRT| leads to: "|LICENSE|"
+:|f_CREDITS|:   |CRT| leads to: "|CREDITS|"
 
-.. |f_project|   replace:: :rst:`|project|`
-.. |f_author|    replace:: :rst:`|author|`
-.. |f_publisher| replace:: :rst:`|publisher|`
-.. |f_copyright| replace:: :rst:`|copyright|`
-.. |f_LICENSE|   replace:: :rst:`|LICENSE|`
-.. |f_CREDITS|   replace:: :rst:`|CREDITS|`
+.. |f_project|   replace:: :rst:`"|project|"`
+.. |f_author|    replace:: :rst:`"|author|"`
+.. |f_publisher| replace:: :rst:`"|publisher|"`
+.. |f_copyright| replace:: :rst:`"|copyright|"`
+.. |f_LICENSE|   replace:: :rst:`"|LICENSE|"`
+.. |f_CREDITS|   replace:: :rst:`"|CREDITS|"`
 
-Inline image
+.. index::
+   triple: Sphinx; Syntax; Inline Image
+
+Inline Image
 ************
 
-You can add inline images in the document using substitutions. The following block of code substitutes arrow in the text with the image specified.
+You can add inline images in the document using substitutions. The following
+block of code substitutes arrow in the text with the image specified.
 
 :the example:
 
@@ -91,6 +102,8 @@ You can add inline images in the document using substitutions. The following blo
 :which gives:
 
    .. include:: substitutions-inline-images-example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

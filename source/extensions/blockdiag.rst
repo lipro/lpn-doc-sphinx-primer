@@ -41,6 +41,8 @@ from simple text files:
    4. Embeds to many documentations; |Sphinx|, Trac, Redmine,
       and some Wikis
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. toctree::
    :caption: List of Diagrams
    :maxdepth: 1

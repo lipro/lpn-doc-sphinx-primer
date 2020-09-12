@@ -1,5 +1,7 @@
 :topic: Themes
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. index:: pair: Themes; Li-Pro.Net Sphinx Primer
    :name: ldsp-themes
 
@@ -26,6 +28,8 @@ the theme by `The Executable Book Project`_.
 
 .. _`The Sphinx Book Theme`: https://sphinx-book-theme.readthedocs.io/
 .. _`The Executable Book Project`: https://ebp.jupyterbook.org/
+
+:raw-latex:`\cleardoublepage\phantomsection`
 
 .. toctree::
    :caption: List of Themes

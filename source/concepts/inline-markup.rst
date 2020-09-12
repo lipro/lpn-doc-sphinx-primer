@@ -23,7 +23,7 @@ on output.
 
 Refer to :ref:`sphinx:rst-inline-markup` added by Sphinx.
 
-All the standard reStructuredText inline markups are quite simple, use:
+All the standard |reStructuredText| inline markups are quite simple, use:
 
 * one asterisk:  :rst:`*text*` for emphasis (*italics*),
 * two asterisks: :rst:`**text**` for strong emphasis (**boldface**), and
@@ -95,11 +95,13 @@ Be aware of some restrictions of this markup:
 
 * it may not be nested (see
   :dutodo:`nested inline markup <nested-inline-markup>`
-  in Docutils To Do List),
+  in |Docutils| To Do List),
 * content may not start or end with whitespace: :rst:`* text*` is wrong,
 * it must be separated from surrounding text by non-word characters.
   Use a backslash escaped space to work around that:
   :rst:`thisis\ **one**\ word` (thisis\ **one**\ word).
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

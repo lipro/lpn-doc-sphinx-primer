@@ -82,6 +82,8 @@ Create paneled content in |Sphinx| documentation when building |HTML|.
 
       .. include:: sphinx-panels-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

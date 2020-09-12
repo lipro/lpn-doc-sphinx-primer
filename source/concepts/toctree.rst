@@ -153,6 +153,8 @@ How this document uses main and secondary TOC
 .. |ul| replace::
    :ref:`concepts/lists:Unordered (bullet) lists`
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

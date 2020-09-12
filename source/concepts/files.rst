@@ -31,6 +31,8 @@ inline markup.
 
       .. include:: files-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

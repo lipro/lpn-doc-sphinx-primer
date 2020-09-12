@@ -47,6 +47,8 @@ To obfuscate an email address use something like:
 
          .. include:: email-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

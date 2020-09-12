@@ -36,6 +36,8 @@ theme in the `theme documentation`_.
 .. _Read the Docs: https://readthedocs.org/
 .. _theme documentation: https://sphinx-rtd-theme.readthedocs.io/
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

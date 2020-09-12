@@ -50,6 +50,8 @@ Index
       The :rst:`:index:` role must contain text. This text will be printed
       and referenced by the index.
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

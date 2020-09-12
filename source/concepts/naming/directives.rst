@@ -60,9 +60,9 @@ extensions can add their own. Directives are written as a block.
   :dudir:`admonition <admonitions>`. (Most themes style only "note" and
   "warning" specially.)
 
-* Images:
+* :doc:`../images`:
 
-  - :dudir:`image` (see also :doc:`../images`)
+  - :dudir:`image`
   - :dudir:`figure` (an image with caption and optional legend)
 
 * Additional body elements:
@@ -80,7 +80,7 @@ extensions can add their own. Directives are written as a block.
     class attribute)
   - :dudir:`compound <compound-paragraph>` (a compound paragraph)
 
-* Special tables:
+* Special :doc:`../tables`:
 
   - :dudir:`table` (a table with title)
   - :dudir:`csv-table` (a table generated from comma-separated values)
@@ -89,9 +89,9 @@ extensions can add their own. Directives are written as a block.
 * Special directives:
 
   - :dudir:`raw <raw-data-pass-through>` (include raw target-format markup)
-  - :dudir:`include` (include reStructuredText from another file) -- in |Sphinx|,
-    when given an absolute include file path, this directive takes it as
-    relative to the source directory
+  - :dudir:`include` (include |reStructuredText| from another file) -- in
+    |Sphinx|, when given an absolute include file path, this directive takes
+    it as relative to the source directory
   - :dudir:`class` (assign a class attribute to the next element) [#]_
 
 * |HTML| specifics:
@@ -108,7 +108,7 @@ extensions can add their own. Directives are written as a block.
   Since these are only per-file, better use |Sphinx|'s facilities for setting
   the :confval:`default_role`.
 
-* References and Substitution
+* References and :doc:`../reuse/substitutions`:
 
   - :dudir:`target footnotes <target-notes>` (for each external URL target)
   - :dudir:`replacement text <replacement-text>` (for a substitution)
@@ -130,6 +130,8 @@ extensions can add their own. Directives are written as a block.
 
 .. [#] When the default domain contains a **class** directive, this directive
        will be shadowed. Therefore, |Sphinx| re-exports it as **rst-class**.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

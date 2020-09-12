@@ -7,9 +7,9 @@ Code Example
 ############
 
 The syntax for displaying code is the ``::`` mark, see
-:ref:`sphinx:rst-literal-blocks`. When it is used at the end of a sentence, Sphinx
-is smart and displays one ``:`` sign in the output, and knows there is a code
-example in the following indented block, the
+:ref:`sphinx:rst-literal-blocks`. When it is used at the end of a sentence,
+|Sphinx| is smart and displays one ``:`` sign in the output, and knows there
+is a code example in the following indented block, the
 :duref:`Indented literal (code) block <indented-literal-blocks>`.
 :duref:`Quoted literal (code) block <quoted-literal-blocks>` are unindented
 contiguous blocks of text where each line begins with the same non-alphanumeric
@@ -41,12 +41,21 @@ The handling of the ``::`` marker is smart:
 That way, the first sentence in the above example's first paragraph would
 be rendered as "... The next paragraph is a code sample:".
 
-Sphinx extends the default language setup for each literal (code) block with
-the :rst:`.. highlight::` directive. That is very useful if a specific directive
-is not able to set the language by argument or option, even in this case here.
+|Sphinx| extends the default language setup for each literal (code) block
+with the :rst:`.. highlight::` directive. That is very useful if a specific
+directive is not able to set the language by argument or option, even in this
+case here.
+
+:raw-latex:`\clearpage\phantomsection`
+
+.. index::
+   triple: Sphinx; Syntax; Code Blocks
+
+Explicit Code Blocks
+********************
 
 Source code will be formatted by the directive :rst:`.. code-block::`.
-Sphinx, like Python, uses meaningful whitespace. Blocks of content are
+|Sphinx|, like Python, uses meaningful whitespace. Blocks of content are
 structured based on the indention level they are on.
 
 .. rst:directive:: code-block
@@ -82,6 +91,14 @@ Valid values for the highlighting :rst:`:language:` (first argument) are:
   * ... and any other `lexer alias that Pygments supports
     <https://pygments.org/docs/lexers/>`_.
 
+:raw-latex:`\clearpage\phantomsection`
+
+.. index::
+   triple: Sphinx; Syntax; Literalinclude
+
+Explicit Code Includes
+**********************
+
 If the text resides in a separate file, use the :rst:`.. literalinclude::`
 directive:
 
@@ -103,6 +120,8 @@ directive:
 All included files could be located under :file:`/include`. The beginning
 :file:`/` means, root directory of the documentation source directory. Without
 it, the path is relative to the directory of the including file.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

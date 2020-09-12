@@ -6,8 +6,8 @@
 Roles
 #####
 
-A :term:`sphinx:role` or "custom interpreted text role" is an inline piece (see
-:doc:`../inline-markup`) of explicit markup (see :doc:`../explicit-markup`).
+A :term:`sphinx:role` or "custom interpreted text role" is an inline piece
+of explicit markup, see :doc:`../inline-markup` and :doc:`../explicit-markup`.
 It signifies that the enclosed text should be interpreted in a specific way.
 |Sphinx| uses this to provide semantic markup and cross-referencing of
 identifiers, as described in the appropriate section.
@@ -114,6 +114,8 @@ Docutils supports the following roles (incomplete list):
      for roles provided by |Docutils|.
    * Refer to :doc:`sphinx:usage/restructuredtext/roles`
      for roles added by |Sphinx|.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

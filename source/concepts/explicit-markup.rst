@@ -16,6 +16,9 @@ level of indentation. There needs to be a blank line between explicit markup
 and normal paragraphs. This may all sound a bit complicated, but it is
 intuitive enough when you write it.
 
+.. index::
+   triple: Sphinx; Syntax; Directives
+
 Directives
 **********
 
@@ -64,6 +67,9 @@ you can give the directive option flag :rst:`:noindex:` (which implies
    :rst:`:noindexentry:` option to keep the automatically created
    index as clean as possible but still be able to reference it.
 
+.. index::
+   triple: Sphinx; Syntax; Footnotes
+
 Footnotes
 *********
 
@@ -93,6 +99,9 @@ rubric heading.
    .. [#] Text of the second footnote.
 
 You can also explicitly number the footnotes for better context.
+
+.. index::
+   triple: Sphinx; Syntax; Citations
 
 Citations
 *********
@@ -124,6 +133,9 @@ separately and differently from footnotes.
 To use a professional bibliography, you should use the |Sphinx| extension
 :doc:`../extensions/bibtex`.
 
+.. index::
+   triple: Sphinx; Syntax; Comments
+
 Comments
 ********
 
@@ -147,6 +159,8 @@ ignored, and content will be displayed (indented).
          this:: too!
       ..
          |even| this:: !
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

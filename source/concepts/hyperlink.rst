@@ -14,7 +14,7 @@ keeps the syntax consistent.
 The link target is defined inline or at the bottom of the section with
 :rst:`.. _<link text>: <target>` (*reference style*).
 
-The :duref:`Hyperlink Targets <hyperlinks>` in Docutils provides the basic
+The :duref:`Hyperlink Targets <hyperlinks>` in |Docutils| provides the basic
 specification for :duref:`external <external-hyperlink-targets>` and
 :duref:`anonymous <anonymous-hyperlinks>` hyperlink targets. These are also
 called :duref:`explicit hyperlink targets <explicit-hyperlink-targets>`.

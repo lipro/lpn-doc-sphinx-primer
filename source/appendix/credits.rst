@@ -11,6 +11,8 @@ Credits
       :caption: Authors cited when creating the |project|
       :language: none
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

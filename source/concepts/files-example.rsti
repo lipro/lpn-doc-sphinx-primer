@@ -1,5 +1,4 @@
 | :file:`/bin/bash` or :file:`bash` -- but better is :command:`bash`
-
 | :file:`/usr/local/bin/myapp` -- but better is :program:`myapp`
 
 | :file:`filename.txt`

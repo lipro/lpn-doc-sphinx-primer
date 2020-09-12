@@ -78,6 +78,8 @@ context. Generally we speak about "sections" (or "section headings" or
    least produces a warning (*Title level inconsistent*) and possibly renders
    the result incorrectly.
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

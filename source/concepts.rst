@@ -1,5 +1,7 @@
 :topic: Concepts
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. index:: pair: Concepts; Li-Pro.Net Sphinx Primer
    :name: ldsp-concepts
 
@@ -19,6 +21,8 @@ Let's document the project. A lot of these |reStructuredText| syntax examples
 are covered in the |Sphinx| :ref:`sphinx:rst-primer`. The outline for this
 chapter has been taken from :doc:`pydevguide:documenting` and adapted and
 extended for our needs.
+
+:raw-latex:`\cleardoublepage\phantomsection`
 
 .. toctree::
    :caption: List of Concepts

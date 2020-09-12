@@ -63,7 +63,7 @@ Sphinx includes a large number of these semantic types, including:
   :rst:dir:`sphinx:cpp:namespace`,
   :rst:dir:`sphinx:cpp:class`,
   |...|
-* The JavaScript Domain (name **js**):
+* The |JavaScript| Domain (name **js**):
   :rst:dir:`sphinx:js:module`,
   :rst:dir:`sphinx:js:class`,
   |...|
@@ -71,11 +71,12 @@ Sphinx includes a large number of these semantic types, including:
   :rst:dir:`sphinx:py:module`,
   :rst:dir:`sphinx:py:class`,
   |...|
-* The reStructuredText Domain (name **rst**):
+* The |reStructuredText| Domain (name **rst**):
   :rst:dir:`sphinx:rst:directive`,
   :rst:dir:`sphinx:rst:role`,
   |...|
 
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

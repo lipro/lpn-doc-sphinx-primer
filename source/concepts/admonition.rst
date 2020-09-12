@@ -6,6 +6,9 @@
 Admonitions
 ###########
 
+.. index::
+   triple: Sphinx; Admonitions; Generic
+
 Generic Admonition
 ******************
 
@@ -30,6 +33,9 @@ set to any implemented specific type and overrides the computed
 
       .. include:: admonition-example.rsti
 
+.. index::
+   triple: Sphinx; Admonitions; Specific
+
 Specific Admonitions
 ********************
 
@@ -39,6 +45,9 @@ can. Typically, an admonition is rendered as an offset block in a
 document, sometimes outlined or shaded, with a title matching the
 admonition type. The following admonition directives have been
 implemented.
+
+.. index::
+   triple: Sphinx; Admonitions; Attention
 
 Attention Admonition
 ====================
@@ -56,6 +65,9 @@ Attention Admonition
 
       .. include:: admonition-attention-example.rsti
 
+.. index::
+   triple: Sphinx; Admonitions; Caution
+
 Caution Admonition
 ==================
 
@@ -71,6 +83,9 @@ Caution Admonition
    :which gives:
 
       .. include:: admonition-caution-example.rsti
+
+.. index::
+   triple: Sphinx; Admonitions; Danger
 
 Danger Admonition
 =================
@@ -88,6 +103,9 @@ Danger Admonition
 
       .. include:: admonition-danger-example.rsti
 
+.. index::
+   triple: Sphinx; Admonitions; Error
+
 Error Admonition
 ================
 
@@ -103,6 +121,9 @@ Error Admonition
    :which gives:
 
       .. include:: admonition-error-example.rsti
+
+.. index::
+   triple: Sphinx; Admonitions; Hint
 
 Hint Admonition
 ===============
@@ -120,6 +141,9 @@ Hint Admonition
 
       .. include:: admonition-hint-example.rsti
 
+.. index::
+   triple: Sphinx; Admonitions; Important
+
 Important Admonition
 ====================
 
@@ -135,6 +159,9 @@ Important Admonition
    :which gives:
 
       .. include:: admonition-important-example.rsti
+
+.. index::
+   triple: Sphinx; Admonitions; Note
 
 Note Admonition
 ===============
@@ -154,6 +181,9 @@ Note Admonition
 
       .. include:: admonition-note-example.rsti
 
+.. index::
+   triple: Sphinx; Admonitions; Tip
+
 Tip Admonition
 ==============
 
@@ -169,6 +199,9 @@ Tip Admonition
    :which gives:
 
       .. include:: admonition-tip-example.rsti
+
+.. index::
+   triple: Sphinx; Admonitions; Warning
 
 Warning Admonition
 ==================
@@ -188,8 +221,14 @@ Warning Admonition
 
       .. include:: admonition-warning-example.rsti
 
+.. index::
+   triple: Sphinx; Admonitions; Additional
+
 Sphinx Additional Admonitions
 *****************************
+
+.. index::
+   triple: Sphinx; Admonitions; Seealso
 
 Seealso Admonition
 ==================
@@ -210,6 +249,8 @@ Seealso Admonition
    :which gives:
 
       .. include:: admonition-seealso-example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

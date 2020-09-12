@@ -129,6 +129,8 @@ Other Semantic Markup
 
       .. include:: user-interfaces-dfn-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

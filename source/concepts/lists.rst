@@ -14,7 +14,10 @@ letter with tailed dot); they can also be automatically numbered using a
 Nested lists are possible, but be aware that they must be separated from
 the parent list items by blank lines.
 
-Unordered (bullet) lists
+.. index::
+   triple: Sphinx; Syntax; Unordered Lists
+
+Unordered (bullet) Lists
 ************************
 
 :duref:`Bullet lists <bullet-lists>` contains list item elements which are
@@ -34,7 +37,10 @@ such as circles and squares.
 
    .. include:: lists-ul-example.rsti
 
-Ordered (numbered) lists
+.. index::
+   triple: Sphinx; Syntax; Ordered Lists
+
+Ordered (numbered) Lists
 ************************
 
 :duref:`Enumerated lists <enumerated-lists>` (a.k.a. "ordered" lists)
@@ -56,7 +62,10 @@ e.g. Arabic or Roman numerals or alphabet characters.
 
    .. include:: lists-ol-example.rsti
 
-Definition (description) lists
+.. index::
+   triple: Sphinx; Syntax; Definition Lists
+
+Definition (description) Lists
 ******************************
 
 :duref:`Definition Lists <definition-lists>` contains a list of terms and
@@ -76,7 +85,10 @@ classifiers, and a definition.
 
    .. include:: lists-dl-example.rsti
 
-Field (description) lists
+.. index::
+   triple: Sphinx; Syntax; Field Lists
+
+Field (description) Lists
 =========================
 
 :duref:`Field lists <field-lists>` are special definition lists.
@@ -98,6 +110,8 @@ adds some extra (optional) functionality.
 :which gives:
 
    .. include:: lists-fl-example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

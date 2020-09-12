@@ -24,7 +24,11 @@ to the same level of indentation. General rules can be looked up under
 
    .. include:: paragraphs-example.rsti
 
-Quotes (block quotation) element
+.. index::
+   triple: Sphinx; Syntax; Block Quotation
+   triple: Sphinx; Syntax; Quotes
+
+Quotes (block quotation) Element
 ********************************
 
 :duref:`Block quoted <block-quotes>` paragraphs are quoted by just indenting
@@ -41,7 +45,10 @@ them more than the surrounding paragraphs.
 
    .. include:: paragraphs-bq-example.rsti
 
-Line blocks
+.. index::
+   triple: Sphinx; Syntax; Line Blocks
+
+Line Blocks
 ***********
 
 :duref:`Line blocks <line-blocks>` are useful for addresses, verse, and
@@ -59,14 +66,17 @@ of each single line.
 
    .. include:: paragraphs-lb-example.rsti
 
-Doctest blocks
+.. index::
+   triple: Sphinx; Syntax; Doctest Blocks
+
+Doctest Blocks
 **************
 
 :duref:`Doctest blocks <doctest-blocks>` are interactive Python sessions
 cut-and-pasted into docstrings. They do not require the
 :doc:`literal blocks <./code-example>` syntax. The doctest block must end
 with a blank line and should not end with an unused prompt, see
-:ref:`sphinx:rst-doctest-blocks`.
+:ref:`sphinx:rst-doctest-blocks` in |Sphinx| for more informations.
 
 :the example:
 
@@ -78,6 +88,8 @@ with a blank line and should not end with an unused prompt, see
 :which gives:
 
    .. include:: paragraphs-dt-example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

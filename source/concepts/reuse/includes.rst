@@ -8,10 +8,10 @@ Include a Shared File
 
    For more details, see
    :dudir:`Including an External Document Fragment <including-an-external-document-fragment>`
-   in Docutils.
+   in |Docutils|.
 
    You can store complex content, such as tasks, or code samples, in a file
-   that is then included in multiple reStructuredText document files.
+   that is then included in multiple |reStructuredText| document files.
 
    If you are working on multiple documents, you can save entire topics in
    shared files, and include those files in multiple documents.
@@ -31,11 +31,23 @@ Include a Shared File
       Include paths are relative to the file in the document project,
       not the file in shared content.
 
+   Standard data files intended for inclusion in |reStructuredText| documents
+   are distributed with the |Docutils| source code, located in the :py:mod:`docutils`
+   package in the :file:`docutils/parsers/rst/include` directory. To access
+   these files, use the special syntax for standard include data files, angle
+   brackets around the file name:
+
+   .. code-block:: rst
+
+      .. include:: <isonum.txt>
+
    .. note::
 
       You must reference the shared file from a file within the document.
       You cannot use a direct TOC reference to files outside of the document
       directory.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

@@ -97,6 +97,8 @@ Include Diagram
       :language: dot
       :linenos:
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

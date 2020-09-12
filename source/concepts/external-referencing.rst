@@ -26,6 +26,8 @@ Things like PEP's and RFC's. You can read more about this in the Sphinx
 
       .. include:: external-referencing-example.rsti
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

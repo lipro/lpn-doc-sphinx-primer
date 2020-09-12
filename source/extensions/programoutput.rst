@@ -253,6 +253,8 @@ contrary, a warning will be emitted, should the command return 0!
 .. [#alias] This directive is just an alias for the :rst:`.. program-output::`
             directive with the :rst:`:prompt:` option set.
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text

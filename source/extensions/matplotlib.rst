@@ -160,6 +160,8 @@ See :doc:`mplref:api/toolkits/mplot3d/index`,
 
 .. :raw-latex:`\clearpage\phantomsection`
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text
