@@ -21,16 +21,16 @@ This extension relies on two software packages being installed
 on your computer:
 
 1. ``latex`` with the ``tikz`` and the ``amsmath`` packages
-2. A software package that is able to convert a PDF to an image.
+2. A software package that is able to convert a |PDF| to an image.
    Currently, four different ways of doing this conversion are
    supported, called conversion "suites". Below is a list for
    each suite what must be installed on your computer. Only one
    such suite need to be installed:
 
    * *pdf2svg* suite: ``pdf2svg`` (preferred, default)
-   * *Netpbm* suite: ``pdftoppm`` (part of the *Poppler* PDF library)
+   * *Netpbm* suite: ``pdftoppm`` (part of the *Poppler* |PDF| library)
      and ``pnmtopng`` (part of the *Netpbm* package)
-   * *ImageMagick* suite: ``pdftoppm`` (part of the *Poppler* PDF library)
+   * *ImageMagick* suite: ``pdftoppm`` (part of the *Poppler* |PDF| library)
      and ``convert`` (part of the *ImageMagick* package)
    * *GhostScript* suite: ``ghostscript``
 

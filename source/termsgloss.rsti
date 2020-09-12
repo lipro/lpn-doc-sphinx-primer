@@ -35,16 +35,23 @@
 .. |CSS|                        replace:: :term:`CSS`
 .. |Enchant|                    replace:: :term:`Enchant`
 .. |HTML|                       replace:: :term:`HTML`
+.. |PDF|                        replace:: :term:`PDF`
 .. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
 .. |PGF|                        replace:: :term:`PGF`
+.. |SVG|                        replace:: :term:`SVG`
 .. |TikZ|                       replace:: :term:`TikZ`
 .. |TeX|                        replace:: :term:`TeX`
+.. |XML|                        replace:: :term:`XML`
 
 .. Abbreviations:
 
 .. |ANSI|       replace:: :abbr:`ANSI (American National Standards Institute)`
 .. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
 .. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
+.. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
+.. |RFC|        replace:: :abbr:`RFC (Request for Comments)`
+.. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
+.. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
 
 .. Local variables:
    coding: utf-8

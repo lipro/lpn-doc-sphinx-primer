@@ -92,7 +92,7 @@ They are used inside other text structures.
    :rst:`:pep-reference:`pep-reference`` --
    equivalent to :rst:`:pep:`pep reference number`` --
    for :doc:`../external-referencing`
-   into the |Python| Enhancement Proposals index
+   into the |PEP| index
 
 .. rst:role:: rfc-reference
 
@@ -100,7 +100,7 @@ They are used inside other text structures.
    :rst:`:rfc-reference:`rfc-reference`` --
    equivalent to :rst:`:rfc:`rfc reference number`` --
    for :doc:`../external-referencing`
-   into the Request for Comments index
+   into the |RFC| index
 
 .. rst:role:: title-reference
 

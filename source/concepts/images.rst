@@ -10,16 +10,16 @@ Images and Figures
 SVG Graphics only
 *****************
 
-All vector graphics or diagrams should be SVG files. This helps us keep our
+All vector graphics or diagrams should be |SVG| files. This helps us keep our
 graphic conversion tooling simple, and generally results in higher-quality
 representation.
 
-Whenever possible, you should generate your graphics as SVGs rather than
-converting to SVGs from another format. That avoids bitmap images embedded
-in a SVG container. The goal of SVG usage is to hold vector graphic as long
+Whenever possible, you should generate your graphics as |SVG|\ s rather than
+converting to |SVG|\ s from another format. That avoids bitmap images embedded
+in a |SVG| container. The goal of |SVG| usage is to hold vector graphic as long
 as possible, from the editor up to the presentation. If you have to start in
 another vector graphic format use lossless vector formats whenever possible.
-These include EPS/PS, AI, DXF, EMF/WMF, or some special XML vector graphics
+These include EPS/PS, AI, DXF, EMF/WMF, or some special |XML| vector graphics
 schemes. In any case avoid embedded bitmaps, as this is a lossy format for
 vector informations that does not replicate scaling very well.
 

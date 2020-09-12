@@ -7,7 +7,7 @@ External References
 ###################
 
 |Sphinx| also includes a number of predefined references for external concepts.
-Things like PEP's and RFC's. You can read more about this in the |Sphinx|
+Things like |PEP|'s and |RFC|'s. You can read more about this in the |Sphinx|
 :doc:`./naming/roles` section.
 
 .. rst:role:: pep
