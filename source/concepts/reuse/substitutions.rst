@@ -12,11 +12,8 @@ places. Substitution definitions are indicated by an explicit markup start
 substituted), another vertical bar, whitespace, and the definition block.
 
 A substitution definition block may contain inline-compatible directives
-
-.. such as :doc:`../images`, :doc:`../downloads`, or other
-.. :dudir:`Substitution Directives <directives-for-substitution-definitions>`:
-
-.. todo:: add reference to "Images" and "Download"
+such as :doc:`../images`, :doc:`../downloads`, or other
+:dudir:`Substitution Directives <directives-for-substitution-definitions>`:
 
 * :dudir:`Replacement Text <replacement-text>`
 * :dudir:`Unicode Character Codes <unicode-character-codes>`

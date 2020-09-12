@@ -16,15 +16,9 @@ inline markup.
 
 .. rst:role:: file
 
-   For more details, see :rst:role:`sphinx:file` role;
-
-   .. todo:: add reference to "Semantic Descriptions and References"
-             and "Writing about User Interface"
-
-   .. about the :rst:role:`sphinx:program` role in
-   .. :doc:`./semantic-referencing`,
-   .. and about the :rst:role:`sphinx:command` role in
-   .. :doc:`./user-interfaces`.
+   For more details, see :rst:role:`sphinx:file` role; about the
+   :rst:role:`sphinx:program` role in :doc:`./semantic-referencing`, and
+   about the :rst:role:`sphinx:command` role in :doc:`./user-interfaces`.
 
    :the example:
 

@@ -31,11 +31,7 @@ All the standard reStructuredText inline markups are quite simple, use:
 
 If asterisks or backquotes appear in running text and could be confused
 with inline markup delimiters, they have to be escaped with a backslash
-or encapsulated by
-
-.. todo:: add reference to "Roles"
-
-.. or encapsulated by :doc:`./naming/roles`:
+or encapsulated by :doc:`./naming/roles`:
 
 .. rubric:: one escaped asterisk
 

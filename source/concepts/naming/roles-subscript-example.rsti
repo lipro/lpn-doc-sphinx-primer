@@ -1,4 +1,4 @@
-.. include:: <isoamsr.txt>
+.. |gE| unicode:: U+02267 .. GREATER-THAN OVER EQUAL TO
 
 *f*\ :subscript:`n` = *f*\ :subscript:`n-1` + *f*\ :subscript:`n-2`
 for *n* |gE| 3 with *f*\ :subscript:`1` = *f*\ :subscript:`2` = 1

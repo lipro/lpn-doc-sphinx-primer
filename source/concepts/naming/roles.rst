@@ -78,16 +78,7 @@ Docutils supports the following roles (incomplete list):
 
    :which gives:
 
-      .. todo:: fix external impediment (Docutils)
-
-         The Warning is::
-
-            .../docutils/parsers/rst/include/isoamsb.txt:112:
-            WARNING: Duplicate substitution definition name: "veebar".
-
-      .. code-block:: rst
-
-         .. include:: roles-superscript-example.rsti
+      .. include:: roles-superscript-example.rsti
 
 .. rst:role:: math
 

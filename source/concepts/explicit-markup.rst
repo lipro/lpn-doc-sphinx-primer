@@ -19,15 +19,11 @@ intuitive enough when you write it.
 Directives
 **********
 
-.. :doc:`./naming/directives` are generic blocks of
-.. explicit markup. Besides :doc:`./naming/roles`,
-
-it is one of the extension mechanisms of |reStructuredText|, and |Sphinx| makes
-heavy use of it. Basically, a directive consists of a name, arguments, options
-and content. Keep this terminology in mind, it is used in one of the next
-chapter describing custom directives.
-
-.. todo:: add reference to "Directives" and "Roles"
+:doc:`./naming/directives` are generic blocks of explicit markup. Besides
+:doc:`./naming/roles`, it is one of the extension mechanisms of
+|reStructuredText|, and |Sphinx| makes heavy use of it. Basically, a directive
+consists of a name, arguments, options and content. Keep this terminology in
+mind, it is used in one of the next chapter describing custom directives.
 
 :the example:
 

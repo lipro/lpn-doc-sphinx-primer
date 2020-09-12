@@ -1,4 +1,4 @@
-.. include:: <isoamsb.txt>
+.. |sdot| unicode:: U+022C5 .. DOT OPERATOR
 
 *e* = 1.602176634 |sdot| 10\ :superscript:`-19` C
 
