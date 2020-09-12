@@ -18,10 +18,14 @@
 
 .. Programming Languages:
 
+.. |C|                          replace:: :term:`C`
+.. |C++|                        replace:: :term:`C++`
+.. |C/C++|                      replace:: |C|/|C++|
 .. |ES|                         replace:: :term:`ES`
 .. |ECMAScript|                 replace:: :term:`ECMAScript`
 .. |JS|                         replace:: :term:`JS`
 .. |JavaScript|                 replace:: :term:`JavaScript`
+.. |Python|                     replace:: :term:`Python`
 
 .. Network:
 
@@ -37,6 +41,10 @@
 .. |TeX|                        replace:: :term:`TeX`
 
 .. Abbreviations:
+
+.. |ANSI|       replace:: :abbr:`ANSI (American National Standards Institute)`
+.. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
+.. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
 
 .. Local variables:
    coding: utf-8

@@ -55,7 +55,7 @@ Explicit Code Blocks
 ********************
 
 Source code will be formatted by the directive :rst:`.. code-block::`.
-|Sphinx|, like Python, uses meaningful whitespace. Blocks of content are
+|Sphinx|, like |Python|, uses meaningful whitespace. Blocks of content are
 structured based on the indention level they are on.
 
 .. rst:directive:: code-block
@@ -77,8 +77,8 @@ Valid values for the highlighting :rst:`:language:` (first argument) are:
 
   * ``none`` (no highlighting)
   * ``python`` (the default)
-  * ``c`` and ``cpp`` (C/C++)
-  * ``rst`` or ``rest`` (reStructuredText)
+  * ``c`` and ``cpp`` (|C/C++|)
+  * ``rst`` or ``rest`` (|reStructuredText|)
   * ``bash`` or ``ksh`` or ``sh`` (Shell scripts)
   * ``shell-session`` (Shell sessions)
   * ``dosbatch`` (DOS/Windows Batch file)

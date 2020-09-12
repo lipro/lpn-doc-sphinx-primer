@@ -21,7 +21,7 @@ Mathematical Plots
 :Git Repository: https://github.com/matplotlib/sampledoc
 
 Matplotlib is a comprehensive library for creating static, animated, and
-interactive visualizations in Python. It consists:
+interactive visualizations in |Python|. It consists:
 
 * ``matplotlib.sphinxext.mathmpl``: Matplotlib math-text in a |Sphinx| document
 * :py:mod:`mplref:matplotlib.sphinxext.plot_directive`:

@@ -70,13 +70,13 @@ or cross-referencing targets:
      -
 
 Originally, |Sphinx| was conceived for a single project, the documentation of
-the Python language. Shortly afterwards, it was made available for everyone as
-a documentation tool, but the documentation of Python modules remained deeply
+the |Python| language. Shortly afterwards, it was made available for everyone as
+a documentation tool, but the documentation of |Python| modules remained deeply
 built in -- the most fundamental directives, like function, were designed for
-Python objects.
+|Python| objects.
 
 Since |Sphinx| has become somewhat popular, interest developed in using it for
-many different purposes: C/C++ projects, |JavaScript|, or even
+many different purposes: |C/C++| projects, |JavaScript|, or even
 |reStructuredText| markup (like in this documentation). The following specific
 domains are provided by |Sphinx| (without additional extensions):
 
@@ -84,7 +84,7 @@ domains are provided by |Sphinx| (without additional extensions):
 * :ref:`sphinx:cpp-domain` (name **cpp**)
 * The |JavaScript| Domain (name **js**)
 * :ref:`sphinx:math-domain` (name **math**)
-* The Python Domain (name **py**)
+* The |Python| Domain (name **py**)
 * The |reStructuredText| Domain (name **rst**)
 
 .. :ref:`sphinx:js-domain`

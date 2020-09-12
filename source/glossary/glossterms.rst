@@ -11,9 +11,9 @@ Commons
 
    reStructuredText
       `reStructuredText`_ (**RST**, **ReST**, or **reST**) is a file format
-      for textual data used primarily in the Python programming language
+      for textual data used primarily in the |Python| programming language
       community for technical documentation. It is part of the |Docutils|
-      project of the Python Doc-SIG (Documentation Special Interest Group)
+      project of the |Python| Doc-SIG (Documentation Special Interest Group).
 
       .. seealso::
 
@@ -31,8 +31,8 @@ Commons
          - :wikien:`reStructuredText`
 
    Sphinx
-      `Sphinx`_ is a documentation generator written and used by the Python
-      community. It is written in Python, and also used in other environments.
+      `Sphinx`_ is a documentation generator written and used by the |Python|
+      community. It is written in |Python|, and also used in other environments.
       Sphinx converts |reStructuredText| files into |HTML| websites and other
       formats including PDF, EPub, Texinfo and man.
       
@@ -58,7 +58,7 @@ Commons
          - :wikien:`LaTeX`
 
    PyEnchant
-      `PyEnchant`_ is a Python binding for |Enchant|.
+      `PyEnchant`_ is a |Python| binding for |Enchant|.
 
 .. Journals
 .. ********
@@ -83,6 +83,48 @@ Programming Languages
 
 .. glossary::
    :sorted:
+
+   C
+      `C`_ is a general-purpose, imperative procedural computer programming
+      language supporting structured programming, lexical variable scope, and
+      recursion, with a static type system. It was designed to be compiled to
+      provide low-level access to memory and language constructs that map
+      efficiently to machine instructions, all with minimal runtime support.
+      C has been standardized by the |ANSI| *X3J11* since 1989 (**ANSI C**) and
+      by the |ISO|/|IEC| JTC1/SC22/WG14 (**ISO C**).
+
+      .. seealso::
+
+         - :wikien:`C (programming language)`
+         - :wikien:`Compatibility of C and C++`
+	 - :wikien:`C18 (C standard revision)`:
+           standard ratified in 2018 as **ISO/IEC 9899:2018**
+	 - :wikien:`C11 (C standard revision)`:
+           standard ratified in 2011 as *ISO/IEC 9899:2011*
+	 - :wikien:`C99`: standard ratified in 1999 as *ISO/IEC 9899:1999*
+	 - :wikien:`C95 (C version)`:
+           Amendment 1 ratified in 1995 as *ISO/IEC 9899:1990/AMD1:1995*
+	 - :wikien:`C90 (C version)`:
+           standard ratified in 1990 as *ISO/IEC 9899:1990*
+	 - :wikien:`C89 (C version)`:
+           standard ratified in 1989 as *ANSI X3.159-1989*
+
+   C++
+      `C++`_ is a general-purpose programming language as an extension of the
+      |C| programming language, or *"C with Classes"*. Modern C++ implementations
+      now has object-oriented, generic, and functional features in addition to
+      facilities for low-level memory manipulation. C++ is standardized by the
+      |ISO|/|IEC| JTC1/SC22/WG14 since 1998.
+
+      .. seealso::
+
+         - :wikien:`C++`
+         - :wikien:`Compatibility of C and C++`
+	 - :wikien:`C++17`: standard ratified in 2017 as **ISO/IEC 14882:2017**
+	 - :wikien:`C++14`: standard ratified in 2014 as *ISO/IEC 14882:2014*
+	 - :wikien:`C++11`: standard ratified in 2011 as *ISO/IEC 14882:2011*
+	 - :wikien:`C++03`: standard ratified in 2003 as *ISO/IEC 14882:2003*
+	 - initially standardized in 1998 as *ISO/IEC 14882:1998*
 
    ES
    ECMAScript
@@ -111,6 +153,18 @@ Programming Languages
       .. seealso::
 
          - :wikien:`JavaScript`
+
+   Python
+      `Python`_ is an interpreted, high-level and general-purpose programming
+      language. Python interpreters are available for many operating systems.
+      A global community of programmers develops and maintains CPython, a free
+      and open-source reference implementation. A non-profit organization, the
+      Python Software Foundation, manages and directs resources for Python and
+      CPython development
+
+      .. seealso::
+
+         - :wikien:`Python (programming language)`
 
 .. Network
 .. *******

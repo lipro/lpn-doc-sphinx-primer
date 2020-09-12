@@ -16,7 +16,7 @@ similarly to |LaTeX|\ ’s :latex:`\begin{thebibliography} ...
 \end{thebibliography}` environment and :latex:`\cite{cite_key}`
 command. It consists:
 
-* :py:mod:`scbibtex:sphinxcontrib.bibtex`: Sphinx interface
+* :py:mod:`scbibtex:sphinxcontrib.bibtex`: |Sphinx| interface
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.roles`: Doctree roles
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.nodes`: Doctree nodes
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.directives`: Doctree directives

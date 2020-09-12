@@ -7,9 +7,9 @@ Paragraphs
 ##########
 
 The :duref:`paragraph <paragraphs>` is the most basic block in a
-reStructuredText document. Paragraphs are simply chunks of text separated
-by one or more blank lines. As in Python, indentation is significant in
-reStructuredText, so all lines of the same paragraph must be left-aligned
+|reStructuredText| document. Paragraphs are simply chunks of text separated
+by one or more blank lines. As in |Python|, indentation is significant in
+|reStructuredText|, so all lines of the same paragraph must be left-aligned
 to the same level of indentation. General rules can be looked up under
 :doc:`./whitespace`.
 
@@ -72,7 +72,7 @@ of each single line.
 Doctest Blocks
 **************
 
-:duref:`Doctest blocks <doctest-blocks>` are interactive Python sessions
+:duref:`Doctest blocks <doctest-blocks>` are interactive |Python| sessions
 cut-and-pasted into docstrings. They do not require the
 :doc:`literal blocks <./code-example>` syntax. The doctest block must end
 with a blank line and should not end with an unused prompt, see

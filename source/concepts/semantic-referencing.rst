@@ -6,7 +6,7 @@
 Semantic Descriptions and References
 ####################################
 
-Sphinx also has much more powerful semantic referencing capabilities, which
+|Sphinx| also has much more powerful semantic referencing capabilities, which
 knows all about software development concepts.
 
 Say you're creating a :abbr:`CLI (Command Line Interface)` application. You
@@ -51,7 +51,7 @@ That can now also be referenced quite simply.
 
       .. include:: semantic-referencing-options-example.rsti
 
-Sphinx includes a large number of these semantic types, including:
+|Sphinx| includes a large number of these semantic types, including:
 
 * :ref:`sphinx:c-domain` (name **c**):
   :rst:dir:`sphinx:c:namespace`,
@@ -67,7 +67,7 @@ Sphinx includes a large number of these semantic types, including:
   :rst:dir:`sphinx:js:module`,
   :rst:dir:`sphinx:js:class`,
   |...|
-* The Python Domain (name **py**):
+* The |Python| Domain (name **py**):
   :rst:dir:`sphinx:py:module`,
   :rst:dir:`sphinx:py:class`,
   |...|

@@ -24,7 +24,7 @@ misspelled words.
 
 It consists:
 
-* :doc:`scspelling:index`: spelling checker for Sphinx
+* :doc:`scspelling:index`: spelling checker for |Sphinx|
 
 Private Dictionaries
 ********************

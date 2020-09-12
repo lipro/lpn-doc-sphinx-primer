@@ -22,7 +22,7 @@ they appear (that is, the filename without the :file:`.rst` extension).
 
 .. attention::
 
-   Downloads are not fully supported by all Sphinx builders. Especially
+   Downloads are not fully supported by all |Sphinx| builders. Especially
    offline documents like |LaTeX|/PDF will be created correctly, but will
    not provide additional artifacts.
 

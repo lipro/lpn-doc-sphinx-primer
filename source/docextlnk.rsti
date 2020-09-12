@@ -16,8 +16,12 @@
 .. _`Sphinx RTD Theme Demo Page`: https://sphinx-themes.org/html/sphinx_rtd_theme/sphinx_rtd_theme/index.html
 .. _`Read the Docs Sphinx Theme`: https://github.com/readthedocs/sphinx_rtd_theme
 
+.. _`C`: http://www.open-std.org/jtc1/sc22/wg14/www/projects
+.. _`C++`: https://isocpp.org/
 .. _`Ecma International`: https://www.ecma-international.org/
 .. _`ECMA-262`: https://www.ecma-international.org/publications/standards/Ecma-262.htm
+
+.. _`Python`: https://www.python.org/
 
 .. _`Enchant`: https://abiword.github.io/enchant/
 .. _`PyEnchant`: https://github.com/pyenchant/pyenchant

@@ -16,7 +16,7 @@ The general syntax is :rst:`:rolename:`content``. Like
 :doc:`../naming/directives`, roles are extensible. Own roles can be created.
 They are used inside other text structures.
 
-Docutils supports the following roles (incomplete list):
+|Docutils| supports the following roles (incomplete list):
 
 .. rst:role:: emphasis
 
@@ -92,7 +92,7 @@ Docutils supports the following roles (incomplete list):
    :rst:`:pep-reference:`pep-reference`` --
    equivalent to :rst:`:pep:`pep reference number`` --
    for :doc:`../external-referencing`
-   into the Python Enhancement Proposals index
+   into the |Python| Enhancement Proposals index
 
 .. rst:role:: rfc-reference
 

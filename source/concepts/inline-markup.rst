@@ -21,7 +21,7 @@ on output.
 
       You can use **backticks** for showing ``highlighted`` code.
 
-Refer to :ref:`sphinx:rst-inline-markup` added by Sphinx.
+Refer to :ref:`sphinx:rst-inline-markup` added by |Sphinx|.
 
 All the standard |reStructuredText| inline markups are quite simple, use:
 
