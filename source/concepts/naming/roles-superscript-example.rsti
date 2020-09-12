@@ -1,0 +1,10 @@
+.. include:: <isoamsb.txt>
+
+*e* = 1.602176634 |sdot| 10\ :superscript:`-19` C
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

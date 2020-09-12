@@ -26,6 +26,7 @@ extended for our needs.
    :titlesonly:
 
    concepts/whitespace
+   concepts/naming
    concepts/heading
    concepts/toctree
    concepts/paragraphs
@@ -41,6 +42,7 @@ extended for our needs.
    concepts/admonition
    concepts/hyperlink
    concepts/referencing
+   concepts/external-referencing
    concepts/downloads
    concepts/semantic-referencing
    concepts/user-interfaces
