@@ -44,7 +44,16 @@ PNG Images only
 
 All still bitmap raster images or photos should be |PNG| files. This helps
 us keep our image compression tooling simple, and generally results in
-higher-quality screenshots.
+higher-quality screenshots. Animated |PNG| should also be possible, see
+:numref:`images-animated`.
+
+.. figure:: images-animated.png
+   :name: images-animated
+   :figclass: align-center
+   :align: center
+   :width: 160px
+
+   Example of animated PNG
 
 Whenever possible, you should generate your images as |PNG|\ s rather than
 converting to |PNG|\ s from another format. If you have to start in another
