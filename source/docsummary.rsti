@@ -26,6 +26,9 @@
                         * |slz_obfuscated|
 
       :Copyright:       |dm_copyright|
+      :License:         |dm_license|
+                        |dm_licbmpil|
+      :Credits:         |dm_credits|
       :Organization:    |dm_organization|
       :Contact:         |dm_contact_obfuscated|
       :Address:         |dm_address|
@@ -48,6 +51,8 @@
                         * |slz_plain_text|
 
    :Copyright:          |dm_copyright|
+   :License:            |dm_license|
+   :Credits:            |dm_credits|
    :Organization:       |dm_organization|
    :Contact:            |dm_contact_plain_text|
    :Address:            |dm_address|

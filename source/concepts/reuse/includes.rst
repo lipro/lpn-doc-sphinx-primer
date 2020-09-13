@@ -26,10 +26,12 @@ Include a Shared File
 
    The contents of the shared file will then be built in the document.
 
-   .. caution::
+   .. pull-quote::
+
+      .. caution::
    
-      Include paths are relative to the file in the document project,
-      not the file in shared content.
+         Include paths are relative to the file in the document project,
+         not the file in shared content.
 
    Standard data files intended for inclusion in |reStructuredText| documents
    are distributed with the |Docutils| source code, located in the :py:mod:`docutils`
@@ -41,11 +43,13 @@ Include a Shared File
 
       .. include:: <isonum.txt>
 
-   .. note::
+   .. pull-quote::
 
-      You must reference the shared file from a file within the document.
-      You cannot use a direct TOC reference to files outside of the document
-      directory.
+      .. note::
+
+         You must reference the shared file from a file within the
+	 document. You cannot use a direct TOC reference to files
+	 outside of the document directory.
 
 :raw-latex:`\clearpage\phantomsection`
 

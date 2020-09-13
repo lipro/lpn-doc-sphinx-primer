@@ -44,19 +44,23 @@ Several roles are used when describing user interactions.
    When writing about multi-level menus, use a single :rst:`:menuselection:`
    role, and separate menu choices with :rst:`-->`.
 
-.. note::
+   .. pull-quote::
 
-   In some situations you might not be clear about which option,
-   :rst:role:`sphinx:menuselection` or :rst:role:`sphinx:guilabel`, to use.
-   GUIs in real life can sometimes be ambiguous. The general rule is:
+      .. note::
 
-   * Actual UI text will always receive :rst:role:`sphinx:guilabel` role
-     unless the text could reasonably be understood to be part of a menu.
-   * If the actual UI text could be understood as a menu,
-     :rst:role:`sphinx:menuselection` should be used.
+         In some situations you might not be clear about which option,
+         :rst:role:`sphinx:menuselection` or :rst:role:`sphinx:guilabel`,
+         to use. GUIs in real life can sometimes be ambiguous. The general
+         rule is:
 
-   These both render the same on output, so don't worry too much if you
-   get it wrong. Just use your judgment and take your best guess.
+         * Actual UI text will always receive :rst:role:`sphinx:guilabel`
+           role unless the text could reasonably be understood to be part
+           of a menu.
+         * If the actual UI text could be understood as a menu,
+           :rst:role:`sphinx:menuselection` should be used.
+
+         These both render the same on output, so don't worry too much if
+         you get it wrong. Just use your judgment and take your best guess.
 
 .. rst:role:: kbd
 

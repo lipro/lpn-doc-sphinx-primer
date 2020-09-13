@@ -20,11 +20,13 @@ documentation root or the :file:`/_downloads/` subdirectory, and they
 should be in a subdirectory with the same name as the document in which
 they appear (that is, the filename without the :file:`.rst` extension).
 
-.. attention::
+.. pull-quote::
 
-   Downloads are not fully supported by all |Sphinx| builders. Especially
-   offline documents like |LaTeX|/|PDF| will be created correctly, but will
-   not provide additional artifacts.
+   .. attention::
+
+      Downloads are not fully supported by all |Sphinx| builders.
+      Especially offline documents like |LaTeX|/|PDF| will be created
+      correctly, but will not provide additional artifacts.
 
 .. rst:role:: download
 

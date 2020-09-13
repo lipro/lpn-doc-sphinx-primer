@@ -6,7 +6,7 @@
 Directives
 ##########
 
-A :term:`sphinx:directive` is a generic block of :doc:`../explicit-markup`
+A :term:`sphinx:directive` is a generic block of :doc:`../explicit-markup`.
 Besides roles, it is one of the extension mechanisms of |reStructuredText|,
 and |Sphinx| makes heavy use of it.
 
@@ -31,22 +31,22 @@ example, that allows marking a block of content with special meaning.
          Multiline content of the directive,
          ...
 
-   This is no longer part of the block controlled by the directive.
+   *This line is no longer part of the block controlled by the directive.*
 
    ``directive``
-      That is the directive name. It is given two arguments here.
+      That is the *directive name*. It is given two arguments here.
 
    ``arg1, arg2, ...``
-      Arguments. The last argument can contain spaces (depending on the
+      *Arguments*. The last argument can contain spaces (depending on the
       directive implementation).
 
    ``:option0:, :option1:, ... :option9:``
-      Options are optional. As you can see, options are given in the lines
+      *Options* are optional. As you can see, options are given in the lines
       immediately following the arguments and indicated by the colons.
 
    ``Multiline content of the directive,``
-      The directive content follows after a blank line and is indented relative
-      to the directive start.
+      The *directive content* follows after a blank line and is indented
+      relative to the directive start.
 
 Directives are supplied not only by |Docutils|, but |Sphinx| and custom
 extensions can add their own. Directives are written as a block.
@@ -86,7 +86,7 @@ extensions can add their own. Directives are written as a block.
   - :dudir:`csv-table` (a table generated from comma-separated values)
   - :dudir:`list-table` (a table generated from a list of lists)
 
-* Special directives:
+* Special directives and :doc:`../reuse/includes`:
 
   - :dudir:`raw <raw-data-pass-through>` (include raw target-format markup)
   - :dudir:`include` (include |reStructuredText| from another file) -- in
@@ -114,10 +114,12 @@ extensions can add their own. Directives are written as a block.
   - :dudir:`replacement text <replacement-text>` (for a substitution)
   - :dudir:`unicode characters <unicode-character-codes>` (used in substitution)
 
-.. warning::
+.. pull-quote::
 
-   Do *not* use the directives :dudir:`sectnum`, :dudir:`header` and
-   :dudir:`footer`.
+   .. warning::
+
+      Do *not* use the directives :dudir:`sectnum`,
+      :dudir:`header` and :dudir:`footer`.
 
 .. seealso::
 

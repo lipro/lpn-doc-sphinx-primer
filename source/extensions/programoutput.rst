@@ -202,8 +202,10 @@ Other shell features like process expansion consequently work, too.
       .. command-output:: ls -l $(which grep)
          :shell:
 
-.. warning:: Remember to use :rst:`:shell:` carefully to avoid unintended
-             interpretation of shell syntax and swallowing of fatal errors!
+.. pull-quote::
+
+   .. warning:: Remember to use :rst:`:shell:` carefully to avoid unintended
+                interpretation of shell syntax and swallowing of fatal errors!
 
 Error handling
 **************
@@ -236,17 +238,19 @@ The above command returns the exit code 1 (as given to
 :py:func:`pydocs:sys.exit()`), but no warning will be emitted. On the
 contrary, a warning will be emitted, should the command return 0!
 
-.. note::
+.. pull-quote::
 
-   Upon fatal errors which even prevent the execution of the command neither
-   return code nor command output are available. In this case an error message
-   is inserted into the document instead.
+   .. note::
 
-   If :rst:`:shell:` is set however, most of these fatal errors are handled
-   by the system shell and turned into return codes instead. In this case
-   the error message will only appear in the output of the shell. If you're
-   using :rst:`:shell:`, double-check the output for errors. Best avoid
-   :rst:`:shell:`, if possible.
+      Upon fatal errors which even prevent the execution of the command
+      neither return code nor command output are available. In this case
+      an error message is inserted into the document instead.
+
+      If :rst:`:shell:` is set however, most of these fatal errors are
+      handled by the system shell and turned into return codes instead.
+      In this case the error message will only appear in the output of
+      the shell. If you're using :rst:`:shell:`, double-check the output
+      for errors. Best avoid :rst:`:shell:`, if possible.
 
 .. rubric:: Footnotes
 

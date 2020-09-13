@@ -17,6 +17,33 @@ and normal paragraphs. This may all sound a bit complicated, but it is
 intuitive enough when you write it.
 
 .. index::
+   triple: Sphinx; Syntax; Comments
+
+Comments
+********
+
+Every explicit markup block which is not a valid markup construct (like the
+footnotes above) is regarded as a :duref:`comment <comments>`.
+
+However, it must have some text in the :rst:`".. "` line, otherwise it is
+ignored, and content will be displayed (indented).
+
+:the example:
+
+   .. code-block:: rst
+      :linenos:
+
+      .. This is a comment
+      ..
+         _so: is this!
+      ..
+         [and] this!
+      ..
+         this:: too!
+      ..
+         |even| this:: !
+
+.. index::
    triple: Sphinx; Syntax; Directives
 
 Directives
@@ -61,11 +88,13 @@ an object description, without even making it available for cross-referencing,
 you can give the directive option flag :rst:`:noindex:` (which implies
 :rst:`:noindexentry:`).
 
-.. hint::
+.. pull-quote::
 
-   As far as possible, all examples in this document use the
-   :rst:`:noindexentry:` option to keep the automatically created
-   index as clean as possible but still be able to reference it.
+   .. hint::
+
+      As far as possible, all examples in this document use the
+      :rst:`:noindexentry:` option to keep the automatically created
+      index as clean as possible but still be able to reference it.
 
 .. index::
    triple: Sphinx; Syntax; Footnotes
@@ -132,33 +161,6 @@ separately and differently from footnotes.
 
 To use a professional bibliography, you should use the |Sphinx| extension
 :doc:`../extensions/bibtex`.
-
-.. index::
-   triple: Sphinx; Syntax; Comments
-
-Comments
-********
-
-Every explicit markup block which is not a valid markup construct (like the
-footnotes above) is regarded as a :duref:`comment <comments>`.
-
-However, it must have some text in the :rst:`".. "` line, otherwise it is
-ignored, and content will be displayed (indented).
-
-:the example:
-
-   .. code-block:: rst
-      :linenos:
-
-      .. This is a comment
-      ..
-         _so: is this!
-      ..
-         [and] this!
-      ..
-         this:: too!
-      ..
-         |even| this:: !
 
 :raw-latex:`\clearpage\phantomsection`
 

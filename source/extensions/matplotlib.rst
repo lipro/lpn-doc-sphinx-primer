@@ -6,11 +6,13 @@
 Mathematical Plots
 ##################
 
-.. attention::
+.. pull-quote::
 
-   Matplotlib does not support labels and auto-references. You can not refer
-   to a equation and you will never see an entry to :rst:`.. mathmpl::`
-   expressions in the list of equations.
+   .. attention::
+
+      Matplotlib does not support labels and auto-references. You
+      can not refer to a equation and you will never see an entry
+      to :rst:`.. mathmpl::` expressions in the list of equations.
 
 :PyPI Package:   https://pypi.org/project/matplotlib/
 :Project Home:   https://matplotlib.org/

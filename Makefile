@@ -1,6 +1,12 @@
 # Minimal makefile for Sphinx documentation
 #
 
+# avoid uggly issues with online images, warning was:
+# WARNING: Could not fetch remote image:
+# [time data '...' does not match format '...']
+LANG=
+export LANG
+
 # You can set these variables from the command line, and also
 # from the environment for the first two.
 SPHINXOPTS    ?= -W --keep-going

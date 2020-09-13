@@ -45,10 +45,12 @@ Index
        This is a normal reST :index:`paragraph` that contains several
        :index:`index entries <pair: index; entry>`.
 
-   .. note::
+   .. pull-quote::
 
-      The :rst:`:index:` role must contain text. This text will be printed
-      and referenced by the index.
+      .. note::
+
+         The :rst:`:index:` role must contain text. This text will be
+         printed and referenced by the index.
 
 :raw-latex:`\clearpage\phantomsection`
 

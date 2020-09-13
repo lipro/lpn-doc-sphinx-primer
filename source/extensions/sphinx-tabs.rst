@@ -6,9 +6,11 @@
 Tabbed Content
 ##############
 
-.. attention::
+.. pull-quote::
 
-   Only practicable and usable for |HTML| builder.
+   .. attention::
+
+      Only practicable and usable for |HTML| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinx-tabs/
 :Documentation:  https://sphinx-tabs.readthedocs.io/

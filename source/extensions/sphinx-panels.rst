@@ -6,9 +6,11 @@
 Paneled Content
 ###############
 
-.. attention::
+.. pull-quote::
 
-   Only practicable and usable for |HTML| builder.
+   .. attention::
+
+      Only practicable and usable for |HTML| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinx-panels/
 :Documentation:  https://sphinx-panels.readthedocs.io/
@@ -56,16 +58,19 @@ Create paneled content in |Sphinx| documentation when building |HTML|.
 
 .. only:: not html or not sphinx_panels
 
-   .. admonition:: Extension not applicable
-      :class: danger
+   .. pull-quote::
 
-      This |Sphinx| extension is quite new and is under constant development.
-      The current behavior disturbs the integration, so the extension is
-      disabled for now (see :file:`conf.py`). Currently known bugs are:
+      .. admonition:: Extension not applicable
+         :class: danger
 
-      * annoying side effects with the :doc:`./sphinx-tabs` extension by
-	the automatically integrated and delivered Bootstrap 4.0 |CSS|
-      * no proper and practical |LaTeX| builder support
+         This |Sphinx| extension is quite new and is under constant
+         development. The current behavior disturbs the integration,
+         so the extension is disabled for now (see :file:`conf.py`).
+         Currently known bugs are:
+
+         * annoying side effects with the :doc:`./sphinx-tabs` extension by
+           the automatically integrated and delivered Bootstrap 4.0 |CSS|
+         * no proper and practical |LaTeX| builder support
 
 .. only:: html and sphinx_panels
 

@@ -578,6 +578,9 @@ intersphinx_mapping = {
     # python -m sphinx.ext.intersphinx 'https://www.sphinx-doc.org/en/3.x/objects.inv'
     'sphinx': ('https://www.sphinx-doc.org/en/3.x/', None),
 
+    # python -m sphinx.ext.intersphinx 'https://rest-sphinx-memo.readthedocs.io/en/stable/objects.inv'
+    'spxmemo': ('https://rest-sphinx-memo.readthedocs.io/en/stable/', None),
+
     # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-spelling.readthedocs.io/en/stable/objects.inv'
     'scspelling': ('https://sphinxcontrib-spelling.readthedocs.io/en/stable/', None),
 

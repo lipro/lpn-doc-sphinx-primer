@@ -7,8 +7,17 @@
 License
 #######
 
-   .. literalinclude:: ../LICENSE
+.. only:: html
+
+   .. sidebar:: Summary
+
+      .. include:: /doclegal.rsti
+
+.. pull-quote::
+
+   .. literalinclude:: /LICENSE
       :caption: License text of the |project|
+      :name: license-text
       :language: none
 
 :raw-latex:`\clearpage\phantomsection`

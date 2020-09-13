@@ -45,6 +45,23 @@ them more than the surrounding paragraphs.
 
    .. include:: paragraphs-bq-example.rsti
 
+.. rst:directive:: pull-quote
+
+   :dudir:`Pull-quoted <pull-quotes>` paragraphs are similar to blockquotes
+   but are directives for small selection of text to "pull out and quote",
+   typically in a larger typeface.
+
+   :the example:
+
+      .. literalinclude:: paragraphs-pq-example.rsti
+         :end-before: .. Local variables:
+         :language: rst
+         :linenos:
+
+   :which gives:
+
+      .. include:: paragraphs-pq-example.rsti
+
 .. index::
    triple: Sphinx; Syntax; Line Blocks
 

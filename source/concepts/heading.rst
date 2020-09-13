@@ -23,6 +23,30 @@ documentation, here is a suggested convention as covered in the |Sphinx|
 * ``^``, for subsubsections
 * ``=``, for paragraphs
 
+They give structure to the document, which is used in navigation and in the
+display in all output formats. The part section header is not used at all. All
+regular documents starts with a title heading underlined by ``#``. Therefore
+the specific names part, chapter, section, |...|\  might not match the actual
+context. Generally we speak about "sections" (or "section headings" or
+"section markers").
+
+.. pull-quote::
+
+   .. note::
+
+      With |reStructuredText|, there is no leaving out a section level.
+      If you write a chapter it is not possible to continue with a paragraph.
+      Instead the next section must be of the type title.
+
+      If you try to do it overwise (chapter 1 ``*`` with overline |CRT|
+      paragraph ``"``), the "paragraph" is treated as a "title". And if
+      you continue by another chapter in the same file (chapter 2 ``*``
+      with overline |CRT| title ``#``), :program:`sphinx-build` got
+      confused and at least produces a warning (*Title level inconsistent*)
+      and possibly renders the result incorrectly.
+
+:raw-latex:`\clearpage\phantomsection`
+
 :the convention:
 
    .. code-block:: rst
@@ -57,26 +81,6 @@ documentation, here is a suggested convention as covered in the |Sphinx|
 
       Paragraph -- Double Quotes
       """"""""""""""""""""""""""
-
-They give structure to the document, which is used in navigation and in the
-display in all output formats. The part section header is not used at all. All
-regular documents starts with a title heading underlined by ``#``. Therefore
-the specific names part, chapter, section, |...|\  might not match the actual
-context. Generally we speak about "sections" (or "section headings" or
-"section markers").
-
-.. note::
-
-   With |reStructuredText|, there is no leaving out a section level. If you
-   write a chapter it is not possible to continue with a paragraph. Instead
-   the next section must be of the type title.
-   
-   If you try to do it overwise (chapter 1 ``*`` with overline |CRT|
-   paragraph ``"``), the "paragraph" is treated as a "title". And if you
-   continue by another chapter in the same file (chapter 2 ``*`` with
-   overline |CRT| title ``#``), :program:`sphinx-build` got confused and at
-   least produces a warning (*Title level inconsistent*) and possibly renders
-   the result incorrectly.
 
 :raw-latex:`\clearpage\phantomsection`
 

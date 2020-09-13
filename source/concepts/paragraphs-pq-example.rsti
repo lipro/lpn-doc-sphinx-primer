@@ -1,7 +1,9 @@
-This line is not a block quote. Block quotes are indented,
-and otherwise unadorned.
+This line is not a pull quote.
+Pull quotes are directive content.
 
-   This is a block quote.
+.. pull-quote::
+
+   This is a pull quote.
 
    --Adam Michael Wood - `Technical Content Writer`_
 

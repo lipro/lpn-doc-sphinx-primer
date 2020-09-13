@@ -68,11 +68,13 @@ through standard navigation.
 The special file :file:`index.rst` at the root of the source directory is the
 "root" of the TOC tree hierarchy; from it the "Contents" page is generated.
 
-.. note::
+.. pull-quote::
 
-   The TOC Tree is also used for generating the navigation elements inside
-   |Sphinx|. It is quite important, and one of the most powerful concepts in
-   |Sphinx|.
+   .. note::
+
+      The TOC Tree is also used for generating the navigation elements
+      inside |Sphinx|. It is quite important, and one of the most powerful
+      concepts in |Sphinx|.
 
 Sidebar navigation menu
 ***********************
@@ -137,18 +139,21 @@ How this document uses main and secondary TOC
   * :doc:`../themes/rtd`,
   * |...|
 
-.. tip::
+.. pull-quote::
 
-   If it not obvious where a new document should appear in the navigation,
-   the best practice is to simply ask about it in the GitHub issue driving
-   the new page.
+   .. tip::
 
-.. note::
+      If it not obvious where a new document should appear in the
+      navigation, the best practice is to simply ask about it in
+      the GitHub issue driving the new page.
 
-   For way-finding purposes, we sometimes create an |ul| of page links rather
-   than a :rst:`.. toctree::` directive (for example, see :file:`index.rst`).
-   We do this when using a :rst:`.. toctree::` would create redundant links in
-   the :ref:`concepts/toctree:Sidebar navigation menu`.
+   .. note::
+
+      For way-finding purposes, we sometimes create an |ul| of page
+      links rather than a :rst:`.. toctree::` directive (for example,
+      see :file:`index.rst`). We do this when using a :rst:`.. toctree::`
+      would create redundant links in the :ref:`concepts/toctree:Sidebar
+      navigation menu`.
 
 .. |ul| replace::
    :ref:`concepts/lists:Unordered (bullet) lists`

@@ -2,20 +2,32 @@
 
 .. rubric:: Legal Notice of |project|
 
-.. include:: LICENSE
-   :end-before: CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM
-   :literal:
+|dm_licbmp|
+|dm_license|
 
-For details of the terms and definitions, representations, warranties
-and disclaimer see the file LICENSE that comes with the documentation
-and/or read the online version (`CC-BY-SA-3.0`_).
+.. pull-quote::
 
-**You are free:**
+   .. literalinclude:: /LICENSE
+      :end-before: CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM
+      :language: none
+
+See :numref:`license-text`, :ref:`license-text`, for the complete text that
+comes within this document.
+
+.. For details of the terms and definitions, representations, warranties
+.. and disclaimer see the file LICENSE that comes with the documentation
+.. and/or read the online version (`CC-BY-SA-3.0`_).
+
+.. rubric:: You are free:
+
+.. pull-quote::
 
    :to Share:	|---| to copy, distribute and transmit the work
    :to Remix:	|---| to adapt the work to make commercial use of the work
 
-**Under the following conditions:**
+.. rubric:: Under the following conditions:
+
+.. pull-quote::
 
    :Attribution:	|---| You must attribute the work in the manner
 			specified by the author or licensor (but not in
@@ -25,7 +37,9 @@ and/or read the online version (`CC-BY-SA-3.0`_).
 			work, you may distribute the resulting work only
 			under the same or similar license to this one.
 
-**With the understanding that:**
+.. rubric:: With the understanding that:
+
+.. pull-quote::
 
    :Waiver:		|---| Any of the above conditions can be waived
 			if you get permission from the copyright holder.

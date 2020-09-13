@@ -6,9 +6,11 @@
 PGF/TikZ LaTeX Pictures
 #######################
 
-.. attention::
+.. pull-quote::
 
-   Only practicable and usable for |HTML| and |LaTeX| builder.
+   .. attention::
+
+      Only practicable and usable for |HTML| and |LaTeX| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinxcontrib-tikz/
 :Documentation:  http://sphinxcontrib-tikz.readthedocs.io/

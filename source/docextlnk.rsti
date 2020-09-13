@@ -5,15 +5,19 @@
 .. _`Lagerplatz von Li-Pro.Net`: http://store.li-pro.net/
 
 .. _`Eric Holscher`: https://www.ericholscher.com/
+.. _`better tool than Markdown for documentation`:
+   http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/
 .. _`Sphinx Tutorial by Eric Holscher`: https://sphinx-tutorial.readthedocs.io/
 .. _`Bareos GmbH & Co. KG`: https://www.bareos.org/
-.. _`Documentation Style Guide by Bareos GmbH & Co. KG and others`: https://docs.bareos.org/
+.. _`Documentation Style Guide by Bareos GmbH & Co. KG and others`:
+   https://docs.bareos.org/
 
 .. _`Docutils`: https://docutils.sourceforge.io/
 .. _`reStructuredText`: https://docutils.sourceforge.io/rst.html
 .. _`Sphinx`: https://www.sphinx-doc.org/
 .. _`Sphinx Themes Demo Page`: https://sphinx-themes.org/
-.. _`Sphinx RTD Theme Demo Page`: https://sphinx-themes.org/html/sphinx_rtd_theme/sphinx_rtd_theme/index.html
+.. _`Sphinx RTD Theme Demo Page`:
+   https://sphinx-themes.org/html/sphinx_rtd_theme/sphinx_rtd_theme/index.html
 .. _`Read the Docs Sphinx Theme`: https://github.com/readthedocs/sphinx_rtd_theme
 
 .. _`C`: http://www.open-std.org/jtc1/sc22/wg14/www/projects

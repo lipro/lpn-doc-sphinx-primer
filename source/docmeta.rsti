@@ -15,13 +15,29 @@
                          (:emphasis:`some mature, much in progress`)
 
 
-.. Copyright:
+.. Copyright, License, Credits:
 
-.. |dm_copyright| replace:: Copyright |copy| |copyright| |---|
-   all rights reserved. This work is licensed under a Creative Commons
-   Attribution-ShareAlike 3.0 Unported License (`CC-BY-SA-3.0`_).
-   See the file |LICENSE| and |CREDITS| that comes with
-   the documentation.
+.. |dm_copyright| replace::
+   Copyright |copy| |copyright| |---| all rights reserved.
+
+.. |dm_license| replace::
+   This work is licensed under the Creative Commons Attribution-ShareAlike 3.0
+   Unported License. For details of the terms and definitions, representations,
+   warranties and disclaimer see the file |LICENSE| that comes with the
+   documentation and/or read the online version (`CC-BY-SA-3.0`_).
+
+.. |dm_licbmpil| image:: https://licensebuttons.net/l/by-sa/3.0/80x15.png
+   :alt: Creative Commons License: Attribution-ShareAlike 3.0 Unported
+   :target: http://creativecommons.org/licenses/by-sa/3.0/
+   :align: top
+
+.. |dm_licbmp| image:: https://licensebuttons.net/l/by-sa/3.0/88x31.png
+   :alt: Creative Commons License: Attribution-ShareAlike 3.0 Unported
+   :align: top
+
+.. |dm_credits| replace::
+   See the file |CREDITS| that comes with the documentation for a list of
+   all well known contributors.
 
 
 .. Organization:
@@ -45,6 +61,8 @@
 .. Licenses:
 
 .. _`CC-BY-SA-3.0`: http://creativecommons.org/licenses/by-sa/3.0/
+.. _`CC-BY-SA-2.5`: http://creativecommons.org/licenses/by-sa/2.5/
+.. _`GPL-2.0`: https://www.gnu.org/licenses/old-licenses/gpl-2.0
 
 
 .. Unicodes:

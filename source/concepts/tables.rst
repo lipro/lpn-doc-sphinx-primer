@@ -77,10 +77,12 @@ List Table
 
    For more details, see :dudir:`List Tables <list-table>` in |Docutils|.
 
-   .. hint::
+   .. pull-quote::
 
-      For table content that needs a higher complexity than the list table
-      is able to support use the :rst:dir:`flat-table`.
+      .. hint::
+
+         For table content that needs a higher complexity than the
+	 list table is able to support use the :rst:dir:`flat-table`.
 
    :the example:
 
@@ -105,12 +107,14 @@ CSV Table
 
    For more details, see :dudir:`CSV Tables <csv-table>` in |Docutils|.
 
-   .. hint::
+   .. pull-quote::
 
-      In almost all cases, :rst:dir:`csv-table` is the easiest and most
-      maintainable way to insert a table into a document. It should be
-      preferred unless there is a compelling reason to use one of the
-      other styles.
+      .. hint::
+
+         In almost all cases, :rst:dir:`csv-table` is the easiest
+	 and most maintainable way to insert a table into a document.
+	 It should be preferred unless there is a compelling reason
+	 to use one of the other styles.
 
    :the example:
 
@@ -196,12 +200,14 @@ CSV Table
 
          .. include:: tables-csv-srcfile-example.rsti
 
-.. note::
+.. pull-quote::
 
-   There is no support for checking that the number of columns in each
-   row is the same. However, this directive supports CSV generators that
-   do not insert "empty" entries at the end of short rows, by automatically
-   adding empty entries.
+   .. note::
+
+      There is no support for checking that the number of columns in
+      each row is the same. However, this directive supports CSV
+      generators that do not insert "empty" entries at the end of
+      short rows, by automatically adding empty entries.
 
 :raw-latex:`\clearpage\phantomsection`
 

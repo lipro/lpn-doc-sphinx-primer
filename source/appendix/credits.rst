@@ -7,8 +7,11 @@
 Credits
 #######
 
-   .. literalinclude:: ../CREDITS
+.. pull-quote::
+
+   .. literalinclude:: /CREDITS
       :caption: Authors cited when creating the |project|
+      :name: credits-text
       :language: none
 
 :raw-latex:`\clearpage\phantomsection`
