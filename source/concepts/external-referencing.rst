@@ -17,14 +17,14 @@ Things like |PEP|'s and |RFC|'s. You can read more about this in the |Sphinx|
 
    :the example:
 
-      .. literalinclude:: external-referencing-example.rsti
+      .. literalinclude:: external-referencing/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: external-referencing-example.rsti
+      .. include:: external-referencing/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

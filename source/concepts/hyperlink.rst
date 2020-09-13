@@ -21,14 +21,14 @@ called :duref:`explicit hyperlink targets <explicit-hyperlink-targets>`.
 
 :the example:
 
-   .. literalinclude:: hyperlink-example.rsti
+   .. literalinclude:: hyperlink/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: hyperlink-example.rsti
+   .. include:: hyperlink/example.rsti
 
 .. Local variables:
    coding: utf-8

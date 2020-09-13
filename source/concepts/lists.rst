@@ -28,14 +28,14 @@ such as circles and squares.
 
 :the example:
 
-   .. literalinclude:: lists-ul-example.rsti
+   .. literalinclude:: lists/unordered/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: lists-ul-example.rsti
+   .. include:: lists/unordered/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; Ordered Lists
@@ -53,14 +53,14 @@ e.g. Arabic or Roman numerals or alphabet characters.
 
 :the example:
 
-   .. literalinclude:: lists-ol-example.rsti
+   .. literalinclude:: lists/ordered/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: lists-ol-example.rsti
+   .. include:: lists/ordered/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; Definition Lists
@@ -76,14 +76,14 @@ classifiers, and a definition.
 
 :the example:
 
-   .. literalinclude:: lists-dl-example.rsti
+   .. literalinclude:: lists/definition/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: lists-dl-example.rsti
+   .. include:: lists/definition/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; Field Lists
@@ -102,14 +102,14 @@ adds some extra (optional) functionality.
 
 :the example:
 
-   .. literalinclude:: lists-fl-example.rsti
+   .. literalinclude:: lists/field/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: lists-fl-example.rsti
+   .. include:: lists/field/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

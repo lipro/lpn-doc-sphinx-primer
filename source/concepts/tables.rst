@@ -23,10 +23,10 @@ For more details, see :dudir:`Table <table>` in |Docutils| or
    |Sphinx| uses to translate tables). For more details, see
    :rst:dir:`sphinx:tabularcolumns`.
 
+:raw-latex:`\clearpage\phantomsection`
+
 .. index::
    triple: Sphinx; Syntax; Grid Table
-
-:raw-latex:`\clearpage\phantomsection`
 
 Grid Style
 **********
@@ -35,19 +35,19 @@ For more details, see :duref:`Grid Tables <grid-tables>` in |Docutils|.
 
 :the example:
 
-   .. literalinclude:: tables-grid-example.rsti
+   .. literalinclude:: tables/grid/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: tables-grid-example.rsti
+   .. include:: tables/grid/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. index::
    triple: Sphinx; Syntax; Simple Table
-
-:raw-latex:`\clearpage\phantomsection`
 
 Simple Style
 ************
@@ -56,19 +56,19 @@ For more details, see :duref:`Simple Tables <simple-tables>` in |Docutils|.
 
 :the example:
 
-   .. literalinclude:: tables-simple-example.rsti
+   .. literalinclude:: tables/simple/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: tables-simple-example.rsti
+   .. include:: tables/simple/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. index::
    triple: Sphinx; Syntax; List Table
-
-:raw-latex:`\clearpage\phantomsection`
 
 List Table
 **********
@@ -86,19 +86,19 @@ List Table
 
    :the example:
 
-      .. literalinclude:: tables-list-example.rsti
+      .. literalinclude:: tables/list/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: tables-list-example.rsti
+      .. include:: tables/list/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. index::
    triple: Sphinx; Syntax; CSV Table
-
-:raw-latex:`\clearpage\phantomsection`
 
 CSV Table
 *********
@@ -118,14 +118,14 @@ CSV Table
 
    :the example:
 
-      .. literalinclude:: tables-csv-example.rsti
+      .. literalinclude:: tables/csv/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: tables-csv-example.rsti
+      .. include:: tables/csv/example.rsti
 
    Some of the options recognized are:
 
@@ -156,14 +156,14 @@ CSV Table
 
       :the example:
 
-         .. literalinclude:: tables-csv-delim-example.rsti
+         .. literalinclude:: tables/csv/delim/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
 
       :which gives:
 
-         .. include:: tables-csv-delim-example.rsti
+         .. include:: tables/csv/delim/example.rsti
 
    .. rst:directive:option:: align
 
@@ -172,14 +172,14 @@ CSV Table
 
       :the example:
 
-         .. literalinclude:: tables-csv-align-example.rsti
+         .. literalinclude:: tables/csv/align/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
 
       :which gives:
 
-         .. include:: tables-csv-align-example.rsti
+         .. include:: tables/csv/align/example.rsti
 
    .. rst:directive:option:: url
 
@@ -191,14 +191,23 @@ CSV Table
 
       :the example:
 
-         .. literalinclude:: tables-csv-srcfile-example.rsti
+         .. literalinclude:: tables/csv/srcfile/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
 
       :which gives:
 
-         .. include:: tables-csv-srcfile-example.rsti
+         .. include:: tables/csv/srcfile/example.rsti
+
+      :which needs:
+
+         The example above processed the following CSV file content:
+
+         .. literalinclude:: tables/csv/srcfile/example.csv
+            :caption: CSV example file (tables/csv/srcfile/example.csv)
+            :language: none
+            :linenos:
 
 .. pull-quote::
 

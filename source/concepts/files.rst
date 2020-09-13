@@ -22,14 +22,14 @@ inline markup.
 
    :the example:
 
-      .. literalinclude:: files-example.rsti
+      .. literalinclude:: files/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: files-example.rsti
+      .. include:: files/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

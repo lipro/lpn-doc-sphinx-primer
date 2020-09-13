@@ -34,14 +34,14 @@ they appear (that is, the filename without the :file:`.rst` extension).
 
    :the example:
 
-      .. literalinclude:: downloads-example.rsti
+      .. literalinclude:: downloads/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: downloads-example.rsti
+      .. include:: downloads/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

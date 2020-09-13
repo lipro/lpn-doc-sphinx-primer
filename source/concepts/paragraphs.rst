@@ -15,14 +15,14 @@ to the same level of indentation. General rules can be looked up under
 
 :the example:
 
-   .. literalinclude:: paragraphs-example.rsti
+   .. literalinclude:: paragraphs/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: paragraphs-example.rsti
+   .. include:: paragraphs/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; Block Quotation
@@ -36,14 +36,14 @@ them more than the surrounding paragraphs.
 
 :the example:
 
-   .. literalinclude:: paragraphs-bq-example.rsti
+   .. literalinclude:: paragraphs/block-quote/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: paragraphs-bq-example.rsti
+   .. include:: paragraphs/block-quote/example.rsti
 
 .. rst:directive:: pull-quote
 
@@ -53,14 +53,14 @@ them more than the surrounding paragraphs.
 
    :the example:
 
-      .. literalinclude:: paragraphs-pq-example.rsti
+      .. literalinclude:: paragraphs/pull-quote/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: paragraphs-pq-example.rsti
+      .. include:: paragraphs/pull-quote/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; Line Blocks
@@ -74,14 +74,14 @@ of each single line.
 
 :the example:
 
-   .. literalinclude:: paragraphs-lb-example.rsti
+   .. literalinclude:: paragraphs/line-block/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: paragraphs-lb-example.rsti
+   .. include:: paragraphs/line-block/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; Doctest Blocks
@@ -97,14 +97,14 @@ with a blank line and should not end with an unused prompt, see
 
 :the example:
 
-   .. literalinclude:: paragraphs-dt-example.rsti
+   .. literalinclude:: paragraphs/doctest/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: paragraphs-dt-example.rsti
+   .. include:: paragraphs/doctest/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

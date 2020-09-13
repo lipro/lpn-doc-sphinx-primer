@@ -52,14 +52,14 @@ They are used inside other text structures.
 
       The Fibonacci numbers (without inline role for :doc:`../mathematics`).
 
-      .. literalinclude:: roles-subscript-example.rsti
+      .. literalinclude:: roles/subscript/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: roles-subscript-example.rsti
+      .. include:: roles/subscript/example.rsti
 
 .. rst:role:: superscript
 
@@ -71,14 +71,14 @@ They are used inside other text structures.
 
       The elementary charge (without inline role for :doc:`../mathematics`).
 
-      .. literalinclude:: roles-superscript-example.rsti
+      .. literalinclude:: roles/superscript/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: roles-superscript-example.rsti
+      .. include:: roles/superscript/example.rsti
 
 .. rst:role:: math
 

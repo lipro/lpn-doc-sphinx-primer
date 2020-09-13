@@ -16,14 +16,14 @@ Several roles are used when describing user interactions.
 
    :the example:
 
-      .. literalinclude:: user-interfaces-guilabel-example.rsti
+      .. literalinclude:: user-interfaces/guilabel/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: user-interfaces-guilabel-example.rsti
+      .. include:: user-interfaces/guilabel/example.rsti
 
 .. rst:role:: menuselection
 
@@ -32,14 +32,14 @@ Several roles are used when describing user interactions.
 
    :the example:
 
-      .. literalinclude:: user-interfaces-menuselection-example.rsti
+      .. literalinclude:: user-interfaces/menuselection/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: user-interfaces-menuselection-example.rsti
+      .. include:: user-interfaces/menuselection/example.rsti
 
    When writing about multi-level menus, use a single :rst:`:menuselection:`
    role, and separate menu choices with :rst:`-->`.
@@ -69,14 +69,14 @@ Several roles are used when describing user interactions.
 
    :the example:
 
-      .. literalinclude:: user-interfaces-kbd-example.rsti
+      .. literalinclude:: user-interfaces/kbd/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: user-interfaces-kbd-example.rsti
+      .. include:: user-interfaces/kbd/example.rsti
 
 .. rst:role:: command
 
@@ -85,14 +85,14 @@ Several roles are used when describing user interactions.
 
    :the example:
 
-      .. literalinclude:: user-interfaces-command-example.rsti
+      .. literalinclude:: user-interfaces/command/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: user-interfaces-command-example.rsti
+      .. include:: user-interfaces/command/example.rsti
 
 To document a CLI application, you will find more information in
 :doc:`./semantic-referencing`.
@@ -108,14 +108,14 @@ Other Semantic Markup
 
    :the example:
 
-      .. literalinclude:: user-interfaces-abbr-example.rsti
+      .. literalinclude:: user-interfaces/abbr/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: user-interfaces-abbr-example.rsti
+      .. include:: user-interfaces/abbr/example.rsti
 
 .. rst:role:: dfn
 
@@ -124,14 +124,14 @@ Other Semantic Markup
 
    :the example:
 
-      .. literalinclude:: user-interfaces-dfn-example.rsti
+      .. literalinclude:: user-interfaces/dfn/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: user-interfaces-dfn-example.rsti
+      .. include:: user-interfaces/dfn/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

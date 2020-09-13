@@ -21,14 +21,14 @@ printable 7-bit ASCII character.
 
    :the example:
 
-      .. literalinclude:: code-example-lb-example.rsti
+      .. literalinclude:: code-example/literal-block/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-         .. include:: code-example-lb-example.rsti
+         .. include:: code-example/literal-block/example.rsti
 
 The handling of the ``::`` marker is smart:
 
@@ -64,14 +64,14 @@ structured based on the indention level they are on.
 
    :the example:
 
-      .. literalinclude:: code-example-cb-example.rsti
+      .. literalinclude:: code-example/code-block/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-         .. include:: code-example-cb-example.rsti
+         .. include:: code-example/code-block/example.rsti
 
 Valid values for the highlighting :rst:`:language:` (first argument) are:
 
@@ -108,14 +108,14 @@ directive:
 
    :the example:
 
-      .. literalinclude:: code-example-li-example.rsti
+      .. literalinclude:: code-example/literalinclude/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-         .. include:: code-example-li-example.rsti
+         .. include:: code-example/literalinclude/example.rsti
 
 All included files could be located under :file:`/include`. The beginning
 :file:`/` means, root directory of the documentation source directory. Without

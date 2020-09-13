@@ -24,14 +24,14 @@ set to any implemented specific type and overrides the computed
 
    :the example:
 
-      .. literalinclude:: admonition-example.rsti
+      .. literalinclude:: admonition/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-example.rsti
+      .. include:: admonition/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Specific
@@ -56,14 +56,14 @@ Attention Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-attention-example.rsti
+      .. literalinclude:: admonition/attention/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-attention-example.rsti
+      .. include:: admonition/attention/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Caution
@@ -75,14 +75,14 @@ Caution Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-caution-example.rsti
+      .. literalinclude:: admonition/caution/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-caution-example.rsti
+      .. include:: admonition/caution/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Danger
@@ -94,14 +94,14 @@ Danger Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-danger-example.rsti
+      .. literalinclude:: admonition/danger/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-danger-example.rsti
+      .. include:: admonition/danger/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Error
@@ -113,14 +113,14 @@ Error Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-error-example.rsti
+      .. literalinclude:: admonition/error/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-error-example.rsti
+      .. include:: admonition/error/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Hint
@@ -132,14 +132,14 @@ Hint Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-hint-example.rsti
+      .. literalinclude:: admonition/hint/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-hint-example.rsti
+      .. include:: admonition/hint/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Important
@@ -151,14 +151,14 @@ Important Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-important-example.rsti
+      .. literalinclude:: admonition/important/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-important-example.rsti
+      .. include:: admonition/important/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Note
@@ -172,14 +172,14 @@ Note Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-note-example.rsti
+      .. literalinclude:: admonition/note/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-note-example.rsti
+      .. include:: admonition/note/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Tip
@@ -191,14 +191,14 @@ Tip Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-tip-example.rsti
+      .. literalinclude:: admonition/tip/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-tip-example.rsti
+      .. include:: admonition/tip/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Warning
@@ -212,14 +212,14 @@ Warning Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-warning-example.rsti
+      .. literalinclude:: admonition/warning/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-warning-example.rsti
+      .. include:: admonition/warning/example.rsti
 
 .. index::
    triple: Sphinx; Admonitions; Additional
@@ -241,14 +241,14 @@ Seealso Admonition
 
    :the example:
 
-      .. literalinclude:: admonition-seealso-example.rsti
+      .. literalinclude:: admonition/seealso/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: admonition-seealso-example.rsti
+      .. include:: admonition/seealso/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

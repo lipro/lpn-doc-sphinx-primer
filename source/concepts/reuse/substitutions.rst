@@ -28,14 +28,14 @@ additional predefined :ref:`sphinx:default-substitutions`.
 
    :the example:
 
-      .. literalinclude:: substitutions-replace-example.rsti
+      .. literalinclude:: substitutions/replace/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: substitutions-replace-example.rsti
+      .. include:: substitutions/replace/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; Styled Reference
@@ -48,14 +48,14 @@ You can also create a reference with styled text,
 
 :the example:
 
-   .. literalinclude:: substitutions-nested-inline-markup-example.rsti
+   .. literalinclude:: substitutions/nested-inline-markup/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: substitutions-nested-inline-markup-example.rsti
+   .. include:: substitutions/nested-inline-markup/example.rsti
 
 .. index::
    triple: Sphinx; Syntax; RST Prolog
@@ -94,14 +94,14 @@ block of code substitutes arrow in the text with the image specified.
 
 :the example:
 
-   .. literalinclude:: substitutions-inline-images-example.rsti
+   .. literalinclude:: substitutions/inline-images/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
 
 :which gives:
 
-   .. include:: substitutions-inline-images-example.rsti
+   .. include:: substitutions/inline-images/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

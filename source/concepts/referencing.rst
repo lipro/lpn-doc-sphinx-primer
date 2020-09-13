@@ -32,7 +32,7 @@ as :duref:`implicit <implicit-hyperlink-targets>` hyperlink targets.
 
    :the example:
 
-      .. literalinclude:: referencing-example.rsti
+      .. literalinclude:: referencing/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -51,7 +51,7 @@ as :duref:`implicit <implicit-hyperlink-targets>` hyperlink targets.
 
    :which gives:
 
-      .. include:: referencing-example.rsti
+      .. include:: referencing/example.rsti
 
 .. rst-class:: centered
 

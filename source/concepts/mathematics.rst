@@ -28,14 +28,14 @@ directive block which is able to cross-referencing equations:
 
    :the example:
 
-      .. literalinclude:: mathematics-simple-example.rsti
+      .. literalinclude:: mathematics/simple/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: mathematics-simple-example.rsti
+      .. include:: mathematics/simple/example.rsti
 
 .. rst:role:: math:numref
 
@@ -46,14 +46,14 @@ directive block which is able to cross-referencing equations:
 
    :the example:
 
-      .. literalinclude:: mathematics-label-example.rsti
+      .. literalinclude:: mathematics/label/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: mathematics-label-example.rsti
+      .. include:: mathematics/label/example.rsti
 
    When the equation is only one line of text, it can also be given
    as a directive argument (as used in Euler's identity above).

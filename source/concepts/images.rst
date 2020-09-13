@@ -21,7 +21,7 @@ should be possible as well as an animated |SVG|, see
    :widths: 50, 50
    :align: center
 
-   * - .. figure:: images-transparent-vector.svg
+   * - .. figure:: images/transparent-vector.svg
           :name: images-transparent-vector
           :figclass: align-center
           :align: center
@@ -29,7 +29,7 @@ should be possible as well as an animated |SVG|, see
 
           Example of transparent SVG [#]_
 
-     - .. figure:: images-animated-vector.svg
+     - .. figure:: images/animated-vector.svg
           :name: images-animated-vector
           :figclass: align-center
           :align: center
@@ -54,7 +54,7 @@ image preserves the shapes.
 
 :raw-latex:`\clearpage\phantomsection`
 
-.. figure:: images-rast-vs-vect.svg
+.. figure:: images/rast-vs-vect.svg
    :name: images-rast-vs-vect
    :figclass: align-center
    :align: center
@@ -114,7 +114,7 @@ should be possible as well as an animated |PNG|, see
    :widths: 50, 50
    :align: center
 
-   * - .. figure:: images-transparent-bitmap.png
+   * - .. figure:: images/transparent-bitmap.png
           :name: images-transparent-bitmap
           :figclass: align-center
           :align: center
@@ -122,7 +122,7 @@ should be possible as well as an animated |PNG|, see
 
           Example of transparent PNG [#]_
 
-     - .. figure:: images-animated-bitmap.png
+     - .. figure:: images/animated-bitmap.png
           :name: images-animated-bitmap
           :figclass: align-center
           :align: center
@@ -141,7 +141,7 @@ background of this kind of image data, where the |PNG| image has solid color.
 
 :raw-latex:`\clearpage\phantomsection`
 
-.. figure:: images-lossless-vs-lossy.png
+.. figure:: images/lossless-vs-lossy.png
    :name: images-lossless-vs-lossy
    :figclass: align-center
    :align: center
@@ -215,14 +215,14 @@ Use the asterisk, and omit the file extension
 
    :the example:
 
-      .. literalinclude:: images-image-example.rsti
+      .. literalinclude:: images/image/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: images-image-example.rsti
+      .. include:: images/image/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -248,14 +248,14 @@ also arbitrary body elements.
 
    :the example:
 
-      .. literalinclude:: images-figure-example.rsti
+      .. literalinclude:: images/figure/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: images-figure-example.rsti
+      .. include:: images/figure/example.rsti
 
 Inserting Inline
 ****************

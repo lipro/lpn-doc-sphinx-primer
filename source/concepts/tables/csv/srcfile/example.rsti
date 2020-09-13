@@ -1,6 +1,6 @@
 .. csv-table:: Example CSV table from source file
    :name: tables-csv-srcfile-example
-   :file: tables-csv-srcfile-example.csv
+   :file: example.csv
    :delim: |
    :encoding: utf-8-sig
    :header-rows: 1

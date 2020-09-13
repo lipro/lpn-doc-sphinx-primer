@@ -22,14 +22,14 @@ and its :rst:dir:`sphinx:option` and :rst:dir:`sphinx:envvar` quite easily.
 
    :the example:
 
-      .. literalinclude:: semantic-referencing-program-example.rsti
+      .. literalinclude:: semantic-referencing/program/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: semantic-referencing-program-example.rsti
+      .. include:: semantic-referencing/program/example.rsti
 
 That can now also be referenced quite simply.
 
@@ -42,14 +42,14 @@ That can now also be referenced quite simply.
 
    :the example:
 
-      .. literalinclude:: semantic-referencing-options-example.rsti
+      .. literalinclude:: semantic-referencing/options/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: semantic-referencing-options-example.rsti
+      .. include:: semantic-referencing/options/example.rsti
 
 |Sphinx| includes a large number of these semantic types, including:
 
