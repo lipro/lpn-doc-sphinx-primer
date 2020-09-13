@@ -15,20 +15,36 @@ graphic conversion tooling simple, and generally results in higher-quality
 representation.
 
 Whenever possible, you should generate your graphics as |SVG|\ s rather than
-converting to |SVG|\ s from another format. That avoids bitmap images embedded
-in a |SVG| container. The goal of |SVG| usage is to hold vector graphic as long
-as possible, from the editor up to the presentation. If you have to start in
-another vector graphic format use lossless vector formats whenever possible.
-These include EPS/PS, AI, DXF, EMF/WMF, or some special |XML| vector graphics
-schemes. In any case avoid embedded bitmaps, as this is a lossy format for
-vector informations that does not replicate scaling very well.
+converting to |SVG|\ s from another format. That avoids bitmap raster images
+embedded in a |SVG| container. The goal of |SVG| usage is to hold vector
+graphic as long as possible, from the editor up to the presentation.
+:numref:`images-rast-vs-vect` demonstrats differences between bitmapped raster
+and vector graphics. The bitmap raster is composed of a fixed set of pixels,
+while the vector is composed of a fixed set of shapes.
+
+.. figure:: images-rast-vs-vect.svg
+   :name: images-rast-vs-vect
+   :figclass: align-center
+   :align: center
+   :width: 320px
+
+   Demonstration of differences between bitmapped raster and vector images.
+
+In the picture, scaling the bitmap reveals the pixels while scaling the vector
+image preserves the shapes.
+
+If you have to start in another vector graphic format use lossless vector
+formats whenever possible. These include EPS/PS, AI, DXF, EMF/WMF, or some
+special |XML| vector graphics schemes. In any case avoid embedded bitmaps,
+as this is a lossy format for vector informations that does not replicate
+scaling very well.
 
 PNG Images only
 ***************
 
-All still bitmap images or photos should be PNG files. This helps us keep our
-image compression tooling simple, and generally results in higher-quality
-screenshots.
+All still bitmap raster images or photos should be PNG files. This helps
+us keep our image compression tooling simple, and generally results in
+higher-quality screenshots.
 
 Whenever possible, you should generate your images as PNGs rather than
 converting to PNGs from another format. If you have to start in another
