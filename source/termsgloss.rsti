@@ -48,6 +48,9 @@
 
 .. |AI|         replace:: :abbr:`AI (Adobe Illustrator Artwork)`
 .. |ANSI|       replace:: :abbr:`ANSI (American National Standards Institute)`
+.. |BMP|        replace:: :abbr:`BMP (Bitmap Format)`
+.. |DIB|        replace:: :abbr:`DIB (Device Independent Bitmap Format)`
+.. |BMP/DIB|    replace:: |BMP|/|DIB|
 .. |DXF|        replace:: :abbr:`DXF (AutoCAD Drawing Exchange Format)`
 .. |EMF|        replace:: :abbr:`EMF (Enhanced Metafile Format)`
 .. |EMZ|        replace:: :abbr:`EMZ (Compressed Enhanced Metafile Format)`
@@ -57,10 +60,14 @@
 .. |GIF|        replace:: :abbr:`GIF (Graphics Interchange Format)`
 .. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
 .. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
+.. |JPEG|       replace:: :abbr:`JPEG (Joint Photographic Experts Group)`
+.. |JFIF|       replace:: :abbr:`JFIF (JPEG File Interchange Format)`
+.. |JPEG/JFIF|  replace:: |JPEG|/|JFIF|
 .. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
 .. |PS|         replace:: :abbr:`PS (PostScript)`
 .. |RFC|        replace:: :abbr:`RFC (Request for Comments)`
 .. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
+.. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
 .. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
 .. |WMF|        replace:: :abbr:`WMF (Windows Metafile Format)`
 .. |WMZ|        replace:: :abbr:`WMZ (Compressed Windows Metafile Format)`

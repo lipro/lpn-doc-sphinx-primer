@@ -57,9 +57,9 @@ higher-quality screenshots. Animated |PNG| should also be possible, see
 
 Whenever possible, you should generate your images as |PNG|\ s rather than
 converting to |PNG|\ s from another format. If you have to start in another
-format, use lossless formats whenever possible. These include BMP, |GIF|,
-and TIFF. Avoid JPG/JPEG if possible, as this is a lossy format that does
-not replicate screenshots very well.
+format, use lossless formats whenever possible. These include |BMP/DIB|,
+|GIF|, and |TIFF|. Avoid |JPEG/JFIF| if possible, as this is a lossy format
+that does not replicate screenshots very well.
 
 Inserting
 *********
