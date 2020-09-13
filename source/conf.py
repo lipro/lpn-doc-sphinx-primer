@@ -639,6 +639,9 @@ intersphinx_mapping = {
 extlinks = {
     'wikide':       ('https://de.wikipedia.org/wiki/%s', 'German Wikipedia: '),
     'wikien':       ('https://en.wikipedia.org/wiki/%s', 'English Wikipedia: '),
+    'wikimedia':    ('https://upload.wikimedia.org/wikipedia/commons/%s', 'Wikimedia: '),
+    'superuser':    ('https://superuser.com/%s', 'Superuser: '),
+    'steamcoded':   ('https://steamcoded.org/lessons/%s', 'STEAMcoded.org: '),
     'dufaq':        ('https://docutils.sourceforge.io/FAQ.html#%s', ''),
     'dutodo':       ('https://docutils.sourceforge.io/docs/dev/todo.html#%s', ''),
     'duuser':       ('https://docutils.sourceforge.io/docs/user/rst/%s.html', ''),
