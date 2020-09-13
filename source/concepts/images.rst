@@ -34,10 +34,10 @@ In the picture, scaling the bitmap reveals the pixels while scaling the vector
 image preserves the shapes.
 
 If you have to start in another vector graphic format use lossless vector
-formats whenever possible. These include EPS/PS, AI, DXF, EMF/WMF, or some
-special |XML| vector graphics schemes. In any case avoid embedded bitmaps,
-as this is a lossy format for vector informations that does not replicate
-scaling very well.
+formats whenever possible. These include |EPS/PS|, |AI|, |DXF|, |EMF/EMZ|,
+|WMF/WMZ| or some special |XML| vector graphics schemes. In any case avoid
+embedded bitmaps, as this is a lossy format for vector informations that
+does not replicate scaling very well.
 
 PNG Images only
 ***************
