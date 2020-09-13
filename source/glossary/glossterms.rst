@@ -244,7 +244,7 @@ Technologies
          - :wikien:`HTML5`: latest live standard was released in 2017 **W3C REC-HTML52-20171214**
          - :wikien:`HTML4`: standard ratified in 1999 *W3C REC-HTML40* and 2000 *ISO/IEC 15445:2000*
          - :wikien:`HTML3`: standard ratified in 1997 *W3C REC-HTML32*
-         - :wikien:`HTML2`: initially standardized in 1995 as *RFC 1866*
+         - :wikien:`HTML2`: initially standardized in 1995 as *RFC 1866* (:rfc:`1866`)
 
    :abbr:`PDF (Portable Document Format)`
       `PDF`_ is a file format developed by Adobe in 1993 to present documents,
@@ -286,6 +286,21 @@ Technologies
       .. seealso::
 
          - :wikien:`PGF/TikZ`
+
+   :abbr:`PNG (Portable Network Graphics)`
+     `PNG`_ is a raster-graphics file format that supports lossless data
+     compression. :abbr:`PNG (Portable Network Graphics)` was developed as an
+     improved, non-patented replacement for |GIF| with support for interactivity
+     and animation. The :abbr:`PNG (Portable Network Graphics)` specification is
+     standardized by the |W3C|/TR/PNG since 1996 and |ISO|/|IEC| JTC1/SC24/WG7
+     since 2003 as an open standard.
+
+      .. seealso::
+
+         - :wikien:`PNG`
+         - (`PNG 1.2`_): standard ratified in 2004 **ISO/IEC 15948:2004**
+         - (`PNG 1.2`_): standard ratified in 2003 *REC-PNG-20031110*
+         - (`PNG 1.0`_): initially standardized in 1996 as *RFC 2083* (:rfc:`2083`)
 
    :abbr:`SVG (Scalable Vector Graphics)`
      `SVG`_ is an |XML|-based vector image format for two-dimensional graphics

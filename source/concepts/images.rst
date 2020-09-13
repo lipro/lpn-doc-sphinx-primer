@@ -42,13 +42,13 @@ does not replicate scaling very well.
 PNG Images only
 ***************
 
-All still bitmap raster images or photos should be PNG files. This helps
+All still bitmap raster images or photos should be |PNG| files. This helps
 us keep our image compression tooling simple, and generally results in
 higher-quality screenshots.
 
-Whenever possible, you should generate your images as PNGs rather than
-converting to PNGs from another format. If you have to start in another
-format, use lossless formats whenever possible. These include BMP, GIF,
+Whenever possible, you should generate your images as |PNG|\ s rather than
+converting to |PNG|\ s from another format. If you have to start in another
+format, use lossless formats whenever possible. These include BMP, |GIF|,
 and TIFF. Avoid JPG/JPEG if possible, as this is a lossy format that does
 not replicate screenshots very well.
 

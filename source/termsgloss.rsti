@@ -38,6 +38,7 @@
 .. |PDF|                        replace:: :term:`PDF`
 .. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
 .. |PGF|                        replace:: :term:`PGF`
+.. |PNG|                        replace:: :term:`PNG`
 .. |SVG|                        replace:: :term:`SVG`
 .. |TikZ|                       replace:: :term:`TikZ`
 .. |TeX|                        replace:: :term:`TeX`
@@ -53,6 +54,7 @@
 .. |EMF/EMZ|    replace:: |EMF|/|EMZ|
 .. |EPS|        replace:: :abbr:`EPS (Encapsulated PostScript)`
 .. |EPS/PS|     replace:: |EPS|/|PS|
+.. |GIF|        replace:: :abbr:`GIF (Graphics Interchange Format)`
 .. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
 .. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
 .. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
