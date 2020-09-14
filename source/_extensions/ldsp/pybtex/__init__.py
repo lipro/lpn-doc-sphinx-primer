@@ -22,48 +22,29 @@
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-import os
-import sphinx
+# See: https://www.python.org/dev/peps/pep-0420/
+# Namespace packages are a mechanism for splitting a single Python package
+# across multiple directories on disk which serves only as a container for
+# subpackages. Namespace packages may have no physical representation, and
+# specifically are not like a regular package because they will have no
+# __init__.py file in Python 3.
+# Python currently still provides the pkgutil.extend_path to denote a package
+# as a namespace package. The recommended way of using it is to put:
+
+from pkgutil import extend_path
+__path__ = extend_path(__path__, __name__)
+
+# Every distribution needs to provide the same contents in its __init__.py,
+# so that extend_path is invoked independent of which portion of the package
+# gets imported first. As a consequence, the package's __init__.py cannot
+# practically define any names as it depends on the order of the package
+# fragments on sys.path which portion is imported first. As a special feature,
+# extend_path reads files named <packagename>.pkg which allow to declare
+# additional portions.
 
 # See: https://www.python.org/dev/peps/pep-0328/
 # Relative imports must always use from <> import ; import <> is always
 # absolute. Of course, absolute imports can use from <> import by omitting
 # the leading dots.
 
-from . import lexer
-from . import pybtex
-
-def setup(app):
-    """
-    @brief Main entry point for Li-Pro.Net Sphinx Primer contribution.
-
-    Introduce:
-
-    * additional roles, and directives
-    * additional lexer for Pygments (syntax highlighting)
-    * additional style formatter for Pybtex (BibTeX bibliography)
-    * HOT FIXES
-
-    @param app: The documentation application.
-    """
-
-    for a in lexer.DotLexer.aliases: app.add_lexer(a, lexer.DotLexer)
-    for a in lexer.DtsLexer.aliases: app.add_lexer(a, lexer.DtsLexer)
-
-    #
-    # avoid WARNING: Unknown interpreted text role "confval".
-    #
-    # --> https://jupyter-tutorial.readthedocs.io/de/stable/
-    #     --> Produkt erstellen
-    #         --> Dokumentieren
-    #             --> Intersphinx
-    #                 --> Rollen hinzufügen
-    #
-    # from sphinx.ext.autodoc import cut_lines
-    # app.connect('autodoc-process-docstring', cut_lines(4, what=['module']))
-    app.add_object_type(
-        "confval",
-        "confval",
-        objname="configuration value",
-        indextemplate="pair: %s; configuration value",
-    )
+from . import style

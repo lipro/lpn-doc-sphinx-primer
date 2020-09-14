@@ -22,48 +22,22 @@
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-import os
-import sphinx
+from pkgutil import extend_path
+__path__ = extend_path(__path__, __name__)
 
 # See: https://www.python.org/dev/peps/pep-0328/
 # Relative imports must always use from <> import ; import <> is always
 # absolute. Of course, absolute imports can use from <> import by omitting
 # the leading dots.
 
-from . import lexer
-from . import pybtex
+from .ldspalpha import Style as LDSPAlphaStyle
+from .ldspplain import Style as LDSPPlainStyle
+from .ldspunsrt import Style as LDSPUnsrtStyle
+from .ldspunsrtalpha import Style as LDSPUnsrtAlphaStyle
+from pybtex.plugin import register_plugin
 
-def setup(app):
-    """
-    @brief Main entry point for Li-Pro.Net Sphinx Primer contribution.
 
-    Introduce:
-
-    * additional roles, and directives
-    * additional lexer for Pygments (syntax highlighting)
-    * additional style formatter for Pybtex (BibTeX bibliography)
-    * HOT FIXES
-
-    @param app: The documentation application.
-    """
-
-    for a in lexer.DotLexer.aliases: app.add_lexer(a, lexer.DotLexer)
-    for a in lexer.DtsLexer.aliases: app.add_lexer(a, lexer.DtsLexer)
-
-    #
-    # avoid WARNING: Unknown interpreted text role "confval".
-    #
-    # --> https://jupyter-tutorial.readthedocs.io/de/stable/
-    #     --> Produkt erstellen
-    #         --> Dokumentieren
-    #             --> Intersphinx
-    #                 --> Rollen hinzufügen
-    #
-    # from sphinx.ext.autodoc import cut_lines
-    # app.connect('autodoc-process-docstring', cut_lines(4, what=['module']))
-    app.add_object_type(
-        "confval",
-        "confval",
-        objname="configuration value",
-        indextemplate="pair: %s; configuration value",
-    )
+register_plugin('pybtex.style.formatting', 'ldspalpha', LDSPAlphaStyle)
+register_plugin('pybtex.style.formatting', 'ldspplain', LDSPPlainStyle)
+register_plugin('pybtex.style.formatting', 'ldspunsrt', LDSPUnsrtStyle)
+register_plugin('pybtex.style.formatting', 'ldspunsrtalpha', LDSPUnsrtAlphaStyle)
