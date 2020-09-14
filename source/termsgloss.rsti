@@ -7,6 +7,7 @@
 .. |Docutils|                   replace:: :term:`Docutils`
 .. |LaTeX|                      replace:: :term:`LaTeX`
 .. |PyEnchant|                  replace:: :term:`PyEnchant`
+.. |Pybtex|                     replace:: :term:`Pybtex`
 .. |Pygments|                   replace:: :term:`Pygments`
 .. |reStructuredText|           replace:: :term:`reStructuredText`
 .. |Sphinx|                     replace:: :term:`Sphinx`
@@ -49,6 +50,7 @@
 
 .. |AI|         replace:: :abbr:`AI (Adobe Illustrator Artwork)`
 .. |ANSI|       replace:: :abbr:`ANSI (American National Standards Institute)`
+.. |BibTeXML|   replace:: :abbr:`BibTeXML (BibTeX as XML)`
 .. |BMP|        replace:: :abbr:`BMP (Bitmap Format)`
 .. |CLI|        replace:: :abbr:`CLI (Command Line Interface)`
 .. |DIB|        replace:: :abbr:`DIB (Device Independent Bitmap Format)`
@@ -78,6 +80,7 @@
 .. |WMF|        replace:: :abbr:`WMF (Windows Metafile Format)`
 .. |WMZ|        replace:: :abbr:`WMZ (Compressed Windows Metafile Format)`
 .. |WMF/WMZ|    replace:: |WMF|/|WMZ|
+.. |YAML|       replace:: :abbr:`YAML (YAML Ain't Markup Language)`
 
 .. Local variables:
    coding: utf-8

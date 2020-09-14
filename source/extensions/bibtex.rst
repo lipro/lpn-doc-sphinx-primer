@@ -14,7 +14,7 @@ Allowing |BibTeX| citations to be inserted into documentation via a
 :rst:`.. bibliography::` directive, and a :rst:`:cite:` role, which work
 similarly to |LaTeX|\ ’s :latex:`\begin{thebibliography} ...
 \end{thebibliography}` environment and :latex:`\cite{cite_key}`
-command. For formatting, the extension relies on Pybtex. It consists:
+command. For formatting, the extension relies on |Pybtex|. It consists:
 
 * :py:mod:`scbibtex:sphinxcontrib.bibtex`: |Sphinx| interface
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.roles`: Doctree roles

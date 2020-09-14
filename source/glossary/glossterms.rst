@@ -60,14 +60,24 @@ Commons
    PyEnchant
       `PyEnchant`_ is a |Python| binding for |Enchant|.
 
+   Pybtex
+      `Pybtex`_ is a |BibTeX|-compatible bibliography processor written in
+      |Python|. Pybtex aims to be 100% compatible with |BibTeX|. It accepts
+      the same command line options, fully supports |BibTeX|'s :file:`.bst`
+      styles and produces byte-identical output. Additionally, Pybtex is
+      Unicode aware and Pybtex supports `bibliography formats`_ other than
+      |BibTeX|: |BibTeXML| and |YAML|.
+
+      .. _`bibliography formats`: https://docs.pybtex.org/formats.html
+
    Pygments
       `Pygments`_ is a generic syntax highlighter written in |Python| which
-      supports a wide range of over 500 `languages`_ with related `lexers`_
+      supports a wide range of over `500 languages`_ with `related lexers`_
       and other text formats and is ready for new languages and formats
       added easily.
 
-      .. _`languages`: https://pygments.org/languages/
-      .. _`lexers`: https://pygments.org/docs/lexers/
+      .. _`500 languages`: https://pygments.org/languages/
+      .. _`related lexers`: https://pygments.org/docs/lexers/
 
 .. Journals
 .. ********
