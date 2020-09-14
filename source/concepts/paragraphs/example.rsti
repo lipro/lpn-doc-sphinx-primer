@@ -1,0 +1,20 @@
+Paragraphs are separated by blank lines. Line breaks in the source code do not create line breaks in the output.
+
+This means that you *could*, in theory,
+include a lot of arbitrary line breaks
+in your source document files.
+These line breaks would not appear in the output.
+Some people like to do this because they have been trained
+to not exceed 80 column lines, and they like
+to write :file:`.txt` files this way.
+Please do not do this.
+
+There is **no reason** to put a limit on line length in source files for documentation, since this is prose and not code.
+Therefore, please do not put arbitrary line breaks in your files.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

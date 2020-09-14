@@ -10,7 +10,7 @@ Spelling Checker
 :Documentation:  https://sphinxcontrib-spelling.readthedocs.io/
 :Git Repository: https://github.com/sphinx-contrib/spelling
 
-Spelling checker for Sphinx. It uses |PyEnchant| to produce a report showing
+Spelling checker for |Sphinx|. It uses |PyEnchant| to produce a report showing
 misspelled words.
 
 :Features:
@@ -24,7 +24,7 @@ misspelled words.
 
 It consists:
 
-* :doc:`scspelling:index`: spelling checker for Sphinx
+* :doc:`scspelling:index`: spelling checker for |Sphinx|
 
 Private Dictionaries
 ********************
@@ -48,6 +48,8 @@ For more details, see :doc:`scspelling:customize` section *Private Dictionaries*
    spelled correctly but that do not appear in the refered language
    dictionary. The files should contain one word per line. Refer to the
    |PyEnchant| tutorial for details.
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

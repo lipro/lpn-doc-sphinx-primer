@@ -1,5 +1,7 @@
 :topic: Cheat Sheet
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. index:: pair: Cheat Sheet; Li-Pro.Net Sphinx Primer
    :name: ldsp-cheatsheet
 
@@ -19,6 +21,8 @@ We have made a cheat sheet for helping you remember the syntax for
 |reStructuredText| & |Sphinx| programs. The basic
 :duuser:`reStructuredText Cheat Sheet <cheatsheet>`
 could also be very helpful.
+
+:raw-latex:`\cleardoublepage\phantomsection`
 
 .. _cheat-sheet-rst-sphinx-front:
 

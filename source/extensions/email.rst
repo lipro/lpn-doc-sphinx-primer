@@ -6,9 +6,11 @@
 Email Obfuscate
 ###############
 
-.. attention::
+.. pull-quote::
 
-   Only practicable and usable for HTML builder.
+   .. attention::
+
+      Only practicable and usable for |HTML| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinxcontrib-email/
 :Documentation:  https://github.com/sphinx-contrib/email/blob/master/README.rst
@@ -36,7 +38,7 @@ To obfuscate an email address use something like:
 
    :the example:
 
-      .. literalinclude:: email-example.rsti
+      .. literalinclude:: email/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -45,7 +47,9 @@ To obfuscate an email address use something like:
 
       :which gives:
 
-         .. include:: email-example.rsti
+         .. include:: email/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

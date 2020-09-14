@@ -3,6 +3,8 @@
 
 :topic: Glossary
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. index:: pair: Glossary; Li-Pro.Net Sphinx Primer
    :name: ldsp-glossary
 

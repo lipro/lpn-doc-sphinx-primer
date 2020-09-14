@@ -6,15 +6,17 @@
 Paneled Content
 ###############
 
-.. attention::
+.. pull-quote::
 
-   Only practicable and usable for HTML builder.
+   .. attention::
+
+      Only practicable and usable for |HTML| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinx-panels/
 :Documentation:  https://sphinx-panels.readthedocs.io/
 :Git Repository: https://github.com/executablebooks/sphinx-panels
 
-Create paneled content in Sphinx documentation when building HTML.
+Create paneled content in |Sphinx| documentation when building |HTML|.
 
 :Features:
 
@@ -56,16 +58,19 @@ Create paneled content in Sphinx documentation when building HTML.
 
 .. only:: not html or not sphinx_panels
 
-   .. admonition:: Extension not applicable
-      :class: danger
+   .. pull-quote::
 
-      This Sphinx extension is quite new and is under constant development.
-      The current behavior disturbs the integration, so the extension is
-      disabled for now (see :file:`conf.py`). Currently known bugs are:
+      .. admonition:: Extension not applicable
+         :class: danger
 
-      * annoying side effects with the :doc:`sphinx-tabs` extension by
-	the automatically integrated and delivered Bootstrap 4.0 CSS
-      * no proper and practical LaTeX builder support
+         This |Sphinx| extension is quite new and is under constant
+         development. The current behavior disturbs the integration,
+         so the extension is disabled for now (see :file:`conf.py`).
+         Currently known bugs are:
+
+         * annoying side effects with the :doc:`./sphinx-tabs` extension by
+           the automatically integrated and delivered Bootstrap 4.0 |CSS|
+         * no proper and practical |LaTeX| builder support
 
 .. only:: html and sphinx_panels
 
@@ -73,14 +78,16 @@ Create paneled content in Sphinx documentation when building HTML.
 
    :the example:
 
-      .. literalinclude:: sphinx-panels-example.rsti
+      .. literalinclude:: sphinx-panels/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: sphinx-panels-example.rsti
+      .. include:: sphinx-panels/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

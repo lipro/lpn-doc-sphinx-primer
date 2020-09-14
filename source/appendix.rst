@@ -3,6 +3,8 @@
 
 :topic: Appendix
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. index:: pair: Appendix; Li-Pro.Net Sphinx Primer
    :name: ldsp-appendix
 

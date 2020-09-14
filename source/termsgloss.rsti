@@ -7,6 +7,7 @@
 .. |Docutils|                   replace:: :term:`Docutils`
 .. |LaTeX|                      replace:: :term:`LaTeX`
 .. |PyEnchant|                  replace:: :term:`PyEnchant`
+.. |Pygments|                   replace:: :term:`Pygments`
 .. |reStructuredText|           replace:: :term:`reStructuredText`
 .. |Sphinx|                     replace:: :term:`Sphinx`
 
@@ -18,18 +19,65 @@
 
 .. Programming Languages:
 
+.. |C|                          replace:: :term:`C`
+.. |C++|                        replace:: :term:`C++`
+.. |C/C++|                      replace:: |C|/|C++|
+.. |ES|                         replace:: :term:`ES`
+.. |ECMAScript|                 replace:: :term:`ECMAScript`
+.. |JS|                         replace:: :term:`JS`
+.. |JavaScript|                 replace:: :term:`JavaScript`
+.. |Python|                     replace:: :term:`Python`
+
 .. Network:
 
 .. Technologies:
 
 .. |BibTeX|                     replace:: :term:`BibTeX`
+.. |CSS|                        replace:: :term:`CSS`
 .. |Enchant|                    replace:: :term:`Enchant`
+.. |HTML|                       replace:: :term:`HTML`
+.. |PDF|                        replace:: :term:`PDF`
 .. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
 .. |PGF|                        replace:: :term:`PGF`
+.. |PNG|                        replace:: :term:`PNG`
+.. |SVG|                        replace:: :term:`SVG`
 .. |TikZ|                       replace:: :term:`TikZ`
 .. |TeX|                        replace:: :term:`TeX`
+.. |XML|                        replace:: :term:`XML`
 
 .. Abbreviations:
+
+.. |AI|         replace:: :abbr:`AI (Adobe Illustrator Artwork)`
+.. |ANSI|       replace:: :abbr:`ANSI (American National Standards Institute)`
+.. |BMP|        replace:: :abbr:`BMP (Bitmap Format)`
+.. |CLI|        replace:: :abbr:`CLI (Command Line Interface)`
+.. |DIB|        replace:: :abbr:`DIB (Device Independent Bitmap Format)`
+.. |BMP/DIB|    replace:: |BMP|/|DIB|
+.. |DXF|        replace:: :abbr:`DXF (AutoCAD Drawing Exchange Format)`
+.. |EMF|        replace:: :abbr:`EMF (Enhanced Metafile Format)`
+.. |EMZ|        replace:: :abbr:`EMZ (Compressed Enhanced Metafile Format)`
+.. |EMF/EMZ|    replace:: |EMF|/|EMZ|
+.. |EPS|        replace:: :abbr:`EPS (Encapsulated PostScript)`
+.. |EPS/PS|     replace:: |EPS|/|PS|
+.. |GIF|        replace:: :abbr:`GIF (Graphics Interchange Format)`
+.. |GUI|        replace:: :abbr:`GUI (Graphics User Interface)`
+.. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
+.. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
+.. |JPEG|       replace:: :abbr:`JPEG (Joint Photographic Experts Group)`
+.. |JFIF|       replace:: :abbr:`JFIF (JPEG File Interchange Format)`
+.. |JPEG/JFIF|  replace:: |JPEG|/|JFIF|
+.. |MS-DOS|     replace:: :abbr:`MS-DOS (Microsoft Disk Operating System)`
+.. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
+.. |PS|         replace:: :abbr:`PS (PostScript)`
+.. |RFC|        replace:: :abbr:`RFC (Request for Comments)`
+.. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
+.. |SQL|        replace:: :abbr:`SQL (Structured Query Language)`
+.. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
+.. |UI|         replace:: :abbr:`UI (User Interface)`
+.. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
+.. |WMF|        replace:: :abbr:`WMF (Windows Metafile Format)`
+.. |WMZ|        replace:: :abbr:`WMZ (Compressed Windows Metafile Format)`
+.. |WMF/WMZ|    replace:: |WMF|/|WMZ|
 
 .. Local variables:
    coding: utf-8

@@ -1,0 +1,27 @@
+.. tabularcolumns:: p{0.132\linewidth}p{0.198\linewidth}p{0.330\linewidth}
+.. table:: Example table in simple style
+   :name: tables-simple-example
+   :widths: 20, 30, 50
+   :align: center
+   :width: 66%
+
+   ====== ====== ======
+       Inputs    Output
+   ------------- ------
+   A      B      A or B
+   ====== ====== ======
+   False
+   --------------------
+   True
+   --------------------
+   True   False  True
+   ------ ------ ------
+   False  True
+   ====== =============
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

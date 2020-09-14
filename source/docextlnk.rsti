@@ -5,24 +5,55 @@
 .. _`Lagerplatz von Li-Pro.Net`: http://store.li-pro.net/
 
 .. _`Eric Holscher`: https://www.ericholscher.com/
+.. _`better tool than Markdown for documentation`:
+   http://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/
 .. _`Sphinx Tutorial by Eric Holscher`: https://sphinx-tutorial.readthedocs.io/
 .. _`Bareos GmbH & Co. KG`: https://www.bareos.org/
-.. _`Documentation Style Guide by Bareos GmbH & Co. KG and others`: https://docs.bareos.org/
+.. _`Documentation Style Guide by Bareos GmbH & Co. KG and others`:
+   https://docs.bareos.org/
 
 .. _`Docutils`: https://docutils.sourceforge.io/
 .. _`reStructuredText`: https://docutils.sourceforge.io/rst.html
 .. _`Sphinx`: https://www.sphinx-doc.org/
 .. _`Sphinx Themes Demo Page`: https://sphinx-themes.org/
-.. _`Sphinx RTD Theme Demo Page`: https://sphinx-themes.org/html/sphinx_rtd_theme/sphinx_rtd_theme/index.html
+.. _`Sphinx RTD Theme Demo Page`:
+   https://sphinx-themes.org/html/sphinx_rtd_theme/sphinx_rtd_theme/index.html
 .. _`Read the Docs Sphinx Theme`: https://github.com/readthedocs/sphinx_rtd_theme
+
+.. _`C`: http://www.open-std.org/jtc1/sc22/wg14/www/projects
+.. _`C++`: https://isocpp.org/
+.. _`Ecma International`: https://www.ecma-international.org/
+.. _`ECMA-262`: https://www.ecma-international.org/publications/standards/Ecma-262.htm
+
+.. _`Python`: https://www.python.org/
 
 .. _`Enchant`: https://abiword.github.io/enchant/
 .. _`PyEnchant`: https://github.com/pyenchant/pyenchant
+.. _`Pygments`: https://pygments.org/
 
-.. _`LaTeX`: https://www.latex-project.org/
+.. _`CSS`: https://www.w3.org/Style/CSS/
+.. _`CSS 2.1`: https://www.w3.org/TR/2011/REC-CSS2-20110607/
+.. _`CSS 2.0`: https://www.w3.org/TR/1998/REC-CSS2-19980512/
+.. _`CSS 1.0`: https://www.w3.org/TR/REC-CSS1-961217
 .. _`BibTeX`: http://www.bibtex.org/
+.. _`HTML`: https://html.spec.whatwg.org/
+.. _`LaTeX`: https://www.latex-project.org/
+.. _`PDF`: https://www.pdfa.org/
 .. _`PGF/TikZ`: https://github.com/pgf-tikz/pgf
+.. _`PNG`: https://www.w3.org/Graphics/PNG/
+.. _`PNG 1.2`: https://www.w3.org/TR/2003/REC-PNG-20031110/
+.. _`PNG 1.0`: https://svgwg.org/
+.. _`SVG`: https://www.w3.org/Graphics/SVG/
+.. _`SVG 2.0`: https://svgwg.org/
+.. _`SVG 1.1 Second Edition`: https://www.w3.org/TR/2011/REC-SVG11-20110816/
+.. _`SVG 1.1`: https://www.w3.org/TR/2003/REC-SVG11-20030114/
+.. _`SVG 1.0`: https://www.w3.org/TR/2001/REC-SVG-20010904/
 .. _`TeX`: https://tug.org/
+.. _`XML`: https://www.w3.org/XML/Core/
+.. _`XML 1.1 Second Edition`: https://www.w3.org/TR/2006/REC-xml11-20060816/
+.. _`XML 1.1`: https://www.w3.org/TR/2004/REC-xml11-20040204/
+.. _`XML 1.0 Fifth Edition`: https://www.w3.org/TR/2008/REC-xml-20081126/
+.. _`XML 1.0`: https://www.w3.org/TR/1998/REC-xml-19980210
 
 .. Local variables:
    coding: utf-8

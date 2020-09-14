@@ -1,0 +1,13 @@
+:|lpn_16x16|: The logo as in front of this documentation.
+
+.. |lpn_16x16| image:: /_images/lpn.*
+               :alt: Li-Pro.Net.
+               :height: 16px
+               :width: 16px
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

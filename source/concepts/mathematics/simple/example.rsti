@@ -1,0 +1,11 @@
+.. math::
+
+   W^{3\beta}_{\delta_1 \rho_1 \sigma_2}
+   \approx U^{3\beta}_{\delta_1 \rho_1}
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

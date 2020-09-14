@@ -10,7 +10,7 @@
 
 .. only:: latex
 
-   .. note:: *List of Downloads* is not fully supported for LaTeX. All
+   .. note:: *List of Downloads* is not fully supported for |LaTeX|. All
              entries in the list are not linked and can not be provided
              together with the document.
 

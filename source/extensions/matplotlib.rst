@@ -6,11 +6,13 @@
 Mathematical Plots
 ##################
 
-.. attention::
+.. pull-quote::
 
-   Matplotlib does not support labels and auto-references. You can not refer
-   to a equation and you will never see an entry to :rst:`.. mathmpl::`
-   expressions in the list of equations.
+   .. attention::
+
+      Matplotlib does not support labels and auto-references. You
+      can not refer to a equation and you will never see an entry
+      to :rst:`.. mathmpl::` expressions in the list of equations.
 
 :PyPI Package:   https://pypi.org/project/matplotlib/
 :Project Home:   https://matplotlib.org/
@@ -21,11 +23,11 @@ Mathematical Plots
 :Git Repository: https://github.com/matplotlib/sampledoc
 
 Matplotlib is a comprehensive library for creating static, animated, and
-interactive visualizations in Python. It consists:
+interactive visualizations in |Python|. It consists:
 
-* ``matplotlib.sphinxext.mathmpl``: Matplotlib math-text in a Sphinx document
+* ``matplotlib.sphinxext.mathmpl``: Matplotlib math-text in a |Sphinx| document
 * :py:mod:`mplref:matplotlib.sphinxext.plot_directive`:
-  Matplotlib plot in a Sphinx document
+  Matplotlib plot in a |Sphinx| document
 
 .. todo:: activate "Mathematical Plots" extension.
 
@@ -37,7 +39,7 @@ how to writing mathematical expressions in matplotlib.
 
 .. code-block:: rst
 
-   With matplotlib in Sphinx you can include inline math
+   With matplotlib in |Sphinx| you can include inline math
    :mathmpl:`(\alpha^{ic} > \beta_{ic})` (as role
    :rst:`:mathmpl:`(\alpha^{ic} > \beta_{ic})``) or display math:
 
@@ -49,7 +51,7 @@ how to writing mathematical expressions in matplotlib.
 
    :the example:
 
-      .. literalinclude:: matplotlib-mathmpl-example.rsti
+      .. literalinclude:: matplotlib/mathmpl/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -58,7 +60,7 @@ how to writing mathematical expressions in matplotlib.
 
       :which gives:
 
-         .. include:: matplotlib-mathmpl-example.rsti
+         .. include:: matplotlib/mathmpl/example.rsti
 
 Plots
 *****
@@ -76,7 +78,7 @@ The source code for the plot may be included in one of three ways:
 
 :the example:
 
-   .. literalinclude:: matplotlib-inline-example.rsti
+   .. literalinclude:: matplotlib/inline/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -85,7 +87,7 @@ The source code for the plot may be included in one of three ways:
 
    :which gives:
 
-      .. include:: matplotlib-inline-example.rsti
+      .. include:: matplotlib/inline/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -93,7 +95,7 @@ The source code for the plot may be included in one of three ways:
 
 :the example:
 
-   .. literalinclude:: matplotlib-doctest-example.rsti
+   .. literalinclude:: matplotlib/doctest/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -102,13 +104,13 @@ The source code for the plot may be included in one of three ways:
 
    :which gives:
 
-      .. include:: matplotlib-doctest-example.rsti
+      .. include:: matplotlib/doctest/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
 .. rubric:: source file content
 
-When a path to a source file is given, the Sphinx configuration option
+When a path to a source file is given, the |Sphinx| configuration option
 ``plot_basedir`` will respect. It is the base directory, to which
 :rst:`.. plot::` file names are relative to. If **None or empty**, file names
 are **relative** to the directory where the file containing the directive is.
@@ -125,7 +127,7 @@ are **relative** to the directory where the file containing the directive is.
 
 :the example:
 
-   .. literalinclude:: matplotlib-srcfile-example.rsti
+   .. literalinclude:: matplotlib/srcfile/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -134,7 +136,7 @@ are **relative** to the directory where the file containing the directive is.
 
    :which gives:
 
-      .. include:: matplotlib-srcfile-example.rsti
+      .. include:: matplotlib/srcfile/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -147,7 +149,7 @@ See :doc:`mplref:api/toolkits/mplot3d/index`,
 
 :the example:
 
-   .. literalinclude:: matplotlib-mplot3d-example.rsti
+   .. literalinclude:: matplotlib/mplot3d/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -156,9 +158,11 @@ See :doc:`mplref:api/toolkits/mplot3d/index`,
 
    :which gives:
 
-      .. include:: matplotlib-mplot3d-example.rsti
+      .. include:: matplotlib/mplot3d/example.rsti
 
 .. :raw-latex:`\clearpage\phantomsection`
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

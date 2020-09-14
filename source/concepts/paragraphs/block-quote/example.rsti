@@ -1,0 +1,16 @@
+This line is not a block quote. Block quotes are indented,
+and otherwise unadorned.
+
+   This is a block quote.
+
+   --Adam Michael Wood - `Technical Content Writer`_
+
+.. _`Technical Content Writer`:
+   http://adammichaelwood.com/portfolio/
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

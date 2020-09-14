@@ -1,5 +1,7 @@
 :topic: Extensions
 
+:raw-latex:`\cleardoublepage\phantomsection`
+
 .. index:: pair: Extensions; Li-Pro.Net Sphinx Primer
    :name: ldsp-extensions
 
@@ -14,6 +16,8 @@ Extensions
 .. only:: latex or man or texinfo or text
 
    .. sectionauthor:: |slz_plain_text|
+
+:raw-latex:`\cleardoublepage\phantomsection`
 
 .. toctree::
    :caption: List of Extensions

@@ -6,7 +6,7 @@
 Sequence Diagram
 ################
 
-:doc:`bldiag:seqdiag/sphinxcontrib` is a Sphinx extension for embedding
+:doc:`bldiag:seqdiag/sphinxcontrib` is a |Sphinx| extension for embedding
 sequence diagrams. You can embed sequence diagrams with the :rst:`.. seqdiag::`
 directive.
 
@@ -14,7 +14,7 @@ directive.
 :Documentation:  http://blockdiag.com/en/seqdiag/sphinxcontrib.html
 :Git Repository: https://github.com/blockdiag/sphinxcontrib-seqdiag
 
-Sphinx extension for embedding sequence diagrams using
+|Sphinx| extension for embedding sequence diagrams using
 `seqdiag <https://github.com/blockdiag/seqdiag>`_.
 
 :Features:
@@ -35,7 +35,7 @@ Directive Body Diagram
 
    :the example:
 
-      .. literalinclude:: seqdiag-directive-body-example.rsti
+      .. literalinclude:: seqdiag/directive-body/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -44,14 +44,14 @@ Directive Body Diagram
 
       :which gives:
 
-         .. include:: seqdiag-directive-body-example.rsti
+         .. include:: seqdiag/directive-body/example.rsti
 
 Description Table
 *****************
 
 :the example:
 
-   .. literalinclude:: seqdiag-description-table-example.rsti
+   .. literalinclude:: seqdiag/description-table/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -60,7 +60,7 @@ Description Table
 
    :which gives:
 
-      .. include:: seqdiag-description-table-example.rsti
+      .. include:: seqdiag/description-table/example.rsti
 
 Include Diagram
 ***************
@@ -70,7 +70,7 @@ Include Diagram
    .. code-block:: rst
       :linenos:
 
-      .. seqdiag:: seq.diag
+      .. seqdiag:: seqdiag/example.diag
          :caption: Style attributes to diagram and edges (Sequence Diagram example)
          :align: center
          :height: 640
@@ -79,7 +79,7 @@ Include Diagram
 
    :which gives:
 
-      .. seqdiag:: seq.diag
+      .. seqdiag:: seqdiag/example.diag
          :caption: Style attributes to diagram and edges (Sequence Diagram example)
          :align: center
          :height: 640
@@ -90,10 +90,12 @@ Include Diagram
    :ref:`bldiag:seqdiag-sample-diagrams`
    web page and processed the following file content:
 
-   .. literalinclude:: seq.diag
-      :caption: Sequence Diagram example file (seq.diag)
+   .. literalinclude:: seqdiag/example.diag
+      :caption: Sequence Diagram example file (seqdiag/example.diag)
       :language: dot
       :linenos:
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

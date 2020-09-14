@@ -16,7 +16,7 @@ similarly to |LaTeX|\ ’s :latex:`\begin{thebibliography} ...
 \end{thebibliography}` environment and :latex:`\cite{cite_key}`
 command. It consists:
 
-* :py:mod:`scbibtex:sphinxcontrib.bibtex`: Sphinx interface
+* :py:mod:`scbibtex:sphinxcontrib.bibtex`: |Sphinx| interface
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.roles`: Doctree roles
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.nodes`: Doctree nodes
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.directives`: Doctree directives
@@ -79,7 +79,7 @@ Create a citation to a bibliographic entry.
 
       :which needs:
 
-         The example above processed the following BibTeX file content:
+         The example above processed the following |BibTeX| file content:
 
          .. literalinclude:: bibliography.bibtex
             :caption: BibTeX example file (bibliography.bibtex)
@@ -91,6 +91,8 @@ Create a citation to a bibliographic entry.
    .. spelling::
 
       Hasecke
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

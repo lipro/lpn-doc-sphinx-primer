@@ -1,0 +1,14 @@
+.. |gh| replace:: :strong:`GitHub`
+.. _`gh`: https://github.com/
+
+Here, :rst:`|gh|` will be replaced by |gh|.
+
+You can use the hyperlink reference by appending a :rst:`"_"` at the end
+of the vertical bars and :rst:`|gh|_` will be replaced by |gh|_.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

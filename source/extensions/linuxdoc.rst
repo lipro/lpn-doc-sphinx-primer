@@ -10,11 +10,14 @@ LinuxDoc
 :Git Repository: https://github.com/return42/linuxdoc
 
 The LinuxDoc library with extensions of the Linux-Kernel documentation,
-you can use these extensions in common Sphinx projects. It consists:
+you can use these extensions in common |Sphinx| projects. It consists:
 
-* :py:mod:`lxdoc:linuxdoc.rstFlatTable`: the :rst:`.. flat-table::` reST-directive
-* :py:mod:`lxdoc:linuxdoc.rstKernelDoc`: the :rst:`.. kernel-doc::` reST-directive
-* :py:mod:`lxdoc:linuxdoc.kernel_include`: the :rst:`.. kernel-include::` reST-directive
+* :py:mod:`lxdoc:linuxdoc.rstFlatTable`:
+  the :rst:`.. flat-table::` reST-directive
+* :py:mod:`lxdoc:linuxdoc.rstKernelDoc`:
+  the :rst:`.. kernel-doc::` reST-directive
+* :py:mod:`lxdoc:linuxdoc.kernel_include`:
+  the :rst:`.. kernel-include::` reST-directive
 * :py:mod:`lxdoc:linuxdoc.manKernelDoc`: the :program:`kernel-doc-man` builder
 * :py:mod:`lxdoc:linuxdoc.cdomain`: replacement for the sphinx C-domain
 * :py:mod:`lxdoc:linuxdoc.kfigure`: implements scalable image handling
@@ -80,12 +83,14 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
 
 :the example:
 
-   .. attention::
+   .. pull-quote::
 
-      **line 2:** The option :rst:`:class: longtable` will not interpreted
-      from directive :rst:`.. flat-table::` and has no effects.
+      .. attention::
 
-   .. literalinclude:: linuxdoc-flat-table-example.rsti
+         **line 2:** The option :rst:`:class: longtable` will not interpreted
+         from directive :rst:`.. flat-table::` and has no effects.
+
+   .. literalinclude:: linuxdoc/flat-table/example.rsti
       :end-before: .. Local variables:
       :emphasize-lines: 2
       :language: rst
@@ -95,7 +100,9 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
 
    :which gives:
 
-      .. include:: linuxdoc-flat-table-example.rsti
+      .. include:: linuxdoc/flat-table/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

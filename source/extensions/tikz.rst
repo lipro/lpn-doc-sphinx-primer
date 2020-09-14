@@ -6,31 +6,33 @@
 PGF/TikZ LaTeX Pictures
 #######################
 
-.. attention::
+.. pull-quote::
 
-   Only practicable and usable for HTML and |LaTeX| builder.
+   .. attention::
+
+      Only practicable and usable for |HTML| and |LaTeX| builder.
 
 :PyPI Package:   https://pypi.org/project/sphinxcontrib-tikz/
 :Documentation:  http://sphinxcontrib-tikz.readthedocs.io/
 :Git Repository: https://bitbucket.org/philexander/tikz
 
-Sphinx extension, which enables the use of the |PGF/TikZ| |LaTeX| package
+|Sphinx| extension, which enables the use of the |PGF/TikZ| |LaTeX| package
 to draw nice pictures.
 
 This extension relies on two software packages being installed
 on your computer:
 
 1. ``latex`` with the ``tikz`` and the ``amsmath`` packages
-2. A software package that is able to convert a PDF to an image.
+2. A software package that is able to convert a |PDF| to an image.
    Currently, four different ways of doing this conversion are
    supported, called conversion "suites". Below is a list for
    each suite what must be installed on your computer. Only one
    such suite need to be installed:
 
    * *pdf2svg* suite: ``pdf2svg`` (preferred, default)
-   * *Netpbm* suite: ``pdftoppm`` (part of the *Poppler* PDF library)
+   * *Netpbm* suite: ``pdftoppm`` (part of the *Poppler* |PDF| library)
      and ``pnmtopng`` (part of the *Netpbm* package)
-   * *ImageMagick* suite: ``pdftoppm`` (part of the *Poppler* PDF library)
+   * *ImageMagick* suite: ``pdftoppm`` (part of the *Poppler* |PDF| library)
      and ``convert`` (part of the *ImageMagick* package)
    * *GhostScript* suite: ``ghostscript``
 
@@ -48,7 +50,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
       :the example:
 
-         .. literalinclude:: tikz-inline-example.rsti
+         .. literalinclude:: tikz/inline/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
@@ -57,7 +59,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
          :which gives:
 
-            .. include:: tikz-inline-example.rsti
+            .. include:: tikz/inline/example.rsti
 
    .. rst:directive:: tikz
 
@@ -67,7 +69,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
       :the example:
 
-         .. literalinclude:: tikz-explicit-example.rsti
+         .. literalinclude:: tikz/explicit/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
@@ -76,13 +78,13 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
          :which gives:
 
-            .. include:: tikz-explicit-example.rsti
+            .. include:: tikz/explicit/example.rsti
 
       .. rubric:: from source file
 
       :the example:
 
-         .. literalinclude:: tikz-srcfile-example.rsti
+         .. literalinclude:: tikz/srcfile/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
@@ -91,20 +93,23 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
          :which gives:
 
-            .. include:: tikz-srcfile-example.rsti
+            .. include:: tikz/srcfile/example.rsti
 
       :which needs:
 
          The example above comes from the `Control system principles`_
          web page and processed the following TikZ file content:
 
-         .. literalinclude:: tikz/ctrloop.tikz
+         .. literalinclude:: tikz/srcfile/ctrloop.tikz
             :caption: TikZ example file (ctrloop.tikz)
+            :end-before: %Local variables:
             :language: latex
             :linenos:
 
 .. _`Control system principles`:
    http://www.texample.net/tikz/examples/control-system-principles
+
+:raw-latex:`\clearpage\phantomsection`
 
 .. Local variables:
    coding: utf-8

@@ -578,6 +578,9 @@ intersphinx_mapping = {
     # python -m sphinx.ext.intersphinx 'https://www.sphinx-doc.org/en/3.x/objects.inv'
     'sphinx': ('https://www.sphinx-doc.org/en/3.x/', None),
 
+    # python -m sphinx.ext.intersphinx 'https://rest-sphinx-memo.readthedocs.io/en/stable/objects.inv'
+    'spxmemo': ('https://rest-sphinx-memo.readthedocs.io/en/stable/', None),
+
     # python -m sphinx.ext.intersphinx 'https://sphinxcontrib-spelling.readthedocs.io/en/stable/objects.inv'
     'scspelling': ('https://sphinxcontrib-spelling.readthedocs.io/en/stable/', None),
 
@@ -615,8 +618,8 @@ intersphinx_mapping = {
     #
 
     # python -m sphinx.ext.intersphinx 'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'
-    'docutils': ('https://docutils.sourceforge.io/docs/',
-                 'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'),
+#   'docutils': ('https://docutils.sourceforge.io/docs/',
+#                'https://docutils.readthedocs.io/en/sphinx-docs/objects.inv'),
 }
 
 
@@ -639,6 +642,9 @@ intersphinx_mapping = {
 extlinks = {
     'wikide':       ('https://de.wikipedia.org/wiki/%s', 'German Wikipedia: '),
     'wikien':       ('https://en.wikipedia.org/wiki/%s', 'English Wikipedia: '),
+    'wikimedia':    ('https://upload.wikimedia.org/wikipedia/commons/%s', 'Wikimedia: '),
+    'superuser':    ('https://superuser.com/%s', 'Superuser: '),
+    'steamcoded':   ('https://steamcoded.org/lessons/%s', 'STEAMcoded.org: '),
     'dufaq':        ('https://docutils.sourceforge.io/FAQ.html#%s', ''),
     'dutodo':       ('https://docutils.sourceforge.io/docs/dev/todo.html#%s', ''),
     'duuser':       ('https://docutils.sourceforge.io/docs/user/rst/%s.html', ''),
@@ -978,7 +984,7 @@ html_theme_options = {
     'style_external_links': True,
     # Toc options
     'collapse_navigation': False,
-    'sticky_navigation': False,
+    'sticky_navigation': True,
     'navigation_depth': 4,
     'includehidden': True,
     'titles_only': False

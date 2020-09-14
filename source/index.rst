@@ -30,27 +30,35 @@
 
    Excerpts from the `Sphinx Tutorial by Eric Holscher`_ and
    `Documentation Style Guide by Bareos GmbH & Co. KG and others`_.
-   See [juh2019swdocwspx]_ for an introduction to Sphinx.
+   See [juh2019swdocwspx]_ for an introduction to |Sphinx|.
 
    This documentation is built using |Sphinx|, a static-site generator designed
    to create structured, semantic, and internally consistent documentation.
    Source documents are written in |reStructuredText|, a semantic, extensible
-   markup syntax similar to Markdown.
+   markup syntax similar to Markdown. |reStructuredText| is a
+   `better tool than Markdown for documentation`_.
 
    * :duuser:`reStructuredText Primer <quickstart>` --
-     Introduction to reStructuredText
+     introduction to reStructuredText
 
      * :duuser:`reStructuredText Quick Reference <quickref>`
      * :duuser:`reStructuredText 1-page cheat sheet <cheatsheet>`
 
    * :doc:`Sphinx Markup <sphinx:usage/restructuredtext/index>` --
-     Detailed guide to Sphinx's markup concepts and reStructuredText extensions
+     detailed guide to Sphinx's markup concepts and reStructuredText extensions
+
+   * :doc:`spxmemo:index` --
+     serve as quick reference for reStructuredText and Sphinx syntax
 
    .. note::
 
       |Sphinx| and |reStructuredText| can be very flexible. For the sake of
       consistency and maintainability, this how to guide is *highly opinionated*
       about how documentation source files are organized and marked up.
+
+:raw-latex:`\cleardoublepage\phantomsection`
+
+.. ...........................................................................
 
 .. toctree::
    :caption: Table of Contents

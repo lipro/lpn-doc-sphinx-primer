@@ -17,7 +17,7 @@
    Listings
    ########
 
-   .. note:: *Listings* is not supported for HTML.
+   .. note:: *Listings* is not supported for |HTML|.
 
 .. Local variables:
    coding: utf-8

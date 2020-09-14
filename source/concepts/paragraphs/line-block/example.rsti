@@ -1,0 +1,11 @@
+| Each new line begins with a
+| vertical bar ("``|``").
+|     Line breaks and initial indents
+|     are preserved.
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :
