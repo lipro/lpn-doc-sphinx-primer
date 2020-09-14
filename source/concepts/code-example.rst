@@ -88,7 +88,7 @@ Valid values for the highlighting :rst:`:language:` (first argument) are:
   * ``cfg`` or ``ini`` (Generic configuration file, mostly INI files)
   * ``sql`` (Generic |SQL| commands)
   * ``registry`` (Windows Registry files produced by :command:`regedit`)
-  * ``guess`` (let Pygments guess the lexer based on contents, only works with
+  * ``guess`` (let |Pygments| guess the lexer based on contents, only works with
     certain well-recognizable languages)
   * ... and any other `lexer alias that Pygments supports
     <https://pygments.org/docs/lexers/>`_.

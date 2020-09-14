@@ -60,6 +60,15 @@ Commons
    PyEnchant
       `PyEnchant`_ is a |Python| binding for |Enchant|.
 
+   Pygments
+      `Pygments`_ is a generic syntax highlighter written in |Python| which
+      supports a wide range of over 500 `languages`_ with related `lexers`_
+      and other text formats and is ready for new languages and formats
+      added easily.
+
+      .. _`languages`: https://pygments.org/languages/
+      .. _`lexers`: https://pygments.org/docs/lexers/
+
 .. Journals
 .. ********
 
