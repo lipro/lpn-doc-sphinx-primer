@@ -51,7 +51,7 @@ how to writing mathematical expressions in matplotlib.
 
    :the example:
 
-      .. literalinclude:: matplotlib-mathmpl-example.rsti
+      .. literalinclude:: matplotlib/mathmpl/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -60,7 +60,7 @@ how to writing mathematical expressions in matplotlib.
 
       :which gives:
 
-         .. include:: matplotlib-mathmpl-example.rsti
+         .. include:: matplotlib/mathmpl/example.rsti
 
 Plots
 *****
@@ -78,7 +78,7 @@ The source code for the plot may be included in one of three ways:
 
 :the example:
 
-   .. literalinclude:: matplotlib-inline-example.rsti
+   .. literalinclude:: matplotlib/inline/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -87,7 +87,7 @@ The source code for the plot may be included in one of three ways:
 
    :which gives:
 
-      .. include:: matplotlib-inline-example.rsti
+      .. include:: matplotlib/inline/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -95,7 +95,7 @@ The source code for the plot may be included in one of three ways:
 
 :the example:
 
-   .. literalinclude:: matplotlib-doctest-example.rsti
+   .. literalinclude:: matplotlib/doctest/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -104,7 +104,7 @@ The source code for the plot may be included in one of three ways:
 
    :which gives:
 
-      .. include:: matplotlib-doctest-example.rsti
+      .. include:: matplotlib/doctest/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -127,7 +127,7 @@ are **relative** to the directory where the file containing the directive is.
 
 :the example:
 
-   .. literalinclude:: matplotlib-srcfile-example.rsti
+   .. literalinclude:: matplotlib/srcfile/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -136,7 +136,7 @@ are **relative** to the directory where the file containing the directive is.
 
    :which gives:
 
-      .. include:: matplotlib-srcfile-example.rsti
+      .. include:: matplotlib/srcfile/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -149,7 +149,7 @@ See :doc:`mplref:api/toolkits/mplot3d/index`,
 
 :the example:
 
-   .. literalinclude:: matplotlib-mplot3d-example.rsti
+   .. literalinclude:: matplotlib/mplot3d/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -158,7 +158,7 @@ See :doc:`mplref:api/toolkits/mplot3d/index`,
 
    :which gives:
 
-      .. include:: matplotlib-mplot3d-example.rsti
+      .. include:: matplotlib/mplot3d/example.rsti
 
 .. :raw-latex:`\clearpage\phantomsection`
 

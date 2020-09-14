@@ -90,7 +90,7 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
          **line 2:** The option :rst:`:class: longtable` will not interpreted
          from directive :rst:`.. flat-table::` and has no effects.
 
-   .. literalinclude:: linuxdoc-flat-table-example.rsti
+   .. literalinclude:: linuxdoc/flat-table/example.rsti
       :end-before: .. Local variables:
       :emphasize-lines: 2
       :language: rst
@@ -100,7 +100,7 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
 
    :which gives:
 
-      .. include:: linuxdoc-flat-table-example.rsti
+      .. include:: linuxdoc/flat-table/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

@@ -35,7 +35,7 @@ Directive Body Diagram
 
    :the example:
 
-      .. literalinclude:: nwdiag-directive-body-example.rsti
+      .. literalinclude:: nwdiag/directive-body/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -44,14 +44,14 @@ Directive Body Diagram
 
       :which gives:
 
-         .. include:: nwdiag-directive-body-example.rsti
+         .. include:: nwdiag/directive-body/example.rsti
 
 Description Table
 *****************
 
 :the example:
 
-   .. literalinclude:: nwdiag-description-table-example.rsti
+   .. literalinclude:: nwdiag/description-table/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -60,7 +60,7 @@ Description Table
 
    :which gives:
 
-      .. include:: nwdiag-description-table-example.rsti
+      .. include:: nwdiag/description-table/example.rsti
 
 Include Diagram
 ***************
@@ -73,7 +73,7 @@ Network
    .. code-block:: rst
       :linenos:
 
-      .. nwdiag:: nw.diag
+      .. nwdiag:: nwdiag/example.diag
          :caption: Peer networks and grouping nodes (Network Diagram example)
          :align: center
          :scale: 75
@@ -83,7 +83,7 @@ Network
 
    :which gives:
 
-      .. nwdiag:: nw.diag
+      .. nwdiag:: nwdiag/example.diag
          :caption: Peer networks and grouping nodes (Network Diagram example)
          :align: center
          :scale: 75
@@ -95,8 +95,8 @@ Network
    :ref:`bldiag:nwdiag-sample-diagrams`
    web page and processed the following file content:
 
-   .. literalinclude:: nw.diag
-      :caption: Network Diagram example file (nw.diag)
+   .. literalinclude:: nwdiag/example.diag
+      :caption: Network Diagram example file (nwdiag/example.diag)
       :language: dot
       :linenos:
 
@@ -114,7 +114,7 @@ Rack
       .. code-block:: rst
          :linenos:
 
-         .. rackdiag:: rack.diag
+         .. rackdiag:: rackdiag/example.diag
             :caption: Multiple racks with multiple and blocked units (Rack Diagram example)
             :align: center
             :height: 480
@@ -123,7 +123,7 @@ Rack
 
       :which gives:
 
-         .. rackdiag:: rack.diag
+         .. rackdiag:: rackdiag/example.diag
             :caption: Multiple racks with multiple and blocked units (Rack Diagram example)
             :align: center
             :height: 480
@@ -134,8 +134,8 @@ Rack
       :ref:`bldiag:rackdiag-sample-diagrams`
       web page and processed the following file content:
 
-      .. literalinclude:: rack.diag
-         :caption: Rack Diagram example file (rack.diag)
+      .. literalinclude:: rackdiag/example.diag
+         :caption: Rack Diagram example file (rackdiag/example.diag)
          :language: bash
          :linenos:
 
@@ -155,7 +155,7 @@ Packet
       .. code-block:: rst
          :linenos:
 
-         .. packetdiag:: packet.diag
+         .. packetdiag:: packetdiag/example.diag
             :caption: Structure of TCP Header (Packet Diagram example)
             :align: center
             :width: 640
@@ -164,7 +164,7 @@ Packet
 
       :which gives:
 
-         .. packetdiag:: packet.diag
+         .. packetdiag:: packetdiag/example.diag
             :caption: Structure of TCP Header (Packet Diagram example)
             :align: center
             :width: 640
@@ -175,8 +175,8 @@ Packet
       :ref:`bldiag:packetdiag-sample-diagrams`
       web page and processed the following file content:
 
-      .. literalinclude:: packet.diag
-         :caption: Packet Diagram example file (packet.diag)
+      .. literalinclude:: packetdiag/example.diag
+         :caption: Packet Diagram example file (packetdiag/example.diag)
          :language: bash
          :linenos:
 

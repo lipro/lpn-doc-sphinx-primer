@@ -35,7 +35,7 @@ Directive Body Diagram
 
    :the example:
 
-      .. literalinclude:: actdiag-directive-body-example.rsti
+      .. literalinclude:: actdiag/directive-body/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -44,14 +44,14 @@ Directive Body Diagram
 
       :which gives:
 
-         .. include:: actdiag-directive-body-example.rsti
+         .. include:: actdiag/directive-body/example.rsti
 
 Description Table
 *****************
 
 :the example:
 
-   .. literalinclude:: actdiag-description-table-example.rsti
+   .. literalinclude:: actdiag/description-table/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -60,7 +60,7 @@ Description Table
 
    :which gives:
 
-      .. include:: actdiag-description-table-example.rsti
+      .. include:: actdiag/description-table/example.rsti
 
 Include Diagram
 ***************
@@ -70,7 +70,7 @@ Include Diagram
    .. code-block:: rst
       :linenos:
 
-      .. blockdiag:: act.diag
+      .. blockdiag:: actdiag/example.diag
          :caption: Style attributes to frames and nodes (Activity Diagram example)
          :align: center
          :scale: 75
@@ -80,7 +80,7 @@ Include Diagram
 
    :which gives:
 
-      .. actdiag:: act.diag
+      .. actdiag:: actdiag/example.diag
          :caption: Style attributes to frames and nodes (Activity Diagram example)
          :align: center
          :scale: 75
@@ -92,8 +92,8 @@ Include Diagram
    :ref:`bldiag:actdiag-sample-diagrams`
    web page and processed the following file content:
 
-   .. literalinclude:: act.diag
-      :caption: Activity Diagram example file (act.diag)
+   .. literalinclude:: actdiag/example.diag
+      :caption: Activity Diagram example file (actdiag/example.diag)
       :language: dot
       :linenos:
 

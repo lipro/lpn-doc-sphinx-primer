@@ -50,7 +50,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
       :the example:
 
-         .. literalinclude:: tikz-inline-example.rsti
+         .. literalinclude:: tikz/inline/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
@@ -59,7 +59,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
          :which gives:
 
-            .. include:: tikz-inline-example.rsti
+            .. include:: tikz/inline/example.rsti
 
    .. rst:directive:: tikz
 
@@ -69,7 +69,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
       :the example:
 
-         .. literalinclude:: tikz-explicit-example.rsti
+         .. literalinclude:: tikz/explicit/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
@@ -78,13 +78,13 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
          :which gives:
 
-            .. include:: tikz-explicit-example.rsti
+            .. include:: tikz/explicit/example.rsti
 
       .. rubric:: from source file
 
       :the example:
 
-         .. literalinclude:: tikz-srcfile-example.rsti
+         .. literalinclude:: tikz/srcfile/example.rsti
             :end-before: .. Local variables:
             :language: rst
             :linenos:
@@ -93,14 +93,14 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
 
          :which gives:
 
-            .. include:: tikz-srcfile-example.rsti
+            .. include:: tikz/srcfile/example.rsti
 
       :which needs:
 
          The example above comes from the `Control system principles`_
          web page and processed the following TikZ file content:
 
-         .. literalinclude:: tikz/ctrloop.tikz
+         .. literalinclude:: tikz/srcfile/ctrloop.tikz
             :caption: TikZ example file (ctrloop.tikz)
             :end-before: %Local variables:
             :language: latex

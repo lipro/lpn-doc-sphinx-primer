@@ -78,14 +78,14 @@ Create paneled content in |Sphinx| documentation when building |HTML|.
 
    :the example:
 
-      .. literalinclude:: sphinx-panels-example.rsti
+      .. literalinclude:: sphinx-panels/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
 
    :which gives:
 
-      .. include:: sphinx-panels-example.rsti
+      .. include:: sphinx-panels/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

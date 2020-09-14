@@ -38,7 +38,7 @@ To obfuscate an email address use something like:
 
    :the example:
 
-      .. literalinclude:: email-example.rsti
+      .. literalinclude:: email/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -47,7 +47,7 @@ To obfuscate an email address use something like:
 
       :which gives:
 
-         .. include:: email-example.rsti
+         .. include:: email/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

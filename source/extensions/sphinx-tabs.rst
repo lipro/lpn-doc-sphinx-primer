@@ -34,7 +34,7 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
 
    :the example:
 
-      .. literalinclude:: sphinx-tabs-example.rsti
+      .. literalinclude:: sphinx-tabs/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -43,13 +43,13 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
 
       :which gives:
 
-         .. include:: sphinx-tabs-example.rsti
+         .. include:: sphinx-tabs/example.rsti
 
    Nested tabs are also possible.
 
    :the example:
 
-      .. literalinclude:: sphinx-tabs-nested-example.rsti
+      .. literalinclude:: sphinx-tabs/nested/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -58,7 +58,7 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
 
       :which gives:
 
-         .. include:: sphinx-tabs-nested-example.rsti
+         .. include:: sphinx-tabs/nested/example.rsti
 
 .. rst:directive:: group-tab
 
@@ -66,7 +66,7 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
 
    :the example:
 
-      .. literalinclude:: sphinx-tabs-group-example.rsti
+      .. literalinclude:: sphinx-tabs/group/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -75,7 +75,7 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
 
       :which gives:
 
-         .. include:: sphinx-tabs-group-example.rsti
+         .. include:: sphinx-tabs/group/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

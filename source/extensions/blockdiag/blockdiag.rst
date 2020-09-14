@@ -35,7 +35,7 @@ Directive Body Diagram
 
    :the example:
 
-      .. literalinclude:: blockdiag-directive-body-example.rsti
+      .. literalinclude:: blockdiag/directive-body/example.rsti
          :end-before: .. Local variables:
          :language: rst
          :linenos:
@@ -44,14 +44,14 @@ Directive Body Diagram
 
       :which gives:
 
-         .. include:: blockdiag-directive-body-example.rsti
+         .. include:: blockdiag/directive-body/example.rsti
 
 Description Table
 *****************
 
 :the example:
 
-   .. literalinclude:: blockdiag-description-table-example.rsti
+   .. literalinclude:: blockdiag/description-table/example.rsti
       :end-before: .. Local variables:
       :language: rst
       :linenos:
@@ -60,7 +60,7 @@ Description Table
 
    :which gives:
 
-      .. include:: blockdiag-description-table-example.rsti
+      .. include:: blockdiag/description-table/example.rsti
 
 Include Diagram
 ***************
@@ -70,7 +70,7 @@ Include Diagram
    .. code-block:: rst
       :linenos:
 
-      .. blockdiag:: block.diag
+      .. blockdiag:: blockdiag/example.diag
          :caption: Style attributes to nodes and edges (Block Diagram example)
          :align: center
          :width: 640
@@ -79,7 +79,7 @@ Include Diagram
 
    :which gives:
 
-      .. blockdiag:: block.diag
+      .. blockdiag:: blockdiag/example.diag
          :caption: Style attributes to nodes and edges (Block Diagram example)
          :align: center
          :width: 640
@@ -90,8 +90,8 @@ Include Diagram
    :ref:`bldiag:blockdiag-sample-diagrams`
    web page and processed the following file content:
 
-   .. literalinclude:: block.diag
-      :caption: Block Diagram example file (block.diag)
+   .. literalinclude:: blockdiag/example.diag
+      :caption: Block Diagram example file (blockdiag/example.diag)
       :language: dot
       :linenos:
 
