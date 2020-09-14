@@ -49,6 +49,7 @@
 .. |AI|         replace:: :abbr:`AI (Adobe Illustrator Artwork)`
 .. |ANSI|       replace:: :abbr:`ANSI (American National Standards Institute)`
 .. |BMP|        replace:: :abbr:`BMP (Bitmap Format)`
+.. |CLI|        replace:: :abbr:`CLI (Command Line Interface)`
 .. |DIB|        replace:: :abbr:`DIB (Device Independent Bitmap Format)`
 .. |BMP/DIB|    replace:: |BMP|/|DIB|
 .. |DXF|        replace:: :abbr:`DXF (AutoCAD Drawing Exchange Format)`
@@ -58,16 +59,20 @@
 .. |EPS|        replace:: :abbr:`EPS (Encapsulated PostScript)`
 .. |EPS/PS|     replace:: |EPS|/|PS|
 .. |GIF|        replace:: :abbr:`GIF (Graphics Interchange Format)`
+.. |GUI|        replace:: :abbr:`GUI (Graphics User Interface)`
 .. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
 .. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
 .. |JPEG|       replace:: :abbr:`JPEG (Joint Photographic Experts Group)`
 .. |JFIF|       replace:: :abbr:`JFIF (JPEG File Interchange Format)`
 .. |JPEG/JFIF|  replace:: |JPEG|/|JFIF|
+.. |MS-DOS|     replace:: :abbr:`MS-DOS (Microsoft Disk Operating System)`
 .. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
 .. |PS|         replace:: :abbr:`PS (PostScript)`
 .. |RFC|        replace:: :abbr:`RFC (Request for Comments)`
 .. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
+.. |SQL|        replace:: :abbr:`SQL (Structured Query Language)`
 .. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
+.. |UI|         replace:: :abbr:`UI (User Interface)`
 .. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
 .. |WMF|        replace:: :abbr:`WMF (Windows Metafile Format)`
 .. |WMZ|        replace:: :abbr:`WMZ (Compressed Windows Metafile Format)`

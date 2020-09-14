@@ -1,4 +1,5 @@
-This is a :dfn:`CLI`, a Command Line Interface.
+This library has a :dfn:`CAPI`, a Common ISDN Application
+Programming Interface.
 
 .. Local variables:
    coding: utf-8

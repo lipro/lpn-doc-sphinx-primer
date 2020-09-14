@@ -6,12 +6,12 @@
 Semantic Descriptions and References
 ####################################
 
-|Sphinx| also has much more powerful semantic referencing capabilities, which
-knows all about software development concepts.
+|Sphinx| also has much more powerful semantic referencing capabilities,
+which knows all about software development concepts.
 
-Say you're creating a :abbr:`CLI (Command Line Interface)` application. You
-can define the name of the executable application :rst:dir:`sphinx:program`
-and its :rst:dir:`sphinx:option` and :rst:dir:`sphinx:envvar` quite easily.
+Say you're creating a |CLI| application. You can define the name of the
+executable application :rst:dir:`sphinx:program` and its
+:rst:dir:`sphinx:option` and :rst:dir:`sphinx:envvar` quite easily.
 
 .. rst:directive:: program
 .. rst:directive:: option

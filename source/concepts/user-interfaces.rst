@@ -50,13 +50,13 @@ Several roles are used when describing user interactions.
 
          In some situations you might not be clear about which option,
          :rst:role:`sphinx:menuselection` or :rst:role:`sphinx:guilabel`,
-         to use. GUIs in real life can sometimes be ambiguous. The general
+         to use. |GUI|\ s in real life can sometimes be ambiguous. The general
          rule is:
 
-         * Actual UI text will always receive :rst:role:`sphinx:guilabel`
+         * Actual |UI| text will always receive :rst:role:`sphinx:guilabel`
            role unless the text could reasonably be understood to be part
            of a menu.
-         * If the actual UI text could be understood as a menu,
+         * If the actual |UI| text could be understood as a menu,
            :rst:role:`sphinx:menuselection` should be used.
 
          These both render the same on output, so don't worry too much if
@@ -94,7 +94,7 @@ Several roles are used when describing user interactions.
 
       .. include:: user-interfaces/command/example.rsti
 
-To document a CLI application, you will find more information in
+To document a |CLI| application, you will find more information in
 :doc:`./semantic-referencing`.
 
 Other Semantic Markup
@@ -119,7 +119,7 @@ Other Semantic Markup
 
 .. rst:role:: dfn
 
-   Marks the defining instance of a term outside the glossary.
+   Marks the defining instance of a term outside the index or glossary.
    For more details, see :rst:role:`sphinx:dfn` role.
 
    :the example:
