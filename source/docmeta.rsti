@@ -54,8 +54,7 @@
 
 .. |slz| replace:: Stephan Linz
 .. |slz_plain_text| replace:: Stephan Linz <linz@li-pro.net>
-.. |slz_obfuscated| replace:: |slz_plain_text|
-.. .. |slz_obfuscated| replace:: :email:`Stephan Linz <linz@li-pro.net>`
+.. |slz_obfuscated| replace:: :email:`Stephan Linz <linz@li-pro.net>`
 
 
 .. Licenses:

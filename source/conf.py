@@ -128,6 +128,7 @@ needs_extensions = {
 #   'sphinx.ext.imgconverter':                  needs_sphinx,
 #   'sphinx.ext.inheritance_diagram':           needs_sphinx,
 #   'sphinx_rtd_theme':                         '0.5.0',
+#   'sphinxcontrib.email':                      '0.2.2',
 #   'sphinxcontrib.inkscapeconverter':          '1.1.0',
     'sphinxcontrib.rsvgconverter':              '1.1.0',
 #   'sphinxcontrib.cairosvgconverter':          '1.1.0',
@@ -158,6 +159,7 @@ extensions = [
 #   'sphinx.ext.imgconverter',
 #   'sphinx.ext.inheritance_diagram',
     'sphinx_rtd_theme',
+    'sphinxcontrib.email',
 #   'sphinxcontrib.inkscapeconverter',
     'sphinxcontrib.rsvgconverter',
 #   'sphinxcontrib.cairosvgconverter',
@@ -699,6 +701,12 @@ extlinks = {
 # -- Options for sphinx.ext.inheritance_diagram -- Include inheritance diagrams
 #
 # https://www.sphinx-doc.org/en/3.x/usage/extensions/inheritance.html
+#
+
+
+# -- Options for sphinxcontrib.email -- Email address obfuscator -------------
+#
+# https://github.com/sphinx-contrib/email/blob/v0.2.1/README.rst
 #
 
 
