@@ -4,4 +4,5 @@ docutils>=0.16
 sphinx>=3.2
 sphinx_rtd_theme>=0.5
 sphinxcontrib-email>=0.2
+sphinxcontrib-bibtex>=1.0
 sphinxcontrib-svg2pdfconverter>=1.1

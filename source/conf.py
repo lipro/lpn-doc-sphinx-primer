@@ -129,6 +129,7 @@ needs_extensions = {
 #   'sphinx.ext.inheritance_diagram':           needs_sphinx,
 #   'sphinx_rtd_theme':                         '0.5.0',
 #   'sphinxcontrib.email':                      '0.2.2',
+#   'sphinxcontrib.bibtex':                     '1.0.0',
 #   'sphinxcontrib.inkscapeconverter':          '1.1.0',
     'sphinxcontrib.rsvgconverter':              '1.1.0',
 #   'sphinxcontrib.cairosvgconverter':          '1.1.0',
@@ -160,6 +161,7 @@ extensions = [
 #   'sphinx.ext.inheritance_diagram',
     'sphinx_rtd_theme',
     'sphinxcontrib.email',
+    'sphinxcontrib.bibtex',
 #   'sphinxcontrib.inkscapeconverter',
     'sphinxcontrib.rsvgconverter',
 #   'sphinxcontrib.cairosvgconverter',
@@ -710,6 +712,12 @@ extlinks = {
 #
 
 
+# -- Options for sphinxcontrib.bibtex -- Insert BibTeX citations -------------
+#
+# https://sphinxcontrib-bibtex.readthedocs.io/en/stable/
+#
+
+
 # -- Options for sphinxcontrib-svg2pdfconverter -- Convert SVG images to PDF -
 #
 # https://pypi.org/project/sphinxcontrib-svg2pdfconverter/
@@ -1047,6 +1055,7 @@ html_static_path = ['{}/_static'.format(DOCSRC)]
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_css_files
 #
 html_css_files = [
+    'css/fix-cite.css',
     'css/fix-float.css',
     'css/strikethrough.css',
     'css/tweaks-sphinx_rtd_theme.css',

@@ -30,7 +30,7 @@
 
    Excerpts from the `Sphinx Tutorial by Eric Holscher`_ and
    `Documentation Style Guide by Bareos GmbH & Co. KG and others`_.
-   See [juh2019swdocwspx]_ for an introduction to |Sphinx|.
+   See :cite:`hasecke2019sphinx` for an introduction to |Sphinx|.
 
    This documentation is built using |Sphinx|, a static-site generator designed
    to create structured, semantic, and internally consistent documentation.

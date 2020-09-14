@@ -25,72 +25,64 @@ command. It consists:
 
 Create a citation to a bibliographic entry.
 
-.. todo:: activate "BibTeX Citations" extension.
+.. rst:role:: cite
 
-.. code-block:: rst
+   For more details, see :rst:role:`scbibtex:cite` role.
 
-   .. rst:role:: cite
+   :the example:
 
-      For more details, see :rst:role:`scbibtex:cite` role.
+      .. code-block:: rst
+         :linenos:
 
-      :the example:
+         See :cite:`hasecke2019sphinx` for an introduction to Sphinx.
 
-         .. code-block:: rst
-            :linenos:
+   :which gives:
 
-            See :cite:`juh2014swdocwspx` for an introduction to Sphinx.
+      See :cite:`hasecke2019sphinx` for an introduction to Sphinx.
 
-      :which gives:
+For this sample you will need a corresponding bibliography for all cited
+references.
 
-         See :cite:`juh2014swdocwspx` for an introduction to Sphinx.
+.. rst:directive:: bibliography
 
-   For this sample you will need a corresponding bibliography for all cited
-   references.
+   For more details, see :rst:dir:`scbibtex:bibliography` directive.
 
-   .. rst:directive:: bibliography
+   :the example:
 
-      For more details, see :rst:dir:`scbibtex:bibliography` directive.
-
-      :the example:
-
-         .. code-block:: rst
-            :linenos:
-
-            .. bibliography:: bibliography.bibtex
-               :style: kcsalpha
-               :encoding: utf
-               :all:
-
-      :which gives:
-
-         .. only:: not latex
-
-            .. rubric:: Documentation with Sphinx
-
-         .. only:: latex
-
-            All entries in the central document bibliography list, mostly on the
-            end of the document.
+      .. code-block:: rst
+         :linenos:
 
          .. bibliography:: bibliography.bibtex
-            :style: kcsalpha
+            :style: ldspalpha
             :encoding: utf
             :all:
 
-      :which needs:
+   :which gives:
 
-         The example above processed the following |BibTeX| file content:
+      .. only:: not latex
 
-         .. literalinclude:: bibliography.bibtex
-            :caption: BibTeX example file (bibliography.bibtex)
-            :language: bibtex
-            :emphasize-lines: 1
-            :start-at: @book
-            :linenos:
+         .. rubric:: Documentation with Sphinx
 
-   .. spelling::
+      .. only:: latex
 
-      Hasecke
+         All entries in the central document bibliography list, mostly on the
+         end of the document.
+
+      .. bibliography:: bibliography.bibtex
+         :style: ldspalpha
+         :encoding: utf
+         :all:
+
+   :which needs:
+
+      The example above processed the following |BibTeX| file content:
+
+      .. literalinclude:: bibliography.bibtex
+         :caption: BibTeX example file (bibliography.bibtex)
+         :language: bibtex
+         :emphasize-lines: 1
+         :start-at: @book
+         :linenos:
 
 :raw-latex:`\clearpage\phantomsection`
 

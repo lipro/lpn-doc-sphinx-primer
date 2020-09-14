@@ -191,6 +191,7 @@ Programming Languages
 
          - :wikien:`Python (programming language)`
          - :wikien:`CPython`
+         - :cite:`sweigart2020automate`
 
 .. Network
 .. *******
