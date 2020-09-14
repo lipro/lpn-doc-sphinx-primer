@@ -14,7 +14,7 @@ Allowing |BibTeX| citations to be inserted into documentation via a
 :rst:`.. bibliography::` directive, and a :rst:`:cite:` role, which work
 similarly to |LaTeX|\ ’s :latex:`\begin{thebibliography} ...
 \end{thebibliography}` environment and :latex:`\cite{cite_key}`
-command. It consists:
+command. For formatting, the extension relies on Pybtex. It consists:
 
 * :py:mod:`scbibtex:sphinxcontrib.bibtex`: |Sphinx| interface
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.roles`: Doctree roles
@@ -25,6 +25,12 @@ command. It consists:
 
 Create a citation to a bibliographic entry.
 
+.. pull-quote::
+
+   .. todo:: In the case of the |LaTeX|/|PDF| builder the usage of
+             :rst:`:ref:`bibliography`` leads to an **invalid and
+             unresolved reference**, renderd as: ":ref:`bibliography`".
+
 .. rst:role:: cite
 
    For more details, see :rst:role:`scbibtex:cite` role.
@@ -34,11 +40,11 @@ Create a citation to a bibliographic entry.
       .. code-block:: rst
          :linenos:
 
-         See :cite:`hasecke2019sphinx` for an introduction to Sphinx.
+         See :cite:`sweigart2020automate` for an practical guide in Python.
 
    :which gives:
 
-      See :cite:`hasecke2019sphinx` for an introduction to Sphinx.
+      See :cite:`sweigart2020automate` for an practical guide in Python.
 
 For this sample you will need a corresponding bibliography for all cited
 references.
@@ -52,33 +58,22 @@ references.
       .. code-block:: rst
          :linenos:
 
-         .. bibliography:: bibliography.bibtex
+         .. bibliography:: bibtex/example.bib
             :style: ldspalpha
-            :encoding: utf
+            :encoding: utf-8
             :all:
 
    :which gives:
 
-      .. only:: not latex
-
-         .. rubric:: Documentation with Sphinx
-
-      .. only:: latex
-
-         All entries in the central document bibliography list, mostly on the
-         end of the document.
-
-      .. bibliography:: bibliography.bibtex
-         :style: ldspalpha
-         :encoding: utf
-         :all:
+      All entries are placed in the central document bibliography list,
+      mostly on the end of the document, see in :ref:`bibliography`.
 
    :which needs:
 
       The example above processed the following |BibTeX| file content:
 
-      .. literalinclude:: bibliography.bibtex
-         :caption: BibTeX example file (bibliography.bibtex)
+      .. literalinclude:: bibtex/example.bib
+         :caption: BibTeX example file (bibtex/example.bib)
          :language: bibtex
          :emphasize-lines: 1
          :start-at: @book

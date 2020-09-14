@@ -1,27 +1,41 @@
-.. Don't change this file, instead edit content in the bibtex files.
+.. Don't change this file, instead edit content in the .bib files.
 
 :topic: Bibliography
 
-.. index:: pair: Bibliography; Li-Pro.Net Sphinx Primer
+.. index::
+   pair: Bibliography; Li-Pro.Net Sphinx Primer
    :name: ldsp-bibliography
-
-.. FIXME: the usage of :ref:`ldsp-bibliography` leads to
-   WARNING: undefined label: ldsp-bibliography (if the link has
-            no caption the label must precede a section header)
 
 .. only:: not latex
 
+   .. _bibliography:
+
    Bibliography
    ############
+
+.. ...........................................................................
 
 .. only:: not latex
 
    .. rubric:: |project|
 
-.. bibliography:: ldsp.bibtex
+.. bibliography:: bibliography.bib
    :style: ldspalpha
    :encoding: utf-8
    :all:
+
+.. ...........................................................................
+
+.. only:: not latex
+
+   .. rubric:: Extension ":doc:`./extensions/bibtex`"
+
+.. bibliography:: extensions/bibtex/example.bib
+   :style: ldspalpha
+   :encoding: utf-8
+   :all:
+
+.. ...........................................................................
 
 .. Local variables:
    coding: utf-8
