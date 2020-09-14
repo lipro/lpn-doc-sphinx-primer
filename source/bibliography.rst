@@ -9,16 +9,14 @@
    WARNING: undefined label: ldsp-bibliography (if the link has
             no caption the label must precede a section header)
 
-.. only:: html or man or texinfo or text
+.. only:: not latex
 
    Bibliography
    ############
 
-.. .. only:: html or man or texinfo or text
+.. .. only:: not latex
 
 ..    .. rubric:: |project|
-
-.. .. only:: html or latex or man or texinfo or text
 
 ..    .. bibliography:: ldsp.bibtex
       :style: ldspalpha

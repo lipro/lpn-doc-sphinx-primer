@@ -63,7 +63,7 @@ Create a citation to a bibliographic entry.
 
       :which gives:
 
-         .. only:: html or man or texinfo or text
+         .. only:: not latex
 
             .. rubric:: Documentation with Sphinx
 

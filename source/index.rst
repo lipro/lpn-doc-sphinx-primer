@@ -97,11 +97,11 @@
 
 .. ...........................................................................
 
-.. only:: man or texinfo or text
+.. only:: not latex and not html
 
    .. include:: doclegal.rsti
 
-.. only:: html or man or texinfo or text
+.. only:: not latex
 
    .. include:: docversions.rsti
 
