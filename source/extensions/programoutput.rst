@@ -15,8 +15,6 @@ you to keep your command examples up to date. It consists:
 
 * :py:mod:`scprgout:sphinxcontrib.programoutput`: insert command output
 
-.. todo:: activate "Program Output" extension.
-
 Complete output
 ***************
 
@@ -34,11 +32,9 @@ To include the output of a command into your document, use the
 
          .. program-output:: python --version
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
-
-         .. program-output:: python --version
+      .. program-output:: python --version
 
 The whole output of ``python --version``, including any messages on
 standard error, is inserted into the current document, formatted as
@@ -69,14 +65,12 @@ a single ellipsis ``...`` is inserted.
       .. program-output:: python --help
          :ellipsis: 2
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
+   The above omits all lines after the second one:
 
-      The above omits all lines after the second one:
-
-      .. program-output:: python --help
-         :ellipsis: 2
+   .. program-output:: python --help
+      :ellipsis: 2
 
 Negative numbers count from the last line backwards, thus replacing ``2``
 with ``-2`` in the above example would only omit the last two lines.
@@ -91,16 +85,18 @@ with ``-2`` in the above example would only omit the last two lines.
       :linenos:
 
       .. program-output:: python --help
+         :caption: First two and last second lines from :command:`python --help`
+         :name: program-output-python-help
          :ellipsis: 2,-2
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
+   The above omits all lines except the first two and the last two lines:
 
-      The above omits all lines except the first two and the last two lines:
-
-      .. program-output:: python --help
-         :ellipsis: 2,-2
+   .. program-output:: python --help
+      :caption: First two and last second lines from :command:`python --help`
+      :name: program-output-python-help
+      :ellipsis: 2,-2
 
 Mimicking shell input
 *********************
@@ -120,11 +116,9 @@ the document.
 
          .. command-output:: python --version
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
-
-         .. command-output:: python --version
+      .. command-output:: python --version
 
 The appearance of this output can be configured with
 :literal:`programoutput_prompt_template`.  When used in conjunction with
@@ -138,14 +132,16 @@ command.
       :linenos:
 
       .. command-output:: python --help
+         :caption: First two lines from :command:`python --help` with prompt
+         :name: command-output-python-help
          :ellipsis: 2
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. command-output:: python --help
-         :ellipsis: 2
+   .. command-output:: python --help
+      :caption: First two lines from :command:`python --help` with prompt
+      :name: command-output-python-help
+      :ellipsis: 2
 
 Command execution and shell expansion
 *************************************
@@ -161,11 +157,9 @@ like expansion of environment variables will not work.
 
       .. command-output:: echo "$USER"
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. command-output:: echo "$USER"
+   .. command-output:: echo "$USER"
 
 To enable these features, enable the :rst:`:shell:` option.  With this
 option, the command is literally passed to the system shell.
@@ -178,12 +172,10 @@ option, the command is literally passed to the system shell.
       .. command-output:: echo "$USER"
          :shell:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. command-output:: echo "$USER"
-         :shell:
+   .. command-output:: echo "$USER"
+      :shell:
 
 Other shell features like process expansion consequently work, too.
 
@@ -195,12 +187,10 @@ Other shell features like process expansion consequently work, too.
       .. command-output:: ls -l $(which grep)
          :shell:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. command-output:: ls -l $(which grep)
-         :shell:
+   .. command-output:: ls -l $(which grep)
+      :shell:
 
 .. pull-quote::
 
@@ -227,12 +217,10 @@ case, you can specify the expected return code of a command with the
       .. command-output:: python -c 'import sys, platform; print(sys.version); sys.exit(1)'
          :returncode: 1
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. command-output:: python -c 'import sys, platform; print(sys.version); sys.exit(1)'
-         :returncode: 1
+   .. command-output:: python -c 'import sys, platform; print(sys.version); sys.exit(1)'
+      :returncode: 1
 
 The above command returns the exit code 1 (as given to
 :py:func:`pydocs:sys.exit()`), but no warning will be emitted. On the

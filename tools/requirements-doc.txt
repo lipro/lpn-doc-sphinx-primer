@@ -9,7 +9,22 @@ sphinxcontrib-blockdiag>=2.0
 sphinxcontrib-seqdiag>=2.0
 sphinxcontrib-actdiag>=2.0
 sphinxcontrib-nwdiag>=2.0
+sphinxcontrib-programoutput>=0.16
 sphinxcontrib-svg2pdfconverter>=1.1
 
 # support PDF output from blockdiag
 reportlab>=3.5
+
+
+# ... enables you to use inline syntax highlighting in Sphinx.
+# w/o maintenance since 2013: sphinxcontrib-inlinesyntaxhighlight>=0.2
+#
+# Issue:  https://github.com/sphinx-doc/sphinx/issues/5157
+# WIP PR: https://github.com/sphinx-doc/sphinx/pull/6916
+# planned for Sphinx v4.0.0, due by April 01, 2021
+# (https://github.com/sphinx-doc/sphinx/milestone/74)
+# workaround for HTML: https://stackoverflow.com/questions/21591107
+
+
+# ... executes programs during the build and includes the screenshot.
+# w/o maintenance since 2012: sphinxcontrib-programscreenshot>=0.0.5

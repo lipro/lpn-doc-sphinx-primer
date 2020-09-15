@@ -139,6 +139,9 @@ needs_extensions = {
     'sphinxcontrib.nwdiag':                     '2.0.0',
     'sphinxcontrib.rackdiag':                   '2.0.0',
     'sphinxcontrib.packetdiag':                 '2.0.0',
+#   'sphinxcontrib.inlinesyntaxhighlight':      '0.2',
+#   'sphinxcontrib.programscreenshot':          '0.0.5',
+#   'sphinxcontrib.programoutput':              '0.16',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -177,6 +180,9 @@ extensions = [
     'sphinxcontrib.nwdiag',
     'sphinxcontrib.rackdiag',
     'sphinxcontrib.packetdiag',
+    # w/o maintenance since 2013: 'sphinxcontrib.inlinesyntaxhighlight',
+    # w/o maintenance since 2012: 'sphinxcontrib.programscreenshot',
+    'sphinxcontrib.programoutput',
     'ldsp',
 ]
 
@@ -830,6 +836,12 @@ packetdiag_latex_image_format = blockdiag_latex_image_format
 # nwdiag_debug = True
 # rackdiag_debug = True
 # packetdiag_debug = True
+
+
+# -- Options for sphinxcontrib.programoutput -- Insert output of commands ----
+#
+# https://sphinxcontrib-programoutput.readthedocs.io/en/stable/
+#
 
 
 # -- Options for LaTeX output ---------------------------------------------
