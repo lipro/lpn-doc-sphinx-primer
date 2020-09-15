@@ -354,7 +354,9 @@ pygments_style = 'sphinx'
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-suppress_warnings
 #
 #keep_warnings = False
-#suppress_warnings = []
+suppress_warnings = [
+    'epub.unknown_project_files',
+]
 
 # If true, figures, tables and code-blocks are automatically numbered if they
 # have a caption. At same time, the numref role is enabled. For now, it works
@@ -954,9 +956,36 @@ latex_show_pagerefs = True
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_additional_files
 #
-#latex_additional_files = [
-#    '{}/_extra/file.ext'.format(DOCSRC),
-#]
+latex_additional_files = [
+    # Open Type Font: DejaVu Serif Book + Bold / Italic
+    '{}/_static/fonts/DejaVu/DejaVuSerif.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSerif-Bold.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSerif-Italic.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSerif-BoldItalic.otf'.format(DOCSRC),
+    # Open Type Font: DejaVu Serif Condensed + Bold / Italic
+    '{}/_static/fonts/DejaVu/DejaVuSerifCondensed.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSerifCondensed-Bold.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSerifCondensed-Italic.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSerifCondensed-BoldItalic.otf'.format(DOCSRC),
+    # Open Type Font: DejaVu Sans Book + Bold / Oblique
+    '{}/_static/fonts/DejaVu/DejaVuSans.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSans-Bold.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSans-Oblique.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSans-BoldOblique.otf'.format(DOCSRC),
+    # Open Type Font: DejaVu Sans Condensed + Bold / Oblique
+    '{}/_static/fonts/DejaVu/DejaVuSansCondensed.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSansCondensed-Bold.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSansCondensed-Oblique.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSansCondensed-BoldOblique.otf'.format(DOCSRC),
+    # Open Type Font: DejaVu Sans ExtraLight
+    '{}/_static/fonts/DejaVu/DejaVuSans-ExtraLight.otf'.format(DOCSRC),
+    # Open Type Font: DejaVu Sans Mono + Bold / Oblique
+    '{}/_static/fonts/DejaVu/DejaVuSansMono.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSansMono-Bold.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSansMono-Oblique.otf'.format(DOCSRC),
+    '{}/_static/fonts/DejaVu/DejaVuSansMono-BoldOblique.otf'.format(DOCSRC),
+#   '{}/_extra/file.ext'.format(DOCSRC),
+]
 
 # Documents to append as an appendix to all manuals.
 #
@@ -1055,6 +1084,8 @@ html_static_path = ['{}/_static'.format(DOCSRC)]
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_css_files
 #
 html_css_files = [
+    'fonts/DejaVu.css',
+    'css/force-dejavu.css',
     'css/fix-cite.css',
     'css/fix-float.css',
     'css/strikethrough.css',
@@ -1066,7 +1097,10 @@ html_css_files = [
 # The filename must be relative to the html_static_path, or a full URI
 # with scheme. The attributes is used for attributes of <script> tag.
 # It defaults to an empty list.
-#html_css_files = []
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_js_files
+#
+#html_js_files = []
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -1280,6 +1314,95 @@ epub_basename = basename
 epub_exclude_files = [
     '.nojekyll',
     '_static/lpn.ico',
+    '_static/css/force-dejavu.css',
+    '_static/fonts/DejaVu.css',
+    '_static/fonts/DejaVu/LICENSE',
+    '_static/fonts/DejaVu/AUTHORS',
+    '_static/fonts/DejaVu/README.md',
+    '_static/fonts/DejaVu/DejaVuSans-Bold.otf',
+    '_static/fonts/DejaVu/DejaVuSans-Bold.svg',
+    '_static/fonts/DejaVu/DejaVuSans-Bold.ttf',
+    '_static/fonts/DejaVu/DejaVuSans-Bold.woff',
+    '_static/fonts/DejaVu/DejaVuSans-BoldOblique.otf',
+    '_static/fonts/DejaVu/DejaVuSans-BoldOblique.svg',
+    '_static/fonts/DejaVu/DejaVuSans-BoldOblique.ttf',
+    '_static/fonts/DejaVu/DejaVuSans-BoldOblique.woff',
+    '_static/fonts/DejaVu/DejaVuSans-ExtraLight.otf',
+    '_static/fonts/DejaVu/DejaVuSans-ExtraLight.svg',
+    '_static/fonts/DejaVu/DejaVuSans-ExtraLight.ttf',
+    '_static/fonts/DejaVu/DejaVuSans-ExtraLight.woff',
+    '_static/fonts/DejaVu/DejaVuSans-Oblique.otf',
+    '_static/fonts/DejaVu/DejaVuSans-Oblique.svg',
+    '_static/fonts/DejaVu/DejaVuSans-Oblique.ttf',
+    '_static/fonts/DejaVu/DejaVuSans-Oblique.woff',
+    '_static/fonts/DejaVu/DejaVuSans.otf',
+    '_static/fonts/DejaVu/DejaVuSans.svg',
+    '_static/fonts/DejaVu/DejaVuSans.ttf',
+    '_static/fonts/DejaVu/DejaVuSans.woff',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Bold.otf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Bold.svg',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Bold.ttf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Bold.woff',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-BoldOblique.otf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-BoldOblique.svg',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-BoldOblique.ttf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-BoldOblique.woff',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Oblique.otf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Oblique.svg',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Oblique.ttf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed-Oblique.woff',
+    '_static/fonts/DejaVu/DejaVuSansCondensed.otf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed.svg',
+    '_static/fonts/DejaVu/DejaVuSansCondensed.ttf',
+    '_static/fonts/DejaVu/DejaVuSansCondensed.woff',
+    '_static/fonts/DejaVu/DejaVuSansMono-Bold.otf',
+    '_static/fonts/DejaVu/DejaVuSansMono-Bold.svg',
+    '_static/fonts/DejaVu/DejaVuSansMono-Bold.ttf',
+    '_static/fonts/DejaVu/DejaVuSansMono-Bold.woff',
+    '_static/fonts/DejaVu/DejaVuSansMono-BoldOblique.otf',
+    '_static/fonts/DejaVu/DejaVuSansMono-BoldOblique.svg',
+    '_static/fonts/DejaVu/DejaVuSansMono-BoldOblique.ttf',
+    '_static/fonts/DejaVu/DejaVuSansMono-BoldOblique.woff',
+    '_static/fonts/DejaVu/DejaVuSansMono-Oblique.otf',
+    '_static/fonts/DejaVu/DejaVuSansMono-Oblique.svg',
+    '_static/fonts/DejaVu/DejaVuSansMono-Oblique.ttf',
+    '_static/fonts/DejaVu/DejaVuSansMono-Oblique.woff',
+    '_static/fonts/DejaVu/DejaVuSansMono.otf',
+    '_static/fonts/DejaVu/DejaVuSansMono.svg',
+    '_static/fonts/DejaVu/DejaVuSansMono.ttf',
+    '_static/fonts/DejaVu/DejaVuSansMono.woff',
+    '_static/fonts/DejaVu/DejaVuSerif-Bold.otf',
+    '_static/fonts/DejaVu/DejaVuSerif-Bold.svg',
+    '_static/fonts/DejaVu/DejaVuSerif-Bold.ttf',
+    '_static/fonts/DejaVu/DejaVuSerif-Bold.woff',
+    '_static/fonts/DejaVu/DejaVuSerif-BoldItalic.otf',
+    '_static/fonts/DejaVu/DejaVuSerif-BoldItalic.svg',
+    '_static/fonts/DejaVu/DejaVuSerif-BoldItalic.ttf',
+    '_static/fonts/DejaVu/DejaVuSerif-BoldItalic.woff',
+    '_static/fonts/DejaVu/DejaVuSerif-Italic.otf',
+    '_static/fonts/DejaVu/DejaVuSerif-Italic.svg',
+    '_static/fonts/DejaVu/DejaVuSerif-Italic.ttf',
+    '_static/fonts/DejaVu/DejaVuSerif-Italic.woff',
+    '_static/fonts/DejaVu/DejaVuSerif.otf',
+    '_static/fonts/DejaVu/DejaVuSerif.svg',
+    '_static/fonts/DejaVu/DejaVuSerif.ttf',
+    '_static/fonts/DejaVu/DejaVuSerif.woff',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Bold.otf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Bold.svg',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Bold.ttf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Bold.woff',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-BoldItalic.otf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-BoldItalic.svg',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-BoldItalic.ttf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-BoldItalic.woff',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Italic.otf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Italic.svg',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Italic.ttf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed-Italic.woff',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed.otf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed.svg',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed.ttf',
+    '_static/fonts/DejaVu/DejaVuSerifCondensed.woff',
     'search.html',
 ]
 

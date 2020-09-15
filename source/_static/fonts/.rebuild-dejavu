@@ -1,0 +1,398 @@
+#!/bin/bash
+
+FVX="2"
+FVY="37"
+FF="DejaVu"
+FS="Serif Serif-Bold Serif-BoldItalic Serif-Italic   \
+    SerifCondensed SerifCondensed-Bold               \
+    SerifCondensed-BoldItalic SerifCondensed-Italic  \
+    Sans Sans-Bold Sans-BoldOblique Sans-Oblique     \
+    SansCondensed SansCondensed-Bold Sans-ExtraLight \
+    SansCondensed-BoldOblique SansCondensed-Oblique  \
+    SansMono SansMono-Bold SansMono-BoldOblique      \
+    SansMono-Oblique"
+FC="AUTHORS LICENSE README.md"
+
+##############################################################################
+
+SF=$(readlink -f $0)
+SN=$(basename ${SF})
+SD=$(dirname ${SF})
+cd "${SD}" # force to exec in script folder
+
+##############################################################################
+
+trap "exit 1" TERM
+export TOP_PID=$$
+
+error() {
+  echo "**************************************************************" >&2
+  echo "ERROR: $@" >&2
+  kill -s TERM ${TOP_PID}
+  exit 1
+}
+
+usage() {
+  echo "Usage: ${SN} [-h] [-c] [-n]"
+  kill -s TERM ${TOP_PID}
+  exit 0
+}
+
+##############################################################################
+
+OPTCLEANBEFOR="n"
+OPTCLEANAFTER="y"
+
+while getopts ":chn" opt; do
+  case ${opt} in
+    h )
+      usage
+      ;;
+    c )
+      OPTCLEANBEFOR="y"
+      ;;
+    n )
+      OPTCLEANAFTER="n"
+      ;;
+    \? )
+      error "Invalid CLI option: ${OPTARG}"
+      ;;
+    : )
+      error "Invalid CLI option: ${OPTARG} requires an argument"
+      ;;
+  esac
+done
+
+##############################################################################
+
+# http://www.fontconfig.org/
+FSBIN=$(which fc-scan)
+[ -x "${FSBIN}" ] || error "missing FontConfig scanner, please install"
+
+# https://fontforge.org/
+FFBIN=$(which fontforge)
+[ -x "${FFBIN}" ] || error "missing FontForge, please install"
+
+# https://github.com/google/woff2
+WCBIN=$(which woff2_compress) && WIBIN=$(which woff2_info)
+[ -x "${WCBIN}" ] || error "missing WOFF2 tools, please install"
+[ -x "${WIBIN}" ] || error "missing WOFF2 tools, please install"
+
+# https://www.w3.org/Tools/eot-utils/
+ECBIN=$(which mkeot) && EIBIN=$(which eotinfo)
+[ -x "${ECBIN}" ] || error "missing EOT tools, please install"
+[ -x "${EIBIN}" ] || error "missing EOT tools, please install"
+
+# misc system utilities
+CURL=$(which curl) && TAR=$(which tar)
+[ -x "${CURL}" ] || error "missing curl, please install"
+[ -x "${TAR}" ] || error "missing tar, please install"
+
+##############################################################################
+
+# https://dejavu-fonts.github.io/
+# https://github.com/dejavu-fonts/dejavu-fonts
+download() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'fontface' arguments"
+  local fontface="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'major' arguments"
+  local major="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'minor' arguments"
+  local minor="${1}"
+  shift
+
+  local uri="https://github.com/${fontface,,}-fonts"
+  local rel="${fontface,,}-fonts/releases"
+  local ver="download/version_${major}_${minor}"
+  local arc="${fontface,,}-fonts-ttf-${major}.${minor}.tar.bz2"
+
+  [ "${OPTCLEANBEFOR}" == "y" ] && rm -rf "${arc}"
+  [ -r "${arc}" ] && echo "${arc}" && return
+  "${CURL}" -OL "${uri}/${rel}/${ver}/${arc}" && echo "${arc}" && return
+
+  error "${fn}: can not download '${arc}'"
+}
+
+extract() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'arc' arguments"
+  local arc="${1}"
+  shift
+
+  local dir=$(basename ${arc} .tar.bz2)
+  [ "${OPTCLEANBEFOR}" == "y" ] && rm -rf "${dir}"
+  [ -r "${dir}" -a -d "${dir}" ] && echo "${dir}" && return
+
+  [ -r "${arc}" -a -f "${arc}" ] && \
+  "${TAR}" xjf "${arc}" && echo "${dir}" && return
+
+  error "${fn}: can not extract '${arc}'"
+}
+
+ttf2ttf() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'src' arguments"
+  local src="${1}.ttf"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'dst' arguments"
+  local dst="${1}.ttf"
+  shift
+
+  [ -r "${src}" ] || error "${fn}: can not read '${src}'"
+  [ -w "$(dirname ${dst})" ] || error "$fn can not write to '${dst}'"
+
+  cp -f "${src}" "${dst}" || error "$fn can not copy to '${dst}'"
+  [ "x" == "x${VERBOSE}" ] && return
+
+  "${FSBIN}" "${dst}" || error "${fn}: can not read or corrupt '${dst}'"
+}
+
+ttf2eot() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'src' arguments"
+  local src="${1}.ttf"
+  local dst="${1}.eot"
+  shift
+
+  [ -r "${src}" ] || error "${fn}: can not read '${src}'"
+  [ -w "$(dirname ${dst})" ] || error "$fn can not write to '${dst}'"
+
+  "${ECBIN}" "${src}" > "${dst}" 2>/dev/null || error "$fn can not convert to '${dst}'"
+  [ "x" == "x${VERBOSE}" ] && return
+
+  "${EIBIN}" "${dst}" || error "${fn}: can not read or corrupt '${dst}'"
+}
+
+ttf2woff2() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'src' arguments"
+  local src="${1}.ttf"
+  local dst="${1}.woff2"
+  shift
+
+  [ -r "${src}" ] || error "${fn}: can not read '${src}'"
+  [ -w "$(dirname ${dst})" ] || error "$fn can not write to '${dst}'"
+
+  "${WCBIN}" "${src}" 2>/dev/null >&2 || error "$fn can not convert to '${dst}'"
+  [ "x" == "x${VERBOSE}" ] && return
+
+  "${WIBIN}" "${dst}" || error "${fn}: can not read or corrupt '${dst}'"
+}
+
+ttf2x() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'sfx' arguments"
+  local sfx="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'src' arguments"
+  local src="${1}.ttf"
+  local dst="${1}.${sfx}"
+  shift
+
+  local pes="_gen_${sfx}.pe"
+  :> "${pes}" && chmod +x "${pes}" || error "${fn}: can not create '${pes}'"
+  trap "rm -f ${pes}" EXIT
+
+  # based upon https://fontforge.org/docs/tutorial/scripting-tutorial.html
+  echo "#!${FFBIN}" >> "${pes}" && \
+  echo "Open(\$1)" >> "${pes}" && \
+  echo "Generate(\$1:r + \".${sfx}\")" >> "${pes}" || \
+  error "${fn}: can not bootstrap '${pes}'"
+
+  [ -r "${src}" ] || error "${fn}: can not read '${src}'"
+  [ -w "$(dirname ${dst})" ] || error "$fn can not write to '${dst}'"
+
+  "./${pes}" "${src}" 2>/dev/null || error "$fn can not convert to '${dst}'"
+  rm -f "${pes}"
+}
+
+copyright() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'fontdir' arguments"
+  local fontdir="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'fontface' arguments"
+  local fontface="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'copyfiles' arguments"
+  local copyfiles="${1}"
+  shift
+
+  mkdir -p "${fontface}" || error "$fn can not create folder '${fontface}'"
+
+  for copyfile in ${copyfiles}; do
+
+    local src="${fontdir}/${copyfile}"
+    local dst="${fontface}/${copyfile}"
+
+    [ -r "${src}" ] || error "${fn}: can not read '${src}'"
+    [ -w "$(dirname ${dst})" ] || error "$fn can not write to '${dst}'"
+
+    [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${dst}"
+    [ -w "${dst}" -a -s "${dst}" ] || \
+    cp -f "${src}" "${dst}" || error "$fn can not copy to '${dst}'"
+  done
+}
+
+convert() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'ttfdir' arguments"
+  local ttfdir="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'fontface' arguments"
+  local fontface="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'fontstyles' arguments"
+  local fontstyles="${1}"
+  shift
+
+  mkdir -p "${fontface}" || error "$fn can not create folder '${fontface}'"
+
+  for fontstyle in ${fontstyles}; do
+
+    local src="${ttfdir}/${fontface}${fontstyle}"
+    local dst=$(basename "${src}" .ttf)
+
+    [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${fontface}/${dst}.ttf"
+    [ -w "${fontface}/${dst}.ttf" -a -s "${fontface}/${dst}.ttf" ] || \
+    ttf2ttf "${src}" "${fontface}/${dst}" && echo "gen   TTF: '${dst}'"
+
+    [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${fontface}/${dst}.eot"
+    [ -w "${fontface}/${dst}.eot" -a -s "${fontface}/${dst}.eot" ] || \
+    ttf2eot "${fontface}/${dst}"          && echo "gen   EOT: '${dst}'"
+
+    [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${fontface}/${dst}.woff2"
+    [ -w "${fontface}/${dst}.woff2" -a -s "${fontface}/${dst}.woff2" ] || \
+    ttf2woff2 "${fontface}/${dst}"        && echo "gen WOFF2: '${dst}'"
+
+    [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${fontface}/${dst}.woff"
+    [ -w "${fontface}/${dst}.woff" -a -s "${fontface}/${dst}.woff" ] || \
+    ttf2x "woff" "${fontface}/${dst}"     && echo "gen  WOFF: '${dst}'"
+
+    [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${fontface}/${dst}.svg"
+    [ -w "${fontface}/${dst}.svg" -a -s "${fontface}/${dst}.svg" ] || \
+    ttf2x "svg" "${fontface}/${dst}"      && echo "gen   SVG: '${dst}'"
+
+    [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${fontface}/${dst}.otf"
+    [ -w "${fontface}/${dst}.otf" -a -s "${fontface}/${dst}.otf" ] || \
+    ttf2x "otf" "${fontface}/${dst}"      && echo "gen   OTF: '${dst}'"
+
+#   [ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${fontface}/${dst}.ufo"
+#   [ -w "${fontface}/${dst}.ufo" -a -s "${fontface}/${dst}.ufo" ] || \
+#   ttf2x "ufo" "${fontface}/${dst}"      && echo "gen   UFO: '${dst}'"
+
+  done
+}
+
+sty2fw() {
+  case "${1}" in
+    *Book*) echo "normal" ;;
+    *Bold*) echo "bold" ;;
+    ExtraLight) echo "lighter" ;;
+    *) echo "normal" ;;
+  esac
+}
+
+sty2fs() {
+  case "${1}" in
+    Book) echo "normal" ;;
+    *Oblique*|*Italic*) echo "italic,oblique" ;;
+    *) echo "normal" ;;
+  esac
+}
+
+providecss() {
+  local fn="${FUNCNAME[0]:-$0}()"
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'fontface' arguments"
+  local fontface="${1}"
+  shift
+
+  [ -n "${1}" ] || error "INTERNAL: ${fn}: empty 'fontstyles' arguments"
+  local fontstyles="${1}"
+  shift
+
+  for fontstyle in ${fontstyles}; do
+
+    local ttf="${fontface}/${fontface}${fontstyle}.ttf"
+    [ -r "${ttf}" ] || error "${fn}: can not read '${ttf}'"
+
+    local eot="${fontface}/${fontface}${fontstyle}.eot"
+    [ -r "${eot}" ] || error "${fn}: can not read '${eot}'"
+
+    local woff2="${fontface}/${fontface}${fontstyle}.woff2"
+    [ -r "${woff2}" ] || error "${fn}: can not read '${woff2}'"
+
+    local woff="${fontface}/${fontface}${fontstyle}.woff"
+    [ -r "${woff}" ] || error "${fn}: can not read '${woff}'"
+
+    local svg="${fontface}/${fontface}${fontstyle}.svg"
+    [ -r "${svg}" ] || error "${fn}: can not read '${svg}'"
+
+    local style=$("${FSBIN}" -f '%{style}' "${ttf}")
+    local style1=$("${FSBIN}" -f '%{style[1]}' "${ttf}")
+    local style0=$("${FSBIN}" -f '%{style[0]}' "${ttf}")
+    local psname=$("${FSBIN}" -f '%{postscriptname}' "${ttf}")
+    local fontversion=$("${FSBIN}" -f '%{fontversion}' "${ttf}")
+    local fontfamily1=$("${FSBIN}" -f '%{family[1]}' "${ttf}")
+    local fontfamily0=$("${FSBIN}" -f '%{family[0]}' "${ttf}")
+    local fontweight=$(sty2fw "${style}")
+    local fontstyle=$(sty2fs "${style}")
+
+    local fontfamily="${fontfamily1}${fontfamily1:+','}${fontfamily0}"
+    local fv=$(echo "${fontversion}" | perl -E 'printf "%.3f", <>/65536.0')
+
+    echo "@font-face {"
+    echo "  font-family: '${fontfamily}'"
+    echo "  src: local('${fontfamily0} ${style0}'); /* Client Side Font */"
+    echo "  src: url('${eot}?v=${fv}'); /* IE9 Compat Modes */"
+    echo "  src: url('${eot}?#iefix&v=${fv}') format('embedded-opentype'), /* IE6-IE8 */"
+    echo "       url('${woff2}?v=${fv}') format('woff2'), /* Super Modern Browsers */"
+    echo "       url('${woff}?v=${fv}') format('woff'), /* Pretty Modern Browsers */"
+    echo "       url('${ttf}?v=${fv}') format('truetype'), /* Safari, Android, iOS */"
+    echo "       url('${svg}?v=${fv}#${psname}') format('svg'); /* Legacy iOS */"
+    echo "  font-weight: ${fontweight};"
+    echo "  font-style: ${fontstyle};"
+    echo "}"
+
+  done
+}
+
+FA=$(download "${FF}" "${FVX}" "${FVY}") && echo "got      : '${FA}'"
+FD=$(extract "${FA}")                    && echo "ext      : '${FD}'"
+
+convert "${FD}/ttf" "${FF}" "${FS}"
+copyright "${FD}" "${FF}" "${FC}"        && echo "cpy      : '${FC}'"
+
+[ "${OPTCLEANBEFOR}" == "y" ] && rm -f "${FF}.css"
+[ -w "${FF}.css" -a -s "${FF}.css" ] || \
+providecss "${FF}" "${FS}" > "${FF}.css" && echo "gen      : '${FF}.css'"
+
+[ "${OPTCLEANAFTER}" == "y" ] && rm -rf "${FA}" "${FD}"
+exit 0
+
+##############################################################################
+#
+# references:
+#
+# https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+#

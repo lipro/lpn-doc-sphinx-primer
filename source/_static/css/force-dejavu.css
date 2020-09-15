@@ -1,0 +1,26 @@
+body, textarea,
+input[type="button"], input[type="reset"], input[type="submit"],
+input[type="text"], input[type="password"], input[type="email"],
+input[type="url"], input[type="date"], input[type="month"],
+input[type="time"], input[type="datetime"], input[type="datetime-local"],
+input[type="week"], input[type="number"], input[type="search"],
+input[type="tel"], input[type="color"],
+.btn, .rst-versions {
+  font-family: "DejaVu Sans Condensed", "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, legend,
+.rst-content .toctree-wrapper p.caption,
+.rst-content .sidebar .sidebar-title {
+    font-family: "DejaVu Sans Light", "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif
+}
+
+pre, .rst-content pre, .rst-content pre.literal-block,
+.rst-content .linenodiv pre, .rst-content div[class^='highlight'] pre,
+code, footer span.commit code, .rst-content code,
+kbd, .rst-content kbd,
+samp, .rst-content samp,
+tt, footer span.commit .rst-content tt,
+.rst-content tt, .rst-content footer span.commit tt {
+  font-family: "DejaVu Sans Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
+}
