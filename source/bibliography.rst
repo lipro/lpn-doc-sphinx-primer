@@ -37,6 +37,11 @@
 
 .. ...........................................................................
 
+.. spelling::
+
+   Hasecke
+   Sweigart
+
 .. Local variables:
    coding: utf-8
    mode: text

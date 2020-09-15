@@ -31,7 +31,9 @@ $: make help
 
 ```bash
 $: make doctest
+$: make coverage
 $: make linkcheck
+$: make spelling
 ```
 
 **Documentation builds:**

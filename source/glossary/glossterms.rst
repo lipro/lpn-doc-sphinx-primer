@@ -37,7 +37,7 @@ Commons
       formats including PDF, EPub, Texinfo and man.
       
       |reStructuredText| is extensible, and Sphinx exploits its extensible
-      nature through a number of extensions |--| for autogenerating
+      nature through a number of extensions |--| for auto generating
       documentation from source code, writing mathematical notation
       or highlighting source code, etc.
 
@@ -440,6 +440,13 @@ Technologies
    :sorted:
 
 :raw-latex:`\clearpage\phantomsection`
+
+.. spelling::
+
+   Ritchie
+   Dennis
+   Thompson
+   Ken
 
 .. Local variables:
    coding: utf-8

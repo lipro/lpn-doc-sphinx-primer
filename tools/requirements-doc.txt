@@ -10,6 +10,7 @@ sphinxcontrib-seqdiag>=2.0
 sphinxcontrib-actdiag>=2.0
 sphinxcontrib-nwdiag>=2.0
 sphinxcontrib-programoutput>=0.16
+sphinxcontrib-spelling>=5.4
 sphinxcontrib-svg2pdfconverter>=1.1
 
 # support PDF output from blockdiag

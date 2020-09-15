@@ -29,7 +29,7 @@ Create a citation to a bibliographic entry.
 
    .. todo:: In the case of the |LaTeX|/|PDF| builder the usage of
              :rst:`:ref:`bibliography`` leads to an **invalid and
-             unresolved reference**, renderd as: ":ref:`bibliography`".
+             unresolved reference**, rendered as: ":ref:`bibliography`".
 
 .. rst:role:: cite
 

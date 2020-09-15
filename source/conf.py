@@ -142,6 +142,7 @@ needs_extensions = {
 #   'sphinxcontrib.inlinesyntaxhighlight':      '0.2',
 #   'sphinxcontrib.programscreenshot':          '0.0.5',
 #   'sphinxcontrib.programoutput':              '0.16',
+#   'sphinxcontrib.spelling':                   '5.4.0',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -183,6 +184,7 @@ extensions = [
     # w/o maintenance since 2013: 'sphinxcontrib.inlinesyntaxhighlight',
     # w/o maintenance since 2012: 'sphinxcontrib.programscreenshot',
     'sphinxcontrib.programoutput',
+    'sphinxcontrib.spelling',
     'ldsp',
 ]
 
@@ -844,6 +846,116 @@ packetdiag_latex_image_format = blockdiag_latex_image_format
 #
 
 
+# -- Options for sphinxcontrib.spelling -- Spelling Checker ------------------
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/
+#
+
+# String specifying the language, as understood by PyEnchant and enchant.
+# Defaults to en_US for US English.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#input-options
+#
+# spelling_lang = 'en_US'
+
+# String specifying a file containing a list of words known to be spelled
+# correctly but that do not appear in the language dictionary selected
+# by spelling_lang. The file should contain one word per line. Refer to
+# the PyEnchant tutorial for details.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#input-options
+#
+# spelling_word_list_filename = 'spelling_wordlist.txt'
+spelling_word_list_filename = [
+    '{}/spelling_wordlist.txt'.format(templates_path[0]),
+    '/usr/share/dict/american-english-huge',
+    '/usr/share/dict/ngerman',
+]
+
+# A list of glob-style patterns that should be ignored when checking
+# spelling. They are matched against the source file names relative
+# to the source directory, using slashes as directory separators on
+# all platforms. See Sphinx's exclude_patterns option for more details
+# on glob-style patterns.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#input-options
+#
+spelling_exclude_patterns = [
+    'doc*.rsti',
+    'index*.rst',
+]
+
+# Boolean controlling whether suggestions for misspelled words are printed.
+# Defaults to False.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#output-options
+#
+spelling_show_suggestions = True
+
+# Boolean controlling whether the contents of the line containing each
+# misspelled word is printed, for more context about the location of
+# each word. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#output-options
+#
+# spelling_show_whole_line = True
+
+# Boolean controlling whether words that look like package names from PyPI
+# are treated as spelled properly. When True, the current list of package
+# names is downloaded at the start of the build and used to extend the list
+# of known words in the dictionary. Defaults to False.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_pypi_package_names = False
+
+# Boolean controlling whether words that follow the CamelCase conventions
+# used for page names in wikis should be treated as spelled properly.
+# Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_wiki_words = True
+
+# Boolean controlling treatment of words that appear in all capital letters,
+# or all capital letters followed by a lower case s. When True, acronyms are
+# assumed to be spelled properly. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_acronyms = True
+
+# Boolean controlling whether names built in to Python should be treated as
+# spelled properly. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_python_builtins = True
+
+# Boolean controlling whether words that are names of modules found on
+# sys.path are treated as spelled properly. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_importable_modules = True
+
+# Boolean controlling treatment of contributor names extracted from the git
+# history as spelled correctly, making it easier to refer to the names in
+# acknowledgments. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_contributor_names = True
+
+# List of filter classes to be added to the tokenizer that produces words
+# to be checked. The classes should be derived from enchant.tokenize.Filter.
+# Refer to the PyEnchant tutorial for examples.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_filters = []
+
+
 # -- Options for LaTeX output ---------------------------------------------
 #
 # http://www.sphinx-doc.org/en/3.x/latex.html
@@ -858,10 +970,10 @@ packetdiag_latex_image_format = blockdiag_latex_image_format
 #       http://stackoverflow.com/a/13661732
 # Left aligne captions: http://tex.stackexchange.com/questions/136688/how-to-align-caption-with-table
 
-f = open('{}/_templates/extrapackages.tex'.format(DOCSRC), 'r+')
+f = open('{}/extrapackages.tex'.format(templates_path[0]), 'r+')
 latex_custom_extrapackages = f.read()
 
-f = open('{}/_templates/passoptstopackages.tex.in'.format(DOCSRC), 'r+')
+f = open('{}/passoptstopackages.tex.in'.format(templates_path[0]), 'r+')
 latex_custom_passoptionstopackages = f.read().format (
     producer = r'Sphinx ' + build_sphinx,
     creator = r'Sphinx ' + build_sphinx,
@@ -870,17 +982,17 @@ latex_custom_passoptionstopackages = f.read().format (
     keywords = keywords,
 )
 
-f = open('{}/_templates/preamble.tex.in'.format(DOCSRC), 'r+')
+f = open('{}/preamble.tex.in'.format(templates_path[0]), 'r+')
 latex_custom_preamble = f.read().format (
     publisher = publisher,
     contactaddr = contactaddr,
     contactemail = contactemail,
 )
 
-f = open('{}/_templates/fontpkg.tex'.format(DOCSRC), 'r+')
+f = open('{}/fontpkg.tex'.format(templates_path[0]), 'r+')
 latex_custom_fontpkg = f.read()
 
-f = open('{}/_templates/utf8extra.tex'.format(DOCSRC), 'r+')
+f = open('{}/utf8extra.tex'.format(templates_path[0]), 'r+')
 latex_custom_utf8extra = f.read()
 
 # The LaTeX engine to build the docs. The setting can have the

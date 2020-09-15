@@ -37,9 +37,9 @@ from simple text files:
    4. Embeds to many documentations; |Sphinx|, Trac, Redmine,
       and some Wikis
    5. The output image format at generating |HTML| docs is either default
-      |PNG| or |SVG| as prefered for this document.
+      |PNG| or |SVG| as preferred for this document.
    6. The output image format at generating |PDF| docs (through |LaTeX|) is
-      either default |PNG| or |PDF| as prefered for this document. In case
+      either default |PNG| or |PDF| as preferred for this document. In case
       of |PDF|, the |ReportLab| library is required.
 
 :raw-latex:`\clearpage\phantomsection`

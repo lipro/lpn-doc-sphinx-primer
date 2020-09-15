@@ -13,6 +13,13 @@ addons:
     update: true
     packages:
     - librsvg2-bin
+    - enchant
+    - aspell
+    - aspell-en
+    - aspell-de
+    - wamerican-huge
+    - wngerman
+    - wgerman-medical
 
 branches:
   only:
@@ -44,7 +51,7 @@ jobs:
   - stage: build and test # This stage builds and lints in parallel
     name: Build
     script: pipenv run make html # build the docs
-  - script: pipenv run make doctest linkcheck # run checks
+  - script: pipenv run make doctest coverage linkcheck spelling # run checks
     name: Test
   - stage: deploy
     name: Deploy to GitHub Pages
