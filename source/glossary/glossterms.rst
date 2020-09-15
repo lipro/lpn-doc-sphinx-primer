@@ -102,11 +102,62 @@ Commons
 .. .. glossary::
    :sorted:
 
-.. Operating Systems
-.. *****************
+Operating Systems
+*****************
 
-.. .. glossary::
+.. glossary::
    :sorted:
+
+   :abbr:`POSIX (Portable Operating System Interface)`
+      `POSIX`_ is a family of standards specified by the |IEEE| Computer
+      Society for maintaining compatibility between operating systems.
+      :abbr:`POSIX (Portable Operating System Interface)` defines the
+      |API|, along with command line shells and utility interfaces, for
+      software compatibility with variants of |Unix| and other operating
+      systems. :abbr:`POSIX (Portable Operating System Interface)` has been
+      standardized by the *Austin Group* since 1997 (|SUS|), and later since
+      2001 by the |IEEE| Computer Society (**IEEE Std 1003.1**). Before 1997,
+      POSIX comprised several standards.
+
+      .. seealso::
+
+         - :wikien:`POSIX`
+         - POSIX.1-2017 (**POSIX.1-2008 with Technical Corrigenda 1 and 2**):
+           standard ratified in 2017 as **IEEE Std 1003.1-2017**
+         - POSIX.1-2008 (**Base Specifications, Issue 7**):
+           standard ratified in 2008 as *IEEE Std 1003.1-2008*
+         - POSIX.1-2001 (**Single UNIX Specification version 3**):
+           standard ratified in 2001 as *IEEE Std 1003.1-2001*
+         - POSIX.1c (**Threads Extensions**):
+           initially standardized in 1995 as *IEEE Std 1003.1c-1995*
+         - POSIX.1b (**Real-Time Extensions**):
+           initially standardized in 1993 as *IEEE Std 1003.1b-1993*
+         - POSIX.2 (**Shell and Utilities**):
+           initially standardized in 1992 as *IEEE Std 1003.2-1992*
+         - POSIX.1 (**Core Services**):
+           initially standardized in 1988 as *IEEE Std 1003.1-1988*
+
+   Unix
+      `Unix`_ (trademarked as UNIX\ |tm|) is a family of multitasking,
+      multiuser computer operating systems that derive from the original
+      |AT&T| Unix, development starting in the 1970s at the Bell Labs
+      research center by Ken Thompson, Dennis Ritchie, and others. The
+      origins of Unix date back to the mid-1960s when the |MIT|, Bell Labs
+      and |GE| were developing *Multics*, a time-sharing operating system
+      for a 36-bit mainframe computer. In the late 1980s, an open operating
+      system standardization effort now known as |POSIX| provided a common
+      baseline for all operating systems; |IEEE| based |POSIX| around the
+      common structure of the major competing variants of the Unix system,
+      publishing the first |POSIX| standard in 1988. In the early 1990s, a
+      separate but very similar effort was started by an industry consortium,
+      the |COSE| initiative, which eventually became the |SUS| administered by
+      *The Open Group*. Starting in 1998, *The Open Group* and |IEEE| started
+      the *Austin Group*, to provide a common definition of |POSIX| and the
+      |SUS|, which, by 2008, had become the *Open Group Base Specification*.
+
+      .. seealso::
+
+         - :wikien:`Unix`
 
 Programming Languages
 *********************

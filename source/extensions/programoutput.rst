@@ -146,7 +146,7 @@ command.
 Command execution and shell expansion
 *************************************
 
-Normally the command is splittet according to the POSIX shell syntax (see
+Normally the command is splittet according to the |POSIX| shell syntax (see
 :py:mod:`pydocs:shlex`), and executed directly.  Thus special shell features
 like expansion of environment variables will not work.
 
