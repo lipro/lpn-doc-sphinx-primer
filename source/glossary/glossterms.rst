@@ -79,6 +79,17 @@ Commons
       .. _`500 languages`: https://pygments.org/languages/
       .. _`related lexers`: https://pygments.org/docs/lexers/
 
+   ReportLab
+      `ReportLab`_ Toolkit is an Open Source |Python| library for generating
+      |PDF|\ s and graphics.
+
+      .. seealso::
+
+         - https://www.reportlab.com/opensource/
+         - https://www.reportlab.com/dev/docs/
+         - https://hg.reportlab.com/hg-public/
+         - https://pypi.org/project/reportlab/
+
 .. Journals
 .. ********
 
