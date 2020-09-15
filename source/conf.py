@@ -128,11 +128,17 @@ needs_extensions = {
 #   'sphinx.ext.imgconverter':                  needs_sphinx,
 #   'sphinx.ext.inheritance_diagram':           needs_sphinx,
 #   'sphinx_rtd_theme':                         '0.5.0',
-#   'sphinxcontrib.email':                      '0.2.2',
-#   'sphinxcontrib.bibtex':                     '1.0.0',
 #   'sphinxcontrib.inkscapeconverter':          '1.1.0',
     'sphinxcontrib.rsvgconverter':              '1.1.0',
 #   'sphinxcontrib.cairosvgconverter':          '1.1.0',
+#   'sphinxcontrib.email':                      '0.2.2',
+#   'sphinxcontrib.bibtex':                     '1.0.0',
+    'sphinxcontrib.blockdiag':                  '2.0.0',
+    'sphinxcontrib.seqdiag':                    '2.0.0',
+    'sphinxcontrib.actdiag':                    '2.0.0',
+    'sphinxcontrib.nwdiag':                     '2.0.0',
+    'sphinxcontrib.rackdiag':                   '2.0.0',
+    'sphinxcontrib.packetdiag':                 '2.0.0',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -160,11 +166,17 @@ extensions = [
 #   'sphinx.ext.imgconverter',
 #   'sphinx.ext.inheritance_diagram',
     'sphinx_rtd_theme',
-    'sphinxcontrib.email',
-    'sphinxcontrib.bibtex',
 #   'sphinxcontrib.inkscapeconverter',
     'sphinxcontrib.rsvgconverter',
 #   'sphinxcontrib.cairosvgconverter',
+    'sphinxcontrib.email',
+    'sphinxcontrib.bibtex',
+    'sphinxcontrib.blockdiag',
+    'sphinxcontrib.seqdiag',
+    'sphinxcontrib.actdiag',
+    'sphinxcontrib.nwdiag',
+    'sphinxcontrib.rackdiag',
+    'sphinxcontrib.packetdiag',
     'ldsp',
 ]
 
@@ -708,18 +720,6 @@ extlinks = {
 #
 
 
-# -- Options for sphinxcontrib.email -- Email address obfuscator -------------
-#
-# https://github.com/sphinx-contrib/email/blob/v0.2.1/README.rst
-#
-
-
-# -- Options for sphinxcontrib.bibtex -- Insert BibTeX citations -------------
-#
-# https://sphinxcontrib-bibtex.readthedocs.io/en/stable/
-#
-
-
 # -- Options for sphinxcontrib-svg2pdfconverter -- Convert SVG images to PDF -
 #
 # https://pypi.org/project/sphinxcontrib-svg2pdfconverter/
@@ -742,6 +742,94 @@ extlinks = {
 # Additional command-line arguments for the RSVG converter, as a list.
 # By default, this is the emtpy list:
 #rsvg_converter_args = []
+
+
+# -- Options for sphinxcontrib.email -- Email address obfuscator -------------
+#
+# https://github.com/sphinx-contrib/email/blob/v0.2.1/README.rst
+#
+
+
+# -- Options for sphinxcontrib.bibtex -- Insert BibTeX citations -------------
+#
+# https://sphinxcontrib-bibtex.readthedocs.io/en/stable/
+#
+
+
+# -- Options for sphinxcontrib.blockdiag -- Draw block diagrams --------------
+# -- Options for sphinxcontrib.seqdiag -- Draw sequence diagrams -------------
+# -- Options for sphinxcontrib.actdiag -- Draw activity diagrams -------------
+# -- Options for sphinxcontrib.nwdiag -- Draw network diagrams ---------------
+# -- Options for sphinxcontrib.rackdiag -- Draw rack diagrams ----------------
+# -- Options for sphinxcontrib.packetdiag -- Draw packet diagrams ------------
+#
+# http://blockdiag.com/en/blockdiag/sphinxcontrib.html#configure-sphinx
+# http://blockdiag.com/en/seqdiag/sphinxcontrib.html#configure-sphinx
+# http://blockdiag.com/en/actdiag/sphinxcontrib.html#configure-sphinx
+# http://blockdiag.com/en/nwdiag/sphinxcontrib.html#configure-sphinx
+#
+
+# Fontpath for blockdiag (truetype font), The default is None.
+blockdiag_fontpath = '{}/_static/fonts/DejaVu/DejaVuSansCondensed.ttf'.format(DOCSRC)
+seqdiag_fontpath = blockdiag_fontpath
+actdiag_fontpath = blockdiag_fontpath
+nwdiag_fontpath = blockdiag_fontpath
+rackdiag_fontpath = '{}/_static/fonts/DejaVu/DejaVuSansMono.ttf'.format(DOCSRC)
+packetdiag_fontpath = rackdiag_fontpath
+
+# Fontmap for blockdiag (maps fontfamily name to truetype font).
+# The default is None.
+# blockdiag_fontmap = '{}/_extensions/blockdiag.fontmap'.format(DOCSRC)
+# seqdiag_fontmap = '{}/_extensions/seqdiag.fontmap'.format(DOCSRC)
+# actdiag_fontmap = '{}/_extensions/actdiag.fontmap'.format(DOCSRC)
+# nwdiag_fontmap = '{}/_extensions/nwdiag.fontmap'.format(DOCSRC)
+# rackdiag_fontmap = '{}/_extensions/nwdiag.fontmap'.format(DOCSRC)
+# packetdiag_fontmap = '{}/_extensions/nwdiag.fontmap'.format(DOCSRC)
+
+# If this is True, blockdiag generates images with anti-alias filter.
+# The default is False.
+blockdiag_antialias = True
+seqdiag_antialias = blockdiag_antialias
+actdiag_antialias = blockdiag_antialias
+nwdiag_antialias = blockdiag_antialias
+rackdiag_antialias = blockdiag_antialias
+packetdiag_antialias = blockdiag_antialias
+
+# If this is True, blockdiag generates images with transparency background.
+# The default is False.
+blockdiag_transparency = True
+seqdiag_transparency = blockdiag_transparency
+actdiag_transparency = blockdiag_transparency
+nwdiag_transparency = blockdiag_transparency
+rackdiag_transparency = blockdiag_transparency
+packetdiag_transparency = blockdiag_transparency
+
+# You can specify image format on converting docs to HTML; accepts 'PNG'
+# or 'SVG'. The default is 'PNG'.
+blockdiag_html_image_format = 'SVG'
+seqdiag_html_image_format = blockdiag_html_image_format
+actdiag_html_image_format = blockdiag_html_image_format
+nwdiag_html_image_format = blockdiag_html_image_format
+rackdiag_html_image_format = blockdiag_html_image_format
+packetdiag_html_image_format = blockdiag_html_image_format
+
+# You can specify image format on converting docs to TeX; accepts 'PNG'
+# or 'PDF'. The default is 'PNG'.
+blockdiag_latex_image_format = 'PDF'
+seqdiag_latex_image_format = blockdiag_latex_image_format
+actdiag_latex_image_format = blockdiag_latex_image_format
+nwdiag_latex_image_format = blockdiag_latex_image_format
+rackdiag_latex_image_format = blockdiag_latex_image_format
+packetdiag_latex_image_format = blockdiag_latex_image_format
+
+# Enable debug mode of blockdiag.
+# The default is False.
+# blockdiag_debug = True
+# seqdiag_debug = True
+# actdiag_debug = True
+# nwdiag_debug = True
+# rackdiag_debug = True
+# packetdiag_debug = True
 
 
 # -- Options for LaTeX output ---------------------------------------------

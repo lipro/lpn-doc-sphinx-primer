@@ -6,23 +6,19 @@
 Block Diagram Family
 ####################
 
-.. todo:: activate "Block Diagram Family" extensions.
-
 `blockdiag <http://blockdiag.com/>`_ and its family generate diagram images
 from simple text files:
 
-.. code-block:: rst
+.. blockdiag::
 
-   .. blockdiag::
+   blockdiag {
+       blockdiag -> generates -> "block-diagrams";
+       blockdiag -> is -> "very easy!";
 
-      blockdiag {
-          blockdiag -> generates -> "block-diagrams";
-          blockdiag -> is -> "very easy!";
-
-          blockdiag [color = "greenyellow"];
-          "block-diagrams" [color = "pink"];
-          "very easy!" [color = "orange"];
-      }
+       blockdiag [color = "greenyellow"];
+       "block-diagrams" [color = "pink"];
+       "very easy!" [color = "orange"];
+   }
 
 :Features:
 
@@ -40,6 +36,11 @@ from simple text files:
    3. Layouts diagram elements automatically
    4. Embeds to many documentations; |Sphinx|, Trac, Redmine,
       and some Wikis
+   5. The output image format at generating |HTML| docs is either default
+      |PNG| or |SVG| as prefered for this document.
+   6. The output image format at generating |PDF| docs (through |LaTeX|) is
+      either default |PNG| or |PDF| as prefered for this document. In case
+      of |PDF|, the |ReportLab| library is required.
 
 :raw-latex:`\clearpage\phantomsection`
 
