@@ -143,6 +143,7 @@ needs_extensions = {
 #   'sphinxcontrib.programscreenshot':          '0.0.5',
 #   'sphinxcontrib.programoutput':              '0.16',
 #   'sphinxcontrib.spelling':                   '5.4.0',
+    'sphinxcontrib.tikz':                       '0.4.9',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -185,6 +186,7 @@ extensions = [
     # w/o maintenance since 2012: 'sphinxcontrib.programscreenshot',
     'sphinxcontrib.programoutput',
     'sphinxcontrib.spelling',
+    'sphinxcontrib.tikz',
     'ldsp',
 ]
 
@@ -956,7 +958,38 @@ spelling_show_suggestions = True
 # spelling_filters = []
 
 
-# -- Options for LaTeX output ---------------------------------------------
+# -- Options for sphinxcontrib.tikz -- Draw PGF/TikZ LaTeX pictures ----------
+#
+# https://sphinxcontrib-tikz.readthedocs.io/
+# https://sphinxcontrib-tikz.readthedocs.io/en/latest/#configuration
+#
+
+# Choose the image processing 'suite', either 'pdf2svg', 'Netpbm',
+# 'ImageMagick', or 'GhostScript' ('pdf2svg' by default):
+# tikz_proc_suite = 'pdf2svg'
+
+# Enable/disable transparent graphics. The default is True.
+tikz_transparent = True
+
+# Add some <string> to the sub process LaTeX preamble for the html build
+# target. The default is None.
+# tikz_latex_preamble = ''
+f = open('{}/tikz_preamble.tex.in'.format(templates_path[0]), 'r+')
+tikz_latex_preamble = f.read().format (
+    extloc = DOCSRC + '/_static/fonts/DejaVu/',
+)
+
+# Add some \usetikzlibrary{<string>} to the sub process LaTeX preamble
+# for the html build target. The default is None.
+tikz_tikzlibraries = r'''%%
+    arrows,%%
+    calendar,%%
+    folding,%%
+    matrix,%%
+    shapes'''
+
+
+# -- Options for LaTeX output ------------------------------------------------
 #
 # http://www.sphinx-doc.org/en/3.x/latex.html
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-latex-output

@@ -12,6 +12,7 @@ sphinxcontrib-nwdiag>=2.0
 sphinxcontrib-programoutput>=0.16
 sphinxcontrib-spelling>=5.4
 sphinxcontrib-svg2pdfconverter>=1.1
+sphinxcontrib-tikz>=0.4
 
 # support PDF output from blockdiag
 reportlab>=3.5

@@ -38,9 +38,9 @@ on your computer:
 
 See :ref:`sctikz:configuration` in the extension documentation for more details.
 
-.. todo:: activate "PGF/TikZ LaTeX Pictures" extension.
-
 .. only:: html or latex
+
+   :raw-latex:`\clearpage\phantomsection`
 
    .. rst:role:: tikz
 
@@ -55,11 +55,9 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
             :language: rst
             :linenos:
 
-      .. code-block:: rst
+      :which gives:
 
-         :which gives:
-
-            .. include:: tikz/inline/example.rsti
+         .. include:: tikz/inline/example.rsti
 
    .. rst:directive:: tikz
 
@@ -74,11 +72,11 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
             :language: rst
             :linenos:
 
-      .. code-block:: rst
+      :which gives:
 
-         :which gives:
+         .. include:: tikz/explicit/example.rsti
 
-            .. include:: tikz/explicit/example.rsti
+      :raw-latex:`\clearpage\phantomsection`
 
       .. rubric:: from source file
 
@@ -89,11 +87,9 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
             :language: rst
             :linenos:
 
-      .. code-block:: rst
+      :which gives:
 
-         :which gives:
-
-            .. include:: tikz/srcfile/example.rsti
+         .. include:: tikz/srcfile/example.rsti
 
       :which needs:
 
@@ -101,7 +97,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
          web page and processed the following TikZ file content:
 
          .. literalinclude:: tikz/srcfile/ctrloop.tikz
-            :caption: TikZ example file (ctrloop.tikz)
+            :caption: TikZ example file (tikz/srcfile/ctrloop.tikz)
             :end-before: %Local variables:
             :language: latex
             :linenos:

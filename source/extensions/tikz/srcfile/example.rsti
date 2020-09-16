@@ -1,6 +1,6 @@
 .. rst-class:: centered
 .. tikz:: Control system principles (PGF/TikZ example)
-   :include: ctrloop.tikz
+   :include: tikz/srcfile/ctrloop.tikz
    :libs: arrows,shapes
 
 .. Local variables:

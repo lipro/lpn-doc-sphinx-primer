@@ -13,6 +13,7 @@ addons:
     update: true
     packages:
     - librsvg2-bin
+    - pdf2svg
     - enchant
     - aspell
     - aspell-en
