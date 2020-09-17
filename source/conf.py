@@ -966,7 +966,8 @@ spelling_show_suggestions = True
 
 # Choose the image processing 'suite', either 'pdf2svg', 'Netpbm',
 # 'ImageMagick', or 'GhostScript' ('pdf2svg' by default):
-# tikz_proc_suite = 'pdf2svg'
+# tikz_proc_suite = 'ImageMagick'
+tikz_proc_suite = 'pdf2svg'
 
 # Enable/disable transparent graphics. The default is True.
 tikz_transparent = True
