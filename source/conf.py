@@ -976,7 +976,8 @@ tikz_transparent = True
 # tikz_latex_preamble = ''
 f = open('{}/tikz_preamble.tex.in'.format(templates_path[0]), 'r+')
 tikz_latex_preamble = f.read().format (
-    extloc = DOCSRC + '/_static/fonts/DejaVu/',
+    dejavu = DOCSRC + '/_static/fonts/DejaVu/',
+    wenquanyi = DOCSRC + '/_static/fonts/WenQuanYi/',
 )
 
 # Add some \usetikzlibrary{<string>} to the sub process LaTeX preamble
@@ -1330,6 +1331,7 @@ html_static_path = ['{}/_static'.format(DOCSRC)]
 #
 html_css_files = [
     'fonts/DejaVu.css',
+    'fonts/WenQuanYi.css',
     'css/force-dejavu.css',
     'css/fix-cite.css',
     'css/fix-float.css',
