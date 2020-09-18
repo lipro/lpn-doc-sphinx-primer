@@ -144,6 +144,7 @@ needs_extensions = {
 #   'sphinxcontrib.programoutput':              '0.16',
 #   'sphinxcontrib.spelling':                   '5.4.0',
     'sphinxcontrib.tikz':                       '0.4.9',
+#   'sphinx_tabs.tabs':                         '1.3.0',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -187,6 +188,7 @@ extensions = [
     'sphinxcontrib.programoutput',
     'sphinxcontrib.spelling',
     'sphinxcontrib.tikz',
+    'sphinx_tabs.tabs',
     'ldsp',
 ]
 
@@ -1004,6 +1006,12 @@ tikz_tikzlibraries = '''%%
     folding,%%
     matrix,%%
     shapes'''
+
+
+# -- Options for sphinx_tabs.tabs -- Create tabbed content -------------------
+#
+# https://sphinx-tabs.readthedocs.io/en/stable/
+#
 
 
 # -- Options for LaTeX output ------------------------------------------------
