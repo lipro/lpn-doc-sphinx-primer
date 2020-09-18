@@ -475,6 +475,7 @@ manpages_url = 'https://manpages.debian.org/{path}'
 #
 #linkcheck_ignore = ['http://localhost:\d+/']
 linkcheck_ignore = [
+    'https://docs.bareos.org/',    # Causes 503 Server Error: service unavailable
     'https://www.amazon.com/dp/',  # Causes 503 Server Error: service unavailable
     'http://localhost:\d+/',
 ]
