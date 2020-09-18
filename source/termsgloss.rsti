@@ -21,6 +21,7 @@
 
 .. |POSIX|                      replace:: :term:`POSIX`
 .. |Unix|                       replace:: :term:`Unix`
+.. |Linux|                      replace:: :term:`Linux`
 
 .. Programming Languages:
 
@@ -71,6 +72,8 @@
 .. |EPS|        replace:: :abbr:`EPS (Encapsulated PostScript)`
 .. |EPS/PS|     replace:: |EPS|/|PS|
 .. |GE|         replace:: :abbr:`GE (General Electric)`
+.. |FSF|        replace:: :abbr:`FSF (Free Software Foundation)`
+.. |GNU|        replace:: :abbr:`GNU (GNU's Not Unix!)`
 .. |GIF|        replace:: :abbr:`GIF (Graphics Interchange Format)`
 .. |GUI|        replace:: :abbr:`GUI (Graphics User Interface)`
 .. |IEEE|       replace:: :abbr:`IEEE (Institute of Electrical and Electronics Engineers)`
@@ -81,6 +84,7 @@
 .. |JPEG/JFIF|  replace:: |JPEG|/|JFIF|
 .. |MIT|        replace:: :abbr:`MIT (Massachusetts Institute of Technology)`
 .. |MS-DOS|     replace:: :abbr:`MS-DOS (Microsoft Disk Operating System)`
+.. |LMI|        replace:: :abbr:`LMI (Linux Mark Institute)`
 .. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
 .. |PS|         replace:: :abbr:`PS (PostScript)`
 .. |RFC|        replace:: :abbr:`RFC (Request for Comments)`

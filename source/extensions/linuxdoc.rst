@@ -9,7 +9,7 @@ LinuxDoc
 :Documentation:  https://return42.github.io/linuxdoc/
 :Git Repository: https://github.com/return42/linuxdoc
 
-The LinuxDoc library with extensions of the Linux-Kernel documentation,
+The LinuxDoc library with extensions of the |Linux|-Kernel documentation,
 you can use these extensions in common |Sphinx| projects. It consists:
 
 * :py:mod:`lxdoc:linuxdoc.rstFlatTable`:

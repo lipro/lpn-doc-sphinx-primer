@@ -159,6 +159,18 @@ Operating Systems
 
          - :wikien:`Unix`
 
+   Linux
+   |GNU|/Linux
+      `Linux`_ (trademarked as Linux\ |tm|, handled by the |LMI|) is a family
+      of open source |Unix|-like operating systems based on the Linux kernel,
+      an operating system kernel first released on September 17, 1991, by
+      Linus Torvalds. Linux is typically packaged in a Linux distribution.
+      Distributions include the Linux kernel and supporting system software
+      and libraries, many of which are provided by the |GNU| Project. Many
+      Linux distributions use the word *"Linux"* in their name, but the |FSF|
+      uses the name **GNU/Linux** to emphasize the importance of |GNU|
+      software, causing some controversy.
+
 Programming Languages
 *********************
 
