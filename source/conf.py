@@ -962,12 +962,17 @@ spelling_show_suggestions = True
 #
 # https://sphinxcontrib-tikz.readthedocs.io/
 # https://sphinxcontrib-tikz.readthedocs.io/en/latest/#configuration
+# https://bitbucket.org/philexander/tikz/src/master/README.rst
 #
 
-# Choose the image processing 'suite', either 'pdf2svg', 'Netpbm',
-# 'ImageMagick', or 'GhostScript' ('pdf2svg' by default):
+# Choose the image processing 'suite', either 'pdf2svg', 'GhostScript',
+# 'ImageMagick', or 'Netpbm' ('pdf2svg' by default):
 # tikz_proc_suite = 'ImageMagick'
-tikz_proc_suite = 'pdf2svg'
+if not on_rtd: tikz_proc_suite = 'pdf2svg'
+
+# Choose an image resolution (ignored if tikz_proc_suite is 'pdf2svg').
+# The default is 184.
+if on_rtd: tikz_resolution = 92
 
 # Enable/disable transparent graphics. The default is True.
 tikz_transparent = True
