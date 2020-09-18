@@ -20,7 +20,7 @@ sphinx-panels>=0.5
 reportlab>=3.5
 
 # The LinuxDoc library contains sphinx-doc extensions.
-git+https://github.com/return42/linuxdoc.git/@master#sha1=70673dc
+git+https://github.com/return42/linuxdoc.git/@master#sha1=70673dc&egg=linuxdoc
 
 
 # ... enables you to use inline syntax highlighting in Sphinx.
