@@ -22,8 +22,6 @@ you can use these extensions in common |Sphinx| projects. It consists:
 * :py:mod:`lxdoc:linuxdoc.cdomain`: replacement for the sphinx C-domain
 * :py:mod:`lxdoc:linuxdoc.kfigure`: implements scalable image handling
 
-.. todo:: activate "LinuxDoc" extension.
-
 Flat list table
 ***************
 
@@ -96,11 +94,9 @@ and *targets* (e.g. a ref to :ref:`row 2 of table's body <row body 2>`).
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. include:: linuxdoc/flat-table/example.rsti
+   .. include:: linuxdoc/flat-table/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

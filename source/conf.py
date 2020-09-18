@@ -146,6 +146,7 @@ needs_extensions = {
     'sphinxcontrib.tikz':                       '0.4.9',
 #   'sphinx_tabs.tabs':                         '1.3.0',
 #   'sphinx_panels':                            '0.5.0',
+#   'linuxdoc.rstFlatTable':                    '20200812',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -190,7 +191,8 @@ extensions = [
     'sphinxcontrib.spelling',
     'sphinxcontrib.tikz',
     'sphinx_tabs.tabs',
-#   'sphinx_panels',
+    # not yet, see below "Specific configuration": 'sphinx_panels',
+    'linuxdoc.rstFlatTable',
     'ldsp',
 ]
 
@@ -1025,6 +1027,13 @@ tikz_tikzlibraries = '''%%
 
 # Change the delimiter regexes used to detect panels, header, footer.
 # Default is: panels_delimiters = (r"^\-{3,}$", r"^\^{3,}$", r"^\+{3,}$")
+
+
+# -- Options for linuxdoc.rstFlatTable -- Create flat table content ----------
+#
+# https://return42.github.io/linuxdoc/
+# https://github.com/return42/linuxdoc
+#
 
 
 # -- Options for LaTeX output ------------------------------------------------

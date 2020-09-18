@@ -19,6 +19,9 @@ sphinx-panels>=0.5
 # support PDF output from blockdiag
 reportlab>=3.5
 
+# The LinuxDoc library contains sphinx-doc extensions.
+git+https://github.com/return42/linuxdoc.git/@master#sha1=70673dc
+
 
 # ... enables you to use inline syntax highlighting in Sphinx.
 # w/o maintenance since 2013: sphinxcontrib-inlinesyntaxhighlight>=0.2
