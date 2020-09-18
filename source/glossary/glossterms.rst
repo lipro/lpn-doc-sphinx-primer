@@ -171,6 +171,10 @@ Operating Systems
       uses the name **GNU/Linux** to emphasize the importance of |GNU|
       software, causing some controversy.
 
+      .. seealso::
+
+         - :wikien:`Linux`
+
 Programming Languages
 *********************
 
