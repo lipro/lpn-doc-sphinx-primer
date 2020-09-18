@@ -26,6 +26,7 @@ Appendix
 
    appendix/license
    appendix/credits
+   appendix/gimmick
 
 .. Local variables:
    coding: utf-8
