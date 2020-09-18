@@ -1,4 +1,14 @@
 #!/bin/bash
+#
+# https://en.wikipedia.org/wiki/DejaVu_fonts
+# https://dejavu-fonts.github.io/Download.html
+#
+# [ July 30, 2016 ] The current version is 2.37
+# License: DejaVu Fonts License
+#          Bitstream Vera Fonts Copyright
+#          Arev Fonts Copyright
+#          Public Domain
+#
 
 FVX="2"
 FVY="37"
@@ -376,6 +386,8 @@ providecss() {
 
   done
 }
+
+##############################################################################
 
 FA=$(download "${FF}" "${FVX}" "${FVY}") && echo "got      : '${FA}'"
 FD=$(extract "${FA}")                    && echo "ext      : '${FD}'"

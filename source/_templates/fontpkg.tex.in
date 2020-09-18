@@ -1,5 +1,5 @@
 %
-% START: LDSP tikz_latex_preamble
+% START: LDSP latex_custom_fontpkg
 %
 \usepackage{{fontspec}}
 %setmainfont[Ligatures=TeX]{{DejaVu Serif}}
@@ -61,5 +61,5 @@
 \usepackage[CJK]{{ucharclasses}}
 \setTransitionsForCJK{{\mycjkfont}}{{\myregularfont}}
 %
-% END: LDSP tikz_latex_preamble
+% END: LDSP latex_custom_fontpkg
 %
