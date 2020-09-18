@@ -8,6 +8,10 @@ Paneled Content
 
 .. pull-quote::
 
+   .. todo:: Evaluate the integration and coexistence of this
+             "Paneled Content" extension with all other. See
+             :file:`conf.py` for more details.
+
    .. attention::
 
       Only practicable and usable for |HTML| builder.
@@ -27,8 +31,6 @@ Create paneled content in |Sphinx| documentation when building |HTML|.
 
    For more details, see :doc:`spxpanels:index` in the extension demonstration
    and the :file:`README.md` in the extension Git repository.
-
-.. todo:: activate "Paneled Content" extension.
 
 .. rst:directive:: panels
 

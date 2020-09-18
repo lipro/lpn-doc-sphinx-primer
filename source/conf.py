@@ -145,6 +145,7 @@ needs_extensions = {
 #   'sphinxcontrib.spelling':                   '5.4.0',
     'sphinxcontrib.tikz':                       '0.4.9',
 #   'sphinx_tabs.tabs':                         '1.3.0',
+#   'sphinx_panels':                            '0.5.0',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -189,6 +190,7 @@ extensions = [
     'sphinxcontrib.spelling',
     'sphinxcontrib.tikz',
     'sphinx_tabs.tabs',
+#   'sphinx_panels',
     'ldsp',
 ]
 
@@ -1012,6 +1014,17 @@ tikz_tikzlibraries = '''%%
 #
 # https://sphinx-tabs.readthedocs.io/en/stable/
 #
+
+
+# -- Options for sphinx_panels -- Create panels in a grid layout or drop-downs
+#
+# https://sphinx-panels.readthedocs.io/en/stable/
+#
+# !!! CONFLICTS WITH sphinx_tabs.tabs !!!
+#
+
+# Change the delimiter regexes used to detect panels, header, footer.
+# Default is: panels_delimiters = (r"^\-{3,}$", r"^\^{3,}$", r"^\+{3,}$")
 
 
 # -- Options for LaTeX output ------------------------------------------------

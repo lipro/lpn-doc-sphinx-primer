@@ -14,6 +14,7 @@ sphinxcontrib-spelling>=5.4
 sphinxcontrib-svg2pdfconverter>=1.1
 sphinxcontrib-tikz>=0.4
 sphinx-tabs>=1.3
+sphinx-panels>=0.5
 
 # support PDF output from blockdiag
 reportlab>=3.5
