@@ -336,6 +336,27 @@ Technologies
 
          - :wikien:`Enchant (software)`
 
+   :abbr:`ePub (Electronic Publication)`
+   :abbr:`EPUB (Electronic Publication)`
+      `EPUB`_ is an e-book file format that uses the :file:`.epub` file
+      extension. The term is short for electronic publication and is
+      sometimes styled **ePub**. :abbr:`EPUB (Electronic Publication)`
+      is a technical standard published by the |IDPF| and became an
+      official standard in 2007, superseding the older |OEB| standard.
+      :abbr:`EPUB (Electronic Publication)` is also standardized by
+      the |ISO|/|IEC| JTC1/SC34 since 2014.
+
+      .. seealso::
+
+         - :wikien:`EPUB`
+         - (`EPUB 3.2`_): standard ratified in 2019 **EPUB 3.2**
+         - (`EPUB 3.0.1`_): standard ratified in 2020 **ISO/IEC 23736 (parts 1-6)**
+         - (`EPUB 3.0.1`_): standard ratified in 2014 *OPS 3.0.1*
+         - (`EPUB 3.0`_): standard ratified in 2014 *ISO/IEC TS 30135 (parts 1-7)*
+         - (`EPUB 3.0`_): standard ratified in 2011 *OPS 3.0*
+         - (`EPUB 2.0.1`_): standard ratified in 2010 *OPS 2.0.1 v1.0.1*
+         - (`EPUB 2.0`_): initially standardized in 2007 *OPS 2.0 v1.0*
+
    :abbr:`HTML (Hypertext Markup Language)`
       `HTML`_ is the standard markup language for documents designed to be
       displayed in a web browser. It can be assisted by technologies such as

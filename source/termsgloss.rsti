@@ -43,6 +43,7 @@
 .. |BibTeX|                     replace:: :term:`BibTeX`
 .. |CSS|                        replace:: :term:`CSS`
 .. |Enchant|                    replace:: :term:`Enchant`
+.. |EPUB|                       replace:: :term:`EPUB`
 .. |HTML|                       replace:: :term:`HTML`
 .. |PDF|                        replace:: :term:`PDF`
 .. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
@@ -76,15 +77,17 @@
 .. |GNU|        replace:: :abbr:`GNU (GNU's Not Unix!)`
 .. |GIF|        replace:: :abbr:`GIF (Graphics Interchange Format)`
 .. |GUI|        replace:: :abbr:`GUI (Graphics User Interface)`
+.. |IDPF|       replace:: :abbr:`IDPF (International Digital Publishing Forum)`
 .. |IEEE|       replace:: :abbr:`IEEE (Institute of Electrical and Electronics Engineers)`
 .. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
 .. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
 .. |JPEG|       replace:: :abbr:`JPEG (Joint Photographic Experts Group)`
 .. |JFIF|       replace:: :abbr:`JFIF (JPEG File Interchange Format)`
 .. |JPEG/JFIF|  replace:: |JPEG|/|JFIF|
+.. |LMI|        replace:: :abbr:`LMI (Linux Mark Institute)`
 .. |MIT|        replace:: :abbr:`MIT (Massachusetts Institute of Technology)`
 .. |MS-DOS|     replace:: :abbr:`MS-DOS (Microsoft Disk Operating System)`
-.. |LMI|        replace:: :abbr:`LMI (Linux Mark Institute)`
+.. |OEB|        replace:: :abbr:`OEB (Open eBook)`
 .. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
 .. |PS|         replace:: :abbr:`PS (PostScript)`
 .. |RFC|        replace:: :abbr:`RFC (Request for Comments)`

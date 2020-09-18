@@ -14,7 +14,7 @@ Mathematical Plots
       can not refer to a equation and you will never see an entry
       in the list of equations to :rst:`.. mathmpl::` expressions.
 
-      Only practicable and usable for |HTML|/EPUB and |LaTeX|/|PDF|
+      Only practicable and usable for |HTML|/|EPUB| and |LaTeX|/|PDF|
       builder.
 
 
