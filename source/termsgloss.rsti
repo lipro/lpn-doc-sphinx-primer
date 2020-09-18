@@ -37,6 +37,8 @@
 
 .. Technologies:
 
+.. |Badges|                     replace:: :term:`Badges`
+.. |badges|                     replace:: :term:`badges<Badges>`
 .. |BibTeX|                     replace:: :term:`BibTeX`
 .. |CSS|                        replace:: :term:`CSS`
 .. |Enchant|                    replace:: :term:`Enchant`
@@ -88,6 +90,7 @@
 .. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
 .. |UI|         replace:: :abbr:`UI (User Interface)`
 .. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
+.. |WWW|        replace:: :abbr:`WWW (World Wide Web)`
 .. |WMF|        replace:: :abbr:`WMF (Windows Metafile Format)`
 .. |WMZ|        replace:: :abbr:`WMZ (Compressed Windows Metafile Format)`
 .. |WMF/WMZ|    replace:: |WMF|/|WMZ|

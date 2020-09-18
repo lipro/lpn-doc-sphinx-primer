@@ -277,6 +277,19 @@ Technologies
 .. glossary::
    :sorted:
 
+   Badges
+      `Web buttons, badges or stickers`_ are small images in some |WWW|
+      pages which are typically used to promote programs that were used
+      to create or host the site. They may also be used to promote
+      compliance with web standards such as passing |W3C| |HTML|
+      validation or to comply with an application's terms of service or
+      present the status of any 3rd party service like CI/CD pipelines
+      or review processes.
+
+      .. seealso::
+
+         - :wikien:`Web badge`
+
    BibTeX
       `BibTeX`_ is a widely used bibliography management tool in |LaTeX|,
       with BibTeX the bibliography entries are kept in a separate file and
@@ -290,11 +303,10 @@ Technologies
       `CSS`_ is a style sheet language used for describing the presentation
       of a document written in a markup language like |HTML|.
       :abbr:`CSS (Cascading Style Sheets)` is a cornerstone technology of the
-      :abbr:`WWW (World Wide Web)`, alongside |HTML| and |JavaScript|. In
-      addition to |HTML|, other markup languages support the use of
-      :abbr:`CSS (Cascading Style Sheets)` including plain |XML| and |SVG|.
-      The :abbr:`CSS (Cascading Style Sheets)` specifications is standardized
-      by the |W3C|/TR/CSS since 1996.
+      |WWW|, alongside |HTML| and |JavaScript|. In addition to |HTML|, other
+      markup languages support the use of :abbr:`CSS (Cascading Style Sheets)`
+      including plain |XML| and |SVG|. The :abbr:`CSS (Cascading Style Sheets)`
+      specifications is standardized by the |W3C|/TR/CSS since 1996.
 
       .. seealso::
 
