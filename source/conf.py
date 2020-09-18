@@ -193,6 +193,7 @@ extensions = [
     'sphinx_tabs.tabs',
     # not yet, see below "Specific configuration": 'sphinx_panels',
     'linuxdoc.rstFlatTable',
+    'ldsp.ultimate_replacements',
     'ldsp',
 ]
 
@@ -1034,6 +1035,13 @@ tikz_tikzlibraries = '''%%
 # https://return42.github.io/linuxdoc/
 # https://github.com/return42/linuxdoc
 #
+
+
+# -- Options for ldsp.* -- LOCAL EXTENSIONS ----------------------------------
+#
+
+# Using variables inside reST w/o 'rst_prolog' or 'rst_epilog'.
+# ultimate_replacements = {}
 
 
 # -- Options for LaTeX output ------------------------------------------------
