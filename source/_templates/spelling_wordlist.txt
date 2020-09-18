@@ -13,10 +13,14 @@ mailto
 matplotlib
 Matplotlib
 monospaced
+mpimg
+np
 overlining
 PGF
+plt
 Pybtex
 Pygments
+pyplot
 Redmine
 reST
 reStructuredText

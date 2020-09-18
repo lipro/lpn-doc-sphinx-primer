@@ -2,10 +2,8 @@
    :align: center
    :scale: 75
 
-   import matplotlib.pyplot as plt
-   import matplotlib.image as mpimg
-   import numpy as np
-   img = mpimg.imread('https://github.com/matplotlib/matplotlib/raw/master/doc/_static/stinkbug.png')
+   img = mpimg.imread('https://github.com/matplotlib/matplotlib'
+                      + '/raw/master/doc/_static/stinkbug.png')
    imgplot = plt.imshow(img)
 
 .. Local variables:

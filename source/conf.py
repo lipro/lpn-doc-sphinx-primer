@@ -147,6 +147,8 @@ needs_extensions = {
 #   'sphinx_tabs.tabs':                         '1.3.0',
 #   'sphinx_panels':                            '0.5.0',
 #   'linuxdoc.rstFlatTable':                    '20200812',
+#   'matplotlib.sphinxext.mathmpl':             '3.3.2',
+#   'matplotlib.sphinxext.plot_directive':      '3.3.2',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -193,6 +195,8 @@ extensions = [
     'sphinx_tabs.tabs',
     # not yet, see below "Specific configuration": 'sphinx_panels',
     'linuxdoc.rstFlatTable',
+    'matplotlib.sphinxext.mathmpl',
+    'matplotlib.sphinxext.plot_directive',
     'ldsp.ultimate_replacements',
     'ldsp',
 ]
@@ -1037,11 +1041,50 @@ tikz_tikzlibraries = '''%%
 #
 
 
+# -- Options for matplotlib.sphinxext.plot_directive -- Including Matplotlib -
+#
+# https://matplotlib.org/api/sphinxext_plot_directive_api.html#configuration-options
+#
+
+# Base directory, to which plot directive file names are relative to.
+# If None or empty, file names are relative to the directory where the
+# file containing the directive is.
+plot_basedir = '{}/mplplots'.format(path_images)
+
+# By default, the working directory will be changed to the directory of
+# the example, so the code can get at its data files, if any. Also its
+# path will be added to sys.path so it can import any helper modules
+# sitting beside it. This configuration option can be used to specify
+# a central directory (also added to sys.path) where data files and
+# helper modules for all code are located.
+plot_working_directory = '{}/mplplots'.format(path_images)
+
+# Code that should be executed before each plot. If not specified or
+# None it will default to a string containing:
+# 'import numpy as np; from matplotlib import pyplot as plt'
+f = open('{}/matplotlib_pre.py'.format(path_templates), 'r+')
+plot_pre_code = f.read()
+
+# Default value for the include-source option.
+plot_include_source = True
+
+# Whether to show a link to the source in HTML.
+plot_html_show_source_link = False
+
+# Whether to show links to the files in HTML.
+plot_html_show_formats = True
+
+
 # -- Options for ldsp.* -- LOCAL EXTENSIONS ----------------------------------
 #
 
 # Using variables inside reST w/o 'rst_prolog' or 'rst_epilog'.
-# ultimate_replacements = {}
+ultimate_replacements = {
+    '{plot_basedir}': os.path.relpath(plot_basedir, DOCSRC),
+    '{plot_workdir}': os.path.relpath(plot_working_directory, DOCSRC),
+    '{plot_preincl}': '/' + os.path.relpath(
+                      '{}/matplotlib_pre.py'.format(path_templates), DOCSRC),
+}
 
 
 # -- Options for LaTeX output ------------------------------------------------

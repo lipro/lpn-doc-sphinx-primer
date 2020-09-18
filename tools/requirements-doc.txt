@@ -23,6 +23,11 @@ reportlab>=3.5
 git+https://github.com/return42/linuxdoc.git/@master#sha1=70673dc&egg=linuxdoc
 
 
+# mathematical/scientific extensions
+matplotlib>=3.3
+numpy>=1.19
+
+
 # ... enables you to use inline syntax highlighting in Sphinx.
 # w/o maintenance since 2013: sphinxcontrib-inlinesyntaxhighlight>=0.2
 #
