@@ -33,6 +33,7 @@ import semver
 import git
 import sys
 import os
+import re
 
 logcfg = sphinx.util.logging.getLogger(__name__)
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -207,6 +208,15 @@ extensions = [
 
 # -- Specific configuration --------------------------------------------------
 
+TEXINPUTS = '{}//:'.format(DOCSRC)
+if "TEXINPUTS" in os.environ:
+    TEXINPUTS = '{prj}{gbl}'.format(
+        gbl = os.environ["TEXINPUTS"],
+        prj = TEXINPUTS,
+    )
+
+os.environ["TEXINPUTS"] = TEXINPUTS
+logcfg.info('TEXINPUTS exported: "{}"'.format(os.environ["TEXINPUTS"]), color='green')
 
 path_extra = os.path.join(DOCSRC, '_extra')
 logcfg.info('EXTRAS     path is: "{}"'.format(path_extra), color='green')
@@ -721,6 +731,7 @@ extlinks = {
     'wikien':       ('https://en.wikipedia.org/wiki/%s', 'English Wikipedia: '),
     'wikimedia':    ('https://upload.wikimedia.org/wikipedia/commons/%s', 'Wikimedia: '),
     'superuser':    ('https://superuser.com/%s', 'Superuser: '),
+    'stackxtex':    ('https://tex.stackexchange.com/%s', 'StackExchange (TeX): '),
     'steamcoded':   ('https://steamcoded.org/lessons/%s', 'STEAMcoded.org: '),
     'dufaq':        ('https://docutils.sourceforge.io/FAQ.html#%s', ''),
     'dutodo':       ('https://docutils.sourceforge.io/docs/dev/todo.html#%s', ''),
@@ -1029,21 +1040,22 @@ tikz_transparent = True
 # Add some <string> to the sub process LaTeX preamble for the html build
 # target. The default is None.
 # tikz_latex_preamble = ''
+f = open('{}/tikz_extrapackages.tex'.format(path_templates), 'r+')
+tikz_custom_extrapackages = f.read()
 f = open('{}/fontpkg.tex.in'.format(path_templates), 'r+')
-tikz_latex_preamble = f.read().format (
+tikz_custom_fontpkg = f.read().format (
     dejavu = path_dejavu + '/',
     wenquanyi = path_wenquanyi + '/',
 )
+tikz_latex_preamble = tikz_custom_extrapackages + tikz_custom_fontpkg
 
 # Add some \usetikzlibrary{<string>} to the sub process LaTeX preamble
 # for the html build target. The default is None.
-tikz_tikzlibraries = '''%%
-    arrows,%%
-    calendar,%%
-    folding,%%
-    matrix,%%
-    shapes'''
-
+f = open('{}/tikz_libraries.tex'.format(path_templates), 'r+')
+tikz_custom_libraries = f.read()
+tikz_tikzlibraries = re.sub(r'(?m)^ *%.*\n?', '', tikz_custom_libraries)
+tikz_tikzlibraries = tikz_tikzlibraries.replace('\r', ' ')
+tikz_tikzlibraries = tikz_tikzlibraries.replace('\n', ' ')
 
 # -- Options for sphinx_tabs.tabs -- Create tabbed content -------------------
 #

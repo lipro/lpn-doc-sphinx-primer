@@ -1,7 +1,5 @@
-%
-% START: LDSP latex_custom_fontpkg
-%
-\usepackage{{fontspec}}
+% START: LDSP tikz_custom_fontpkg latex_custom_fontpkg
+\RequirePackage{{fontspec}}
 %setmainfont[Ligatures=TeX]{{DejaVu Serif}}
 %setmainfont[ExternalLocation={dejavu}]{{DejaVuSerif.otf}}%
 % [Ligatures=TeX,
@@ -60,6 +58,4 @@
   BoldItalicFont=WenQuanYiZenHei.otf]
 \usepackage[CJK]{{ucharclasses}}
 \setTransitionsForCJK{{\mycjkfont}}{{\myregularfont}}
-%
-% END: LDSP latex_custom_fontpkg
-%
+% END: LDSP tikz_custom_fontpkg latex_custom_fontpkg

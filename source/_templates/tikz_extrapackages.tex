@@ -1,0 +1,452 @@
+% START: LDSP tikz_custom_extrapackages
+\RequirePackage{bm} % Bold math
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.6}
+\RequirePackage{graphicx}
+\RequirePackage{siunitx}[2017/11/26]
+\RequirePackage[siunitx,european,smartlabels]{circuitikz}[2017/05/28] % Loading CircuiTikZ with siunitx option
+\RequirePackage{tikz-timing}[2017/12/20] % Loading TikZ-Timing
+\usetikztiminglibrary{advnodes} % sublibrary for advanced anchor nodes
+\usetikztiminglibrary{arrows} % sublibrary for arrow
+\usetikztiminglibrary[rising arrows]{clockarrows}  % sublibrary for for arrows on rising/falling edges
+\usetikztiminglibrary[new={char=Q,reset char=R}]{counters}  % sublibrary for automated content generation
+\usetikztiminglibrary{overlays} % sublibrary for overlay generation
+\RequirePackage{xcolor} % Color configurtation
+\definecolor{custA}{HTML}{8F00D3}
+\definecolor{custB}{HTML}{749173}
+\definecolor{custC}{HTML}{BF7C47}
+\RequirePackage[scaled]{helvet} % For serif family font that allows bold and italic
+\RequirePackage{fontspec} % Font configurtation
+\DeclareTextFontCommand{\textbfit}{%
+    \fontseries\bfdefault % Change series without selecting the font yet
+    \itshape
+}
+%
+% How to overline over some text, not an equation?
+% --> https://tex.stackexchange.com/a/24133
+%
+\makeatletter
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
+\makeatother
+%
+% Reference a timing bus.
+%
+% Usage:
+%
+%     \busref[3::0]{C/BE}    ->   C/BE[3::0]
+%     \busref*{AD}           ->   AD#
+%     \busref*[3::0]{C/BE}   ->   C/BE[3::0]#
+%
+\NewDocumentCommand{\busref}{som}{\texttt{%
+#3%
+\IfValueTF{#2}{[#2]}{}%
+\IfBooleanTF{#1}{\#}{}%
+}}
+%
+% Span a timing row.
+%
+% Usage:
+%
+%     \divider{Text to show} ->   [Text to show in white of red]
+%
+\makeatletter\gdef\dividers{}
+\def\divider#1{
+    N(#1)@{
+        \g@addto@macro\dividers{
+            \path(#1)-|node(left){}(all labels.west)(#1)-|node[shift={(0,1)}](right){}(all rows.east)
+            node(banner)[fill=red,opacity=.1,inner sep=0,fit=(left.center)(right.center)]{}
+            (banner.west)node[red!80!black,right](text){\scriptsize #1};
+        }
+    }
+}
+%
+% Circuitiz component version for a general 64 Lead Quad Flat Package (LQFP).
+% Provide by by John Kormylo (E.L.F. Software). Comes from:
+% --> https://tex.stackexchange.com/a/202449
+% --> http://www.elfsoft2000.com/projects/index.htm
+%     --> http://www.elfsoft2000.com/projects/components.tex
+%         --> http://www.elfsoft2000.com/projects/cheap.pdf
+%         --> http://www.elfsoft2000.com/projects/speaker.pdf
+%         --> http://www.elfsoft2000.com/projects/bipole.pdf
+%         --> http://www.elfsoft2000.com/projects/multipole.pdf
+%
+%
+% ************************** multipoles *****************************
+%
+\ctikzset{multipoles/.is family}
+\ctikzset{multipoles/pin spacing/.initial = 5mm} % default value
+%
+\pgfkeys{/tikz/pin spacing/.initial = 0mm}
+\pgfkeys{/tikz/pin spacing/.default = 0mm}
+%
+\newlength{\IClen}  % scale factor
+\newcommand{\pinsize}{\ifdim\IClen<4.5mm \tiny \else \scriptsize \fi}
+%
+\newlength{\ResUp}
+\newlength{\ResDown}
+\newlength{\ResLeft}
+\newlength{\ResRight}
+%
+\newcommand{\Compass}% define anchors for compass points
+{\anchor{north east}{\northeast}
+\anchor{south west}{\southwest}
+\anchor{north}{\pgfextracty{\ResUp}{\northeast}\pgfpoint{0cm}{\ResUp}}
+\anchor{north west}{\pgfextracty{\ResUp}{\northeast}\pgfextractx{\ResLeft}{\southwest}\pgfpoint{\ResLeft}{\ResUp}}
+\anchor{west}{\pgfextractx{\ResLeft}{\sosuthwest}\pgfpoint{\ResLeft}{0cm}}
+\anchor{south}{\pgfextracty{\ResDown}{\southwest}\pgfpoint{0cm}{\ResDown}}
+\anchor{south east}{\pgfextracty{\ResDown}{\southwest}\pgfextractx{\ResRight}{\northeast}\pgfpoint{\ResRight}{\ResDown}}
+\anchor{east}{\pgfextractx{\ResRight}{\northeast}\pgfpoint{\ResRight}{0cm}}}
+%
+% ***************************** QFP 64 *********************************
+%
+\pgfdeclareshape{dip8}{% anchors p1 - p8
+    \anchor{center}{\pgfpointorigin} % within the node, (0,0) is the center
+
+    \anchor{text} % this is used to center the text in the node
+        {\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+    \savedmacro{\resize}{ % called automatically
+        \setlength{\IClen}{\pgfkeysvalueof{/tikz/pin spacing}}	% from node[]
+        \ifdim\IClen=0mm \setlength{\IClen}
+            {\pgfkeysvalueof{/tikz/circuitikz/multipoles/pin spacing}}
+        \fi % from \ctikzset{}
+    }
+
+    \savedanchor\icpina{\pgfpoint{-1.5\IClen}{-1.25\IClen}} % pin 1
+    \anchor{p1}{\icpina}
+    \savedanchor\icpinb{\pgfpoint{-.5\IClen}{-1.25\IClen}}  % pin 2
+    \anchor{p2}{\icpinb}
+    \savedanchor\icpinc{\pgfpoint{.5\IClen}{-1.25\IClen}}   % pin 3
+    \anchor{p3}{\icpinc}
+    \savedanchor\icpind{\pgfpoint{1.5\IClen}{-1.25\IClen}}  % pin 4
+    \anchor{p4}{\icpind}
+    \savedanchor\icpine{\pgfpoint{1.5\IClen}{1.25\IClen}}   % pin 5
+    \anchor{p5}{\icpine}
+    \savedanchor\icpinf{\pgfpoint{.5\IClen}{1.25\IClen}}    % pin 6
+    \anchor{p6}{\icpinf}
+    \savedanchor\icping{\pgfpoint{-.5\IClen}{1.25\IClen}}   % pin 7
+    \anchor{p7}{\icping}
+    \savedanchor\icpinh{\pgfpoint{-1.5\IClen}{1.25\IClen}}  % pin 8
+    \anchor{p8}{\icpinh}
+
+    \savedanchor{\northeast}{\pgfpoint{2\IClen}{1.25\IClen}}
+    \savedanchor{\southwest}{\pgfpoint{-2\IClen}{-1.25\IClen}}
+    \Compass% standard anchors
+
+    \foregroundpath{ % border and pin numbers are drawn here
+        \pgfsetlinewidth{0.1\IClen} % line thickness
+        \pgfpathrectanglecorners{\southwest}{\northeast}
+        \pgfusepath{draw} %draw border
+        \pgfsetlinewidth{0.06\IClen} % line thickness
+        \pgfpathmoveto{\pgfpoint{-2\IClen}{-.6\IClen}}
+        \pgfpatharc{-90}{90}{.6\IClen}
+        \pgfusepath{draw} %draw pins
+        \pgftext[bottom,at={\pgfpoint{-1.5\IClen}{-1.1\IClen}}]{\pinsize 1}
+        \pgftext[bottom,at={\pgfpoint{-.5\IClen}{-1.1\IClen}}]{\pinsize 2}
+        \pgftext[bottom,at={\pgfpoint{.5\IClen}{-1.1\IClen}}]{\pinsize 3}
+        \pgftext[bottom,at={\pgfpoint{1.5\IClen}{-1.1\IClen}}]{\pinsize 4}
+        \pgftext[top,at={\pgfpoint{1.5\IClen}{1.1\IClen}}]{\pinsize 5}
+        \pgftext[top,at={\pgfpoint{.5\IClen}{1.1\IClen}}]{\pinsize 6}
+        \pgftext[top,at={\pgfpoint{-.5\IClen}{1.1\IClen}}]{\pinsize 7}
+        \pgftext[top,at={\pgfpoint{-1.5\IClen}{1.1\IClen}}]{\pinsize 8}
+    }
+}
+%
+% ***************************** QFP 64 *********************************
+%
+\pgfdeclareshape{qfp64}{% anchors p1 - p64
+    \anchor{center}{\pgfpointorigin} % within the node, (0,0) is the center
+
+    \anchor{text} % this is used to center the text in the node
+        {\pgfpoint{-.5\wd\pgfnodeparttextbox}{-.5\ht\pgfnodeparttextbox}}
+
+    \savedmacro{\resize}{ % called automatically
+        \setlength{\IClen}{\pgfkeysvalueof{/tikz/pin spacing}} % from node[]
+        \ifdim\IClen=0mm \setlength{\IClen}
+            {\pgfkeysvalueof{/tikz/circuitikz/multipoles/pin spacing}}
+	\fi % from \ctikzset{}
+    }
+
+    \savedanchor\icpinla{\pgfpoint{-9.8\IClen}{7.5\IClen}}  % pin 1
+    \anchor{p1}{\icpinla}
+    \savedanchor\icpinlb{\pgfpoint{-9.8\IClen}{6.5\IClen}}  % pin 2
+    \anchor{p2}{\icpinlb}
+    \savedanchor\icpinlc{\pgfpoint{-9.8\IClen}{5.5\IClen}}  % pin 3
+    \anchor{p3}{\icpinlc}
+    \savedanchor\icpinld{\pgfpoint{-9.8\IClen}{4.5\IClen}}  % pin 4
+    \anchor{p4}{\icpinld}
+    \savedanchor\icpinle{\pgfpoint{-9.8\IClen}{3.5\IClen}}  % pin 5
+    \anchor{p5}{\icpinle}
+    \savedanchor\icpinlf{\pgfpoint{-9.8\IClen}{2.5\IClen}}  % pin 6
+    \anchor{p6}{\icpinlf}
+    \savedanchor\icpinlg{\pgfpoint{-9.8\IClen}{1.5\IClen}}  % pin 7
+    \anchor{p7}{\icpinlg}
+    \savedanchor\icpinlh{\pgfpoint{-9.8\IClen}{0.5\IClen}}  % pin 8
+    \anchor{p8}{\icpinlh}
+    \savedanchor\icpinli{\pgfpoint{-9.8\IClen}{-0.5\IClen}}  % pin 9
+    \anchor{p9}{\icpinli}
+    \savedanchor\icpinlj{\pgfpoint{-9.8\IClen}{-1.5\IClen}}  % pin 10
+    \anchor{p10}{\icpinlj}
+    \savedanchor\icpinlk{\pgfpoint{-9.8\IClen}{-2.5\IClen}}  % pin 11
+    \anchor{p11}{\icpinlk}
+    \savedanchor\icpinll{\pgfpoint{-9.8\IClen}{-3.5\IClen}}  % pin 12
+    \anchor{p12}{\icpinll}
+    \savedanchor\icpinlm{\pgfpoint{-9.8\IClen}{-4.5\IClen}}  % pin 13
+    \anchor{p13}{\icpinlm}
+    \savedanchor\icpinln{\pgfpoint{-9.8\IClen}{-5.5\IClen}}  % pin 14
+    \anchor{p14}{\icpinln}
+    \savedanchor\icpinlo{\pgfpoint{-9.8\IClen}{-6.5\IClen}}  % pin 15
+    \anchor{p15}{\icpinlo}
+    \savedanchor\icpinlp{\pgfpoint{-9.8\IClen}{-7.5\IClen}}  % pin 16
+    \anchor{p16}{\icpinlp}
+
+    \savedanchor\icpinba{\pgfpoint{-7.5\IClen}{-9.8\IClen}} % pin 17
+    \anchor{p17}{\icpinba}
+    \savedanchor\icpinbb{\pgfpoint{-6.5\IClen}{-9.8\IClen}} % pin 18
+    \anchor{p18}{\icpinbb}
+    \savedanchor\icpinbc{\pgfpoint{-5.5\IClen}{-9.8\IClen}} % pin 19
+    \anchor{p19}{\icpinbc}
+    \savedanchor\icpinbd{\pgfpoint{-4.5\IClen}{-9.8\IClen}} % pin 20
+    \anchor{p20}{\icpinbd}
+    \savedanchor\icpinbe{\pgfpoint{-3.5\IClen}{-9.8\IClen}} % pin 21
+    \anchor{p21}{\icpinbe}
+    \savedanchor\icpinbf{\pgfpoint{-2.5\IClen}{-9.8\IClen}} % pin 22
+    \anchor{p22}{\icpinbf}
+    \savedanchor\icpinbg{\pgfpoint{-1.5\IClen}{-9.8\IClen}} % pin 23
+    \anchor{p23}{\icpinbg}
+    \savedanchor\icpinbh{\pgfpoint{-0.5\IClen}{-9.8\IClen}} % pin 24
+    \anchor{p24}{\icpinbh}
+    \savedanchor\icpinbi{\pgfpoint{0.5\IClen}{-9.8\IClen}}  % pin 25
+    \anchor{p25}{\icpinbi}
+    \savedanchor\icpinbj{\pgfpoint{1.5\IClen}{-9.8\IClen}}  % pin 26
+    \anchor{p26}{\icpinbj}
+    \savedanchor\icpinbk{\pgfpoint{2.5\IClen}{-9.8\IClen}}  % pin 27
+    \anchor{p27}{\icpinbk}
+    \savedanchor\icpinbl{\pgfpoint{3.5\IClen}{-9.8\IClen}}  % pin 28
+    \anchor{p28}{\icpinbl}
+    \savedanchor\icpinbm{\pgfpoint{4.5\IClen}{-9.8\IClen}}  % pin 29
+    \anchor{p29}{\icpinbm}
+    \savedanchor\icpinbn{\pgfpoint{5.5\IClen}{-9.8\IClen}}  % pin 30
+    \anchor{p30}{\icpinbn}
+    \savedanchor\icpinbo{\pgfpoint{6.5\IClen}{-9.8\IClen}}  % pin 31
+    \anchor{p31}{\icpinbo}
+    \savedanchor\icpinbp{\pgfpoint{7.5\IClen}{-9.8\IClen}}  % pin 32
+    \anchor{p32}{\icpinbp}
+
+    \savedanchor\icpinra{\pgfpoint{9.8\IClen}{-7.5\IClen}}  % pin 33
+    \anchor{p33}{\icpinra}
+    \savedanchor\icpinrb{\pgfpoint{9.8\IClen}{-6.5\IClen}}  % pin 34
+    \anchor{p34}{\icpinrb}
+    \savedanchor\icpinrc{\pgfpoint{9.8\IClen}{-5.5\IClen}}  % pin 35
+    \anchor{p35}{\icpinrc}
+    \savedanchor\icpinrd{\pgfpoint{9.8\IClen}{-4.5\IClen}}  % pin 36
+    \anchor{p36}{\icpinrd}
+    \savedanchor\icpinre{\pgfpoint{9.8\IClen}{-3.5\IClen}}  % pin 37
+    \anchor{p37}{\icpinre}
+    \savedanchor\icpinrf{\pgfpoint{9.8\IClen}{-2.5\IClen}}  % pin 28
+    \anchor{p38}{\icpinrf}
+    \savedanchor\icpinrg{\pgfpoint{9.8\IClen}{-1.5\IClen}}  % pin 39
+    \anchor{p39}{\icpinrg}
+    \savedanchor\icpinrh{\pgfpoint{9.8\IClen}{-0.5\IClen}}  % pin 40
+    \anchor{p40}{\icpinrh}
+    \savedanchor\icpinri{\pgfpoint{9.8\IClen}{0.5\IClen}}  % pin 41
+    \anchor{p41}{\icpinri}
+    \savedanchor\icpinrj{\pgfpoint{9.8\IClen}{1.5\IClen}}  % pin 42
+    \anchor{p42}{\icpinrj}
+    \savedanchor\icpinrk{\pgfpoint{9.8\IClen}{2.5\IClen}}  % pin 43
+    \anchor{p43}{\icpinrk}
+    \savedanchor\icpinrl{\pgfpoint{9.8\IClen}{3.5\IClen}}  % pin 44
+    \anchor{p44}{\icpinrl}
+    \savedanchor\icpinrm{\pgfpoint{9.8\IClen}{4.5\IClen}}  % pin 45
+    \anchor{p45}{\icpinrm}
+    \savedanchor\icpinrn{\pgfpoint{9.8\IClen}{5.5\IClen}}  % pin 46
+    \anchor{p46}{\icpinrn}
+    \savedanchor\icpinro{\pgfpoint{9.8\IClen}{6.5\IClen}}  % pin 47
+    \anchor{p47}{\icpinro}
+    \savedanchor\icpinrp{\pgfpoint{9.8\IClen}{7.5\IClen}}  % pin 48
+    \anchor{p48}{\icpinrp}
+
+    \savedanchor\icpinta{\pgfpoint{7.5\IClen}{9.8\IClen}}   % pin 49
+    \anchor{p49}{\icpinta}
+    \savedanchor\icpintb{\pgfpoint{6.5\IClen}{9.8\IClen}}   % pin 50
+    \anchor{p50}{\icpintb}
+    \savedanchor\icpintc{\pgfpoint{5.5\IClen}{9.8\IClen}}   % pin 51
+    \anchor{p51}{\icpintc}
+    \savedanchor\icpintd{\pgfpoint{4.5\IClen}{9.8\IClen}}   % pin 52
+    \anchor{p52}{\icpintd}
+    \savedanchor\icpinte{\pgfpoint{3.5\IClen}{9.8\IClen}}   % pin 53
+    \anchor{p53}{\icpinte}
+    \savedanchor\icpintf{\pgfpoint{2.5\IClen}{9.8\IClen}}   % pin 54
+    \anchor{p54}{\icpintf}
+    \savedanchor\icpintg{\pgfpoint{1.5\IClen}{9.8\IClen}}   % pin 55
+    \anchor{p55}{\icpintg}
+    \savedanchor\icpinth{\pgfpoint{0.5\IClen}{9.8\IClen}}   % pin 56
+    \anchor{p56}{\icpinth}
+    \savedanchor\icpinti{\pgfpoint{-0.5\IClen}{9.8\IClen}}  % pin 57
+    \anchor{p57}{\icpinti}
+    \savedanchor\icpintj{\pgfpoint{-1.5\IClen}{9.8\IClen}}  % pin 58
+    \anchor{p58}{\icpintj}
+    \savedanchor\icpintk{\pgfpoint{-2.5\IClen}{9.8\IClen}}  % pin 59
+    \anchor{p59}{\icpintk}
+    \savedanchor\icpintl{\pgfpoint{-3.5\IClen}{9.8\IClen}}  % pin 60
+    \anchor{p60}{\icpintl}
+    \savedanchor\icpintm{\pgfpoint{-4.5\IClen}{9.8\IClen}}  % pin 61
+    \anchor{p61}{\icpintm}
+    \savedanchor\icpintn{\pgfpoint{-5.5\IClen}{9.8\IClen}}  % pin 30
+    \anchor{p62}{\icpintn}
+    \savedanchor\icpinto{\pgfpoint{-6.5\IClen}{9.8\IClen}}  % pin 31
+    \anchor{p63}{\icpinto}
+    \savedanchor\icpintp{\pgfpoint{-7.5\IClen}{9.8\IClen}}  % pin 32
+    \anchor{p64}{\icpintp}
+
+    \savedanchor{\northeast}{\pgfpoint{9.8\IClen}{9.8\IClen}}
+    \savedanchor{\southwest}{\pgfpoint{-9.8\IClen}{-9.8\IClen}}
+    \Compass% standard anchors
+
+    \foregroundpath{ % border and pin numbers are drawn here
+        \pgfsetlinewidth{0.1\IClen} % line thickness
+        \pgfpathmoveto{\pgfpoint{-9\IClen}{8.4\IClen}}
+        \pgfpathlineto{\pgfpoint{-9\IClen}{-8.4\IClen}}
+        \pgfpathlineto{\pgfpoint{-8.4\IClen}{-9\IClen}}
+        \pgfpathlineto{\pgfpoint{8.4\IClen}{-9\IClen}}
+        \pgfpathlineto{\pgfpoint{9\IClen}{-8.4\IClen}}
+        \pgfpathlineto{\pgfpoint{9\IClen}{8.4\IClen}}
+        \pgfpathlineto{\pgfpoint{8.4\IClen}{9\IClen}}
+        \pgfpathlineto{\pgfpoint{-8.4\IClen}{9\IClen}}
+        \pgfpathlineto{\pgfpoint{-9\IClen}{8.4\IClen}}
+        \pgfpathclose
+        \pgfusepath{draw} %draw border
+        \pgfsetlinewidth{0.06\IClen} % line thickness
+        \pgfpathcircle{\pgfpoint{-7.8\IClen}{7.8\IClen}}{0.6\IClen}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{7.2\IClen}}{\pgfpoint{-9\IClen}{7.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{6.2\IClen}}{\pgfpoint{-9\IClen}{6.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{5.2\IClen}}{\pgfpoint{-9\IClen}{5.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{4.2\IClen}}{\pgfpoint{-9\IClen}{4.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{3.2\IClen}}{\pgfpoint{-9\IClen}{3.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{2.2\IClen}}{\pgfpoint{-9\IClen}{2.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{1.2\IClen}}{\pgfpoint{-9\IClen}{1.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{0.2\IClen}}{\pgfpoint{-9\IClen}{0.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-0.2\IClen}}{\pgfpoint{-9\IClen}{-0.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-1.2\IClen}}{\pgfpoint{-9\IClen}{-1.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-2.2\IClen}}{\pgfpoint{-9\IClen}{-2.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-3.2\IClen}}{\pgfpoint{-9\IClen}{-3.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-4.2\IClen}}{\pgfpoint{-9\IClen}{-4.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-5.2\IClen}}{\pgfpoint{-9\IClen}{-5.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-6.2\IClen}}{\pgfpoint{-9\IClen}{-6.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-9.8\IClen}{-7.2\IClen}}{\pgfpoint{-9\IClen}{-7.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-7.2\IClen}{-9.8\IClen}}{\pgfpoint{-7.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-6.2\IClen}{-9.8\IClen}}{\pgfpoint{-6.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-5.2\IClen}{-9.8\IClen}}{\pgfpoint{-5.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-4.2\IClen}{-9.8\IClen}}{\pgfpoint{-4.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-3.2\IClen}{-9.8\IClen}}{\pgfpoint{-3.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-2.2\IClen}{-9.8\IClen}}{\pgfpoint{-2.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-1.2\IClen}{-9.8\IClen}}{\pgfpoint{-1.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-0.2\IClen}{-9.8\IClen}}{\pgfpoint{-0.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{0.2\IClen}{-9.8\IClen}}{\pgfpoint{0.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{1.2\IClen}{-9.8\IClen}}{\pgfpoint{1.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{2.2\IClen}{-9.8\IClen}}{\pgfpoint{2.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{3.2\IClen}{-9.8\IClen}}{\pgfpoint{3.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{4.2\IClen}{-9.8\IClen}}{\pgfpoint{4.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{5.2\IClen}{-9.8\IClen}}{\pgfpoint{5.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{6.2\IClen}{-9.8\IClen}}{\pgfpoint{6.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{7.2\IClen}{-9.8\IClen}}{\pgfpoint{7.8\IClen}{-9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-7.2\IClen}}{\pgfpoint{9\IClen}{-7.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-6.2\IClen}}{\pgfpoint{9\IClen}{-6.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-5.2\IClen}}{\pgfpoint{9\IClen}{-5.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-4.2\IClen}}{\pgfpoint{9\IClen}{-4.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-3.2\IClen}}{\pgfpoint{9\IClen}{-3.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-2.2\IClen}}{\pgfpoint{9\IClen}{-2.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-1.2\IClen}}{\pgfpoint{9\IClen}{-1.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{-0.2\IClen}}{\pgfpoint{9\IClen}{-0.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{0.2\IClen}}{\pgfpoint{9\IClen}{0.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{1.2\IClen}}{\pgfpoint{9\IClen}{1.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{2.2\IClen}}{\pgfpoint{9\IClen}{2.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{3.2\IClen}}{\pgfpoint{9\IClen}{3.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{4.2\IClen}}{\pgfpoint{9\IClen}{4.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{5.2\IClen}}{\pgfpoint{9\IClen}{5.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{6.2\IClen}}{\pgfpoint{9\IClen}{6.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{9.8\IClen}{7.2\IClen}}{\pgfpoint{9\IClen}{7.8\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{7.2\IClen}{9.8\IClen}}{\pgfpoint{7.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{6.2\IClen}{9.8\IClen}}{\pgfpoint{6.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{5.2\IClen}{9.8\IClen}}{\pgfpoint{5.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{4.2\IClen}{9.8\IClen}}{\pgfpoint{4.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{3.2\IClen}{9.8\IClen}}{\pgfpoint{3.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{2.2\IClen}{9.8\IClen}}{\pgfpoint{2.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{1.2\IClen}{9.8\IClen}}{\pgfpoint{1.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{0.2\IClen}{9.8\IClen}}{\pgfpoint{0.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-0.2\IClen}{9.8\IClen}}{\pgfpoint{-0.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-1.2\IClen}{9.8\IClen}}{\pgfpoint{-1.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-2.2\IClen}{9.8\IClen}}{\pgfpoint{-2.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-3.2\IClen}{9.8\IClen}}{\pgfpoint{-3.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-4.2\IClen}{9.8\IClen}}{\pgfpoint{-4.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-5.2\IClen}{9.8\IClen}}{\pgfpoint{-5.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-6.2\IClen}{9.8\IClen}}{\pgfpoint{-6.8\IClen}{9\IClen}}
+        \pgfpathrectanglecorners{\pgfpoint{-7.2\IClen}{9.8\IClen}}{\pgfpoint{-7.8\IClen}{9\IClen}}
+        \pgfusepath{draw} %draw pins
+        \pgftext[at=\pgfpoint{-9.4\IClen}{7.5\IClen}]{\pinsize 1}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{6.5\IClen}]{\pinsize 2}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{5.5\IClen}]{\pinsize 3}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{4.5\IClen}]{\pinsize 4}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{3.5\IClen}]{\pinsize 5}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{2.5\IClen}]{\pinsize 6}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{1.5\IClen}]{\pinsize 7}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{0.5\IClen}]{\pinsize 8}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-0.5\IClen}]{\pinsize 9}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-1.5\IClen}]{\pinsize 10}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-2.5\IClen}]{\pinsize 11}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-3.5\IClen}]{\pinsize 12}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-4.5\IClen}]{\pinsize 13}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-5.5\IClen}]{\pinsize 14}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-6.5\IClen}]{\pinsize 15}
+        \pgftext[at=\pgfpoint{-9.4\IClen}{-7.5\IClen}]{\pinsize 16}
+        \pgftext[at=\pgfpoint{-7.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 17}
+        \pgftext[at=\pgfpoint{-6.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 18}
+        \pgftext[at=\pgfpoint{-5.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 19}
+        \pgftext[at=\pgfpoint{-4.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 20}
+        \pgftext[at=\pgfpoint{-3.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 21}
+        \pgftext[at=\pgfpoint{-2.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 22}
+        \pgftext[at=\pgfpoint{-1.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 23}
+        \pgftext[at=\pgfpoint{-0.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 24}
+        \pgftext[at=\pgfpoint{0.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 25}
+        \pgftext[at=\pgfpoint{1.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 26}
+        \pgftext[at=\pgfpoint{2.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 27}
+        \pgftext[at=\pgfpoint{3.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 28}
+        \pgftext[at=\pgfpoint{4.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 29}
+        \pgftext[at=\pgfpoint{5.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 30}
+        \pgftext[at=\pgfpoint{6.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 31}
+        \pgftext[at=\pgfpoint{7.5\IClen}{-9.4\IClen},rotate=90]{\pinsize 32}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-7.5\IClen}]{\pinsize 33}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-6.5\IClen}]{\pinsize 34}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-5.5\IClen}]{\pinsize 35}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-4.5\IClen}]{\pinsize 36}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-3.5\IClen}]{\pinsize 37}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-2.5\IClen}]{\pinsize 38}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-1.5\IClen}]{\pinsize 39}
+        \pgftext[at=\pgfpoint{9.4\IClen}{-0.5\IClen}]{\pinsize 40}
+        \pgftext[at=\pgfpoint{9.4\IClen}{0.5\IClen}]{\pinsize 41}
+        \pgftext[at=\pgfpoint{9.4\IClen}{1.5\IClen}]{\pinsize 42}
+        \pgftext[at=\pgfpoint{9.4\IClen}{2.5\IClen}]{\pinsize 43}
+        \pgftext[at=\pgfpoint{9.4\IClen}{3.5\IClen}]{\pinsize 44}
+        \pgftext[at=\pgfpoint{9.4\IClen}{4.5\IClen}]{\pinsize 45}
+        \pgftext[at=\pgfpoint{9.4\IClen}{5.5\IClen}]{\pinsize 46}
+        \pgftext[at=\pgfpoint{9.4\IClen}{6.5\IClen}]{\pinsize 47}
+        \pgftext[at=\pgfpoint{9.4\IClen}{7.5\IClen}]{\pinsize 48}
+        \pgftext[at=\pgfpoint{7.5\IClen}{9.4\IClen},rotate=90]{\pinsize 49}
+        \pgftext[at=\pgfpoint{6.5\IClen}{9.4\IClen},rotate=90]{\pinsize 50}
+        \pgftext[at=\pgfpoint{5.5\IClen}{9.4\IClen},rotate=90]{\pinsize 51}
+        \pgftext[at=\pgfpoint{4.5\IClen}{9.4\IClen},rotate=90]{\pinsize 52}
+        \pgftext[at=\pgfpoint{3.5\IClen}{9.4\IClen},rotate=90]{\pinsize 53}
+        \pgftext[at=\pgfpoint{2.5\IClen}{9.4\IClen},rotate=90]{\pinsize 54}
+        \pgftext[at=\pgfpoint{1.5\IClen}{9.4\IClen},rotate=90]{\pinsize 55}
+        \pgftext[at=\pgfpoint{0.5\IClen}{9.4\IClen},rotate=90]{\pinsize 56}
+        \pgftext[at=\pgfpoint{-0.5\IClen}{9.4\IClen},rotate=90]{\pinsize 57}
+        \pgftext[at=\pgfpoint{-1.5\IClen}{9.4\IClen},rotate=90]{\pinsize 58}
+        \pgftext[at=\pgfpoint{-2.5\IClen}{9.4\IClen},rotate=90]{\pinsize 59}
+        \pgftext[at=\pgfpoint{-3.5\IClen}{9.4\IClen},rotate=90]{\pinsize 60}
+        \pgftext[at=\pgfpoint{-4.5\IClen}{9.4\IClen},rotate=90]{\pinsize 61}
+        \pgftext[at=\pgfpoint{-5.5\IClen}{9.4\IClen},rotate=90]{\pinsize 62}
+        \pgftext[at=\pgfpoint{-6.5\IClen}{9.4\IClen},rotate=90]{\pinsize 63}
+        \pgftext[at=\pgfpoint{-7.5\IClen}{9.4\IClen},rotate=90]{\pinsize 64}
+    }
+}
+% END: LDSP tikz_custom_extrapackages

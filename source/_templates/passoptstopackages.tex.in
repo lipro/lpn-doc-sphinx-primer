@@ -1,6 +1,4 @@
-%
 % START: LDSP latex_custom_passoptionstopackages
-%
 \PassOptionsToPackage{{%%
     justification=centering%%
 }}{{caption}}
@@ -23,6 +21,4 @@
     bookmarks=true,%%
     bookmarksnumbered=true,%%
 }}{{hyperref}}
-%
 % END: LDSP latex_custom_passoptionstopackages
-%

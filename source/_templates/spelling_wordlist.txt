@@ -28,10 +28,13 @@ Seealso
 ShareAlike
 SIG
 subsubsections
+SystemC
 Texinfo
 TikZ
+TLM
 Todo
 Trac
+UML
 unindented
 Unported
 utf
