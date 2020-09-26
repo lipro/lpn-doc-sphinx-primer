@@ -1,0 +1,52 @@
+\begin{tikztimingtable}[timing/wscale=2]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    timing/dslope=0.1,
+    timing/.style={x=5ex,y=2ex},
+    x=5ex,
+    timing/rowdist=3ex,
+    timing/name/.style={font=\sffamily\scriptsize},
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\busref{CLK}         & 18{c} \\
+\busref*{FRAME}      & 2u 6L H U \\
+\busref[31::0]{AD}   & 2u 1D{addr} 1U{} 1D{$d_1$} D{$d_1 '$} D{$d_2$} 2D{$d_3$} U \\
+\busref*[3::0]{C/BE} & 2u 1D{0010} 6D{BE\#} U  \\
+\busref*{IRDY}       & UU 4L HLH \\
+\busref*{TRDY}       & UU HLH 3L H \\
+\busref*{DEVSEL}     & 2U 6L H \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \tablerules
+%%  \tablegrid
+
+\begin{pgfonlayer}{background}
+    \begin{scope}[semitransparent,semithick]
+        \vertlines[darkgray,dotted]{1.0,3.0 ,...,16.0}
+    \end{scope}
+\end{pgfonlayer}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

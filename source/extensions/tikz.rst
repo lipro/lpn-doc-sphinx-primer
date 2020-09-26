@@ -278,6 +278,82 @@ CircuiTikZ
 
 :raw-latex:`\clearpage\phantomsection`
 
+TikZ-Timing
+===========
+
+:CTAN Package:   https://ctan.org/pkg/tikz-timing
+:Documentation:  http://mirrors.ctan.org/graphics/pgf/contrib/tikz-timing/tikz-timing.pdf
+:Git Repository: https://sourceforge.net/p/tikz-timing/code/ci/default/tree/
+
+.. only:: html or latex
+
+   :the example: Program counter and instruction tick. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: Program counter and instruction tick
+         :include: tikz/tikztiming/pcinst-tick.tex
+
+   :the example:
+
+      How could one implement a divider-line? [#]_
+
+      .. rst-class:: centered
+      .. tikz:: Signal interconnections and dividers
+         :include: tikz/tikztiming/divider-line.tex
+
+   :the example:
+
+      Arbitrary Colored Data Cell in TikZ-Timing? [#]_
+
+      .. rst-class:: centered
+      .. tikz:: Colorized data cells
+         :include: tikz/tikztiming/colored-cells.tex
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   :the example:
+
+      Serial Peripheral Interface operating modes. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: SPI operating modes
+         :include: tikz/tikztiming/spi-opmodes.tex
+
+   :the example:
+
+      PCI timing diagrams with reference to version 2.2
+      of the PCI specification. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: PCI Read and Interrupt Acknowledge
+         :include: tikz/tikztiming/pci-read-irqack.tex
+
+   :the example:
+
+      Packet decoder timing diagram with reference to the Gennum GN4124
+      to Wishbone bridge user guide. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: GN4124 Packet Decoder Write Request
+         :include: tikz/tikztiming/gn4124-pdwreq.tex
+
+   .. rubric:: Footnotes
+
+   .. [#] Indication of provenance: :stackxtex:`a/30906`
+          (:stackxtex:`sdaau <u/2595>` and :stackxtex:`Count Zero <u/7417>`)
+   .. [#] Indication of provenance: :stackxtex:`a/236091`
+          (:stackxtex:`Symbol 1 <u/51022>`)
+   .. [#] Indication of provenance: :stackxtex:`a/255027`
+          (:stackxtex:`Gonzalo Medina <u/3954>`)
+   .. [#] Indication of provenance: :stackxtex:`a/290027`
+          (:stackxtex:`Habi <u/828>`)
+   .. [#] Indication of provenance:
+          https://nathantypanski.com/blog/2014-10-29-tikz-timing.html
+   .. [#] Indication of provenance:
+          https://github.com/terpstra/gn4124-core/
+
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text
