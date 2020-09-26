@@ -3,7 +3,7 @@
 docutils>=0.16
 sphinx>=3.2
 sphinx_rtd_theme>=0.5
-sphinxcontrib-email>=0.2
+sphinxcontrib-email>=0.3
 sphinxcontrib-bibtex>=1.0
 sphinxcontrib-blockdiag>=2.0
 sphinxcontrib-seqdiag>=2.0
