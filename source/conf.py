@@ -1343,6 +1343,9 @@ latex_show_pagerefs = True
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_additional_files
 #
 # latex_additional_files = [ '{}/_extra/file.ext'.format(DOCSRC), ]
+latex_additional_files = [
+    '{}/tikzuml-v1.0-2016-03-29/tikz-uml.sty'.format(path_templates),
+]
 
 # Documents to append as an appendix to all manuals.
 #
