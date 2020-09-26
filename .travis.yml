@@ -14,6 +14,19 @@ addons:
     packages:
     - librsvg2-bin
     - pdf2svg
+    - unifont
+    - fonts-dejavu
+    - fonts-wqy-microhei
+    - fonts-font-awesome
+    - latexmk
+    - xindy
+    - texlive-latex-extra
+    - texlive-pictures
+    - texlive-xetex
+    - texlive-fonts-recommended
+    - texlive-fonts-extra
+    - texlive-lang-european
+    - texlive-lang-english
     - enchant
     - aspell
     - aspell-en

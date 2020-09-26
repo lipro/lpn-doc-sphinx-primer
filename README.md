@@ -63,6 +63,7 @@ $: sudo apt-get install latexmk xindy unifont fonts-dejavu
 $: sudo apt-get install fonts-wqy-microhei fonts-font-awesome
 $: sudo apt-get install texlive-xetex texlive-pictures
 $: sudo apt-get install texlive-fonts-recommended texlive-fonts-extra
+$: sudo apt-get install texlive-lang-european texlive-lang-english
 $: sudo apt-get install enchant aspell aspell-en aspell-de
 $: sudo apt-get install wamerican-huge wngerman wgerman-medical
 ```
