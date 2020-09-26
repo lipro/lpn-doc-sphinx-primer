@@ -1,0 +1,179 @@
+\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+[node distance=2cm]% automatically spaced 2cm apart from their centres
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+\tikzstyle{startstop} = [% use for start and stop blocks
+    rectangle,
+    rounded corners=0.5cm,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    text badly centered,
+    draw=black,
+    fill=red!30
+]
+\tikzstyle{data} = [% style for data
+    trapezium,
+    trapezium left angle=66,
+    trapezium right angle=-66,
+    minimum width=0,
+    minimum height=1cm,
+    inner sep=0pt,
+    outer sep=0pt,
+    text centered,
+%   text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=white
+]
+\tikzstyle{print} = [% style for print
+    tape,
+    tape bend top=none,
+    minimum width=3cm,
+    minimum height=1cm,
+    inner sep=0pt,
+    outer sep=0pt,
+    text centered,
+%   text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=white
+]
+\tikzstyle{io} = [% specify an input or output box
+    trapezium,
+    trapezium left angle=66,
+    trapezium right angle=-66,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=blue!30
+]
+\tikzstyle{loopevent} = [% style for loop or event blocks
+    chamfered rectangle,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=yellow!30
+]
+\tikzstyle{process instruction} = [% style for process blocks
+    rectangle,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    text badly centered,
+    draw=black,
+    fill=orange!30
+]
+\tikzstyle{process function} = [% style for pre-defined process blocks
+    rectangle split,
+    rectangle split horizontal,
+    rectangle split parts = 3,
+    rectangle split empty part width=-8pt,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+%   text width=3cm,
+    text badly centered,
+    draw=black,
+    fill=orange!30
+]
+\tikzstyle{decision} = [% style for decision blocks
+    diamond,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=green!30
+]
+\tikzstyle{arrow} = [% style for the arrows
+    thick,->,>=stealth
+]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Flowchart
+%%
+
+% our start block
+\node (start) [startstop] {Start};
+
+% add an input block in below the start block
+\node (in1) [io,below of=start,yshift=-0.5cm] {Input};
+
+% add in a process block and a decision block
+\node (ins1) [process instruction,below of=in1] {Instruction 1};
+% yshift should make the gap more regular
+\node (dec1) [decision,below of=ins1,yshift=-0.5cm] {Decision};
+
+% add in two process blocks coming out of the decision block
+\node (ins2a) [process instruction,below of=dec1,yshift=-1.5cm] {
+    Instruction 2a:
+    This is a process with a very long description text within a single paragraph.
+};
+\node (fun2b) [process function,right of=dec1,xshift=2cm] {
+    \nodepart[text width=2.5cm]{two}{Function 2b}
+};
+
+% finish off adding the blocks by adding in an output block and a stop block
+\node (out1) [io,below of=ins2a,yshift=-1cm] {Output};
+\node (stop) [startstop,below of=out1,yshift=-0.5cm] {Stop};
+
+% arrows
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (ins1);
+\draw [arrow] (ins1) -- (dec1);
+% arrows coming out of a decision block need some text (node) with anchor
+\draw [arrow] (dec1) -- node[anchor=east] {yes} (ins2a);
+\draw [arrow] (dec1) -- node[anchor=south] {no} (fun2b);
+% final arrows
+\draw [arrow] (fun2b) |- (ins1); % swap the first dash for a bar symbol which
+                                 % will make the arrow go in a vertical
+                                 % direction before going in a horizontal
+                                 % direction
+\draw [arrow] (ins2a) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+% add in a event block beside with a data block
+\node (ev1) [loopevent,left of=in1,xshift=-2cm] {Event};
+\node (dat1) [data,above of=ev1,yshift=-0.5cm] {CON:};
+\draw [arrow] (dat1) -- (ev1);
+\draw [arrow,dashed] (ev1) -- (in1);
+
+% add in a loop block beside with a print block
+\node (lp1) [loopevent,right of=out1,xshift=2cm] {Loop};
+\node (prn1) [print,below of=lp1,yshift=0.5cm] {PRN:};
+\draw [arrow,dashed] (out1) -- (lp1);
+\draw [arrow] (lp1) -- (prn1);
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :
