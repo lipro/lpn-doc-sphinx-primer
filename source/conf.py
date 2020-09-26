@@ -472,7 +472,8 @@ manpages_url = 'https://manpages.debian.org/{path}'
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-tls_verify
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-tls_cacerts
 #
-#tls_verify = False
+# tls_verify = True
+# tls_verify = False
 
 # some configuration for linkcheck builder
 #   noticed that we're getting false-positive link errors on different server,
@@ -486,11 +487,23 @@ manpages_url = 'https://manpages.debian.org/{path}'
 #
 #linkcheck_ignore = ['http://localhost:\d+/']
 linkcheck_ignore = [
+#   'http://mirrors.ctan.org/',    # Causes SSL Server Error: CERTIFICATE_VERIFY_FAILED
+#   'http://www.idpf.org/',        # Causes 500 Server Error: internal server error
 #   'https://docs.bareos.org/',    # Causes 503 Server Error: service unavailable
     'https://www.amazon.com/dp/',  # Causes 503 Server Error: service unavailable
     'http://localhost:\d+/',
 ]
 
+# The number of times the linkcheck builder will attempt to check a URL before
+# declaring it broken. Defaults to 1 attempt.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-linkcheck_retries
+#
+# linkcheck_retries = 1
+linkcheck_retries = 5
+
+# A timeout value, in seconds, for the linkcheck builder. The default is to use
+# Python’s global socket timeout.
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-linkcheck_timeout
 #
