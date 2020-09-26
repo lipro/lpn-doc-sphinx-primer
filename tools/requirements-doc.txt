@@ -12,7 +12,7 @@ sphinxcontrib-nwdiag>=2.0
 sphinxcontrib-programoutput>=0.16
 sphinxcontrib-spelling>=5.4
 sphinxcontrib-svg2pdfconverter>=1.1
-sphinxcontrib-tikz>=0.4
+# must fixed, see below: sphinxcontrib-tikz>=0.4
 sphinx-tabs>=1.3
 sphinx-panels>=0.5
 
@@ -26,6 +26,10 @@ git+https://github.com/return42/linuxdoc.git/@master#sha1=70673dc&egg=linuxdoc
 # mathematical/scientific extensions
 matplotlib>=3.3
 numpy>=1.19
+
+
+# ... use a fixed version to support a TikZ timing table environment too
+git+https://bitbucket.org/rexut/sphinxcontrib-tikz.git/@tikztiming#sha1=0fcc4ac&egg=sphinxcontrib-tikz
 
 
 # ... enables you to use inline syntax highlighting in Sphinx.
