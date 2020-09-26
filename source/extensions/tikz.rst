@@ -192,6 +192,92 @@ PGF/TikZ
 
 :raw-latex:`\clearpage\phantomsection`
 
+CircuiTikZ
+==========
+
+:CTAN Package:   https://ctan.org/pkg/circuitikz
+:Documentation:  http://mirrors.ctan.org/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf
+:Git Repository: https://github.com/circuitikz/circuitikz
+
+.. only:: html or latex
+
+   :the example: Full differential Op-Amp stabilization principles. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: Full differential Op-Amp stabilization principles
+         :include: tikz/circuitikz/opamp-fullstab.tex
+
+   :the example: Inverting Op-Amp principles. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: Inverting Op-Amp principles
+         :include: tikz/circuitikz/opamp-inv.tex
+         :libs: arrows.meta,decorations.markings
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   :the example: Drawing MOSFET in TikZ. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: General n-type MOSFET
+         :include: tikz/circuitikz/nmos-fet.tex
+         :libs: patterns
+
+   :the example: NE555 timer as "Dee-Dah" siren. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: NE555 timer as "Dee-Dah" siren
+         :include: tikz/circuitikz/ne555-deedah.tex
+         :libs: arrows.meta,decorations.markings
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   :the example: Breadboard with aligned DIP chips. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: Breadboard with NE555 timer as "Dee-Dah" siren
+         :include: tikz/circuitikz/breadboard.tex
+         :libs: arrows.meta,backgrounds,calc,decorations.pathmorphing
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   :the example: 64 Lead Quad Flat Package. [#]_
+
+      .. rst-class:: centered
+      .. tikz:: LPC2144/2146/2148 pin assignment on LQFP64
+         :include: tikz/circuitikz/lpc214x-lqfp64.tex
+
+      .. pull-quote::
+
+         .. attention::
+
+            Native support only since CircuiTikZ V0.9 (Oct 2019).
+
+            .. seealso::
+
+	       `CircuiTikZ change log`_
+
+   .. rubric:: Footnotes
+
+   .. [#] Indication of provenance: :stackxtex:`q/82797`
+          (:stackxtex:`Kit <u/791>`)
+   .. [#] Indication of provenance: :stackxtex:`a/441787`
+          (:stackxtex:`J Leon V. <u/154390>`, BSD, MIT, Beerware licences)
+   .. [#] Indication of provenance:
+          http://wesleythoneycutt.com/drawing-mosfet-in-tikz/
+          (by Wesley T. Honeycutt)
+   .. [#] Indication of provenance: :stackxtex:`a/435123`
+          (:stackxtex:`J Leon V. <u/154390>`, BSD, MIT, Beerware licences)
+   .. [#] Indication of provenance: :stackxtex:`q/493239`
+          (:stackxtex:`Anshul Singhvi <u/162839>`)
+   .. [#] Indication of provenance: :stackxtex:`a/202449`
+          (:stackxtex:`John Kormylo <u/34505>`)
+
+.. _`CircuiTikZ change log`:
+   https://github.com/circuitikz/circuitikz/blob/master/CHANGELOG.md
+
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text
