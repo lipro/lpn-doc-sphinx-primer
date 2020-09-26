@@ -22,6 +22,7 @@ addons:
     - xindy
     - texlive-latex-extra
     - texlive-pictures
+    - texlive-science
     - texlive-xetex
     - texlive-fonts-recommended
     - texlive-fonts-extra
