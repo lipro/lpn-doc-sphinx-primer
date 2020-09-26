@@ -96,8 +96,8 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
          The example above comes from the `Control system principles`_
          web page and processed the following TikZ file content:
 
-         .. literalinclude:: tikz/srcfile/ctrloop.tikz
-            :caption: TikZ example file (tikz/srcfile/ctrloop.tikz)
+         .. literalinclude:: tikz/srcfile/ctrloop.tex
+            :caption: TikZ example file (tikz/srcfile/ctrloop.tex)
             :end-before: %Local variables:
             :language: latex
             :linenos:
