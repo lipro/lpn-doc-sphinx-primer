@@ -34,6 +34,7 @@ import git
 import sys
 import os
 
+logcfg = sphinx.util.logging.getLogger(__name__)
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if "DOCSRC" not in os.environ:
@@ -93,6 +94,8 @@ release = str(semv)
 # Single target file names
 namespace = 'net.li-pro.doc.sphinx-primer.' + version + '.'
 basename = 'lpn-doc-sphinx-primer'
+
+logcfg.info(project + ' ' + release, color='yellow')
 
 
 # -- General configuration ---------------------------------------------------
@@ -204,19 +207,31 @@ extensions = [
 
 # -- Specific configuration --------------------------------------------------
 
+
+path_extra = os.path.join(DOCSRC, '_extra')
+logcfg.info('EXTRAS     path is: "{}"'.format(path_extra), color='green')
+
+path_images = os.path.join(DOCSRC, '_images')
+logcfg.info('IMAGES     path is: "{}"'.format(path_images), color='green')
+
+path_templates = os.path.join(DOCSRC, '_templates')
+logcfg.info('TEMPLATE   path is: "{}"'.format(path_templates), color='green')
+
+path_static = os.path.join(DOCSRC, '_static')
+logcfg.info('STATIC     path is: "{}"'.format(path_static), color='green')
+
+path_dejavu = os.path.join(path_static, 'fonts', 'DejaVu')
+logcfg.info('DejaVu     path is: "{}"'.format(path_dejavu), color='green')
+
+path_wenquanyi = os.path.join(path_static, 'fonts', 'WenQuanYi')
+logcfg.info('WenQuanYi  path is: "{}"'.format(path_wenquanyi), color='green')
+
 if tags.has('release'):  # pylint: disable=undefined-variable
     is_release = True
     docs_title = 'Docs / %s' %(version)
 else:
     is_release = False
     docs_title = 'Docs / Latest'
-
-path_extra = os.path.join(DOCSRC, '_extra')
-path_images = os.path.join(DOCSRC, '_images')
-path_templates = os.path.join(DOCSRC, '_templates')
-path_static = os.path.join(DOCSRC, '_static')
-path_dejavu = os.path.join(path_static, 'fonts', 'DejaVu')
-path_wenquanyi = os.path.join(path_static, 'fonts', 'WenQuanYi')
 
 # Use the Sphinx panel extension only when it is really applicable, quite new.
 # There are some cross side effects with the Sphinx tabs extension.
