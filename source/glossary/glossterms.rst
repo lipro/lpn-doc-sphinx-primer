@@ -476,6 +476,7 @@ Technologies
 
          - :wikien:`TeX`
 
+   :abbr:`CORBA (Common Object Request Broker Architecture)`
    :abbr:`MOF (Meta-Object Facility)`
       `MOF`_ is an |OMG| standard for model-driven engineering. Its purpose
       is to provide a type system for entities in the |CORBA| architecture
@@ -548,6 +549,8 @@ Technologies
          - `QVT 1.0`_: initially standardized in 2008
            *MOF 2.0 Query/View/Transformation Specification 1.0 2008/04/03*
 
+   :abbr:`SysML (Systems Modeling Language)`
+   :abbr:`BPMN (Business Process Model and Notation)`
    :abbr:`UML (Unified Modeling Language)`
       `UML`_ is a general-purpose, developmental, modeling language in the
       field of software engineering that is intended to provide a standard

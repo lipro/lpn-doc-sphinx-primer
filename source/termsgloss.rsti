@@ -41,6 +41,8 @@
 .. |Badges|                     replace:: :term:`Badges`
 .. |badges|                     replace:: :term:`badges<Badges>`
 .. |BibTeX|                     replace:: :term:`BibTeX`
+.. |BPMN|                       replace:: :term:`BPMN`
+.. |CORBA|                      replace:: :term:`CORBA`
 .. |CSS|                        replace:: :term:`CSS`
 .. |Enchant|                    replace:: :term:`Enchant`
 .. |EPUB|                       replace:: :term:`EPUB`
@@ -53,6 +55,7 @@
 .. |PNG|                        replace:: :term:`PNG`
 .. |QVT|                        replace:: :term:`QVT`
 .. |SVG|                        replace:: :term:`SVG`
+.. |SysML|                      replace:: :term:`SysML`
 .. |TikZ|                       replace:: :term:`TikZ`
 .. |TikZ-UML|                   replace:: :term:`TikZ-UML`
 .. |TeX|                        replace:: :term:`TeX`
@@ -67,9 +70,7 @@
 .. |AT&T|       replace:: :abbr:`AT&T (American Telephone and Telegraph Company)`
 .. |BibTeXML|   replace:: :abbr:`BibTeXML (BibTeX as XML)`
 .. |BMP|        replace:: :abbr:`BMP (Bitmap Format)`
-.. |BPMN|       replace:: :abbr:`BPMN (Business Process Model and Notation)`
 .. |CLI|        replace:: :abbr:`CLI (Command Line Interface)`
-.. |CORBA|      replace:: :abbr:`CORBA (Common Object Request Broker Architecture)`
 .. |COSE|       replace:: :abbr:`COSE (Common Open Software Environment)`
 .. |DIB|        replace:: :abbr:`DIB (Device Independent Bitmap Format)`
 .. |BMP/DIB|    replace:: |BMP|/|DIB|
@@ -102,7 +103,6 @@
 .. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
 .. |SQL|        replace:: :abbr:`SQL (Structured Query Language)`
 .. |SUS|        replace:: :abbr:`SUS (Single UNIX Specification)`
-.. |SysML|      replace:: :abbr:`SysML (Systems Modeling Language)`
 .. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
 .. |UI|         replace:: :abbr:`UI (User Interface)`
 .. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
