@@ -63,7 +63,7 @@
 .. toctree::
    :caption: Table of Contents
    :numbered: 3
-   :maxdepth: 3
+   :maxdepth: 4
    :hidden:
    :includehidden:
 
