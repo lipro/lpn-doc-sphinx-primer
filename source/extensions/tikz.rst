@@ -195,54 +195,65 @@ PGF/TikZ
 CircuiTikZ
 ==========
 
-:CTAN Package:   https://ctan.org/pkg/circuitikz
-:Documentation:  http://mirrors.ctan.org/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf
-:Git Repository: https://github.com/circuitikz/circuitikz
+:Homepage:       `CircuiTikZ Home`_
+:CTAN Package:   `CircuiTikZ Package`_
+:Documentation:  `CircuiTikZ Manual`_
+:Git Repository: `CircuiTikZ Master Branch`_
+
+|CircuiTikZ| provides a set of macros for naturally typesetting electrical
+and electronic networks, designed as a tool that is easy to use by native
+to a lean |LaTeX| syntax. It has therefore been based on the very impressive
+|PGF/TikZ| package.
 
 .. only:: html or latex
 
-   :the example: Full differential Op-Amp stabilization principles. [#]_
+   :the examples:
 
+      * Full differential Op-Amp stabilization principles [#]_, in
+        :numref:`tikz/circuitikz/opamp-fullstab`.
+      * Inverting Op-Amp principles [#]_, in
+        :numref:`tikz/circuitikz/opamp-inv`.
+      * Drawing MOSFET chip structure in TikZ [#]_, in
+        :numref:`tikz/circuitikz/nmos-fet`.
+      * NE555 timer as "Dee-Dah" siren [#]_, in
+        :numref:`tikz/circuitikz/ne555-deedah`.
+      * Breadboard with aligned DIP chips [#]_, in
+        :numref:`tikz/circuitikz/breadboard`.
+      * 64 Lead Quad Flat Package [#]_, in
+        :numref:`tikz/circuitikz/lpc214x-lqfp64`.
+
+      .. _tikz/circuitikz/opamp-fullstab:
       .. rst-class:: centered
       .. tikz:: Full differential Op-Amp stabilization principles
          :include: tikz/circuitikz/opamp-fullstab.tex
 
-   :the example: Inverting Op-Amp principles. [#]_
-
+      .. _tikz/circuitikz/opamp-inv:
       .. rst-class:: centered
       .. tikz:: Inverting Op-Amp principles
          :include: tikz/circuitikz/opamp-inv.tex
          :libs: arrows.meta,decorations.markings
 
-   :raw-latex:`\clearpage\phantomsection`
-
-   :the example: Drawing MOSFET in TikZ. [#]_
-
+      .. _tikz/circuitikz/nmos-fet:
       .. rst-class:: centered
       .. tikz:: General n-type MOSFET
          :include: tikz/circuitikz/nmos-fet.tex
          :libs: patterns
 
-   :the example: NE555 timer as "Dee-Dah" siren. [#]_
-
+      .. _tikz/circuitikz/ne555-deedah:
       .. rst-class:: centered
       .. tikz:: NE555 timer as "Dee-Dah" siren
          :include: tikz/circuitikz/ne555-deedah.tex
          :libs: arrows.meta,decorations.markings
 
-   :raw-latex:`\clearpage\phantomsection`
-
-   :the example: Breadboard with aligned DIP chips. [#]_
-
+      .. _tikz/circuitikz/breadboard:
       .. rst-class:: centered
       .. tikz:: Breadboard with NE555 timer as "Dee-Dah" siren
          :include: tikz/circuitikz/breadboard.tex
          :libs: arrows.meta,backgrounds,calc,decorations.pathmorphing
 
-   :raw-latex:`\clearpage\phantomsection`
+      :raw-latex:`\clearpage\phantomsection`
 
-   :the example: 64 Lead Quad Flat Package. [#]_
-
+      .. _tikz/circuitikz/lpc214x-lqfp64:
       .. rst-class:: centered
       .. tikz:: LPC2144/2146/2148 pin assignment on LQFP64
          :include: tikz/circuitikz/lpc214x-lqfp64.tex
@@ -255,7 +266,7 @@ CircuiTikZ
 
             .. seealso::
 
-	       `CircuiTikZ change log`_
+               `CircuiTikZ change log`_
 
    .. rubric:: Footnotes
 
