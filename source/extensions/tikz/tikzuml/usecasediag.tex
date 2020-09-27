@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+
+    \begin{umlsystem}[x=4, fill=red!10]{The system}
+        \umlusecase{use case 1} % usecase-1
+        \umlusecase[y=-2]{use case 2} % usecase-2
+        \umlusecase[y=-4]{use case 3} % usecase-3
+        \umlusecase[x=4, y=-2, width=1.5cm]{ % usecase-4
+            \shortstack{use case 4\\\footnotesize{on 2 lines}}
+        }
+        \umlusecase[x=6, fill=green!20]{use case 5} % usecase-5
+        \umlusecase[x=6, y=-4]{use case 6} % usecase-6
+    \end{umlsystem}
+
+    \umlactor{user}
+    \umlactor[y=-3]{subuser}
+    \umlactor[x=14, y=-1.5]{admin}
+
+    \umlinherit{subuser}{user}
+    \umlassoc{user}{usecase-1}
+    \umlassoc{subuser}{usecase-2}
+    \umlassoc{subuser}{usecase-3}
+    \umlassoc{admin}{usecase-5}
+    \umlassoc{admin}{usecase-6}
+    \umlinherit{usecase-2}{usecase-1}
+    \umlVHextend{usecase-5}{usecase-4}
+    \umlinclude[name=incl]{usecase-3}{usecase-4}
+
+    \umlnote[x=7, y=-7]{incl-1}{
+        \footnotesize{note on include dependency}
+    }
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

@@ -354,6 +354,50 @@ TikZ-Timing
 
 :raw-latex:`\clearpage\phantomsection`
 
+TikZ-UML
+========
+
+:Homepage:       https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?lang=en
+:Documentation:  https://perso.ensta-paris.fr/~kielbasi/tikzuml/var/files/doc/tikzumlmanual.pdf
+
+.. only:: html or latex
+
+   :the examples:
+
+      * Use case diagram in :numref:`tikz/tikzuml/usecasediag`.
+      * Class diagram. in :numref:`tikz/tikzuml/classdiag`
+      * State-machine diagram. in :numref:`tikz/tikzuml/statediag`
+      * Sequence diagram in :numref:`tikz/tikzuml/seqdiag`.
+      * Component diagram in :numref:`tikz/tikzuml/componentdiag`
+        (still in progress).
+
+      .. _tikz/tikzuml/usecasediag:
+      .. rst-class:: centered
+      .. tikz:: Use case diagram example
+         :include: tikz/tikzuml/usecasediag.tex
+
+      .. _tikz/tikzuml/classdiag:
+      .. rst-class:: centered
+      .. tikz:: Class diagram example
+         :include: tikz/tikzuml/classdiag.tex
+
+      .. _tikz/tikzuml/statediag:
+      .. rst-class:: centered
+      .. tikz:: State-machine diagram example
+         :include: tikz/tikzuml/statediag.tex
+
+      .. _tikz/tikzuml/seqdiag:
+      .. rst-class:: centered
+      .. tikz:: Sequence diagram example
+         :include: tikz/tikzuml/seqdiag.tex
+
+      .. _tikz/tikzuml/componentdiag:
+      .. rst-class:: centered
+      .. tikz:: Component diagram example
+         :include: tikz/tikzuml/componentdiag.tex
+
+:raw-latex:`\clearpage\phantomsection`
+
 .. Local variables:
    coding: utf-8
    mode: text
