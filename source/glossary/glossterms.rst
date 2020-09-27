@@ -418,6 +418,18 @@ Technologies
 
          - :wikien:`PGF/TikZ`
 
+   TikZ-UML
+      `TikZ-UML`_ is a |LaTeX| package with a set of specialized commands and
+      environments in front of the wide range of possibilities given by the
+      |PGF/TikZ| library to define a set of specific |UML| diagrams: class
+      diagrams, use case diagrams, state-machine diagrams, sequence diagrams
+      and component diagrams.
+
+      .. seealso::
+
+         - `TikZ-UML Project`_
+         - `TikZ-UML User Guide`_
+
    :abbr:`PNG (Portable Network Graphics)`
      `PNG`_ is a raster-graphics file format that supports lossless data
      compression. :abbr:`PNG (Portable Network Graphics)` was developed as an
@@ -463,6 +475,141 @@ Technologies
       .. seealso::
 
          - :wikien:`TeX`
+
+   :abbr:`MOF (Meta-Object Facility)`
+      `MOF`_ is an |OMG| standard for model-driven engineering. Its purpose
+      is to provide a type system for entities in the |CORBA| architecture
+      and a set of interfaces through which those types can be created and
+      manipulated.
+
+      .. seealso::
+
+         - |OCL| and |QVT|
+         - :wikien:`Meta-Object Facility`
+         - (`MOF 2.5.1`_): initially standardized in 2016
+           **OMG Meta Object Facility Core Specification 2.5.1 2016/10/01**
+         - (`MOF 2.5`_): initially standardized in 2015
+           *OMG Meta Object Facility Core Specification 2.5 2015/06/05*
+         - (`ISO 19508:2014`_): **MOF 2.4.2** standard formally published in 2014
+           **ISO/IEC 19508:2014(E) 2014/04/05**
+         - (`MOF 2.4.2`_): initially standardized in 2014
+           *OMG Meta Object Facility Core Specification 2.4.2 2014/04/03*
+         - (`MOF 2.4.1`_): initially standardized in 2013
+           *OMG Meta Object Facility Core Specification 2.4.1 2013/06/01*
+         - (`MOF 2.0`_): initially standardized in 2006
+           *Meta Object Facility Core Specification 2.0 2006/01/01*
+         - (`ISO 19502:2005`_): *MOF 1.4.1* standard formally published in 2005
+           *ISO/IEC 19502:2005(E) 2005/05/05*
+         - (`MOF 1.4`_): initially standardized in 2002
+           *Meta Object Facility Specification 1.4 2002/04/03*
+
+   :abbr:`OCL (Object Constraint Language)`
+      `OCL`_ is a declarative language describing rules applying to |UML|
+      models and is now part of the |UML| standard but as separate document.
+      Initially, :abbr:`OCL (Object Constraint Language)` was merely a
+      formal specification language extension for |UML|. :abbr:`OCL (Object
+      Constraint Language)` may now be used with any |MOF| meta-model,
+      including |UML|, and is a precise text language that provides constraint
+      and object query expressions on any such kind of meta-model that cannot
+      otherwise be expressed by diagrammatic notation. :abbr:`OCL (Object
+      Constraint Language)` is a key component of the new OMG standard
+      recommendation for transforming models, the |QVT| specification.
+
+      .. seealso::
+
+         - |UML|, |MOF| and |QVT|
+         - :wikien:`Object Constraint Language`
+         - (`OCL 2.4`_): standard ratified in 2014
+           **Object Constraint Language 2.4 2014/02/03**
+         - (`ISO 19507:2012`_): **OCL 2.3.1** standard formally published in 2012
+           **ISO/IEC 19507:2012(E) 2012/05/09**
+         - (`OCL 2.3.1`_): standard ratified in 2011
+           *Object Constraint Language 2.3.1 2012/01/01*
+         - (`OCL 2.2`_): standard ratified in 2010
+           *Object Constraint Language 2.2 2010/02/01*
+         - (`OCL 2.0`_): standard ratified in 2006
+           *Object Constraint Language 2.0 2006/05/01*
+         - (`UML 1.3`_, *Chapter 7*): initially standardized in 2000
+
+   :abbr:`QVT (Query/View/Transformation)`
+      `QVT`_ is a standard set of languages for model transformation defined
+      by the |OMG|.
+
+      .. seealso::
+
+         - |OCL| and |MOF|
+         - :wikien:`QVT`
+         - (`QVT 1.3`_): standard ratified in 2016
+           **MOF 2.0 Query/View/Transformation Specification 1.3 2016/06/03**
+         - (`QVT 1.2`_): standard ratified in 2015
+           *MOF 2.0 Query/View/Transformation Specification 1.2 2015/02/01*
+         - (`QVT 1.1`_): standard ratified in 2011
+           *MOF 2.0 Query/View/Transformation Specification 1.1 2011/01/01*
+         - (`QVT 1.0`_): initially standardized in 2008
+           *MOF 2.0 Query/View/Transformation Specification 1.0 2008/04/03*
+
+   :abbr:`UML (Unified Modeling Language)`
+      `UML`_ is a general-purpose, developmental, modeling language in the
+      field of software engineering that is intended to provide a standard
+      way to visualize the design of a system. In 1997, :abbr:`UML (Unified
+      Modeling Language)` was adopted as a standard by the |OMG|, and has
+      been managed by this organization ever since. In 2005, :abbr:`UML
+      (Unified Modeling Language)` was also published by |ISO| as an
+      approved standard.
+
+      In 2007 with the release of UML 2.1.2, two new significant
+      specifications for certain technology areas have split off.
+      These are: |SysML|, |BPMN|.
+
+      .. seealso::
+
+         - |OCL|, |MOF| and |QVT|
+         - :wikien:`Unified Modeling Language`
+         - (`UML 2.5.1`_): standard adopted from 2.5 in 2017
+           **OMG Unified Modeling Language 2.5.1 2017/12/05**
+         - (`UML 2.5`_): standard released in 2012 and ratified in 2015
+           *OMG Unified Modeling Language 2.5 2015/03/01*
+         - (`ISO 19505-1:2012`_ and `ISO 19505-2:2012`_):
+           **UML 2.4.1** standard formally published in 2012
+           **ISO/IEC 19505-1:2012(E) 2012/05/06** and
+           **ISO/IEC 19505-2:2012(E) 2012/05/07**
+         - (`UML 2.4.1`_ and `UMLDI 1.0`_): standard ratified in 2011
+           *OMG UML Superstructure Specification 2.4.1 2011/08/06*,
+           *OMG UML Infrastructure Specification 2.4.1 2011/08/05* and
+           *OMG UML Diagram Interchange 1.0 2006/04/04*
+         - (`UML 2.4`_ and `UMLDI 1.0`_): standard ratified in 2011
+           *OMG UML Superstructure Specification 2.4 2010/11/14*,
+           *OMG UML Infrastructure Specification 2.4 2010/11/16* and
+           *OMG UML Diagram Interchange 1.0 2006/04/04*
+         - (`UML 2.3`_ and `UMLDI 1.0`_): standard ratified in 2010
+           *OMG UML Superstructure Specification 2.3 2010/05/05*,
+           *OMG UML Infrastructure Specification 2.3 2010/05/03* and
+           *OMG UML Diagram Interchange 1.0 2006/04/04*
+         - (`UML 2.2`_ and `UMLDI 1.0`_): standard ratified in 2009
+           *OMG UML Superstructure Specification 2.2 2009/02/02*,
+           *OMG UML Infrastructure Specification 2.2 2009/02/04* and
+           *OMG UML Diagram Interchange 1.0 2006/04/04*
+         - (`UML 2.1.2`_ and `UMLDI 1.0`_): standard ratified in 2007
+           *OMG UML Superstructure Specification 2.1.2 2007/11/02*,
+           *OMG UML Infrastructure Specification 2.1.2 2007/11/04* and
+           *OMG UML Diagram Interchange 1.0 2006/04/04*
+         - (`UML 2.1.1`_ and `UMLDI 1.0`_): standard ratified in 2007
+           *OMG UML Superstructure Specification 2.1.1 2007/02/05*,
+           *OMG UML Infrastructure Specification 2.1.1 2007/02/06* and
+           *OMG UML Diagram Interchange 1.0 2006/04/04*
+         - (`UML 2.0`_): standard ratified in 2005
+           *OMG UML Superstructure Specification 2.0 2005/07/04* and
+           *OMG UML Infrastructure Specification 2.0 2005/07/05*
+         - (`ISO 19501:2005`_): *UML 1.4.2* standard formally published in 2005
+           *ISO/IEC 19501:2005(E) 2005/04/01*
+         - (`UML 1.5`_): standard ratified in 2003
+           *OMG Unified Modeling Language Specification 1.5 2003/03/01*
+         - (`UML 1.4`_): standard ratified in 2001
+           *OMG Unified Modeling Language Specification 1.4 2001/09/07*
+         - (`UML 1.3`_): standard ratified in 2000
+           *OMG Unified Modeling Language Specification 1.3 2000/03/01*
+         - (`UML 1.2`_): standard ratified in 1999
+         - (`UML 1.1`_): initially standardized in 1997
 
    :abbr:`XML (Extensible Markup Language)`
       `XML`_ is a markup language that defines a set of rules for encoding

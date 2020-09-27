@@ -52,6 +52,9 @@
 .. _`LaTeX`: https://www.latex-project.org/
 .. _`PDF`: https://www.pdfa.org/
 .. _`PGF/TikZ`: https://github.com/pgf-tikz/pgf
+.. _`TikZ-UML`: `TikZ-UML Project`_
+.. _`TikZ-UML Project`: https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?lang=en
+.. _`TikZ-UML User Guide`: https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?id=doc
 .. _`PNG`: https://www.w3.org/Graphics/PNG/
 .. _`PNG 1.2`: https://www.w3.org/TR/2003/REC-PNG-20031110/
 .. _`PNG 1.0`: https://svgwg.org/
@@ -61,6 +64,45 @@
 .. _`SVG 1.1`: https://www.w3.org/TR/2003/REC-SVG11-20030114/
 .. _`SVG 1.0`: https://www.w3.org/TR/2001/REC-SVG-20010904/
 .. _`TeX`: https://tug.org/
+.. _`MOF`: https://www.omg.org/spec/MOF/
+.. _`MOF 2.5.1`: https://www.omg.org/spec/MOF/2.5.1
+.. _`MOF 2.5`: https://www.omg.org/spec/MOF/2.5
+.. _`ISO 19508:2014`: https://www.omg.org/spec/MOF/ISO/19508/PDF
+.. _`MOF 2.4.2`: https://www.omg.org/spec/MOF/2.4.2
+.. _`MOF 2.4.1`: https://www.omg.org/spec/MOF/2.4.1
+.. _`MOF 2.0`: https://www.omg.org/spec/MOF/2.0
+.. _`ISO 19502:2005`: https://www.omg.org/spec/MOF/ISO/19502/PDF
+.. _`MOF 1.4`: https://www.omg.org/spec/MOF/1.4
+.. _`OCL`: https://www.omg.org/spec/OCL/
+.. _`OCL 2.4`: https://www.omg.org/spec/OCL/2.4
+.. _`ISO 19507:2012`: https://www.omg.org/spec/OCL/ISO/19507/PDF
+.. _`OCL 2.3.1`: https://www.omg.org/spec/OCL/2.3.1
+.. _`OCL 2.2`: https://www.omg.org/spec/OCL/2.2
+.. _`OCL 2.0`: https://www.omg.org/spec/OCL/2.0
+.. _`QVT`: https://www.omg.org/spec/QVT/
+.. _`QVT 1.3`: https://www.omg.org/spec/QVT/1.3
+.. _`QVT 1.2`: https://www.omg.org/spec/QVT/1.2
+.. _`QVT 1.1`: https://www.omg.org/spec/QVT/1.1
+.. _`QVT 1.0`: https://www.omg.org/spec/QVT/1.0
+.. _`UML`: https://www.uml.org/
+.. _`UML 2.5.1`: https://www.omg.org/spec/UML/2.5.1
+.. _`UML 2.5`: https://www.omg.org/spec/UML/2.5
+.. _`ISO 19505-1:2012`: https://www.omg.org/spec/UML/ISO/19505-1/PDF
+.. _`ISO 19505-2:2012`: https://www.omg.org/spec/UML/ISO/19505-2/PDF
+.. _`UML 2.4.1`: https://www.omg.org/spec/UML/2.4.1
+.. _`UML 2.4`: https://www.omg.org/spec/UML/2.4
+.. _`UML 2.3`: https://www.omg.org/spec/UML/2.3
+.. _`UML 2.2`: https://www.omg.org/spec/UML/2.2
+.. _`UML 2.1.2`: https://www.omg.org/spec/UML/2.1.2
+.. _`UML 2.1.1`: https://www.omg.org/spec/UML/2.1.1
+.. _`UML 2.0`: https://www.omg.org/spec/UML/2.0
+.. _`UML 1.5`: https://www.omg.org/spec/UML/1.5
+.. _`ISO 19501:2005`: https://www.omg.org/spec/UML/ISO/19501/PDF
+.. _`UML 1.4`: https://www.omg.org/spec/UML/1.4
+.. _`UML 1.3`: https://www.omg.org/spec/UML/1.3
+.. _`UML 1.2`: https://www.omg.org/spec/UML/1.2
+.. _`UML 1.1`: https://www.omg.org/spec/UML/1.1
+.. _`UMLDI 1.0`: https://www.omg.org/spec/UMLDI/1.0
 .. _`XML`: https://www.w3.org/XML/Core/
 .. _`XML 1.1 Second Edition`: https://www.w3.org/TR/2006/REC-xml11-20060816/
 .. _`XML 1.1`: https://www.w3.org/TR/2004/REC-xml11-20040204/

@@ -45,13 +45,18 @@
 .. |Enchant|                    replace:: :term:`Enchant`
 .. |EPUB|                       replace:: :term:`EPUB`
 .. |HTML|                       replace:: :term:`HTML`
+.. |MOF|                        replace:: :term:`MOF`
+.. |OCL|                        replace:: :term:`OCL`
 .. |PDF|                        replace:: :term:`PDF`
 .. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
 .. |PGF|                        replace:: :term:`PGF`
 .. |PNG|                        replace:: :term:`PNG`
+.. |QVT|                        replace:: :term:`QVT`
 .. |SVG|                        replace:: :term:`SVG`
 .. |TikZ|                       replace:: :term:`TikZ`
+.. |TikZ-UML|                   replace:: :term:`TikZ-UML`
 .. |TeX|                        replace:: :term:`TeX`
+.. |UML|                        replace:: :term:`UML`
 .. |XML|                        replace:: :term:`XML`
 
 .. Abbreviations:
@@ -62,7 +67,9 @@
 .. |AT&T|       replace:: :abbr:`AT&T (American Telephone and Telegraph Company)`
 .. |BibTeXML|   replace:: :abbr:`BibTeXML (BibTeX as XML)`
 .. |BMP|        replace:: :abbr:`BMP (Bitmap Format)`
+.. |BPMN|       replace:: :abbr:`BPMN (Business Process Model and Notation)`
 .. |CLI|        replace:: :abbr:`CLI (Command Line Interface)`
+.. |CORBA|      replace:: :abbr:`CORBA (Common Object Request Broker Architecture)`
 .. |COSE|       replace:: :abbr:`COSE (Common Open Software Environment)`
 .. |DIB|        replace:: :abbr:`DIB (Device Independent Bitmap Format)`
 .. |BMP/DIB|    replace:: |BMP|/|DIB|
@@ -88,12 +95,14 @@
 .. |MIT|        replace:: :abbr:`MIT (Massachusetts Institute of Technology)`
 .. |MS-DOS|     replace:: :abbr:`MS-DOS (Microsoft Disk Operating System)`
 .. |OEB|        replace:: :abbr:`OEB (Open eBook)`
+.. |OMG|        replace:: :abbr:`OMG (Object Management Group)`
 .. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
 .. |PS|         replace:: :abbr:`PS (PostScript)`
 .. |RFC|        replace:: :abbr:`RFC (Request for Comments)`
 .. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
 .. |SQL|        replace:: :abbr:`SQL (Structured Query Language)`
 .. |SUS|        replace:: :abbr:`SUS (Single UNIX Specification)`
+.. |SysML|      replace:: :abbr:`SysML (Systems Modeling Language)`
 .. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
 .. |UI|         replace:: :abbr:`UI (User Interface)`
 .. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
