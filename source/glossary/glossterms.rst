@@ -418,6 +418,16 @@ Technologies
 
          - :wikien:`PGF/TikZ`
 
+   TikZ-Timing
+      `TikZ-Timing`_ is a |LaTeX| package which provides macros and an
+      environment to generate timing diagrams (digital waveforms). The |TikZ|
+      package is used to produce the graphics.
+
+      .. seealso::
+
+         - `TikZ-Timing Package`_
+         - `TikZ-Timing User Guide`_
+
    TikZ-UML
       `TikZ-UML`_ is a |LaTeX| package with a set of specialized commands and
       environments in front of the wide range of possibilities given by the

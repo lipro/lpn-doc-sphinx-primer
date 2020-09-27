@@ -57,6 +57,7 @@
 .. |SVG|                        replace:: :term:`SVG`
 .. |SysML|                      replace:: :term:`SysML`
 .. |TikZ|                       replace:: :term:`TikZ`
+.. |TikZ-Timing|                replace:: :term:`TikZ-Timing`
 .. |TikZ-UML|                   replace:: :term:`TikZ-UML`
 .. |TeX|                        replace:: :term:`TeX`
 .. |UML|                        replace:: :term:`UML`
