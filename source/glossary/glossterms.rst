@@ -237,9 +237,9 @@ Programming Languages
          - :wikien:`ECMAScript`
          - :wikien:`ECMAScript engine`
          - :wikien:`List of ECMAScript engines`
-         - (ES Edition 11): standard ratified in 2020 as **ECMA-262-11:2020**
-         - (ES Edition 5.1): standard ratified in 2011 as *ISO/IEC 16262:2011*
-         - (ES Edition 2): initially standardized in 1998 as *ISO/IEC 16262:1998*
+         - ES Edition 11: standard ratified in 2020 as **ECMA-262-11:2020**
+         - ES Edition 5.1: standard ratified in 2011 as *ISO/IEC 16262:2011*
+         - ES Edition 2: initially standardized in 1998 as *ISO/IEC 16262:1998*
 
    :abbr:`JS (JavaScript)`
    JavaScript
@@ -327,9 +327,9 @@ Technologies
       .. seealso::
 
          - :wikien:`CSS`
-         - (`CSS 2.1`_): standard ratified in 2011 **W3C REC-CSS2-20110607**
-         - (`CSS 2.0`_): standard ratified in 1998 *W3C REC-CSS2-19980512*
-         - (`CSS 1.0`_): initially standardized in 1996 *W3C REC-CSS1-961217*
+         - `CSS 2.1`_: standard ratified in 2011 **W3C REC-CSS2-20110607**
+         - `CSS 2.0`_: standard ratified in 1998 *W3C REC-CSS2-19980512*
+         - `CSS 1.0`_: initially standardized in 1996 *W3C REC-CSS1-961217*
 
    Enchant
       `Enchant`_ is a free software project developed as part of the AbiWord
@@ -353,13 +353,13 @@ Technologies
       .. seealso::
 
          - :wikien:`EPUB`
-         - (`EPUB 3.2`_): standard ratified in 2019 **EPUB 3.2**
-         - (`EPUB 3.0.1`_): standard ratified in 2020 **ISO/IEC 23736 (parts 1-6)**
-         - (`EPUB 3.0.1`_): standard ratified in 2014 *OPS 3.0.1*
-         - (`EPUB 3.0`_): standard ratified in 2014 *ISO/IEC TS 30135 (parts 1-7)*
-         - (`EPUB 3.0`_): standard ratified in 2011 *OPS 3.0*
-         - (`EPUB 2.0.1`_): standard ratified in 2010 *OPS 2.0.1 v1.0.1*
-         - (`EPUB 2.0`_): initially standardized in 2007 *OPS 2.0 v1.0*
+         - `EPUB 3.2`_: standard ratified in 2019 **EPUB 3.2**
+         - `EPUB 3.0.1`_: standard ratified in 2020 **ISO/IEC 23736 (parts 1-6)**
+         - `EPUB 3.0.1`_: standard ratified in 2014 *OPS 3.0.1*
+         - `EPUB 3.0`_: standard ratified in 2014 *ISO/IEC TS 30135 (parts 1-7)*
+         - `EPUB 3.0`_: standard ratified in 2011 *OPS 3.0*
+         - `EPUB 2.0.1`_: standard ratified in 2010 *OPS 2.0.1 v1.0.1*
+         - `EPUB 2.0`_: initially standardized in 2007 *OPS 2.0 v1.0*
 
    :abbr:`HTML (Hypertext Markup Language)`
       `HTML`_ is the standard markup language for documents designed to be
@@ -400,8 +400,8 @@ Technologies
 
          - :wikien:`PDF`
          - :wikien:`History of the Portable Document Format (PDF)`
-         - (PDF 2.0): standard ratified in 2017 as **ISO 32000-2:2017**
-         - (PDF 1.7): initially standardized in 2008 as *ISO 32000-1:2008*
+         - PDF 2.0: standard ratified in 2017 as **ISO 32000-2:2017**
+         - PDF 1.7: initially standardized in 2008 as *ISO 32000-1:2008*
 
    :abbr:`PGF (Portable Graphic Format)`
    :abbr:`TikZ (TikZ ist kein Zeichenprogramm)`
@@ -441,9 +441,9 @@ Technologies
       .. seealso::
 
          - :wikien:`PNG`
-         - (`PNG 1.2`_): standard ratified in 2004 **ISO/IEC 15948:2004**
-         - (`PNG 1.2`_): standard ratified in 2003 *REC-PNG-20031110*
-         - (`PNG 1.0`_): initially standardized in 1996 as *RFC 2083* (:rfc:`2083`)
+         - `PNG 1.2`_: standard ratified in 2004 **ISO/IEC 15948:2004**
+         - `PNG 1.2`_: standard ratified in 2003 *REC-PNG-20031110*
+         - `PNG 1.0`_: initially standardized in 1996 as *RFC 2083* (:rfc:`2083`)
 
    :abbr:`SVG (Scalable Vector Graphics)`
      `SVG`_ is an |XML|-based vector image format for two-dimensional graphics
@@ -460,10 +460,10 @@ Technologies
       .. seealso::
 
          - :wikien:`SVG`
-         - (`SVG 2.0`_): latest standard draft was released in 2020
-         - (`SVG 1.1 Second Edition`_): standard ratified in 2011 **W3C REC-SVG11-20110816**
-         - (`SVG 1.1`_): standard ratified in 2003 *W3C REC-SVG11-20030114*
-         - (`SVG 1.0`_): initially standardized in 2001 *W3C REC-SVG-20010904*
+         - `SVG 2.0`_: latest standard draft was released in 2020
+         - `SVG 1.1 Second Edition`_: standard ratified in 2011 **W3C REC-SVG11-20110816**
+         - `SVG 1.1`_: standard ratified in 2003 *W3C REC-SVG11-20030114*
+         - `SVG 1.0`_: initially standardized in 2001 *W3C REC-SVG-20010904*
 
    TeX
       `TeX`_ is a computer language designed for use in typesetting system;
@@ -486,21 +486,21 @@ Technologies
 
          - |OCL| and |QVT|
          - :wikien:`Meta-Object Facility`
-         - (`MOF 2.5.1`_): initially standardized in 2016
+         - `MOF 2.5.1`_: initially standardized in 2016
            **OMG Meta Object Facility Core Specification 2.5.1 2016/10/01**
-         - (`MOF 2.5`_): initially standardized in 2015
+         - `MOF 2.5`_: initially standardized in 2015
            *OMG Meta Object Facility Core Specification 2.5 2015/06/05*
-         - (`ISO 19508:2014`_): **MOF 2.4.2** standard formally published in 2014
+         - `ISO 19508:2014`_: **MOF 2.4.2** standard formally published in 2014
            **ISO/IEC 19508:2014(E) 2014/04/05**
-         - (`MOF 2.4.2`_): initially standardized in 2014
+         - `MOF 2.4.2`_: initially standardized in 2014
            *OMG Meta Object Facility Core Specification 2.4.2 2014/04/03*
-         - (`MOF 2.4.1`_): initially standardized in 2013
+         - `MOF 2.4.1`_: initially standardized in 2013
            *OMG Meta Object Facility Core Specification 2.4.1 2013/06/01*
-         - (`MOF 2.0`_): initially standardized in 2006
+         - `MOF 2.0`_: initially standardized in 2006
            *Meta Object Facility Core Specification 2.0 2006/01/01*
-         - (`ISO 19502:2005`_): *MOF 1.4.1* standard formally published in 2005
+         - `ISO 19502:2005`_: *MOF 1.4.1* standard formally published in 2005
            *ISO/IEC 19502:2005(E) 2005/05/05*
-         - (`MOF 1.4`_): initially standardized in 2002
+         - `MOF 1.4`_: initially standardized in 2002
            *Meta Object Facility Specification 1.4 2002/04/03*
 
    :abbr:`OCL (Object Constraint Language)`
@@ -519,17 +519,17 @@ Technologies
 
          - |UML|, |MOF| and |QVT|
          - :wikien:`Object Constraint Language`
-         - (`OCL 2.4`_): standard ratified in 2014
+         - `OCL 2.4`_: standard ratified in 2014
            **Object Constraint Language 2.4 2014/02/03**
-         - (`ISO 19507:2012`_): **OCL 2.3.1** standard formally published in 2012
+         - `ISO 19507:2012`_: **OCL 2.3.1** standard formally published in 2012
            **ISO/IEC 19507:2012(E) 2012/05/09**
-         - (`OCL 2.3.1`_): standard ratified in 2011
+         - `OCL 2.3.1`_: standard ratified in 2011
            *Object Constraint Language 2.3.1 2012/01/01*
-         - (`OCL 2.2`_): standard ratified in 2010
+         - `OCL 2.2`_: standard ratified in 2010
            *Object Constraint Language 2.2 2010/02/01*
-         - (`OCL 2.0`_): standard ratified in 2006
+         - `OCL 2.0`_: standard ratified in 2006
            *Object Constraint Language 2.0 2006/05/01*
-         - (`UML 1.3`_, *Chapter 7*): initially standardized in 2000
+         - `UML 1.3`_ (*Chapter 7*): initially standardized in 2000
 
    :abbr:`QVT (Query/View/Transformation)`
       `QVT`_ is a standard set of languages for model transformation defined
@@ -539,13 +539,13 @@ Technologies
 
          - |OCL| and |MOF|
          - :wikien:`QVT`
-         - (`QVT 1.3`_): standard ratified in 2016
+         - `QVT 1.3`_: standard ratified in 2016
            **MOF 2.0 Query/View/Transformation Specification 1.3 2016/06/03**
-         - (`QVT 1.2`_): standard ratified in 2015
+         - `QVT 1.2`_: standard ratified in 2015
            *MOF 2.0 Query/View/Transformation Specification 1.2 2015/02/01*
-         - (`QVT 1.1`_): standard ratified in 2011
+         - `QVT 1.1`_: standard ratified in 2011
            *MOF 2.0 Query/View/Transformation Specification 1.1 2011/01/01*
-         - (`QVT 1.0`_): initially standardized in 2008
+         - `QVT 1.0`_: initially standardized in 2008
            *MOF 2.0 Query/View/Transformation Specification 1.0 2008/04/03*
 
    :abbr:`UML (Unified Modeling Language)`
@@ -565,51 +565,51 @@ Technologies
 
          - |OCL|, |MOF| and |QVT|
          - :wikien:`Unified Modeling Language`
-         - (`UML 2.5.1`_): standard adopted from 2.5 in 2017
+         - `UML 2.5.1`_: standard adopted from 2.5 in 2017
            **OMG Unified Modeling Language 2.5.1 2017/12/05**
-         - (`UML 2.5`_): standard released in 2012 and ratified in 2015
+         - `UML 2.5`_: standard released in 2012 and ratified in 2015
            *OMG Unified Modeling Language 2.5 2015/03/01*
-         - (`ISO 19505-1:2012`_ and `ISO 19505-2:2012`_):
+         - `ISO 19505-1:2012`_ and `ISO 19505-2:2012`_:
            **UML 2.4.1** standard formally published in 2012
            **ISO/IEC 19505-1:2012(E) 2012/05/06** and
            **ISO/IEC 19505-2:2012(E) 2012/05/07**
-         - (`UML 2.4.1`_ and `UMLDI 1.0`_): standard ratified in 2011
+         - `UML 2.4.1`_ and `UMLDI 1.0`_: standard ratified in 2011
            *OMG UML Superstructure Specification 2.4.1 2011/08/06*,
            *OMG UML Infrastructure Specification 2.4.1 2011/08/05* and
            *OMG UML Diagram Interchange 1.0 2006/04/04*
-         - (`UML 2.4`_ and `UMLDI 1.0`_): standard ratified in 2011
+         - `UML 2.4`_ and `UMLDI 1.0`_: standard ratified in 2011
            *OMG UML Superstructure Specification 2.4 2010/11/14*,
            *OMG UML Infrastructure Specification 2.4 2010/11/16* and
            *OMG UML Diagram Interchange 1.0 2006/04/04*
-         - (`UML 2.3`_ and `UMLDI 1.0`_): standard ratified in 2010
+         - `UML 2.3`_ and `UMLDI 1.0`_: standard ratified in 2010
            *OMG UML Superstructure Specification 2.3 2010/05/05*,
            *OMG UML Infrastructure Specification 2.3 2010/05/03* and
            *OMG UML Diagram Interchange 1.0 2006/04/04*
-         - (`UML 2.2`_ and `UMLDI 1.0`_): standard ratified in 2009
+         - `UML 2.2`_ and `UMLDI 1.0`_: standard ratified in 2009
            *OMG UML Superstructure Specification 2.2 2009/02/02*,
            *OMG UML Infrastructure Specification 2.2 2009/02/04* and
            *OMG UML Diagram Interchange 1.0 2006/04/04*
-         - (`UML 2.1.2`_ and `UMLDI 1.0`_): standard ratified in 2007
+         - `UML 2.1.2`_ and `UMLDI 1.0`_: standard ratified in 2007
            *OMG UML Superstructure Specification 2.1.2 2007/11/02*,
            *OMG UML Infrastructure Specification 2.1.2 2007/11/04* and
            *OMG UML Diagram Interchange 1.0 2006/04/04*
-         - (`UML 2.1.1`_ and `UMLDI 1.0`_): standard ratified in 2007
+         - `UML 2.1.1`_ and `UMLDI 1.0`_: standard ratified in 2007
            *OMG UML Superstructure Specification 2.1.1 2007/02/05*,
            *OMG UML Infrastructure Specification 2.1.1 2007/02/06* and
            *OMG UML Diagram Interchange 1.0 2006/04/04*
-         - (`UML 2.0`_): standard ratified in 2005
+         - `UML 2.0`_: standard ratified in 2005
            *OMG UML Superstructure Specification 2.0 2005/07/04* and
            *OMG UML Infrastructure Specification 2.0 2005/07/05*
-         - (`ISO 19501:2005`_): *UML 1.4.2* standard formally published in 2005
+         - `ISO 19501:2005`_: *UML 1.4.2* standard formally published in 2005
            *ISO/IEC 19501:2005(E) 2005/04/01*
-         - (`UML 1.5`_): standard ratified in 2003
+         - `UML 1.5`_: standard ratified in 2003
            *OMG Unified Modeling Language Specification 1.5 2003/03/01*
-         - (`UML 1.4`_): standard ratified in 2001
+         - `UML 1.4`_: standard ratified in 2001
            *OMG Unified Modeling Language Specification 1.4 2001/09/07*
-         - (`UML 1.3`_): standard ratified in 2000
+         - `UML 1.3`_: standard ratified in 2000
            *OMG Unified Modeling Language Specification 1.3 2000/03/01*
-         - (`UML 1.2`_): standard ratified in 1999
-         - (`UML 1.1`_): initially standardized in 1997
+         - `UML 1.2`_: standard ratified in 1999
+         - `UML 1.1`_: initially standardized in 1997
 
    :abbr:`XML (Extensible Markup Language)`
       `XML`_ is a markup language that defines a set of rules for encoding
@@ -624,10 +624,10 @@ Technologies
       .. seealso::
 
          - :wikien:`XML`
-         - (`XML 1.1 Second Edition`_): standard ratified in 2006 **W3C REC-XML11-20060816**
-         - (`XML 1.1`_): standard ratified in 2004 *W3C REC-XML11-20040204*
-         - (`XML 1.0 Fifth Edition`_): standard ratified in 2008 *W3C REC-XML-20081126*
-         - (`XML 1.0`_): initially standardized in 1998 *W3C REC-SVG-20010904*
+         - `XML 1.1 Second Edition`_: standard ratified in 2006 **W3C REC-XML11-20060816**
+         - `XML 1.1`_: standard ratified in 2004 *W3C REC-XML11-20040204*
+         - `XML 1.0 Fifth Edition`_: standard ratified in 2008 *W3C REC-XML-20081126*
+         - `XML 1.0`_: initially standardized in 1998 *W3C REC-SVG-20010904*
 
 .. Abbreviations
 .. *************
