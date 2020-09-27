@@ -357,8 +357,14 @@ TikZ-Timing
 TikZ-UML
 ========
 
-:Homepage:       https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?lang=en
-:Documentation:  https://perso.ensta-paris.fr/~kielbasi/tikzuml/var/files/doc/tikzumlmanual.pdf
+:Homepage:       `TikZ-UML Project`_
+:Documentation:  `TikZ-UML User Guide`_
+
+|TikZ-UML| is a |TikZ| extension to manage common |UML| diagrams. The primary
+goal was to propose an alternative to the `pst-uml`_ package, as |TikZ| is an
+alternative itself to PSTricks.
+
+.. _`pst-uml`: https://ctan.org/pkg/pst-uml
 
 .. only:: html or latex
 
