@@ -141,6 +141,10 @@ environment. |PGF| works with plain |TeX|, |LaTeX|, and ConTeXt. Unlike
         :numref:`tikz/pgftikz/fourier`.
       * Show constructive interferences in the time domain [#]_, in
         :numref:`tikz/pgftikz/interference`.
+      * Graphical derivation of an amplitude modulated signal [#]_, in
+        :numref:`tikz/pgftikz/modula-am`.
+      * Graphical derivation of a frequency modulated signal [#]_, in
+        :numref:`tikz/pgftikz/modula-fm`.
       * Creating Flowcharts [#]_, in :numref:`tikz/pgftikz/flowchart`.
 
       .. _tikz/pgftikz/shapesyms:
@@ -171,6 +175,16 @@ environment. |PGF| works with plain |TeX|, |LaTeX|, and ConTeXt. Unlike
       .. tikz:: Constructive interferences
          :include: tikz/pgftikz/interference.tex
 
+      .. _tikz/pgftikz/modula-am:
+      .. rst-class:: centered
+      .. tikz:: Amplitude modulation
+         :include: tikz/pgftikz/modula-am.tex
+
+      .. _tikz/pgftikz/modula-fm:
+      .. rst-class:: centered
+      .. tikz:: Frequency modulation
+         :include: tikz/pgftikz/modula-fm.tex
+
       .. _tikz/pgftikz/flowchart:
       .. rst-class:: centered
       .. tikz:: Geometrical shapes in a flowchart
@@ -190,9 +204,17 @@ environment. |PGF| works with plain |TeX|, |LaTeX|, and ConTeXt. Unlike
    .. [#] Indication of provenance: :stackxtex:`a/162263`
           (:stackxtex:`Thomas <u/42660>`)
    .. [#] Indication of provenance:
+          `Amplitude modulation (AM)`_ (Petar Veličković, July 2016)
+   .. [#] Indication of provenance:
+          `Frequency modulation (FM)`_ (Petar Veličković, July 2016)
+   .. [#] Indication of provenance:
           `TikZ Tutorial for Beginners (Part 3)—Creating Flowcharts`_
           (Josh Cassidy, August 2013)
 
+.. _`Amplitude modulation (AM)`:
+   https://github.com/PetarV-/TikZ/tree/master/Amplitude%20modulation
+.. _`Frequency modulation (FM)`:
+   https://github.com/PetarV-/TikZ/tree/master/Frequency%20modulation
 .. _`TikZ Tutorial for Beginners (Part 3)—Creating Flowcharts`:
    https://de.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)%E2%80%94Creating_Flowcharts
 
