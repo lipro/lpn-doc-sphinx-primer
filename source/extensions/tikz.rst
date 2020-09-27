@@ -281,58 +281,61 @@ CircuiTikZ
 TikZ-Timing
 ===========
 
-:CTAN Package:   https://ctan.org/pkg/tikz-timing
-:Documentation:  http://mirrors.ctan.org/graphics/pgf/contrib/tikz-timing/tikz-timing.pdf
-:Git Repository: https://sourceforge.net/p/tikz-timing/code/ci/default/tree/
+:CTAN Package:   `TikZ-Timing Package`_
+:Documentation:  `TikZ-Timing User Guide`_
+:Git Repository: `TikZ-Timing Master Branch`_
+
+|TikZ-Timing| is a |TikZ| extension with macros and an environment to generate
+timing diagrams (digital waveforms) without much effort.
 
 .. only:: html or latex
 
-   :the example: Program counter and instruction tick. [#]_
+   :the examples:
 
+      * Program counter and instruction tick [#]_, in
+        :numref:`tikz/tikztiming/pcinst-tick`.
+      * How could one implement a divider-line [#]_, in
+        :numref:`tikz/tikztiming/divider-line`?
+      * Arbitrary Colored Data Cell in TikZ-Timing [#]_, in
+        :numref:`tikz/tikztiming/colored-cells`?
+      * Serial Peripheral Interface operating modes [#]_, in
+        :numref:`tikz/tikztiming/spi-opmodes`.
+      * PCI timing diagrams with reference to version 2.2 of the PCI
+        specification [#]_, in :numref:`tikz/tikztiming/pci-read-irqack`.
+      * Packet decoder timing diagram with reference to the Gennum GN4124 to
+        Wishbone bridge user guide [#]_, in
+        :numref:`tikz/tikztiming/gn4124-pdwreq`.
+
+      :raw-latex:`\clearpage\phantomsection`
+
+      .. _tikz/tikztiming/pcinst-tick:
       .. rst-class:: centered
       .. tikz:: Program counter and instruction tick
          :include: tikz/tikztiming/pcinst-tick.tex
 
-   :the example:
-
-      How could one implement a divider-line? [#]_
-
+      .. _tikz/tikztiming/divider-line:
       .. rst-class:: centered
       .. tikz:: Signal interconnections and dividers
          :include: tikz/tikztiming/divider-line.tex
 
-   :the example:
-
-      Arbitrary Colored Data Cell in TikZ-Timing? [#]_
-
+      .. _tikz/tikztiming/colored-cells:
       .. rst-class:: centered
       .. tikz:: Colorized data cells
          :include: tikz/tikztiming/colored-cells.tex
 
-   :raw-latex:`\clearpage\phantomsection`
+      :raw-latex:`\clearpage\phantomsection`
 
-   :the example:
-
-      Serial Peripheral Interface operating modes. [#]_
-
+      .. _tikz/tikztiming/spi-opmodes:
       .. rst-class:: centered
       .. tikz:: SPI operating modes
          :include: tikz/tikztiming/spi-opmodes.tex
 
-   :the example:
-
-      PCI timing diagrams with reference to version 2.2
-      of the PCI specification. [#]_
-
+      .. _tikz/tikztiming/pci-read-irqack:
       .. rst-class:: centered
       .. tikz:: PCI Read and Interrupt Acknowledge
          :include: tikz/tikztiming/pci-read-irqack.tex
 
-   :the example:
-
-      Packet decoder timing diagram with reference to the Gennum GN4124
-      to Wishbone bridge user guide. [#]_
-
+      .. _tikz/tikztiming/gn4124-pdwreq:
       .. rst-class:: centered
       .. tikz:: GN4124 Packet Decoder Write Request
          :include: tikz/tikztiming/gn4124-pdwreq.tex
