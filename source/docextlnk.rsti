@@ -52,6 +52,11 @@
 .. _`LaTeX`: https://www.latex-project.org/
 .. _`PDF`: https://www.pdfa.org/
 .. _`PGF/TikZ`: https://github.com/pgf-tikz/pgf
+.. _`CircuiTikZ`: `CircuiTikZ Package`_
+.. _`CircuiTikZ Package`: https://ctan.org/pkg/circuitikz
+.. _`CircuiTikZ Manual`: https://ctan.net/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf
+.. _`CircuiTikZ Home`: https://circuitikz.github.io/circuitikz
+.. _`CircuiTikZ Master Branch`: https://github.com/circuitikz/circuitikz/tree/master
 .. _`TikZ-Timing`: `TikZ-Timing Package`_
 .. _`TikZ-Timing Package`: https://ctan.org/pkg/tikz-timing
 .. _`TikZ-Timing User Guide`: https://ctan.net/graphics/pgf/contrib/tikz-timing/tikz-timing.pdf

@@ -418,6 +418,22 @@ Technologies
 
          - :wikien:`PGF/TikZ`
 
+   CircuiTikZ
+      `CircuiTikZ`_ is a |LaTeX| package which provides a set of macros for
+      naturally typesetting electrical and electronic networks. Designed as
+      a tool that is easy to use by native to a lean |LaTeX| syntax it has
+      therefore been based on the very impressive |PGF/TikZ| package.
+      CircuiTikZ was initiated as tool for creating exercises and exams.
+      The use of CircuiTikZ is, of course, not limited to academic teaching.
+      The package gets widelyused by engineers for typesetting electronic
+      circuits for articles and publications all over the world.
+
+      .. seealso::
+
+         - `CircuiTikZ Package`_
+         - `CircuiTikZ Manual`_
+         - `CircuiTikZ Home`_
+
    TikZ-Timing
       `TikZ-Timing`_ is a |LaTeX| package which provides macros and an
       environment to generate timing diagrams (digital waveforms). The |TikZ|
