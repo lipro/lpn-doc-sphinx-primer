@@ -417,6 +417,10 @@ Technologies
       .. seealso::
 
          - :wikien:`PGF/TikZ`
+         - `PGF/TikZ Package`_ and `VisualTikZ Package`_
+         - `PGF/TikZ Manual`_ and `VisualTikZ Manual`_
+         - `PGF/TikZ Introduction`_
+         - `PGF/TikZ Home`_ and `VisualTikZ Home`_
 
    CircuiTikZ
       `CircuiTikZ`_ is a |LaTeX| package which provides a set of macros for
@@ -425,7 +429,7 @@ Technologies
       therefore been based on the very impressive |PGF/TikZ| package.
       CircuiTikZ was initiated as tool for creating exercises and exams.
       The use of CircuiTikZ is, of course, not limited to academic teaching.
-      The package gets widelyused by engineers for typesetting electronic
+      The package gets widely used by engineers for typesetting electronic
       circuits for articles and publications all over the world.
 
       .. seealso::
