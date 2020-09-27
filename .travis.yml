@@ -3,6 +3,14 @@
 # See https://docs.travis-ci.com/ and https://config.travis-ci.com/ for details
 # Inspired by https://sphinxtechnicalwriting.readthedocs.io/
 
+# Do not shallow clone when cloning git repos.
+# See https://docs.travis-ci.com/user/customizing-the-build#git-clone-depth
+#
+# remove the --depth flag entirely with:
+#
+git:
+  depth: false
+
 # Python 3.8 on Ubuntu Linux 18.04 "Bionic" (amd64) for Sphinx/DOC
 os: Linux
 dist: bionic
