@@ -12,6 +12,11 @@
 \usetikztiminglibrary[new={char=Q,reset char=R}]{counters}  % sublibrary for automated content generation
 \usetikztiminglibrary{overlays} % sublibrary for overlay generation
 \RequirePackage{tikz-uml}[2016/03/29] % Loading TikZ-UML
+\RequirePackage[english]{babel} % Fix the umlcall environment from TikZ-UML
+% see: https://tex.stackexchange.com/a/44865
+% TikZ-UML documentation notes about it in section 1.1, Dependencies, with:
+% "... For still unknown reasons, TikZ-UML works fine if you have already
+%      included the babel package with the language of your choice. ..."
 \RequirePackage{xcolor} % Color configurtation
 \definecolor{custA}{HTML}{8F00D3}
 \definecolor{custB}{HTML}{749173}
