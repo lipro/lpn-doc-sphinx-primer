@@ -13,6 +13,7 @@ sphinxcontrib-programoutput>=0.16
 sphinxcontrib-spelling>=5.4
 sphinxcontrib-svg2pdfconverter>=1.1
 # must fixed, see below: sphinxcontrib-tikz>=0.4
+sphinx-selective-exclude>=1.0
 sphinx-tabs>=1.3
 sphinx-panels>=0.5
 
