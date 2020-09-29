@@ -29,7 +29,7 @@ numpy>=1.19
 
 
 # ... use a fixed version to support a TikZ timing table environment too
-git+https://bitbucket.org/rexut/sphinxcontrib-tikz.git/@tikztiming#sha1=0fcc4ac&egg=sphinxcontrib-tikz
+git+https://bitbucket.org/rexut/sphinxcontrib-tikz.git/@fixup#sha1=8652c56&egg=sphinxcontrib-tikz
 
 
 # ... enables you to use inline syntax highlighting in Sphinx.
