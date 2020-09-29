@@ -105,7 +105,10 @@
 .. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
 .. |SQL|        replace:: :abbr:`SQL (Structured Query Language)`
 .. |SUS|        replace:: :abbr:`SUS (Single UNIX Specification)`
+.. |SystemC|    replace:: :abbr:`SystemC (C++ classes for system-level modeling)`
+.. |SystemC/TLM| replace:: |SystemC|/|TLM|
 .. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
+.. |TLM|        replace:: :abbr:`TLM (Transaction Level Modeling)`
 .. |UI|         replace:: :abbr:`UI (User Interface)`
 .. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
 .. |WWW|        replace:: :abbr:`WWW (World Wide Web)`
