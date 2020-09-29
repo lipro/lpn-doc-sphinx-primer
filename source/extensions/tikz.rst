@@ -131,65 +131,125 @@ environment. |PGF| works with plain |TeX|, |LaTeX|, and ConTeXt. Unlike
 
 .. only:: html or latex
 
-   :the examples:
+   :raw-latex:`\FloatBarrier\vfill`
 
-      * Shapes and symbols [#]_, in :numref:`tikz/pgftikz/shapesyms`.
-      * Shapes absolut and in a matrix positioned [#]_, in
-        :numref:`tikz/pgftikz/matrix`.
-      * Design of an eye in TikZ [#]_, in :numref:`tikz/pgftikz/fancyeye`.
-      * Time-frequency correspondence of the Fourier transform [#]_, in
-        :numref:`tikz/pgftikz/fourier`.
-      * Show constructive interferences in the time domain [#]_, in
-        :numref:`tikz/pgftikz/interference`.
-      * Graphical derivation of an amplitude modulated signal [#]_, in
-        :numref:`tikz/pgftikz/modula-am`.
-      * Graphical derivation of a frequency modulated signal [#]_, in
-        :numref:`tikz/pgftikz/modula-fm`.
-      * Creating Flowcharts [#]_, in :numref:`tikz/pgftikz/flowchart`.
+   ----
 
-      .. _tikz/pgftikz/shapesyms:
-      .. rst-class:: centered
-      .. tikz:: Shapes and symbols
-         :include: tikz/pgftikz/shapesyms.tex
-         :libs: arrows.meta,backgrounds,calc,fit,positioning,shapes.symbols
+   .. rubric:: |pgftikz.shapesyms.tit|
 
-      .. _tikz/pgftikz/matrix:
-      .. rst-class:: centered
-      .. tikz:: Shapes absolut and in a matrix positioned
-         :include: tikz/pgftikz/matrix.tex
-         :libs: arrows.meta,shapes,positioning,matrix,fit,backgrounds
+   |pgftikz.shapesyms.tex| [#]_, in |pgftikz.shapesyms.ref|.
 
-      .. _tikz/pgftikz/fancyeye:
-      .. rst-class:: centered
-      .. tikz:: Constructive but realistic eye
-         :include: tikz/pgftikz/fancyeye.tex
-         :libs: calc,decorations.pathmorphing
+   .. _tikz/pgftikz/shapesyms:
+   .. rst-class:: centered
+   .. tikz:: Shapes and symbols
+      :include: /extensions/tikz/pgftikz/shapesyms.tex
+      :libs: arrows.meta,backgrounds,calc,fit,positioning,shapes.symbols
 
-      .. _tikz/pgftikz/fourier:
-      .. rst-class:: centered
-      .. tikz:: Fourier transformation illustrated
-         :include: tikz/pgftikz/fourier.tex
+   :raw-latex:`\FloatBarrier\vfill`
 
-      .. _tikz/pgftikz/interference:
-      .. rst-class:: centered
-      .. tikz:: Constructive interferences
-         :include: tikz/pgftikz/interference.tex
+   ----
 
-      .. _tikz/pgftikz/modula-am:
-      .. rst-class:: centered
-      .. tikz:: Amplitude modulation
-         :include: tikz/pgftikz/modula-am.tex
+   :raw-latex:`\clearpage\phantomsection`
 
-      .. _tikz/pgftikz/modula-fm:
-      .. rst-class:: centered
-      .. tikz:: Frequency modulation
-         :include: tikz/pgftikz/modula-fm.tex
+   .. rubric:: |pgftikz.matrix.tit|
 
-      .. _tikz/pgftikz/flowchart:
-      .. rst-class:: centered
-      .. tikz:: Geometrical shapes in a flowchart
-         :include: tikz/pgftikz/flowchart.tex
-         :libs: arrows,calc,positioning,shapes.geometric,shapes.symbols,shapes.misc
+   |pgftikz.matrix.tex| [#]_, in |pgftikz.matrix.ref|.
+
+   .. _tikz/pgftikz/matrix:
+   .. rst-class:: centered
+   .. tikz:: Shapes absolut and in a matrix positioned
+      :include: /extensions/tikz/pgftikz/matrix.tex
+      :libs: arrows.meta,backgrounds,fit,matrix,positioning,shapes
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   .. rubric:: |pgftikz.fancyeye.tit|
+
+   |pgftikz.fancyeye.tex| [#]_, in |pgftikz.fancyeye.ref|.
+
+   .. _tikz/pgftikz/fancyeye:
+   .. rst-class:: centered
+   .. tikz:: Constructive but realistic eye
+      :include: /extensions/tikz/pgftikz/fancyeye.tex
+      :libs: calc,decorations.pathmorphing
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |pgftikz.fourier.tit|
+
+   |pgftikz.fourier.tex| [#]_, in |pgftikz.fourier.ref|.
+
+   .. _tikz/pgftikz/fourier:
+   .. rst-class:: centered
+   .. tikz:: Time-frequency correspondence of the Fourier transform
+      :include: /extensions/tikz/pgftikz/fourier.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   .. rubric:: |pgftikz.interference.tit|
+
+   |pgftikz.interference.tex| [#]_, in |pgftikz.interference.ref|.
+
+   .. _tikz/pgftikz/interference:
+   .. rst-class:: centered
+   .. tikz:: Show constructive interferences in the time domain
+      :include: /extensions/tikz/pgftikz/interference.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |pgftikz.modula-am.tit|
+
+   |pgftikz.modula-am.tex| [#]_, in |pgftikz.modula-am.ref|.
+
+   .. _tikz/pgftikz/modula-am:
+   .. rst-class:: centered
+   .. tikz:: Graphical derivation of an amplitude modulated signal
+      :include: /extensions/tikz/pgftikz/modula-am.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   .. rubric:: |pgftikz.interference.tit|
+
+   |pgftikz.interference.tex| [#]_, in |pgftikz.interference.ref|.
+
+   .. _tikz/pgftikz/modula-fm:
+   .. rst-class:: centered
+   .. tikz:: Graphical derivation of a frequency modulated signal
+      :include: /extensions/tikz/pgftikz/modula-fm.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |pgftikz.flowchart.tit|
+
+   |pgftikz.flowchart.tex| [#]_, in |pgftikz.flowchart.ref|.
+
+   .. _tikz/pgftikz/flowchart:
+   .. rst-class:: centered
+   .. tikz:: Geometrical shapes in a flowchart
+      :include: /extensions/tikz/pgftikz/flowchart.tex
+      :libs: arrows,calc,positioning,shapes.geometric,shapes.symbols,shapes.misc
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
 
    .. rubric:: Footnotes
 
@@ -235,66 +295,102 @@ to a lean |LaTeX| syntax. It has therefore been based on the very impressive
 
 .. only:: html or latex
 
-   :the examples:
+   :raw-latex:`\FloatBarrier\vfill`
 
-      * Full differential Op-Amp stabilization principles [#]_, in
-        :numref:`tikz/circuitikz/opamp-fullstab`.
-      * Inverting Op-Amp principles [#]_, in
-        :numref:`tikz/circuitikz/opamp-inv`.
-      * Drawing MOSFET chip structure in TikZ [#]_, in
-        :numref:`tikz/circuitikz/nmos-fet`.
-      * NE555 timer as "Dee-Dah" siren [#]_, in
-        :numref:`tikz/circuitikz/ne555-deedah`.
-      * Breadboard with aligned DIP chips [#]_, in
-        :numref:`tikz/circuitikz/breadboard`.
-      * 64 Lead Quad Flat Package [#]_, in
-        :numref:`tikz/circuitikz/lpc214x-lqfp64`.
+   ----
 
-      .. _tikz/circuitikz/opamp-fullstab:
-      .. rst-class:: centered
-      .. tikz:: Full differential Op-Amp stabilization principles
-         :include: tikz/circuitikz/opamp-fullstab.tex
+   .. rubric:: |circuitikz.opamp-fullstab.tit|
 
-      .. _tikz/circuitikz/opamp-inv:
-      .. rst-class:: centered
-      .. tikz:: Inverting Op-Amp principles
-         :include: tikz/circuitikz/opamp-inv.tex
-         :libs: arrows.meta,decorations.markings
+   |circuitikz.opamp-fullstab.tex| [#]_, in |circuitikz.opamp-fullstab.ref|.
 
-      .. _tikz/circuitikz/nmos-fet:
-      .. rst-class:: centered
-      .. tikz:: General n-type MOSFET
-         :include: tikz/circuitikz/nmos-fet.tex
-         :libs: patterns
+   .. _tikz/circuitikz/opamp-fullstab:
+   .. rst-class:: centered
+   .. tikz:: Full differential Op-Amp stabilization principles
+      :include: /extensions/tikz/circuitikz/opamp-fullstab.tex
 
-      .. _tikz/circuitikz/ne555-deedah:
-      .. rst-class:: centered
-      .. tikz:: NE555 timer as "Dee-Dah" siren
-         :include: tikz/circuitikz/ne555-deedah.tex
-         :libs: arrows.meta,decorations.markings
+   :raw-latex:`\FloatBarrier\vfill`
 
-      .. _tikz/circuitikz/breadboard:
-      .. rst-class:: centered
-      .. tikz:: Breadboard with NE555 timer as "Dee-Dah" siren
-         :include: tikz/circuitikz/breadboard.tex
-         :libs: arrows.meta,backgrounds,calc,decorations.pathmorphing
+   ----
 
-      :raw-latex:`\clearpage\phantomsection`
+   :raw-latex:`\clearpage\phantomsection`
 
-      .. _tikz/circuitikz/lpc214x-lqfp64:
-      .. rst-class:: centered
-      .. tikz:: LPC2144/2146/2148 pin assignment on LQFP64
-         :include: tikz/circuitikz/lpc214x-lqfp64.tex
+   .. rubric:: |circuitikz.opamp-inv.tit|
 
-      .. pull-quote::
+   |circuitikz.opamp-inv.tex| [#]_, in |circuitikz.opamp-inv.ref|.
 
-         .. attention::
+   .. _tikz/circuitikz/opamp-inv:
+   .. rst-class:: centered
+   .. tikz:: Detailed description of inverting Op-Amp principles
+      :include: /extensions/tikz/circuitikz/opamp-inv.tex
+      :libs: arrows.meta,decorations.markings
 
-            Native support only since CircuiTikZ V0.9 (Oct 2019).
+   :raw-latex:`\FloatBarrier\vfill`
 
-            .. seealso::
+   ----
 
-               `CircuiTikZ change log`_
+   .. rubric:: |circuitikz.nmos-fet.tit|
+
+   |circuitikz.nmos-fet.tex| [#]_, in |circuitikz.nmos-fet.ref|.
+
+   .. _tikz/circuitikz/nmos-fet:
+   .. rst-class:: centered
+   .. tikz:: Drawing MOSFET chip structure in TikZ
+      :include: /extensions/tikz/circuitikz/nmos-fet.tex
+      :libs: patterns
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |circuitikz.ne555-deedah.tit|
+
+   |circuitikz.ne555-deedah.tex| [#]_, in |circuitikz.ne555-deedah.ref|.
+
+   .. _tikz/circuitikz/ne555-deedah:
+   .. rst-class:: centered
+   .. tikz:: NE555 timer as "Dee-Dah" siren
+      :include: /extensions/tikz/circuitikz/ne555-deedah.tex
+      :libs: arrows.meta,decorations.markings
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |circuitikz.breadboard.tit|
+
+   |circuitikz.breadboard.tex| [#]_, in |circuitikz.breadboard.ref|.
+
+   .. _tikz/circuitikz/breadboard:
+   .. rst-class:: centered
+   .. tikz:: Breadboard with NE555 timer as "Dee-Dah" siren
+      :include: /extensions/tikz/circuitikz/breadboard.tex
+      :libs: arrows.meta,backgrounds,calc,decorations.pathmorphing
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |circuitikz.lpc214x-lqfp64.tit|
+
+   |circuitikz.lpc214x-lqfp64.tex| [#]_, in |circuitikz.lpc214x-lqfp64.ref|.
+
+   Native support only since CircuiTikZ V0.9 (Oct 2019).
+   **See also:** `CircuiTikZ change log`_
+
+   .. _tikz/circuitikz/lpc214x-lqfp64:
+   .. rst-class:: centered
+   .. tikz:: LPC2144/2146/2148 pin assignment on LQFP64
+      :include: /extensions/tikz/circuitikz/lpc214x-lqfp64.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
 
    .. rubric:: Footnotes
 
@@ -329,55 +425,97 @@ timing diagrams (digital waveforms) without much effort.
 
 .. only:: html or latex
 
-   :the examples:
+   :raw-latex:`\FloatBarrier\vfill`
 
-      * Program counter and instruction tick [#]_, in
-        :numref:`tikz/tikztiming/pcinst-tick`.
-      * How could one implement a divider-line [#]_, in
-        :numref:`tikz/tikztiming/divider-line`?
-      * Arbitrary Colored Data Cell in TikZ-Timing [#]_, in
-        :numref:`tikz/tikztiming/colored-cells`?
-      * Serial Peripheral Interface operating modes [#]_, in
-        :numref:`tikz/tikztiming/spi-opmodes`.
-      * PCI timing diagrams with reference to version 2.2 of the PCI
-        specification [#]_, in :numref:`tikz/tikztiming/pci-read-irqack`.
-      * Packet decoder timing diagram with reference to the Gennum GN4124 to
-        Wishbone bridge user guide [#]_, in
-        :numref:`tikz/tikztiming/gn4124-pdwreq`.
+   ----
 
-      :raw-latex:`\clearpage\phantomsection`
+   .. rubric:: |tikztiming.pcinst-tick.tit|
 
-      .. _tikz/tikztiming/pcinst-tick:
-      .. rst-class:: centered
-      .. tikz:: Program counter and instruction tick
-         :include: tikz/tikztiming/pcinst-tick.tex
+   |tikztiming.pcinst-tick.tex| [#]_, in |tikztiming.pcinst-tick.ref|.
 
-      .. _tikz/tikztiming/divider-line:
-      .. rst-class:: centered
-      .. tikz:: Signal interconnections and dividers
-         :include: tikz/tikztiming/divider-line.tex
+   .. _tikz/tikztiming/pcinst-tick:
+   .. rst-class:: centered
+   .. tikz:: Program counter and instruction tick
+      :include: /extensions/tikz/tikztiming/pcinst-tick.tex
 
-      .. _tikz/tikztiming/colored-cells:
-      .. rst-class:: centered
-      .. tikz:: Colorized data cells
-         :include: tikz/tikztiming/colored-cells.tex
+   :raw-latex:`\FloatBarrier\vfill`
 
-      :raw-latex:`\clearpage\phantomsection`
+   ----
 
-      .. _tikz/tikztiming/spi-opmodes:
-      .. rst-class:: centered
-      .. tikz:: SPI operating modes
-         :include: tikz/tikztiming/spi-opmodes.tex
+   .. rubric:: |tikztiming.divider-line.tit|
 
-      .. _tikz/tikztiming/pci-read-irqack:
-      .. rst-class:: centered
-      .. tikz:: PCI Read and Interrupt Acknowledge
-         :include: tikz/tikztiming/pci-read-irqack.tex
+   |tikztiming.divider-line.tex| [#]_, in |tikztiming.divider-line.ref|.
 
-      .. _tikz/tikztiming/gn4124-pdwreq:
-      .. rst-class:: centered
-      .. tikz:: GN4124 Packet Decoder Write Request
-         :include: tikz/tikztiming/gn4124-pdwreq.tex
+   .. _tikz/tikztiming/divider-line:
+   .. rst-class:: centered
+   .. tikz:: Signal interconnections and dividers
+      :include: /extensions/tikz/tikztiming/divider-line.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |tikztiming.colored-cells.tit|
+
+   |tikztiming.colored-cells.tex| [#]_, in |tikztiming.colored-cells.ref|.
+
+   .. _tikz/tikztiming/colored-cells:
+   .. rst-class:: centered
+   .. tikz:: SPI vs. UART with arbitrary colored data cells
+      :include: /extensions/tikz/tikztiming/colored-cells.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   .. rubric:: |tikztiming.spi-opmodes.tit|
+
+   |tikztiming.spi-opmodes.tex| [#]_, in |tikztiming.spi-opmodes.ref|.
+
+   .. _tikz/tikztiming/spi-opmodes:
+   .. rst-class:: centered
+   .. tikz:: Serial Peripheral Interface operating modes
+      :include: /extensions/tikz/tikztiming/spi-opmodes.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |tikztiming.pci-read-irqack.tit|
+
+   |tikztiming.pci-read-irqack.tex|, in |tikztiming.pci-read-irqack.ref|.
+
+   PCI timing diagrams with reference to version 2.2 of the
+   PCI specification [#]_.
+
+   .. _tikz/tikztiming/pci-read-irqack:
+   .. rst-class:: centered
+   .. tikz:: PCI Read and Interrupt Acknowledge
+      :include: /extensions/tikz/tikztiming/pci-read-irqack.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   .. rubric:: |tikztiming.gn4124-pdwreq.tit|
+
+   |tikztiming.gn4124-pdwreq.tex|, in |tikztiming.gn4124-pdwreq.ref|.
+
+   Packet decoder timing diagram with reference to the
+   Gennum GN4124 to Wishbone bridge user guide [#]_.
+
+   .. _tikz/tikztiming/gn4124-pdwreq:
+   .. rst-class:: centered
+   .. tikz:: GN4124 Packet Decoder Write Request
+      :include: /extensions/tikz/tikztiming/gn4124-pdwreq.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
 
    .. rubric:: Footnotes
 
@@ -410,39 +548,82 @@ alternative itself to PSTricks.
 
 .. only:: html or latex
 
-   :the examples:
+   :raw-latex:`\FloatBarrier\vfill`
 
-      * Use case diagram in :numref:`tikz/tikzuml/usecasediag`.
-      * Class diagram. in :numref:`tikz/tikzuml/classdiag`
-      * State-machine diagram. in :numref:`tikz/tikzuml/statediag`
-      * Sequence diagram in :numref:`tikz/tikzuml/seqdiag`.
-      * Component diagram in :numref:`tikz/tikzuml/componentdiag`
-        (still in progress).
+   ----
 
-      .. _tikz/tikzuml/usecasediag:
-      .. rst-class:: centered
-      .. tikz:: Use case diagram example
-         :include: tikz/tikzuml/usecasediag.tex
+   .. rubric:: |tikzuml.usecasediag.tit|
 
-      .. _tikz/tikzuml/classdiag:
-      .. rst-class:: centered
-      .. tikz:: Class diagram example
-         :include: tikz/tikzuml/classdiag.tex
+   |tikzuml.usecasediag.tex|, in |tikzuml.usecasediag.ref|.
 
-      .. _tikz/tikzuml/statediag:
-      .. rst-class:: centered
-      .. tikz:: State-machine diagram example
-         :include: tikz/tikzuml/statediag.tex
+   .. _tikz/tikzuml/usecasediag:
+   .. rst-class:: centered
+   .. tikz:: Use case diagram example
+      :include: /extensions/tikz/tikzuml/usecasediag.tex
 
-      .. _tikz/tikzuml/seqdiag:
-      .. rst-class:: centered
-      .. tikz:: Sequence diagram example
-         :include: tikz/tikzuml/seqdiag.tex
+   :raw-latex:`\FloatBarrier\vfill`
 
-      .. _tikz/tikzuml/componentdiag:
-      .. rst-class:: centered
-      .. tikz:: Component diagram example
-         :include: tikz/tikzuml/componentdiag.tex
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |tikzuml.classdiag.tit|
+
+   |tikzuml.classdiag.tex|, in |tikzuml.classdiag.ref|.
+
+   .. _tikz/tikzuml/classdiag:
+   .. rst-class:: centered
+   .. tikz:: Class diagram example
+      :include: /extensions/tikz/tikzuml/classdiag.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |tikzuml.statediag.tit|
+
+   |tikzuml.statediag.tex|, in |tikzuml.statediag.ref|.
+
+   .. _tikz/tikzuml/statediag:
+   .. rst-class:: centered
+   .. tikz:: State-machine diagram example
+      :include: /extensions/tikz/tikzuml/statediag.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |tikzuml.seqdiag.tit|
+
+   |tikzuml.seqdiag.tex|, in |tikzuml.seqdiag.ref|.
+
+   .. _tikz/tikzuml/seqdiag:
+   .. rst-class:: centered
+   .. tikz:: Sequence diagram example
+      :include: /extensions/tikz/tikzuml/seqdiag.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
+
+   :raw-latex:`\clearpage\phantomsection`
+
+   .. rubric:: |tikzuml.componentdiag.tit|
+
+   |tikzuml.componentdiag.tex|, in |tikzuml.componentdiag.ref|.
+
+   .. _tikz/tikzuml/componentdiag:
+   .. rst-class:: centered
+   .. tikz:: Component diagram example
+      :include: /extensions/tikz/tikzuml/componentdiag.tex
+
+   :raw-latex:`\FloatBarrier\vfill`
+
+   ----
 
 :raw-latex:`\clearpage\phantomsection`
 
