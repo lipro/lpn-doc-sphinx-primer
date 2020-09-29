@@ -1,4 +1,12 @@
 % START: LDSP tikz_custom_extrapackages
+\RequirePackage{tikzlm}[2013/08/21] % Loading TikZ Goodies SystemC/TLM Diagrams
+\RequirePackage{drawstack}[2010/08/06] % Loading TikZ Goodies Draw Execution Stack
+% NOTE: load drawstack package as soon as possible as it will hard overwrite the
+% PGF layer structure with its own without respect of other already presented layer.
+% See line 42-44 in: https://ctan.net/macros/latex/contrib/drawstack/drawstack.sty
+% Workaround see below the layer sync after \RequirePackage{tikz-layers}
+\RequirePackage{timing-diagrams}[2013/08/21] % Loading TikZ Goodies Timing Diagrams
+\RequirePackage{pifont} % Pi font support (SPQR)
 \RequirePackage{bm} % Bold math
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=1.6}
@@ -17,6 +25,8 @@
 % TikZ-UML documentation notes about it in section 1.1, Dependencies, with:
 % "... For still unknown reasons, TikZ-UML works fine if you have already
 %      included the babel package with the language of your choice. ..."
+\xdef\pgfsetlayersArg{\pgfsetlayersArg,foreground layer}%
+\pgfsetlayers{\pgfsetlayersArg} % Sync layers from TikZ-UML and drawstack
 \RequirePackage{xcolor} % Color configurtation
 \definecolor{custA}{HTML}{8F00D3}
 \definecolor{custB}{HTML}{749173}

@@ -1344,6 +1344,7 @@ latex_show_pagerefs = True
 #
 # latex_additional_files = [ '{}/_extra/file.ext'.format(DOCSRC), ]
 latex_additional_files = [
+    '{}/tikzlm-master/tikzlm.sty'.format(path_templates),
     '{}/tikzuml-v1.0-2016-03-29/tikz-uml.sty'.format(path_templates),
 ]
 
