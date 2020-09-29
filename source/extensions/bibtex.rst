@@ -29,7 +29,7 @@ Create a citation to a bibliographic entry.
 
    .. todo:: In the case of the |LaTeX|/|PDF| builder the usage of
              :rst:`:ref:`bibliography`` leads to an **invalid and
-             unresolved reference**, rendered as: ":ref:`bibliography`".
+             unresolved reference**.
 
 .. rst:role:: cite
 
@@ -66,7 +66,11 @@ references.
    :which gives:
 
       All entries are placed in the central document bibliography list,
-      mostly on the end of the document, see in :ref:`bibliography`.
+      mostly on the end of the document.
+
+      .. only:: html
+
+         Here in |HTML| you got this list at :ref:`bibliography`.
 
    :which needs:
 
