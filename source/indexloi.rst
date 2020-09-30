@@ -1,6 +1,6 @@
-.. Don't change this file.
-
 :topic: List of Issues
+
+.. Don't change this file.
 
 .. index:: pair: List of Issues; Li-Pro.Net Sphinx Primer
    :name: ldsp-listofissues

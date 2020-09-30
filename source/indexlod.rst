@@ -34,7 +34,7 @@ All artifacts were selected and download by using this reference URLs:
 
    All artifacts were selected and download by using this reference URLs:
 
-   * PGF/TikZ examples
+   * |pgftikz.tit|
 
      #. |pgftikz.shapesyms.tex|, used for: |pgftikz.shapesyms.dsc|
      #. |pgftikz.matrix.tex|, used for: |pgftikz.matrix.dsc|
@@ -45,7 +45,7 @@ All artifacts were selected and download by using this reference URLs:
      #. |pgftikz.modula-fm.tex|, used for: |pgftikz.modula-fm.dsc|
      #. |pgftikz.flowchart.tex|, used for: |pgftikz.flowchart.dsc|
 
-   * CircuiTikZ examples
+   * |circuitikz.tit|
 
      #. |circuitikz.opamp-fullstab.tex|, used for: |circuitikz.opamp-fullstab.dsc|
      #. |circuitikz.opamp-inv.tex|, used for: |circuitikz.opamp-inv.dsc|
@@ -54,7 +54,7 @@ All artifacts were selected and download by using this reference URLs:
      #. |circuitikz.breadboard.tex|, used for: |circuitikz.breadboard.dsc|
      #. |circuitikz.lpc214x-lqfp64.tex|, used for: |circuitikz.lpc214x-lqfp64.dsc|
 
-   * TikZ-Timing examples
+   * |tikztiming.tit|
 
      #. |tikztiming.pcinst-tick.tex|, used for: |tikztiming.pcinst-tick.dsc|
      #. |tikztiming.divider-line.tex|, used for: |tikztiming.divider-line.dsc|
@@ -63,13 +63,43 @@ All artifacts were selected and download by using this reference URLs:
      #. |tikztiming.pci-read-irqack.tex|, used for: |tikztiming.pci-read-irqack.dsc|
      #. |tikztiming.gn4124-pdwreq.tex|, used for: |tikztiming.gn4124-pdwreq.dsc|
 
-   * TikZ-UML examples
+   * |tikzuml.tit|
 
      #. |tikzuml.usecasediag.tex|, used for: |tikzuml.usecasediag.dsc|
      #. |tikzuml.classdiag.tex|, used for: |tikzuml.classdiag.dsc|
      #. |tikzuml.statediag.tex|, used for: |tikzuml.statediag.dsc|
      #. |tikzuml.seqdiag.tex|, used for: |tikzuml.seqdiag.dsc|
      #. |tikzuml.componentdiag.tex|, used for: |tikzuml.componentdiag.dsc|
+
+   * |tikzgoodies.tit|
+
+     #. |tikzgoodies.timing-diagrams.tit|
+
+        #. |tikzgoodies.timing-diagrams.basic.tex|, used for: |tikzgoodies.timing-diagrams.basic.dsc|
+        #. |tikzgoodies.timing-diagrams.timeline.tex|, used for: |tikzgoodies.timing-diagrams.timeline.dsc|
+        #. |tikzgoodies.timing-diagrams.annotations.tex|, used for: |tikzgoodies.timing-diagrams.annotations.dsc|
+        #. |tikzgoodies.timing-diagrams.callouts.tex|, used for: |tikzgoodies.timing-diagrams.callouts.dsc|
+        #. |tikzgoodies.timing-diagrams.arrows-compact.tex|, used for: |tikzgoodies.timing-diagrams.arrows-compact.dsc|
+        #. |tikzgoodies.timing-diagrams.arrows-stretched.tex|, used for: |tikzgoodies.timing-diagrams.arrows-stretched.dsc|
+        #. |tikzgoodies.timing-diagrams.events.tex|, used for: |tikzgoodies.timing-diagrams.events.dsc|
+
+     #. |tikzgoodies.drawstack.tit|
+
+        #. |tikzgoodies.drawstack.minimal.tex|, used for: |tikzgoodies.drawstack.minimal.dsc|
+        #. |tikzgoodies.drawstack.frames.tex|, used for: |tikzgoodies.drawstack.frames.dsc|
+        #. |tikzgoodies.drawstack.padding.tex|, used for: |tikzgoodies.drawstack.padding.dsc|
+        #. |tikzgoodies.drawstack.base-pointer.tex|, used for: |tikzgoodies.drawstack.base-pointer.dsc|
+        #. |tikzgoodies.drawstack.stack-pointer.tex|, used for: |tikzgoodies.drawstack.stack-pointer.dsc|
+        #. |tikzgoodies.drawstack.structure.tex|, used for: |tikzgoodies.drawstack.structure.dsc|
+        #. |tikzgoodies.drawstack.stack-structure.tex|, used for: |tikzgoodies.drawstack.stack-structure.dsc|
+        #. |tikzgoodies.drawstack.highlighting.tex|, used for: |tikzgoodies.drawstack.highlighting.dsc|
+        #. |tikzgoodies.drawstack.style.tex|, used for: |tikzgoodies.drawstack.style.dsc|
+
+     #. |tikzgoodies.tikzlm.tit|
+
+        #. |tikzgoodies.tikzlm.platform.tex|, used for: |tikzgoodies.tikzlm.platform.dsc|
+        #. |tikzgoodies.tikzlm.system.tex|, used for: |tikzgoodies.tikzlm.system.dsc|
+        #. |tikzgoodies.tikzlm.memmap.tex|, used for: |tikzgoodies.tikzlm.memmap.dsc|
 
 .. Local variables:
    coding: utf-8
