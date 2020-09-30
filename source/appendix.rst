@@ -1,7 +1,7 @@
+:topic: Appendix
+
 .. Don't add content to this file, instead edit content in files:
    appendix/*.rst
-
-:topic: Appendix
 
 :raw-latex:`\cleardoublepage\phantomsection`
 
