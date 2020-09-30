@@ -1,0 +1,11 @@
+.. _tikz/tikztiming/pci-read-irqack:
+.. rst-class:: centered
+.. tikz:: PCI Read and Interrupt Acknowledge
+   :include: /extensions/tikz/tikztiming/pci-read-irqack.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,11 @@
+.. _tikz/circuitikz/ne555-deedah:
+.. rst-class:: centered
+.. tikz:: NE555 timer as "Dee-Dah" siren
+   :include: /extensions/tikz/circuitikz/ne555-deedah.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

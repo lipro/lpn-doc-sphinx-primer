@@ -1,0 +1,11 @@
+.. _tikz/circuitikz/lpc214x-lqfp64:
+.. rst-class:: centered
+.. tikz:: LPC2144/2146/2148 pin assignment on LQFP64
+   :include: /extensions/tikz/circuitikz/lpc214x-lqfp64.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -75,49 +75,49 @@
 
    .. PGF/TikZ examples
 
-   .. |pgftikz.shapesyms.tit| replace:: **Shapes and symbols**
+   .. |pgftikz.shapesyms.tit| replace:: **Shapes**
    .. |pgftikz.shapesyms.dsc| replace:: :ref:`tikz/pgftikz/shapesyms`
    .. |pgftikz.shapesyms.ref| replace:: :numref:`tikz/pgftikz/shapesyms`
    .. |pgftikz.shapesyms.tex| replace::
       :download:`pgftikz/shapesyms.tex </extensions/tikz/pgftikz/shapesyms.tex>`
 
-   .. |pgftikz.matrix.tit| replace:: **Shapes absolut and in a matrix positioned**
+   .. |pgftikz.matrix.tit| replace:: **Positioning**
    .. |pgftikz.matrix.dsc| replace:: :ref:`tikz/pgftikz/matrix`
    .. |pgftikz.matrix.ref| replace:: :numref:`tikz/pgftikz/matrix`
    .. |pgftikz.matrix.tex| replace::
       :download:`pgftikz/matrix.tex </extensions/tikz/pgftikz/matrix.tex>`
 
-   .. |pgftikz.fancyeye.tit| replace:: **Design of an eye in TikZ**
+   .. |pgftikz.fancyeye.tit| replace:: **Construction**
    .. |pgftikz.fancyeye.dsc| replace:: :ref:`tikz/pgftikz/fancyeye`
    .. |pgftikz.fancyeye.ref| replace:: :numref:`tikz/pgftikz/fancyeye`
    .. |pgftikz.fancyeye.tex| replace::
       :download:`pgftikz/fancyeye.tex </extensions/tikz/pgftikz/fancyeye.tex>`
 
-   .. |pgftikz.fourier.tit| replace:: **Fourier transformation illustrated**
+   .. |pgftikz.fourier.tit| replace:: **Fourier**
    .. |pgftikz.fourier.dsc| replace:: :ref:`tikz/pgftikz/fourier`
    .. |pgftikz.fourier.ref| replace:: :numref:`tikz/pgftikz/fourier`
    .. |pgftikz.fourier.tex| replace::
       :download:`pgftikz/fourier.tex </extensions/tikz/pgftikz/fourier.tex>`
 
-   .. |pgftikz.interference.tit| replace:: **Constructive interferences**
+   .. |pgftikz.interference.tit| replace:: **Interferences**
    .. |pgftikz.interference.dsc| replace:: :ref:`tikz/pgftikz/interference`
    .. |pgftikz.interference.ref| replace:: :numref:`tikz/pgftikz/interference`
    .. |pgftikz.interference.tex| replace::
       :download:`pgftikz/interference.tex </extensions/tikz/pgftikz/interference.tex>`
 
-   .. |pgftikz.modula-am.tit| replace:: **Amplitude modulation**
+   .. |pgftikz.modula-am.tit| replace:: **AM**
    .. |pgftikz.modula-am.dsc| replace:: :ref:`tikz/pgftikz/modula-am`
    .. |pgftikz.modula-am.ref| replace:: :numref:`tikz/pgftikz/modula-am`
    .. |pgftikz.modula-am.tex| replace::
       :download:`pgftikz/modula-am.tex </extensions/tikz/pgftikz/modula-am.tex>`
 
-   .. |pgftikz.modula-fm.tit| replace:: **Frequency modulation**
+   .. |pgftikz.modula-fm.tit| replace:: **FM**
    .. |pgftikz.modula-fm.dsc| replace:: :ref:`tikz/pgftikz/modula-fm`
    .. |pgftikz.modula-fm.ref| replace:: :numref:`tikz/pgftikz/modula-fm`
    .. |pgftikz.modula-fm.tex| replace::
       :download:`pgftikz/modula-fm.tex </extensions/tikz/pgftikz/modula-fm.tex>`
 
-   .. |pgftikz.flowchart.tit| replace:: **Creating Flowcharts**
+   .. |pgftikz.flowchart.tit| replace:: **Flowchart**
    .. |pgftikz.flowchart.dsc| replace:: :ref:`tikz/pgftikz/flowchart`
    .. |pgftikz.flowchart.ref| replace:: :numref:`tikz/pgftikz/flowchart`
    .. |pgftikz.flowchart.tex| replace::
@@ -125,37 +125,37 @@
 
    .. CircuiTikZ examples
 
-   .. |circuitikz.opamp-fullstab.tit| replace:: **Op-Amp stabilization principles**
+   .. |circuitikz.opamp-fullstab.tit| replace:: **Op-Amp stabilization**
    .. |circuitikz.opamp-fullstab.dsc| replace:: :ref:`tikz/circuitikz/opamp-fullstab`
    .. |circuitikz.opamp-fullstab.ref| replace:: :numref:`tikz/circuitikz/opamp-fullstab`
    .. |circuitikz.opamp-fullstab.tex| replace::
       :download:`circuitikz/opamp-fullstab.tex </extensions/tikz/circuitikz/opamp-fullstab.tex>`
 
-   .. |circuitikz.opamp-inv.tit| replace:: **Inverting Op-Amp principles**
+   .. |circuitikz.opamp-inv.tit| replace:: **Inverting Op-Amp**
    .. |circuitikz.opamp-inv.dsc| replace:: :ref:`tikz/circuitikz/opamp-inv`
    .. |circuitikz.opamp-inv.ref| replace:: :numref:`tikz/circuitikz/opamp-inv`
    .. |circuitikz.opamp-inv.tex| replace::
       :download:`circuitikz/opamp-inv.tex </extensions/tikz/circuitikz/opamp-inv.tex>`
 
-   .. |circuitikz.nmos-fet.tit| replace:: **General n-type MOSFET**
+   .. |circuitikz.nmos-fet.tit| replace:: **Schemed Structure**
    .. |circuitikz.nmos-fet.dsc| replace:: :ref:`tikz/circuitikz/nmos-fet`
    .. |circuitikz.nmos-fet.ref| replace:: :numref:`tikz/circuitikz/nmos-fet`
    .. |circuitikz.nmos-fet.tex| replace::
       :download:`circuitikz/nmos-fet.tex </extensions/tikz/circuitikz/nmos-fet.tex>`
 
-   .. |circuitikz.ne555-deedah.tit| replace:: **Schematic with chips and parts**
+   .. |circuitikz.ne555-deedah.tit| replace:: **Schematic**
    .. |circuitikz.ne555-deedah.dsc| replace:: :ref:`tikz/circuitikz/ne555-deedah`
    .. |circuitikz.ne555-deedah.ref| replace:: :numref:`tikz/circuitikz/ne555-deedah`
    .. |circuitikz.ne555-deedah.tex| replace::
       :download:`circuitikz/ne555-deedah.tex </extensions/tikz/circuitikz/ne555-deedah.tex>`
 
-   .. |circuitikz.breadboard.tit| replace:: **Breadboard with aligned DIP chips**
+   .. |circuitikz.breadboard.tit| replace:: **Breadboard**
    .. |circuitikz.breadboard.dsc| replace:: :ref:`tikz/circuitikz/breadboard`
    .. |circuitikz.breadboard.ref| replace:: :numref:`tikz/circuitikz/breadboard`
    .. |circuitikz.breadboard.tex| replace::
       :download:`circuitikz/breadboard.tex </extensions/tikz/circuitikz/breadboard.tex>`
 
-   .. |circuitikz.lpc214x-lqfp64.tit| replace:: **64 Lead Quad Flat Package**
+   .. |circuitikz.lpc214x-lqfp64.tit| replace:: **LQFP64 Package**
    .. |circuitikz.lpc214x-lqfp64.dsc| replace:: :ref:`tikz/circuitikz/lpc214x-lqfp64`
    .. |circuitikz.lpc214x-lqfp64.ref| replace:: :numref:`tikz/circuitikz/lpc214x-lqfp64`
    .. |circuitikz.lpc214x-lqfp64.tex| replace::
@@ -163,13 +163,13 @@
 
    .. TikZ-Timing examples
 
-   .. |tikztiming.pcinst-tick.tit| replace:: **Simple time line with arrows**
+   .. |tikztiming.pcinst-tick.tit| replace:: **Simple time line**
    .. |tikztiming.pcinst-tick.dsc| replace:: :ref:`tikz/tikztiming/pcinst-tick`
    .. |tikztiming.pcinst-tick.ref| replace:: :numref:`tikz/tikztiming/pcinst-tick`
    .. |tikztiming.pcinst-tick.tex| replace::
       :download:`tikztiming/pcinst-tick.tex </extensions/tikz/tikztiming/pcinst-tick.tex>`
 
-   .. |tikztiming.divider-line.tit| replace:: **Implement a divider-line**
+   .. |tikztiming.divider-line.tit| replace:: **Divider-line**
    .. |tikztiming.divider-line.dsc| replace:: :ref:`tikz/tikztiming/divider-line`
    .. |tikztiming.divider-line.ref| replace:: :numref:`tikz/tikztiming/divider-line`
    .. |tikztiming.divider-line.tex| replace::

@@ -1,0 +1,11 @@
+.. _tikz/pgftikz/modula-fm:
+.. rst-class:: centered
+.. tikz:: Graphical derivation of a frequency modulated signal
+   :include: /extensions/tikz/pgftikz/modula-fm.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

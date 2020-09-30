@@ -1,0 +1,11 @@
+.. _tikz/tikzuml/classdiag:
+.. rst-class:: centered
+.. tikz:: Class diagram example
+   :include: /extensions/tikz/tikzuml/classdiag.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

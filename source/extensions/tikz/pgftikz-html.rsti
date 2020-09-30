@@ -1,0 +1,56 @@
+.. tabs::
+
+   .. tab:: |pgftikz.shapesyms.tit|
+
+      |pgftikz.shapesyms.tex| [#]_, in |pgftikz.shapesyms.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/shapesyms.rsti
+
+   .. tab:: |pgftikz.matrix.tit|
+
+      |pgftikz.matrix.tex| [#]_, in |pgftikz.matrix.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/matrix.rsti
+
+   .. tab:: |pgftikz.fancyeye.tit|
+
+      |pgftikz.fancyeye.tex| [#]_, in |pgftikz.fancyeye.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/fancyeye.rsti
+
+   .. tab:: |pgftikz.fourier.tit|
+
+      |pgftikz.fourier.tex| [#]_, in |pgftikz.fourier.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/fourier.rsti
+
+   .. tab:: |pgftikz.interference.tit|
+
+      |pgftikz.interference.tex| [#]_, in |pgftikz.interference.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/interference.rsti
+
+   .. tab:: |pgftikz.modula-am.tit|
+
+      |pgftikz.modula-am.tex| [#]_, in |pgftikz.modula-am.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/modula-am.rsti
+
+   .. tab:: |pgftikz.modula-fm.tit|
+
+      |pgftikz.modula-fm.tex| [#]_, in |pgftikz.modula-fm.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/modula-fm.rsti
+
+   .. tab:: |pgftikz.flowchart.tit|
+
+      |pgftikz.flowchart.tex| [#]_, in |pgftikz.flowchart.ref|.
+
+      .. include:: /extensions/tikz/pgftikz/flowchart.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

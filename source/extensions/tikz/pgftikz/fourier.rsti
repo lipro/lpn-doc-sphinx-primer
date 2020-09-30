@@ -1,0 +1,11 @@
+.. _tikz/pgftikz/fourier:
+.. rst-class:: centered
+.. tikz:: Time-frequency correspondence of the Fourier transformation
+   :include: /extensions/tikz/pgftikz/fourier.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

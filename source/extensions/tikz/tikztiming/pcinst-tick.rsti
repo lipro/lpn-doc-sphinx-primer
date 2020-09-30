@@ -1,0 +1,11 @@
+.. _tikz/tikztiming/pcinst-tick:
+.. rst-class:: centered
+.. tikz:: Program counter and instruction tick
+   :include: /extensions/tikz/tikztiming/pcinst-tick.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

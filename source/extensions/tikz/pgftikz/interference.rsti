@@ -1,0 +1,11 @@
+.. _tikz/pgftikz/interference:
+.. rst-class:: centered
+.. tikz:: Show constructive interferences in the time domain
+   :include: /extensions/tikz/pgftikz/interference.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

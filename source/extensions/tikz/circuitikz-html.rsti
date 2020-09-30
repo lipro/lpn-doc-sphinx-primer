@@ -1,0 +1,48 @@
+.. tabs::
+
+   .. tab:: |circuitikz.opamp-fullstab.tit|
+
+      |circuitikz.opamp-fullstab.tex| [#]_, in |circuitikz.opamp-fullstab.ref|.
+
+      .. include:: /extensions/tikz/circuitikz/opamp-fullstab.rsti
+
+   .. tab:: |circuitikz.opamp-inv.tit|
+
+      |circuitikz.opamp-inv.tex| [#]_, in |circuitikz.opamp-inv.ref|.
+
+      .. include:: /extensions/tikz/circuitikz/opamp-inv.rsti
+
+   .. tab:: |circuitikz.nmos-fet.tit|
+
+      |circuitikz.nmos-fet.tex| [#]_, in |circuitikz.nmos-fet.ref|.
+
+      .. include:: /extensions/tikz/circuitikz/nmos-fet.rsti
+
+   .. tab:: |circuitikz.ne555-deedah.tit|
+
+      |circuitikz.ne555-deedah.tex| [#]_, in |circuitikz.ne555-deedah.ref|.
+
+      .. include:: /extensions/tikz/circuitikz/ne555-deedah.rsti
+
+   .. tab:: |circuitikz.breadboard.tit|
+
+      |circuitikz.breadboard.tex| [#]_, in |circuitikz.breadboard.ref|.
+
+      .. include:: /extensions/tikz/circuitikz/breadboard.rsti
+
+   .. tab:: |circuitikz.lpc214x-lqfp64.tit|
+
+      |circuitikz.lpc214x-lqfp64.tex| [#]_, in |circuitikz.lpc214x-lqfp64.ref|.
+
+      .. attention:: Native support only since CircuiTikZ V0.9 (Oct 2019).
+
+         .. seealso:: `CircuiTikZ change log`_
+
+      .. include:: /extensions/tikz/circuitikz/lpc214x-lqfp64.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

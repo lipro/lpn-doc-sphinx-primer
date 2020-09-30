@@ -1,0 +1,11 @@
+.. _tikz/pgftikz/fancyeye:
+.. rst-class:: centered
+.. tikz:: Drawing a constructive but realistic eye
+   :include: /extensions/tikz/pgftikz/fancyeye.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

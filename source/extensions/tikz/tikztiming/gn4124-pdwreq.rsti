@@ -1,0 +1,11 @@
+.. _tikz/tikztiming/gn4124-pdwreq:
+.. rst-class:: centered
+.. tikz:: GN4124 Packet Decoder Write Request
+   :include: /extensions/tikz/tikztiming/gn4124-pdwreq.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

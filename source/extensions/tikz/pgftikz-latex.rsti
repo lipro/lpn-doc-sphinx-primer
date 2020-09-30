@@ -1,0 +1,95 @@
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.shapesyms.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/shapesyms.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.shapesyms.tex| [#]_, in |pgftikz.shapesyms.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.matrix.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/matrix.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.matrix.tex| [#]_, in |pgftikz.matrix.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.fancyeye.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/fancyeye.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.fancyeye.tex| [#]_, in |pgftikz.fancyeye.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.fourier.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/fourier.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.fourier.tex| [#]_, in |pgftikz.fourier.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.interference.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/interference.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.interference.tex| [#]_, in |pgftikz.interference.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.modula-am.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/modula-am.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.modula-am.tex| [#]_, in |pgftikz.modula-am.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.modula-fm.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/modula-fm.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.modula-fm.tex| [#]_, in |pgftikz.modula-fm.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|pgftikz.flowchart.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/pgftikz/flowchart.rsti
+
+:raw-latex:`\tcblower`
+
+|pgftikz.flowchart.tex| [#]_, in |pgftikz.flowchart.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,11 @@
+.. _tikz/circuitikz/breadboard:
+.. rst-class:: centered
+.. tikz:: Breadboard with NE555 timer as "Dee-Dah" siren
+   :include: /extensions/tikz/circuitikz/breadboard.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

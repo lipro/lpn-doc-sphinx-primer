@@ -1,0 +1,38 @@
+.. tabs::
+
+   .. tab:: |tikzuml.usecasediag.tit|
+
+      |tikzuml.usecasediag.tex|, in |tikzuml.usecasediag.ref|.
+
+      .. include:: /extensions/tikz/tikzuml/usecasediag.rsti
+
+   .. tab:: |tikzuml.classdiag.tit|
+
+      |tikzuml.classdiag.tex|, in |tikzuml.classdiag.ref|.
+
+      .. include:: /extensions/tikz/tikzuml/classdiag.rsti
+
+   .. tab:: |tikzuml.statediag.tit|
+
+      |tikzuml.statediag.tex|, in |tikzuml.statediag.ref|.
+
+      .. include:: /extensions/tikz/tikzuml/statediag.rsti
+
+   .. tab:: |tikzuml.seqdiag.tit|
+
+      |tikzuml.seqdiag.tex|, in |tikzuml.seqdiag.ref|.
+
+      .. include:: /extensions/tikz/tikzuml/seqdiag.rsti
+
+   .. tab:: |tikzuml.componentdiag.tit|
+
+      |tikzuml.componentdiag.tex|, in |tikzuml.componentdiag.ref|.
+
+      .. include:: /extensions/tikz/tikzuml/componentdiag.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

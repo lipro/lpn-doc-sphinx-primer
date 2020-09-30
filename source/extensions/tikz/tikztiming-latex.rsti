@@ -1,0 +1,79 @@
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikztiming.pcinst-tick.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikztiming/pcinst-tick.rsti
+
+:raw-latex:`\tcblower`
+
+|tikztiming.pcinst-tick.tex| [#]_, in |tikztiming.pcinst-tick.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikztiming.divider-line.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikztiming/divider-line.rsti
+
+:raw-latex:`\tcblower`
+
+|tikztiming.divider-line.tex| [#]_, in |tikztiming.divider-line.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikztiming.colored-cells.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikztiming/colored-cells.rsti
+
+:raw-latex:`\tcblower`
+
+|tikztiming.colored-cells.tex| [#]_, in |tikztiming.colored-cells.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikztiming.spi-opmodes.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikztiming/spi-opmodes.rsti
+
+:raw-latex:`\tcblower`
+
+|tikztiming.spi-opmodes.tex| [#]_, in |tikztiming.spi-opmodes.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikztiming.pci-read-irqack.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikztiming/pci-read-irqack.rsti
+
+:raw-latex:`\tcblower`
+
+|tikztiming.pci-read-irqack.tex|, in |tikztiming.pci-read-irqack.ref|.
+
+PCI timing diagrams with reference to version 2.2 of the
+PCI specification [#]_.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikztiming.gn4124-pdwreq.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikztiming/gn4124-pdwreq.rsti
+
+:raw-latex:`\tcblower`
+
+|tikztiming.gn4124-pdwreq.tex|, in |tikztiming.gn4124-pdwreq.ref|.
+
+Packet decoder timing diagram with reference to the
+Gennum GN4124 to Wishbone bridge user guide [#]_.
+
+:raw-latex:`\end{tcolorbox}`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

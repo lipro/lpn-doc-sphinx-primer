@@ -96,7 +96,7 @@
 % Place the IC's in position
 \TIMER555(0,0){1};
 \TIMER555(6,0){2};
-\SPEAKER(10,-3){1};
+\SPEAKER(9.5,-3){1};
 
 % Start conecting 
 \draw[color=blue!50] (-4,3.5) % Start point
@@ -131,7 +131,7 @@
 
 \draw[color=blue] (2 OUT)
     to[pC,lx^=100\si{\mu}F and C4,invert,color=black] (2 OUT -| 1 S1)
-    to [pR,l^=Rx,color=black] (1 S1); 
+    to [pR,l_=Rx,color=black] (1 S1); 
 
 %Conect U1
 \draw[color=blue] (1 VCC) to [short,-*] (1 VCC |- NOD1);
