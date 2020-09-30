@@ -1033,11 +1033,17 @@ spelling_show_suggestions = True
 
 # Choose the image processing 'suite', either 'pdf2svg', 'GhostScript',
 # 'ImageMagick', or 'Netpbm' ('pdf2svg' by default):
+#
+# tikz_proc_suite = 'pdf2svg'
+# tikz_proc_suite = 'GhostScript'
 # tikz_proc_suite = 'ImageMagick'
 if not on_rtd: tikz_proc_suite = 'pdf2svg'
 
 # Choose an image resolution (ignored if tikz_proc_suite is 'pdf2svg').
 # The default is 184.
+#
+# tikz_resolution = 184
+# tikz_resolution = 92
 if on_rtd: tikz_resolution = 92
 
 # Enable/disable transparent graphics. The default is True.
