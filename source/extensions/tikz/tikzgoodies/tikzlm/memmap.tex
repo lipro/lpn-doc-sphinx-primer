@@ -1,0 +1,65 @@
+\begin{tikzpicture}
+% Can help for debugging
+%   \draw[step=1cm,gray!30!white,very thin] (0,0) grid (10,5);
+
+    \tlmbus{(4.5,3.5)}{Bus}{Bus};
+
+    \scmodule[minimum width=7cm, minimum height=2.5cm]{(1,7)}{CPU}{};
+    \node (cpu_title) at (CPU.north west) [anchor=north west] {CPU};
+    \isocket{CPU.south}{-90}{cpu_socket};
+    \path (Bus.north-|CPU.south) ++ (1,0) coordinate (bustsocket);
+    \tsocket{bustsocket}{-90}{bus_tsocket};
+    \vbind{cpu_socket_out}{bus_tsocket_in};
+
+    \scmodule[minimum width=7cm, minimum height=2.5cm]{(7.5,0)}{RAM}{};
+    \node (cpu_title) at (RAM.north west) [anchor=north west] {RAM};
+    \tsocket{RAM.north}{-90}{ram_socket};
+    \path (Bus.south-|RAM.north) ++(-1, 0) coordinate (busisocket);
+    \isocket{busisocket}{-90}{bus_isocket};
+    \vbind{ram_socket_in}{bus_isocket_out};
+
+    % Show that other targets could have been there
+    \draw (2.5,2) node (target1) {T1};
+    \draw (4.5,2) node (target2) {T2};
+
+    \isocket{target1 |- Bus.south}{-90}{bus_isocket1};
+    \isocket{target2 |- Bus.south}{-90}{bus_isocket2};
+
+    \vbind{target1.north}{bus_isocket1};
+    \vbind{target2.north}{bus_isocket2};
+
+    {
+        \tikzstyle{mmap_line}=[draw=white!50!black]
+        \tikzstyle{mmap_text}=[color=white!50!black]
+        \tikzstyle{mmap_fill}=[fill=white!97!black]
+
+        \memorymap{8,4}{3}{4};
+
+        \map{1}{1.5}{0x0000}{0x1000}{T1};
+        \map{2}{2.5}{0x2000}{0x3000}{T2};
+        \map{3.5}{4}{0x5000}{0x6000}{RAM};
+    }
+
+    {
+        \codebox{CPU}{\footnotesize \dots{}\\socket.write(addr,data);\\ \dots{}};
+        \codebox{RAM}{status write(addr,data) \{\\
+          ~~~~mem[addr] = data;\\
+          \}};
+    }
+
+    {
+        \draw[dashed, very thick, draw=red!50!black]
+            (cpu_socket_in) .. controls
+            (cpu_socket |- Bus.south) and
+            (Bus.north -| ram_socket) ..
+            (ram_socket_out);
+    }
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

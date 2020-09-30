@@ -75,6 +75,8 @@
 
    .. PGF/TikZ examples
 
+   .. |pgftikz.tit| replace:: **PGF/TikZ examples**
+
    .. |pgftikz.shapesyms.tit| replace:: **Shapes**
    .. |pgftikz.shapesyms.dsc| replace:: :ref:`tikz/pgftikz/shapesyms`
    .. |pgftikz.shapesyms.ref| replace:: :numref:`tikz/pgftikz/shapesyms`
@@ -125,6 +127,8 @@
 
    .. CircuiTikZ examples
 
+   .. |circuitikz.tit| replace:: **CircuiTikZ examples**
+
    .. |circuitikz.opamp-fullstab.tit| replace:: **Op-Amp stabilization**
    .. |circuitikz.opamp-fullstab.dsc| replace:: :ref:`tikz/circuitikz/opamp-fullstab`
    .. |circuitikz.opamp-fullstab.ref| replace:: :numref:`tikz/circuitikz/opamp-fullstab`
@@ -162,6 +166,8 @@
       :download:`circuitikz/lpc214x-lqfp64.tex </extensions/tikz/circuitikz/lpc214x-lqfp64.tex>`
 
    .. TikZ-Timing examples
+
+   .. |tikztiming.tit| replace:: **TikZ-Timing examples**
 
    .. |tikztiming.pcinst-tick.tit| replace:: **Simple time line**
    .. |tikztiming.pcinst-tick.dsc| replace:: :ref:`tikz/tikztiming/pcinst-tick`
@@ -201,6 +207,8 @@
 
    .. TikZ-UML examples
 
+   .. |tikzuml.tit| replace:: **TikZ-UML examples**
+
    .. |tikzuml.usecasediag.tit| replace:: **Use Case Diagram**
    .. |tikzuml.usecasediag.dsc| replace:: :ref:`tikz/tikzuml/usecasediag`
    .. |tikzuml.usecasediag.ref| replace:: :numref:`tikz/tikzuml/usecasediag`
@@ -230,6 +238,209 @@
    .. |tikzuml.componentdiag.ref| replace:: :numref:`tikz/tikzuml/componentdiag`
    .. |tikzuml.componentdiag.tex| replace::
       :download:`tikzuml/componentdiag.tex </extensions/tikz/tikzuml/componentdiag.tex>`
+
+   .. TikZ Goodies examples
+
+   .. |tikzgoodies.tit| replace:: **TikZ Goodies examples**
+
+   .. TikZ Goodies Timing-Diagrams examples
+
+   .. |tikzgoodies.timing-diagrams.tit| replace:: **Timing-Diagrams**
+   .. |tikzgoodies.timing-diagrams.dsc| replace::
+      Various kinds of timing diagrams (**not hardware-oriented**).
+
+   .. |tikzgoodies.timing-diagrams.basic.tit| replace:: **Basics**
+   .. |tikzgoodies.timing-diagrams.basic.dsc| replace::
+      :ref:`tikz/tikzgoodies/timing-diagrams/basic`
+   .. |tikzgoodies.timing-diagrams.basic.ref| replace::
+      :numref:`tikz/tikzgoodies/timing-diagrams/basic`
+   .. |tikzgoodies.timing-diagrams.basic.tex| replace::
+      :download:`tikzgoodies/timing-diagrams/basic.tex
+      </extensions/tikz/tikzgoodies/timing-diagrams/basic.tex>`
+
+   .. |tikzgoodies.timing-diagrams.timeline.tit| replace:: **Ticks & Tasks**
+   .. |tikzgoodies.timing-diagrams.timeline.dsc| replace::
+      :ref:`tikz/tikzgoodies/timing-diagrams/timeline`
+   .. |tikzgoodies.timing-diagrams.timeline.ref| replace::
+      :numref:`tikz/tikzgoodies/timing-diagrams/timeline`
+   .. |tikzgoodies.timing-diagrams.timeline.tex| replace::
+      :download:`tikzgoodies/timing-diagrams/timeline.tex
+      </extensions/tikz/tikzgoodies/timing-diagrams/timeline.tex>`
+
+   .. |tikzgoodies.timing-diagrams.annotations.tit| replace:: **Annotations**
+   .. |tikzgoodies.timing-diagrams.annotations.dsc| replace::
+      :ref:`tikz/tikzgoodies/timing-diagrams/annotations`
+   .. |tikzgoodies.timing-diagrams.annotations.ref| replace::
+      :numref:`tikz/tikzgoodies/timing-diagrams/annotations`
+   .. |tikzgoodies.timing-diagrams.annotations.tex| replace::
+      :download:`tikzgoodies/timing-diagrams/annotations.tex
+      </extensions/tikz/tikzgoodies/timing-diagrams/annotations.tex>`
+
+   .. |tikzgoodies.timing-diagrams.callouts.tit| replace:: **Callouts**
+   .. |tikzgoodies.timing-diagrams.callouts.dsc| replace::
+      :ref:`tikz/tikzgoodies/timing-diagrams/callouts`
+   .. |tikzgoodies.timing-diagrams.callouts.ref| replace::
+      :numref:`tikz/tikzgoodies/timing-diagrams/callouts`
+   .. |tikzgoodies.timing-diagrams.callouts.tex| replace::
+      :download:`tikzgoodies/timing-diagrams/callouts.tex
+      </extensions/tikz/tikzgoodies/timing-diagrams/callouts.tex>`
+
+   .. |tikzgoodies.timing-diagrams.arrows-compact.tit| replace:: **Arrows (compact)**
+   .. |tikzgoodies.timing-diagrams.arrows-compact.dsc| replace::
+      :ref:`tikz/tikzgoodies/timing-diagrams/arrows-compact`
+   .. |tikzgoodies.timing-diagrams.arrows-compact.ref| replace::
+      :numref:`tikz/tikzgoodies/timing-diagrams/arrows-compact`
+   .. |tikzgoodies.timing-diagrams.arrows-compact.tex| replace::
+      :download:`tikzgoodies/timing-diagrams/arrows-compact.tex
+      </extensions/tikz/tikzgoodies/timing-diagrams/arrows-compact.tex>`
+
+   .. |tikzgoodies.timing-diagrams.arrows-stretched.tit| replace:: **Arrows (stretched)**
+   .. |tikzgoodies.timing-diagrams.arrows-stretched.dsc| replace::
+      :ref:`tikz/tikzgoodies/timing-diagrams/arrows-stretched`
+   .. |tikzgoodies.timing-diagrams.arrows-stretched.ref| replace::
+      :numref:`tikz/tikzgoodies/timing-diagrams/arrows-stretched`
+   .. |tikzgoodies.timing-diagrams.arrows-stretched.tex| replace::
+      :download:`tikzgoodies/timing-diagrams/arrows-stretched.tex
+      </extensions/tikz/tikzgoodies/timing-diagrams/arrows-stretched.tex>`
+
+   .. |tikzgoodies.timing-diagrams.events.tit| replace:: **Events**
+   .. |tikzgoodies.timing-diagrams.events.dsc| replace::
+      :ref:`tikz/tikzgoodies/timing-diagrams/events`
+   .. |tikzgoodies.timing-diagrams.events.ref| replace::
+      :numref:`tikz/tikzgoodies/timing-diagrams/events`
+   .. |tikzgoodies.timing-diagrams.events.tex| replace::
+      :download:`tikzgoodies/timing-diagrams/events.tex
+      </extensions/tikz/tikzgoodies/timing-diagrams/events.tex>`
+
+   .. TikZ Goodies Execution Stacks examples
+
+   .. |tikzgoodies.drawstack.tit| replace:: **Execution Stacks**
+   .. |tikzgoodies.drawstack.dsc| replace::
+      Specific kind of execution stacks (*typically to illustrate
+      assembly language notions*).
+
+   .. |tikzgoodies.drawstack.minimal.tit| replace:: **Minimal**
+   .. |tikzgoodies.drawstack.minimal.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/minimal`
+   .. |tikzgoodies.drawstack.minimal.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/minimal`
+   .. |tikzgoodies.drawstack.minimal.tex| replace::
+      :download:`tikzgoodies/drawstack/minimal.tex
+      </extensions/tikz/tikzgoodies/drawstack/minimal.tex>`
+
+   .. |tikzgoodies.drawstack.frames.tit| replace:: **Frames**
+   .. |tikzgoodies.drawstack.frames.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/frames`
+   .. |tikzgoodies.drawstack.frames.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/frames`
+   .. |tikzgoodies.drawstack.frames.tex| replace::
+      :download:`tikzgoodies/drawstack/frames.tex
+      </extensions/tikz/tikzgoodies/drawstack/frames.tex>`
+
+   .. |tikzgoodies.drawstack.padding.tit| replace:: **Padding**
+   .. |tikzgoodies.drawstack.padding.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/padding`
+   .. |tikzgoodies.drawstack.padding.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/padding`
+   .. |tikzgoodies.drawstack.padding.tex| replace::
+      :download:`tikzgoodies/drawstack/padding.tex
+      </extensions/tikz/tikzgoodies/drawstack/padding.tex>`
+
+   .. |tikzgoodies.drawstack.base-pointer.tit| replace:: **Base Pointer**
+   .. |tikzgoodies.drawstack.base-pointer.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/base-pointer`
+   .. |tikzgoodies.drawstack.base-pointer.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/base-pointer`
+   .. |tikzgoodies.drawstack.base-pointer.tex| replace::
+      :download:`tikzgoodies/drawstack/base-pointer.tex
+      </extensions/tikz/tikzgoodies/drawstack/base-pointer.tex>`
+
+   .. |tikzgoodies.drawstack.stack-pointer.tit| replace:: **Stack Pointer**
+   .. |tikzgoodies.drawstack.stack-pointer.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/stack-pointer`
+   .. |tikzgoodies.drawstack.stack-pointer.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/stack-pointer`
+   .. |tikzgoodies.drawstack.stack-pointer.tex| replace::
+      :download:`tikzgoodies/drawstack/stack-pointer.tex
+      </extensions/tikz/tikzgoodies/drawstack/stack-pointer.tex>`
+
+   .. |tikzgoodies.drawstack.structure.tit| replace:: **Structure**
+   .. |tikzgoodies.drawstack.structure.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/structure`
+   .. |tikzgoodies.drawstack.structure.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/structure`
+   .. |tikzgoodies.drawstack.structure.tex| replace::
+      :download:`tikzgoodies/drawstack/structure.tex
+      </extensions/tikz/tikzgoodies/drawstack/structure.tex>`
+
+   .. |tikzgoodies.drawstack.stack-structure.tit| replace:: **Stack Structure**
+   .. |tikzgoodies.drawstack.stack-structure.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/stack-structure`
+   .. |tikzgoodies.drawstack.stack-structure.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/stack-structure`
+   .. |tikzgoodies.drawstack.stack-structure.tex| replace::
+      :download:`tikzgoodies/drawstack/stack-structure.tex
+      </extensions/tikz/tikzgoodies/drawstack/stack-structure.tex>`
+
+   .. |tikzgoodies.drawstack.highlighting.tit| replace:: **Highlighting**
+   .. |tikzgoodies.drawstack.highlighting.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/highlighting`
+   .. |tikzgoodies.drawstack.highlighting.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/highlighting`
+   .. |tikzgoodies.drawstack.highlighting.tex| replace::
+      :download:`tikzgoodies/drawstack/highlighting.tex
+      </extensions/tikz/tikzgoodies/drawstack/highlighting.tex>`
+
+   .. |tikzgoodies.drawstack.style.tit| replace:: **Style**
+   .. |tikzgoodies.drawstack.style.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/style`
+   .. |tikzgoodies.drawstack.style.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/style`
+   .. |tikzgoodies.drawstack.style.tex| replace::
+      :download:`tikzgoodies/drawstack/style.tex
+      </extensions/tikz/tikzgoodies/drawstack/style.tex>`
+
+   .. |tikzgoodies.drawstack.factorial.tit| replace:: **Faculty**
+   .. |tikzgoodies.drawstack.factorial.dsc| replace::
+      :ref:`tikz/tikzgoodies/drawstack/factorial`
+   .. |tikzgoodies.drawstack.factorial.ref| replace::
+      :numref:`tikz/tikzgoodies/drawstack/factorial`
+   .. |tikzgoodies.drawstack.factorial.tex| replace::
+      :download:`tikzgoodies/drawstack/factorial.tex
+      </extensions/tikz/tikzgoodies/drawstack/factorial.tex>`
+
+   .. TikZ Goodies TikzLM examples
+
+   .. |tikzgoodies.tikzlm.tit| replace:: **SystemC/TLM**
+   .. |tikzgoodies.tikzlm.dsc| replace::
+      Basic elements of typical |SystemC| and/or |TLM| usage.
+
+   .. |tikzgoodies.tikzlm.platform.tit| replace:: **Platform**
+   .. |tikzgoodies.tikzlm.platform.dsc| replace::
+      :ref:`tikz/tikzgoodies/tikzlm/platform`
+   .. |tikzgoodies.tikzlm.platform.ref| replace::
+      :numref:`tikz/tikzgoodies/tikzlm/platform`
+   .. |tikzgoodies.tikzlm.platform.tex| replace::
+      :download:`tikzgoodies/tikzlm/platform.tex
+      </extensions/tikz/tikzgoodies/tikzlm/platform.tex>`
+
+   .. |tikzgoodies.tikzlm.system.tit| replace:: **System**
+   .. |tikzgoodies.tikzlm.system.dsc| replace::
+      :ref:`tikz/tikzgoodies/tikzlm/system`
+   .. |tikzgoodies.tikzlm.system.ref| replace::
+      :numref:`tikz/tikzgoodies/tikzlm/system`
+   .. |tikzgoodies.tikzlm.system.tex| replace::
+      :download:`tikzgoodies/tikzlm/system.tex
+      </extensions/tikz/tikzgoodies/tikzlm/system.tex>`
+
+   .. |tikzgoodies.tikzlm.memmap.tit| replace:: **Memory Map**
+   .. |tikzgoodies.tikzlm.memmap.dsc| replace::
+      :ref:`tikz/tikzgoodies/tikzlm/memmap`
+   .. |tikzgoodies.tikzlm.memmap.ref| replace::
+      :numref:`tikz/tikzgoodies/tikzlm/memmap`
+   .. |tikzgoodies.tikzlm.memmap.tex| replace::
+      :download:`tikzgoodies/tikzlm/memmap.tex
+      </extensions/tikz/tikzgoodies/tikzlm/memmap.tex>`
 
 
 .. Local variables:

@@ -1,0 +1,40 @@
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.tikzlm.platform.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/tikzlm/platform.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.tikzlm.platform.tex|, in |tikzgoodies.tikzlm.platform.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.tikzlm.system.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/tikzlm/system.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.tikzlm.system.tex|, in |tikzgoodies.tikzlm.system.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.tikzlm.memmap.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/tikzlm/memmap.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.tikzlm.memmap.tex|, in |tikzgoodies.tikzlm.memmap.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

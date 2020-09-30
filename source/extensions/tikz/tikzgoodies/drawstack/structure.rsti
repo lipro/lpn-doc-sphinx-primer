@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/structure:
+.. rst-class:: centered
+.. tikz:: Structures without a stack structure
+   :include: /extensions/tikz/tikzgoodies/drawstack/structure.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

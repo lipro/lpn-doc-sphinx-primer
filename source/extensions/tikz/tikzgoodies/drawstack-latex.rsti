@@ -1,0 +1,103 @@
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=` **Basics** :raw-latex:`]`
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.minimal.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/minimal.rsti
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.frames.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/frames.rsti
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.padding.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/padding.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.drawstack.minimal.tex|, in
+|tikzgoodies.drawstack.minimal.ref|.
+
+|tikzgoodies.drawstack.frames.tex|, in
+|tikzgoodies.drawstack.frames.ref|.
+
+|tikzgoodies.drawstack.padding.tex|, in
+|tikzgoodies.drawstack.padding.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=` **Pointers** :raw-latex:`]`
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.base-pointer.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/base-pointer.rsti
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.stack-pointer.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/stack-pointer.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.drawstack.base-pointer.tex|, in
+|tikzgoodies.drawstack.base-pointer.ref|.
+
+|tikzgoodies.drawstack.stack-pointer.tex|, in
+|tikzgoodies.drawstack.stack-pointer.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=` **Memory** :raw-latex:`]`
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.structure.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/structure.rsti
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.stack-structure.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/stack-structure.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.drawstack.structure.tex|, in
+|tikzgoodies.drawstack.structure.ref|.
+
+|tikzgoodies.drawstack.stack-structure.tex|, in
+|tikzgoodies.drawstack.stack-structure.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=` **Stylistics** :raw-latex:`]`
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.highlighting.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/highlighting.rsti
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.drawstack.style.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack/style.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.drawstack.highlighting.tex|, in
+|tikzgoodies.drawstack.highlighting.ref|.
+
+|tikzgoodies.drawstack.style.tex|, in
+|tikzgoodies.drawstack.style.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

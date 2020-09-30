@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/frames:
+.. rst-class:: centered
+.. tikz:: Execution stack example with grouped cells in frames
+   :include: /extensions/tikz/tikzgoodies/drawstack/frames.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

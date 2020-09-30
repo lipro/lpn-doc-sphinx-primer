@@ -1,0 +1,89 @@
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.timing-diagrams.basic.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams/basic.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.timing-diagrams.basic.tex|, in
+|tikzgoodies.timing-diagrams.basic.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.timing-diagrams.timeline.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams/timeline.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.timing-diagrams.timeline.tex|, in
+|tikzgoodies.timing-diagrams.timeline.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.timing-diagrams.annotations.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams/annotations.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.timing-diagrams.annotations.tex|, in
+|tikzgoodies.timing-diagrams.annotations.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.timing-diagrams.callouts.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams/callouts.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.timing-diagrams.callouts.tex|, in
+|tikzgoodies.timing-diagrams.callouts.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=` **Arrows** :raw-latex:`]`
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.timing-diagrams.arrows-compact.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams/arrows-compact.rsti
+
+:raw-latex:`\tcbsubtitle[before skip=\baselineskip]{`
+|tikzgoodies.timing-diagrams.arrows-stretched.tit| :raw-latex:`}`
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams/arrows-stretched.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.timing-diagrams.arrows-compact.tex|, in
+|tikzgoodies.timing-diagrams.arrows-compact.ref|.
+
+|tikzgoodies.timing-diagrams.arrows-stretched.tex|, in
+|tikzgoodies.timing-diagrams.arrows-stretched.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|tikzgoodies.timing-diagrams.events.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams/events.rsti
+
+:raw-latex:`\tcblower`
+
+|tikzgoodies.timing-diagrams.events.tex|, in
+|tikzgoodies.timing-diagrams.events.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

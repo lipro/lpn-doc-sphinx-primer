@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+% Can help for debugging
+%   \draw[step=1cm,gray!30!white,very thin] (0,0) grid (10,10);
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(3,5.5)}{CPU}{CPU};
+    \isocket{CPU.south}{-90}{cpu_socket};
+    \scin{CPU.east}{0}{cpu_irq};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(7,5.5)}{ITC}{ITC};
+    \tsocket{ITC.south}{90}{itc_socket};
+    \scout{ITC.west}{180}{itc_irq};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(5,1.5)}{RAM}{RAM};
+    \tsocket{RAM.north}{-90}{ram_socket};
+
+    \draw (itc_irq) -- (cpu_irq);
+
+    \tlmbus[minimum width=7cm, minimum height=1.0cm]{(5,3.5)}{Bus}{Bus};
+    \tsocket{Bus.north}{-90}{bus_target};
+    \isocket{Bus.south}{-90}{bus_initiator};
+
+    \vbind{cpu_socket}{bus_target};
+    \vbind{itc_socket}{bus_target};
+    \vbind{bus_initiator}{ram_socket};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

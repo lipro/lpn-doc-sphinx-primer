@@ -1,0 +1,79 @@
+.. tabs::
+
+   .. tab:: **Basics**
+
+      .. rubric:: |tikzgoodies.drawstack.minimal.tit|
+
+      |tikzgoodies.drawstack.minimal.tex|, in
+      |tikzgoodies.drawstack.minimal.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/minimal.rsti
+
+      .. rubric:: |tikzgoodies.drawstack.frames.tit|
+
+      |tikzgoodies.drawstack.frames.tex|, in
+      |tikzgoodies.drawstack.frames.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/frames.rsti
+
+      .. rubric:: |tikzgoodies.drawstack.padding.tit|
+
+      |tikzgoodies.drawstack.padding.tex|, in
+      |tikzgoodies.drawstack.padding.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/padding.rsti
+
+   .. tab:: **Pointers**
+
+      .. rubric:: |tikzgoodies.drawstack.base-pointer.tit|
+
+      |tikzgoodies.drawstack.base-pointer.tex|, in
+      |tikzgoodies.drawstack.base-pointer.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/base-pointer.rsti
+
+      .. rubric:: |tikzgoodies.drawstack.stack-pointer.tit|
+
+      |tikzgoodies.drawstack.stack-pointer.tex|, in
+      |tikzgoodies.drawstack.stack-pointer.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/stack-pointer.rsti
+
+   .. tab:: **Memory**
+
+      .. rubric:: |tikzgoodies.drawstack.structure.tit|
+
+      |tikzgoodies.drawstack.structure.tex|, in
+      |tikzgoodies.drawstack.structure.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/structure.rsti
+
+      .. rubric:: |tikzgoodies.drawstack.stack-structure.tit|
+
+      |tikzgoodies.drawstack.stack-structure.tex|, in
+      |tikzgoodies.drawstack.stack-structure.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/stack-structure.rsti
+
+   .. tab:: **Stylistics**
+
+      .. rubric:: |tikzgoodies.drawstack.highlighting.tit|
+
+      |tikzgoodies.drawstack.highlighting.tex|, in
+      |tikzgoodies.drawstack.highlighting.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/highlighting.rsti
+
+      .. rubric:: |tikzgoodies.drawstack.style.tit|
+
+      |tikzgoodies.drawstack.style.tex|, in
+      |tikzgoodies.drawstack.style.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/drawstack/style.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/stack-pointer:
+.. rst-class:: centered
+.. tikz:: Execution stack example with stack pointers
+   :include: /extensions/tikz/tikzgoodies/drawstack/stack-pointer.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

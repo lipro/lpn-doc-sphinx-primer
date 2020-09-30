@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/timing-diagrams/arrows-compact:
+.. rst-class:: centered
+.. tikz:: Timing-Diagram example with arrows (compact)
+   :include: /extensions/tikz/tikzgoodies/timing-diagrams/arrows-compact.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

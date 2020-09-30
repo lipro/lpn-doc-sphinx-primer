@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/timing-diagrams/events:
+.. rst-class:: centered
+.. tikz:: Timing-Diagram example with events as vertical arrows
+   :include: /extensions/tikz/tikzgoodies/timing-diagrams/events.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

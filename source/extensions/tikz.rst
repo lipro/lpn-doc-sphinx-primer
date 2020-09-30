@@ -115,6 +115,7 @@ See :ref:`sctikz:configuration` in the extension documentation for more details.
    tikz/pgftikz
    tikz/circuitikz
    tikz/tikztiming
+   tikz/tikzgoodies
    tikz/tikzuml
 
 .. Local variables:

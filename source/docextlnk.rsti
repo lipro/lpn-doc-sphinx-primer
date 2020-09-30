@@ -70,6 +70,15 @@
 .. _`TikZ-Timing Package`: https://ctan.org/pkg/tikz-timing
 .. _`TikZ-Timing User Guide`: https://ctan.net/graphics/pgf/contrib/tikz-timing/tikz-timing.pdf
 .. _`TikZ-Timing Master Branch`: https://sourceforge.net/p/tikz-timing/code/
+.. _`TikZ Goodies Project`: https://gitlab.com/tikz-goodies/tikz-goodies
+.. _`TikZ Goodies TikzLM README`: https://gitlab.com/tikz-goodies/tikz-goodies/-/blob/master/TikzLM/README
+.. _`TikZ Goodies TikzLM Example`: https://matthieu-moy.fr/spip/IMG/zip/TikzLM.zip
+.. _`TikZ Goodies Drawstack Package`: https://ctan.org/pkg/drawstack
+.. _`TikZ Goodies Drawstack README`: https://gitlab.com/tikz-goodies/tikz-goodies/-/blob/master/drawstack/README
+.. _`TikZ Goodies Drawstack Example`: https://ctan.net/macros/latex/contrib/drawstack/stack-example.pdf
+.. _`TikZ Goodies Timing-Diagrams Package`: https://ctan.org/pkg/timing-diagrams
+.. _`TikZ Goodies Timing-Diagrams README`: https://gitlab.com/tikz-goodies/tikz-goodies/-/blob/master/timing-diagrams/README
+.. _`TikZ Goodies Timing-Diagrams Example`: https://ctan.net/graphics/pgf/contrib/timing-diagrams/diagrams-examples.pdf
 .. _`TikZ-UML`: `TikZ-UML Project`_
 .. _`TikZ-UML Project`: https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?lang=en
 .. _`TikZ-UML User Guide`: https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?id=doc

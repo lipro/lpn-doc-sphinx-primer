@@ -1,0 +1,59 @@
+.. tabs::
+
+   .. tab:: |tikzgoodies.timing-diagrams.basic.tit|
+
+      |tikzgoodies.timing-diagrams.basic.tex|, in
+      |tikzgoodies.timing-diagrams.basic.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/timing-diagrams/basic.rsti
+
+   .. tab:: |tikzgoodies.timing-diagrams.timeline.tit|
+
+      |tikzgoodies.timing-diagrams.timeline.tex|, in
+      |tikzgoodies.timing-diagrams.timeline.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/timing-diagrams/timeline.rsti
+
+   .. tab:: |tikzgoodies.timing-diagrams.annotations.tit|
+
+      |tikzgoodies.timing-diagrams.annotations.tex|, in
+      |tikzgoodies.timing-diagrams.annotations.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/timing-diagrams/annotations.rsti
+
+   .. tab:: |tikzgoodies.timing-diagrams.callouts.tit|
+
+      |tikzgoodies.timing-diagrams.callouts.tex|, in
+      |tikzgoodies.timing-diagrams.callouts.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/timing-diagrams/callouts.rsti
+
+   .. tab:: **Arrows**
+
+      .. rubric:: |tikzgoodies.timing-diagrams.arrows-compact.tit|
+
+      |tikzgoodies.timing-diagrams.arrows-compact.tex|, in
+      |tikzgoodies.timing-diagrams.arrows-compact.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/timing-diagrams/arrows-compact.rsti
+
+      .. rubric:: |tikzgoodies.timing-diagrams.arrows-stretched.tit|
+
+      |tikzgoodies.timing-diagrams.arrows-stretched.tex|, in
+      |tikzgoodies.timing-diagrams.arrows-stretched.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/timing-diagrams/arrows-stretched.rsti
+
+   .. tab:: |tikzgoodies.timing-diagrams.events.tit|
+
+      |tikzgoodies.timing-diagrams.events.tex|, in
+      |tikzgoodies.timing-diagrams.events.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/timing-diagrams/events.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

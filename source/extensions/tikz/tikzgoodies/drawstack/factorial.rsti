@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/factorial:
+.. rst-class:: centered
+.. tikz:: Execution stack with computed factorial
+   :include: /extensions/tikz/tikzgoodies/drawstack/factorial.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

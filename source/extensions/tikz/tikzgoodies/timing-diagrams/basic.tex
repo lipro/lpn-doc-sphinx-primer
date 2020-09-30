@@ -1,0 +1,45 @@
+\begin{tikzpicture}
+
+    % Define timelines with their names, and ordinate as #2:
+    \tline{A}{2};
+    \tline{B}{0};
+
+    % Actually draw the timelines (#2 is the horizontal length):
+    \ttimeline{A}{5};
+    \ttimeline{B}{5};
+
+    % Provide captions for timelines:
+    \tcaption{A}{A's caption};
+    \tcaption{B}{B's caption};
+
+    % Draw the actual content:
+
+    % tick = vertical line accros the timeline
+    \ttick{A};
+
+    % advance time
+    \tskip{A}{2};
+
+    % This one will be drawn 2 time units after the previous, because of
+    % the \tskip:
+    \ttick{A};
+
+    % One more with the same principle:
+    \tskip{A}{1};
+    \ttick{A};
+
+    % Same as above, but on timeline B:
+    \ttick{B};
+    \tskip{B}{1};
+
+    % \tbox creates a box with non-null width, and text inside:
+    \tbox{B}{3}{Box on B};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :
