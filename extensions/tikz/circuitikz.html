@@ -1,0 +1,1347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Li-Pro.Net Sphinx Primer" name="subject" />
+<meta content="How to write Li-Pro.Net documentation with Sphinx." name="description" />
+<meta content="Sphinx, Docutils, reStructuredText, howto, primer" name="keywords" />
+<meta content="The LP/N Documentation Team" name="author" />
+<meta content="Li–Pro.Net" name="publisher" />
+<meta content="2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors." name="copyright" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <meta content="CircuiTikZ Examples" name="topic" />
+    
+  <title>2.6.2. CircuiTikZ &mdash; Li-Pro.Net Sphinx Primer</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-cite.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-float.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/lpn.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://lpn-doc-sphinx-primer-devel.readthedocs.io/extensions/tikz/circuitikz.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../../_static/sphinx_tabs/tabs.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.6.3. TikZ-Timing" href="tikztiming.html" />
+    <link rel="prev" title="2.6.1. PGF/TikZ" href="pgftikz.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Li-Pro.Net Sphinx Primer
+          
+
+          
+            
+            <img src="../../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">1. Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/whitespace.html">1.1. Use of whitespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/whitespace.html#indentation">1.1.1. Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/naming.html">1.2. Sphinx naming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/roles.html">1.2.1. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/directives.html">1.2.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/domains.html">1.2.3. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/heading.html">1.3. Parts, Chapters, Titles, Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/toctree.html">1.4. Table of Contents Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#sidebar-navigation-menu">1.4.1. Sidebar navigation menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#secondary-sub-toc-trees">1.4.2. Secondary sub-TOC trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#how-this-document-uses-main-and-secondary-toc">1.4.3. How this document uses main and secondary TOC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/paragraphs.html">1.5. Paragraphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#quotes-block-quotation-element">1.5.1. Quotes (block quotation) Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#line-blocks">1.5.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#doctest-blocks">1.5.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/inline-markup.html">1.6. Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/files.html">1.7. File, Directory, Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/lists.html">1.8. Lists, Definition Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#unordered-bullet-lists">1.8.1. Unordered (bullet) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#ordered-numbered-lists">1.8.2. Ordered (numbered) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#definition-description-lists">1.8.3. Definition (description) Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/lists.html#field-description-lists">Field (description) Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/explicit-markup.html">1.9. Explicit Markup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#comments">1.9.1. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#directives">1.9.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#footnotes">1.9.3. Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#citations">1.9.4. Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/reuse.html">1.10. Reuse Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/includes.html">1.10.1. Include a Shared File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/substitutions.html">1.10.2. Substitutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#styled-reference">Styled Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#use-prolog-and-epilog">Use Prolog and Epilog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#inline-image">Inline Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/images.html">1.11. Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#svg-graphics-only">1.11.1. SVG Graphics only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#png-images-only">1.11.2. PNG Images only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting">1.11.3. Inserting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-with-captions">1.11.4. Inserting with Captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-inline">1.11.5. Inserting Inline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/tables.html">1.12. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#grid-style">1.12.1. Grid Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#simple-style">1.12.2. Simple Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#list-table">1.12.3. List Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#csv-table">1.12.4. CSV Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/code-example.html">1.13. Code Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-blocks">1.13.1. Explicit Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-includes">1.13.2. Explicit Code Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/mathematics.html">1.14. Mathematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/admonition.html">1.15. Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#generic-admonition">1.15.1. Generic Admonition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#specific-admonitions">1.15.2. Specific Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#attention-admonition">Attention Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#caution-admonition">Caution Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#danger-admonition">Danger Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#error-admonition">Error Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#hint-admonition">Hint Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#important-admonition">Important Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#note-admonition">Note Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#tip-admonition">Tip Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#warning-admonition">Warning Admonition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#sphinx-additional-admonitions">1.15.3. Sphinx Additional Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#seealso-admonition">Seealso Admonition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/hyperlink.html">1.16. Hyperlink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/referencing.html">1.17. Referencing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/referencing.html#a-cool-section">1.17.1. A cool section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/external-referencing.html">1.18. External References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/downloads.html">1.19. Downloadable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/semantic-referencing.html">1.20. Semantic Descriptions and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/user-interfaces.html">1.21. Writing about User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/user-interfaces.html#other-semantic-markup">1.21.1. Other Semantic Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/glossary.html">1.22. Glossary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#create-a-glossary">1.22.1. Create a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#link-a-term-to-its-glossary-entry">1.22.2. Link a Term to its Glossary Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/index.html">1.23. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../extensions.html">2. Extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../spelling.html">2.1. Spelling Checker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spelling.html#private-dictionaries">2.1.1. Private Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bibtex.html">2.2. BibTeX Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linuxdoc.html">2.3. LinuxDoc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linuxdoc.html#flat-list-table">2.3.1. Flat list table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../programoutput.html">2.4. Program Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#complete-output">2.4.1. Complete output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#shortening-the-output">2.4.2. Shortening the output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#mimicking-shell-input">2.4.3. Mimicking shell input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#command-execution-and-shell-expansion">2.4.4. Command execution and shell expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#error-handling">2.4.5. Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.html">2.5. Mathematical Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#expressions">2.5.1. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#plots">2.5.2. Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matplotlib.html#d-plots">3D-Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tikz.html">2.6. PGF/TikZ LaTeX Pictures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pgftikz.html">2.6.1. PGF/TikZ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.6.2. CircuiTikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikztiming.html">2.6.3. TikZ-Timing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzgoodies.html">2.6.4. TikZ Goodies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzuml.html">2.6.5. TikZ-UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blockdiag.html">2.7. Block Diagram Family</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/blockdiag.html">2.7.1. Block Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/seqdiag.html">2.7.2. Sequence Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/actdiag.html">2.7.3. Activity Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/nwdiag.html">2.7.4. Network Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-tabs.html">2.8. Tabbed Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-panels.html">2.9. Paneled Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../email.html">2.10. Email Obfuscate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../themes.html">3. Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../themes/rtd.html">3.1. Read the Docs Sphinx Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cheatsheet.html">4. Cheat Sheet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/gimmick.html">The Gimmick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary/glossterms.html">Terms</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloi.html">List of Issues (To-Do)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Li-Pro.Net Sphinx Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../extensions.html"><span class="section-number">2. </span>Extensions</a> &raquo;</li>
+        
+          <li><a href="../tikz.html"><span class="section-number">2.6. </span>PGF/TikZ LaTeX Pictures</a> &raquo;</li>
+        
+      <li><span class="section-number">2.6.2. </span>CircuiTikZ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/extensions/tikz/circuitikz.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="circuitikz">
+<span id="index-0"></span><h1><span class="section-number">2.6.2. </span>CircuiTikZ<a class="headerlink" href="#circuitikz" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Homepage</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://circuitikz.github.io/circuitikz">CircuiTikZ Home</a></p>
+</dd>
+<dt class="field-even">CTAN Package</dt>
+<dd class="field-even"><p><a class="reference external" href="https://ctan.org/pkg/circuitikz">CircuiTikZ Package</a></p>
+</dd>
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://ctan.net/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf">CircuiTikZ Manual</a></p>
+</dd>
+<dt class="field-even">Git Repository</dt>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/circuitikz/circuitikz/tree/master">CircuiTikZ Master Branch</a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="../../glossary/glossterms.html#term-CircuiTikZ"><span class="xref std std-term">CircuiTikZ</span></a> provides a set of macros for naturally typesetting electrical
+and electronic networks, designed as a tool that is easy to use by native
+to a lean <a class="reference internal" href="../../glossary/glossterms.html#term-LaTeX"><span class="xref std std-term">LaTeX</span></a> syntax. It has therefore been based on the very impressive
+<a class="reference internal" href="../../glossary/glossterms.html#term-PGF-TikZ"><span class="xref std std-term">PGF/TikZ</span></a> package.</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p><strong>Op-Amp stabilization</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-1 docutils container">
+<div class="docutils container">
+<p><strong>Inverting Op-Amp</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-2 docutils container">
+<div class="docutils container">
+<p><strong>Schemed Structure</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-3 docutils container">
+<div class="docutils container">
+<p><strong>Schematic</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-4 docutils container">
+<div class="docutils container">
+<p><strong>Breadboard</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-5 docutils container">
+<div class="docutils container">
+<p><strong>LQFP64 Package</strong></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/3c61cd76464c9250982834cb72acf8be/opamp-fullstab.tex"><code class="xref download docutils literal notranslate"><span class="pre">circuitikz/opamp-fullstab.tex</span></code></a> <a class="footnote-reference brackets" href="#id7" id="id1">1</a>, in <a class="reference internal" href="#tikz-circuitikz-opamp-fullstab"><span class="std std-numref">Figure 2.10</span></a>.</p>
+<div class="centered figure" id="id15">
+<span id="tikz-circuitikz-opamp-fullstab"></span><p><img src="../../_images/tikz-80ee8ad8c5c28d887ff596b7f81a154d5ef9767f.svg" alt="\begin{tikzpicture}
+
+\ctikzset{bipoles/capacitor/height/.initial=.4854}
+\ctikzset{bipoles/capacitor/width/.initial=.1}
+\draw
+    (0,0) node[fd op amp] (opamp) {} node[left] {\(A1\)}
+    % Input
+    (opamp.-) node[circ] {} to[C, l_=\(C_s\)] ++(-1.5,0) node[ocirc] {} node[left] {\(v_i^-\)}
+    (opamp.+) node[circ] {} to[C, l=\(C_s\)] ++(-1.5,0) node[ocirc] {} node[left] {\(v_i^+\)}
+    % Feedback
+    (opamp.-) -- ++(0,1)  to[C, l=\(C_f\)] ++(2,0) -| (opamp.out +) {}
+    (opamp.+) -- ++(0,-1) to[C, l_=\(C_f\)] ++(2,0) -| (opamp.out -) {}
+    % Output
+    (opamp.out +) node[circ] {} -- ++(1,0) node[ocirc] {} node[right] {\(v_o^+\)}
+    (opamp.out -) node[circ] {} -- ++(1,0) node[ocirc] {} node[right] {\(v_o^-\)}
+;
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.10 </span><span class="caption-text">Full differential Op-Amp stabilization principles</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/5e8095fc5d1f5fe0047b02417071c59c/opamp-inv.tex"><code class="xref download docutils literal notranslate"><span class="pre">circuitikz/opamp-inv.tex</span></code></a> <a class="footnote-reference brackets" href="#id8" id="id2">2</a>, in <a class="reference internal" href="#tikz-circuitikz-opamp-inv"><span class="std std-numref">Figure 2.11</span></a>.</p>
+<div class="centered figure" id="id16">
+<span id="tikz-circuitikz-opamp-inv"></span><p><img src="../../_images/tikz-9896c1aa284cd1bc1d574b33336809f8bd53ff81.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+[x=20pt,y=20pt]
+\tikzset{% Environment Config
+    font=\normalsize,
+    MyArrow/.style={% Style for the current
+        -Stealth,
+        cyan,
+        line width=1.0pt,
+        shorten &gt;= 5pt,
+        shorten &lt;= 1pt
+    },
+    Vref/.style={% Style for the voltage reference
+        draw=none,
+        postaction={decorate,decoration={markings,mark=at position 0.5 with {\node{\large #1};}}},
+        postaction={decorate,decoration={markings,mark=at position 0.2 with {\node{\large $\bm{+}$};}}},
+        postaction={decorate,decoration={markings,mark=at position 0.8 with {\node{\large $\bm{-}$};}}}
+    },
+    Numbered/.style = {% Style for circle marks
+            draw,
+            circle,
+            line width=1.0pt,
+            align=center,
+            inner sep=2pt,
+            label distance=10pt
+       }
+}
+
+\ctikzset{bipoles/length=8mm} % Controls bipoles scale
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+\def\MyOpamp(#1)#2{% Customized opamp
+    \begin{scope}[shift={(#1)}]
+        % Component Shape
+        \draw[fill=cyan!25,line width = 2.0pt,line join=round] (0,0)++(-1,1.5)
+            --++(2.5,-1.5) -- ++(-2.5,-1.5)-- cycle;
+        % Label and component identifier.
+        \draw(0,0) node{\sf\large A#2}; % IC LABEL
+        % Draw the pins
+        % Some that you have to learn about label nodes, draw lines, and name coordinates in Tikz
+        \draw[line width = 1.0pt]
+        (-1,0.75) node [anchor=180]{\large $\bm{-}$}
+            -- ++(-0.5,0) coordinate (#2 IN-); % IN -
+        \draw[line width = 1.0pt]
+        (-1,-0.75) node [anchor=180]{\large $\bm{+}$}
+            -- ++(-0.5,0) coordinate (#2 IN+); % IN +
+        \draw[line width = 1.0pt]
+        (1.5,0)
+            -- ++(0.5,0) coordinate (#2 OUT); % OUT
+    \end{scope}
+}
+
+\def\MyGround(#1)#2{% Customized ground
+    \begin{scope}[shift={(#1)}]
+        % Component Shape
+        \draw[line width = 2.0pt,line cap=round]
+        (0,0) coordinate (#2 GND)++(-0.3,0)--++(0.6,0);
+%%      (0,-0.15)++(-0.2,0)--++(0.4,0)
+%%      (0,-0.3)++(-0.1,0)--++(0.2,0);
+    \end{scope}
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic
+%%
+
+% Put the customzed opamp in position
+\MyOpamp(0,0){1}
+
+% Put some short nodes
+\draw(-7,0.75) node[ocirc,scale=2,line width=1.0pt](N3){};
+\draw(-3,0.75) node[circ,scale=2,line width=1.0pt](N2){};
+\draw(3,0) node[circ,scale=2,line width=1.0pt](N6){};
+\draw(5.5,0) node[ocirc,scale=2,line width=1.0pt](N6-OUT){};
+\draw(-7,-2.5) node[ocirc,scale=2,line width=1.0pt](G1){};
+\draw(G1 -| N6-OUT) node[ocirc,scale=2,line width=1.0pt](G3){};
+\MyGround(-7,-3){1}
+\MyGround(1 GND -| N2){2}
+\MyGround(1 GND -| N6-OUT){3}
+
+% Draw the wires and pasive components
+\draw[line width=1.0pt]
+(N3)
+    --++(1,0)
+    to [R,l=\large$R_i$] (N2)
+    --(1 IN-)
+(N2)
+    --++(0,2) coordinate (N5)
+    --++(2.5,0)
+    to[R,l=\large$R_f$]++(3,0)
+    -| (N6)
+(1 IN+)
+    -|(2 GND)
+(G1)
+    |-(1 GND)
+(1 OUT)
+    -- (N6-OUT)
+(G3)
+    |-(3 GND);
+
+% Voltage references: (1)
+\draw[Vref=$V_i$]
+(N3)
+    -- (G1);
+
+\draw[Vref=$0$ V,color=cyan]
+(1 IN-)
+    ++(-0.5,0) coordinate (temp)
+    -- (1 IN+ -| temp)
+    node [
+        midway,
+        label={[Numbered,color=black]180:\bf 1}
+    ]{};
+
+\draw[Vref,color=cyan]
+(N6-OUT)
+    -- (G3)
+    node [
+        midway,
+        anchor=west,
+        label={[Numbered,color=black,label distance=5pt]180:\bf 6}
+    ]{$\bm{V_o} = 0-\cfrac{V_n}{R_i}R_f$};
+
+% Draw voltages (virtual ground): (2)
+\draw[MyArrow,color=magenta!25]
+(N2)++(-1.0,-5)
+    node [
+        color=magenta,
+        label={[Numbered,color=black,label distance=5pt]180:\bf 2}
+    ](C1){$\bm{V_n} = 0$ \bf (Virtual ground)}
+(C1.168) % Get a point from center to node box at 168 degrees
+    to [out=80,in=-150] (N2);
+
+% Draw currents: (3), (4), (5)
+\draw[MyArrow]
+(N3)++(0.3,0.3)
+    -- ++(1.5,0)
+    node [
+        midway,
+        inner sep=10pt,
+        anchor=-70,
+        label={[Numbered,color=black,label distance=0pt]180:\bf 3}
+    ]{$\bm{i_1} = \cfrac{V_n}{R_i}$};
+
+\draw[MyArrow]
+(N2)++(0.5,0.3)
+    -- ++(1.2,0)
+    node [
+        midway,
+        inner sep=10pt,
+        anchor=-70,
+        label={[Numbered,color=black,label distance=0pt]12:\bf 4}
+    ]{$0$};
+
+\draw[MyArrow]
+(N5)++(0.3,0.3) % Node gap
+    -- ++(2,0) % Arrow longitude
+    node [
+        midway,
+        inner sep=10pt,
+        anchor=-70,
+        label={[Numbered,color=black,label distance=0pt]180:\bf 5}
+    ]{$\bm{i_2} = \bm{i_1} =\cfrac{\bm{V_n}}{R_i}$};
+
+\draw[magenta]
+(C1 -| 3 GND)
+    node [
+        inner sep=10pt,
+        anchor=west,
+    ]{$\bm{V_o} = -\cfrac{R_f}{R_i}V_i$};
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.11 </span><span class="caption-text">Detailed description of inverting Op-Amp principles</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-2 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/6e30992a10345cdbdb6aea2b0b5e89eb/nmos-fet.tex"><code class="xref download docutils literal notranslate"><span class="pre">circuitikz/nmos-fet.tex</span></code></a> <a class="footnote-reference brackets" href="#id9" id="id3">3</a>, in <a class="reference internal" href="#tikz-circuitikz-nmos-fet"><span class="std std-numref">Figure 2.12</span></a>.</p>
+<div class="centered figure" id="id17">
+<span id="tikz-circuitikz-nmos-fet"></span><p><img src="../../_images/tikz-039754ca94c0074bd3fa6566571eab39108df41d.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+\newcommand{\metalone}{[pattern= horizontal lines, pattern color=blue]}
+\newcommand{\metaltwo}{[pattern= vertical lines, pattern color=purple]}
+\newcommand{\poly}{[pattern= grid, pattern color=red]}
+\newcommand{\pdiff}{[pattern= north east lines, pattern color=orange]}
+\newcommand{\ndiff}{[pattern= north west lines, pattern color=green]}
+\newcommand{\pwell}{[pattern= crosshatch dots, pattern color=orange]}
+\newcommand{\nwell}{[pattern= crosshatch dots, pattern color=green]}
+\newcommand{\oxide}{[pattern = bricks, pattern color = olive]}
+\newcommand{\silicon}{[fill = white]}
+\newcommand{\metalthree}{[fill = teal]}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic
+%%
+
+% General n-type MOSFET scheme
+\begin{scope}[shift={(0,0)},scale=0.75]
+    \draw \pdiff (0,.25) -- (0,3) -- (1,3) -- (1,2.5) to [out=270,in=180] (1.5,2) -- (3.75,2) to [out=0,in=270] (4.25,2.5) -- (4.25,3) -- (6.75,3) -- (6.75,2.5) to [out=270,in=180] (7.25,2) -- (9.5,2) to [out=0,in=270] (10,2.5) -- (10,3) -- (11,3) -- (11,.25) -- (0,.25) node [midway,above] {p doped Si};
+    \draw \metalthree (0,0) rectangle (11,.25) node [midway, color=white]
+     {Si Substrate};
+    \draw \oxide (4,3) rectangle (7,4) node [pos=.5,font=\bf\Large] {oxide};
+    \draw \metalone (4,4) rectangle (7,4.5);
+    \draw \ndiff (4.25,3) -- (1,3) -- (1,2.5) to [out=270,in=180] (1.5,2) -- (3.75,2) to [out=0,in=270] (4.25,2.5) -- (4.25,3) node at (2.625,2.5) [align=center] {n-type};
+    \draw \ndiff (10,3) -- (6.75,3) -- (6.75,2.5) to [out=270,in=180] (7.25,2) -- (9.5,2) to [out=0,in=270] (10,2.5) -- (10,3) node at (8.375,2.5) [align=center] {n-type};
+    \draw \metalone (1.25,3) rectangle (3,3.5);
+    \draw \metalone (8,3) rectangle (9.75,3.5);
+
+    % Label the metal connections on MOSFET
+    \draw [-&gt;] (1,5) node [above] {Source} -- (2.125,3.5);
+    \draw [-&gt;] (10,5) node [above] {Drain} -- (8.975,3.5);
+    \draw [-&gt;] (5.5,5) node [above] {Gate} -- (5.5,4.5);
+
+    \node at (5.5,-.5) [align=center] {$V_{GS} \geq V_{threshold}$};
+    \node at (5.5,-1) [align=center] {$V_{DS} &gt; V_{GS} - V_{threshold}$};
+
+    \draw [fill=orange,orange] (4.25,3) rectangle (6.75,2.5);
+    \draw [fill=white] (4.25,3) -- (4.25,2.85) -- (6.75,3) -- (4.75,3);
+    \draw \ndiff (4.25,3) -- (4.25,2.85) -- (6.75,3) -- (4.75,3);
+\end{scope}
+
+% General n-type MOSFET part
+\begin{scope}[shift={(12,1)}]
+    \ctikzset{tripoles/mos style/arrows}
+    \draw(-1.5,1.5) node[anchor=south](S){Source};
+    \draw(0,1.5) node[anchor=south](G){Gate};
+    \draw(1.5,1.5) node[anchor=south](D){Drain};
+    \draw (0,0) node [nmos,rotate=-90](Q1){\rotatebox[origin=c]{90}{n-type MOSFET}};
+    \draw[line width=1.0pt,-o] (Q1.S) -| (S);
+    \draw[line width=1.0pt,-o] (Q1.G) -| (G);
+    \draw[line width=1.0pt,-o] (Q1.D) -| (D);
+\end{scope}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.12 </span><span class="caption-text">Drawing generic n-type MOSFET chip structure</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-3 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/60572a98dcb3e4c8d7bb30fbca79da67/ne555-deedah.tex"><code class="xref download docutils literal notranslate"><span class="pre">circuitikz/ne555-deedah.tex</span></code></a> <a class="footnote-reference brackets" href="#id10" id="id4">4</a>, in <a class="reference internal" href="#tikz-circuitikz-ne555-deedah"><span class="std std-numref">Figure 2.13</span></a>.</p>
+<div class="centered figure" id="id18">
+<span id="tikz-circuitikz-ne555-deedah"></span><p><img src="../../_images/tikz-f0fd8716bd8b4706d1f85b8de0f27b0af7b13537.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+%% [x=20pt,y=20pt]
+\tikzset{% Environment Config
+    font=\small
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This code is from Claudio Fiandrino and ads new label styles to
+%% allow aditional labels like two line descriptions. Comes from:
+%% --&gt; https://tex.stackexchange.com/a/65792/154390
+%%
+\makeatletter
+\ctikzset{lx/.code args={#1 and #2}{ 
+  \pgfkeys{/tikz/circuitikz/bipole/label/name=\parbox{1cm}{\centering #1 \\ #2}}
+    \ctikzsetvalof{bipole/label/unit}{}
+    \ifpgf&#64;circ&#64;siunitx 
+      \pgf&#64;circ&#64;handleSI{#2}
+      \ifpgf&#64;circ&#64;siunitx&#64;res 
+        \edef\pgf&#64;temp{\pgf&#64;circ&#64;handleSI&#64;val}
+        \pgfkeyslet{/tikz/circuitikz/bipole/label/name}{\pgf&#64;temp}
+        \edef\pgf&#64;temp{\pgf&#64;circ&#64;handleSI&#64;unit}
+        \pgfkeyslet{/tikz/circuitikz/bipole/label/unit}{\pgf&#64;temp}
+      \else
+      \fi
+    \else
+    \fi
+}}
+\ctikzset{lx^/.style args={#1 and #2}{
+  lx=#2 and #1,
+  \circuitikzbasekey/bipole/label/position=90
+}}
+\ctikzset{lx_/.style args={#1 and #2}{
+  lx=#1 and #2,
+  \circuitikzbasekey/bipole/label/position=-90
+}}
+\makeatother
+
+\ctikzset{bipoles/length=10mm} % Controls bipoles scale
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+% You can create an smart objet like Henri Menke in this post:
+% --&gt; http://www.texample.net/tikz/examples/4-bit-counter/
+% Variables: 1: Position 2: ID.
+\def\TIMER555(#1)#2{%
+    \begin{scope}[shift={(#1)}]
+        \draw[fill=blue!10] (-1.5,-2) rectangle (1.5,2); % The body of IC
+        % Label and component identifier.
+        \draw[blue] (2,2.5) node []{\large \bf U#2}; % IC LABEL
+        \draw[blue] (0,0.5) node [align=center]{\large NE555\\TIMER}; % IC LABEL
+        % Draw the pins
+        % Some that you have to learn about label nodes, draw lines, and name coordinates in Tikz
+        \draw (0.9,-2) node [above]{GND} -- +(0,-0.5) node [anchor=-45]{1} coordinate (#2 GND); % Pin 1 GND
+        \draw (-1.5,-1.5) node [right]{TRG} -- +(-0.5,0) node [anchor=-135]{2} coordinate (#2 TRG); % Pin 2 TRG
+        \draw (1.5,0) node [left]{OUT} -- +(0.5,0) node [anchor=-45]{3} coordinate (#2 OUT); % Pin 3 OUT  
+        \draw (0.9,2) node [below]{RESET} -- +(0,0.5) node [anchor=45]{4} coordinate (#2 RESET); % Pin 4 RESET
+        \draw (0,-2) node [above]{CTRL} -- +(0,-0.5) node [anchor=-45]{5} coordinate (#2 CTRL); % Pin 5 CTRL
+        \draw (-1.5,-.5) node [right]{THR} -- +(-0.5,0) node [anchor=-135]{6} coordinate (#2 THR); % Pin 6 THR
+        \draw (-1.5,1.5) node [right]{DIS} -- +(-0.5,0) node [anchor=-135]{7} coordinate (#2 DIS); % Pin 7 DIS
+        \draw (0,2) node [below]{$\mathsf{V_{CC}}$} -- +(0,0.5) node [anchor=45]{8} coordinate (#2 VCC); % Pin 8 VCC
+    \end{scope}
+}
+
+% This is by J. Leon V. and adaption by me
+% Variables: 1: Position 2: ID.
+\def\SPEAKER(#1)#2{%
+    \begin{scope}[shift={(#1)}]
+        \draw[fill=green!40!black!50] (-.2,.3) rectangle (.2,-.3); % The body of IC
+        \draw[fill=green!40!black!30] (.2,.3) -- ++(.2,.3) -- ++(0,-1.2) -- (.2,-0.3) -- (.2,.3); % The body of IC
+        % Label and component identifier.
+        \draw[blue] (-1.25,0.25) node []{\large \bf E#2}; % PART LABEL
+        \draw[blue] (-1.25,-.25) node [align=center]{\large Speaker}; % PART LABEL
+        % Component value.
+        \draw[blue] (-1.25,-.75) node [align=center]{8\si{\ohm}}; % PART VALUE
+        % Draw the pins
+        % Some that you have to learn about label nodes, draw lines, and name coordinates in Tikz
+        \draw (0,.3)  -- +(0,0.5) node [anchor=45]{1} coordinate (#2 S1); % Pin 1 
+        \draw (0,-0.3)  -- +(0,-0.5) node [anchor=-45]{2} coordinate (#2 S2); % Pin 2 
+    \end{scope}
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic: drawing the circuit: Example &quot;Dee-Dah&quot; Siren
+%%
+
+% Place the IC's in position
+\TIMER555(0,0){1};
+\TIMER555(6,0){2};
+\SPEAKER(9.5,-3){1};
+
+% Start conecting 
+\draw[color=blue!50] (-4,3.5) % Start point
+    node [anchor=east]{$\mathsf{V_{CC}}$}
+    to [short,o-] ++(1,0) coordinate (NOD1) % Use auxiliar coordinate (NOD1)
+    to [R,lx^=68k\si{\ohm} and R1,color=black,*-*] (1 DIS -| NOD1) % to the point in the intersection between NOD1 and 1 DIS
+    to [R,lx^=68k\si{\ohm} and R2,color=black,*-*] (1 THR -| NOD1)% idem
+    to [short,*-*] (1 TRG -| NOD1)
+    to [eC,lx^=10\si{\mu}F and C1,color=black,*-*] (-3,-5)
+    to [short,*-o] ++(-1,0) coordinate (GND)
+    node [anchor=east]{GND};
+
+\draw[color=blue] (1 DIS)
+    to [short,-] (1 DIS -| NOD1)
+    to [short,-] ++(-.7,0) coordinate (NOD2)
+    to [D,lx_=D1 and IN4148,color=black] (1 THR -| NOD2) % Here is used Fiandrino macro!
+    to [short,-] (1 THR);
+
+\draw[color=blue!50] (NOD1) 
+    to [short,-*] ++(6,0) coordinate (NOD3) % Use auxiliar coordinate (NOD1)
+    to [R,lx^=68k\si{\ohm} and R3,color=black,*-*] (1 DIS -| NOD3) % to the point in the intersection between NOD3 and 1 DIS
+    to [R,lx^=68k\si{\ohm} and R4,color=black,*-*] (1 THR -| NOD3)% idem
+    to [short,*-*] (1 TRG -| NOD3)
+    to [short,-] ++(0,-2)
+    to [eC,lx^=100nF and C3,color=black,-*] (NOD3 |- GND) coordinate (NOD4)
+    to [short,-] (GND);
+
+\draw[color=blue] (1 OUT)
+    to[R,lx=R5 and 10k\si{\ohm},label/align=rotate,color=black] ++(0,-3) coordinate (NOD5)
+    to [short] (2 CTRL |- NOD5)
+    to [short] (2 CTRL);    
+
+\draw[color=blue] (2 OUT)
+    to[pC,lx^=100\si{\mu}F and C4,invert,color=black] (2 OUT -| 1 S1)
+    to [pR,l_=Rx,color=black] (1 S1); 
+
+%Conect U1
+\draw[color=blue] (1 VCC) to [short,-*] (1 VCC |- NOD1);
+\draw[color=blue] (1 RESET) to [short,-*] (1 RESET |- NOD1);
+\draw[color=blue] (1 TRG) to [short,-*] (1 TRG -| NOD1);
+\draw[color=blue] (1 CTRL) to [eC,lx_=C2 and 0.01nF,-*,color=black] (1 CTRL |- GND);
+\draw[color=blue] (1 GND) to [short,-*] (1 GND |- GND);
+
+%Conect U2
+\draw[color=blue] (2 VCC) to [short,-*] (2 VCC |- NOD3);
+\draw[color=blue] (2 RESET) to [short,-] (2 RESET |- NOD3) to [short] (NOD3);
+\draw[color=blue] (2 TRG) to [short,-*] (2 TRG -| NOD3);
+\draw[color=blue] (2 GND) to [short,-*] (2 GND |- GND);
+\draw[color=blue] (2 DIS) to [short] (2 DIS -| NOD3);
+\draw[color=blue] (2 THR) to [short] (2 THR -| NOD3);
+
+% Conect E1
+\draw[color=blue] (1 S2) |- (NOD3 |- GND);
+
+% Decorate ground and VCC
+\draw[color=blue] (GND -| NOD3) -- ++(0,-0.2)node[rground]{};
+\draw[color=blue] (NOD3) -- ++(0,0.2) node[vcc]{$\mathsf{V_{CC}}$ (+5 to 15V)};
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.13 </span><span class="caption-text">NE555 timer as “Dee-Dah” siren</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-4 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/bffb08a2e1049eb3d2fcb2c4334cf3fb/breadboard.tex"><code class="xref download docutils literal notranslate"><span class="pre">circuitikz/breadboard.tex</span></code></a> <a class="footnote-reference brackets" href="#id11" id="id5">5</a>, in <a class="reference internal" href="#tikz-circuitikz-breadboard"><span class="std std-numref">Figure 2.14</span></a>.</p>
+<div class="centered figure" id="id19">
+<span id="tikz-circuitikz-breadboard"></span><p><img src="../../_images/tikz-041e59a41a8ab3880a00dd311b9c3eb516747961.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+[x=0.2in,y=0.2in]
+\tikzset{% Environment Config
+    font=\small,
+    open socket/.style = {
+        circle,
+        fill = lightgray,
+        draw = lightgray,
+        inner sep = 1pt
+    },
+    filled socket/.style = {
+        circle,
+        fill = black,
+        draw = lightgray,
+        inner sep = 1pt
+    },
+    strip/.style = {
+        opacity = 0.1,
+        line cap = round,
+        line join = round,
+        line width = 6pt
+    },
+    wire/.style = {
+        decorate,
+        decoration = {
+            random steps,
+            amplitude = 2pt,
+            segment length = 0.2in
+        },
+        line cap = round,
+        line join = round,
+        line width = 2pt
+    }
+}
+
+\ctikzset{bipoles/length=0.4in} % Controls bipoles scale
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+\newcommand{\speaker}[2]{% #1 = name from to[generic,n=#1], #2 = rotation angle
+    \draw[thick,rotate=#2]
+        (#1) +(.3,.375) -- +(1.05,1.125) -- +(1.05,-1.125) -- +(.3,-.375);
+}
+
+% You can create an smart objet like Henri Menke in this post:
+% --&gt; http://www.texample.net/tikz/examples/4-bit-counter/
+% Variables: 1: Position 2: Lines.
+\def\BREADBOARD(#1)#2{%
+    \begin{scope}[shift={(#1)}]
+        \foreach \y [evaluate = \y as \line using int(abs(\y))]
+                 in {-1,-2,-3,...,-#2}{%% draw breadboard sections
+
+            % draw bus and breadboard grid sockets
+            \foreach \lab/\x in {
+                    l-/-9.5, lg/-8.5,       % power strips on left side
+                    A/-5.5, B/-4.5, C/-3.5, D/-2.5, E/-1.5, % left side
+                    F/1.5, G/2.5, H/3.5, I/4.5, J/5.5,     % right side
+                    r+/8.5, rg/9.5         % power strips on right side
+            } {
+                \coordinate [open socket] (\lab\line) at (\x, \y);
+            }
+
+            % draw row connectivity for board proper
+            \begin{scope} [% these paths should not interfere with anything else
+                on background layer
+            ]
+                \draw [strip,gray]
+                    (A\line.west) -- (E\line.east)
+                    (F\line.west) -- (J\line.east);
+            \end{scope}
+
+            % draw line numbers off to the left
+            \node [left of = l-\line,text=gray] {\line};
+            \node [right of = rg\line,text=gray] {\line};
+        }
+
+        % draw bus connection lines
+        \begin{scope} [% these paths should not interfere with anything else
+            on background layer
+        ]
+            \draw [strip,red]  (l-1.north) -- (l-#2.south);
+            \draw [strip,blue] (lg1.north) -- (lg#2.south);
+        
+            \draw [strip,red]  (r+1.north) -- (r+#2.south);
+            \draw [strip,blue] (rg1.north) -- (rg#2.south);
+        \end{scope}
+
+        % label breadboard columns (top/bottom)
+        \foreach \lab/\x in {
+                A/-5.5, B/-4.5, C/-3.5, D/-2.5, E/-1.5, % left side
+                F/1.5, G/2.5, H/3.5, I/4.5, J/5.5      % right side
+        } {
+            \node [above of = \lab1] {\lab};
+            \node [below of = \lab#2] {\lab};
+        }
+
+        % label buses (top)
+        \node [above of=l-1,red] {\shortstack{\tiny{V$_{-}$}\\\Large{${+}$}}};
+        \node [above of=lg1,blue] {\shortstack{\tiny{GND$_{}$}\\\Large{${-}$}}};
+        \node [above of=r+1,red] {\shortstack{\tiny{V$_{+}$}\\\Large{${+}$}}};
+        \node [above of=rg1,blue] {\shortstack{\tiny{GND$_{}$}\\\Large{${-}$}}};
+
+        % label buses (bottom)
+        \node [below of=l-#2,red] {\shortstack{\Large{${+}$}\\\tiny{V$_{-}$}}};
+        \node [below of=lg#2,blue] {\shortstack{\Large{${-}$}\\\tiny{GND$_{}$}}};
+        \node [below of=r+#2,red] {\shortstack{\Large{${+}$}\\\tiny{V$_{+}$}}};
+        \node [below of=rg#2,blue] {\shortstack{\Large{${-}$}\\\tiny{GND$_{}$}}};
+    \end{scope}
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic: drawing the breadboard and place the parts
+%%
+
+% Place the Breadboard in position
+\BREADBOARD(0,0){29};
+\draw[red,wire] (l-28) to[short,*-*] (r+28);
+\draw[blue,wire] (lg29) to[short,*-*] (rg29);
+
+% Power Supply (Vcc)
+\draw (l-10) ++(-6,0) coordinate (VCC) to[V=$\mathsf{V_{CC}}$,i_=$\mathsf{I_{CC}}$,*-*] ++(0,-10) coordinate (GND);
+\draw[red,wire] (VCC) to[short,*-*] (l-10);
+\draw[blue,wire] (GND) to[short,*-*] (lg20);
+
+% Place the IC's in position
+\node[dip8,pin spacing=0.2in,rotate=-90] (U1) at (0,-5.5) {\MakeUppercase{U1:NE555}};
+\draw (U1.p1) to[short,-*] (E4); \draw[blue,wire] (A4) to[short,*-*] (lg4);
+\draw (U1.p2) to[short,-*] (E5);
+\draw (U1.p3) to[short,-*] (E6);
+\draw (U1.p4) to[short,-*] (E7); \draw[red,wire] (A7) to[short,*-*] (l-7);
+\draw (U1.p5) to[short,-*] (F7);
+\draw (U1.p6) to[short,-*] (F6);
+\draw (U1.p7) to[short,-*] (F5);
+\draw (U1.p8) to[short,-*] (F4); \draw[red,wire] (J4) to[short,*-*] (r+4);
+
+\node[dip8,pin spacing=0.2in,rotate=-90] (U2) at (0,-15.5) {\MakeUppercase{U2:NE555}};
+\draw (U2.p1) to[short,-*] (E14); \draw[blue,wire] (A14) to[short,*-*] (lg14);
+\draw (U2.p2) to[short,-*] (E15);
+\draw (U2.p3) to[short,-*] (E16);
+\draw (U2.p4) to[short,-*] (E17); \draw[red,wire] (A17) to[short,*-*] (l-17);
+\draw (U2.p5) to[short,-*] (F17);
+\draw (U2.p6) to[short,-*] (F16);
+\draw (U2.p7) to[short,-*] (F15);
+\draw (U2.p8) to[short,-*] (F14); \draw[red,wire] (J14) to[short,*-*] (r+14);
+
+% Start conecting (U1)
+\draw[violet,wire] (H1) to[short,*-*] (H6);
+\draw[violet,wire] (E1) to[short,*-*] (F1);
+\draw[violet,wire] (D5) to[short,*-*] (D1);
+
+% Start conecting (U2)
+\draw[violet,wire] (E11) to[short,*-*] (F11);
+\draw[violet,wire] (H11) to[short,*-*] (H16);
+\draw[violet,wire] (D15) to[short,*-*] (D11);
+
+% Start inter-conecting (U1-U2-Speaker)
+\draw[green,wire] (D6) to[short,*-*] (D9);
+\draw[green,wire] (I9) to[short,*-*] (I17);
+\draw[green,wire] (D16) to[short,*-*] (D19);
+
+% Place parts (U1)
+\draw (I5) to[D,l_=D1:IN4148,*-*] (I1);
+\draw (G5) to[R,l^=R2:68k\si{\ohm},*-*] (G1);
+\draw (J5) to[R,l_=R1:68k\si{\ohm},*-*] (r+5);
+\draw (A5) to[eC,l^=C1:10\si{\mu}F,*-*] (lg5);
+\draw (J7) to[eC,l_=C2:0.01nF,*-*] (rg7);
+\draw (F9) to[R,l^=R5:10k\si{\ohm},*-*] (E9);
+
+% Place parts (U2)
+\draw (G15) to[R,l^=R4:68k\si{\ohm},*-*] (G11);
+\draw (J15) to[R,l_=R3:68k\si{\ohm},*-*] (r+15);
+\draw (A15) to[eC,l^=C3:100nF,*-*] (lg15);
+\draw (F19) to[pC,l^=C4:100\si{\mu}F,*-*] (E19);
+
+% Place parts (E1)
+\draw[green,wire] (I21) to[short,*-*] (I23);
+\draw (G19) to[pR,n=Rx,l_=Rx,*-*] (G23);
+\draw (Rx.wiper) to[short,-*] (H21);
+\draw (lg23) to[generic,n=E1,l=E1:8\si{\ohm},fill=green!50,*-*] (F23);
+\speaker{E1}{-90}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.14 </span><span class="caption-text">Breadboard with NE555 timer as “Dee-Dah” siren</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-5 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/7f05aa6db15d335a418120326ff1ec6f/lpc214x-lqfp64.tex"><code class="xref download docutils literal notranslate"><span class="pre">circuitikz/lpc214x-lqfp64.tex</span></code></a> <a class="footnote-reference brackets" href="#id12" id="id6">6</a>, in <a class="reference internal" href="#tikz-circuitikz-lpc214x-lqfp64"><span class="std std-numref">Figure 2.15</span></a>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Native support only since CircuiTikZ V0.9 (Oct 2019).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://github.com/circuitikz/circuitikz/blob/master/CHANGELOG.md">CircuiTikZ change log</a></p>
+</div>
+</div>
+<div class="centered figure" id="id20">
+<span id="tikz-circuitikz-lpc214x-lqfp64"></span><p><img src="../../_images/tikz-e0551055920cdacaea76d5a676b32f5068720ffa.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic: drawing the package
+%%
+
+\node[qfp64,pin spacing=3.5mm] (U1) at (0,0) {\MakeUppercase{lpc2144/2146/2148}};
+\node[left] at (U1.p1) {\small \MakeUppercase{p0.21/pwm5/ad1.6/cap1.3}};
+\node[left] at (U1.p2) {\small \MakeUppercase{p0.22/ad1.7/cap0.0/mat0.0}};
+\node[left] at (U1.p3) {\small \MakeUppercase{rtcx1}};
+\node[left] at (U1.p4) {\small \MakeUppercase{p1.19/tracepkt3}};
+\node[left] at (U1.p5) {\small \MakeUppercase{rtcx2}};
+\node[left] at (U1.p6) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[left] at (U1.p7) {\small \MakeUppercase{V\textsubscript{dda}}};
+\node[left] at (U1.p8) {\small \MakeUppercase{p1.18/tracepkt2}};
+\node[left] at (U1.p9) {\small \MakeUppercase{p0.25/ad0.4/aout}};
+\node[left] at (U1.p10) {\small \MakeUppercase{d$+$}};
+\node[left] at (U1.p11) {\small \MakeUppercase{d$-$}};
+\node[left] at (U1.p12) {\small \MakeUppercase{p1.17/tracepkt1}};
+\node[left] at (U1.p13) {\small \MakeUppercase{p0.28/ad0.1/cap0.2/mat0.2}};
+\node[left] at (U1.p14) {\small \MakeUppercase{p0.29/ad0.2/cap0.3/mat0.3}};
+\node[left] at (U1.p15) {\small \MakeUppercase{p0.30/ad0.3/eint3/cap0.0}};
+\node[left] at (U1.p16) {\small \MakeUppercase{p1.16/tracepkt0}};
+\node[left,rotate=90] at (U1.p17) {\small \MakeUppercase{P0.31/up\textunderscore{ }led/connect}};
+\node[left,rotate=90] at (U1.p18) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[left,rotate=90] at (U1.p19) {\small \MakeUppercase{p0.0/txd0/pwm1}};
+\node[left,rotate=90] at (U1.p20) {\small \MakeUppercase{p1.31/\textoverline{trst}}};
+\node[left,rotate=90] at (U1.p21) {\small \MakeUppercase{p0.1/rxd0/pwm3/eint0}};
+\node[left,rotate=90] at (U1.p22) {\small \MakeUppercase{p0.2/scl0/cap0.0}};
+\node[left,rotate=90] at (U1.p23) {\small \MakeUppercase{V\textsubscript{dd}}};
+\node[left,rotate=90] at (U1.p24) {\small \MakeUppercase{p1.26/rtck}};
+\node[left,rotate=90] at (U1.p25) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[left,rotate=90] at (U1.p26) {\small \MakeUppercase{p0.3/sda0/mat0.0/ad0.6}};
+\node[left,rotate=90] at (U1.p27) {\small \MakeUppercase{p0.4/sck0/mat0.1/ad0.6}};
+\node[left,rotate=90] at (U1.p28) {\small \MakeUppercase{p1.25/extin0}};
+\node[left,rotate=90] at (U1.p29) {\small \MakeUppercase{p0.5/miso0/mat0.1/ad0.7}};
+\node[left,rotate=90] at (U1.p30) {\small \MakeUppercase{p0.6/mosi0/cap0.2/ad1.0}};
+\node[left,rotate=90] at (U1.p31) {\small \MakeUppercase{p0.7/ssel0/pwm2/eint2}};
+\node[left,rotate=90] at (U1.p32) {\small \MakeUppercase{p1.24/traceclk}};
+\node[right] at (U1.p33) {\small \MakeUppercase{p0.8/txd1/pwm4/ad1.1}};
+\node[right] at (U1.p34) {\small \MakeUppercase{p0.9/rxd1/pwm6/eint3}};
+\node[right] at (U1.p35) {\small \MakeUppercase{p0.10/rts1/cap1.0/ad1.2}};
+\node[right] at (U1.p36) {\small \MakeUppercase{p1.23/pipestat2}};
+\node[right] at (U1.p37) {\small \MakeUppercase{p0.11/cts1/cap1.1/scl1}};
+\node[right] at (U1.p38) {\small \MakeUppercase{p0.12/dsr1/mat1.0/ad1.3}};
+\node[right] at (U1.p39) {\small \MakeUppercase{p0.13/dtr1/mat1.1/ad1.4}};
+\node[right] at (U1.p40) {\small \MakeUppercase{p1.22/pipestat1}};
+\node[right] at (U1.p41) {\small \MakeUppercase{p0.14/dcd1/eint1/sda1}};
+\node[right] at (U1.p42) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[right] at (U1.p43) {\small \MakeUppercase{V\textsubscript{dd}}};
+\node[right] at (U1.p44) {\small \MakeUppercase{p1.21/pipestat0}};
+\node[right] at (U1.p45) {\small \MakeUppercase{p0.15/ri1/eint2/ad1.5}};
+\node[right] at (U1.p46) {\small \MakeUppercase{p0.16/eint0/mat0.2/cap0.2}};
+\node[right] at (U1.p47) {\small \MakeUppercase{p0.17/cap1.2/sck1/mat1.2}};
+\node[right] at (U1.p48) {\small \MakeUppercase{p1.20/tracesync}};
+\node[right,rotate=90] at (U1.p49) {\small \MakeUppercase{V\textsubscript{bat}}};
+\node[right,rotate=90] at (U1.p50) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[right,rotate=90] at (U1.p51) {\small \MakeUppercase{V\textsubscript{dd}}};
+\node[right,rotate=90] at (U1.p52) {\small \MakeUppercase{p1.30/tms}};
+\node[right,rotate=90] at (U1.p53) {\small \MakeUppercase{p0.18/cap1.3/miso1/mat1.3}};
+\node[right,rotate=90] at (U1.p54) {\small \MakeUppercase{p0.19/mat1.2/mosi1/cap1.2}};
+\node[right,rotate=90] at (U1.p55) {\small \MakeUppercase{p0.20/mat1.3/ssel1/eint3}};
+\node[right,rotate=90] at (U1.p56) {\small \MakeUppercase{p1.29/tck}};
+\node[right,rotate=90] at (U1.p57) {\small \MakeUppercase{\textoverline{reset}}};
+\node[right,rotate=90] at (U1.p58) {\small \MakeUppercase{p0.23/V\textsubscript{bus}}};
+\node[right,rotate=90] at (U1.p59) {\small \MakeUppercase{V\textsubscript{ssa}}};
+\node[right,rotate=90] at (U1.p60) {\small \MakeUppercase{p1.28/tdi}};
+\node[right,rotate=90] at (U1.p61) {\small \MakeUppercase{xtal2}};
+\node[right,rotate=90] at (U1.p62) {\small \MakeUppercase{xtal1}};
+\node[right,rotate=90] at (U1.p63) {\small \MakeUppercase{V\textsubscript{aef}}};
+\node[right,rotate=90] at (U1.p64) {\small \MakeUppercase{p1.27/tdo}};
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.15 </span><span class="caption-text">LPC2144/2146/2148 pin assignment on LQFP64</span></p>
+</div></div>
+</div>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/q/82797">StackExchange (TeX): q/82797</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/791">Kit</a>)</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/441787">StackExchange (TeX): a/441787</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/154390">J Leon V.</a>, BSD, MIT, Beerware licences)</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Indication of provenance:
+<a class="reference external" href="http://wesleythoneycutt.com/drawing-mosfet-in-tikz/">http://wesleythoneycutt.com/drawing-mosfet-in-tikz/</a>
+(by Wesley T. Honeycutt)</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/435123">StackExchange (TeX): a/435123</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/154390">J Leon V.</a>, BSD, MIT, Beerware licences)</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/q/493239">StackExchange (TeX): q/493239</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/162839">Anshul Singhvi</a>)</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/202449">StackExchange (TeX): a/202449</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/34505">John Kormylo</a>)</p>
+</dd>
+</dl>
+<p></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tikztiming.html" class="btn btn-neutral float-right" title="2.6.3. TikZ-Timing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pgftikz.html" class="btn btn-neutral float-left" title="2.6.1. PGF/TikZ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors.
+      <span class="lastupdated">
+        Last updated on Oct 01, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Li-Pro.Net Sphinx Primer" name="subject" />
+<meta content="How to write Li-Pro.Net documentation with Sphinx." name="description" />
+<meta content="Sphinx, Docutils, reStructuredText, howto, primer" name="keywords" />
+<meta content="The LP/N Documentation Team" name="author" />
+<meta content="Li–Pro.Net" name="publisher" />
+<meta content="2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors." name="copyright" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <meta content="Domains" name="topic" />
+    
+  <title>1.2.3. Domains &mdash; Li-Pro.Net Sphinx Primer</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-cite.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-float.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/lpn.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://lpn-doc-sphinx-primer-devel.readthedocs.io/concepts/naming/domains.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.3. Parts, Chapters, Titles, Sections" href="../heading.html" />
+    <link rel="prev" title="1.2.2. Directives" href="directives.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Li-Pro.Net Sphinx Primer
+          
+
+          
+            
+            <img src="../../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../concepts.html">1. Concepts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../whitespace.html">1.1. Use of whitespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../whitespace.html#indentation">1.1.1. Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../naming.html">1.2. Sphinx naming</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="roles.html">1.2.1. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="directives.html">1.2.2. Directives</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2.3. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../heading.html">1.3. Parts, Chapters, Titles, Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../toctree.html">1.4. Table of Contents Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../toctree.html#sidebar-navigation-menu">1.4.1. Sidebar navigation menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toctree.html#secondary-sub-toc-trees">1.4.2. Secondary sub-TOC trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toctree.html#how-this-document-uses-main-and-secondary-toc">1.4.3. How this document uses main and secondary TOC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../paragraphs.html">1.5. Paragraphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../paragraphs.html#quotes-block-quotation-element">1.5.1. Quotes (block quotation) Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paragraphs.html#line-blocks">1.5.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paragraphs.html#doctest-blocks">1.5.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../inline-markup.html">1.6. Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../files.html">1.7. File, Directory, Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lists.html">1.8. Lists, Definition Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../lists.html#unordered-bullet-lists">1.8.1. Unordered (bullet) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists.html#ordered-numbered-lists">1.8.2. Ordered (numbered) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lists.html#definition-description-lists">1.8.3. Definition (description) Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lists.html#field-description-lists">Field (description) Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../explicit-markup.html">1.9. Explicit Markup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../explicit-markup.html#comments">1.9.1. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../explicit-markup.html#directives">1.9.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../explicit-markup.html#footnotes">1.9.3. Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../explicit-markup.html#citations">1.9.4. Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../reuse.html">1.10. Reuse Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../reuse/includes.html">1.10.1. Include a Shared File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reuse/substitutions.html">1.10.2. Substitutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../reuse/substitutions.html#styled-reference">Styled Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reuse/substitutions.html#use-prolog-and-epilog">Use Prolog and Epilog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reuse/substitutions.html#inline-image">Inline Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../images.html">1.11. Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../images.html#svg-graphics-only">1.11.1. SVG Graphics only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../images.html#png-images-only">1.11.2. PNG Images only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../images.html#inserting">1.11.3. Inserting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../images.html#inserting-with-captions">1.11.4. Inserting with Captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../images.html#inserting-inline">1.11.5. Inserting Inline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tables.html">1.12. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tables.html#grid-style">1.12.1. Grid Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tables.html#simple-style">1.12.2. Simple Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tables.html#list-table">1.12.3. List Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tables.html#csv-table">1.12.4. CSV Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../code-example.html">1.13. Code Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../code-example.html#explicit-code-blocks">1.13.1. Explicit Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../code-example.html#explicit-code-includes">1.13.2. Explicit Code Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mathematics.html">1.14. Mathematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admonition.html">1.15. Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../admonition.html#generic-admonition">1.15.1. Generic Admonition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../admonition.html#specific-admonitions">1.15.2. Specific Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#attention-admonition">Attention Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#caution-admonition">Caution Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#danger-admonition">Danger Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#error-admonition">Error Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#hint-admonition">Hint Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#important-admonition">Important Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#note-admonition">Note Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#tip-admonition">Tip Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#warning-admonition">Warning Admonition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../admonition.html#sphinx-additional-admonitions">1.15.3. Sphinx Additional Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../admonition.html#seealso-admonition">Seealso Admonition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hyperlink.html">1.16. Hyperlink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../referencing.html">1.17. Referencing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../referencing.html#a-cool-section">1.17.1. A cool section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../external-referencing.html">1.18. External References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../downloads.html">1.19. Downloadable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../semantic-referencing.html">1.20. Semantic Descriptions and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-interfaces.html">1.21. Writing about User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../user-interfaces.html#other-semantic-markup">1.21.1. Other Semantic Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../glossary.html">1.22. Glossary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../glossary.html#create-a-glossary">1.22.1. Create a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../glossary.html#link-a-term-to-its-glossary-entry">1.22.2. Link a Term to its Glossary Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html">1.23. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../extensions.html">2. Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/spelling.html">2.1. Spelling Checker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/spelling.html#private-dictionaries">2.1.1. Private Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/bibtex.html">2.2. BibTeX Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/linuxdoc.html">2.3. LinuxDoc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/linuxdoc.html#flat-list-table">2.3.1. Flat list table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/programoutput.html">2.4. Program Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/programoutput.html#complete-output">2.4.1. Complete output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/programoutput.html#shortening-the-output">2.4.2. Shortening the output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/programoutput.html#mimicking-shell-input">2.4.3. Mimicking shell input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/programoutput.html#command-execution-and-shell-expansion">2.4.4. Command execution and shell expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/programoutput.html#error-handling">2.4.5. Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/matplotlib.html">2.5. Mathematical Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/matplotlib.html#expressions">2.5.1. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/matplotlib.html#plots">2.5.2. Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/matplotlib.html#d-plots">3D-Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/tikz.html">2.6. PGF/TikZ LaTeX Pictures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/tikz/pgftikz.html">2.6.1. PGF/TikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/tikz/circuitikz.html">2.6.2. CircuiTikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/tikz/tikztiming.html">2.6.3. TikZ-Timing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/tikz/tikzgoodies.html">2.6.4. TikZ Goodies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/tikz/tikzuml.html">2.6.5. TikZ-UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/blockdiag.html">2.7. Block Diagram Family</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/blockdiag/blockdiag.html">2.7.1. Block Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/blockdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/blockdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/blockdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/blockdiag/seqdiag.html">2.7.2. Sequence Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/seqdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/seqdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/seqdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/blockdiag/actdiag.html">2.7.3. Activity Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/actdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/actdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/actdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../extensions/blockdiag/nwdiag.html">2.7.4. Network Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/nwdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/nwdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../extensions/blockdiag/nwdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/sphinx-tabs.html">2.8. Tabbed Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/sphinx-panels.html">2.9. Paneled Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../extensions/email.html">2.10. Email Obfuscate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../themes.html">3. Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../themes/rtd.html">3.1. Read the Docs Sphinx Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cheatsheet.html">4. Cheat Sheet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/gimmick.html">The Gimmick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary/glossterms.html">Terms</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloi.html">List of Issues (To-Do)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Li-Pro.Net Sphinx Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../concepts.html"><span class="section-number">1. </span>Concepts</a> &raquo;</li>
+        
+          <li><a href="../naming.html"><span class="section-number">1.2. </span>Sphinx naming</a> &raquo;</li>
+        
+      <li><span class="section-number">1.2.3. </span>Domains</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/concepts/naming/domains.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="domains">
+<span id="index-0"></span><h1><span class="section-number">1.2.3. </span>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference external" href="https://www.sphinx-doc.org/en/3.x/glossary.html#term-domain" title="(in Sphinx v3.3.0+)"><span>domain</span></a> is a collection of <a class="reference internal" href="../explicit-markup.html"><span class="doc">explicit</span></a>
+and <a class="reference internal" href="../inline-markup.html"><span class="doc">inline</span></a> markup (<a class="reference internal" href="../../glossary/glossterms.html#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a>
+<a class="reference internal" href="directives.html"><span class="doc">Directives</span></a> and <a class="reference internal" href="roles.html"><span class="doc">Roles</span></a>) to describe and link to objects
+belonging together, e.g. elements of a programming language. Directive and role
+names in a domain have names like <code class="docutils literal notranslate"><span class="pre">domain:name</span></code>, e.g.
+<code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">c:function</span></span><span class="p"><span class="pre">::</span></span> <span class="pre">int</span> <span class="pre">main(int</span> <span class="pre">argc,</span> <span class="pre">char</span> <span class="gs"><span class="pre">**argv,</span> <span class="pre">char</span> <span class="pre">**</span></span><span class="pre">env)</span></code> or
+<code class="code highlight rst docutils literal notranslate"><span class="na"><span class="pre">:c:func:</span></span><span class="nv"><span class="pre">`main`</span></span></code>.</p>
+<p>An <a class="reference external" href="https://www.sphinx-doc.org/en/3.x/glossary.html#term-object" title="(in Sphinx v3.3.0+)"><span>object</span></a> is the basic building block of <a class="reference internal" href="../../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> documentation.
+Every “object directive” (e.g. function or object) creates such a block; and
+most objects can be cross-referenced to.</p>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#domains-std" title="(in Sphinx v3.3.0+)"><span>The Standard Domain</span></a> collects all markup that does not warrant a domain
+of its own. Its directives and roles are not prefixed with a domain name.</p>
+<p>There is a set of directives allowing documenting command-line programs:</p>
+<table class="colwidths-given longtable docutils align-center" id="appendix-howto-spx-dom-std-cmd" style="width: 80%">
+<caption><span class="caption-number">Table 1.1 </span><span class="caption-text">Sphinx directives for command-line programs</span><a class="headerlink" href="#appendix-howto-spx-dom-std-cmd" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>short description</p></th>
+<th class="head"><p>directive (target)</p></th>
+<th class="head"><p>role (reference)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#directive-program" title="(in Sphinx v3.3.0+)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">Following</span> <span class="pre">document</span> <span class="pre">options</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">program.</span></code></a></p></td>
+<td><p><code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">program</span></span><span class="p"><span class="pre">::</span></span> <span class="pre">name</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#directive-option" title="(in Sphinx v3.3.0+)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">Describes</span> <span class="pre">a</span> <span class="pre">command</span> <span class="pre">line</span> <span class="pre">argument</span> <span class="pre">or</span> <span class="pre">switch.</span></code></a></p></td>
+<td><p><code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">option</span></span><span class="p"><span class="pre">::</span></span> <span class="pre">name</span> <span class="pre">args,</span> <span class="pre">...</span></code></p></td>
+<td><p><code class="code highlight rst docutils literal notranslate"><span class="na"><span class="pre">:option:</span></span><span class="nv"><span class="pre">`name</span> <span class="pre">arg`</span></span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#directive-envvar" title="(in Sphinx v3.3.0+)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">Describes</span> <span class="pre">an</span> <span class="pre">environment</span> <span class="pre">variable.</span></code></a></p></td>
+<td><p><code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">envvar</span></span><span class="p"><span class="pre">::</span></span> <span class="pre">name</span></code></p></td>
+<td><p><code class="code highlight rst docutils literal notranslate"><span class="na"><span class="pre">:envvar:</span></span><span class="nv"><span class="pre">`name`</span></span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>There is also a very generic object description directive, which is not
+tied to any domain. This directive produces the same formatting as the
+specific ones provided by domains, but does not create index entries
+or cross-referencing targets:</p>
+<table class="colwidths-given longtable docutils align-center" id="appendix-howto-spx-dom-std-unspec" style="width: 80%">
+<caption><span class="caption-number">Table 1.2 </span><span class="caption-text">Sphinx directives for unspecific objects without referencing</span><a class="headerlink" href="#appendix-howto-spx-dom-std-unspec" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>short description</p></th>
+<th class="head"><p>directive (target)</p></th>
+<th class="head"><p>role (reference)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#directive-describe" title="(in Sphinx v3.3.0+)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">Describes</span> <span class="pre">an</span> <span class="pre">unspecific</span> <span class="pre">element.</span></code></a></p></td>
+<td><p><code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">describe</span></span><span class="p"><span class="pre">::</span></span> <span class="pre">text</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#directive-object" title="(in Sphinx v3.3.0+)"><code class="xref rst rst-dir docutils literal notranslate"><span class="pre">Describes</span> <span class="pre">an</span> <span class="pre">unspecific</span> <span class="pre">object.</span></code></a></p></td>
+<td><p><code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">object</span></span><span class="p"><span class="pre">::</span></span> <span class="pre">text</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Originally, <a class="reference internal" href="../../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> was conceived for a single project, the documentation of
+the <a class="reference internal" href="../../glossary/glossterms.html#term-Python"><span class="xref std std-term">Python</span></a> language. Shortly afterwards, it was made available for everyone as
+a documentation tool, but the documentation of <a class="reference internal" href="../../glossary/glossterms.html#term-Python"><span class="xref std std-term">Python</span></a> modules remained deeply
+built in – the most fundamental directives, like function, were designed for
+<a class="reference internal" href="../../glossary/glossterms.html#term-Python"><span class="xref std std-term">Python</span></a> objects.</p>
+<p>Since <a class="reference internal" href="../../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> has become somewhat popular, interest developed in using it for
+many different purposes: <a class="reference internal" href="../../glossary/glossterms.html#term-C"><span class="xref std std-term">C</span></a>/<a class="reference internal" href="../../glossary/glossterms.html#term-0"><span class="xref std std-term">C++</span></a> projects, <a class="reference internal" href="../../glossary/glossterms.html#term-JavaScript"><span class="xref std std-term">JavaScript</span></a>, or even
+<a class="reference internal" href="../../glossary/glossterms.html#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> markup (like in this documentation). The following specific
+domains are provided by <a class="reference internal" href="../../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> (without additional extensions):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#c-domain" title="(in Sphinx v3.3.0+)"><span>The C Domain</span></a> (name <strong>c</strong>)</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#cpp-domain" title="(in Sphinx v3.3.0+)"><span>The C++ Domain</span></a> (name <strong>cpp</strong>)</p></li>
+<li><p>The <a class="reference internal" href="../../glossary/glossterms.html#term-JavaScript"><span class="xref std std-term">JavaScript</span></a> Domain (name <strong>js</strong>)</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html#math-domain" title="(in Sphinx v3.3.0+)"><span>The Math Domain</span></a> (name <strong>math</strong>)</p></li>
+<li><p>The <a class="reference internal" href="../../glossary/glossterms.html#term-Python"><span class="xref std std-term">Python</span></a> Domain (name <strong>py</strong>)</p></li>
+<li><p>The <a class="reference internal" href="../../glossary/glossterms.html#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> Domain (name <strong>rst</strong>)</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p>Refer to <a class="reference external" href="https://www.sphinx-doc.org/en/3.x/usage/restructuredtext/domains.html" title="(in Sphinx v3.3.0+)"><span>Domains</span></a>
+for domains provided by <a class="reference internal" href="../../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a>.</p></li>
+</ul>
+</div>
+<p></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../heading.html" class="btn btn-neutral float-right" title="1.3. Parts, Chapters, Titles, Sections" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="directives.html" class="btn btn-neutral float-left" title="1.2.2. Directives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors.
+      <span class="lastupdated">
+        Last updated on Oct 01, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

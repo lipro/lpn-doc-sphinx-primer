@@ -1,0 +1,64 @@
+\begin{tikzpicture}[scale=.8]
+
+    \def\one{\raisebox{-2pt}{\large\ding{192}{ }}}
+    \def\two{\raisebox{-1.5pt}{\large\ding{193}{ }}}
+    \def\three{\raisebox{-2pt}{\large\ding{194}{ }}}
+    \tikzstyle{arrow}=[->,line width=.05cm,draw=red!90!blue!60!black]
+
+    \tline{A}{3};
+    \tcaption{A}{A};
+    \tline{B}{2};
+    \tcaption{B}{B};
+    \tline{C}{1};
+    \tcaption{C}{C};
+    \tline{T}{-1.5}
+    \tcaption{T}{OS thread};
+
+    \ttimeline{A}{10};
+    \ttimeline{B}{10};
+    \ttimeline{C}{10};
+    \ttimeline{T}{10};
+
+    \tbox{B}{1}{};
+    \tcatchup{C}{B};
+
+    \tbox{C}{1}{};
+    \tcalloutU[(-.8,2.5)]{C}{\texttt{during(42, routine);}}
+
+    \tcatchup{B}{C};
+    \tcatchup{T}{C};
+    \draw[arrow] (currentCL) -- node[left] {
+        \begin{tabular}{r}
+            \one create\\thread
+        \end{tabular}
+    } (currentTU);
+    \tbox{T}{4}{\texttt{routine}};
+
+    \tskiptextL{C}{4}{\two \texttt{wait(42)}\vspace{-2em}};
+
+    \tbox{B}{1.5}{};
+    \tcatchup{A}{B};
+    \tbox{A}{1}{};
+    \tcatchup{B}{A};
+    \tbox{B}{1}{};
+
+    \draw[arrow] (currentTU) -- node[right] {
+        \begin{tabular}{l}
+            \three join\\thread
+        \end{tabular}
+    } (currentCL);
+    \tbox{C}{1}{};
+
+    \tcatchup{A}{C};
+    \tbox{A}{1}{};
+    \tcatchup{B}{A};
+    \tbox{B}{1}{};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

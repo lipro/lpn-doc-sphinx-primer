@@ -1,0 +1,1106 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Li-Pro.Net Sphinx Primer" name="subject" />
+<meta content="How to write Li-Pro.Net documentation with Sphinx." name="description" />
+<meta content="Sphinx, Docutils, reStructuredText, howto, primer" name="keywords" />
+<meta content="The LP/N Documentation Team" name="author" />
+<meta content="Li–Pro.Net" name="publisher" />
+<meta content="2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors." name="copyright" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <meta content="Terms" name="topic" />
+    
+  <title>Terms &mdash; Li-Pro.Net Sphinx Primer</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/fix-cite.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/fix-float.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/lpn.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://lpn-doc-sphinx-primer-devel.readthedocs.io/glossary/glossterms.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Listings" href="../indexlol.html" />
+    <link rel="prev" title="Glossary" href="../glossary.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Li-Pro.Net Sphinx Primer
+          
+
+          
+            
+            <img src="../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../concepts.html">1. Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/whitespace.html">1.1. Use of whitespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/whitespace.html#indentation">1.1.1. Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/naming.html">1.2. Sphinx naming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/naming/roles.html">1.2.1. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/naming/directives.html">1.2.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/naming/domains.html">1.2.3. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/heading.html">1.3. Parts, Chapters, Titles, Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/toctree.html">1.4. Table of Contents Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/toctree.html#sidebar-navigation-menu">1.4.1. Sidebar navigation menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/toctree.html#secondary-sub-toc-trees">1.4.2. Secondary sub-TOC trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/toctree.html#how-this-document-uses-main-and-secondary-toc">1.4.3. How this document uses main and secondary TOC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/paragraphs.html">1.5. Paragraphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/paragraphs.html#quotes-block-quotation-element">1.5.1. Quotes (block quotation) Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/paragraphs.html#line-blocks">1.5.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/paragraphs.html#doctest-blocks">1.5.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/inline-markup.html">1.6. Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/files.html">1.7. File, Directory, Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/lists.html">1.8. Lists, Definition Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/lists.html#unordered-bullet-lists">1.8.1. Unordered (bullet) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/lists.html#ordered-numbered-lists">1.8.2. Ordered (numbered) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/lists.html#definition-description-lists">1.8.3. Definition (description) Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/lists.html#field-description-lists">Field (description) Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/explicit-markup.html">1.9. Explicit Markup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#comments">1.9.1. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#directives">1.9.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#footnotes">1.9.3. Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#citations">1.9.4. Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/reuse.html">1.10. Reuse Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/reuse/includes.html">1.10.1. Include a Shared File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/reuse/substitutions.html">1.10.2. Substitutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/reuse/substitutions.html#styled-reference">Styled Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/reuse/substitutions.html#use-prolog-and-epilog">Use Prolog and Epilog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/reuse/substitutions.html#inline-image">Inline Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/images.html">1.11. Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#svg-graphics-only">1.11.1. SVG Graphics only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#png-images-only">1.11.2. PNG Images only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#inserting">1.11.3. Inserting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#inserting-with-captions">1.11.4. Inserting with Captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#inserting-inline">1.11.5. Inserting Inline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/tables.html">1.12. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#grid-style">1.12.1. Grid Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#simple-style">1.12.2. Simple Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#list-table">1.12.3. List Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#csv-table">1.12.4. CSV Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/code-example.html">1.13. Code Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/code-example.html#explicit-code-blocks">1.13.1. Explicit Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/code-example.html#explicit-code-includes">1.13.2. Explicit Code Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/mathematics.html">1.14. Mathematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/admonition.html">1.15. Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/admonition.html#generic-admonition">1.15.1. Generic Admonition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/admonition.html#specific-admonitions">1.15.2. Specific Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#attention-admonition">Attention Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#caution-admonition">Caution Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#danger-admonition">Danger Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#error-admonition">Error Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#hint-admonition">Hint Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#important-admonition">Important Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#note-admonition">Note Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#tip-admonition">Tip Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#warning-admonition">Warning Admonition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/admonition.html#sphinx-additional-admonitions">1.15.3. Sphinx Additional Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#seealso-admonition">Seealso Admonition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/hyperlink.html">1.16. Hyperlink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/referencing.html">1.17. Referencing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/referencing.html#a-cool-section">1.17.1. A cool section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/external-referencing.html">1.18. External References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/downloads.html">1.19. Downloadable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/semantic-referencing.html">1.20. Semantic Descriptions and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/user-interfaces.html">1.21. Writing about User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/user-interfaces.html#other-semantic-markup">1.21.1. Other Semantic Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/glossary.html">1.22. Glossary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/glossary.html#create-a-glossary">1.22.1. Create a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/glossary.html#link-a-term-to-its-glossary-entry">1.22.2. Link a Term to its Glossary Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/index.html">1.23. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../extensions.html">2. Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/spelling.html">2.1. Spelling Checker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/spelling.html#private-dictionaries">2.1.1. Private Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/bibtex.html">2.2. BibTeX Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/linuxdoc.html">2.3. LinuxDoc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/linuxdoc.html#flat-list-table">2.3.1. Flat list table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/programoutput.html">2.4. Program Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/programoutput.html#complete-output">2.4.1. Complete output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/programoutput.html#shortening-the-output">2.4.2. Shortening the output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/programoutput.html#mimicking-shell-input">2.4.3. Mimicking shell input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/programoutput.html#command-execution-and-shell-expansion">2.4.4. Command execution and shell expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/programoutput.html#error-handling">2.4.5. Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/matplotlib.html">2.5. Mathematical Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/matplotlib.html#expressions">2.5.1. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/matplotlib.html#plots">2.5.2. Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/matplotlib.html#d-plots">3D-Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/tikz.html">2.6. PGF/TikZ LaTeX Pictures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/tikz/pgftikz.html">2.6.1. PGF/TikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/tikz/circuitikz.html">2.6.2. CircuiTikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/tikz/tikztiming.html">2.6.3. TikZ-Timing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/tikz/tikzgoodies.html">2.6.4. TikZ Goodies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/tikz/tikzuml.html">2.6.5. TikZ-UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/blockdiag.html">2.7. Block Diagram Family</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/blockdiag/blockdiag.html">2.7.1. Block Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/blockdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/blockdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/blockdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/blockdiag/seqdiag.html">2.7.2. Sequence Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/seqdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/seqdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/seqdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/blockdiag/actdiag.html">2.7.3. Activity Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/actdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/actdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/actdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../extensions/blockdiag/nwdiag.html">2.7.4. Network Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/nwdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/nwdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../extensions/blockdiag/nwdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/sphinx-tabs.html">2.8. Tabbed Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/sphinx-panels.html">2.9. Paneled Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../extensions/email.html">2.10. Email Obfuscate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../themes.html">3. Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../themes/rtd.html">3.1. Read the Docs Sphinx Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">4. Cheat Sheet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/gimmick.html">The Gimmick</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../glossary.html">Glossary</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Terms</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloi.html">List of Issues (To-Do)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Li-Pro.Net Sphinx Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../glossary.html">Glossary</a> &raquo;</li>
+        
+      <li>Terms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/glossary/glossterms.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="terms">
+<h1>Terms<a class="headerlink" href="#terms" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="commons">
+<h2>Commons<a class="headerlink" href="#commons" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-Docutils">Docutils</dt><dd><p><a class="reference external" href="https://docutils.sourceforge.io/">Docutils</a> is an open-source text processing system for processing
+plaintext documentation into useful formats, such as <a class="reference internal" href="#term-HTML"><span class="xref std std-term">HTML</span></a>, <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a>,
+man-pages, open-document or <a class="reference internal" href="#term-XML"><span class="xref std std-term">XML</span></a>. It includes <a class="reference internal" href="#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a>, the
+easy to read, easy to use, what-you-see-is-what-you-get plaintext
+markup language.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/reStructuredText">English Wikipedia: reStructuredText</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-LaTeX">LaTeX</dt><dd><p><a class="reference external" href="https://www.latex-project.org/">LaTeX</a> is a document preparation system for high-quality
+typesetting. It is most often used for medium-to-large technical
+or scientific documents but it can be used for almost any form
+of publishing. LaTeX uses the <a class="reference internal" href="#term-TeX"><span class="xref std std-term">TeX</span></a> typesetting program for
+formatting its output, and is itself written in the <a class="reference internal" href="#term-TeX"><span class="xref std std-term">TeX</span></a> macro
+language.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/LaTeX">English Wikipedia: LaTeX</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-Pybtex">Pybtex</dt><dd><p><a class="reference external" href="https://pybtex.org/">Pybtex</a> is a <a class="reference internal" href="#term-BibTeX"><span class="xref std std-term">BibTeX</span></a>-compatible bibliography processor written in
+<a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a>. Pybtex aims to be 100% compatible with <a class="reference internal" href="#term-BibTeX"><span class="xref std std-term">BibTeX</span></a>. It accepts
+the same command line options, fully supports <a class="reference internal" href="#term-BibTeX"><span class="xref std std-term">BibTeX</span></a>’s <code class="file docutils literal notranslate"><span class="pre">.bst</span></code>
+styles and produces byte-identical output. Additionally, Pybtex is
+Unicode aware and Pybtex supports <a class="reference external" href="https://docs.pybtex.org/formats.html">bibliography formats</a> other than
+<a class="reference internal" href="#term-BibTeX"><span class="xref std std-term">BibTeX</span></a>: <abbr title="BibTeX as XML">BibTeXML</abbr> and <abbr title="YAML Ain't Markup Language">YAML</abbr>.</p>
+</dd>
+<dt id="term-PyEnchant">PyEnchant</dt><dd><p><a class="reference external" href="https://github.com/pyenchant/pyenchant">PyEnchant</a> is a <a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a> binding for <a class="reference internal" href="#term-Enchant"><span class="xref std std-term">Enchant</span></a>.</p>
+</dd>
+<dt id="term-Pygments">Pygments</dt><dd><p><a class="reference external" href="https://pygments.org/">Pygments</a> is a generic syntax highlighter written in <a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a> which
+supports a wide range of over <a class="reference external" href="https://pygments.org/languages/">500 languages</a> with <a class="reference external" href="https://pygments.org/docs/lexers/">related lexers</a>
+and other text formats and is ready for new languages and formats
+added easily.</p>
+</dd>
+<dt id="term-ReportLab">ReportLab</dt><dd><p><a class="reference external" href="https://www.reportlab.com/">ReportLab</a> Toolkit is an Open Source <a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a> library for generating
+<a class="reference internal" href="#term-PDF"><span class="xref std std-term">PDF</span></a>s and graphics.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.reportlab.com/opensource/">https://www.reportlab.com/opensource/</a></p></li>
+<li><p><a class="reference external" href="https://www.reportlab.com/dev/docs/">https://www.reportlab.com/dev/docs/</a></p></li>
+<li><p><a class="reference external" href="https://hg.reportlab.com/hg-public/">https://hg.reportlab.com/hg-public/</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/reportlab/">https://pypi.org/project/reportlab/</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-reStructuredText">reStructuredText</dt><dd><p><a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a> (<strong>RST</strong>, <strong>ReST</strong>, or <strong>reST</strong>) is a file format
+for textual data used primarily in the <a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a> programming language
+community for technical documentation. It is part of the <a class="reference internal" href="#term-Docutils"><span class="xref std std-term">Docutils</span></a>
+project of the <a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a> Doc-SIG (Documentation Special Interest Group).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/reStructuredText">English Wikipedia: reStructuredText</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-Sphinx">Sphinx</dt><dd><p><a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> is a documentation generator written and used by the <a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a>
+community. It is written in <a class="reference internal" href="#term-Python"><span class="xref std std-term">Python</span></a>, and also used in other environments.
+Sphinx converts <a class="reference internal" href="#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> files into <a class="reference internal" href="#term-HTML"><span class="xref std std-term">HTML</span></a> websites and other
+formats including PDF, EPub, Texinfo and man.</p>
+<p><a class="reference internal" href="#term-reStructuredText"><span class="xref std std-term">reStructuredText</span></a> is extensible, and Sphinx exploits its extensible
+nature through a number of extensions–for auto generating
+documentation from source code, writing mathematical notation
+or highlighting source code, etc.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sphinx (documentation generator)">English Wikipedia: Sphinx (documentation generator)</a></p></li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="operating-systems">
+<h2>Operating Systems<a class="headerlink" href="#operating-systems" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-Linux">Linux</dt><dt id="term-GNU-Linux"><abbr title="GNU's Not Unix!">GNU</abbr>/Linux</dt><dd><p><a class="reference external" href="https://www.linuxfoundation.org/">Linux</a> (trademarked as Linux™, handled by the <abbr title="Linux Mark Institute">LMI</abbr>) is a family
+of open source <a class="reference internal" href="#term-Unix"><span class="xref std std-term">Unix</span></a>-like operating systems based on the Linux kernel,
+an operating system kernel first released on September 17, 1991, by
+Linus Torvalds. Linux is typically packaged in a Linux distribution.
+Distributions include the Linux kernel and supporting system software
+and libraries, many of which are provided by the <abbr title="GNU's Not Unix!">GNU</abbr> Project. Many
+Linux distributions use the word <em>“Linux”</em> in their name, but the <abbr title="Free Software Foundation">FSF</abbr>
+uses the name <strong>GNU/Linux</strong> to emphasize the importance of <abbr title="GNU's Not Unix!">GNU</abbr>
+software, causing some controversy.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Linux">English Wikipedia: Linux</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-POSIX"><abbr title="Portable Operating System Interface">POSIX</abbr></dt><dd><p><a class="reference external" href="http://get.posixcertified.ieee.org/">POSIX</a> is a family of standards specified by the <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> Computer
+Society for maintaining compatibility between operating systems.
+<abbr title="Portable Operating System Interface">POSIX</abbr> defines the
+<abbr title="Application Programming Interface">API</abbr>, along with command line shells and utility interfaces, for
+software compatibility with variants of <a class="reference internal" href="#term-Unix"><span class="xref std std-term">Unix</span></a> and other operating
+systems. <abbr title="Portable Operating System Interface">POSIX</abbr> has been
+standardized by the <em>Austin Group</em> since 1997 (<abbr title="Single UNIX Specification">SUS</abbr>), and later since
+2001 by the <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> Computer Society (<strong>IEEE Std 1003.1</strong>). Before 1997,
+POSIX comprised several standards.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/POSIX">English Wikipedia: POSIX</a></p></li>
+<li><p>POSIX.1-2017 (<strong>POSIX.1-2008 with Technical Corrigenda 1 and 2</strong>):
+standard ratified in 2017 as <strong>IEEE Std 1003.1-2017</strong></p></li>
+<li><p>POSIX.1-2008 (<strong>Base Specifications, Issue 7</strong>):
+standard ratified in 2008 as <em>IEEE Std 1003.1-2008</em></p></li>
+<li><p>POSIX.1-2001 (<strong>Single UNIX Specification version 3</strong>):
+standard ratified in 2001 as <em>IEEE Std 1003.1-2001</em></p></li>
+<li><p>POSIX.1c (<strong>Threads Extensions</strong>):
+initially standardized in 1995 as <em>IEEE Std 1003.1c-1995</em></p></li>
+<li><p>POSIX.1b (<strong>Real-Time Extensions</strong>):
+initially standardized in 1993 as <em>IEEE Std 1003.1b-1993</em></p></li>
+<li><p>POSIX.2 (<strong>Shell and Utilities</strong>):
+initially standardized in 1992 as <em>IEEE Std 1003.2-1992</em></p></li>
+<li><p>POSIX.1 (<strong>Core Services</strong>):
+initially standardized in 1988 as <em>IEEE Std 1003.1-1988</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-Unix">Unix</dt><dd><p><a class="reference external" href="http://www.unix.org/">Unix</a> (trademarked as UNIX™) is a family of multitasking,
+multiuser computer operating systems that derive from the original
+<abbr title="American Telephone and Telegraph Company">AT&amp;T</abbr> Unix, development starting in the 1970s at the Bell Labs
+research center by Ken Thompson, Dennis Ritchie, and others. The
+origins of Unix date back to the mid-1960s when the <abbr title="Massachusetts Institute of Technology">MIT</abbr>, Bell Labs
+and <abbr title="General Electric">GE</abbr> were developing <em>Multics</em>, a time-sharing operating system
+for a 36-bit mainframe computer. In the late 1980s, an open operating
+system standardization effort now known as <a class="reference internal" href="#term-POSIX"><span class="xref std std-term">POSIX</span></a> provided a common
+baseline for all operating systems; <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> based <a class="reference internal" href="#term-POSIX"><span class="xref std std-term">POSIX</span></a> around the
+common structure of the major competing variants of the Unix system,
+publishing the first <a class="reference internal" href="#term-POSIX"><span class="xref std std-term">POSIX</span></a> standard in 1988. In the early 1990s, a
+separate but very similar effort was started by an industry consortium,
+the <abbr title="Common Open Software Environment">COSE</abbr> initiative, which eventually became the <abbr title="Single UNIX Specification">SUS</abbr> administered by
+<em>The Open Group</em>. Starting in 1998, <em>The Open Group</em> and <abbr title="Institute of Electrical and Electronics Engineers">IEEE</abbr> started
+the <em>Austin Group</em>, to provide a common definition of <a class="reference internal" href="#term-POSIX"><span class="xref std std-term">POSIX</span></a> and the
+<abbr title="Single UNIX Specification">SUS</abbr>, which, by 2008, had become the <em>Open Group Base Specification</em>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Unix">English Wikipedia: Unix</a></p></li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="programming-languages">
+<h2>Programming Languages<a class="headerlink" href="#programming-languages" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-C">C</dt><dd><p><a class="reference external" href="http://www.open-std.org/jtc1/sc22/wg14/www/projects">C</a> is a general-purpose, imperative procedural computer programming
+language supporting structured programming, lexical variable scope, and
+recursion, with a static type system. It was designed to be compiled to
+provide low-level access to memory and language constructs that map
+efficiently to machine instructions, all with minimal runtime support.
+C has been standardized by the <abbr title="American National Standards Institute">ANSI</abbr> <em>X3J11</em> since 1989 (<strong>ANSI C</strong>) and
+by the <abbr title="International Organization for Standardization">ISO</abbr>/<abbr title="International Electrotechnical Commission">IEC</abbr> JTC1/SC22/WG14 (<strong>ISO C</strong>).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C (programming language)">English Wikipedia: C (programming language)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Compatibility of C and C++">English Wikipedia: Compatibility of C and C++</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C18 (C standard revision)">English Wikipedia: C18 (C standard revision)</a>:
+standard ratified in 2018 as <strong>ISO/IEC 9899:2018</strong></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C11 (C standard revision)">English Wikipedia: C11 (C standard revision)</a>:
+standard ratified in 2011 as <em>ISO/IEC 9899:2011</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C99">English Wikipedia: C99</a>: standard ratified in 1999 as <em>ISO/IEC 9899:1999</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C95 (C version)">English Wikipedia: C95 (C version)</a>:
+Amendment 1 ratified in 1995 as <em>ISO/IEC 9899:1990/AMD1:1995</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C90 (C version)">English Wikipedia: C90 (C version)</a>:
+standard ratified in 1990 as <em>ISO/IEC 9899:1990</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C89 (C version)">English Wikipedia: C89 (C version)</a>:
+standard ratified in 1989 as <em>ANSI X3.159-1989</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-0">C++</dt><dd><p><a class="reference external" href="https://isocpp.org/">C++</a> is a general-purpose programming language as an extension of the
+<a class="reference internal" href="#term-C"><span class="xref std std-term">C</span></a> programming language, or <em>“C with Classes”</em>. Modern C++ implementations
+now has object-oriented, generic, and functional features in addition to
+facilities for low-level memory manipulation. C++ is standardized by the
+<abbr title="International Organization for Standardization">ISO</abbr>/<abbr title="International Electrotechnical Commission">IEC</abbr> JTC1/SC22/WG14 since 1998.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C++">English Wikipedia: C++</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Compatibility of C and C++">English Wikipedia: Compatibility of C and C++</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C++17">English Wikipedia: C++17</a>: standard ratified in 2017 as <strong>ISO/IEC 14882:2017</strong></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C++14">English Wikipedia: C++14</a>: standard ratified in 2014 as <em>ISO/IEC 14882:2014</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C++11">English Wikipedia: C++11</a>: standard ratified in 2011 as <em>ISO/IEC 14882:2011</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/C++03">English Wikipedia: C++03</a>: standard ratified in 2003 as <em>ISO/IEC 14882:2003</em></p></li>
+<li><p>initially standardized in 1998 as <em>ISO/IEC 14882:1998</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-ES"><abbr title="ECMAScript">ES</abbr></dt><dt id="term-ECMAScript">ECMAScript</dt><dd><p><abbr title="ECMAScript">ES</abbr> is a general-purpose programming language,
+standardized by <a class="reference external" href="https://www.ecma-international.org/">Ecma International</a> since 1997 according to the
+document <a class="reference external" href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a>. It is a <a class="reference internal" href="#term-JavaScript"><span class="xref std std-term">JavaScript</span></a> standard meant to ensure
+the interoperability of Web pages across different Web browsers.
+<abbr title="ECMAScript">ES</abbr> is standardized by the <abbr title="International Organization for Standardization">ISO</abbr>/<abbr title="International Electrotechnical Commission">IEC</abbr> JTC1/SC22
+since 1998.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ECMAScript">English Wikipedia: ECMAScript</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/ECMAScript engine">English Wikipedia: ECMAScript engine</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List of ECMAScript engines">English Wikipedia: List of ECMAScript engines</a></p></li>
+<li><p>ES Edition 11: standard ratified in 2020 as <strong>ECMA-262-11:2020</strong></p></li>
+<li><p>ES Edition 5.1: standard ratified in 2011 as <em>ISO/IEC 16262:2011</em></p></li>
+<li><p>ES Edition 2: initially standardized in 1998 as <em>ISO/IEC 16262:1998</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-JS"><abbr title="JavaScript">JS</abbr></dt><dt id="term-JavaScript">JavaScript</dt><dd><p><abbr title="JavaScript">JS</abbr> is a programming language that conforms to the
+<a class="reference internal" href="#term-ECMAScript"><span class="xref std std-term">ECMAScript</span></a> specification. JavaScript is high-level, often just-in-time
+compiled, and multi-paradigm. It has curly-bracket syntax, dynamic
+typing, prototype-based object-orientation, and first-class functions.</p>
+<p>Alongside <a class="reference internal" href="#term-HTML"><span class="xref std std-term">HTML</span></a> and <a class="reference internal" href="#term-CSS"><span class="xref std std-term">CSS</span></a>, JavaScript is one of the core technologies
+of the World Wide Web. JavaScript enables interactive web pages and is
+an essential part of web applications. The vast majority of websites use
+it for client-side page behavior, and all major web browsers have a
+dedicated JavaScript engine to execute it.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/JavaScript">English Wikipedia: JavaScript</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/JavaScript engine">English Wikipedia: JavaScript engine</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List of JavaScript engines">English Wikipedia: List of JavaScript engines</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-Python">Python</dt><dd><p><a class="reference external" href="https://www.python.org/">Python</a> is an interpreted, high-level and general-purpose programming
+language. Python interpreters are available for many operating systems.
+A global community of programmers develops and maintains CPython, a free
+and open-source reference implementation. A non-profit organization, the
+Python Software Foundation, manages and directs resources for Python and
+CPython development.</p>
+<p>CPython is the reference implementation of Python. It is written in <a class="reference internal" href="#term-C"><span class="xref std std-term">C</span></a>,
+meeting the <a class="reference internal" href="#term-C"><span class="xref std std-term">C</span></a>89 standard with several select <a class="reference internal" href="#term-C"><span class="xref std std-term">C</span></a>99 features.
+Python’s development is conducted largely through the <abbr title="Python Enhancement Proposal">PEP</abbr> process, the
+primary mechanism for proposing major new features, collecting community
+input on issues and documenting Python design decisions. Python coding
+style is covered in <span class="target" id="index-0"></span><a class="pep reference external" href="https://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Python (programming language)">English Wikipedia: Python (programming language)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/CPython">English Wikipedia: CPython</a></p></li>
+<li><p><a class="bibtex reference internal" href="../bibliography.html#sweigart2020automate" id="id1">[Swe19]</a></p></li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="technologies">
+<h2>Technologies<a class="headerlink" href="#technologies" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary">
+<dt id="term-Badges">Badges</dt><dd><p><a class="reference external" href="https://lifehacker.com/create-your-own-web-buttons-259650">Web buttons, badges or stickers</a> are small images in some <abbr title="World Wide Web">WWW</abbr>
+pages which are typically used to promote programs that were used
+to create or host the site. They may also be used to promote
+compliance with web standards such as passing <abbr title="World Wide Web Consortium">W3C</abbr> <a class="reference internal" href="#term-HTML"><span class="xref std std-term">HTML</span></a>
+validation or to comply with an application’s terms of service or
+present the status of any 3rd party service like CI/CD pipelines
+or review processes.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Web badge">English Wikipedia: Web badge</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-BibTeX">BibTeX</dt><dd><p><a class="reference external" href="http://www.bibtex.org/">BibTeX</a> is a widely used bibliography management tool in <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a>,
+with BibTeX the bibliography entries are kept in a separate file and
+then imported into the main document.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/BibTeX">English Wikipedia: BibTeX</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-CircuiTikZ">CircuiTikZ</dt><dd><p><a class="reference external" href="https://ctan.org/pkg/circuitikz">CircuiTikZ</a> is a <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a> package which provides a set of macros for
+naturally typesetting electrical and electronic networks. Designed as
+a tool that is easy to use by native to a lean <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a> syntax it has
+therefore been based on the very impressive <a class="reference internal" href="#term-PGF-TikZ"><span class="xref std std-term">PGF/TikZ</span></a> package.
+CircuiTikZ was initiated as tool for creating exercises and exams.
+The use of CircuiTikZ is, of course, not limited to academic teaching.
+The package gets widely used by engineers for typesetting electronic
+circuits for articles and publications all over the world.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ctan.org/pkg/circuitikz">CircuiTikZ Package</a></p></li>
+<li><p><a class="reference external" href="https://ctan.net/graphics/pgf/contrib/circuitikz/doc/circuitikzmanual.pdf">CircuiTikZ Manual</a></p></li>
+<li><p><a class="reference external" href="https://circuitikz.github.io/circuitikz">CircuiTikZ Home</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-CORBA"><abbr title="Common Object Request Broker Architecture">CORBA</abbr></dt><dt id="term-MOF"><abbr title="Meta-Object Facility">MOF</abbr></dt><dd><p><a class="reference external" href="https://www.omg.org/spec/MOF/">MOF</a> is an <abbr title="Object Management Group">OMG</abbr> standard for model-driven engineering. Its purpose
+is to provide a type system for entities in the <a class="reference internal" href="#term-CORBA"><span class="xref std std-term">CORBA</span></a> architecture
+and a set of interfaces through which those types can be created and
+manipulated.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#term-OCL"><span class="xref std std-term">OCL</span></a> and <a class="reference internal" href="#term-QVT"><span class="xref std std-term">QVT</span></a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Meta-Object Facility">English Wikipedia: Meta-Object Facility</a></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/2.5.1">MOF 2.5.1</a>: initially standardized in 2016
+<strong>OMG Meta Object Facility Core Specification 2.5.1 2016/10/01</strong></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/2.5">MOF 2.5</a>: initially standardized in 2015
+<em>OMG Meta Object Facility Core Specification 2.5 2015/06/05</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/ISO/19508/PDF">ISO 19508:2014</a>: <strong>MOF 2.4.2</strong> standard formally published in 2014
+<strong>ISO/IEC 19508:2014(E) 2014/04/05</strong></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/2.4.2">MOF 2.4.2</a>: initially standardized in 2014
+<em>OMG Meta Object Facility Core Specification 2.4.2 2014/04/03</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/2.4.1">MOF 2.4.1</a>: initially standardized in 2013
+<em>OMG Meta Object Facility Core Specification 2.4.1 2013/06/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/2.0">MOF 2.0</a>: initially standardized in 2006
+<em>Meta Object Facility Core Specification 2.0 2006/01/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/ISO/19502/PDF">ISO 19502:2005</a>: <em>MOF 1.4.1</em> standard formally published in 2005
+<em>ISO/IEC 19502:2005(E) 2005/05/05</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/MOF/1.4">MOF 1.4</a>: initially standardized in 2002
+<em>Meta Object Facility Specification 1.4 2002/04/03</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-CSS"><abbr title="Cascading Style Sheets">CSS</abbr></dt><dd><p><a class="reference external" href="https://www.w3.org/Style/CSS/">CSS</a> is a style sheet language used for describing the presentation
+of a document written in a markup language like <a class="reference internal" href="#term-HTML"><span class="xref std std-term">HTML</span></a>.
+<abbr title="Cascading Style Sheets">CSS</abbr> is a cornerstone technology of the
+<abbr title="World Wide Web">WWW</abbr>, alongside <a class="reference internal" href="#term-HTML"><span class="xref std std-term">HTML</span></a> and <a class="reference internal" href="#term-JavaScript"><span class="xref std std-term">JavaScript</span></a>. In addition to <a class="reference internal" href="#term-HTML"><span class="xref std std-term">HTML</span></a>, other
+markup languages support the use of <abbr title="Cascading Style Sheets">CSS</abbr>
+including plain <a class="reference internal" href="#term-XML"><span class="xref std std-term">XML</span></a> and <a class="reference internal" href="#term-SVG"><span class="xref std std-term">SVG</span></a>. The <abbr title="Cascading Style Sheets">CSS</abbr>
+specifications is standardized by the <abbr title="World Wide Web Consortium">W3C</abbr>/TR/CSS since 1996.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/CSS">English Wikipedia: CSS</a></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2011/REC-CSS2-20110607/">CSS 2.1</a>: standard ratified in 2011 <strong>W3C REC-CSS2-20110607</strong></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/1998/REC-CSS2-19980512/">CSS 2.0</a>: standard ratified in 1998 <em>W3C REC-CSS2-19980512</em></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/REC-CSS1-961217">CSS 1.0</a>: initially standardized in 1996 <em>W3C REC-CSS1-961217</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-Enchant">Enchant</dt><dd><p><a class="reference external" href="https://abiword.github.io/enchant/">Enchant</a> is a free software project developed as part of the AbiWord
+word processor with the aim of unifying access to the various existing
+spell-checker software.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Enchant (software)">English Wikipedia: Enchant (software)</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-ePub"><abbr title="Electronic Publication">ePub</abbr></dt><dt id="term-EPUB"><abbr title="Electronic Publication">EPUB</abbr></dt><dd><p><a class="reference external" href="http://www.idpf.org/epub">EPUB</a> is an e-book file format that uses the <code class="file docutils literal notranslate"><span class="pre">.epub</span></code> file
+extension. The term is short for electronic publication and is
+sometimes styled <strong>ePub</strong>. <abbr title="Electronic Publication">EPUB</abbr>
+is a technical standard published by the <abbr title="International Digital Publishing Forum">IDPF</abbr> and became an
+official standard in 2007, superseding the older <abbr title="Open eBook">OEB</abbr> standard.
+<abbr title="Electronic Publication">EPUB</abbr> is also standardized by
+the <abbr title="International Organization for Standardization">ISO</abbr>/<abbr title="International Electrotechnical Commission">IEC</abbr> JTC1/SC34 since 2014.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/EPUB">English Wikipedia: EPUB</a></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/publishing/epub3/epub-spec.html">EPUB 3.2</a>: standard ratified in 2019 <strong>EPUB 3.2</strong></p></li>
+<li><p><a class="reference external" href="http://idpf.org/epub/301/spec/epub-contentdocs.html">EPUB 3.0.1</a>: standard ratified in 2020 <strong>ISO/IEC 23736 (parts 1-6)</strong></p></li>
+<li><p><a class="reference external" href="http://idpf.org/epub/301/spec/epub-contentdocs.html">EPUB 3.0.1</a>: standard ratified in 2014 <em>OPS 3.0.1</em></p></li>
+<li><p><a class="reference external" href="http://idpf.org/epub/30/spec/epub30-publications.html">EPUB 3.0</a>: standard ratified in 2014 <em>ISO/IEC TS 30135 (parts 1-7)</em></p></li>
+<li><p><a class="reference external" href="http://idpf.org/epub/30/spec/epub30-publications.html">EPUB 3.0</a>: standard ratified in 2011 <em>OPS 3.0</em></p></li>
+<li><p><a class="reference external" href="http://idpf.org/epub/20/spec/OPS_2.0_latest.htm">EPUB 2.0.1</a>: standard ratified in 2010 <em>OPS 2.0.1 v1.0.1</em></p></li>
+<li><p><a class="reference external" href="http://idpf.org/epub/20/spec/OPF_2.0_final_spec.html">EPUB 2.0</a>: initially standardized in 2007 <em>OPS 2.0 v1.0</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-HTML"><abbr title="Hypertext Markup Language">HTML</abbr></dt><dd><p><a class="reference external" href="https://html.spec.whatwg.org/">HTML</a> is the standard markup language for documents designed to be
+displayed in a web browser. It can be assisted by technologies such as
+<a class="reference internal" href="#term-CSS"><span class="xref std std-term">CSS</span></a> and scripting languages such as <a class="reference internal" href="#term-JavaScript"><span class="xref std std-term">JavaScript</span></a>.
+The <abbr title="Hypertext Markup Language">HTML</abbr> specifications is
+standardized by the <abbr title="World Wide Web Consortium">W3C</abbr>/TR/HTML since 1997 and <abbr title="International Organization for Standardization">ISO</abbr>/<abbr title="International Electrotechnical Commission">IEC</abbr> JTC1/SC34
+since 1998.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/HTML">English Wikipedia: HTML</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/HTML5">English Wikipedia: HTML5</a>: latest live standard was released in 2017 <strong>W3C REC-HTML52-20171214</strong></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/HTML4">English Wikipedia: HTML4</a>: standard ratified in 1999 <em>W3C REC-HTML40</em> and 2000 <em>ISO/IEC 15445:2000</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/HTML3">English Wikipedia: HTML3</a>: standard ratified in 1997 <em>W3C REC-HTML32</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/HTML2">English Wikipedia: HTML2</a>: initially standardized in 1995 as <em>RFC 1866</em> (<span class="target" id="index-1"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc1866.html"><strong>RFC 1866</strong></a>)</p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-OCL"><abbr title="Object Constraint Language">OCL</abbr></dt><dd><p><a class="reference external" href="https://www.omg.org/spec/OCL/">OCL</a> is a declarative language describing rules applying to <a class="reference internal" href="#term-UML"><span class="xref std std-term">UML</span></a>
+models and is now part of the <a class="reference internal" href="#term-UML"><span class="xref std std-term">UML</span></a> standard but as separate document.
+Initially, <abbr title="Object Constraint Language">OCL</abbr> was merely a
+formal specification language extension for <a class="reference internal" href="#term-UML"><span class="xref std std-term">UML</span></a>. <abbr title="Object Constraint Language">OCL</abbr> may now be used with any <a class="reference internal" href="#term-MOF"><span class="xref std std-term">MOF</span></a> meta-model,
+including <a class="reference internal" href="#term-UML"><span class="xref std std-term">UML</span></a>, and is a precise text language that provides constraint
+and object query expressions on any such kind of meta-model that cannot
+otherwise be expressed by diagrammatic notation. <abbr title="Object Constraint Language">OCL</abbr> is a key component of the new OMG standard
+recommendation for transforming models, the <a class="reference internal" href="#term-QVT"><span class="xref std std-term">QVT</span></a> specification.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#term-UML"><span class="xref std std-term">UML</span></a>, <a class="reference internal" href="#term-MOF"><span class="xref std std-term">MOF</span></a> and <a class="reference internal" href="#term-QVT"><span class="xref std std-term">QVT</span></a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Object Constraint Language">English Wikipedia: Object Constraint Language</a></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/OCL/2.4">OCL 2.4</a>: standard ratified in 2014
+<strong>Object Constraint Language 2.4 2014/02/03</strong></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/OCL/ISO/19507/PDF">ISO 19507:2012</a>: <strong>OCL 2.3.1</strong> standard formally published in 2012
+<strong>ISO/IEC 19507:2012(E) 2012/05/09</strong></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/OCL/2.3.1">OCL 2.3.1</a>: standard ratified in 2011
+<em>Object Constraint Language 2.3.1 2012/01/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/OCL/2.2">OCL 2.2</a>: standard ratified in 2010
+<em>Object Constraint Language 2.2 2010/02/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/OCL/2.0">OCL 2.0</a>: standard ratified in 2006
+<em>Object Constraint Language 2.0 2006/05/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/1.3">UML 1.3</a> (<em>Chapter 7</em>): initially standardized in 2000</p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-PDF"><abbr title="Portable Document Format">PDF</abbr></dt><dd><p><a class="reference external" href="https://www.pdfa.org/">PDF</a> is a file format developed by Adobe in 1993 to present documents,
+including text formatting and images, in a manner independent of
+application software, hardware, and operating systems. Based on the
+<abbr title="PostScript">PS</abbr> language, each <abbr title="Portable Document Format">PDF</abbr> file
+encapsulates a complete description of a fixed-layout flat document,
+including the text, fonts, vector graphics, raster images and other
+information needed to display it. <abbr title="Portable Document Format">PDF</abbr>
+is standardized by the <abbr title="International Organization for Standardization">ISO</abbr> TC171/SC2/WG8 since 2008, and no longer
+requires any royalties for its implementation.</p>
+<p><abbr title="International Organization for Standardization">ISO</abbr> standardized subsets of <abbr title="Portable Document Format">PDF</abbr>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PDF/X">English Wikipedia: PDF/X</a>: since 2001, series of <em>ISO 15929</em> and <em>ISO 15930</em> standards</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PDF/A">English Wikipedia: PDF/A</a>: since 2005, series of <em>ISO 19005</em> standards</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PDF/E">English Wikipedia: PDF/E</a>: since 2008, series of <em>ISO 24517</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PDF/VT">English Wikipedia: PDF/VT</a>: since 2010, <em>ISO 16612-2</em></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PDF/UA">English Wikipedia: PDF/UA</a>: since 2012, <em>ISO 14289-1</em></p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PDF">English Wikipedia: PDF</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/History of the Portable Document Format (PDF)">English Wikipedia: History of the Portable Document Format (PDF)</a></p></li>
+<li><p>PDF 2.0: standard ratified in 2017 as <strong>ISO 32000-2:2017</strong></p></li>
+<li><p>PDF 1.7: initially standardized in 2008 as <em>ISO 32000-1:2008</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-PGF"><abbr title="Portable Graphic Format">PGF</abbr></dt><dt id="term-TikZ"><abbr title="TikZ ist kein Zeichenprogramm">TikZ</abbr></dt><dt id="term-PGF-TikZ">PGF/TikZ</dt><dd><p><a class="reference external" href="https://ctan.org/pkg/pgf">PGF/TikZ</a> is a pair of languages for producing vector graphics (for
+example: technical illustrations and drawings) from a geometric/algebraic
+description, with standard features including the drawing of points,
+lines, arrows, paths, circles, ellipses and polygons. <abbr title="Portable Graphic Format">PGF</abbr>, is a lower-level language, while <abbr title="TikZ ist kein Zeichenprogramm">TikZ</abbr>, which is written in <a class="reference internal" href="#term-TeX"><span class="xref std std-term">TeX</span></a>, is a set of
+higher-level macros that use <abbr title="Portable Graphic Format">PGF</abbr>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PGF/TikZ">English Wikipedia: PGF/TikZ</a></p></li>
+<li><p><a class="reference external" href="https://ctan.org/pkg/pgf">PGF/TikZ Package</a> and <a class="reference external" href="https://ctan.org/pkg/visualtikz">VisualTikZ Package</a></p></li>
+<li><p><a class="reference external" href="https://ctan.net/graphics/pgf/base/doc/pgfmanual.pdf">PGF/TikZ Manual</a> and <a class="reference external" href="https://ctan.net/info/visualtikz/VisualTikZ.pdf">VisualTikZ Manual</a></p></li>
+<li><p><a class="reference external" href="http://cremeronline.com/LaTeX/minimaltikz.pdf">PGF/TikZ Introduction</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pgf-tikz/pgf">PGF/TikZ Home</a> and <a class="reference external" href="https://ctan.org/tex-archive/info/visualtikz">VisualTikZ Home</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-PNG"><abbr title="Portable Network Graphics">PNG</abbr></dt><dd><p><a class="reference external" href="https://www.w3.org/Graphics/PNG/">PNG</a> is a raster-graphics file format that supports lossless data
+compression. <abbr title="Portable Network Graphics">PNG</abbr> was developed as an
+improved, non-patented replacement for <abbr title="Graphics Interchange Format">GIF</abbr> with support for interactivity
+and animation. The <abbr title="Portable Network Graphics">PNG</abbr> specification is
+standardized by the <abbr title="World Wide Web Consortium">W3C</abbr>/TR/PNG since 1996 and <abbr title="International Organization for Standardization">ISO</abbr>/<abbr title="International Electrotechnical Commission">IEC</abbr> JTC1/SC24/WG7
+since 2003 as an open standard.</p>
+<blockquote>
+<div><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PNG">English Wikipedia: PNG</a></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2003/REC-PNG-20031110/">PNG 1.2</a>: standard ratified in 2004 <strong>ISO/IEC 15948:2004</strong></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2003/REC-PNG-20031110/">PNG 1.2</a>: standard ratified in 2003 <em>REC-PNG-20031110</em></p></li>
+<li><p><a class="reference external" href="https://svgwg.org/">PNG 1.0</a>: initially standardized in 1996 as <em>RFC 2083</em> (<span class="target" id="index-2"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc2083.html"><strong>RFC 2083</strong></a>)</p></li>
+</ul>
+</div>
+</div></blockquote>
+</dd>
+<dt id="term-QVT"><abbr title="Query/View/Transformation">QVT</abbr></dt><dd><p><a class="reference external" href="https://www.omg.org/spec/QVT/">QVT</a> is a standard set of languages for model transformation defined
+by the <abbr title="Object Management Group">OMG</abbr>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#term-OCL"><span class="xref std std-term">OCL</span></a> and <a class="reference internal" href="#term-MOF"><span class="xref std std-term">MOF</span></a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/QVT">English Wikipedia: QVT</a></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/QVT/1.3">QVT 1.3</a>: standard ratified in 2016
+<strong>MOF 2.0 Query/View/Transformation Specification 1.3 2016/06/03</strong></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/QVT/1.2">QVT 1.2</a>: standard ratified in 2015
+<em>MOF 2.0 Query/View/Transformation Specification 1.2 2015/02/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/QVT/1.1">QVT 1.1</a>: standard ratified in 2011
+<em>MOF 2.0 Query/View/Transformation Specification 1.1 2011/01/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/QVT/1.0">QVT 1.0</a>: initially standardized in 2008
+<em>MOF 2.0 Query/View/Transformation Specification 1.0 2008/04/03</em></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-SVG"><abbr title="Scalable Vector Graphics">SVG</abbr></dt><dd><p><a class="reference external" href="https://www.w3.org/Graphics/SVG/">SVG</a> is an <a class="reference internal" href="#term-XML"><span class="xref std std-term">XML</span></a>-based vector image format for two-dimensional graphics
+with support for interactivity and animation. The <abbr title="Scalable Vector Graphics">SVG</abbr> specification is standardized by the <abbr title="World Wide Web Consortium">W3C</abbr>/TR/SVG since
+1999 as an open standard.</p>
+<p><abbr title="Scalable Vector Graphics">SVG</abbr> drawings can be dynamic and
+interactive. Time-based modifications to the elements can be described in
+<abbr title="Synchronized Multimedia Integration Language">SMIL</abbr>, or can be programmed in a scripting language (e.g. <a class="reference internal" href="#term-ECMAScript"><span class="xref std std-term">ECMAScript</span></a> or
+<a class="reference internal" href="#term-JavaScript"><span class="xref std std-term">JavaScript</span></a>). The <abbr title="World Wide Web Consortium">W3C</abbr> explicitly recommends <abbr title="Synchronized Multimedia Integration Language">SMIL</abbr> as the standard for
+animation in <abbr title="Scalable Vector Graphics">SVG</abbr>.</p>
+<blockquote>
+<div><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/SVG">English Wikipedia: SVG</a></p></li>
+<li><p><a class="reference external" href="https://svgwg.org/">SVG 2.0</a>: latest standard draft was released in 2020</p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2011/REC-SVG11-20110816/">SVG 1.1 Second Edition</a>: standard ratified in 2011 <strong>W3C REC-SVG11-20110816</strong></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2003/REC-SVG11-20030114/">SVG 1.1</a>: standard ratified in 2003 <em>W3C REC-SVG11-20030114</em></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2001/REC-SVG-20010904/">SVG 1.0</a>: initially standardized in 2001 <em>W3C REC-SVG-20010904</em></p></li>
+</ul>
+</div>
+</div></blockquote>
+</dd>
+<dt id="term-SysML"><abbr title="Systems Modeling Language">SysML</abbr></dt><dt id="term-BPMN"><abbr title="Business Process Model and Notation">BPMN</abbr></dt><dt id="term-UML"><abbr title="Unified Modeling Language">UML</abbr></dt><dd><p><a class="reference external" href="https://www.uml.org/">UML</a> is a general-purpose, developmental, modeling language in the
+field of software engineering that is intended to provide a standard
+way to visualize the design of a system. In 1997, <abbr title="Unified Modeling Language">UML</abbr> was adopted as a standard by the <abbr title="Object Management Group">OMG</abbr>, and has
+been managed by this organization ever since. In 2005, <abbr title="Unified Modeling Language">UML</abbr> was also published by <abbr title="International Organization for Standardization">ISO</abbr> as an
+approved standard.</p>
+<p>In 2007 with the release of UML 2.1.2, two new significant
+specifications for certain technology areas have split off.
+These are: <a class="reference internal" href="#term-SysML"><span class="xref std std-term">SysML</span></a>, <a class="reference internal" href="#term-BPMN"><span class="xref std std-term">BPMN</span></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#term-OCL"><span class="xref std std-term">OCL</span></a>, <a class="reference internal" href="#term-MOF"><span class="xref std std-term">MOF</span></a> and <a class="reference internal" href="#term-QVT"><span class="xref std std-term">QVT</span></a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Unified Modeling Language">English Wikipedia: Unified Modeling Language</a></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.5.1">UML 2.5.1</a>: standard adopted from 2.5 in 2017
+<strong>OMG Unified Modeling Language 2.5.1 2017/12/05</strong></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.5">UML 2.5</a>: standard released in 2012 and ratified in 2015
+<em>OMG Unified Modeling Language 2.5 2015/03/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/ISO/19505-1/PDF">ISO 19505-1:2012</a> and <a class="reference external" href="https://www.omg.org/spec/UML/ISO/19505-2/PDF">ISO 19505-2:2012</a>:
+<strong>UML 2.4.1</strong> standard formally published in 2012
+<strong>ISO/IEC 19505-1:2012(E) 2012/05/06</strong> and
+<strong>ISO/IEC 19505-2:2012(E) 2012/05/07</strong></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.4.1">UML 2.4.1</a> and <a class="reference external" href="https://www.omg.org/spec/UMLDI/1.0">UMLDI 1.0</a>: standard ratified in 2011
+<em>OMG UML Superstructure Specification 2.4.1 2011/08/06</em>,
+<em>OMG UML Infrastructure Specification 2.4.1 2011/08/05</em> and
+<em>OMG UML Diagram Interchange 1.0 2006/04/04</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.4">UML 2.4</a> and <a class="reference external" href="https://www.omg.org/spec/UMLDI/1.0">UMLDI 1.0</a>: standard ratified in 2011
+<em>OMG UML Superstructure Specification 2.4 2010/11/14</em>,
+<em>OMG UML Infrastructure Specification 2.4 2010/11/16</em> and
+<em>OMG UML Diagram Interchange 1.0 2006/04/04</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.3">UML 2.3</a> and <a class="reference external" href="https://www.omg.org/spec/UMLDI/1.0">UMLDI 1.0</a>: standard ratified in 2010
+<em>OMG UML Superstructure Specification 2.3 2010/05/05</em>,
+<em>OMG UML Infrastructure Specification 2.3 2010/05/03</em> and
+<em>OMG UML Diagram Interchange 1.0 2006/04/04</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.2">UML 2.2</a> and <a class="reference external" href="https://www.omg.org/spec/UMLDI/1.0">UMLDI 1.0</a>: standard ratified in 2009
+<em>OMG UML Superstructure Specification 2.2 2009/02/02</em>,
+<em>OMG UML Infrastructure Specification 2.2 2009/02/04</em> and
+<em>OMG UML Diagram Interchange 1.0 2006/04/04</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.1.2">UML 2.1.2</a> and <a class="reference external" href="https://www.omg.org/spec/UMLDI/1.0">UMLDI 1.0</a>: standard ratified in 2007
+<em>OMG UML Superstructure Specification 2.1.2 2007/11/02</em>,
+<em>OMG UML Infrastructure Specification 2.1.2 2007/11/04</em> and
+<em>OMG UML Diagram Interchange 1.0 2006/04/04</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.1.1">UML 2.1.1</a> and <a class="reference external" href="https://www.omg.org/spec/UMLDI/1.0">UMLDI 1.0</a>: standard ratified in 2007
+<em>OMG UML Superstructure Specification 2.1.1 2007/02/05</em>,
+<em>OMG UML Infrastructure Specification 2.1.1 2007/02/06</em> and
+<em>OMG UML Diagram Interchange 1.0 2006/04/04</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/2.0">UML 2.0</a>: standard ratified in 2005
+<em>OMG UML Superstructure Specification 2.0 2005/07/04</em> and
+<em>OMG UML Infrastructure Specification 2.0 2005/07/05</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/ISO/19501/PDF">ISO 19501:2005</a>: <em>UML 1.4.2</em> standard formally published in 2005
+<em>ISO/IEC 19501:2005(E) 2005/04/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/1.5">UML 1.5</a>: standard ratified in 2003
+<em>OMG Unified Modeling Language Specification 1.5 2003/03/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/1.4">UML 1.4</a>: standard ratified in 2001
+<em>OMG Unified Modeling Language Specification 1.4 2001/09/07</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/1.3">UML 1.3</a>: standard ratified in 2000
+<em>OMG Unified Modeling Language Specification 1.3 2000/03/01</em></p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/1.2">UML 1.2</a>: standard ratified in 1999</p></li>
+<li><p><a class="reference external" href="https://www.omg.org/spec/UML/1.1">UML 1.1</a>: initially standardized in 1997</p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-TeX">TeX</dt><dd><p><a class="reference external" href="https://tug.org/">TeX</a> is a computer language designed for use in typesetting system;
+in particular, for typesetting math and other technical material. It
+has been noted as one of the most sophisticated digital typographical
+systems and is also used for many other typesetting tasks, especially
+in the form of <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a>, ConTeXt, and other macro packages.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/TeX">English Wikipedia: TeX</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-TikZ-Timing">TikZ-Timing</dt><dd><p><a class="reference external" href="https://ctan.org/pkg/tikz-timing">TikZ-Timing</a> is a <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a> package which provides macros and an
+environment to generate timing diagrams (digital waveforms). The <a class="reference internal" href="#term-TikZ"><span class="xref std std-term">TikZ</span></a>
+package is used to produce the graphics.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ctan.org/pkg/tikz-timing">TikZ-Timing Package</a></p></li>
+<li><p><a class="reference external" href="https://ctan.net/graphics/pgf/contrib/tikz-timing/tikz-timing.pdf">TikZ-Timing User Guide</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-TikZ-UML">TikZ-UML</dt><dd><p><a class="reference external" href="https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?lang=en">TikZ-UML</a> is a <a class="reference internal" href="#term-LaTeX"><span class="xref std std-term">LaTeX</span></a> package with a set of specialized commands and
+environments in front of the wide range of possibilities given by the
+<a class="reference internal" href="#term-PGF-TikZ"><span class="xref std std-term">PGF/TikZ</span></a> library to define a set of specific <a class="reference internal" href="#term-UML"><span class="xref std std-term">UML</span></a> diagrams: class
+diagrams, use case diagrams, state-machine diagrams, sequence diagrams
+and component diagrams.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?lang=en">TikZ-UML Project</a></p></li>
+<li><p><a class="reference external" href="https://perso.ensta-paris.fr/~kielbasi/tikzuml/index.php?id=doc">TikZ-UML User Guide</a></p></li>
+</ul>
+</div>
+</dd>
+<dt id="term-XML"><abbr title="Extensible Markup Language">XML</abbr></dt><dd><p><a class="reference external" href="https://www.w3.org/XML/Core/">XML</a> is a markup language that defines a set of rules for encoding
+documents in a format that is both human-readable and machine-readable.
+The design of <abbr title="Extensible Markup Language">XML</abbr> focuses on
+documents, the language is widely used for the representation of arbitrary
+data structures. Several schema systems exist to aid in the definition of
+<abbr title="Extensible Markup Language">XML</abbr>-based languages. The <abbr title="Extensible Markup Language">XML</abbr> specification is standardized by the
+<abbr title="World Wide Web Consortium">W3C</abbr>/TR/XML since 1998 as an open standard.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/XML">English Wikipedia: XML</a></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2006/REC-xml11-20060816/">XML 1.1 Second Edition</a>: standard ratified in 2006 <strong>W3C REC-XML11-20060816</strong></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2004/REC-xml11-20040204/">XML 1.1</a>: standard ratified in 2004 <em>W3C REC-XML11-20040204</em></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/2008/REC-xml-20081126/">XML 1.0 Fifth Edition</a>: standard ratified in 2008 <em>W3C REC-XML-20081126</em></p></li>
+<li><p><a class="reference external" href="https://www.w3.org/TR/1998/REC-xml-19980210">XML 1.0</a>: initially standardized in 1998 <em>W3C REC-SVG-20010904</em></p></li>
+</ul>
+</div>
+</dd>
+</dl>
+<p></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../indexlol.html" class="btn btn-neutral float-right" title="Listings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../glossary.html" class="btn btn-neutral float-left" title="Glossary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors.
+      <span class="lastupdated">
+        Last updated on Oct 01, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

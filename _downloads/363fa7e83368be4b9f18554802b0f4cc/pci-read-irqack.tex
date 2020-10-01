@@ -1,0 +1,67 @@
+\begin{tikztimingtable}[timing/wscale=2]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    timing/dslope=0.1,
+    timing/.style={x=2ex,y=2ex},
+    x=2ex,
+    timing/rowdist=3ex,
+    timing/name/.style={font=\sffamily\scriptsize},
+    timing/nodes/advanced,
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\busref{CLK}         & l 17{c}
+                       N(C1);[thin,dotted,black!25]8{0.25t};N(C2)
+                       10{c} \\
+\busref*{FRAME}      & 2u 12l 2h 2u
+                       N(F1);[thin,dotted,black!25]8{0.25t};N(F2)
+                       u 0.5h2l 4.5h 2u \\
+\busref[31::0]{AD}   & 2u 2d{addr} 2u{} 2d{$d_1$} 2d{$d_1 '$} 2d{$d_2$} 4d{$d_3$} 2u
+                       N(A1);[thin,dotted,black!25]8{0.25t};N(A2)
+                       1.5u 2x 2.5u 2d{$v_i$} 2u \\
+\busref*[3::0]{C/BE} & 2u 2d{0010} 12d{BE\#} 2u
+                       N(B1);[thin,dotted,black!25]8{0.25t};N(B2)
+                       1.5u 2d{0000} 4.5d{\busref*{BE}} 2u \\
+\busref*{IRDY}       & 4u 8l 2h2l2h
+                       N(I1);[thin,dotted,black!25]8{0.25t};N(B2)
+                       3.5u 4.5l 2h \\
+\busref*{TRDY}       & 4u HLH 6l 2h
+                       N(T1);[thin,dotted,black!25]8{0.25t};N(T2)
+                       3.5u 2.5h 2l 2h \\
+\busref*{DEVSEL}     & 4u 12l 2h
+                       N(D1);[thin,dotted,black!25]8{0.25t};N(D2)
+                       5u 0.5h2.5l 0.5h 1.5u \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \tablerules
+%%  \tablegrid
+    \begin{pgfonlayer}{background}
+        \begin{scope}[semitransparent,semithick]
+            \vertlines[darkgray,dotted]{1,3,...,17}
+            \vertlines[darkgray,dotted]{21,23,...,\twidth}
+        \end{scope}
+    \end{pgfonlayer}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

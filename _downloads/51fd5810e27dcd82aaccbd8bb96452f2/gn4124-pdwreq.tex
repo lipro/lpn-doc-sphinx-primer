@@ -1,0 +1,52 @@
+\begin{tikztimingtable}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    timing/dslope=0.1,
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+lclk                 & H29{C}                                \\
+pd\_csr\_sel         & 2L 0.1HN(B0)1.9H 0.1LN(C0)9.9L 0.1HN(B1)1.9H 0.1LN(C1)13.9L   \\
+pd\_data [31:0]      & 2U N(A0) 2D{A0} 10U 2D{H1} 2D{D1} N(D1) 12U  \\
+pd\_data [63:32]     & 2D{H0} 2D{D0} N(D0) 10U N(A1) 2D{A1} 14U          \\
+wb\_adr\_o           & 4D{0} N(E0) 4D{A0} 10D{0} N(E1) 4D{A1} 8D{0} \\
+wb\_dat\_o           & 4D{0} N(F0) 4D{D0} 10D{0} N(F1) 4D{D1} 8D{0}      \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \draw[orange,semithick,->](A0) .. controls +(left:0.5cm)  and +(left:0.5cm) .. (B0);
+    \draw[orange,semithick,->](C0) .. controls +(right:0.5cm) and +(left:0.5cm) .. (D0);
+    \draw[orange,semithick,->](D0) .. controls +(right:0.5cm) and +(left:0.5cm) .. (E0);
+    \draw[orange,semithick,->](D0) .. controls +(right:0.5cm) and +(left:0.5cm) .. (F0);
+    \draw[orange,semithick,->](A1) .. controls +(left:0.5cm)  and +(left:0.5cm) .. (B1);
+    \draw[orange,semithick,->](C1) .. controls +(right:0.5cm) and +(left:0.5cm) .. (D1);
+    \draw[orange,semithick,->](D1) .. controls +(right:0.5cm) and +(left:0.5cm) .. (E1);
+    \draw[orange,semithick,->](D1) .. controls +(right:0.5cm) and +(left:0.5cm) .. (F1);
+    \begin{pgfonlayer}{background}
+        \begin{scope}[gray,semitransparent,semithick]
+            \vertlines {2,4,...,29}
+        \end{scope}
+    \end{pgfonlayer}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

@@ -1,0 +1,1280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Li-Pro.Net Sphinx Primer" name="subject" />
+<meta content="How to write Li-Pro.Net documentation with Sphinx." name="description" />
+<meta content="Sphinx, Docutils, reStructuredText, howto, primer" name="keywords" />
+<meta content="The LP/N Documentation Team" name="author" />
+<meta content="Li–Pro.Net" name="publisher" />
+<meta content="2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors." name="copyright" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <meta content="PGF/TikZ Examples" name="topic" />
+    
+  <title>2.6.1. PGF/TikZ &mdash; Li-Pro.Net Sphinx Primer</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-cite.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-float.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/lpn.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://lpn-doc-sphinx-primer-devel.readthedocs.io/extensions/tikz/pgftikz.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../../_static/sphinx_tabs/tabs.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.6.2. CircuiTikZ" href="circuitikz.html" />
+    <link rel="prev" title="2.6. PGF/TikZ LaTeX Pictures" href="../tikz.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Li-Pro.Net Sphinx Primer
+          
+
+          
+            
+            <img src="../../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">1. Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/whitespace.html">1.1. Use of whitespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/whitespace.html#indentation">1.1.1. Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/naming.html">1.2. Sphinx naming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/roles.html">1.2.1. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/directives.html">1.2.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/domains.html">1.2.3. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/heading.html">1.3. Parts, Chapters, Titles, Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/toctree.html">1.4. Table of Contents Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#sidebar-navigation-menu">1.4.1. Sidebar navigation menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#secondary-sub-toc-trees">1.4.2. Secondary sub-TOC trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#how-this-document-uses-main-and-secondary-toc">1.4.3. How this document uses main and secondary TOC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/paragraphs.html">1.5. Paragraphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#quotes-block-quotation-element">1.5.1. Quotes (block quotation) Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#line-blocks">1.5.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#doctest-blocks">1.5.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/inline-markup.html">1.6. Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/files.html">1.7. File, Directory, Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/lists.html">1.8. Lists, Definition Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#unordered-bullet-lists">1.8.1. Unordered (bullet) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#ordered-numbered-lists">1.8.2. Ordered (numbered) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#definition-description-lists">1.8.3. Definition (description) Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/lists.html#field-description-lists">Field (description) Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/explicit-markup.html">1.9. Explicit Markup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#comments">1.9.1. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#directives">1.9.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#footnotes">1.9.3. Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#citations">1.9.4. Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/reuse.html">1.10. Reuse Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/includes.html">1.10.1. Include a Shared File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/substitutions.html">1.10.2. Substitutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#styled-reference">Styled Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#use-prolog-and-epilog">Use Prolog and Epilog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#inline-image">Inline Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/images.html">1.11. Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#svg-graphics-only">1.11.1. SVG Graphics only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#png-images-only">1.11.2. PNG Images only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting">1.11.3. Inserting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-with-captions">1.11.4. Inserting with Captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-inline">1.11.5. Inserting Inline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/tables.html">1.12. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#grid-style">1.12.1. Grid Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#simple-style">1.12.2. Simple Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#list-table">1.12.3. List Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#csv-table">1.12.4. CSV Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/code-example.html">1.13. Code Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-blocks">1.13.1. Explicit Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-includes">1.13.2. Explicit Code Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/mathematics.html">1.14. Mathematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/admonition.html">1.15. Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#generic-admonition">1.15.1. Generic Admonition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#specific-admonitions">1.15.2. Specific Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#attention-admonition">Attention Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#caution-admonition">Caution Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#danger-admonition">Danger Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#error-admonition">Error Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#hint-admonition">Hint Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#important-admonition">Important Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#note-admonition">Note Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#tip-admonition">Tip Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#warning-admonition">Warning Admonition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#sphinx-additional-admonitions">1.15.3. Sphinx Additional Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#seealso-admonition">Seealso Admonition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/hyperlink.html">1.16. Hyperlink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/referencing.html">1.17. Referencing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/referencing.html#a-cool-section">1.17.1. A cool section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/external-referencing.html">1.18. External References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/downloads.html">1.19. Downloadable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/semantic-referencing.html">1.20. Semantic Descriptions and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/user-interfaces.html">1.21. Writing about User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/user-interfaces.html#other-semantic-markup">1.21.1. Other Semantic Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/glossary.html">1.22. Glossary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#create-a-glossary">1.22.1. Create a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#link-a-term-to-its-glossary-entry">1.22.2. Link a Term to its Glossary Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/index.html">1.23. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../extensions.html">2. Extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../spelling.html">2.1. Spelling Checker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spelling.html#private-dictionaries">2.1.1. Private Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bibtex.html">2.2. BibTeX Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linuxdoc.html">2.3. LinuxDoc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linuxdoc.html#flat-list-table">2.3.1. Flat list table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../programoutput.html">2.4. Program Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#complete-output">2.4.1. Complete output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#shortening-the-output">2.4.2. Shortening the output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#mimicking-shell-input">2.4.3. Mimicking shell input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#command-execution-and-shell-expansion">2.4.4. Command execution and shell expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#error-handling">2.4.5. Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.html">2.5. Mathematical Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#expressions">2.5.1. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#plots">2.5.2. Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matplotlib.html#d-plots">3D-Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tikz.html">2.6. PGF/TikZ LaTeX Pictures</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.6.1. PGF/TikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuitikz.html">2.6.2. CircuiTikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikztiming.html">2.6.3. TikZ-Timing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzgoodies.html">2.6.4. TikZ Goodies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzuml.html">2.6.5. TikZ-UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blockdiag.html">2.7. Block Diagram Family</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/blockdiag.html">2.7.1. Block Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/seqdiag.html">2.7.2. Sequence Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/actdiag.html">2.7.3. Activity Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/nwdiag.html">2.7.4. Network Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-tabs.html">2.8. Tabbed Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-panels.html">2.9. Paneled Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../email.html">2.10. Email Obfuscate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../themes.html">3. Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../themes/rtd.html">3.1. Read the Docs Sphinx Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cheatsheet.html">4. Cheat Sheet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/gimmick.html">The Gimmick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary/glossterms.html">Terms</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloi.html">List of Issues (To-Do)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Li-Pro.Net Sphinx Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../extensions.html"><span class="section-number">2. </span>Extensions</a> &raquo;</li>
+        
+          <li><a href="../tikz.html"><span class="section-number">2.6. </span>PGF/TikZ LaTeX Pictures</a> &raquo;</li>
+        
+      <li><span class="section-number">2.6.1. </span>PGF/TikZ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/extensions/tikz/pgftikz.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pgf-tikz">
+<span id="index-0"></span><h1><span class="section-number">2.6.1. </span>PGF/TikZ<a class="headerlink" href="#pgf-tikz" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Homepage</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/pgf-tikz/pgf">PGF/TikZ Home</a> (<a class="reference external" href="https://ctan.org/tex-archive/info/visualtikz">VisualTikZ Home</a>)</p>
+</dd>
+<dt class="field-even">CTAN Package</dt>
+<dd class="field-even"><p><a class="reference external" href="https://ctan.org/pkg/pgf">PGF/TikZ Package</a> (<a class="reference external" href="https://ctan.org/pkg/visualtikz">VisualTikZ Package</a>)</p>
+</dd>
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://ctan.net/graphics/pgf/base/doc/pgfmanual.pdf">PGF/TikZ Manual</a> (<a class="reference external" href="https://ctan.net/info/visualtikz/VisualTikZ.pdf">VisualTikZ Manual</a>)</p>
+</dd>
+<dt class="field-even">Documentation</dt>
+<dd class="field-even"><p><a class="reference external" href="http://cremeronline.com/LaTeX/minimaltikz.pdf">PGF/TikZ Introduction</a> by <a class="reference external" href="https://www.tse-fr.eu/people/jacques-cremer">Jacques Crémer</a></p>
+</dd>
+<dt class="field-odd">Git Repository</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/pgf-tikz/pgf/tree/master">PGF/TikZ Master Branch</a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="../../glossary/glossterms.html#term-PGF"><span class="xref std std-term">PGF</span></a> is a macro package for creating graphics. It is platform- and
+format-independent and works together with the most important <a class="reference internal" href="../../glossary/glossterms.html#term-TeX"><span class="xref std std-term">TeX</span></a>
+backend drivers. It comes with a user-friendly syntax layer called
+<a class="reference internal" href="../../glossary/glossterms.html#term-TikZ"><span class="xref std std-term">TikZ</span></a>. Its usage is similar to <a class="reference external" href="https://ctan.org/pkg/pstricks-base">pstricks</a> and the standard picture
+environment. <a class="reference internal" href="../../glossary/glossterms.html#term-PGF"><span class="xref std std-term">PGF</span></a> works with plain <a class="reference internal" href="../../glossary/glossterms.html#term-TeX"><span class="xref std std-term">TeX</span></a>, <a class="reference internal" href="../../glossary/glossterms.html#term-LaTeX"><span class="xref std std-term">LaTeX</span></a>, and ConTeXt. Unlike
+<a class="reference external" href="https://ctan.org/pkg/pstricks-base">pstricks</a>, it can produce either <abbr title="PostScript">PS</abbr> or <a class="reference internal" href="../../glossary/glossterms.html#term-PDF"><span class="xref std std-term">PDF</span></a> output.</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p><strong>Shapes</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-1 docutils container">
+<div class="docutils container">
+<p><strong>Positioning</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-2 docutils container">
+<div class="docutils container">
+<p><strong>Construction</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-3 docutils container">
+<div class="docutils container">
+<p><strong>Fourier</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-4 docutils container">
+<div class="docutils container">
+<p><strong>Interferences</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-5 docutils container">
+<div class="docutils container">
+<p><strong>AM</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-6 docutils container">
+<div class="docutils container">
+<p><strong>FM</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-7 docutils container">
+<div class="docutils container">
+<p><strong>Flowchart</strong></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/de7483bc1d5fbf6d8ff618e8c1deb1da/shapesyms.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/shapesyms.tex</span></code></a> <a class="footnote-reference brackets" href="#id9" id="id1">1</a>, in <a class="reference internal" href="#tikz-pgftikz-shapesyms"><span class="std std-numref">Figure 2.2</span></a>.</p>
+<div class="centered figure" id="id19">
+<span id="tikz-pgftikz-shapesyms"></span><p><img src="../../_images/tikz-0c8d076213a118a3a796e97272eaddf13c88d0d3.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{
+    pics/trident/.style={
+        code={
+            \draw[-&gt;] (0,0) -- (45:0.5);
+            \draw[-&gt;] (0,0) -- (0:{0.5/sqrt(2)});
+            \draw[-&gt;] (0,0) -- (-45:0.5);
+            \fill(0,0) circle[radius=2pt];
+        }
+    },
+    &gt;={Triangle},
+    circ/.style={
+        circle,
+        draw,
+        minimum size=1.6em,
+        inner sep=1pt
+    },
+    truncated/.style={
+        path picture={
+            \draw ([xshift=-#1]path picture bounding box.north)
+               -- ([xshift=-#1]path picture bounding box.south)
+                  ([xshift=#1]path picture bounding box.north)
+               -- ([xshift=#1]path picture bounding box.south);
+        }
+    },
+    truncated/.default=1ex,
+    Dotted/.style={% https://tex.stackexchange.com/a/101263/194703
+        line cap=round,
+        dash pattern=on 0pt off 4.5\pgflinewidth,
+        shorten &gt;=1ex,
+        shorten &lt;=1ex
+    }
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\begin{scope}[local bounding box=fit]
+    \node[circ] (i) {$\boldsymbol{i}$};
+    \draw[&lt;-] (i)
+        -- ++ (160:1.2) coordinate (aux1);
+    \draw[&lt;-] (i)
+        -- ++ (-160:1.2) coordinate (aux2);
+    \draw[thick] (i)
+        -- ++ (20:1.2) coordinate (aux3) pic[pos=1,sloped,thin]{trident};
+    \draw[thick] (i)
+        -- ++ (-20:1.2) coordinate (aux4) pic[pos=1,sloped,thin]{trident};
+    \path (aux1)
+        -- node(Ini){In$(i)$} (aux2) (aux3)
+        -- node{Out$(i)$}     (aux4) (aux3)
+        ++ (0,0.7) coordinate (aux6);
+    \node[below=1.1cm of Ini,circ](lc1){$\phantom{i}$};
+    \draw[thick] (lc1)
+        -- node[above]{$e$} node[below=0.5ex]{$U_eR_e$}
+        ++ (00:1) coordinate(aux5) pic[pos=1,sloped,thin]{trident};
+    \path coordinate[right=7mm of aux5] (lc2)
+           node[above=0.4em of lc2,circ](lc3){$\phantom{i}$}
+           node[below=0.4em of lc2,circ](lc4){$\phantom{i}$}; 
+\end{scope}
+
+\begin{scope}[on background layer]
+    \node[%Network cloud
+        cloud,cloud puffs=6,draw,
+        fit=(fit),fill=white,inner sep=-1em,
+        label=above:Network
+    ] (cloud) {};
+\end{scope}
+
+\path (cloud.20)
+    -- ++ (20:1.5)   node[circ](1) {$\boldsymbol{1}$}
+                     coordinate[pos=0.4] (auxTR)
+                     node[above=1em]{Sinks $\mathcal{T}$};
+\draw[-&gt;] (cloud) -- (1);
+\path (cloud.0)
+    -- ++ (0:1.5)    node[circ](t) {$\boldsymbol{t}$}
+                     node[right=1em]{$\boldsymbol{Y}_{\beta(t)}$};
+\draw[-&gt;] (cloud) -- (t);
+\path (cloud.-20)
+    -- ++ (-20:1.5)  node[circ,truncated=1.1ex](T) {$\mathcal{T}$}
+                     coordinate[pos=0.4] (auxBR);
+\draw[-&gt;] (cloud) -- (T);
+
+\draw[line width=1.8pt,Dotted] (auxTR) -- (auxBR);
+
+\path (cloud.160)
+    -- ++ (160:1.5)  node[circ](1') {$\boldsymbol{1}$}
+                     node[above=1em]{Sources $\mathcal{T}$}
+                     coordinate[pos=0.5] (auxTL) ;
+\draw (1'.-20)
+    -- ++ (-20:0.7)  pic[pos=1,sloped]{trident};
+\path (cloud.180)
+    -- ++ (180:1.7)  node[circ](s) {$\boldsymbol{s}$}
+                     node[left=1em]{$Y_s$};
+\draw (s.00)
+    -- ++ (00:0.7)   pic[pos=1,sloped]{trident};
+\path (cloud.-160)
+    -- ++ (-160:1.5) node[circ,truncated=1.1ex](S) {$\mathcal{S}$}
+                     coordinate[pos=0.5] (auxBL)  ;
+\draw (S.20)
+    -- ++ (20:0.7)  pic[pos=1,sloped]{trident};
+
+\draw[line width=1.8pt,Dotted] (auxTL) -- (auxBL);
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.2 </span><span class="caption-text">Shapes and symbols</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/96a1bedc9534f71f77750ca4190683b9/matrix.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/matrix.tex</span></code></a> <a class="footnote-reference brackets" href="#id10" id="id2">2</a>, in <a class="reference internal" href="#tikz-pgftikz-matrix"><span class="std std-numref">Figure 2.3</span></a>.</p>
+<div class="centered figure" id="id20">
+<span id="tikz-pgftikz-matrix"></span><p><img src="../../_images/tikz-101bd077063ceacefc42080cb99dd72e6aba93b5.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    font=\large,
+    Dish/.style = {% Style for dishes
+        circle, 
+        draw,
+        line width=1.2pt,
+        minimum width=20.0mm, 
+        align=center,
+        text width=12.0mm,
+    },
+    Customer/.style = {% Style for labels in dishes nodes
+        draw,
+        line width=1.2pt,
+        align=center,
+        inner sep=3pt,
+        label distance=5pt,
+        rounded corners=4pt,
+    },
+    Decor/.style = {% Style for background decoration in matrix
+        fill=black!10,
+        rounded corners=3pt,
+        inner sep=3pt,
+    },
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+% Start drawing &quot;the shapes...&quot; 
+\node (Dish1) [% Exelent option from Zarko's answer.
+    Dish,
+    label={[Customer,custA]270:A},
+    label={[Customer,custB]160:B},
+    label={[Customer,custC]210:C}
+] {\textbfit{Dish 1}};
+
+\node (Dish2) [
+    Dish,
+    on grid,
+    right=25.0mm of Dish1,
+    label={[Customer,custA]80:A},
+    label={[Customer,custB]280:B},
+%%  label={[Customer,custC]210:C}
+%%  You can make comment a line to avoid execute.
+] {\textbfit{Dish 2}};
+
+\node (Dish3) [
+    Dish,
+    on grid,
+    right=25.0mm of Dish2,
+%%  label={[Customer,custA]80:A},
+    label={[Customer,custB]310:B},
+%%  label={[Customer,custC]210:C}
+] {\textbfit{Dish 3}};
+
+\node (L dots) [on grid, right=20.0mm of Dish3] {\Huge . . .};
+
+% Start drawing &quot;the matrix...&quot; 
+\matrix[% Positioning properties
+    on grid,
+    right=40.0mm of L dots,
+    % General option for all nodes
+    matrix of nodes,
+    text height=2.5ex,
+    text depth=0.75ex,
+    text width=3.25ex,
+    font=\large\bf,
+    align=center,
+    line width=1pt,
+    column sep=10pt,
+    stA/.style={% Style option for customer A
+        draw=custA,
+        line width=1.2pt,
+        rounded corners=4pt,
+    },
+    stB/.style={% Style option for customer B
+        draw=custB,
+        line width=1.2pt,
+        rounded corners=4pt,
+    },
+    stC/.style={% Style option for customer C
+        draw=custC,
+        line width=1.2pt,
+        rounded corners=4pt,
+    },
+] (M1) {% Matrix contents  
+    {~} &amp; 1 &amp; 2 &amp; 3\\ [5pt] % \\[separation]
+    A &amp;    |[stA,fill]|    &amp;   |[stA,fill]|    &amp;   |[stA,fill=black!30]|\\ [5pt]
+    B &amp;    |[stB,fill]|    &amp;   |[stB,fill]|    &amp;   |[stB,fill]|\\ [5pt]
+    C &amp;    |[stC,fill]|    &amp;   |[stC,fill=black!30]|   &amp;   |[stC,fill=black!30]|\\ [5pt]
+};
+
+% Start drawing &quot;the background...&quot; 
+\begin{scope}[on background layer] % Nice trick from Zarko's answer.
+    \foreach \i in {1,...,4}{
+        \node[Decor,fit=(M1-1-\i)(M1-4-\i)]{};
+    }
+\end{scope}
+
+% Start drawing &quot;the description...&quot; 
+\draw node[rotate=90, on grid, left=28.0mm of M1]{\textit{Customers}};
+\draw node[on grid, above=25.0mm of M1]{\textit{Dishes}};
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.3 </span><span class="caption-text">Shapes absolut and in a matrix positioned</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-2 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/03766a283e02c2348e3d15823b736e8b/fancyeye.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/fancyeye.tex</span></code></a> <a class="footnote-reference brackets" href="#id11" id="id3">3</a>, in <a class="reference internal" href="#tikz-pgftikz-fancyeye"><span class="std std-numref">Figure 2.4</span></a>.</p>
+<div class="centered figure" id="id21">
+<span id="tikz-pgftikz-fancyeye"></span><p><img src="../../_images/tikz-a7d8259f052f33a322d7c9fee52d99042ce5890e.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+[scale=0.75]
+\def\topedge{(-3,0) .. controls (-2,1.8) and (2,2) .. (2.3,.3)}
+\def\bottomedge{(2.3,.3) .. controls (2,-2.2) and (-2,-1.2) .. (-3,0)}
+\def\eyepath{\topedge -- \bottomedge --cycle;}
+\clip\eyepath;
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+% Iris
+\filldraw[color=orange!30!black] (-.2,.2) circle (1.4);
+
+% Shadow on iris
+\filldraw[color=orange!40!black] (-.3,-.1) circle (1.1);
+
+% Iris lines
+\foreach \a in {0,5,...,360}{
+    \pgfmathparse{25+28*rnd}
+    \fill[
+        orange!\pgfmathresult!black,
+        decoration={
+            random steps,
+            segment length=1pt,
+            amplitude=0.3pt
+        },
+        decorate,
+        line width=0.3pt
+    ] (-.2,.2) -- ++($(\a+2*rnd:.8+0.3*rnd)$) -- ++(\a+90:3pt) -- cycle;
+}
+
+% Pupil
+\fill[color=black] (-.2,.2) circle (0.5);
+
+% Sun reflection
+\fill[color=white] (90:.8) {[rotate=-30] circle (0.2 and 0.12)};
+
+% Shadow of the eyelid
+\draw[line width=2.5mm, draw opacity=0.1, line cap=round]\topedge;
+
+% Eyelids
+\draw[line width=1mm, red!40!white!80!black, line cap=round]\bottomedge;
+\draw[line width=1.2mm, red!40!white!60!black, line cap=round]\topedge;
+
+% Lacrimal
+\fill[red!40!white!80!black] (-2.8,0) circle (.25);
+\fill[white] (-2.7,.1) circle (.03);
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.4 </span><span class="caption-text">Drawing a constructive but realistic eye</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-3 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/64d7bd83d155d376d0b574467e4ca8ef/fourier.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/fourier.tex</span></code></a> <a class="footnote-reference brackets" href="#id12" id="id4">4</a>, in <a class="reference internal" href="#tikz-pgftikz-fourier"><span class="std std-numref">Figure 2.5</span></a>.</p>
+<div class="centered figure" id="id22">
+<span id="tikz-pgftikz-fourier"></span><p><img src="../../_images/tikz-eccc4f7caad66a81031869d9d6247bb9d1b7f749.svg" alt="\begin{tikzpicture}
+
+\begin{axis}[
+    set layers=standard,
+    domain=0:10,
+    samples y=1,
+    view={40}{20},
+    hide axis,
+    unit vector ratio*=2 4 2,
+    xtick=\empty, ytick=\empty, ztick=\empty,
+    clip=false
+]
+    \def\sumcurve{0}
+    \pgfplotsinvokeforeach{0.5,1.5,...,5.5}{
+        \draw [on layer=background, gray!20] (axis cs:0,#1,0) -- (axis cs:10,#1,0);
+        \addplot3 [on layer=main, blue!30, smooth, samples=101]
+            (x,#1,{2*sin(#1*x*(157))/(#1*2)});
+        \addplot3 [on layer=axis foreground, very thick, blue,ycomb, samples=2]
+            (10.5,#1,{1/(#1*2)});
+        \xdef\sumcurve{\sumcurve + 2*sin(#1*x*(157))/(#1*2)}
+    }
+    \addplot3 [red, samples=200] (x,0,{\sumcurve});
+    \draw[-&gt;,thick] (axis cs:0,0,0) -- (axis cs:0,0,2) node[above] {Magnitude};
+    \draw[-&gt;,thick,on layer=axis foreground]  (axis cs:0,0,0) -- (axis cs:10,0,0) node[below right] {Time};
+    \draw[-&gt;,thick] (axis cs:10.5,0.25,0) -- (axis cs:10.5,5.5,0) node[right] {Frequency};
+\end{axis}
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.5 </span><span class="caption-text">Time-frequency correspondence of the Fourier transformation</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-4 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/18a7f5410728809520eae525df8f0d53/interference.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/interference.tex</span></code></a> <a class="footnote-reference brackets" href="#id13" id="id5">5</a>, in <a class="reference internal" href="#tikz-pgftikz-interference"><span class="std std-numref">Figure 2.6</span></a>.</p>
+<div class="centered figure" id="id23">
+<span id="tikz-pgftikz-interference"></span><p><img src="../../_images/tikz-6df41e60d2319a3dfffb6fdafdd784b5757babaf.svg" alt="\begin{tikzpicture}[x={(1cm,0.5cm)},z={(0cm,1cm)},y={(1cm,-0.2cm)}]
+
+    %repere
+    \draw[-&gt;] (0,-pi,0) --++ (6,0,0) node[above right] {Frequency};
+    \draw[-&gt;] (0,-pi,0) --++ (0,6.5,0) node[right] {Time};
+    \draw[-&gt;] (0,-pi,0) --++ (0,0,1.5) node[above] {Magnitude};
+
+    \draw [dashed] (1,0,0.2) --++ (4,0,0);          
+    \foreach \y in {1,2,...,5}{
+        %sinusoides
+        \draw[blue] plot[domain = -pi:+pi, samples = 300] 
+            (\y,\x,{0.2*cos(10*\y/2*(\x) r)});
+        \draw[blue] (\y,-pi-0.15,0) node [left]{$f_{\y}$};
+        \draw[red] (\y,0,{0.2*cos(10*\y/2*(0) r)}) node {\textbf{.}};
+    }
+
+    %sinc
+    \draw[red, thick] plot[domain = -pi:+pi, samples = 2000] 
+        (0,\x,{0.02*sin(50*(\x) r)/(\x))});
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.6 </span><span class="caption-text">Show constructive interferences in the time domain</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-5 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/84f11c7aac8c95385fe7dfc6ead15c4a/modula-am.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/modula-am.tex</span></code></a> <a class="footnote-reference brackets" href="#id14" id="id6">6</a>, in <a class="reference internal" href="#tikz-pgftikz-modula-am"><span class="std std-numref">Figure 2.7</span></a>.</p>
+<div class="centered figure" id="id24">
+<span id="tikz-pgftikz-modula-am"></span><p><img src="../../_images/tikz-05934ef1b765e31c67fc102193469f72c20dbee2.svg" alt="\begin{tikzpicture}[samples=1000, domain=0:10*pi]
+
+	\begin{axis}[
+		width=11cm, height=3.5cm,
+		xtick=\empty,
+		ytick=\empty,
+		xlabel={\large $t$},
+		ylabel={\large $x(t)$},
+		xmin=0, xmax=11*pi,
+		ymin=-0.5, ymax=7.5,
+		axis lines = middle,
+		very thick,
+		trig format = rad
+	]
+		\addplot [no markers, smooth, thick] {2.5 + 2*sin(0.5*x)};
+	\end{axis}
+
+	\begin{axis}[
+		at={(0, -2.25cm)},
+		width=11cm, height=3.5cm,
+		xtick=\empty,
+		ytick=\empty,
+		xlabel={\large $t$},
+		ylabel={\textcolor{blue}{carrier wave}},
+		xmin=0, xmax=11*pi,
+		ymin=-3, ymax=5,
+		axis lines = middle,
+		very thick,
+		trig format = rad
+	]
+		\addplot [no markers, smooth, blue, very thick] {2*sin(6*x)};
+	\end{axis}
+
+	\begin{axis}[
+		at={(0, -5cm)},
+		width=11cm, height=4cm,
+		xtick=\empty,
+		ytick=\empty,
+		xlabel={\large $t$},
+		ylabel={\textcolor{red}{AM wave}},
+		xmin=0, xmax=11*pi,
+		ymin=-10, ymax=17,
+		axis lines = middle,
+		very thick,
+		trig format = rad
+	]
+		\addplot [no markers, smooth, red, very thick] {(2.5 + 2*sin(0.5*x)) * 2*sin(6*x)};
+	\end{axis}
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.7 </span><span class="caption-text">Graphical derivation of an amplitude modulated signal</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-6 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/7f94af01b0b93d542bf3f73ef096959b/modula-fm.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/modula-fm.tex</span></code></a> <a class="footnote-reference brackets" href="#id15" id="id7">7</a>, in <a class="reference internal" href="#tikz-pgftikz-modula-fm"><span class="std std-numref">Figure 2.8</span></a>.</p>
+<div class="centered figure" id="id25">
+<span id="tikz-pgftikz-modula-fm"></span><p><img src="../../_images/tikz-96070f38ddee059bb8e829ca7e2a0576f64458f7.svg" alt="\begin{tikzpicture}[samples=1000, domain=0:10]
+
+	\begin{axis}[
+		width=11cm, height=3.5cm,
+		xtick=\empty,
+		ytick=\empty,
+		xlabel={\large $t$},
+		ylabel={\large $x(t)$},
+		xmin=0, xmax=11,
+		ymin=-3, ymax=5,
+		axis lines = middle,
+		very thick,
+		trig format = rad
+	]
+		\addplot [no markers, smooth, thick] {2*sin(2*pi*0.25*x)};
+	\end{axis}
+
+	\begin{axis}[
+		at={(0, -2.25cm)},
+		width=11cm, height=3.5cm,
+		xtick=\empty,
+		ytick=\empty,
+		xlabel={\large $t$},
+		ylabel={\textcolor{blue}{carrier wave}},
+		xmin=0, xmax=11,
+		ymin=-3, ymax=5,
+		axis lines = middle,
+		very thick,
+		trig format = rad
+	]
+		\addplot [no markers, smooth, blue, very thick] {2*sin(6*pi*x)};
+	\end{axis}
+
+	\begin{axis}[
+		at={(0, -4.5cm)},
+		width=11cm, height=3.5cm,
+		xtick=\empty,
+		ytick=\empty,
+		xlabel={\large $t$},
+		ylabel={\textcolor{red}{FM wave}},
+		xmin=0, xmax=11,
+		ymin=-3, ymax=5,
+		axis lines = middle,
+		very thick,
+		trig format = rad
+	]
+		\addplot expression [no markers, smooth, red, very thick] {2*sin(2*pi*3*x - 8*cos(2*pi*0.25*x))};
+	\end{axis}
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.8 </span><span class="caption-text">Graphical derivation of a frequency modulated signal</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-7 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b6b59dddde3c398e77764ccaa448d9c0/flowchart.tex"><code class="xref download docutils literal notranslate"><span class="pre">pgftikz/flowchart.tex</span></code></a> <a class="footnote-reference brackets" href="#id16" id="id8">8</a>, in <a class="reference internal" href="#tikz-pgftikz-flowchart"><span class="std std-numref">Figure 2.9</span></a>.</p>
+<div class="centered figure" id="id26">
+<span id="tikz-pgftikz-flowchart"></span><p><img src="../../_images/tikz-0a15e9660612a110e7da50043459e1049261eae1.svg" alt="\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+[node distance=2cm]% automatically spaced 2cm apart from their centres
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+\tikzstyle{startstop} = [% use for start and stop blocks
+    rectangle,
+    rounded corners=0.5cm,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    text badly centered,
+    draw=black,
+    fill=red!30
+]
+\tikzstyle{data} = [% style for data
+    trapezium,
+    trapezium left angle=66,
+    trapezium right angle=-66,
+    minimum width=0,
+    minimum height=1cm,
+    inner sep=0pt,
+    outer sep=0pt,
+    text centered,
+%   text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=white
+]
+\tikzstyle{print} = [% style for print
+    tape,
+    tape bend top=none,
+    minimum width=3cm,
+    minimum height=1cm,
+    inner sep=0pt,
+    outer sep=0pt,
+    text centered,
+%   text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=white
+]
+\tikzstyle{io} = [% specify an input or output box
+    trapezium,
+    trapezium left angle=66,
+    trapezium right angle=-66,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=blue!30
+]
+\tikzstyle{loopevent} = [% style for loop or event blocks
+    chamfered rectangle,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=yellow!30
+]
+\tikzstyle{process instruction} = [% style for process blocks
+    rectangle,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=3cm,
+    text badly centered,
+    draw=black,
+    fill=orange!30
+]
+\tikzstyle{process function} = [% style for pre-defined process blocks
+    rectangle split,
+    rectangle split horizontal,
+    rectangle split parts = 3,
+    rectangle split empty part width=-8pt,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+%   text width=3cm,
+    text badly centered,
+    draw=black,
+    fill=orange!30
+]
+\tikzstyle{decision} = [% style for decision blocks
+    diamond,
+    minimum width=3cm,
+    minimum height=1cm,
+    text centered,
+    text width=1.5cm,
+    text badly centered,
+    draw=black,
+    fill=green!30
+]
+\tikzstyle{arrow} = [% style for the arrows
+    thick,-&gt;,&gt;=stealth
+]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Flowchart
+%%
+
+% our start block
+\node (start) [startstop] {Start};
+
+% add an input block in below the start block
+\node (in1) [io,below of=start,yshift=-0.5cm] {Input};
+
+% add in a process block and a decision block
+\node (ins1) [process instruction,below of=in1] {Instruction 1};
+% yshift should make the gap more regular
+\node (dec1) [decision,below of=ins1,yshift=-0.5cm] {Decision};
+
+% add in two process blocks coming out of the decision block
+\node (ins2a) [process instruction,below of=dec1,yshift=-1.5cm] {
+    Instruction 2a:
+    This is a process with a very long description text within a single paragraph.
+};
+\node (fun2b) [process function,right of=dec1,xshift=2cm] {
+    \nodepart[text width=2.5cm]{two}{Function 2b}
+};
+
+% finish off adding the blocks by adding in an output block and a stop block
+\node (out1) [io,below of=ins2a,yshift=-1cm] {Output};
+\node (stop) [startstop,below of=out1,yshift=-0.5cm] {Stop};
+
+% arrows
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (ins1);
+\draw [arrow] (ins1) -- (dec1);
+% arrows coming out of a decision block need some text (node) with anchor
+\draw [arrow] (dec1) -- node[anchor=east] {yes} (ins2a);
+\draw [arrow] (dec1) -- node[anchor=south] {no} (fun2b);
+% final arrows
+\draw [arrow] (fun2b) |- (ins1); % swap the first dash for a bar symbol which
+                                 % will make the arrow go in a vertical
+                                 % direction before going in a horizontal
+                                 % direction
+\draw [arrow] (ins2a) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+% add in a event block beside with a data block
+\node (ev1) [loopevent,left of=in1,xshift=-2cm] {Event};
+\node (dat1) [data,above of=ev1,yshift=-0.5cm] {CON:};
+\draw [arrow] (dat1) -- (ev1);
+\draw [arrow,dashed] (ev1) -- (in1);
+
+% add in a loop block beside with a print block
+\node (lp1) [loopevent,right of=out1,xshift=2cm] {Loop};
+\node (prn1) [print,below of=lp1,yshift=0.5cm] {PRN:};
+\draw [arrow,dashed] (out1) -- (lp1);
+\draw [arrow] (lp1) -- (prn1);
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.9 </span><span class="caption-text">Geometrical shapes in a flowchart</span></p>
+</div></div>
+</div>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/518945">StackExchange (TeX): a/518945</a>
+(user194703, Dec 2 ‘19 at 15:56)</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/435856">StackExchange (TeX): a/435856</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/154390">J Leon V.</a>, BSD, MIT, Beerware licences)</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/94087">StackExchange (TeX): a/94087</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/12571">JLDiaz</a>)</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/127401">StackExchange (TeX): a/127401</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/2552">Jake</a>)</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/162263">StackExchange (TeX): a/162263</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/42660">Thomas</a>)</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Indication of provenance:
+<a class="reference external" href="https://github.com/PetarV-/TikZ/tree/master/Amplitude%20modulation">Amplitude modulation (AM)</a> (Petar Veličković, July 2016)</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>Indication of provenance:
+<a class="reference external" href="https://github.com/PetarV-/TikZ/tree/master/Frequency%20modulation">Frequency modulation (FM)</a> (Petar Veličković, July 2016)</p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p>Indication of provenance:
+<a class="reference external" href="https://de.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)%E2%80%94Creating_Flowcharts">TikZ Tutorial for Beginners (Part 3)—Creating Flowcharts</a>
+(Josh Cassidy, August 2013)</p>
+</dd>
+</dl>
+<p></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="circuitikz.html" class="btn btn-neutral float-right" title="2.6.2. CircuiTikZ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../tikz.html" class="btn btn-neutral float-left" title="2.6. PGF/TikZ LaTeX Pictures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors.
+      <span class="lastupdated">
+        Last updated on Oct 01, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

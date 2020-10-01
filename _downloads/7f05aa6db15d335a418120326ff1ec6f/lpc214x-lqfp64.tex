@@ -1,0 +1,95 @@
+\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic: drawing the package
+%%
+
+\node[qfp64,pin spacing=3.5mm] (U1) at (0,0) {\MakeUppercase{lpc2144/2146/2148}};
+\node[left] at (U1.p1) {\small \MakeUppercase{p0.21/pwm5/ad1.6/cap1.3}};
+\node[left] at (U1.p2) {\small \MakeUppercase{p0.22/ad1.7/cap0.0/mat0.0}};
+\node[left] at (U1.p3) {\small \MakeUppercase{rtcx1}};
+\node[left] at (U1.p4) {\small \MakeUppercase{p1.19/tracepkt3}};
+\node[left] at (U1.p5) {\small \MakeUppercase{rtcx2}};
+\node[left] at (U1.p6) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[left] at (U1.p7) {\small \MakeUppercase{V\textsubscript{dda}}};
+\node[left] at (U1.p8) {\small \MakeUppercase{p1.18/tracepkt2}};
+\node[left] at (U1.p9) {\small \MakeUppercase{p0.25/ad0.4/aout}};
+\node[left] at (U1.p10) {\small \MakeUppercase{d$+$}};
+\node[left] at (U1.p11) {\small \MakeUppercase{d$-$}};
+\node[left] at (U1.p12) {\small \MakeUppercase{p1.17/tracepkt1}};
+\node[left] at (U1.p13) {\small \MakeUppercase{p0.28/ad0.1/cap0.2/mat0.2}};
+\node[left] at (U1.p14) {\small \MakeUppercase{p0.29/ad0.2/cap0.3/mat0.3}};
+\node[left] at (U1.p15) {\small \MakeUppercase{p0.30/ad0.3/eint3/cap0.0}};
+\node[left] at (U1.p16) {\small \MakeUppercase{p1.16/tracepkt0}};
+\node[left,rotate=90] at (U1.p17) {\small \MakeUppercase{P0.31/up\textunderscore{ }led/connect}};
+\node[left,rotate=90] at (U1.p18) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[left,rotate=90] at (U1.p19) {\small \MakeUppercase{p0.0/txd0/pwm1}};
+\node[left,rotate=90] at (U1.p20) {\small \MakeUppercase{p1.31/\textoverline{trst}}};
+\node[left,rotate=90] at (U1.p21) {\small \MakeUppercase{p0.1/rxd0/pwm3/eint0}};
+\node[left,rotate=90] at (U1.p22) {\small \MakeUppercase{p0.2/scl0/cap0.0}};
+\node[left,rotate=90] at (U1.p23) {\small \MakeUppercase{V\textsubscript{dd}}};
+\node[left,rotate=90] at (U1.p24) {\small \MakeUppercase{p1.26/rtck}};
+\node[left,rotate=90] at (U1.p25) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[left,rotate=90] at (U1.p26) {\small \MakeUppercase{p0.3/sda0/mat0.0/ad0.6}};
+\node[left,rotate=90] at (U1.p27) {\small \MakeUppercase{p0.4/sck0/mat0.1/ad0.6}};
+\node[left,rotate=90] at (U1.p28) {\small \MakeUppercase{p1.25/extin0}};
+\node[left,rotate=90] at (U1.p29) {\small \MakeUppercase{p0.5/miso0/mat0.1/ad0.7}};
+\node[left,rotate=90] at (U1.p30) {\small \MakeUppercase{p0.6/mosi0/cap0.2/ad1.0}};
+\node[left,rotate=90] at (U1.p31) {\small \MakeUppercase{p0.7/ssel0/pwm2/eint2}};
+\node[left,rotate=90] at (U1.p32) {\small \MakeUppercase{p1.24/traceclk}};
+\node[right] at (U1.p33) {\small \MakeUppercase{p0.8/txd1/pwm4/ad1.1}};
+\node[right] at (U1.p34) {\small \MakeUppercase{p0.9/rxd1/pwm6/eint3}};
+\node[right] at (U1.p35) {\small \MakeUppercase{p0.10/rts1/cap1.0/ad1.2}};
+\node[right] at (U1.p36) {\small \MakeUppercase{p1.23/pipestat2}};
+\node[right] at (U1.p37) {\small \MakeUppercase{p0.11/cts1/cap1.1/scl1}};
+\node[right] at (U1.p38) {\small \MakeUppercase{p0.12/dsr1/mat1.0/ad1.3}};
+\node[right] at (U1.p39) {\small \MakeUppercase{p0.13/dtr1/mat1.1/ad1.4}};
+\node[right] at (U1.p40) {\small \MakeUppercase{p1.22/pipestat1}};
+\node[right] at (U1.p41) {\small \MakeUppercase{p0.14/dcd1/eint1/sda1}};
+\node[right] at (U1.p42) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[right] at (U1.p43) {\small \MakeUppercase{V\textsubscript{dd}}};
+\node[right] at (U1.p44) {\small \MakeUppercase{p1.21/pipestat0}};
+\node[right] at (U1.p45) {\small \MakeUppercase{p0.15/ri1/eint2/ad1.5}};
+\node[right] at (U1.p46) {\small \MakeUppercase{p0.16/eint0/mat0.2/cap0.2}};
+\node[right] at (U1.p47) {\small \MakeUppercase{p0.17/cap1.2/sck1/mat1.2}};
+\node[right] at (U1.p48) {\small \MakeUppercase{p1.20/tracesync}};
+\node[right,rotate=90] at (U1.p49) {\small \MakeUppercase{V\textsubscript{bat}}};
+\node[right,rotate=90] at (U1.p50) {\small \MakeUppercase{V\textsubscript{ss}}};
+\node[right,rotate=90] at (U1.p51) {\small \MakeUppercase{V\textsubscript{dd}}};
+\node[right,rotate=90] at (U1.p52) {\small \MakeUppercase{p1.30/tms}};
+\node[right,rotate=90] at (U1.p53) {\small \MakeUppercase{p0.18/cap1.3/miso1/mat1.3}};
+\node[right,rotate=90] at (U1.p54) {\small \MakeUppercase{p0.19/mat1.2/mosi1/cap1.2}};
+\node[right,rotate=90] at (U1.p55) {\small \MakeUppercase{p0.20/mat1.3/ssel1/eint3}};
+\node[right,rotate=90] at (U1.p56) {\small \MakeUppercase{p1.29/tck}};
+\node[right,rotate=90] at (U1.p57) {\small \MakeUppercase{\textoverline{reset}}};
+\node[right,rotate=90] at (U1.p58) {\small \MakeUppercase{p0.23/V\textsubscript{bus}}};
+\node[right,rotate=90] at (U1.p59) {\small \MakeUppercase{V\textsubscript{ssa}}};
+\node[right,rotate=90] at (U1.p60) {\small \MakeUppercase{p1.28/tdi}};
+\node[right,rotate=90] at (U1.p61) {\small \MakeUppercase{xtal2}};
+\node[right,rotate=90] at (U1.p62) {\small \MakeUppercase{xtal1}};
+\node[right,rotate=90] at (U1.p63) {\small \MakeUppercase{V\textsubscript{aef}}};
+\node[right,rotate=90] at (U1.p64) {\small \MakeUppercase{p1.27/tdo}};
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

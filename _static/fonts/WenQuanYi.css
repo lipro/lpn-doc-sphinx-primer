@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'WenQuanYi Zen Hei','文泉驛正黑'
+  src: local('WenQuanYi Zen Hei Regular'); /* Client Side Font */
+  src: url('WenQuanYi/WenQuanYiZenHei.eot?v=0.900'); /* IE9 Compat Modes */
+  src: url('WenQuanYi/WenQuanYiZenHei.eot?#iefix&v=0.900') format('embedded-opentype'), /* IE6-IE8 */
+       url('WenQuanYi/WenQuanYiZenHei.woff2?v=0.900') format('woff2'), /* Super Modern Browsers */
+       url('WenQuanYi/WenQuanYiZenHei.woff?v=0.900') format('woff'), /* Pretty Modern Browsers */
+       url('WenQuanYi/WenQuanYiZenHei.ttf?v=0.900') format('truetype'), /* Safari, Android, iOS */
+       url('WenQuanYi/WenQuanYiZenHei.svg?v=0.900#WenQuanYiZenHei') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}

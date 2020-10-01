@@ -1,0 +1,912 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Li-Pro.Net Sphinx Primer" name="subject" />
+<meta content="How to write Li-Pro.Net documentation with Sphinx." name="description" />
+<meta content="Sphinx, Docutils, reStructuredText, howto, primer" name="keywords" />
+<meta content="The LP/N Documentation Team" name="author" />
+<meta content="Li–Pro.Net" name="publisher" />
+<meta content="2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors." name="copyright" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <meta content="TikZ-Timing Examples" name="topic" />
+    
+  <title>2.6.3. TikZ-Timing &mdash; Li-Pro.Net Sphinx Primer</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-cite.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-float.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/lpn.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://lpn-doc-sphinx-primer-devel.readthedocs.io/extensions/tikz/tikztiming.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../../_static/sphinx_tabs/tabs.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.6.4. TikZ Goodies" href="tikzgoodies.html" />
+    <link rel="prev" title="2.6.2. CircuiTikZ" href="circuitikz.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Li-Pro.Net Sphinx Primer
+          
+
+          
+            
+            <img src="../../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">1. Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/whitespace.html">1.1. Use of whitespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/whitespace.html#indentation">1.1.1. Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/naming.html">1.2. Sphinx naming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/roles.html">1.2.1. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/directives.html">1.2.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/domains.html">1.2.3. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/heading.html">1.3. Parts, Chapters, Titles, Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/toctree.html">1.4. Table of Contents Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#sidebar-navigation-menu">1.4.1. Sidebar navigation menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#secondary-sub-toc-trees">1.4.2. Secondary sub-TOC trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#how-this-document-uses-main-and-secondary-toc">1.4.3. How this document uses main and secondary TOC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/paragraphs.html">1.5. Paragraphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#quotes-block-quotation-element">1.5.1. Quotes (block quotation) Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#line-blocks">1.5.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#doctest-blocks">1.5.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/inline-markup.html">1.6. Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/files.html">1.7. File, Directory, Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/lists.html">1.8. Lists, Definition Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#unordered-bullet-lists">1.8.1. Unordered (bullet) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#ordered-numbered-lists">1.8.2. Ordered (numbered) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#definition-description-lists">1.8.3. Definition (description) Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/lists.html#field-description-lists">Field (description) Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/explicit-markup.html">1.9. Explicit Markup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#comments">1.9.1. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#directives">1.9.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#footnotes">1.9.3. Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#citations">1.9.4. Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/reuse.html">1.10. Reuse Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/includes.html">1.10.1. Include a Shared File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/substitutions.html">1.10.2. Substitutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#styled-reference">Styled Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#use-prolog-and-epilog">Use Prolog and Epilog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#inline-image">Inline Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/images.html">1.11. Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#svg-graphics-only">1.11.1. SVG Graphics only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#png-images-only">1.11.2. PNG Images only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting">1.11.3. Inserting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-with-captions">1.11.4. Inserting with Captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-inline">1.11.5. Inserting Inline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/tables.html">1.12. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#grid-style">1.12.1. Grid Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#simple-style">1.12.2. Simple Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#list-table">1.12.3. List Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#csv-table">1.12.4. CSV Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/code-example.html">1.13. Code Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-blocks">1.13.1. Explicit Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-includes">1.13.2. Explicit Code Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/mathematics.html">1.14. Mathematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/admonition.html">1.15. Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#generic-admonition">1.15.1. Generic Admonition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#specific-admonitions">1.15.2. Specific Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#attention-admonition">Attention Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#caution-admonition">Caution Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#danger-admonition">Danger Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#error-admonition">Error Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#hint-admonition">Hint Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#important-admonition">Important Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#note-admonition">Note Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#tip-admonition">Tip Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#warning-admonition">Warning Admonition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#sphinx-additional-admonitions">1.15.3. Sphinx Additional Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#seealso-admonition">Seealso Admonition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/hyperlink.html">1.16. Hyperlink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/referencing.html">1.17. Referencing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/referencing.html#a-cool-section">1.17.1. A cool section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/external-referencing.html">1.18. External References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/downloads.html">1.19. Downloadable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/semantic-referencing.html">1.20. Semantic Descriptions and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/user-interfaces.html">1.21. Writing about User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/user-interfaces.html#other-semantic-markup">1.21.1. Other Semantic Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/glossary.html">1.22. Glossary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#create-a-glossary">1.22.1. Create a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#link-a-term-to-its-glossary-entry">1.22.2. Link a Term to its Glossary Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/index.html">1.23. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../extensions.html">2. Extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../spelling.html">2.1. Spelling Checker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spelling.html#private-dictionaries">2.1.1. Private Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bibtex.html">2.2. BibTeX Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linuxdoc.html">2.3. LinuxDoc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linuxdoc.html#flat-list-table">2.3.1. Flat list table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../programoutput.html">2.4. Program Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#complete-output">2.4.1. Complete output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#shortening-the-output">2.4.2. Shortening the output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#mimicking-shell-input">2.4.3. Mimicking shell input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#command-execution-and-shell-expansion">2.4.4. Command execution and shell expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#error-handling">2.4.5. Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.html">2.5. Mathematical Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#expressions">2.5.1. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#plots">2.5.2. Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matplotlib.html#d-plots">3D-Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tikz.html">2.6. PGF/TikZ LaTeX Pictures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pgftikz.html">2.6.1. PGF/TikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuitikz.html">2.6.2. CircuiTikZ</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.6.3. TikZ-Timing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzgoodies.html">2.6.4. TikZ Goodies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzuml.html">2.6.5. TikZ-UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blockdiag.html">2.7. Block Diagram Family</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/blockdiag.html">2.7.1. Block Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/seqdiag.html">2.7.2. Sequence Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/actdiag.html">2.7.3. Activity Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/nwdiag.html">2.7.4. Network Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-tabs.html">2.8. Tabbed Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-panels.html">2.9. Paneled Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../email.html">2.10. Email Obfuscate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../themes.html">3. Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../themes/rtd.html">3.1. Read the Docs Sphinx Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cheatsheet.html">4. Cheat Sheet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/gimmick.html">The Gimmick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary/glossterms.html">Terms</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloi.html">List of Issues (To-Do)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Li-Pro.Net Sphinx Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../extensions.html"><span class="section-number">2. </span>Extensions</a> &raquo;</li>
+        
+          <li><a href="../tikz.html"><span class="section-number">2.6. </span>PGF/TikZ LaTeX Pictures</a> &raquo;</li>
+        
+      <li><span class="section-number">2.6.3. </span>TikZ-Timing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/extensions/tikz/tikztiming.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tikz-timing">
+<span id="index-0"></span><h1><span class="section-number">2.6.3. </span>TikZ-Timing<a class="headerlink" href="#tikz-timing" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">CTAN Package</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://ctan.org/pkg/tikz-timing">TikZ-Timing Package</a></p>
+</dd>
+<dt class="field-even">Documentation</dt>
+<dd class="field-even"><p><a class="reference external" href="https://ctan.net/graphics/pgf/contrib/tikz-timing/tikz-timing.pdf">TikZ-Timing User Guide</a></p>
+</dd>
+<dt class="field-odd">Git Repository</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://sourceforge.net/p/tikz-timing/code/">TikZ-Timing Master Branch</a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="../../glossary/glossterms.html#term-TikZ-Timing"><span class="xref std std-term">TikZ-Timing</span></a> is a <a class="reference internal" href="../../glossary/glossterms.html#term-TikZ"><span class="xref std std-term">TikZ</span></a> extension with macros and an environment to generate
+timing diagrams (digital waveforms) without much effort.</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p><strong>Simple time line</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-1 docutils container">
+<div class="docutils container">
+<p><strong>Divider-line</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-2 docutils container">
+<div class="docutils container">
+<p><strong>Colorized data cells</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-3 docutils container">
+<div class="docutils container">
+<p><strong>SPI operating modes</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-4 docutils container">
+<div class="docutils container">
+<p><strong>PCI timing diagrams</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-5 docutils container">
+<div class="docutils container">
+<p><strong>GN4124 Packet Decoder</strong></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b9634f5dc6e718b7659510eb365c8c19/pcinst-tick.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikztiming/pcinst-tick.tex</span></code></a> <a class="footnote-reference brackets" href="#id7" id="id1">1</a>, in <a class="reference internal" href="#tikz-tikztiming-pcinst-tick"><span class="std std-numref">Figure 2.16</span></a>.</p>
+<div class="centered figure" id="id15">
+<span id="tikz-tikztiming-pcinst-tick"></span><p><img src="../../_images/tikz-34f0ec685763cc60c89eea7f087144bcfab1e344.svg" alt="\begin{tikztimingtable}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    timing/nodes/advanced,
+    timing/dslope=0.1,
+    timing/.style={x=5ex,y=2ex},
+    x=5ex,
+    timing/rowdist=3ex,
+    timing/name/.style={font=\sffamily\scriptsize},
+    timing/d/text/.style={font=\sffamily\tiny},
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\textcolor{black}{Instruction} &amp; [black]
+    Z 2D{push}      4D{mov}       4D{sub}       4D{movl}      4D{mov}       2D{leave}     2D{ret}       2D{...}       \\ %
+\textcolor{black}{PC Address} &amp; [black]
+    Z 2D{8394}      4D{8395}      4D{8397}      4D{839a}      4D{83a1}      2D{83a4}      2D{83a5}      2D{...}       \\ %
+\textcolor{red}{Instruction tick} &amp; [red]
+    S O{A}{G} 2{S}  O{A}{G} 4{S}  O{A}{G} 4{S}  O{A}{G} 4{S}  O{A}{G} 4{S}  O{A}{G} 2{S}  O{A}{G} 2{S}  O{A}{G} 2{S}  \\ %
+\textcolor{brown}{Clock} &amp; [brown]
+    Z 2{C}          4{C}          4{C}          4{C}          4{C}          2{C}          2{C}          2{C}          \\ %
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \tablerules
+%%  \tablegrid
+
+\begin{pgfonlayer}{background}
+    \begin{scope}[semitransparent ,semithick]
+        \vertlines[darkgray,dotted]{1.0,3.0,...,23.0}
+        \vertlines[gray,dotted]{2.0,4.0,...,24.0}
+    \end{scope}
+\end{pgfonlayer}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.16 </span><span class="caption-text">Program counter and instruction tick</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/d74dc7bfac8c71994f6dfd19272d1a8b/divider-line.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikztiming/divider-line.tex</span></code></a> <a class="footnote-reference brackets" href="#id8" id="id2">2</a>, in <a class="reference internal" href="#tikz-tikztiming-divider-line"><span class="std std-numref">Figure 2.17</span></a>.</p>
+<div class="centered figure" id="id16">
+<span id="tikz-tikztiming-divider-line"></span><p><img src="../../_images/tikz-0d84327dc0129f97ab429f4d11eab7a02f516a15.svg" alt="\begin{tikztimingtable}[timing/wscale=2]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\def\strut{\large\vphantom{/}}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+%      section A
+\\  % empty line for time scale
+RefClock\_150MHz &amp; h19{c}                                  \\
+%      section B
+                 &amp; \divider{Transceiver Interface}         \\
+PowerDown        &amp; [very thick,violet]lN(BA1)h5HhN(BA2)l3L \\
+PowerDownDone    &amp; [very thick,orange]3LN(BB1)3H3HN(BB2)1L \\
+%      section C
+                 &amp; \divider{Synchronized Interface}        \\
+CC\_PowerDown    &amp; [thick,orange]2LN(CA1)6HN(CA2)2L        \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \makeatletter
+    \tableheader{Signal Name}{Waveform}\tablerules
+    \tablerules
+    % time scale
+    \pgfmathsetmacro\twidthnew{\twidth/2}
+    \pgfmathsetmacro\nrowsnew{76}
+    \draw[-&gt;,thick] (0,0) -- +(\twidth+1,0);
+    \foreach \n in {0,1,...,\twidthnew}
+        \pgfmathsetmacro\nnew{int(\n*2)}
+        \draw(\nnew,-0.2) -- +(0,.4) node[above,inner sep=2pt] {\scalebox{0.75}{\n}};
+    % interconnection
+    \draw[blue,-&gt;](BA1)to[out=0,in=180](CA1);
+    \draw[blue,-&gt;](CA1)to[out=0,in=180](BB1);
+    \draw[blue,-&gt;](BA2)to[out=0,in=180](CA2);
+    \draw[blue,-&gt;](CA2)to[out=0,in=180](BB2);
+    % table grid
+    \begin{background}[lightgray!50,semitransparent,semithick]
+        \horlines{1,...,8}
+        \vertlines{0,2,...,6,8,10,...,\twidth}
+    \end{background}
+    % draw dividers
+    \dividers
+    
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.17 </span><span class="caption-text">Signal interconnections and dividers</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-2 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/bce642683cb07f1adeafae57c8ed1199/colored-cells.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikztiming/colored-cells.tex</span></code></a> <a class="footnote-reference brackets" href="#id9" id="id3">3</a>, in <a class="reference internal" href="#tikz-tikztiming-colored-cells"><span class="std std-numref">Figure 2.18</span></a>.</p>
+<div class="centered figure" id="id17">
+<span id="tikz-tikztiming-colored-cells"></span><p><img src="../../_images/tikz-ba6cc6ad0c76d975047efabcc42a0e6f83bc3710.svg" alt="\begin{tikztimingtable}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    scale=2.5,
+    timing/slope=0.1,
+    timing/rowdist=3ex,
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\textnormal{SPI Select} &amp; 1U 24L    U{ } \\
+\textnormal{SPI Clock}  &amp; 3U 16{C} 7U{ } \\
+\textnormal{SPI Data}   &amp; 3U [fill=yellow]2D{B0}2D{B1}2D{B2}2D{B3}2D{B4}2D{B5}2D{B6}2D{B7}
+                             [fill=gray]7U{ } \\
+\textnormal{UART Data}  &amp; 1U [fill=green]2D{Start}
+                             [fill=yellow]2D{B0}2D{B1}2D{B2}2D{B3}2D{B4}2D{B5}2D{B6}2D{B7}
+                             [fill=magenta!60]2D{Parity}
+                             [fill=red!70]2D{Stop}2D{Stop}
+                             [fill=gray]U{ } \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    % interconnection
+    % table grid
+    \begin{pgfonlayer}{background}
+        \vertlines[help lines,red]{1,3,5,...,13,15,17,...,\twidth}
+    \end{pgfonlayer}
+    \tablegrid[fill=red,green!25,step=1]
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.18 </span><span class="caption-text">SPI vs. UART with arbitrary colored data cells</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-3 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/162df31f15da8454179ab338811a1fe3/spi-opmodes.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikztiming/spi-opmodes.tex</span></code></a> <a class="footnote-reference brackets" href="#id10" id="id4">4</a>, in <a class="reference internal" href="#tikz-tikztiming-spi-opmodes"><span class="std std-numref">Figure 2.19</span></a>.</p>
+<div class="centered figure" id="id18">
+<span id="tikz-tikztiming-spi-opmodes"></span><p><img src="../../_images/tikz-e829c865574cddf3933ad002dbf3f906fd6ac3e7.svg" alt="\begin{tikztimingtable}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+CPOL =0  &amp; LL 15{ T} LL \\
+CPOL =1  &amp; HH 15{ T} HH \\
+         &amp;  H 17L H \\
+Cycle \# &amp; U R     [fill=red!25]8{2 Q}    [fill=gray]2U \\
+    MISO &amp; D{z} R  [fill=yellow!25]8{2 Q} [fill=white]2D{z} \\
+    MOSI &amp; D{z} R  [fill=yellow!25]8{2 Q} [fill=white]2D{z} \\
+Cycle \# &amp; UU R    [fill=blue!25]8{2 Q}   [fill=gray]U \\
+    MISO &amp; D{z}U R [fill=yellow!25]8{2 Q} [fill=white]D{z} \\
+    MOSI &amp; D{z}U R [fill=yellow!25]8{2 Q} [fill=white]D{z} \\
+\extracode
+   % Add vertical lines in two colors
+    \begin{pgfonlayer}{background}
+        \begin{scope}[semitransparent,semithick]
+            \vertlines[red!50]{2.1,4.1,...,17.1}
+            \vertlines[blue!50]{3.1,5.1,...,17.1}
+        \end{scope}
+    \end{pgfonlayer}
+    % Add big group labels
+    \begin{scope}[font =\sffamily \Large ,shift={(-6em,-0.5)},anchor=east]
+        \node at (0,0){SCK};
+        \node at (0,-3){SS};
+        \node at (1ex,-8){CPHA=0}; 
+        \node at (1ex,-14){CPHA =1};
+        \end{scope}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.19 </span><span class="caption-text">Serial Peripheral Interface operating modes</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-4 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/363fa7e83368be4b9f18554802b0f4cc/pci-read-irqack.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikztiming/pci-read-irqack.tex</span></code></a>, in <a class="reference internal" href="#tikz-tikztiming-pci-read-irqack"><span class="std std-numref">Figure 2.20</span></a>.</p>
+<p>PCI timing diagrams with reference to version 2.2 of the
+PCI specification <a class="footnote-reference brackets" href="#id11" id="id5">5</a>.</p>
+<div class="centered figure" id="id19">
+<span id="tikz-tikztiming-pci-read-irqack"></span><p><img src="../../_images/tikz-9c7c18bb9efc121b8d037cfd7877043f0bcf5fa0.svg" alt="\begin{tikztimingtable}[timing/wscale=2]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    timing/dslope=0.1,
+    timing/.style={x=2ex,y=2ex},
+    x=2ex,
+    timing/rowdist=3ex,
+    timing/name/.style={font=\sffamily\scriptsize},
+    timing/nodes/advanced,
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\busref{CLK}         &amp; l 17{c}
+                       N(C1);[thin,dotted,black!25]8{0.25t};N(C2)
+                       10{c} \\
+\busref*{FRAME}      &amp; 2u 12l 2h 2u
+                       N(F1);[thin,dotted,black!25]8{0.25t};N(F2)
+                       u 0.5h2l 4.5h 2u \\
+\busref[31::0]{AD}   &amp; 2u 2d{addr} 2u{} 2d{$d_1$} 2d{$d_1 '$} 2d{$d_2$} 4d{$d_3$} 2u
+                       N(A1);[thin,dotted,black!25]8{0.25t};N(A2)
+                       1.5u 2x 2.5u 2d{$v_i$} 2u \\
+\busref*[3::0]{C/BE} &amp; 2u 2d{0010} 12d{BE\#} 2u
+                       N(B1);[thin,dotted,black!25]8{0.25t};N(B2)
+                       1.5u 2d{0000} 4.5d{\busref*{BE}} 2u \\
+\busref*{IRDY}       &amp; 4u 8l 2h2l2h
+                       N(I1);[thin,dotted,black!25]8{0.25t};N(B2)
+                       3.5u 4.5l 2h \\
+\busref*{TRDY}       &amp; 4u HLH 6l 2h
+                       N(T1);[thin,dotted,black!25]8{0.25t};N(T2)
+                       3.5u 2.5h 2l 2h \\
+\busref*{DEVSEL}     &amp; 4u 12l 2h
+                       N(D1);[thin,dotted,black!25]8{0.25t};N(D2)
+                       5u 0.5h2.5l 0.5h 1.5u \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \tablerules
+%%  \tablegrid
+    \begin{pgfonlayer}{background}
+        \begin{scope}[semitransparent,semithick]
+            \vertlines[darkgray,dotted]{1,3,...,17}
+            \vertlines[darkgray,dotted]{21,23,...,\twidth}
+        \end{scope}
+    \end{pgfonlayer}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.20 </span><span class="caption-text">PCI Read and Interrupt Acknowledge</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-5 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/51fd5810e27dcd82aaccbd8bb96452f2/gn4124-pdwreq.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikztiming/gn4124-pdwreq.tex</span></code></a>, in <a class="reference internal" href="#tikz-tikztiming-gn4124-pdwreq"><span class="std std-numref">Figure 2.21</span></a>.</p>
+<p>Packet decoder timing diagram with reference to the
+Gennum GN4124 to Wishbone bridge user guide <a class="footnote-reference brackets" href="#id12" id="id6">6</a>.</p>
+<div class="centered figure" id="id20">
+<span id="tikz-tikztiming-gn4124-pdwreq"></span><p><img src="../../_images/tikz-e32da4cca15868762cfd3ec99540722897586b92.svg" alt="\begin{tikztimingtable}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    timing/dslope=0.1,
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+lclk                 &amp; H29{C}                                \\
+pd\_csr\_sel         &amp; 2L 0.1HN(B0)1.9H 0.1LN(C0)9.9L 0.1HN(B1)1.9H 0.1LN(C1)13.9L   \\
+pd\_data [31:0]      &amp; 2U N(A0) 2D{A0} 10U 2D{H1} 2D{D1} N(D1) 12U  \\
+pd\_data [63:32]     &amp; 2D{H0} 2D{D0} N(D0) 10U N(A1) 2D{A1} 14U          \\
+wb\_adr\_o           &amp; 4D{0} N(E0) 4D{A0} 10D{0} N(E1) 4D{A1} 8D{0} \\
+wb\_dat\_o           &amp; 4D{0} N(F0) 4D{D0} 10D{0} N(F1) 4D{D1} 8D{0}      \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \draw[orange,semithick,-&gt;](A0) .. controls +(left:0.5cm)  and +(left:0.5cm) .. (B0);
+    \draw[orange,semithick,-&gt;](C0) .. controls +(right:0.5cm) and +(left:0.5cm) .. (D0);
+    \draw[orange,semithick,-&gt;](D0) .. controls +(right:0.5cm) and +(left:0.5cm) .. (E0);
+    \draw[orange,semithick,-&gt;](D0) .. controls +(right:0.5cm) and +(left:0.5cm) .. (F0);
+    \draw[orange,semithick,-&gt;](A1) .. controls +(left:0.5cm)  and +(left:0.5cm) .. (B1);
+    \draw[orange,semithick,-&gt;](C1) .. controls +(right:0.5cm) and +(left:0.5cm) .. (D1);
+    \draw[orange,semithick,-&gt;](D1) .. controls +(right:0.5cm) and +(left:0.5cm) .. (E1);
+    \draw[orange,semithick,-&gt;](D1) .. controls +(right:0.5cm) and +(left:0.5cm) .. (F1);
+    \begin{pgfonlayer}{background}
+        \begin{scope}[gray,semitransparent,semithick]
+            \vertlines {2,4,...,29}
+        \end{scope}
+    \end{pgfonlayer}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.21 </span><span class="caption-text">GN4124 Packet Decoder Write Request</span></p>
+</div></div>
+</div>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/30906">StackExchange (TeX): a/30906</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/2595">sdaau</a> and <a class="reference external" href="https://tex.stackexchange.com/u/7417">Count Zero</a>)</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/236091">StackExchange (TeX): a/236091</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/51022">Symbol 1</a>)</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/255027">StackExchange (TeX): a/255027</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/3954">Gonzalo Medina</a>)</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Indication of provenance: <a class="reference external" href="https://tex.stackexchange.com/a/290027">StackExchange (TeX): a/290027</a>
+(<a class="reference external" href="https://tex.stackexchange.com/u/828">Habi</a>)</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Indication of provenance:
+<a class="reference external" href="https://nathantypanski.com/blog/2014-10-29-tikz-timing.html">https://nathantypanski.com/blog/2014-10-29-tikz-timing.html</a></p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Indication of provenance:
+<a class="reference external" href="https://github.com/terpstra/gn4124-core/">https://github.com/terpstra/gn4124-core/</a></p>
+</dd>
+</dl>
+<p></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tikzgoodies.html" class="btn btn-neutral float-right" title="2.6.4. TikZ Goodies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="circuitikz.html" class="btn btn-neutral float-left" title="2.6.2. CircuiTikZ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors.
+      <span class="lastupdated">
+        Last updated on Oct 01, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

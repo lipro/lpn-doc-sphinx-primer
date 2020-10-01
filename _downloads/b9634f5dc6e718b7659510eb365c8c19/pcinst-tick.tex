@@ -1,0 +1,56 @@
+\begin{tikztimingtable}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    timing/nodes/advanced,
+    timing/dslope=0.1,
+    timing/.style={x=5ex,y=2ex},
+    x=5ex,
+    timing/rowdist=3ex,
+    timing/name/.style={font=\sffamily\scriptsize},
+    timing/d/text/.style={font=\sffamily\tiny},
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\textcolor{black}{Instruction} & [black]
+    Z 2D{push}      4D{mov}       4D{sub}       4D{movl}      4D{mov}       2D{leave}     2D{ret}       2D{...}       \\ %
+\textcolor{black}{PC Address} & [black]
+    Z 2D{8394}      4D{8395}      4D{8397}      4D{839a}      4D{83a1}      2D{83a4}      2D{83a5}      2D{...}       \\ %
+\textcolor{red}{Instruction tick} & [red]
+    S O{A}{G} 2{S}  O{A}{G} 4{S}  O{A}{G} 4{S}  O{A}{G} 4{S}  O{A}{G} 4{S}  O{A}{G} 2{S}  O{A}{G} 2{S}  O{A}{G} 2{S}  \\ %
+\textcolor{brown}{Clock} & [brown]
+    Z 2{C}          4{C}          4{C}          4{C}          4{C}          2{C}          2{C}          2{C}          \\ %
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \tablerules
+%%  \tablegrid
+
+\begin{pgfonlayer}{background}
+    \begin{scope}[semitransparent ,semithick]
+        \vertlines[darkgray,dotted]{1.0,3.0,...,23.0}
+        \vertlines[gray,dotted]{2.0,4.0,...,24.0}
+    \end{scope}
+\end{pgfonlayer}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

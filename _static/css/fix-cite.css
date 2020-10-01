@@ -1,0 +1,12 @@
+table.citation td.label {
+  color: #000 !important;
+  display: table-cell !important;
+}
+
+table.citation {
+  border-left: 0 none !important;
+}
+
+table.citation td {
+  border-top: 0 none !important;
+}

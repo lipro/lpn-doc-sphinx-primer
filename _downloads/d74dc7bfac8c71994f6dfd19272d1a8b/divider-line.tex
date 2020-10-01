@@ -1,0 +1,63 @@
+\begin{tikztimingtable}[timing/wscale=2]
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\def\strut{\large\vphantom{/}}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+%      section A
+\\  % empty line for time scale
+RefClock\_150MHz & h19{c}                                  \\
+%      section B
+                 & \divider{Transceiver Interface}         \\
+PowerDown        & [very thick,violet]lN(BA1)h5HhN(BA2)l3L \\
+PowerDownDone    & [very thick,orange]3LN(BB1)3H3HN(BB2)1L \\
+%      section C
+                 & \divider{Synchronized Interface}        \\
+CC\_PowerDown    & [thick,orange]2LN(CA1)6HN(CA2)2L        \\
+%
+% there must NOT be an uncommented line before \extracode!
+%
+\extracode
+    \makeatletter
+    \tableheader{Signal Name}{Waveform}\tablerules
+    \tablerules
+    % time scale
+    \pgfmathsetmacro\twidthnew{\twidth/2}
+    \pgfmathsetmacro\nrowsnew{76}
+    \draw[->,thick] (0,0) -- +(\twidth+1,0);
+    \foreach \n in {0,1,...,\twidthnew}
+        \pgfmathsetmacro\nnew{int(\n*2)}
+        \draw(\nnew,-0.2) -- +(0,.4) node[above,inner sep=2pt] {\scalebox{0.75}{\n}};
+    % interconnection
+    \draw[blue,->](BA1)to[out=0,in=180](CA1);
+    \draw[blue,->](CA1)to[out=0,in=180](BB1);
+    \draw[blue,->](BA2)to[out=0,in=180](CA2);
+    \draw[blue,->](CA2)to[out=0,in=180](BB2);
+    % table grid
+    \begin{background}[lightgray!50,semitransparent,semithick]
+        \horlines{1,...,8}
+        \vertlines{0,2,...,6,8,10,...,\twidth}
+    \end{background}
+    % draw dividers
+    \dividers
+    
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

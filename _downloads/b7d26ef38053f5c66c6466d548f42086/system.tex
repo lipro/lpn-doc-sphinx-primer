@@ -1,0 +1,63 @@
+\begin{tikzpicture}
+% Can help for debugging
+%   \draw[step=1cm,gray!30!white,very thin] (0,0) grid (15,10);
+
+    \tlmbus[minimum width=12cm,minimum height=1cm]{(8,3)}{Bus}{Bus};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(3.5,5)}{CPU}{CPU};
+    \isocket{CPU.south}{-90}{cpu_socket};
+    \hbindbus{cpu_socket}{Bus.north};
+    \scin{CPU.east}{0}{cpu_irq};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(6.5,5)}{ITC}{ITC};
+% Y est dans la vraie plateforme, mais pas dans notre version TLM.
+%   \tsocket{ITC.south}{90}{itc_socket};
+%   \hbindbus{itc_socket}{Bus.north};
+    \scout{ITC.west}{180}{itc};
+    \scin{ITC.15}{0}{itc_in0};
+    \scin{ITC.-15}{0}{itc_in1};
+
+    \draw (itc) -- (cpu_irq);
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(4.5,1)}{data_RAM}{Data RAM};
+    \tsocket{data_RAM.north}{-90}{ram_socket};
+    \hbindbus{ram_socket}{Bus.south};
+
+    \scmodule[minimum width=3cm, minimum height=1cm]{(8,1)}{inst_RAM}{Instruction RAM};
+    \tsocket{inst_RAM.north}{-90}{inst_ram_socket};
+    \hbindbus{inst_ram_socket}{Bus.south};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(11.5,1)}{GPIO}{GPIO};
+    \tsocket{GPIO.north}{-90}{gpio_socket};
+    \hbindbus{gpio_socket}{Bus.south};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(9.5,5)}{VGA}{VGA};
+    \tsocket{VGA.230}{90}{vga_target};
+    \isocket{VGA.310}{-90}{vga_initiator};
+    \hbindbus{vga_target}{Bus.north};
+    \hbindbus{vga_initiator}{Bus.north};
+    \scout{VGA.west}{180}{vga_irq};
+
+    \hbind{vga_irq}{itc_in1};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(12.5,5)}{timer}{Timer};
+    \tsocket{timer.south}{90}{timer_socket};
+    \hbindbus{timer_socket}{Bus.north};
+    \scout{timer.west}{180}{timer_irq};
+
+    \draw (VGA.north) +(0,.5) coordinate (abovevga);
+    \draw (abovevga -| VGA.west) coordinate (abovevgaw);
+    \draw (abovevga -| VGA.east) coordinate (abovevgae);
+
+    \hbind{timer_irq}{abovevgae};
+    \draw(abovevgae) -- (abovevgaw);
+    \hbind{abovevgaw}{itc_in0};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

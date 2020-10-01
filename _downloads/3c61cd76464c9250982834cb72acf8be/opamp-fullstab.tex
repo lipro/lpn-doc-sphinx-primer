@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+
+\ctikzset{bipoles/capacitor/height/.initial=.4854}
+\ctikzset{bipoles/capacitor/width/.initial=.1}
+\draw
+    (0,0) node[fd op amp] (opamp) {} node[left] {\(A1\)}
+    % Input
+    (opamp.-) node[circ] {} to[C, l_=\(C_s\)] ++(-1.5,0) node[ocirc] {} node[left] {\(v_i^-\)}
+    (opamp.+) node[circ] {} to[C, l=\(C_s\)] ++(-1.5,0) node[ocirc] {} node[left] {\(v_i^+\)}
+    % Feedback
+    (opamp.-) -- ++(0,1)  to[C, l=\(C_f\)] ++(2,0) -| (opamp.out +) {}
+    (opamp.+) -- ++(0,-1) to[C, l_=\(C_f\)] ++(2,0) -| (opamp.out -) {}
+    % Output
+    (opamp.out +) node[circ] {} -- ++(1,0) node[ocirc] {} node[right] {\(v_o^+\)}
+    (opamp.out -) node[circ] {} -- ++(1,0) node[ocirc] {} node[right] {\(v_o^-\)}
+;
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

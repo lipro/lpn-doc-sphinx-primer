@@ -1,0 +1,36 @@
+% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --> write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    \startframe
+    % \cellcom writes something on the right-hand side of a cell.
+    \cell{loc2} \cellcom{-8(\%ebp)}
+    \cell{loc1} \cellcom{-4(\%ebp)}
+    % \esp and \ebp are stack pointer and base pointer in Pentium.
+    % These macros are simple shortcuts for \cellptr{...}
+    \cell{Backup \%ebp} \esp \ebp
+    \cell{@ return} \cellcom{4(\%ebp)}
+    \finishframe{function\\ {\tt op()}}
+    \startframe
+    \cell{} \cellcom{8(\%ebp)}
+    \cell{}
+    \finishframe{function\\ {\tt main()}}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

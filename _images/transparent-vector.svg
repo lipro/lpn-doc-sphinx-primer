@@ -1,0 +1,52 @@
+<svg width="100%" height="100%" viewBox="0 0 400 400"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <desc><![CDATA[
+    Template for Drawing on a numbered 400 by 400 Grid
+
+    Jay Nick
+    steamcoded.org
+  ]]>
+  </desc>
+
+  <style type="text/css"><![CDATA[
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+    .numbers {fill:#999;font-size:10px;font-family:'Open Sans', Arial, sans-serif;}
+    .sb {fill:none;stroke:black;stroke-width:2px;}
+  ]]>
+  </style>
+
+  <g style="display:initial">
+    <path id="p1" d="M0,200L400,200" style="fill:none;stroke:royalblue;stroke-dasharray:0.2,9.6,0.2,0;stroke-width:400px;"/>
+    <path id="p2" d="M200,0L200,400" style="fill:none;stroke:royalblue;stroke-dasharray:0.2,9.6,0.2,0;stroke-width:400px;"/>
+    <path id="p3" d="M0,200L400,200" style="fill:none;stroke:royalblue;stroke-dasharray:0.5,99,0.5,0;stroke-width:400px;"/>
+    <path id="p4" d="M200,0L200,400" style="fill:none;stroke:royalblue;stroke-dasharray:0.5,99,0.5,0;stroke-width:400;px"/>
+    <g transform="translate(0,10)" class="numbers" style="text-anchor:middle;"> <text x="100">100</text> <text x="200">200</text> <text x="300">300</text> </g>
+    <g transform="translate(3,4)" class="numbers" style="text-anchor:start;"> <text y="100">100</text> <text y="200">200</text> <text y="300">300</text> </g>
+  </g>
+
+  <g style="opacity:1">
+    <!-- insert SVG elements here -->
+    <g transform="rotate(0,200,200)">
+      <ellipse cx="200" cy="200" rx="50" ry="150" style="fill:none;stroke:red;stroke-dasharray:3,2;" />
+      <circle cx="150" cy="200" r="5" style="fill:red;" />
+      <circle cx="250" cy="200" r="5" style="fill:red;" />
+    </g>
+    <g transform="rotate(60,200,200)">
+      <ellipse cx="200" cy="200" rx="50" ry="150" style="fill:none;stroke:blue;stroke-dasharray:3,2;" />
+      <circle cx="150" cy="200" r="5" style="fill:blue;" />
+      <circle cx="250" cy="200" r="5" style="fill:blue;" />
+    </g>
+    <g transform="rotate(120,200,200)">
+      <ellipse cx="200" cy="200" rx="50" ry="150" style="fill:none;stroke:green;stroke-dasharray:3,2;" />
+      <circle cx="150" cy="200" r="5" style="fill:green;" />
+      <circle cx="250" cy="200" r="5" style="fill:green;" />
+    </g>
+    <circle cx="204" cy="196" r="8" style="fill:cyan" />
+    <circle cx="194" cy="194" r="8" style="fill:orange" />
+    <circle cx="194" cy="200" r="8" style="fill:cyan" />
+    <circle cx="206" cy="206" r="8" style="fill:orange" />
+  </g>
+
+</svg>

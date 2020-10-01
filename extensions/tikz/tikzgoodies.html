@@ -1,0 +1,1627 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Li-Pro.Net Sphinx Primer" name="subject" />
+<meta content="How to write Li-Pro.Net documentation with Sphinx." name="description" />
+<meta content="Sphinx, Docutils, reStructuredText, howto, primer" name="keywords" />
+<meta content="The LP/N Documentation Team" name="author" />
+<meta content="Li–Pro.Net" name="publisher" />
+<meta content="2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors." name="copyright" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <meta content="TikZ Goodies Examples" name="topic" />
+    
+  <title>2.6.4. TikZ Goodies &mdash; Li-Pro.Net Sphinx Primer</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-cite.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/fix-float.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/lpn.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://lpn-doc-sphinx-primer-devel.readthedocs.io/extensions/tikz/tikzgoodies.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
+        <script src="../../_static/sphinx_tabs/tabs.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.6.5. TikZ-UML" href="tikzuml.html" />
+    <link rel="prev" title="2.6.3. TikZ-Timing" href="tikztiming.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Li-Pro.Net Sphinx Primer
+          
+
+          
+            
+            <img src="../../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../concepts.html">1. Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/whitespace.html">1.1. Use of whitespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/whitespace.html#indentation">1.1.1. Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/naming.html">1.2. Sphinx naming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/roles.html">1.2.1. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/directives.html">1.2.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/naming/domains.html">1.2.3. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/heading.html">1.3. Parts, Chapters, Titles, Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/toctree.html">1.4. Table of Contents Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#sidebar-navigation-menu">1.4.1. Sidebar navigation menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#secondary-sub-toc-trees">1.4.2. Secondary sub-TOC trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/toctree.html#how-this-document-uses-main-and-secondary-toc">1.4.3. How this document uses main and secondary TOC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/paragraphs.html">1.5. Paragraphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#quotes-block-quotation-element">1.5.1. Quotes (block quotation) Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#line-blocks">1.5.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/paragraphs.html#doctest-blocks">1.5.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/inline-markup.html">1.6. Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/files.html">1.7. File, Directory, Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/lists.html">1.8. Lists, Definition Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#unordered-bullet-lists">1.8.1. Unordered (bullet) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#ordered-numbered-lists">1.8.2. Ordered (numbered) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/lists.html#definition-description-lists">1.8.3. Definition (description) Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/lists.html#field-description-lists">Field (description) Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/explicit-markup.html">1.9. Explicit Markup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#comments">1.9.1. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#directives">1.9.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#footnotes">1.9.3. Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/explicit-markup.html#citations">1.9.4. Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/reuse.html">1.10. Reuse Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/includes.html">1.10.1. Include a Shared File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/reuse/substitutions.html">1.10.2. Substitutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#styled-reference">Styled Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#use-prolog-and-epilog">Use Prolog and Epilog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/reuse/substitutions.html#inline-image">Inline Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/images.html">1.11. Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#svg-graphics-only">1.11.1. SVG Graphics only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#png-images-only">1.11.2. PNG Images only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting">1.11.3. Inserting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-with-captions">1.11.4. Inserting with Captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/images.html#inserting-inline">1.11.5. Inserting Inline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/tables.html">1.12. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#grid-style">1.12.1. Grid Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#simple-style">1.12.2. Simple Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#list-table">1.12.3. List Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/tables.html#csv-table">1.12.4. CSV Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/code-example.html">1.13. Code Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-blocks">1.13.1. Explicit Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/code-example.html#explicit-code-includes">1.13.2. Explicit Code Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/mathematics.html">1.14. Mathematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/admonition.html">1.15. Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#generic-admonition">1.15.1. Generic Admonition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#specific-admonitions">1.15.2. Specific Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#attention-admonition">Attention Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#caution-admonition">Caution Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#danger-admonition">Danger Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#error-admonition">Error Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#hint-admonition">Hint Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#important-admonition">Important Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#note-admonition">Note Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#tip-admonition">Tip Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#warning-admonition">Warning Admonition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/admonition.html#sphinx-additional-admonitions">1.15.3. Sphinx Additional Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../concepts/admonition.html#seealso-admonition">Seealso Admonition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/hyperlink.html">1.16. Hyperlink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/referencing.html">1.17. Referencing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/referencing.html#a-cool-section">1.17.1. A cool section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/external-referencing.html">1.18. External References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/downloads.html">1.19. Downloadable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/semantic-referencing.html">1.20. Semantic Descriptions and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/user-interfaces.html">1.21. Writing about User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/user-interfaces.html#other-semantic-markup">1.21.1. Other Semantic Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/glossary.html">1.22. Glossary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#create-a-glossary">1.22.1. Create a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../concepts/glossary.html#link-a-term-to-its-glossary-entry">1.22.2. Link a Term to its Glossary Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../concepts/index.html">1.23. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../extensions.html">2. Extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../spelling.html">2.1. Spelling Checker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spelling.html#private-dictionaries">2.1.1. Private Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bibtex.html">2.2. BibTeX Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linuxdoc.html">2.3. LinuxDoc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../linuxdoc.html#flat-list-table">2.3.1. Flat list table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../programoutput.html">2.4. Program Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#complete-output">2.4.1. Complete output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#shortening-the-output">2.4.2. Shortening the output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#mimicking-shell-input">2.4.3. Mimicking shell input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#command-execution-and-shell-expansion">2.4.4. Command execution and shell expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programoutput.html#error-handling">2.4.5. Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../matplotlib.html">2.5. Mathematical Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#expressions">2.5.1. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matplotlib.html#plots">2.5.2. Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../matplotlib.html#d-plots">3D-Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../tikz.html">2.6. PGF/TikZ LaTeX Pictures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pgftikz.html">2.6.1. PGF/TikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuitikz.html">2.6.2. CircuiTikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikztiming.html">2.6.3. TikZ-Timing</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.6.4. TikZ Goodies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikzuml.html">2.6.5. TikZ-UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../blockdiag.html">2.7. Block Diagram Family</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/blockdiag.html">2.7.1. Block Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/blockdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/seqdiag.html">2.7.2. Sequence Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/seqdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/actdiag.html">2.7.3. Activity Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/actdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../blockdiag/nwdiag.html">2.7.4. Network Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../blockdiag/nwdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-tabs.html">2.8. Tabbed Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx-panels.html">2.9. Paneled Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../email.html">2.10. Email Obfuscate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../themes.html">3. Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../themes/rtd.html">3.1. Read the Docs Sphinx Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cheatsheet.html">4. Cheat Sheet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/gimmick.html">The Gimmick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary/glossterms.html">Terms</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../indexloi.html">List of Issues (To-Do)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Li-Pro.Net Sphinx Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../extensions.html"><span class="section-number">2. </span>Extensions</a> &raquo;</li>
+        
+          <li><a href="../tikz.html"><span class="section-number">2.6. </span>PGF/TikZ LaTeX Pictures</a> &raquo;</li>
+        
+      <li><span class="section-number">2.6.4. </span>TikZ Goodies</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/extensions/tikz/tikzgoodies.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tikz-goodies">
+<span id="index-0"></span><h1><span class="section-number">2.6.4. </span>TikZ Goodies<a class="headerlink" href="#tikz-goodies" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Homepage</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://gitlab.com/tikz-goodies/tikz-goodies">TikZ Goodies Project</a></p>
+</dd>
+</dl>
+<p>TikZ Goodies is a small and simple collection of <a class="reference internal" href="../../glossary/glossterms.html#term-TikZ"><span class="xref std std-term">TikZ</span></a> packages for drawing:</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-0-0 docutils container">
+<div class="docutils container">
+<p><strong>Timing-Diagrams</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-1 docutils container">
+<div class="docutils container">
+<p><strong>Execution Stacks</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-0-2 docutils container">
+<div class="docutils container">
+<p><strong>SystemC/TLM</strong></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
+<dl class="field-list simple">
+<dt class="field-odd">CTAN Package</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://ctan.org/pkg/timing-diagrams">TikZ Goodies Timing-Diagrams Package</a></p>
+</dd>
+<dt class="field-even">Documentation</dt>
+<dd class="field-even"><p><a class="reference external" href="https://gitlab.com/tikz-goodies/tikz-goodies/-/blob/master/timing-diagrams/README">TikZ Goodies Timing-Diagrams README</a></p>
+</dd>
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://ctan.net/graphics/pgf/contrib/timing-diagrams/diagrams-examples.pdf">TikZ Goodies Timing-Diagrams Example</a></p>
+</dd>
+</dl>
+<p>Various kinds of timing diagrams (<strong>not hardware-oriented</strong>).</p>
+<blockquote class="pull-quote">
+<div><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You may want to have a look at
+<a class="reference internal" href="tikztiming.html#tikz-timing"><span class="std std-ref">TikZ-Timing</span></a> too if you want
+to draw some hardware-oriented timing diagrams.</p>
+</div>
+</div></blockquote>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-1-0 docutils container">
+<div class="docutils container">
+<p><strong>Basics</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-1-1 docutils container">
+<div class="docutils container">
+<p><strong>Ticks &amp; Tasks</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-1-2 docutils container">
+<div class="docutils container">
+<p><strong>Annotations</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-1-3 docutils container">
+<div class="docutils container">
+<p><strong>Callouts</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-1-4 docutils container">
+<div class="docutils container">
+<p><strong>Arrows</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-1-5 docutils container">
+<div class="docutils container">
+<p><strong>Events</strong></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-0 active docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/fb90ecc343fc77386905082820585081/basic.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/timing-diagrams/basic.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-timing-diagrams-basic"><span class="std std-numref">Figure 2.22</span></a>.</p>
+<div class="centered figure" id="id2">
+<span id="tikz-tikzgoodies-timing-diagrams-basic"></span><p><img src="../../_images/tikz-8a5a3a866f76ed0a48f07e8a71fed0b7532e57f6.svg" alt="\begin{tikzpicture}
+
+    % Define timelines with their names, and ordinate as #2:
+    \tline{A}{2};
+    \tline{B}{0};
+
+    % Actually draw the timelines (#2 is the horizontal length):
+    \ttimeline{A}{5};
+    \ttimeline{B}{5};
+
+    % Provide captions for timelines:
+    \tcaption{A}{A's caption};
+    \tcaption{B}{B's caption};
+
+    % Draw the actual content:
+
+    % tick = vertical line accros the timeline
+    \ttick{A};
+
+    % advance time
+    \tskip{A}{2};
+
+    % This one will be drawn 2 time units after the previous, because of
+    % the \tskip:
+    \ttick{A};
+
+    % One more with the same principle:
+    \tskip{A}{1};
+    \ttick{A};
+
+    % Same as above, but on timeline B:
+    \ttick{B};
+    \tskip{B}{1};
+
+    % \tbox creates a box with non-null width, and text inside:
+    \tbox{B}{3}{Box on B};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.22 </span><span class="caption-text">Basic Timing-Diagram example without additionals</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-1 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/5b7033a873d3fba5374c8f8ed1a049af/timeline.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/timing-diagrams/timeline.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-timing-diagrams-timeline"><span class="std std-numref">Figure 2.23</span></a>.</p>
+<div class="centered figure" id="id3">
+<span id="tikz-tikzgoodies-timing-diagrams-timeline"></span><p><img src="../../_images/tikz-0e841ca006d57952529a2fcc8699467bb00eedff.svg" alt="\begin{tikzpicture}
+
+    \draw (-1,1.5)  node[rotate=90] (systemc) {\textsf{\large SystemC}};
+    \draw[dashed] (-1,0) -- (9,0);
+    \draw (-1,-2) node[rotate=90] (jtlm) {\textsf{\large jTLM}};
+
+    % SystemC
+    \tline{A}{2.1};
+    \tcaption{A}{A};
+    \tline{B}{1};
+    \tcaption{B}{B};
+    \ttimeline{A}{5};
+    \ttimeline{B}{5};
+
+    % jTLM
+    \tline{P}{-1.5};
+    \tcaption{P}{P};
+    \tline{Q}{-2.6};
+    \tcaption{Q}{Q};
+    \ttimeline{P}{5};
+    \ttimeline{Q}{5};
+    \ttick{A};
+    \ttextU{A}{f()};
+    \tskiptext{A}{2}{\texttt{\scriptsize wait(20)}};
+    \ttick{A};
+    \tskip{A}{1};
+    \ttick{A};
+    \ttick{B}
+    \tskip{B}{1};
+    \ttick{B};
+    \tskip{B}{1};
+    \ttick{B};
+    \tskip{B}{2};
+    \ttick{B};
+    \ttick{P}
+    \ttextU{P}{g()};
+    \tskiptext{P}{2}{\scriptsize awaitTime}
+    \ttick{P};
+    \tbox{P}{1.5}{h()};
+
+    % just so that the final picture looks pretty
+    \tbox{Q}{1.3}{i()};
+    \tskip{Q}{1};
+    \ttick{Q};
+    \tskip{Q}{.5};
+    \tbox{Q}{2}{j()};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.23 </span><span class="caption-text">Timeline-Diagram example with ticks and tasks</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-2 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/4589601106975dd0a5c85d8579c4d177/annotations.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/timing-diagrams/annotations.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-timing-diagrams-annotations"><span class="std std-numref">Figure 2.24</span></a>.</p>
+<div class="centered figure" id="id4">
+<span id="tikz-tikzgoodies-timing-diagrams-annotations"></span><p><img src="../../_images/tikz-cb97e7fbb68f69ac90e3efc7b923497e09a87d88.svg" alt="\begin{tikzpicture}
+
+    \tline{real}{0};
+    \tline{model}{2};
+
+    \ttimeline{real}{8.5};
+    \ttimeline{model}{8.5};
+
+    \tcaption{real}{Real system};
+    \tcaption{model}{SystemC model};
+
+    \tskip{real}{.5};
+    \tskip{model}{.5};
+
+    \path (currentrealU) coordinate (endzooma);
+    \tbox{real}{7}{\texttt{compute()}};
+    \path (currentrealU) ++(-.04, 0) coordinate (endzoomb);
+    \tstrongtick{real};
+    \ttextarrowU{real}{\texttt{commit()}};
+
+    \tstrongtick{model};
+    \path (currentmodelL) ++(-.04, 0) coordinate(startzooma);
+    \path (currentmodelL) ++( .04, 0) coordinate(startzoomb);
+    \ttextarrowU{model}{\texttt{compute()}};
+    \tskip{model}{.04};
+    \tskiptext{model}{6.92}{\texttt{wait()}};
+    \tskip{model}{.04};
+    \tstrongtick{model};
+    \ttextarrowU{model}{\texttt{commit()}};
+
+    \path (startzoomb -| endzoomb) coordinate (topright);
+    \path (barycentric cs:startzoomb=.5,endzooma=.5) coordinate (tmpa);
+    \path (barycentric cs:topright=.5,endzoomb=.5) coordinate (tmpb);
+    \draw[very thin,color=black!70!white] (startzooma) -- (endzooma);
+    \draw[very thin,color=black!70!white] (startzoomb) .. controls (tmpa) and (tmpb) .. (endzoomb);
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.24 </span><span class="caption-text">Timing-Diagram example with annotations</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-3 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/aa3e9bdd4cfdd9dacbf5061ab0392838/callouts.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/timing-diagrams/callouts.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-timing-diagrams-callouts"><span class="std std-numref">Figure 2.25</span></a>.</p>
+<div class="centered figure" id="id5">
+<span id="tikz-tikzgoodies-timing-diagrams-callouts"></span><p><img src="../../_images/tikz-571cb7e681f21407d8b54b173ad5b9f524080975.svg" alt="\begin{tikzpicture}[scale=.8]
+
+    \def\one{\raisebox{-2pt}{\large\ding{192}{ }}}
+    \def\two{\raisebox{-1.5pt}{\large\ding{193}{ }}}
+    \def\three{\raisebox{-2pt}{\large\ding{194}{ }}}
+    \tikzstyle{arrow}=[-&gt;,line width=.05cm,draw=red!90!blue!60!black]
+
+    \tline{A}{3};
+    \tcaption{A}{A};
+    \tline{B}{2};
+    \tcaption{B}{B};
+    \tline{C}{1};
+    \tcaption{C}{C};
+    \tline{T}{-1.5}
+    \tcaption{T}{OS thread};
+
+    \ttimeline{A}{10};
+    \ttimeline{B}{10};
+    \ttimeline{C}{10};
+    \ttimeline{T}{10};
+
+    \tbox{B}{1}{};
+    \tcatchup{C}{B};
+
+    \tbox{C}{1}{};
+    \tcalloutU[(-.8,2.5)]{C}{\texttt{during(42, routine);}}
+
+    \tcatchup{B}{C};
+    \tcatchup{T}{C};
+    \draw[arrow] (currentCL) -- node[left] {
+        \begin{tabular}{r}
+            \one create\\thread
+        \end{tabular}
+    } (currentTU);
+    \tbox{T}{4}{\texttt{routine}};
+
+    \tskiptextL{C}{4}{\two \texttt{wait(42)}\vspace{-2em}};
+
+    \tbox{B}{1.5}{};
+    \tcatchup{A}{B};
+    \tbox{A}{1}{};
+    \tcatchup{B}{A};
+    \tbox{B}{1}{};
+
+    \draw[arrow] (currentTU) -- node[right] {
+        \begin{tabular}{l}
+            \three join\\thread
+        \end{tabular}
+    } (currentCL);
+    \tbox{C}{1}{};
+
+    \tcatchup{A}{C};
+    \tbox{A}{1}{};
+    \tcatchup{B}{A};
+    \tbox{B}{1}{};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.25 </span><span class="caption-text">Timing-Diagram example with callouts (synchronizations)</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-4 docutils container">
+<p class="rubric"><strong>Arrows (compact)</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/6a362180049f6012de3e096e7a9fe874/arrows-compact.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/timing-diagrams/arrows-compact.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-timing-diagrams-arrows-compact"><span class="std std-numref">Figure 2.26</span></a>.</p>
+<div class="centered figure" id="id6">
+<span id="tikz-tikzgoodies-timing-diagrams-arrows-compact"></span><p><img src="../../_images/tikz-9b8a67386e54694fe22adda091e9151fbac0a1ad.svg" alt="\begin{tikzpicture}[scale=.7]
+
+    \tline{sc}{2};
+    \tcaption{sc}{SystemC};
+
+    \tline{ace}{0};
+    \draw (currentace) ++ (9,-.3) node {Simulated time};
+
+    \tcaption{ace}{P/T Solver};
+
+    \ttimeline{sc}{10};
+    \ttimeline{ace}{10};
+
+    \tremember{sc}{before};
+    \tlonglighttick{sc};
+    \tskip{sc}{1.5};
+    \tlonglighttick{sc};
+    \tskip{sc}{1.5};
+    \tlonglighttick{sc};
+    \tskip{sc}{2};
+    \trecall{sc}{before};
+    \tbox{sc}{6}{Functional (1)};
+
+    \ttextarrowU{sc}{
+        \begin{tabular}{c}
+            SystemC reads\\temperature
+        \end{tabular}
+    };
+
+    \tarrowUL{sc}{ace}{};
+    \draw (tmpmid) node[fill=white,inner sep=1pt] {(2)};
+    \tremember{ace}{before};
+    \tlonglighttick{ace};
+    \tskip{ace}{1.5};
+    \tlonglighttick{ace};
+    \tskip{ace}{1.5};
+    \tlonglighttick{ace};
+    \tskip{ace}{2};
+    \trecall{ace}{before};
+    \tbox{ace}{6}{Non-functional (3)};
+
+    \tarrowLU{ace}{sc}{};
+    \draw (tmpmid) node[anchor=west] {(4)};
+
+    \tbox{sc}{2}{...};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.26 </span><span class="caption-text">Timing-Diagram example with arrows (compact)</span></p>
+</div><p class="rubric"><strong>Arrows (stretched)</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/52bdb746f5f75cd57f5003579e8119a8/arrows-stretched.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/timing-diagrams/arrows-stretched.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-timing-diagrams-arrows-stretched"><span class="std std-numref">Figure 2.27</span></a>.</p>
+<div class="centered figure" id="id7">
+<span id="tikz-tikzgoodies-timing-diagrams-arrows-stretched"></span><p><img src="../../_images/tikz-fbf34fdbecc4fab4b7d69d03dee0bf3701419a36.svg" alt="\begin{tikzpicture}[scale=.7]
+
+    \tline{sc}{2};
+    \tcaption{sc}{SystemC};
+
+    \tline{ace}{0};
+    \tcaption{ace}{P/T Solver};
+
+    \draw (currentace) ++ (9,-.3) node {Simulated time};
+
+    \ttimeline{sc}{10};
+    \ttimeline{ace}{10};
+
+    \tbox{sc}{1}{(1)};
+    \ttextarrowU{sc}{end of instant $t_{i}$};
+    \tcatchup{ace}{sc};
+    \coordinate (sceoi) at (currentscL);
+
+    \tskip{sc}{6};
+    \ttick{sc};
+    \ttextarrowU{sc}{next instant $t_{i+1}$};
+
+    \tarrowCoord{(sceoi)}{(currentaceU)}{};
+    \draw (tmpmid) node[anchor=east] {(2)};
+    \tbox{ace}{6}{non-functional simu (3)};
+    % \tcalloutL{ace}{No IT};
+    \ttick{sc};
+    \tarrowLU{ace}{sc}{};
+    \draw (tmpmid) node[anchor=west] {(4)};
+    % \tcalloutU{sc}{Continue};
+    \tbox{sc}{1}{...};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.27 </span><span class="caption-text">Timing-Diagram example with arrows (stretched)</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-5 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2bc696b02c559ebd6a96cec3e2b2c6af/events.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/timing-diagrams/events.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-timing-diagrams-events"><span class="std std-numref">Figure 2.28</span></a>.</p>
+<div class="centered figure" id="id8">
+<span id="tikz-tikzgoodies-timing-diagrams-events"></span><p><img src="../../_images/tikz-696ea4ad5514908d0d17157367698f16df2e440f.svg" alt="\begin{tikzpicture}
+
+  \tikzstyle{arrow}=[-&gt;,line width=.05cm,draw=red!90!blue!60!black]
+
+  \tline{S}{6};
+  \tline{M}{5};
+  \tline{E}{2};
+  \tline{T}{0}
+  \tline{F}{-2};
+  \tline{Eb}{-5};
+  \tline{Tb}{-7}
+
+  \coordinate (n1) at (-2.5,-.5);
+  \coordinate (n2) at (-2.5,4);
+  \draw [decoration={brace,amplitude=10pt},decorate] (n1) to (n2);
+
+  \coordinate (o1) at (-2.5,-7.5);
+  \coordinate (o2) at (-2.5,-1.5);
+  \draw [decoration={brace,amplitude=10pt},decorate] (o1) to (o2);
+
+  \draw (barycentric cs:n1=.5,n2=.5) ++(-10pt,0) node[anchor=south,rotate=90] {\large\textsf{(a) Naive Temperature Model}};
+  \draw (barycentric cs:o1=.5,o2=.5) ++(-10pt,0) node[anchor=south,rotate=90] {\large\textsf{(b) Proposed Approach}};
+
+  \tcaption{S}{Real System};
+  \ttimeline{S}{8};
+
+  \tskip{S}{.3};
+
+  \tstartbrace{S};
+  \tevent{S}; \tskip{S}{1.5};
+  \tevent{S}; \tskip{S}{1.3};
+  \tevent{S}; \tskip{S}{1.2};
+
+  \tendbrace{S}{\texttt{f(); wait(40);}};
+  \tstartbrace{S};
+
+  \tskip{S}{.2};
+  \tevent{S}; \tskip{S}{.8};
+  \tevent{S}; \tskip{S}{.7};
+  \tevent{S}; \tskip{S}{.5};
+  \tevent{S}; \tskip{S}{.5};
+  \tevent{S}; \tskip{S}{.8};
+  \tevent{S};
+
+  \tendbrace{S}{\texttt{g(); wait(35);}};
+
+
+  \tcaption{M}{
+    \begin{tabular}{r}
+      Loosely-Timed\\Model
+    \end{tabular}
+  };
+  \ttimeline{M}{8};
+  \tskip{M}{.3};
+  \foreach \x in {10,0,-10} {
+    \teventA{M}{\x};
+  }
+  \tskip{M}{4};
+  \foreach \x in {25,15,5,-5,-15,-25} {
+    \teventA{M}{\x};
+  }
+  \tskip{M}{2.5};
+
+
+  \tcaption{E}{Energy};
+  \ttimeline{E}{8};
+
+  \draw[red!50!black,thick] (currentE) ++(0,.3) -- ++(.3,0) --
+  node[right] {+3} ++(0,.6) -- ++(4,0) --
+  node[right] {+6} ++(0,1.2) -- node[near end,below]{total=9} ++(3.5,0)
+  ;
+
+
+  \tcaption{T}{Temperature};
+  \ttimeline{T}{8};
+
+  \draw[blue!50!black,thick] (currentT) ++(0,.3) -- ++(.3,0) --
+  coordinate[at end](peak1) ++(0,.6) .. controls +(1,-.2) .. ++(4,-.3) --
+  coordinate[at end](peak2) ++(0,1) .. controls +(1,-.5) .. ++(3.5,-.8)
+  ;
+
+
+  \draw (peak1) node[draw,circle,thick](peak1){};
+  \draw (peak2) node[draw,circle,thick](peak2){};
+  \draw (barycentric cs:peak1=.5,peak2=.5) ++(0,.1) node[inner sep=0](peaks){
+    \begin{tabular}{c}
+      Unrealistic\\peaks
+    \end{tabular}
+  };
+  \draw [arrow] (peaks) -- (peak1);
+  \draw [arrow] (peaks) -- (peak2);
+
+
+  \tcaption{F}{Frequency};
+  \ttimeline{F}{8};
+
+  \tskip{F}{.3};
+  \tbox{F}{4}{$\frac{3}{40}$ trans/sec};
+  \tbox{F}{3.5}{$\frac{6}{35}$ trans/sec};
+
+
+  \tcaption{Eb}{Energy};
+  \ttimeline{Eb}{8};
+
+  \draw[red!50!black,thick] (currentEb) ++(0,.3) -- ++(.3,0) --
+  ++(4,.6)
+  -- node[at end,right]{total=9} ++(3.5,1.2)
+  ;
+
+
+  \tcaption{Tb}{Temperature};
+  \ttimeline{Tb}{8};
+
+  \draw[blue!50!black,thick] (currentTb) ++(0,.3) -- coordinate[at end](start)++(.3,0);
+  \path (start)
+  ++(4,.6) coordinate (x1)
+  ++(3.5,.3) coordinate(x2);
+  \draw[blue!50!black,thick,bend left=5] (start) to (x1);
+  \draw[blue!50!black,thick,bend left=5] (x1) to (x2);
+  ;
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.28 </span><span class="caption-text">Timing-Diagram example with events as vertical arrows</span></p>
+</div></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
+<dl class="field-list simple">
+<dt class="field-odd">CTAN Package</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://ctan.org/pkg/drawstack">TikZ Goodies Drawstack Package</a></p>
+</dd>
+<dt class="field-even">Documentation</dt>
+<dd class="field-even"><p><a class="reference external" href="https://gitlab.com/tikz-goodies/tikz-goodies/-/blob/master/drawstack/README">TikZ Goodies Drawstack README</a></p>
+</dd>
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://ctan.net/macros/latex/contrib/drawstack/stack-example.pdf">TikZ Goodies Drawstack Example</a></p>
+</dd>
+</dl>
+<p>Specific kind of execution stacks (<em>typically to illustrate
+assembly language notions</em>).</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-2-0 docutils container">
+<div class="docutils container">
+<p><strong>Basics</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-2-1 docutils container">
+<div class="docutils container">
+<p><strong>Pointers</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-2-2 docutils container">
+<div class="docutils container">
+<p><strong>Memory</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-2-3 docutils container">
+<div class="docutils container">
+<p><strong>Stylistics</strong></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-0 active docutils container">
+<p class="rubric"><strong>Minimal</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/0b21536f1cea803f7d132e421be7b8b8/minimal.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/minimal.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-minimal"><span class="std std-numref">Figure 2.29</span></a>.</p>
+<div class="centered figure" id="id9">
+<span id="tikz-tikzgoodies-drawstack-minimal"></span><p><img src="../../_images/tikz-8d339dca608cd31ff224d5ac03a270ac44123fa2.svg" alt="% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --&gt; write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    % Within the environment, draw stack elements with \cell{...}
+    \cell{First cell}
+    \cell{Second cell}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.29 </span><span class="caption-text">Minimalistic execution stack example</span></p>
+</div><p class="rubric"><strong>Frames</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/f87966cc94df2656d0855ee9079a8fd1/frames.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/frames.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-frames"><span class="std std-numref">Figure 2.30</span></a>.</p>
+<div class="centered figure" id="id10">
+<span id="tikz-tikzgoodies-drawstack-frames"></span><p><img src="../../_images/tikz-c90e0d29a3727280a9badca2de96db298815454d.svg" alt="% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --&gt; write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    \startframe
+        \cell{First cell}
+        \cell{Second cell}
+    \finishframe{Some stack frame}
+
+    \cell{Not interesting}
+
+    \startframe
+        \cell{\scriptsize Next stack frame}
+        \cell{\scriptsize Next stack frame}
+    \finishframe{Another stack frame}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.30 </span><span class="caption-text">Execution stack example with grouped cells in frames</span></p>
+</div><p class="rubric"><strong>Padding</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/2cdfb080cf460af9d0aa2ecfb64dd79b/padding.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/padding.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-padding"><span class="std std-numref">Figure 2.31</span></a>.</p>
+<div class="centered figure" id="id11">
+<span id="tikz-tikzgoodies-drawstack-padding"></span><p><img src="../../_images/tikz-70e9fe2795386ab299ea82e1a692fcf52ba92878.svg" alt="% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --&gt; write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    \cell{above padding}
+    \padding{3}{nothing here}
+    \cell{below padding}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.31 </span><span class="caption-text">Execution stack example with cell padding</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-1 docutils container">
+<p class="rubric"><strong>Base Pointer</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/d57a017dc51e368bcab5a692787cbbea/base-pointer.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/base-pointer.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-base-pointer"><span class="std std-numref">Figure 2.32</span></a>.</p>
+<div class="centered figure" id="id12">
+<span id="tikz-tikzgoodies-drawstack-base-pointer"></span><p><img src="../../_images/tikz-06b8a9a19ece3b0b431714e2113ce56b11e5be90.svg" alt="% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --&gt; write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    \startframe
+    % \cellcom writes something on the right-hand side of a cell.
+    \cell{loc2} \cellcom{-8(\%ebp)}
+    \cell{loc1} \cellcom{-4(\%ebp)}
+    % \esp and \ebp are stack pointer and base pointer in Pentium.
+    % These macros are simple shortcuts for \cellptr{...}
+    \cell{Backup \%ebp} \esp \ebp
+    \cell{&#64; return} \cellcom{4(\%ebp)}
+    \finishframe{function\\ {\tt op()}}
+    \startframe
+    \cell{} \cellcom{8(\%ebp)}
+    \cell{}
+    \finishframe{function\\ {\tt main()}}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.32 </span><span class="caption-text">Execution stack example with base pointers</span></p>
+</div><p class="rubric"><strong>Stack Pointer</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/b9523df3d10cce96bdf0a5f138070248/stack-pointer.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/stack-pointer.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-stack-pointer"><span class="std std-numref">Figure 2.33</span></a>.</p>
+<div class="centered figure" id="id13">
+<span id="tikz-tikzgoodies-drawstack-stack-pointer"></span><p><img src="../../_images/tikz-b8b30532926658626b24df0ce2f36a63521f0061.svg" alt="% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --&gt; write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    \cell{Top}
+    \cell{Below top}
+    % \bcell is just like \cell, but in a different color.
+    \bcell{Above bottom} \cellptr{Stack pointer here}
+    \bcell{Bottom}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.33 </span><span class="caption-text">Execution stack example with stack pointers</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-2 docutils container">
+<p class="rubric"><strong>Structure</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/20ea37295aec6f737ee4470c4ef002b9/structure.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/structure.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-structure"><span class="std std-numref">Figure 2.34</span></a>.</p>
+<div class="centered figure" id="id14">
+<span id="tikz-tikzgoodies-drawstack-structure"></span><p><img src="../../_images/tikz-24ee7006d07e9da67d0f753c675a1d2742983e5b.svg" alt="\begin{tikzpicture}[x=1.4cm,y=0.7cm]
+
+    \small
+
+    \draw (3, -1) node (Otm) {
+        \begin{tabular}{c}
+            \large{Object}\\\large{vtable}
+        \end{tabular}
+    };
+
+    \drawstruct{(0,0)}
+    \structcell[freecell]{~} \coordinate (Atm) at (currentcell.east);
+    \structcell[freecell]{\texttt{&#64;Object.equals()}}
+    \structcell[freecell]{\texttt{&#64;code A.m()}}
+    \structcell[freecell]{\texttt{&#64;code A.p()}} \coordinate (A) at (currentcell.west);
+    \structname{
+        \begin{tabular}{c}
+            \large{A's vtable}
+        \end{tabular}
+    }
+
+    \drawstruct{(-4,-3)}
+    \structcell[freecell]{} \coordinate (Btm) at (currentcell.east);
+    \structcell[freecell]{\texttt{&#64;Object.equals()}}
+    \structcell[freecell]{\texttt{&#64;code A.m()}}
+    \structcell[freecell]{\texttt{&#64;code B.p()}}
+    \structcell[freecell]{\texttt{&#64;code B.q()}}
+    \structname{
+        \begin{tabular}{c}
+            \large{B's vtable}
+        \end{tabular}
+    }
+
+    \draw[-&gt;] (Btm) -- (A);
+    \draw[-&gt;] (Atm) -- (Otm);
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.34 </span><span class="caption-text">Structures without a stack structure</span></p>
+</div><p class="rubric"><strong>Stack Structure</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/bda842b29c473ad9b215be864f3095c9/stack-structure.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/stack-structure.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-stack-structure"><span class="std std-numref">Figure 2.35</span></a>.</p>
+<div class="centered figure" id="id15">
+<span id="tikz-tikzgoodies-drawstack-stack-structure"></span><p><img src="../../_images/tikz-0110e3d3fc9e2ded6bf18a6e2519f8fcf7db8faa.svg" alt="\begin{tikzpicture}[x=1.05cm,y=0.7cm]
+
+    \small
+
+    \stacktop{}
+    \separator
+    \cell{\texttt{p3}}        \cellcomL{11(GB)} \coordinate (p3) at (currentcell.east);
+    \separator
+    \cell{\texttt{p2}}        \cellcomL{10(GB)} \coordinate (p2) at (currentcell.east);
+    \separator
+    \cell{\texttt{p1}}        \cellcomL{ 9(GB)} \coordinate (p1) at (currentcell.east);
+    \separator
+    \cell{\texttt{&#64;P3D.diag}} \cellcomL{ 8(GB)}
+    \cell{\texttt{\footnotesize &#64;Object.equals}} \cellcomL{ 7(GB)}
+    \cell{\texttt{3(GB)}}     \cellcomL{ 6(GB)} \coordinate (T1) at (currentcell.east);
+    \separator
+    \cell{\texttt{&#64;P2D.diag}} \cellcomL{ 5(GB)}
+    \cell{\texttt{\footnotesize &#64;Object.equals}} \cellcomL{ 4(GB)}
+    \cell{\texttt{1(GB)}}     \cellcomL{ 3(GB)} \coordinate (T2) at (currentcell.east);
+    \separator
+    \cell{\texttt{\footnotesize &#64;Object.equals}} \cellcomL{ 2(GB)}
+    \cell{\texttt{null}}      \cellcomL{ 1(GB)}
+    \cell[draw=none]{Stack}
+
+    \drawstruct{(5,1)})
+    \structcell{z=2,5}
+    \structcell{y=2,5}
+    \structcell{x=2,5}
+    \structcell{.} \coordinate (O1) at (currentcell.west);
+    \coordinate (O1l) at (currentcell.south);
+
+    \drawstruct{(9,-3)}
+    \structcell{y=1}
+    \structcell{x=1}
+    \structcell{.} \coordinate (O2) at (currentcell.west);
+    \coordinate (O2l) at (currentcell.south);
+
+    \draw[-&gt;] (p3) -- (O1);
+    \draw[-&gt;] (p2) -- (O1);
+    \draw[-&gt;] (p1) -- (O2);
+
+    \draw[-&gt;] (O1l) .. controls (O1 |- T1) .. (T1);
+    \draw[-&gt;] (O2l) .. controls (O2 |- T2) .. (T2);
+
+    \draw (10,-10) node{Heap};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.35 </span><span class="caption-text">Structures and stack together</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-2-3 docutils container">
+<p class="rubric"><strong>Highlighting</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/efb0cfc41a27a531fb45c08685fa9983/highlighting.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/highlighting.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-highlighting"><span class="std std-numref">Figure 2.36</span></a>.</p>
+<div class="centered figure" id="id16">
+<span id="tikz-tikzgoodies-drawstack-highlighting"></span><p><img src="../../_images/tikz-0028a5c97a0fedea1cbb735e207923c9044dc239.svg" alt="% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --&gt; write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    \cell{\scriptsize Uninteresting cell}
+    \cell{Interesting cell} \cellround{Yes, this one!}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.36 </span><span class="caption-text">Execution stack example with highlighted note</span></p>
+</div><p class="rubric"><strong>Style</strong></p>
+<p><a class="reference download internal" download="" href="../../_downloads/996f2174deaff1419119ecd83092e63e/style.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/drawstack/style.tex</span></code></a>, in
+<a class="reference internal" href="#tikz-tikzgoodies-drawstack-style"><span class="std std-numref">Figure 2.37</span></a>.</p>
+<div class="centered figure" id="id17">
+<span id="tikz-tikzgoodies-drawstack-style"></span><p><img src="../../_images/tikz-beed20086cb8e35e88f690be48961774be096f27.svg" alt="% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --&gt; write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    {% tikzstyle will be local to this {...}
+        \tikzstyle{freecell}=[fill=blue!10,draw=blue!30!black]
+        \tikzstyle{occupiedcell}=[fill=blue!10!orange!10,draw=blue!30!black]
+        \tikzstyle{padding}=[fill=yellow!20,draw=blue!30!black]
+        \tikzstyle{highlight}=[draw=orange!50!black,text=orange!50!black]
+
+        \small
+
+        \cell{\scriptsize Uninteresting cell}
+        \cell{Interesting cell} \cellround{Yes, this one!}
+        \bcell{bcell}
+        \padding{2}{Padding}
+
+    }
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.37 </span><span class="caption-text">Execution stack example with changed style</span></p>
+</div></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-2 docutils container">
+<dl class="field-list simple">
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://gitlab.com/tikz-goodies/tikz-goodies/-/blob/master/TikzLM/README">TikZ Goodies TikzLM README</a></p>
+</dd>
+<dt class="field-even">Documentation</dt>
+<dd class="field-even"><p><a class="reference external" href="https://matthieu-moy.fr/spip/IMG/zip/TikzLM.zip">TikZ Goodies TikzLM Example</a> (<code class="file docutils literal notranslate"><span class="pre">tikzlm-example.pdf</span></code>)</p>
+</dd>
+</dl>
+<p>Basic elements of typical <abbr title="C++ classes for system-level modeling">SystemC</abbr> and/or <abbr title="Transaction Level Modeling">TLM</abbr> usage.</p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-3-0 docutils container">
+<div class="docutils container">
+<p><strong>Platform</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-3-1 docutils container">
+<div class="docutils container">
+<p><strong>System</strong></p>
+</div>
+</div>
+<div class="item sphinx-data-tab-3-2 docutils container">
+<div class="docutils container">
+<p><strong>Memory Map</strong></p>
+</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-0 active docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/a4092b0375e8d611d47d1b2baf962a49/platform.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/tikzlm/platform.tex</span></code></a>, in <a class="reference internal" href="#tikz-tikzgoodies-tikzlm-platform"><span class="std std-numref">Figure 2.38</span></a>.</p>
+<div class="centered figure" id="id18">
+<span id="tikz-tikzgoodies-tikzlm-platform"></span><p><img src="../../_images/tikz-dfffe09463331e1b3f513dba2d139aa9d15bfa78.svg" alt="\begin{tikzpicture}
+% Can help for debugging
+%   \draw[step=1cm,gray!30!white,very thin] (0,0) grid (10,10);
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(3,5.5)}{CPU}{CPU};
+    \isocket{CPU.south}{-90}{cpu_socket};
+    \scin{CPU.east}{0}{cpu_irq};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(7,5.5)}{ITC}{ITC};
+    \tsocket{ITC.south}{90}{itc_socket};
+    \scout{ITC.west}{180}{itc_irq};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(5,1.5)}{RAM}{RAM};
+    \tsocket{RAM.north}{-90}{ram_socket};
+
+    \draw (itc_irq) -- (cpu_irq);
+
+    \tlmbus[minimum width=7cm, minimum height=1.0cm]{(5,3.5)}{Bus}{Bus};
+    \tsocket{Bus.north}{-90}{bus_target};
+    \isocket{Bus.south}{-90}{bus_initiator};
+
+    \vbind{cpu_socket}{bus_target};
+    \vbind{itc_socket}{bus_target};
+    \vbind{bus_initiator}{ram_socket};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.38 </span><span class="caption-text">Platform show explicitly the sockets of the bus</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-1 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b7d26ef38053f5c66c6466d548f42086/system.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/tikzlm/system.tex</span></code></a>, in <a class="reference internal" href="#tikz-tikzgoodies-tikzlm-system"><span class="std std-numref">Figure 2.39</span></a>.</p>
+<div class="centered figure" id="id19">
+<span id="tikz-tikzgoodies-tikzlm-system"></span><p><img src="../../_images/tikz-8a305b43ad814c0de5b8e355b9b4e2e9b539f108.svg" alt="\begin{tikzpicture}
+% Can help for debugging
+%   \draw[step=1cm,gray!30!white,very thin] (0,0) grid (15,10);
+
+    \tlmbus[minimum width=12cm,minimum height=1cm]{(8,3)}{Bus}{Bus};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(3.5,5)}{CPU}{CPU};
+    \isocket{CPU.south}{-90}{cpu_socket};
+    \hbindbus{cpu_socket}{Bus.north};
+    \scin{CPU.east}{0}{cpu_irq};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(6.5,5)}{ITC}{ITC};
+% Y est dans la vraie plateforme, mais pas dans notre version TLM.
+%   \tsocket{ITC.south}{90}{itc_socket};
+%   \hbindbus{itc_socket}{Bus.north};
+    \scout{ITC.west}{180}{itc};
+    \scin{ITC.15}{0}{itc_in0};
+    \scin{ITC.-15}{0}{itc_in1};
+
+    \draw (itc) -- (cpu_irq);
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(4.5,1)}{data_RAM}{Data RAM};
+    \tsocket{data_RAM.north}{-90}{ram_socket};
+    \hbindbus{ram_socket}{Bus.south};
+
+    \scmodule[minimum width=3cm, minimum height=1cm]{(8,1)}{inst_RAM}{Instruction RAM};
+    \tsocket{inst_RAM.north}{-90}{inst_ram_socket};
+    \hbindbus{inst_ram_socket}{Bus.south};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(11.5,1)}{GPIO}{GPIO};
+    \tsocket{GPIO.north}{-90}{gpio_socket};
+    \hbindbus{gpio_socket}{Bus.south};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(9.5,5)}{VGA}{VGA};
+    \tsocket{VGA.230}{90}{vga_target};
+    \isocket{VGA.310}{-90}{vga_initiator};
+    \hbindbus{vga_target}{Bus.north};
+    \hbindbus{vga_initiator}{Bus.north};
+    \scout{VGA.west}{180}{vga_irq};
+
+    \hbind{vga_irq}{itc_in1};
+
+    \scmodule[minimum width=2cm, minimum height=1cm]{(12.5,5)}{timer}{Timer};
+    \tsocket{timer.south}{90}{timer_socket};
+    \hbindbus{timer_socket}{Bus.north};
+    \scout{timer.west}{180}{timer_irq};
+
+    \draw (VGA.north) +(0,.5) coordinate (abovevga);
+    \draw (abovevga -| VGA.west) coordinate (abovevgaw);
+    \draw (abovevga -| VGA.east) coordinate (abovevgae);
+
+    \hbind{timer_irq}{abovevgae};
+    \draw(abovevgae) -- (abovevgaw);
+    \hbind{abovevgaw}{itc_in0};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.39 </span><span class="caption-text">System show sockets connected through the bus</span></p>
+</div></div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-3-2 docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/f486f30c2c3d2bdadb1c3ceab0e25a34/memmap.tex"><code class="xref download docutils literal notranslate"><span class="pre">tikzgoodies/tikzlm/memmap.tex</span></code></a>, in <a class="reference internal" href="#tikz-tikzgoodies-tikzlm-memmap"><span class="std std-numref">Figure 2.40</span></a>.</p>
+<div class="centered figure" id="id20">
+<span id="tikz-tikzgoodies-tikzlm-memmap"></span><p><img src="../../_images/tikz-a7c40039c862873076f065518b88b09c41878eea.svg" alt="\begin{tikzpicture}
+% Can help for debugging
+%   \draw[step=1cm,gray!30!white,very thin] (0,0) grid (10,5);
+
+    \tlmbus{(4.5,3.5)}{Bus}{Bus};
+
+    \scmodule[minimum width=7cm, minimum height=2.5cm]{(1,7)}{CPU}{};
+    \node (cpu_title) at (CPU.north west) [anchor=north west] {CPU};
+    \isocket{CPU.south}{-90}{cpu_socket};
+    \path (Bus.north-|CPU.south) ++ (1,0) coordinate (bustsocket);
+    \tsocket{bustsocket}{-90}{bus_tsocket};
+    \vbind{cpu_socket_out}{bus_tsocket_in};
+
+    \scmodule[minimum width=7cm, minimum height=2.5cm]{(7.5,0)}{RAM}{};
+    \node (cpu_title) at (RAM.north west) [anchor=north west] {RAM};
+    \tsocket{RAM.north}{-90}{ram_socket};
+    \path (Bus.south-|RAM.north) ++(-1, 0) coordinate (busisocket);
+    \isocket{busisocket}{-90}{bus_isocket};
+    \vbind{ram_socket_in}{bus_isocket_out};
+
+    % Show that other targets could have been there
+    \draw (2.5,2) node (target1) {T1};
+    \draw (4.5,2) node (target2) {T2};
+
+    \isocket{target1 |- Bus.south}{-90}{bus_isocket1};
+    \isocket{target2 |- Bus.south}{-90}{bus_isocket2};
+
+    \vbind{target1.north}{bus_isocket1};
+    \vbind{target2.north}{bus_isocket2};
+
+    {
+        \tikzstyle{mmap_line}=[draw=white!50!black]
+        \tikzstyle{mmap_text}=[color=white!50!black]
+        \tikzstyle{mmap_fill}=[fill=white!97!black]
+
+        \memorymap{8,4}{3}{4};
+
+        \map{1}{1.5}{0x0000}{0x1000}{T1};
+        \map{2}{2.5}{0x2000}{0x3000}{T2};
+        \map{3.5}{4}{0x5000}{0x6000}{RAM};
+    }
+
+    {
+        \codebox{CPU}{\footnotesize \dots{}\\socket.write(addr,data);\\ \dots{}};
+        \codebox{RAM}{status write(addr,data) \{\\
+          ~~~~mem[addr] = data;\\
+          \}};
+    }
+
+    {
+        \draw[dashed, very thick, draw=red!50!black]
+            (cpu_socket_in) .. controls
+            (cpu_socket |- Bus.south) and
+            (Bus.north -| ram_socket) ..
+            (ram_socket_out);
+    }
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :" /></p>
+<p class="caption"><span class="caption-number">Figure 2.40 </span><span class="caption-text">System with memory map on the side</span></p>
+</div></div>
+</div>
+</div>
+</div>
+<p></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tikzuml.html" class="btn btn-neutral float-right" title="2.6.5. TikZ-UML" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tikztiming.html" class="btn btn-neutral float-left" title="2.6.3. TikZ-Timing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors.
+      <span class="lastupdated">
+        Last updated on Oct 01, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

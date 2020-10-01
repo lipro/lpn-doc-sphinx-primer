@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+
+    \tline{real}{0};
+    \tline{model}{2};
+
+    \ttimeline{real}{8.5};
+    \ttimeline{model}{8.5};
+
+    \tcaption{real}{Real system};
+    \tcaption{model}{SystemC model};
+
+    \tskip{real}{.5};
+    \tskip{model}{.5};
+
+    \path (currentrealU) coordinate (endzooma);
+    \tbox{real}{7}{\texttt{compute()}};
+    \path (currentrealU) ++(-.04, 0) coordinate (endzoomb);
+    \tstrongtick{real};
+    \ttextarrowU{real}{\texttt{commit()}};
+
+    \tstrongtick{model};
+    \path (currentmodelL) ++(-.04, 0) coordinate(startzooma);
+    \path (currentmodelL) ++( .04, 0) coordinate(startzoomb);
+    \ttextarrowU{model}{\texttt{compute()}};
+    \tskip{model}{.04};
+    \tskiptext{model}{6.92}{\texttt{wait()}};
+    \tskip{model}{.04};
+    \tstrongtick{model};
+    \ttextarrowU{model}{\texttt{commit()}};
+
+    \path (startzoomb -| endzoomb) coordinate (topright);
+    \path (barycentric cs:startzoomb=.5,endzooma=.5) coordinate (tmpa);
+    \path (barycentric cs:topright=.5,endzoomb=.5) coordinate (tmpb);
+    \draw[very thin,color=black!70!white] (startzooma) -- (endzooma);
+    \draw[very thin,color=black!70!white] (startzoomb) .. controls (tmpa) and (tmpb) .. (endzoomb);
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

@@ -1,0 +1,193 @@
+\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+[x=20pt,y=20pt]
+\tikzset{% Environment Config
+    font=\normalsize,
+    MyArrow/.style={% Style for the current
+        -Stealth,
+        cyan,
+        line width=1.0pt,
+        shorten >= 5pt,
+        shorten <= 1pt
+    },
+    Vref/.style={% Style for the voltage reference
+        draw=none,
+        postaction={decorate,decoration={markings,mark=at position 0.5 with {\node{\large #1};}}},
+        postaction={decorate,decoration={markings,mark=at position 0.2 with {\node{\large $\bm{+}$};}}},
+        postaction={decorate,decoration={markings,mark=at position 0.8 with {\node{\large $\bm{-}$};}}}
+    },
+    Numbered/.style = {% Style for circle marks
+            draw,
+            circle,
+            line width=1.0pt,
+            align=center,
+            inner sep=2pt,
+            label distance=10pt
+       }
+}
+
+\ctikzset{bipoles/length=8mm} % Controls bipoles scale
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+\def\MyOpamp(#1)#2{% Customized opamp
+    \begin{scope}[shift={(#1)}]
+        % Component Shape
+        \draw[fill=cyan!25,line width = 2.0pt,line join=round] (0,0)++(-1,1.5)
+            --++(2.5,-1.5) -- ++(-2.5,-1.5)-- cycle;
+        % Label and component identifier.
+        \draw(0,0) node{\sf\large A#2}; % IC LABEL
+        % Draw the pins
+        % Some that you have to learn about label nodes, draw lines, and name coordinates in Tikz
+        \draw[line width = 1.0pt]
+        (-1,0.75) node [anchor=180]{\large $\bm{-}$}
+            -- ++(-0.5,0) coordinate (#2 IN-); % IN -
+        \draw[line width = 1.0pt]
+        (-1,-0.75) node [anchor=180]{\large $\bm{+}$}
+            -- ++(-0.5,0) coordinate (#2 IN+); % IN +
+        \draw[line width = 1.0pt]
+        (1.5,0)
+            -- ++(0.5,0) coordinate (#2 OUT); % OUT
+    \end{scope}
+}
+
+\def\MyGround(#1)#2{% Customized ground
+    \begin{scope}[shift={(#1)}]
+        % Component Shape
+        \draw[line width = 2.0pt,line cap=round]
+        (0,0) coordinate (#2 GND)++(-0.3,0)--++(0.6,0);
+%%      (0,-0.15)++(-0.2,0)--++(0.4,0)
+%%      (0,-0.3)++(-0.1,0)--++(0.2,0);
+    \end{scope}
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic
+%%
+
+% Put the customzed opamp in position
+\MyOpamp(0,0){1}
+
+% Put some short nodes
+\draw(-7,0.75) node[ocirc,scale=2,line width=1.0pt](N3){};
+\draw(-3,0.75) node[circ,scale=2,line width=1.0pt](N2){};
+\draw(3,0) node[circ,scale=2,line width=1.0pt](N6){};
+\draw(5.5,0) node[ocirc,scale=2,line width=1.0pt](N6-OUT){};
+\draw(-7,-2.5) node[ocirc,scale=2,line width=1.0pt](G1){};
+\draw(G1 -| N6-OUT) node[ocirc,scale=2,line width=1.0pt](G3){};
+\MyGround(-7,-3){1}
+\MyGround(1 GND -| N2){2}
+\MyGround(1 GND -| N6-OUT){3}
+
+% Draw the wires and pasive components
+\draw[line width=1.0pt]
+(N3)
+    --++(1,0)
+    to [R,l=\large$R_i$] (N2)
+    --(1 IN-)
+(N2)
+    --++(0,2) coordinate (N5)
+    --++(2.5,0)
+    to[R,l=\large$R_f$]++(3,0)
+    -| (N6)
+(1 IN+)
+    -|(2 GND)
+(G1)
+    |-(1 GND)
+(1 OUT)
+    -- (N6-OUT)
+(G3)
+    |-(3 GND);
+
+% Voltage references: (1)
+\draw[Vref=$V_i$]
+(N3)
+    -- (G1);
+
+\draw[Vref=$0$ V,color=cyan]
+(1 IN-)
+    ++(-0.5,0) coordinate (temp)
+    -- (1 IN+ -| temp)
+    node [
+        midway,
+        label={[Numbered,color=black]180:\bf 1}
+    ]{};
+
+\draw[Vref,color=cyan]
+(N6-OUT)
+    -- (G3)
+    node [
+        midway,
+        anchor=west,
+        label={[Numbered,color=black,label distance=5pt]180:\bf 6}
+    ]{$\bm{V_o} = 0-\cfrac{V_n}{R_i}R_f$};
+
+% Draw voltages (virtual ground): (2)
+\draw[MyArrow,color=magenta!25]
+(N2)++(-1.0,-5)
+    node [
+        color=magenta,
+        label={[Numbered,color=black,label distance=5pt]180:\bf 2}
+    ](C1){$\bm{V_n} = 0$ \bf (Virtual ground)}
+(C1.168) % Get a point from center to node box at 168 degrees
+    to [out=80,in=-150] (N2);
+
+% Draw currents: (3), (4), (5)
+\draw[MyArrow]
+(N3)++(0.3,0.3)
+    -- ++(1.5,0)
+    node [
+        midway,
+        inner sep=10pt,
+        anchor=-70,
+        label={[Numbered,color=black,label distance=0pt]180:\bf 3}
+    ]{$\bm{i_1} = \cfrac{V_n}{R_i}$};
+
+\draw[MyArrow]
+(N2)++(0.5,0.3)
+    -- ++(1.2,0)
+    node [
+        midway,
+        inner sep=10pt,
+        anchor=-70,
+        label={[Numbered,color=black,label distance=0pt]12:\bf 4}
+    ]{$0$};
+
+\draw[MyArrow]
+(N5)++(0.3,0.3) % Node gap
+    -- ++(2,0) % Arrow longitude
+    node [
+        midway,
+        inner sep=10pt,
+        anchor=-70,
+        label={[Numbered,color=black,label distance=0pt]180:\bf 5}
+    ]{$\bm{i_2} = \bm{i_1} =\cfrac{\bm{V_n}}{R_i}$};
+
+\draw[magenta]
+(C1 -| 3 GND)
+    node [
+        inner sep=10pt,
+        anchor=west,
+    ]{$\bm{V_o} = -\cfrac{R_f}{R_i}V_i$};
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

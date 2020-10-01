@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="Li-Pro.Net Sphinx Primer" name="subject" />
+<meta content="How to write Li-Pro.Net documentation with Sphinx." name="description" />
+<meta content="Sphinx, Docutils, reStructuredText, howto, primer" name="keywords" />
+<meta content="The LP/N Documentation Team" name="author" />
+<meta content="Li–Pro.Net" name="publisher" />
+<meta content="2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors." name="copyright" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <meta content="Mathematical Plots" name="topic" />
+    
+  <title>2.5. Mathematical Plots &mdash; Li-Pro.Net Sphinx Primer</title>
+  
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/DejaVu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/fonts/WenQuanYi.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/force-dejavu.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/fix-cite.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/fix-float.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/strikethrough.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/tweaks-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/lpn.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://lpn-doc-sphinx-primer-devel.readthedocs.io/extensions/matplotlib.html"/>
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.6. PGF/TikZ LaTeX Pictures" href="tikz.html" />
+    <link rel="prev" title="2.4. Program Output" href="programoutput.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Li-Pro.Net Sphinx Primer
+          
+
+          
+            
+            <img src="../_static/lpn.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../concepts.html">1. Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/whitespace.html">1.1. Use of whitespace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/whitespace.html#indentation">1.1.1. Indentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/naming.html">1.2. Sphinx naming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/naming/roles.html">1.2.1. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/naming/directives.html">1.2.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/naming/domains.html">1.2.3. Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/heading.html">1.3. Parts, Chapters, Titles, Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/toctree.html">1.4. Table of Contents Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/toctree.html#sidebar-navigation-menu">1.4.1. Sidebar navigation menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/toctree.html#secondary-sub-toc-trees">1.4.2. Secondary sub-TOC trees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/toctree.html#how-this-document-uses-main-and-secondary-toc">1.4.3. How this document uses main and secondary TOC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/paragraphs.html">1.5. Paragraphs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/paragraphs.html#quotes-block-quotation-element">1.5.1. Quotes (block quotation) Element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/paragraphs.html#line-blocks">1.5.2. Line Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/paragraphs.html#doctest-blocks">1.5.3. Doctest Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/inline-markup.html">1.6. Inline Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/files.html">1.7. File, Directory, Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/lists.html">1.8. Lists, Definition Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/lists.html#unordered-bullet-lists">1.8.1. Unordered (bullet) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/lists.html#ordered-numbered-lists">1.8.2. Ordered (numbered) Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/lists.html#definition-description-lists">1.8.3. Definition (description) Lists</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/lists.html#field-description-lists">Field (description) Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/explicit-markup.html">1.9. Explicit Markup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#comments">1.9.1. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#directives">1.9.2. Directives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#footnotes">1.9.3. Footnotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/explicit-markup.html#citations">1.9.4. Citations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/reuse.html">1.10. Reuse Content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/reuse/includes.html">1.10.1. Include a Shared File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/reuse/substitutions.html">1.10.2. Substitutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/reuse/substitutions.html#styled-reference">Styled Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/reuse/substitutions.html#use-prolog-and-epilog">Use Prolog and Epilog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/reuse/substitutions.html#inline-image">Inline Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/images.html">1.11. Images and Figures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#svg-graphics-only">1.11.1. SVG Graphics only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#png-images-only">1.11.2. PNG Images only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#inserting">1.11.3. Inserting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#inserting-with-captions">1.11.4. Inserting with Captions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/images.html#inserting-inline">1.11.5. Inserting Inline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/tables.html">1.12. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#grid-style">1.12.1. Grid Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#simple-style">1.12.2. Simple Style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#list-table">1.12.3. List Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/tables.html#csv-table">1.12.4. CSV Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/code-example.html">1.13. Code Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/code-example.html#explicit-code-blocks">1.13.1. Explicit Code Blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/code-example.html#explicit-code-includes">1.13.2. Explicit Code Includes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/mathematics.html">1.14. Mathematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/admonition.html">1.15. Admonitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/admonition.html#generic-admonition">1.15.1. Generic Admonition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/admonition.html#specific-admonitions">1.15.2. Specific Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#attention-admonition">Attention Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#caution-admonition">Caution Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#danger-admonition">Danger Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#error-admonition">Error Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#hint-admonition">Hint Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#important-admonition">Important Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#note-admonition">Note Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#tip-admonition">Tip Admonition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#warning-admonition">Warning Admonition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/admonition.html#sphinx-additional-admonitions">1.15.3. Sphinx Additional Admonitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../concepts/admonition.html#seealso-admonition">Seealso Admonition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/hyperlink.html">1.16. Hyperlink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/referencing.html">1.17. Referencing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/referencing.html#a-cool-section">1.17.1. A cool section</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/external-referencing.html">1.18. External References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/downloads.html">1.19. Downloadable Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/semantic-referencing.html">1.20. Semantic Descriptions and References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/user-interfaces.html">1.21. Writing about User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/user-interfaces.html#other-semantic-markup">1.21.1. Other Semantic Markup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/glossary.html">1.22. Glossary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/glossary.html#create-a-glossary">1.22.1. Create a Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/glossary.html#link-a-term-to-its-glossary-entry">1.22.2. Link a Term to its Glossary Entry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/index.html">1.23. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../extensions.html">2. Extensions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="spelling.html">2.1. Spelling Checker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spelling.html#private-dictionaries">2.1.1. Private Dictionaries</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bibtex.html">2.2. BibTeX Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linuxdoc.html">2.3. LinuxDoc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="linuxdoc.html#flat-list-table">2.3.1. Flat list table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="programoutput.html">2.4. Program Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="programoutput.html#complete-output">2.4.1. Complete output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="programoutput.html#shortening-the-output">2.4.2. Shortening the output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="programoutput.html#mimicking-shell-input">2.4.3. Mimicking shell input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="programoutput.html#command-execution-and-shell-expansion">2.4.4. Command execution and shell expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="programoutput.html#error-handling">2.4.5. Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.5. Mathematical Plots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#expressions">2.5.1. Expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plots">2.5.2. Plots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#d-plots">3D-Plots</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tikz.html">2.6. PGF/TikZ LaTeX Pictures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tikz/pgftikz.html">2.6.1. PGF/TikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikz/circuitikz.html">2.6.2. CircuiTikZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikz/tikztiming.html">2.6.3. TikZ-Timing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikz/tikzgoodies.html">2.6.4. TikZ Goodies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tikz/tikzuml.html">2.6.5. TikZ-UML</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blockdiag.html">2.7. Block Diagram Family</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blockdiag/blockdiag.html">2.7.1. Block Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/blockdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/blockdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/blockdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="blockdiag/seqdiag.html">2.7.2. Sequence Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/seqdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/seqdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/seqdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="blockdiag/actdiag.html">2.7.3. Activity Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/actdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/actdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/actdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="blockdiag/nwdiag.html">2.7.4. Network Diagram</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/nwdiag.html#directive-body-diagram">Directive Body Diagram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/nwdiag.html#description-table">Description Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockdiag/nwdiag.html#include-diagram">Include Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-tabs.html">2.8. Tabbed Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx-panels.html">2.9. Paneled Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">2.10. Email Obfuscate</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../themes.html">3. Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../themes/rtd.html">3.1. Read the Docs Sphinx Theme</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheet.html">4. Cheat Sheet</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendices</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix.html">Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/credits.html">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/gimmick.html">The Gimmick</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../glossary/glossterms.html">Terms</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Lists and References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../indexlol.html">Listings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlot.html">List of Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlof.html">List of Figures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloe.html">List of Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexlod.html">List of Downloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../indexloi.html">List of Issues (To-Do)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+    <ul><li class="toctree-l1">
+        <a class="reference internal"
+           href="../genindex.html">Index</a>
+    </li></ul>
+  
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Li-Pro.Net Sphinx Primer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../extensions.html"><span class="section-number">2. </span>Extensions</a> &raquo;</li>
+        
+      <li><span class="section-number">2.5. </span>Mathematical Plots</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/extensions/matplotlib.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mathematical-plots">
+<span id="index-0"></span><h1><span class="section-number">2.5. </span>Mathematical Plots<a class="headerlink" href="#mathematical-plots" title="Permalink to this headline">¶</a></h1>
+<blockquote class="pull-quote">
+<div><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Matplotlib does not support labels and auto-references. You
+can not refer to a equation and you will never see an entry
+in the list of equations to <code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">mathmpl</span></span><span class="p"><span class="pre">::</span></span></code> expressions.</p>
+<p>Only practicable and usable for <a class="reference internal" href="../glossary/glossterms.html#term-HTML"><span class="xref std std-term">HTML</span></a>/<a class="reference internal" href="../glossary/glossterms.html#term-EPUB"><span class="xref std std-term">EPUB</span></a> and <a class="reference internal" href="../glossary/glossterms.html#term-LaTeX"><span class="xref std std-term">LaTeX</span></a>/<a class="reference internal" href="../glossary/glossterms.html#term-PDF"><span class="xref std std-term">PDF</span></a>
+builder.</p>
+<div class="danger admonition">
+<p class="admonition-title">Extension not applicable for textual output</p>
+<p>The intended use of this <a class="reference internal" href="../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> extension is for output
+systems with graphical support, not for pure text based
+systems like man or info pages. That is why many of the
+rendering functions are implemented exclusively for <a class="reference internal" href="../glossary/glossterms.html#term-HTML"><span class="xref std std-term">HTML</span></a>
+or <a class="reference internal" href="../glossary/glossterms.html#term-LaTeX"><span class="xref std std-term">LaTeX</span></a> output.</p>
+</div>
+</div>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">PyPI Package</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://pypi.org/project/matplotlib/">https://pypi.org/project/matplotlib/</a></p>
+</dd>
+<dt class="field-even">Project Home</dt>
+<dd class="field-even"><p><a class="reference external" href="https://matplotlib.org/">https://matplotlib.org/</a></p>
+</dd>
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://matplotlib.org/contents.html">https://matplotlib.org/contents.html</a></p>
+</dd>
+<dt class="field-even">Git Repository</dt>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/matplotlib/matplotlib">https://github.com/matplotlib/matplotlib</a></p>
+</dd>
+<dt class="field-odd">Documentation</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://matplotlib.org/sampledoc/index.html">https://matplotlib.org/sampledoc/index.html</a></p>
+</dd>
+<dt class="field-even">Git Repository</dt>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/matplotlib/sampledoc">https://github.com/matplotlib/sampledoc</a></p>
+</dd>
+</dl>
+<p>Matplotlib is a comprehensive library for creating static, animated, and
+interactive visualizations in <a class="reference internal" href="../glossary/glossterms.html#term-Python"><span class="xref std std-term">Python</span></a>. It consists:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib.sphinxext.mathmpl</span></code>: Matplotlib math-text in a <a class="reference internal" href="../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> document</p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/api/sphinxext_plot_directive_api.html#module-matplotlib.sphinxext.plot_directive" title="(in Matplotlib v3.3.2)"><code class="docutils literal notranslate"><span class="pre">matplotlib.sphinxext.plot_directive</span></code></a>:
+Matplotlib plot in a <a class="reference internal" href="../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> document</p></li>
+</ul>
+<p class="rubric">Runtime setup</p>
+<dl class="std confval">
+<dt id="confval-plot_pre_code">
+<code class="sig-name descname">plot_pre_code</code><a class="headerlink" href="#confval-plot_pre_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Code that should be executed before each plot runs will setup over the
+<a class="reference internal" href="../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> configuration option <a class="reference internal" href="#confval-plot_pre_code"><code class="xref std std-confval docutils literal notranslate"><span class="pre">plot_pre_code</span></code></a>. If not specified
+or <strong>None or empty</strong> it will default to a string containing:
+<code class="code highlight python docutils literal notranslate"><span class="kn"><span class="pre">import</span></span> <span class="nn"><span class="pre">numpy</span></span> <span class="k"><span class="pre">as</span></span> <span class="nn"><span class="pre">np</span></span><span class="p"><span class="pre">;</span></span> <span class="kn"><span class="pre">from</span></span> <span class="nn"><span class="pre">matplotlib</span></span> <span class="kn"><span class="pre">import</span></span> <span class="n"><span class="pre">pyplot</span></span> <span class="k"><span class="pre">as</span></span> <span class="n"><span class="pre">plt</span></span><span class="p"><span class="pre">;</span></span></code>.</p>
+<dl class="field-list">
+<dt class="field-odd">plot_pre_code</dt>
+<dd class="field-odd"><p>Currently set to:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">image</span> <span class="k">as</span> <span class="n">mpimg</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</td></tr></table></div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt id="confval-plot_working_directory">
+<code class="sig-name descname">plot_working_directory</code><a class="headerlink" href="#confval-plot_working_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>By default, if <strong>None or empty</strong>, the <a class="reference internal" href="#confval-plot_working_directory"><code class="xref std std-confval docutils literal notranslate"><span class="pre">plot_working_directory</span></code></a> will
+be changed to the directory of the example, so the code can get at its data
+files, if any. Also its path will be added to <code class="code highlight python docutils literal notranslate"><span class="n"><span class="pre">sys</span></span><span class="o"><span class="pre">.</span></span><span class="n"><span class="pre">path</span></span></code> so it can
+import any helper modules sitting beside it. This configuration option can
+be used to specify a central directory (also added to <code class="code highlight python docutils literal notranslate"><span class="n"><span class="pre">sys</span></span><span class="o"><span class="pre">.</span></span><span class="n"><span class="pre">path</span></span></code>)
+where data files and helper modules for all code are located.</p>
+<dl class="field-list simple">
+<dt class="field-odd">plot_working_directory</dt>
+<dd class="field-odd"><p>Currently set to <code class="file docutils literal notranslate"><span class="pre">_images/mplplots</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt id="confval-plot_basedir">
+<code class="sig-name descname">plot_basedir</code><a class="headerlink" href="#confval-plot_basedir" title="Permalink to this definition">¶</a></dt>
+<dd><p>When a path to a source file is given, the <a class="reference internal" href="../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> configuration option
+<a class="reference internal" href="#confval-plot_basedir"><code class="xref std std-confval docutils literal notranslate"><span class="pre">plot_basedir</span></code></a> will respect. It is the base directory, to which
+<code class="code highlight rst docutils literal notranslate"><span class="p"><span class="pre">..</span></span> <span class="ow"><span class="pre">plot</span></span><span class="p"><span class="pre">::</span></span></code> file names are relative to. If <strong>None or empty</strong>, file
+names are <strong>relative</strong> to the directory where the file containing the
+directive is.</p>
+<dl class="field-list simple">
+<dt class="field-odd">plot_basedir</dt>
+<dd class="field-odd"><p>Currently set to <code class="file docutils literal notranslate"><span class="pre">_images/mplplots</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="section" id="expressions">
+<h2><span class="section-number">2.5.1. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
+<p>See the <a class="reference external" href="https://matplotlib.org/tutorials/text/mathtext.html" title="(in Matplotlib v3.3.2)"><span>Writing mathematical expressions</span></a> for lots more information
+how to writing mathematical expressions in matplotlib.</p>
+<p>With matplotlib in <a class="reference internal" href="../glossary/glossterms.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> you can include inline math
+<img src="../_images/mathmpl/math-fb0459f2c5.png" style="position: relative; bottom: -8px"/> (as role
+<code class="code highlight rst docutils literal notranslate"><span class="na"><span class="pre">:mathmpl:</span></span><span class="nv"><span class="pre">`(\alpha^{ic}</span> <span class="pre">&gt;</span> <span class="pre">\beta_{ic})`</span></span></code>) or display math:</p>
+<img src="../_images/mathmpl/math-469a3aea19.png" class="center" /><dl class="rst directive">
+<dt id="directive-mathmpl">
+<code class="sig-name descname">.. mathmpl::</code><a class="headerlink" href="#directive-mathmpl" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">The example</dt>
+<dd class="field-odd"><div class="highlight-rst notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">mathmpl</span><span class="p">::</span>
+
+   \left(\frac{5 - \frac{1}{x}}{4}\right)
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt class="field-even">Which gives</dt>
+<dd class="field-even"><img src="../_images/mathmpl/math-5402d5f8c7.png" class="center" /></dd>
+</dl>
+</dd></dl>
+
+<p></p>
+</div>
+<div class="section" id="plots">
+<h2><span class="section-number">2.5.2. </span>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h2>
+<dl class="rst directive">
+<dt id="directive-plot">
+<code class="sig-name descname">.. plot::</code><a class="headerlink" href="#directive-plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>See the matplotlib <a class="reference external" href="https://matplotlib.org/tutorials/introductory/pyplot.html" title="(in Matplotlib v3.3.2)"><span>Pyplot tutorial</span></a> and the
+<a class="reference external" href="https://matplotlib.org/gallery/index.html" title="(in Matplotlib v3.3.2)"><span>Gallery</span></a> for lots of examples of matplotlib plots.</p>
+</dd></dl>
+
+<p>The source code for the plot may be included in one of three ways:</p>
+<p class="rubric">inline content</p>
+<dl class="field-list">
+<dt class="field-odd">the example</dt>
+<dd class="field-odd"><div class="highlight-rst notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">plot</span><span class="p">::</span>
+   <span class="nc">:align:</span> center
+   <span class="nc">:scale:</span> 75
+
+   img = mpimg.imread(&#39;https://github.com/matplotlib/matplotlib&#39;
+                      <span class="m">+</span> &#39;/raw/master/doc/_static/stinkbug.png&#39;)
+   imgplot = plt.imshow(img)
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt class="field-even">which gives</dt>
+<dd class="field-even"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;https://github.com/matplotlib/matplotlib&#39;</span>
+                   <span class="o">+</span> <span class="s1">&#39;/raw/master/doc/_static/stinkbug.png&#39;</span><span class="p">)</span>
+<span class="n">imgplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../extensions/matplotlib-1.png">png</a>, <a class="reference external" href="../extensions/matplotlib-1.hires.png">hires.png</a>, <a class="reference external" href="../extensions/matplotlib-1.pdf">pdf</a>)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/matplotlib-1.png"><img alt="../_images/matplotlib-1.png" src="../_images/matplotlib-1.png" style="width: 384.0px; height: 288.0px;" /></a>
+</div>
+</dd>
+</dl>
+<p></p>
+<p class="rubric">doctest content</p>
+<dl class="field-list">
+<dt class="field-odd">the example</dt>
+<dd class="field-odd"><div class="highlight-rst notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">plot</span><span class="p">::</span>
+   <span class="nc">:format:</span> doctest
+   <span class="nc">:align:</span> center
+   <span class="nc">:scale:</span> 100
+
+   &gt;&gt;&gt; import matplotlib.pyplot as plt
+   &gt;&gt;&gt; plt.plot([1, 2, 3, 4], [4, 5, 4, 6])  # doctest: +ELLIPSIS
+   [<span class="nt">&lt;matplotlib.lines.Line2D object at 0x...&gt;</span>]
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt class="field-even">which gives</dt>
+<dd class="field-even"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>  
+<span class="go">[&lt;matplotlib.lines.Line2D object at 0x...&gt;]</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../extensions/matplotlib-2.png">png</a>, <a class="reference external" href="../extensions/matplotlib-2.hires.png">hires.png</a>, <a class="reference external" href="../extensions/matplotlib-2.pdf">pdf</a>)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/matplotlib-2.png"><img alt="../_images/matplotlib-2.png" src="../_images/matplotlib-2.png" style="width: 512.0px; height: 384.0px;" /></a>
+</div>
+</dd>
+</dl>
+<p></p>
+<p class="rubric">source file content</p>
+<dl class="field-list">
+<dt class="field-odd">the example</dt>
+<dd class="field-odd"><div class="highlight-rst notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">plot</span><span class="p">::</span> ellipses.py
+   <span class="nc">:include-source:</span>
+   <span class="nc">:encoding:</span> utf
+   <span class="nc">:format:</span> python
+   <span class="nc">:align:</span> center
+   <span class="nc">:scale:</span> 100
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt class="field-even">which gives</dt>
+<dd class="field-even"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
+
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">15.0</span> <span class="c1"># degrees</span>
+
+<span class="n">angles</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span> <span class="o">+</span> <span class="n">delta</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
+<span class="n">ells</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ellipse</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">angles</span><span class="p">]</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">aspect</span> <span class="o">=</span> <span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ells</span><span class="p">:</span>
+
+    <span class="n">e</span><span class="o">.</span><span class="n">set_clip_box</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+    <span class="n">e</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+    <span class="n">a</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+<span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../_images/mplplots/ellipses.png">png</a>, <a class="reference external" href="../_images/mplplots/ellipses.hires.png">hires.png</a>, <a class="reference external" href="../_images/mplplots/ellipses.pdf">pdf</a>)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/ellipses.png"><img alt="../_images/ellipses.png" src="../_images/ellipses.png" style="width: 512.0px; height: 384.0px;" /></a>
+</div>
+</dd>
+</dl>
+<p></p>
+<div class="section" id="d-plots">
+<h3>3D-Plots<a class="headerlink" href="#d-plots" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference external" href="https://matplotlib.org/api/toolkits/mplot3d/index.html" title="(in Matplotlib v3.3.2)"><span>mplot3d</span></a>,
+<a class="reference external" href="https://matplotlib.org/api/toolkits/mplot3d/faq.html" title="(in Matplotlib v3.3.2)"><span>mplot3d FAQ</span></a>, and
+<a class="reference external" href="https://matplotlib.org/api/toolkits/mplot3d.html" title="(in Matplotlib v3.3.2)"><span>mplot3d API</span></a>.</p>
+<dl class="field-list">
+<dt class="field-odd">the example</dt>
+<dd class="field-odd"><div class="highlight-rst notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">plot</span><span class="p">::</span>
+   <span class="nc">:format:</span> python
+   <span class="nc">:align:</span> center
+   <span class="nc">:scale:</span> 100
+
+   from mpl_toolkits.mplot3d import axes3d
+
+   fig = plt.figure()
+   ax = fig.gca(projection=&#39;3d&#39;)
+   X, Y, Z = axes3d.get_test_data(0.005)
+   ax.plot_surface(X, Y, Z, rstride=8, cstride=8, alpha=0.3)
+   cset = ax.contourf(X, Y, Z, zdir=&#39;z&#39;, offset=-100, cmap=cm.coolwarm)
+   cset = ax.contourf(X, Y, Z, zdir=&#39;x&#39;, offset=-40, cmap=cm.coolwarm)
+   cset = ax.contourf(X, Y, Z, zdir=&#39;y&#39;, offset=40, cmap=cm.coolwarm)
+
+   ax.set_xlabel(&#39;X&#39;); ax.set_xlim(-40, 40)
+   ax.set_ylabel(&#39;Y&#39;); ax.set_ylim(-40, 40)
+   ax.set_zlabel(&#39;Z&#39;); ax.set_zlim(-100, 100)
+
+   plt.show()
+</pre></div>
+</td></tr></table></div>
+</dd>
+<dt class="field-even">which gives</dt>
+<dd class="field-even"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">axes3d</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">axes3d</span><span class="o">.</span><span class="n">get_test_data</span><span class="p">(</span><span class="mf">0.005</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">zdir</span><span class="o">=</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="mi">100</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
+<span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">zdir</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
+<span class="n">cset</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">zdir</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_zlim</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="../extensions/matplotlib-3.png">png</a>, <a class="reference external" href="../extensions/matplotlib-3.hires.png">hires.png</a>, <a class="reference external" href="../extensions/matplotlib-3.pdf">pdf</a>)</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/matplotlib-3.png"><img alt="../_images/matplotlib-3.png" src="../_images/matplotlib-3.png" style="width: 512.0px; height: 384.0px;" /></a>
+</div>
+</dd>
+</dl>
+<p></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tikz.html" class="btn btn-neutral float-right" title="2.6. PGF/TikZ LaTeX Pictures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="programoutput.html" class="btn btn-neutral float-left" title="2.4. Program Output" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Li–Pro.Net, The LP/N Documentation Team and individual contributors.
+      <span class="lastupdated">
+        Last updated on Oct 01, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
