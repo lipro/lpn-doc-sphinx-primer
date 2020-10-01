@@ -24,7 +24,7 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
    2. Grouped Tabs.
    3. Code Tabs.
 
-.. todo:: activate "Tabbed Content" extension.
+:raw-latex:`\clearpage\phantomsection`
 
 .. rst:directive:: tabs
 .. rst:directive:: tab
@@ -39,11 +39,11 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
+      .. include:: sphinx-tabs/example.rsti
 
-         .. include:: sphinx-tabs/example.rsti
+   :raw-latex:`\clearpage\phantomsection`
 
    Nested tabs are also possible.
 
@@ -54,11 +54,11 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
+      .. include:: sphinx-tabs/nested/example.rsti
 
-         .. include:: sphinx-tabs/nested/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 .. rst:directive:: group-tab
 
@@ -71,13 +71,34 @@ Create tabbed content in |Sphinx| documentation when building |HTML|.
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
-
-         .. include:: sphinx-tabs/group/example.rsti
+      .. include:: sphinx-tabs/group/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
+
+.. rst:directive:: code-tab
+
+   Similar to grouped tabs they can contain code areas with
+   syntax highlighting.
+
+   :the example:
+
+      .. literalinclude:: sphinx-tabs/code/example.rsti
+         :end-before: .. Local variables:
+         :language: rst
+         :linenos:
+
+   :which gives:
+
+      .. include:: sphinx-tabs/code/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
+
+.. spelling::
+
+   Proxima
+   Centauri
 
 .. Local variables:
    coding: utf-8

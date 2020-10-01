@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/style:
+.. rst-class:: centered
+.. tikz:: Execution stack example with changed style
+   :include: /extensions/tikz/tikzgoodies/drawstack/style.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

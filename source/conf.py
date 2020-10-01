@@ -33,7 +33,9 @@ import semver
 import git
 import sys
 import os
+import re
 
+logcfg = sphinx.util.logging.getLogger(__name__)
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 if "DOCSRC" not in os.environ:
@@ -94,6 +96,8 @@ release = str(semv)
 namespace = 'net.li-pro.doc.sphinx-primer.' + version + '.'
 basename = 'lpn-doc-sphinx-primer'
 
+logcfg.info(project + ' ' + release, color='yellow')
+
 
 # -- General configuration ---------------------------------------------------
 
@@ -110,27 +114,48 @@ build_sphinx = sphinx.__version__
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-needs_extensions
 #
 needs_extensions = {
-#   'sphinx.ext.autodoc':                       needs_sphinx,
-#   'sphinx.ext.autosummary':                   needs_sphinx,
-    'sphinx.ext.autosectionlabel':              needs_sphinx,
-    'sphinx.ext.doctest':                       needs_sphinx,
-    'sphinx.ext.coverage':                      needs_sphinx,
-    'sphinx.ext.todo':                          needs_sphinx,
-    'sphinx.ext.ifconfig':                      needs_sphinx,
-    'sphinx.ext.intersphinx':                   needs_sphinx,
-    'sphinx.ext.extlinks':                      needs_sphinx,
-#   'sphinx.ext.viewcode':                      needs_sphinx,
-#   'sphinx.ext.linkcode':                      needs_sphinx,
-#   'sphinx.ext.imgmath':                       needs_sphinx,
-    'sphinx.ext.mathjax':                       needs_sphinx,
-#   'sphinx.ext.jsmath':                        needs_sphinx,
-#   'sphinx.ext.graphviz':                      needs_sphinx,
-#   'sphinx.ext.imgconverter':                  needs_sphinx,
-#   'sphinx.ext.inheritance_diagram':           needs_sphinx,
-#   'sphinx_rtd_theme':                         '0.5.0',
-#   'sphinxcontrib.inkscapeconverter':          '1.1.0',
-    'sphinxcontrib.rsvgconverter':              '1.1.0',
-#   'sphinxcontrib.cairosvgconverter':          '1.1.0',
+    'sphinx_selective_exclude.eager_only':              '1.0.2',  # '1.0.3' ???
+#   'sphinx_selective_exclude.search_auto_exclude':     '1.0.3',
+#   'sphinx_selective_exclude.modindex_exclude':        '1.0.3',
+#   'sphinx.ext.autodoc':                               needs_sphinx,
+#   'sphinx.ext.autosummary':                           needs_sphinx,
+    'sphinx.ext.autosectionlabel':                      needs_sphinx,
+    'sphinx.ext.doctest':                               needs_sphinx,
+    'sphinx.ext.coverage':                              needs_sphinx,
+    'sphinx.ext.todo':                                  needs_sphinx,
+    'sphinx.ext.ifconfig':                              needs_sphinx,
+    'sphinx.ext.intersphinx':                           needs_sphinx,
+    'sphinx.ext.extlinks':                              needs_sphinx,
+#   'sphinx.ext.viewcode':                              needs_sphinx,
+#   'sphinx.ext.linkcode':                              needs_sphinx,
+#   'sphinx.ext.imgmath':                               needs_sphinx,
+    'sphinx.ext.mathjax':                               needs_sphinx,
+#   'sphinx.ext.jsmath':                                needs_sphinx,
+#   'sphinx.ext.graphviz':                              needs_sphinx,
+#   'sphinx.ext.imgconverter':                          needs_sphinx,
+#   'sphinx.ext.inheritance_diagram':                   needs_sphinx,
+#   'sphinx_rtd_theme':                                 '0.5.0',
+#   'sphinxcontrib.inkscapeconverter':                  '1.1.0',
+    'sphinxcontrib.rsvgconverter':                      '1.1.0',
+#   'sphinxcontrib.cairosvgconverter':                  '1.1.0',
+#   'sphinxcontrib.email':                              '0.3.3',
+#   'sphinxcontrib.bibtex':                             '1.0.0',
+    'sphinxcontrib.blockdiag':                          '2.0.0',
+    'sphinxcontrib.seqdiag':                            '2.0.0',
+    'sphinxcontrib.actdiag':                            '2.0.0',
+    'sphinxcontrib.nwdiag':                             '2.0.0',
+    'sphinxcontrib.rackdiag':                           '2.0.0',
+    'sphinxcontrib.packetdiag':                         '2.0.0',
+#   'sphinxcontrib.inlinesyntaxhighlight':              '0.2',
+#   'sphinxcontrib.programscreenshot':                  '0.0.5',
+#   'sphinxcontrib.programoutput':                      '0.16',
+#   'sphinxcontrib.spelling':                           '5.4.0',
+    'sphinxcontrib.tikz':                               '0.4.9',
+#   'sphinx_tabs.tabs':                                 '1.3.0',
+#   'sphinx_panels':                                    '0.5.1',
+#   'linuxdoc.rstFlatTable':                            '20200812',
+#   'matplotlib.sphinxext.mathmpl':                     '3.3.2',
+#   'matplotlib.sphinxext.plot_directive':              '3.3.2',
 }
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -140,6 +165,9 @@ needs_extensions = {
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-extensions
 #
 extensions = [
+    'sphinx_selective_exclude.eager_only',
+#   'sphinx_selective_exclude.search_auto_exclude',
+#   'sphinx_selective_exclude.modindex_exclude',
 #   'sphinx.ext.autodoc',
 #   'sphinx.ext.autosummary',
     'sphinx.ext.autosectionlabel',
@@ -161,11 +189,58 @@ extensions = [
 #   'sphinxcontrib.inkscapeconverter',
     'sphinxcontrib.rsvgconverter',
 #   'sphinxcontrib.cairosvgconverter',
+    'sphinxcontrib.email',
+    'sphinxcontrib.bibtex',
+    'sphinxcontrib.blockdiag',
+    'sphinxcontrib.seqdiag',
+    'sphinxcontrib.actdiag',
+    'sphinxcontrib.nwdiag',
+    'sphinxcontrib.rackdiag',
+    'sphinxcontrib.packetdiag',
+    # w/o maintenance since 2013: 'sphinxcontrib.inlinesyntaxhighlight',
+    # w/o maintenance since 2012: 'sphinxcontrib.programscreenshot',
+    'sphinxcontrib.programoutput',
+    'sphinxcontrib.spelling',
+    'sphinxcontrib.tikz',
+    'sphinx_tabs.tabs',
+    # not yet, see below "Specific configuration": 'sphinx_panels',
+    'linuxdoc.rstFlatTable',
+    'matplotlib.sphinxext.mathmpl',
+    'matplotlib.sphinxext.plot_directive',
+    'ldsp.ultimate_replacements',
     'ldsp',
 ]
 
 
 # -- Specific configuration --------------------------------------------------
+
+TEXINPUTS = '{}//:'.format(DOCSRC)
+if "TEXINPUTS" in os.environ:
+    TEXINPUTS = '{prj}{gbl}'.format(
+        gbl = os.environ["TEXINPUTS"],
+        prj = TEXINPUTS,
+    )
+
+os.environ["TEXINPUTS"] = TEXINPUTS
+logcfg.info('TEXINPUTS exported: "{}"'.format(os.environ["TEXINPUTS"]), color='green')
+
+path_extra = os.path.join(DOCSRC, '_extra')
+logcfg.info('EXTRAS     path is: "{}"'.format(path_extra), color='green')
+
+path_images = os.path.join(DOCSRC, '_images')
+logcfg.info('IMAGES     path is: "{}"'.format(path_images), color='green')
+
+path_templates = os.path.join(DOCSRC, '_templates')
+logcfg.info('TEMPLATE   path is: "{}"'.format(path_templates), color='green')
+
+path_static = os.path.join(DOCSRC, '_static')
+logcfg.info('STATIC     path is: "{}"'.format(path_static), color='green')
+
+path_dejavu = os.path.join(path_static, 'fonts', 'DejaVu')
+logcfg.info('DejaVu     path is: "{}"'.format(path_dejavu), color='green')
+
+path_wenquanyi = os.path.join(path_static, 'fonts', 'WenQuanYi')
+logcfg.info('WenQuanYi  path is: "{}"'.format(path_wenquanyi), color='green')
 
 if tags.has('release'):  # pylint: disable=undefined-variable
     is_release = True
@@ -193,7 +268,7 @@ else:
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-templates_path
 #
-templates_path = ['{}/_templates'.format(DOCSRC)]
+templates_path = ['{}'.format(path_templates)]
 
 # The language for content autogenerated by Sphinx. Refer to documentation
 # for a list of supported languages.
@@ -297,7 +372,9 @@ rst_epilog = '''
 .. include:: /{docsrc}/termsgloss.rsti
 .. include:: /{docsrc}/docextlnk.rsti
 .. include:: /{docsrc}/docunicode.rsti
-'''.format(docsrc = DOCSRC)
+'''.format(
+    docsrc = DOCSRC
+)
 
 # This change will allow us to use bare back-tick notation to let
 # Sphinx hunt for a reference, starting with normal "document"
@@ -350,7 +427,9 @@ pygments_style = 'sphinx'
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-suppress_warnings
 #
 #keep_warnings = False
-#suppress_warnings = []
+suppress_warnings = [
+    'epub.unknown_project_files',  ## reduce size of epub_exclude_files
+]
 
 # If true, figures, tables and code-blocks are automatically numbered if they
 # have a caption. At same time, the numref role is enabled. For now, it works
@@ -424,7 +503,8 @@ manpages_url = 'https://manpages.debian.org/{path}'
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-tls_verify
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-tls_cacerts
 #
-#tls_verify = False
+# tls_verify = True
+# tls_verify = False
 
 # some configuration for linkcheck builder
 #   noticed that we're getting false-positive link errors on different server,
@@ -436,12 +516,25 @@ manpages_url = 'https://manpages.debian.org/{path}'
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-linkcheck_ignore
 #
-#linkcheck_ignore = [r'http://localhost:\d+/']
+#linkcheck_ignore = ['http://localhost:\d+/']
 linkcheck_ignore = [
-    r'https://www.amazon.com/dp/',  # Causes 503 Server Error: service unavailable
-    r'http://localhost:\d+/',
+#   'http://mirrors.ctan.org/',    # Causes SSL Server Error: CERTIFICATE_VERIFY_FAILED
+#   'http://www.idpf.org/',        # Causes 500 Server Error: internal server error
+#   'https://docs.bareos.org/',    # Causes 503 Server Error: service unavailable
+    'https://www.amazon.com/dp/',  # Causes 503 Server Error: service unavailable
+    'http://localhost:\d+/',
 ]
 
+# The number of times the linkcheck builder will attempt to check a URL before
+# declaring it broken. Defaults to 1 attempt.
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-linkcheck_retries
+#
+# linkcheck_retries = 1
+linkcheck_retries = 5
+
+# A timeout value, in seconds, for the linkcheck builder. The default is to use
+# Python’s global socket timeout.
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-linkcheck_timeout
 #
@@ -644,6 +737,7 @@ extlinks = {
     'wikien':       ('https://en.wikipedia.org/wiki/%s', 'English Wikipedia: '),
     'wikimedia':    ('https://upload.wikimedia.org/wikipedia/commons/%s', 'Wikimedia: '),
     'superuser':    ('https://superuser.com/%s', 'Superuser: '),
+    'stackxtex':    ('https://tex.stackexchange.com/%s', 'StackExchange (TeX): '),
     'steamcoded':   ('https://steamcoded.org/lessons/%s', 'STEAMcoded.org: '),
     'dufaq':        ('https://docutils.sourceforge.io/FAQ.html#%s', ''),
     'dutodo':       ('https://docutils.sourceforge.io/docs/dev/todo.html#%s', ''),
@@ -726,7 +820,326 @@ extlinks = {
 #rsvg_converter_args = []
 
 
-# -- Options for LaTeX output ---------------------------------------------
+# -- Options for sphinxcontrib.email -- Email address obfuscator -------------
+#
+# https://github.com/sphinx-contrib/email/blob/v0.2.1/README.rst
+#
+
+
+# -- Options for sphinxcontrib.bibtex -- Insert BibTeX citations -------------
+#
+# https://sphinxcontrib-bibtex.readthedocs.io/en/stable/
+#
+
+
+# -- Options for sphinxcontrib.blockdiag -- Draw block diagrams --------------
+# -- Options for sphinxcontrib.seqdiag -- Draw sequence diagrams -------------
+# -- Options for sphinxcontrib.actdiag -- Draw activity diagrams -------------
+# -- Options for sphinxcontrib.nwdiag -- Draw network diagrams ---------------
+# -- Options for sphinxcontrib.rackdiag -- Draw rack diagrams ----------------
+# -- Options for sphinxcontrib.packetdiag -- Draw packet diagrams ------------
+#
+# http://blockdiag.com/en/blockdiag/sphinxcontrib.html#configure-sphinx
+# http://blockdiag.com/en/seqdiag/sphinxcontrib.html#configure-sphinx
+# http://blockdiag.com/en/actdiag/sphinxcontrib.html#configure-sphinx
+# http://blockdiag.com/en/nwdiag/sphinxcontrib.html#configure-sphinx
+#
+
+# Fontpath for blockdiag (truetype font), The default is None.
+blockdiag_fontpath = '{}/DejaVuSansCondensed.ttf'.format(path_dejavu)
+seqdiag_fontpath = blockdiag_fontpath
+actdiag_fontpath = blockdiag_fontpath
+nwdiag_fontpath = blockdiag_fontpath
+rackdiag_fontpath = '{}/DejaVuSansMono.ttf'.format(path_dejavu)
+packetdiag_fontpath = rackdiag_fontpath
+
+# Fontmap for blockdiag (maps fontfamily name to truetype font).
+# The default is None.
+# blockdiag_fontmap = '{}/_extensions/blockdiag.fontmap'.format(DOCSRC)
+# seqdiag_fontmap = '{}/_extensions/seqdiag.fontmap'.format(DOCSRC)
+# actdiag_fontmap = '{}/_extensions/actdiag.fontmap'.format(DOCSRC)
+# nwdiag_fontmap = '{}/_extensions/nwdiag.fontmap'.format(DOCSRC)
+# rackdiag_fontmap = '{}/_extensions/nwdiag.fontmap'.format(DOCSRC)
+# packetdiag_fontmap = '{}/_extensions/nwdiag.fontmap'.format(DOCSRC)
+
+# If this is True, blockdiag generates images with anti-alias filter.
+# The default is False.
+blockdiag_antialias = True
+seqdiag_antialias = blockdiag_antialias
+actdiag_antialias = blockdiag_antialias
+nwdiag_antialias = blockdiag_antialias
+rackdiag_antialias = blockdiag_antialias
+packetdiag_antialias = blockdiag_antialias
+
+# If this is True, blockdiag generates images with transparency background.
+# The default is False.
+blockdiag_transparency = True
+seqdiag_transparency = blockdiag_transparency
+actdiag_transparency = blockdiag_transparency
+nwdiag_transparency = blockdiag_transparency
+rackdiag_transparency = blockdiag_transparency
+packetdiag_transparency = blockdiag_transparency
+
+# You can specify image format on converting docs to HTML; accepts 'PNG'
+# or 'SVG'. The default is 'PNG'.
+blockdiag_html_image_format = 'SVG'
+seqdiag_html_image_format = blockdiag_html_image_format
+actdiag_html_image_format = blockdiag_html_image_format
+nwdiag_html_image_format = blockdiag_html_image_format
+rackdiag_html_image_format = blockdiag_html_image_format
+packetdiag_html_image_format = blockdiag_html_image_format
+
+# You can specify image format on converting docs to TeX; accepts 'PNG'
+# or 'PDF'. The default is 'PNG'.
+blockdiag_latex_image_format = 'PDF'
+seqdiag_latex_image_format = blockdiag_latex_image_format
+actdiag_latex_image_format = blockdiag_latex_image_format
+nwdiag_latex_image_format = blockdiag_latex_image_format
+rackdiag_latex_image_format = blockdiag_latex_image_format
+packetdiag_latex_image_format = blockdiag_latex_image_format
+
+# Enable debug mode of blockdiag.
+# The default is False.
+# blockdiag_debug = True
+# seqdiag_debug = True
+# actdiag_debug = True
+# nwdiag_debug = True
+# rackdiag_debug = True
+# packetdiag_debug = True
+
+
+# -- Options for sphinxcontrib.programoutput -- Insert output of commands ----
+#
+# https://sphinxcontrib-programoutput.readthedocs.io/en/stable/
+#
+
+
+# -- Options for sphinxcontrib.spelling -- Spelling Checker ------------------
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/
+#
+
+# String specifying the language, as understood by PyEnchant and enchant.
+# Defaults to en_US for US English.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#input-options
+#
+# spelling_lang = 'en_US'
+
+# String specifying a file containing a list of words known to be spelled
+# correctly but that do not appear in the language dictionary selected
+# by spelling_lang. The file should contain one word per line. Refer to
+# the PyEnchant tutorial for details.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#input-options
+#
+# spelling_word_list_filename = 'spelling_wordlist.txt'
+spelling_word_list_filename = [
+    '{}/spelling_wordlist.txt'.format(path_templates),
+    '/usr/share/dict/american-english-huge',
+    '/usr/share/dict/ngerman',
+]
+
+# A list of glob-style patterns that should be ignored when checking
+# spelling. They are matched against the source file names relative
+# to the source directory, using slashes as directory separators on
+# all platforms. See Sphinx's exclude_patterns option for more details
+# on glob-style patterns.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#input-options
+#
+spelling_exclude_patterns = [
+    'doc*.rsti',
+    'index*.rst',
+]
+
+# Boolean controlling whether suggestions for misspelled words are printed.
+# Defaults to False.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#output-options
+#
+spelling_show_suggestions = True
+
+# Boolean controlling whether the contents of the line containing each
+# misspelled word is printed, for more context about the location of
+# each word. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#output-options
+#
+# spelling_show_whole_line = True
+
+# Boolean controlling whether words that look like package names from PyPI
+# are treated as spelled properly. When True, the current list of package
+# names is downloaded at the start of the build and used to extend the list
+# of known words in the dictionary. Defaults to False.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_pypi_package_names = False
+
+# Boolean controlling whether words that follow the CamelCase conventions
+# used for page names in wikis should be treated as spelled properly.
+# Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_wiki_words = True
+
+# Boolean controlling treatment of words that appear in all capital letters,
+# or all capital letters followed by a lower case s. When True, acronyms are
+# assumed to be spelled properly. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_acronyms = True
+
+# Boolean controlling whether names built in to Python should be treated as
+# spelled properly. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_python_builtins = True
+
+# Boolean controlling whether words that are names of modules found on
+# sys.path are treated as spelled properly. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_importable_modules = True
+
+# Boolean controlling treatment of contributor names extracted from the git
+# history as spelled correctly, making it easier to refer to the names in
+# acknowledgments. Defaults to True.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_ignore_contributor_names = True
+
+# List of filter classes to be added to the tokenizer that produces words
+# to be checked. The classes should be derived from enchant.tokenize.Filter.
+# Refer to the PyEnchant tutorial for examples.
+#
+# https://sphinxcontrib-spelling.readthedocs.io/en/stable/customize.html#word-filters
+#
+# spelling_filters = []
+
+
+# -- Options for sphinxcontrib.tikz -- Draw PGF/TikZ LaTeX pictures ----------
+#
+# https://sphinxcontrib-tikz.readthedocs.io/
+# https://sphinxcontrib-tikz.readthedocs.io/en/latest/#configuration
+# https://bitbucket.org/philexander/tikz/src/master/README.rst
+#
+
+# Choose the image processing 'suite', either 'pdf2svg', 'GhostScript',
+# 'ImageMagick', or 'Netpbm' ('pdf2svg' by default):
+#
+# tikz_proc_suite = 'pdf2svg'
+# tikz_proc_suite = 'GhostScript'
+# tikz_proc_suite = 'ImageMagick'
+if not on_rtd: tikz_proc_suite = 'pdf2svg'
+
+# Choose an image resolution (ignored if tikz_proc_suite is 'pdf2svg').
+# The default is 184.
+#
+# tikz_resolution = 184
+# tikz_resolution = 92
+if on_rtd: tikz_resolution = 92
+
+# Enable/disable transparent graphics. The default is True.
+tikz_transparent = True
+
+# Add some <string> to the sub process LaTeX preamble for the html build
+# target. The default is None.
+# tikz_latex_preamble = ''
+f = open('{}/tikz_extrapackages.tex'.format(path_templates), 'r+')
+tikz_custom_extrapackages = f.read()
+f = open('{}/fontpkg.tex.in'.format(path_templates), 'r+')
+tikz_custom_fontpkg = f.read().format (
+    dejavu = path_dejavu + '/',
+    wenquanyi = path_wenquanyi + '/',
+)
+tikz_latex_preamble = tikz_custom_extrapackages + tikz_custom_fontpkg
+
+# Add some \usetikzlibrary{<string>} to the sub process LaTeX preamble
+# for the html build target. The default is None.
+f = open('{}/tikz_libraries.tex'.format(path_templates), 'r+')
+tikz_custom_libraries = f.read()
+tikz_tikzlibraries = re.sub(r'(?m)^ *%.*\n?', '', tikz_custom_libraries)
+tikz_tikzlibraries = tikz_tikzlibraries.replace('\r', ' ')
+tikz_tikzlibraries = tikz_tikzlibraries.replace('\n', ' ')
+
+# -- Options for sphinx_tabs.tabs -- Create tabbed content -------------------
+#
+# https://sphinx-tabs.readthedocs.io/en/stable/
+#
+
+
+# -- Options for sphinx_panels -- Create panels in a grid layout or drop-downs
+#
+# https://sphinx-panels.readthedocs.io/en/stable/
+#
+# !!! CONFLICTS WITH sphinx_tabs.tabs !!!
+#
+
+# Change the delimiter regexes used to detect panels, header, footer.
+# Default is: panels_delimiters = (r"^\-{3,}$", r"^\^{3,}$", r"^\+{3,}$")
+
+
+# -- Options for linuxdoc.rstFlatTable -- Create flat table content ----------
+#
+# https://return42.github.io/linuxdoc/
+# https://github.com/return42/linuxdoc
+#
+
+
+# -- Options for matplotlib.sphinxext.plot_directive -- Including Matplotlib -
+#
+# https://matplotlib.org/api/sphinxext_plot_directive_api.html#configuration-options
+#
+
+# Base directory, to which plot directive file names are relative to.
+# If None or empty, file names are relative to the directory where the
+# file containing the directive is.
+plot_basedir = '{}/mplplots'.format(path_images)
+
+# By default, the working directory will be changed to the directory of
+# the example, so the code can get at its data files, if any. Also its
+# path will be added to sys.path so it can import any helper modules
+# sitting beside it. This configuration option can be used to specify
+# a central directory (also added to sys.path) where data files and
+# helper modules for all code are located.
+plot_working_directory = '{}/mplplots'.format(path_images)
+
+# Code that should be executed before each plot. If not specified or
+# None it will default to a string containing:
+# 'import numpy as np; from matplotlib import pyplot as plt'
+f = open('{}/matplotlib_pre.py'.format(path_templates), 'r+')
+plot_pre_code = f.read()
+
+# Default value for the include-source option.
+plot_include_source = True
+
+# Whether to show a link to the source in HTML.
+plot_html_show_source_link = False
+
+# Whether to show links to the files in HTML.
+plot_html_show_formats = True
+
+
+# -- Options for ldsp.* -- LOCAL EXTENSIONS ----------------------------------
+#
+
+# Using variables inside reST w/o 'rst_prolog' or 'rst_epilog'.
+ultimate_replacements = {
+    '{plot_basedir}': os.path.relpath(plot_basedir, DOCSRC),
+    '{plot_workdir}': os.path.relpath(plot_working_directory, DOCSRC),
+    '{plot_preincl}': '/' + os.path.relpath(
+                      '{}/matplotlib_pre.py'.format(path_templates), DOCSRC),
+}
+
+
+# -- Options for LaTeX output ------------------------------------------------
 #
 # http://www.sphinx-doc.org/en/3.x/latex.html
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#options-for-latex-output
@@ -740,29 +1153,32 @@ extlinks = {
 #       http://stackoverflow.com/a/13661732
 # Left aligne captions: http://tex.stackexchange.com/questions/136688/how-to-align-caption-with-table
 
-f = open('{}/_templates/extrapackages.tex'.format(DOCSRC), 'r+')
+f = open('{}/extrapackages.tex'.format(path_templates), 'r+')
 latex_custom_extrapackages = f.read()
 
-f = open('{}/_templates/passoptstopackages.tex.in'.format(DOCSRC), 'r+')
+f = open('{}/passoptstopackages.tex.in'.format(path_templates), 'r+')
 latex_custom_passoptionstopackages = f.read().format (
-    producer = r'Sphinx ' + build_sphinx,
-    creator = r'Sphinx ' + build_sphinx,
+    producer = 'Sphinx ' + build_sphinx,
+    creator = 'Sphinx ' + build_sphinx,
     publisher = publisher,
     subject = about,
     keywords = keywords,
 )
 
-f = open('{}/_templates/preamble.tex.in'.format(DOCSRC), 'r+')
+f = open('{}/preamble.tex.in'.format(path_templates), 'r+')
 latex_custom_preamble = f.read().format (
     publisher = publisher,
     contactaddr = contactaddr,
     contactemail = contactemail,
 )
 
-f = open('{}/_templates/fontpkg.tex'.format(DOCSRC), 'r+')
-latex_custom_fontpkg = f.read()
+f = open('{}/fontpkg.tex.in'.format(path_templates), 'r+')
+latex_custom_fontpkg = f.read().format (
+    dejavu = path_dejavu + '/',
+    wenquanyi = path_wenquanyi + '/',
+)
 
-f = open('{}/_templates/utf8extra.tex'.format(DOCSRC), 'r+')
+f = open('{}/utf8extra.tex'.format(path_templates), 'r+')
 latex_custom_utf8extra = f.read()
 
 # The LaTeX engine to build the docs. The setting can have the
@@ -806,7 +1222,7 @@ latex_elements = {
     # Font package inclusion, default r'\usepackage{times}' (which uses Times
     # and Helvetica). You can set this to '' to use the Computer Modern fonts.
     # Defaults to '' when the language uses the Cyrillic script.
-    # For xelatex it defaults to: r'''\setmainfont{FreeSerif}[..]
+    # For xelatex it defaults to: '''\setmainfont{FreeSerif}[..]
     # \setsansfont{FreeSans}[..]\setmonofont{FreeMono}[..]'''
     'fontpkg': latex_custom_fontpkg,
 
@@ -916,7 +1332,7 @@ latex_documents = [
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_logo
 #
 #latex_logo = None
-latex_logo = '{}/_images/lpn.pdf'.format(DOCSRC)
+latex_logo = '{}/lpn.pdf'.format(path_images)
 
 # If true, show page references after internal links. Default: False.
 #
@@ -938,9 +1354,11 @@ latex_show_pagerefs = True
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-latex_additional_files
 #
-#latex_additional_files = [
-#    '{}/_extra/file.ext'.format(DOCSRC),
-#]
+# latex_additional_files = [ '{}/_extra/file.ext'.format(DOCSRC), ]
+latex_additional_files = [
+    '{}/tikzlm-master/tikzlm.sty'.format(path_templates),
+    '{}/tikzuml-v1.0-2016-03-29/tikz-uml.sty'.format(path_templates),
+]
 
 # Documents to append as an appendix to all manuals.
 #
@@ -1012,7 +1430,7 @@ html_title = title
 
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_logo
 #
-html_logo = '{}/_images/lpn.svg'.format(DOCSRC)
+html_logo = '{}/lpn.svg'.format(path_images)
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -1020,7 +1438,7 @@ html_logo = '{}/_images/lpn.svg'.format(DOCSRC)
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_favicon
 #
-html_favicon = '{}/_images/lpn.ico'.format(DOCSRC)
+html_favicon = '{}/lpn.ico'.format(path_images)
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -1028,7 +1446,7 @@ html_favicon = '{}/_images/lpn.ico'.format(DOCSRC)
 #
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_static_path
 #
-html_static_path = ['{}/_static'.format(DOCSRC)]
+html_static_path = ['{}'.format(path_static)]
 
 # A list of CSS files. The entry must be a filename string or a tuple
 # containing the filename string and the attributes dictionary. The
@@ -1039,6 +1457,10 @@ html_static_path = ['{}/_static'.format(DOCSRC)]
 # https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_css_files
 #
 html_css_files = [
+    'fonts/DejaVu.css',
+    'fonts/WenQuanYi.css',
+    'css/force-dejavu.css',
+    'css/fix-cite.css',
     'css/fix-float.css',
     'css/strikethrough.css',
     'css/tweaks-sphinx_rtd_theme.css',
@@ -1049,7 +1471,10 @@ html_css_files = [
 # The filename must be relative to the html_static_path, or a full URI
 # with scheme. The attributes is used for attributes of <script> tag.
 # It defaults to an empty list.
-#html_css_files = []
+#
+# https://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_js_files
+#
+#html_js_files = []
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -1057,7 +1482,7 @@ html_css_files = [
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_extra_path
 #
-html_extra_path = ['{}/_extra'.format(DOCSRC)]
+html_extra_path = ['{}'.format(path_extra)]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -1167,7 +1592,7 @@ html_show_license = True
 #
 # http://www.sphinx-doc.org/en/3.x/usage/configuration.html#confval-html_search_scorer
 #
-html_search_scorer = '{}/_static/js/scorer.js'.format(DOCSRC)
+html_search_scorer = '{}/js/scorer.js'.format(path_static)
 
 
 # -- Options for Epub output ----------------------------------------------
@@ -1262,7 +1687,6 @@ epub_basename = basename
 #
 epub_exclude_files = [
     '.nojekyll',
-    '_static/lpn.ico',
     'search.html',
 ]
 

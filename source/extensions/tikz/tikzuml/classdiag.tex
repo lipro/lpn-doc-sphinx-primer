@@ -1,0 +1,47 @@
+\begin{tikzpicture}
+
+
+    \begin{umlpackage}{p} % package-p
+        \begin{umlpackage}{sp1} % package-sp1
+            \umlclass[template=T]{A}{ % class-A
+                n : uint \\
+                t : float
+            }{}
+            \umlclass[y=-3]{B}{ % class-B
+                d : double
+            }{
+                \umlvirt{setB(b : B) : void} \\
+                getB() : B
+            }
+        \end{umlpackage}
+        \begin{umlpackage}[x=10,y=-6]{sp2} % package-sp2
+            \umlinterface{C}{ % class-C
+                n : uint \\
+                s : string
+            }{}
+        \end{umlpackage}
+        \umlclass[x=2,y=-10]{D}{ % class-D
+            n : uint
+        }{}
+    \end{umlpackage}
+
+    \umlassoc[geometry=-|-, arg1=tata, mult1=*, pos1=0.3, arg2=toto, mult2=1, pos2=2.9, align2=left]{C}{B}
+    \umlunicompo[geometry=-|, arg=titi, mult=*, pos=1.7, stereo=vector]{D}{C}
+    \umlimport[geometry=|-, anchors=90 and 50, name=import]{sp2}{sp1}
+    \umlaggreg[arg=tutu, mult=1, pos=0.8, angle1=30, angle2=60, loopsize=2cm]{D}{D}
+    \umlinherit[geometry=-|]{D}{B}
+    \umlnote[x=2.5,y=-6, width=3.5cm]{B}{
+        \footnotesize{I am a note that belongs to class B.}
+    }
+    \umlnote[x=7.5,y=-1.5]{import-2}{
+        \footnotesize{I am a note that concerns the import relationship.}
+    }
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

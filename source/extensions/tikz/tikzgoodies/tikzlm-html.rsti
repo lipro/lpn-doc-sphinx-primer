@@ -1,0 +1,26 @@
+.. tabs::
+
+   .. tab:: |tikzgoodies.tikzlm.platform.tit|
+
+      |tikzgoodies.tikzlm.platform.tex|, in |tikzgoodies.tikzlm.platform.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/tikzlm/platform.rsti
+
+   .. tab:: |tikzgoodies.tikzlm.system.tit|
+
+      |tikzgoodies.tikzlm.system.tex|, in |tikzgoodies.tikzlm.system.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/tikzlm/system.rsti
+
+   .. tab:: |tikzgoodies.tikzlm.memmap.tit|
+
+      |tikzgoodies.tikzlm.memmap.tex|, in |tikzgoodies.tikzlm.memmap.ref|.
+
+      .. include:: /extensions/tikz/tikzgoodies/tikzlm/memmap.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

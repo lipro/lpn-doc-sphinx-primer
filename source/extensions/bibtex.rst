@@ -14,7 +14,7 @@ Allowing |BibTeX| citations to be inserted into documentation via a
 :rst:`.. bibliography::` directive, and a :rst:`:cite:` role, which work
 similarly to |LaTeX|\ ’s :latex:`\begin{thebibliography} ...
 \end{thebibliography}` environment and :latex:`\cite{cite_key}`
-command. It consists:
+command. For formatting, the extension relies on |Pybtex|. It consists:
 
 * :py:mod:`scbibtex:sphinxcontrib.bibtex`: |Sphinx| interface
 * :py:mod:`scbibtex:sphinxcontrib.bibtex.roles`: Doctree roles
@@ -25,72 +25,63 @@ command. It consists:
 
 Create a citation to a bibliographic entry.
 
-.. todo:: activate "BibTeX Citations" extension.
+.. pull-quote::
 
-.. code-block:: rst
+   .. todo:: In the case of the |LaTeX|/|PDF| builder the usage of
+             :rst:`:ref:`bibliography`` leads to an **invalid and
+             unresolved reference**.
 
-   .. rst:role:: cite
+.. rst:role:: cite
 
-      For more details, see :rst:role:`scbibtex:cite` role.
+   For more details, see :rst:role:`scbibtex:cite` role.
 
-      :the example:
+   :the example:
 
-         .. code-block:: rst
-            :linenos:
+      .. code-block:: rst
+         :linenos:
 
-            See :cite:`juh2014swdocwspx` for an introduction to Sphinx.
+         See :cite:`sweigart2020automate` for an practical guide in Python.
 
-      :which gives:
+   :which gives:
 
-         See :cite:`juh2014swdocwspx` for an introduction to Sphinx.
+      See :cite:`sweigart2020automate` for an practical guide in Python.
 
-   For this sample you will need a corresponding bibliography for all cited
-   references.
+For this sample you will need a corresponding bibliography for all cited
+references.
 
-   .. rst:directive:: bibliography
+.. rst:directive:: bibliography
 
-      For more details, see :rst:dir:`scbibtex:bibliography` directive.
+   For more details, see :rst:dir:`scbibtex:bibliography` directive.
 
-      :the example:
+   :the example:
 
-         .. code-block:: rst
-            :linenos:
+      .. code-block:: rst
+         :linenos:
 
-            .. bibliography:: bibliography.bibtex
-               :style: kcsalpha
-               :encoding: utf
-               :all:
-
-      :which gives:
-
-         .. only:: html or man or texinfo or text
-
-            .. rubric:: Documentation with Sphinx
-
-         .. only:: latex
-
-            All entries in the central document bibliography list, mostly on the
-            end of the document.
-
-         .. bibliography:: bibliography.bibtex
-            :style: kcsalpha
-            :encoding: utf
+         .. bibliography:: bibtex/example.bib
+            :style: ldspalpha
+            :encoding: utf-8
             :all:
 
-      :which needs:
+   :which gives:
 
-         The example above processed the following |BibTeX| file content:
+      All entries are placed in the central document bibliography list,
+      mostly on the end of the document.
 
-         .. literalinclude:: bibliography.bibtex
-            :caption: BibTeX example file (bibliography.bibtex)
-            :language: bibtex
-            :emphasize-lines: 1
-            :start-at: @book
-            :linenos:
+      .. only:: html
 
-   .. spelling::
+         Here in |HTML| you got this list at :ref:`bibliography`.
 
-      Hasecke
+   :which needs:
+
+      The example above processed the following |BibTeX| file content:
+
+      .. literalinclude:: bibtex/example.bib
+         :caption: BibTeX example file (bibtex/example.bib)
+         :language: bibtex
+         :emphasize-lines: 1
+         :start-at: @book
+         :linenos:
 
 :raw-latex:`\clearpage\phantomsection`
 

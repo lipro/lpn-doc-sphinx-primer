@@ -22,7 +22,7 @@ directive.
    1. Generate block-diagram from dot like text (basic feature).
    2. Multilingualism for node-label (utf-8 only).
 
-.. todo:: activate "Block Diagram" extension.
+:raw-latex:`\clearpage\phantomsection`
 
 Directive Body Diagram
 **********************
@@ -40,11 +40,11 @@ Directive Body Diagram
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
+      .. include:: blockdiag/directive-body/example.rsti
 
-         .. include:: blockdiag/directive-body/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Description Table
 *****************
@@ -56,11 +56,11 @@ Description Table
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
+   .. include:: blockdiag/description-table/example.rsti
 
-      .. include:: blockdiag/description-table/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Include Diagram
 ***************
@@ -73,16 +73,14 @@ Include Diagram
       .. blockdiag:: blockdiag/example.diag
          :caption: Style attributes to nodes and edges (Block Diagram example)
          :align: center
-         :width: 640
+         :width: 480
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. blockdiag:: blockdiag/example.diag
-         :caption: Style attributes to nodes and edges (Block Diagram example)
-         :align: center
-         :width: 640
+   .. blockdiag:: blockdiag/example.diag
+      :caption: Style attributes to nodes and edges (Block Diagram example)
+      :align: center
+      :width: 480
 
 :which needs:
 

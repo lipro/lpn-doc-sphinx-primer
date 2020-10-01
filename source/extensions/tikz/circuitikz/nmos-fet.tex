@@ -1,0 +1,77 @@
+\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Components
+%%
+
+\newcommand{\metalone}{[pattern= horizontal lines, pattern color=blue]}
+\newcommand{\metaltwo}{[pattern= vertical lines, pattern color=purple]}
+\newcommand{\poly}{[pattern= grid, pattern color=red]}
+\newcommand{\pdiff}{[pattern= north east lines, pattern color=orange]}
+\newcommand{\ndiff}{[pattern= north west lines, pattern color=green]}
+\newcommand{\pwell}{[pattern= crosshatch dots, pattern color=orange]}
+\newcommand{\nwell}{[pattern= crosshatch dots, pattern color=green]}
+\newcommand{\oxide}{[pattern = bricks, pattern color = olive]}
+\newcommand{\silicon}{[fill = white]}
+\newcommand{\metalthree}{[fill = teal]}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Schematic
+%%
+
+% General n-type MOSFET scheme
+\begin{scope}[shift={(0,0)},scale=0.75]
+    \draw \pdiff (0,.25) -- (0,3) -- (1,3) -- (1,2.5) to [out=270,in=180] (1.5,2) -- (3.75,2) to [out=0,in=270] (4.25,2.5) -- (4.25,3) -- (6.75,3) -- (6.75,2.5) to [out=270,in=180] (7.25,2) -- (9.5,2) to [out=0,in=270] (10,2.5) -- (10,3) -- (11,3) -- (11,.25) -- (0,.25) node [midway,above] {p doped Si};
+    \draw \metalthree (0,0) rectangle (11,.25) node [midway, color=white]
+     {Si Substrate};
+    \draw \oxide (4,3) rectangle (7,4) node [pos=.5,font=\bf\Large] {oxide};
+    \draw \metalone (4,4) rectangle (7,4.5);
+    \draw \ndiff (4.25,3) -- (1,3) -- (1,2.5) to [out=270,in=180] (1.5,2) -- (3.75,2) to [out=0,in=270] (4.25,2.5) -- (4.25,3) node at (2.625,2.5) [align=center] {n-type};
+    \draw \ndiff (10,3) -- (6.75,3) -- (6.75,2.5) to [out=270,in=180] (7.25,2) -- (9.5,2) to [out=0,in=270] (10,2.5) -- (10,3) node at (8.375,2.5) [align=center] {n-type};
+    \draw \metalone (1.25,3) rectangle (3,3.5);
+    \draw \metalone (8,3) rectangle (9.75,3.5);
+
+    % Label the metal connections on MOSFET
+    \draw [->] (1,5) node [above] {Source} -- (2.125,3.5);
+    \draw [->] (10,5) node [above] {Drain} -- (8.975,3.5);
+    \draw [->] (5.5,5) node [above] {Gate} -- (5.5,4.5);
+
+    \node at (5.5,-.5) [align=center] {$V_{GS} \geq V_{threshold}$};
+    \node at (5.5,-1) [align=center] {$V_{DS} > V_{GS} - V_{threshold}$};
+
+    \draw [fill=orange,orange] (4.25,3) rectangle (6.75,2.5);
+    \draw [fill=white] (4.25,3) -- (4.25,2.85) -- (6.75,3) -- (4.75,3);
+    \draw \ndiff (4.25,3) -- (4.25,2.85) -- (6.75,3) -- (4.75,3);
+\end{scope}
+
+% General n-type MOSFET part
+\begin{scope}[shift={(12,1)}]
+    \ctikzset{tripoles/mos style/arrows}
+    \draw(-1.5,1.5) node[anchor=south](S){Source};
+    \draw(0,1.5) node[anchor=south](G){Gate};
+    \draw(1.5,1.5) node[anchor=south](D){Drain};
+    \draw (0,0) node [nmos,rotate=-90](Q1){\rotatebox[origin=c]{90}{n-type MOSFET}};
+    \draw[line width=1.0pt,-o] (Q1.S) -| (S);
+    \draw[line width=1.0pt,-o] (Q1.G) -| (G);
+    \draw[line width=1.0pt,-o] (Q1.D) -| (D);
+\end{scope}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

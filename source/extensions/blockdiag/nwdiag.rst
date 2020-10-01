@@ -22,7 +22,7 @@ network diagrams. You can embed network diagrams with the :rst:`.. nwdiag::`,
    1. Generate network-diagram from dot like text (basic feature).
    2. Multilingualism for node-label (utf-8 only).
 
-.. todo:: activate "Network Diagram" extension.
+:raw-latex:`\clearpage\phantomsection`
 
 Directive Body Diagram
 **********************
@@ -40,11 +40,11 @@ Directive Body Diagram
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
+      .. include:: nwdiag/directive-body/example.rsti
 
-         .. include:: nwdiag/directive-body/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Description Table
 *****************
@@ -56,11 +56,13 @@ Description Table
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:raw-latex:`\clearpage\phantomsection`
 
-   :which gives:
+:which gives:
 
-      .. include:: nwdiag/description-table/example.rsti
+   .. include:: nwdiag/description-table/example.rsti
+
+:raw-latex:`\clearpage\phantomsection`
 
 Include Diagram
 ***************
@@ -77,17 +79,15 @@ Network
          :caption: Peer networks and grouping nodes (Network Diagram example)
          :align: center
          :scale: 75
-         :width: 640
+         :width: 480
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. nwdiag:: nwdiag/example.diag
-         :caption: Peer networks and grouping nodes (Network Diagram example)
-         :align: center
-         :scale: 75
-         :width: 640
+   .. nwdiag:: nwdiag/example.diag
+      :caption: Peer networks and grouping nodes (Network Diagram example)
+      :align: center
+      :scale: 75
+      :width: 480
 
 :which needs:
 
@@ -99,6 +99,8 @@ Network
       :caption: Network Diagram example file (nwdiag/example.diag)
       :language: dot
       :linenos:
+
+:raw-latex:`\clearpage\phantomsection`
 
 Rack
 ====
@@ -119,14 +121,12 @@ Rack
             :align: center
             :height: 480
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
-
-         .. rackdiag:: rackdiag/example.diag
-            :caption: Multiple racks with multiple and blocked units (Rack Diagram example)
-            :align: center
-            :height: 480
+      .. rackdiag:: rackdiag/example.diag
+         :caption: Multiple racks with multiple and blocked units (Rack Diagram example)
+         :align: center
+         :height: 480
 
    :which needs:
 
@@ -140,6 +140,8 @@ Rack
          :linenos:
 
       .. FIXME: :language: dot (Bash is being abused here)
+
+:raw-latex:`\clearpage\phantomsection`
 
 Packet
 ======
@@ -158,16 +160,14 @@ Packet
          .. packetdiag:: packetdiag/example.diag
             :caption: Structure of TCP Header (Packet Diagram example)
             :align: center
-            :width: 640
+            :width: 480
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
-
-         .. packetdiag:: packetdiag/example.diag
-            :caption: Structure of TCP Header (Packet Diagram example)
-            :align: center
-            :width: 640
+      .. packetdiag:: packetdiag/example.diag
+         :caption: Structure of TCP Header (Packet Diagram example)
+         :align: center
+         :width: 480
 
    :which needs:
 

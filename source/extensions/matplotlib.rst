@@ -12,7 +12,20 @@ Mathematical Plots
 
       Matplotlib does not support labels and auto-references. You
       can not refer to a equation and you will never see an entry
-      to :rst:`.. mathmpl::` expressions in the list of equations.
+      in the list of equations to :rst:`.. mathmpl::` expressions.
+
+      Only practicable and usable for |HTML|/|EPUB| and |LaTeX|/|PDF|
+      builder.
+
+
+      .. admonition:: Extension not applicable for textual output
+         :class: danger
+
+         The intended use of this |Sphinx| extension is for output
+         systems with graphical support, not for pure text based
+         systems like man or info pages. That is why many of the
+         rendering functions are implemented exclusively for |HTML|
+         or |LaTeX| output.
 
 :PyPI Package:   https://pypi.org/project/matplotlib/
 :Project Home:   https://matplotlib.org/
@@ -29,7 +42,61 @@ interactive visualizations in |Python|. It consists:
 * :py:mod:`mplref:matplotlib.sphinxext.plot_directive`:
   Matplotlib plot in a |Sphinx| document
 
-.. todo:: activate "Mathematical Plots" extension.
+.. rubric:: Runtime setup
+
+.. confval:: plot_pre_code
+
+   Code that should be executed before each plot runs will setup over the
+   |Sphinx| configuration option :confval:`plot_pre_code`. If not specified
+   or **None or empty** it will default to a string containing:
+   :python:`import numpy as np; from matplotlib import pyplot as plt;`.
+
+   .. ifconfig:: not plot_pre_code
+
+      :plot_pre_code: **None or empty**, use extension's default.
+
+   .. ifconfig:: plot_pre_code
+
+      :plot_pre_code: Currently set to:
+
+                      .. literalinclude:: {plot_preincl}
+                         :language: python
+                         :start-after: START: LDSP
+                         :end-before: END: LDSP
+                         :linenos:
+
+.. confval:: plot_working_directory
+
+   By default, if **None or empty**, the :confval:`plot_working_directory` will
+   be changed to the directory of the example, so the code can get at its data
+   files, if any. Also its path will be added to :python:`sys.path` so it can
+   import any helper modules sitting beside it. This configuration option can
+   be used to specify a central directory (also added to :python:`sys.path`)
+   where data files and helper modules for all code are located.
+
+   .. ifconfig:: not plot_basedir
+
+      :plot_working_directory: **None or empty**, directory is **relative**.
+
+   .. ifconfig:: plot_basedir
+
+      :plot_working_directory: Currently set to :file:`{plot_workdir}`.
+
+.. confval:: plot_basedir
+
+   When a path to a source file is given, the |Sphinx| configuration option
+   :confval:`plot_basedir` will respect. It is the base directory, to which
+   :rst:`.. plot::` file names are relative to. If **None or empty**, file
+   names are **relative** to the directory where the file containing the
+   directive is.
+
+   .. ifconfig:: not plot_basedir
+
+      :plot_basedir: **None or empty**, file names are **relative**.
+
+   .. ifconfig:: plot_basedir
+
+      :plot_basedir: Currently set to :file:`{plot_basedir}`.
 
 Expressions
 ***********
@@ -37,15 +104,13 @@ Expressions
 See the :doc:`mplref:tutorials/text/mathtext` for lots more information
 how to writing mathematical expressions in matplotlib.
 
-.. code-block:: rst
+With matplotlib in |Sphinx| you can include inline math
+:mathmpl:`(\alpha^{ic} > \beta_{ic})` (as role
+:rst:`:mathmpl:`(\alpha^{ic} > \beta_{ic})``) or display math:
 
-   With matplotlib in |Sphinx| you can include inline math
-   :mathmpl:`(\alpha^{ic} > \beta_{ic})` (as role
-   :rst:`:mathmpl:`(\alpha^{ic} > \beta_{ic})``) or display math:
+.. mathmpl::
 
-   .. mathmpl::
-
-      \sum_{i=0}^\infty x_i
+   \sum_{i=0}^\infty x_i
 
 .. rst:directive:: mathmpl
 
@@ -56,11 +121,11 @@ how to writing mathematical expressions in matplotlib.
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
+      .. include:: matplotlib/mathmpl/example.rsti
 
-         .. include:: matplotlib/mathmpl/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Plots
 *****
@@ -72,8 +137,6 @@ Plots
 
 The source code for the plot may be included in one of three ways:
 
-:raw-latex:`\clearpage\phantomsection`
-
 .. rubric:: inline content
 
 :the example:
@@ -83,11 +146,9 @@ The source code for the plot may be included in one of three ways:
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. include:: matplotlib/inline/example.rsti
+   .. include:: matplotlib/inline/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -100,30 +161,13 @@ The source code for the plot may be included in one of three ways:
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. include:: matplotlib/doctest/example.rsti
+   .. include:: matplotlib/doctest/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
 .. rubric:: source file content
-
-When a path to a source file is given, the |Sphinx| configuration option
-``plot_basedir`` will respect. It is the base directory, to which
-:rst:`.. plot::` file names are relative to. If **None or empty**, file names
-are **relative** to the directory where the file containing the directive is.
-
-.. code-block:: rst
-
-   .. ifconfig:: not plot_basedir
-
-      :plot_basedir: **None or empty**, file names are **relative**
-
-   .. ifconfig:: plot_basedir
-
-      :plot_basedir: currently set to :file:`{plot_basedir}`.
 
 :the example:
 
@@ -132,11 +176,9 @@ are **relative** to the directory where the file containing the directive is.
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. include:: matplotlib/srcfile/example.rsti
+   .. include:: matplotlib/srcfile/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 
@@ -154,13 +196,9 @@ See :doc:`mplref:api/toolkits/mplot3d/index`,
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. include:: matplotlib/mplot3d/example.rsti
-
-.. :raw-latex:`\clearpage\phantomsection`
+   .. include:: matplotlib/mplot3d/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

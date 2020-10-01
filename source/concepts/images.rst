@@ -46,7 +46,7 @@ whenever possible. These include |EPS/PS|, |AI|, |DXF|, |EMF/EMZ|, |WMF/WMZ|
 or some special |XML| vector graphics schemes. In any case avoid embedded
 bitmaps, as this is a lossy format for vector informations that does not
 replicate scaling very well.
-:numref:`images-rast-vs-vect` demonstrats differences between bitmapped
+:numref:`images-rast-vs-vect` demonstrates differences between bitmapped
 raster and vector graphics. The bitmap raster is composed of a fixed set
 of pixels, while the vector is composed of a fixed set of shapes. In the
 picture, scaling the bitmap reveals the pixels while scaling the vector
@@ -163,7 +163,7 @@ background of this kind of image data, where the |PNG| image has solid color.
       (and photo-like) images, since |JPEG| uses a lossy encoding method
       specifically *designed for photographic image data*. Using |PNG| instead
       of a high-quality |JPEG| for such images would result in a large increase
-      in filesize with negligible gain in quality. In comparison, when storing
+      in file size with negligible gain in quality. In comparison, when storing
       images that contain text, line art, or graphics -- images with sharp
       transitions and large areas of solid color -- the |PNG| format can
       compress image data more than |JPEG| can. Additionally, |PNG| is lossless,

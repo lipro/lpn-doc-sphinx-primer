@@ -22,7 +22,7 @@ directive.
    1. Generate activity-diagram from dot like text (basic feature).
    2. Multilingualism for node-label (utf-8 only).
 
-.. todo:: activate "Activity Diagram" extension.
+:raw-latex:`\clearpage\phantomsection`
 
 Directive Body Diagram
 **********************
@@ -40,11 +40,11 @@ Directive Body Diagram
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
+      .. include:: actdiag/directive-body/example.rsti
 
-         .. include:: actdiag/directive-body/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Description Table
 *****************
@@ -56,11 +56,11 @@ Description Table
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
+   .. include:: actdiag/description-table/example.rsti
 
-      .. include:: actdiag/description-table/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Include Diagram
 ***************
@@ -74,17 +74,15 @@ Include Diagram
          :caption: Style attributes to frames and nodes (Activity Diagram example)
          :align: center
          :scale: 75
-         :width: 640
+         :width: 480
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. actdiag:: actdiag/example.diag
-         :caption: Style attributes to frames and nodes (Activity Diagram example)
-         :align: center
-         :scale: 75
-         :width: 640
+   .. actdiag:: actdiag/example.diag
+      :caption: Style attributes to frames and nodes (Activity Diagram example)
+      :align: center
+      :scale: 75
+      :width: 480
 
 :which needs:
 

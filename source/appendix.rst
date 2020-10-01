@@ -1,7 +1,7 @@
+:topic: Appendix
+
 .. Don't add content to this file, instead edit content in files:
    appendix/*.rst
-
-:topic: Appendix
 
 :raw-latex:`\cleardoublepage\phantomsection`
 
@@ -16,7 +16,7 @@ Appendix
 
    .. sectionauthor:: |slz_obfuscated|
 
-.. only:: latex or man or texinfo or text
+.. only:: not html
 
    .. sectionauthor:: |slz_plain_text|
 
@@ -26,6 +26,7 @@ Appendix
 
    appendix/license
    appendix/credits
+   appendix/gimmick
 
 .. Local variables:
    coding: utf-8

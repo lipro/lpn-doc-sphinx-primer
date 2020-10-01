@@ -30,7 +30,8 @@ import sphinx
 # absolute. Of course, absolute imports can use from <> import by omitting
 # the leading dots.
 
-from . import lexer
+from . import pygments
+from . import pybtex
 
 def setup(app):
     """
@@ -40,13 +41,19 @@ def setup(app):
 
     * additional roles, and directives
     * additional lexer for Pygments (syntax highlighting)
+    * additional style formatter for Pybtex (BibTeX bibliography)
     * HOT FIXES
 
     @param app: The documentation application.
     """
 
-    for a in lexer.DotLexer.aliases: app.add_lexer(a, lexer.DotLexer)
-    for a in lexer.DtsLexer.aliases: app.add_lexer(a, lexer.DtsLexer)
+    # For Graphviz DOT graph description language.
+    for a in pygments.lexers.DotLexer.aliases:
+        app.add_lexer(a, pygments.lexers.DotLexer)
+
+    # For Open Firmware/Linux Kernel DTS description language.
+    for a in pygments.lexers.DtsLexer.aliases:
+        app.add_lexer(a, pygments.lexers.DtsLexer)
 
     #
     # avoid WARNING: Unknown interpreted text role "confval".

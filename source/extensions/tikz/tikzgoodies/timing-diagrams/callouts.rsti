@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/timing-diagrams/callouts:
+.. rst-class:: centered
+.. tikz:: Timing-Diagram example with callouts (synchronizations)
+   :include: /extensions/tikz/tikzgoodies/timing-diagrams/callouts.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

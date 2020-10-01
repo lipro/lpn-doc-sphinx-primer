@@ -1,0 +1,129 @@
+\begin{tikzpicture}
+
+  \tikzstyle{arrow}=[->,line width=.05cm,draw=red!90!blue!60!black]
+
+  \tline{S}{6};
+  \tline{M}{5};
+  \tline{E}{2};
+  \tline{T}{0}
+  \tline{F}{-2};
+  \tline{Eb}{-5};
+  \tline{Tb}{-7}
+
+  \coordinate (n1) at (-2.5,-.5);
+  \coordinate (n2) at (-2.5,4);
+  \draw [decoration={brace,amplitude=10pt},decorate] (n1) to (n2);
+
+  \coordinate (o1) at (-2.5,-7.5);
+  \coordinate (o2) at (-2.5,-1.5);
+  \draw [decoration={brace,amplitude=10pt},decorate] (o1) to (o2);
+
+  \draw (barycentric cs:n1=.5,n2=.5) ++(-10pt,0) node[anchor=south,rotate=90] {\large\textsf{(a) Naive Temperature Model}};
+  \draw (barycentric cs:o1=.5,o2=.5) ++(-10pt,0) node[anchor=south,rotate=90] {\large\textsf{(b) Proposed Approach}};
+
+  \tcaption{S}{Real System};
+  \ttimeline{S}{8};
+
+  \tskip{S}{.3};
+
+  \tstartbrace{S};
+  \tevent{S}; \tskip{S}{1.5};
+  \tevent{S}; \tskip{S}{1.3};
+  \tevent{S}; \tskip{S}{1.2};
+
+  \tendbrace{S}{\texttt{f(); wait(40);}};
+  \tstartbrace{S};
+
+  \tskip{S}{.2};
+  \tevent{S}; \tskip{S}{.8};
+  \tevent{S}; \tskip{S}{.7};
+  \tevent{S}; \tskip{S}{.5};
+  \tevent{S}; \tskip{S}{.5};
+  \tevent{S}; \tskip{S}{.8};
+  \tevent{S};
+
+  \tendbrace{S}{\texttt{g(); wait(35);}};
+
+
+  \tcaption{M}{
+    \begin{tabular}{r}
+      Loosely-Timed\\Model
+    \end{tabular}
+  };
+  \ttimeline{M}{8};
+  \tskip{M}{.3};
+  \foreach \x in {10,0,-10} {
+    \teventA{M}{\x};
+  }
+  \tskip{M}{4};
+  \foreach \x in {25,15,5,-5,-15,-25} {
+    \teventA{M}{\x};
+  }
+  \tskip{M}{2.5};
+
+
+  \tcaption{E}{Energy};
+  \ttimeline{E}{8};
+
+  \draw[red!50!black,thick] (currentE) ++(0,.3) -- ++(.3,0) --
+  node[right] {+3} ++(0,.6) -- ++(4,0) --
+  node[right] {+6} ++(0,1.2) -- node[near end,below]{total=9} ++(3.5,0)
+  ;
+
+
+  \tcaption{T}{Temperature};
+  \ttimeline{T}{8};
+
+  \draw[blue!50!black,thick] (currentT) ++(0,.3) -- ++(.3,0) --
+  coordinate[at end](peak1) ++(0,.6) .. controls +(1,-.2) .. ++(4,-.3) --
+  coordinate[at end](peak2) ++(0,1) .. controls +(1,-.5) .. ++(3.5,-.8)
+  ;
+
+
+  \draw (peak1) node[draw,circle,thick](peak1){};
+  \draw (peak2) node[draw,circle,thick](peak2){};
+  \draw (barycentric cs:peak1=.5,peak2=.5) ++(0,.1) node[inner sep=0](peaks){
+    \begin{tabular}{c}
+      Unrealistic\\peaks
+    \end{tabular}
+  };
+  \draw [arrow] (peaks) -- (peak1);
+  \draw [arrow] (peaks) -- (peak2);
+
+
+  \tcaption{F}{Frequency};
+  \ttimeline{F}{8};
+
+  \tskip{F}{.3};
+  \tbox{F}{4}{$\frac{3}{40}$ trans/sec};
+  \tbox{F}{3.5}{$\frac{6}{35}$ trans/sec};
+
+
+  \tcaption{Eb}{Energy};
+  \ttimeline{Eb}{8};
+
+  \draw[red!50!black,thick] (currentEb) ++(0,.3) -- ++(.3,0) --
+  ++(4,.6)
+  -- node[at end,right]{total=9} ++(3.5,1.2)
+  ;
+
+
+  \tcaption{Tb}{Temperature};
+  \ttimeline{Tb}{8};
+
+  \draw[blue!50!black,thick] (currentTb) ++(0,.3) -- coordinate[at end](start)++(.3,0);
+  \path (start)
+  ++(4,.6) coordinate (x1)
+  ++(3.5,.3) coordinate(x2);
+  \draw[blue!50!black,thick,bend left=5] (start) to (x1);
+  \draw[blue!50!black,thick,bend left=5] (x1) to (x2);
+  ;
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

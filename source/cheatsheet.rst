@@ -13,7 +13,7 @@ Cheat Sheet
 
    .. sectionauthor:: |slz_obfuscated|
 
-.. only:: latex or man or texinfo or text
+.. only:: not html
 
    .. sectionauthor:: |slz_plain_text|
 

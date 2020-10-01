@@ -103,6 +103,10 @@ Be aware of some restrictions of this markup:
 
 :raw-latex:`\clearpage\phantomsection`
 
+.. spelling::
+
+   thisis
+
 .. Local variables:
    coding: utf-8
    mode: text

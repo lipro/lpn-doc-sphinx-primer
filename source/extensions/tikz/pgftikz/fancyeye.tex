@@ -1,0 +1,68 @@
+\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+[scale=0.75]
+\def\topedge{(-3,0) .. controls (-2,1.8) and (2,2) .. (2.3,.3)}
+\def\bottomedge{(2.3,.3) .. controls (2,-2.2) and (-2,-1.2) .. (-3,0)}
+\def\eyepath{\topedge -- \bottomedge --cycle;}
+\clip\eyepath;
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+% Iris
+\filldraw[color=orange!30!black] (-.2,.2) circle (1.4);
+
+% Shadow on iris
+\filldraw[color=orange!40!black] (-.3,-.1) circle (1.1);
+
+% Iris lines
+\foreach \a in {0,5,...,360}{
+    \pgfmathparse{25+28*rnd}
+    \fill[
+        orange!\pgfmathresult!black,
+        decoration={
+            random steps,
+            segment length=1pt,
+            amplitude=0.3pt
+        },
+        decorate,
+        line width=0.3pt
+    ] (-.2,.2) -- ++($(\a+2*rnd:.8+0.3*rnd)$) -- ++(\a+90:3pt) -- cycle;
+}
+
+% Pupil
+\fill[color=black] (-.2,.2) circle (0.5);
+
+% Sun reflection
+\fill[color=white] (90:.8) {[rotate=-30] circle (0.2 and 0.12)};
+
+% Shadow of the eyelid
+\draw[line width=2.5mm, draw opacity=0.1, line cap=round]\topedge;
+
+% Eyelids
+\draw[line width=1mm, red!40!white!80!black, line cap=round]\bottomedge;
+\draw[line width=1.2mm, red!40!white!60!black, line cap=round]\topedge;
+
+% Lacrimal
+\fill[red!40!white!80!black] (-2.8,0) circle (.25);
+\fill[white] (-2.7,.1) circle (.03);
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

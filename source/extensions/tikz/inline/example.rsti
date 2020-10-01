@@ -1,5 +1,5 @@
-An example role :tikz:`[thick] \node[blue,draw] (a) {A};
-\node[draw,dotted,right of=a] {B} edge[<-] (a);`
+An example role :tikz:`[thick] \node[blue,draw] (a) {㎁};
+\node[draw,dotted,right of=a] {㏈} edge[<-] (a);`
 
 .. Local variables:
    coding: utf-8

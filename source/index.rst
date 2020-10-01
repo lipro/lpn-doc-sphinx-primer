@@ -1,9 +1,9 @@
+:topic: |project|
+
 .. Li-Pro.Net Sphinx Primer documentation master file, created by
    sphinx-quickstart on Sat Sep  5 12:37:04 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-
-:topic: |project|
 
 .. _home:
 
@@ -30,7 +30,7 @@
 
    Excerpts from the `Sphinx Tutorial by Eric Holscher`_ and
    `Documentation Style Guide by Bareos GmbH & Co. KG and others`_.
-   See [juh2019swdocwspx]_ for an introduction to |Sphinx|.
+   See :cite:`hasecke2019sphinx` for an introduction to |Sphinx|.
 
    This documentation is built using |Sphinx|, a static-site generator designed
    to create structured, semantic, and internally consistent documentation.
@@ -63,7 +63,7 @@
 .. toctree::
    :caption: Table of Contents
    :numbered: 3
-   :maxdepth: 3
+   :maxdepth: 4
    :hidden:
    :includehidden:
 
@@ -97,11 +97,11 @@
 
 .. ...........................................................................
 
-.. only:: man or texinfo or text
+.. only:: not latex and not html
 
    .. include:: doclegal.rsti
 
-.. only:: html or man or texinfo or text
+.. only:: not latex
 
    .. include:: docversions.rsti
 

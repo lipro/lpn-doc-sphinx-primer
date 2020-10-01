@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/base-pointer:
+.. rst-class:: centered
+.. tikz:: Execution stack example with base pointers
+   :include: /extensions/tikz/tikzgoodies/drawstack/base-pointer.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

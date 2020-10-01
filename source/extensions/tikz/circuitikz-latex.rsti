@@ -1,0 +1,77 @@
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|circuitikz.opamp-fullstab.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/circuitikz/opamp-fullstab.rsti
+
+:raw-latex:`\tcblower`
+
+|circuitikz.opamp-fullstab.tex| [#]_, in |circuitikz.opamp-fullstab.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|circuitikz.opamp-inv.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/circuitikz/opamp-inv.rsti
+
+:raw-latex:`\tcblower`
+
+|circuitikz.opamp-inv.tex| [#]_, in |circuitikz.opamp-inv.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|circuitikz.nmos-fet.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/circuitikz/nmos-fet.rsti
+
+:raw-latex:`\tcblower`
+
+|circuitikz.nmos-fet.tex| [#]_, in |circuitikz.nmos-fet.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|circuitikz.ne555-deedah.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/circuitikz/ne555-deedah.rsti
+
+:raw-latex:`\tcblower`
+
+|circuitikz.ne555-deedah.tex| [#]_, in |circuitikz.ne555-deedah.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|circuitikz.breadboard.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/circuitikz/breadboard.rsti
+
+:raw-latex:`\tcblower`
+
+|circuitikz.breadboard.tex| [#]_, in |circuitikz.breadboard.ref|.
+
+:raw-latex:`\end{tcolorbox}`
+:raw-latex:`\vfill`
+:raw-latex:`\begin{tcolorbox}[title=`
+|circuitikz.lpc214x-lqfp64.tit| :raw-latex:`]`
+
+.. include:: /extensions/tikz/circuitikz/lpc214x-lqfp64.rsti
+
+:raw-latex:`\tcblower`
+
+|circuitikz.lpc214x-lqfp64.tex| [#]_, in |circuitikz.lpc214x-lqfp64.ref|.
+
+.. attention:: Native support only since CircuiTikZ V0.9 (Oct 2019).
+
+   **See also:** `CircuiTikZ change log`_
+
+:raw-latex:`\end{tcolorbox}`
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

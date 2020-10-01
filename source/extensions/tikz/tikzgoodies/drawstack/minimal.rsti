@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/minimal:
+.. rst-class:: centered
+.. tikz:: Minimalistic execution stack example
+   :include: /extensions/tikz/tikzgoodies/drawstack/minimal.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

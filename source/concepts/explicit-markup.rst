@@ -164,6 +164,14 @@ To use a professional bibliography, you should use the |Sphinx| extension
 
 :raw-latex:`\clearpage\phantomsection`
 
+.. spelling::
+
+   Lorem
+   ipsum
+   dolor
+   sit
+   amet
+
 .. Local variables:
    coding: utf-8
    mode: text

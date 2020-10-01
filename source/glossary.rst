@@ -1,7 +1,7 @@
+:topic: Glossary
+
 .. Don't add content to this file, instead edit content in files:
    glossary/*.rst
-
-:topic: Glossary
 
 :raw-latex:`\cleardoublepage\phantomsection`
 
@@ -16,7 +16,7 @@ Glossary
 
    .. sectionauthor:: |slz_obfuscated|
 
-.. only:: latex or man or texinfo or text
+.. only:: not html
 
    .. sectionauthor:: |slz_plain_text|
 

@@ -1,0 +1,72 @@
+.. rubric:: main entry function
+
+.. tabs::
+
+   .. code-tab:: c
+
+         int main(const int argc, const char **argv) {
+             return 0;
+         }
+
+   .. code-tab:: c++
+
+         int main(const int argc, const char **argv) {
+             return 0;
+         }
+
+   .. code-tab:: python
+
+         def main():
+             return
+
+   .. code-tab:: java
+
+         class Main {
+             public static void main(String[] args) {
+             }
+         }
+
+   .. code-tab:: julia
+
+         function main()
+         end
+
+   .. code-tab:: fortran
+
+         PROGRAM main
+         END PROGRAM main
+
+.. rubric:: programming languages
+
+.. tabs::
+
+   .. code-tab:: c
+
+         C Main Function
+
+   .. code-tab:: c++
+
+         C++ Main Function
+
+   .. code-tab:: python
+
+         Python Main Function
+
+   .. code-tab:: java
+
+         Java Main Function
+
+   .. code-tab:: julia
+
+         Julia Main Function
+
+   .. code-tab:: fortran
+
+         Fortran Main Function
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

@@ -1,0 +1,61 @@
+% START: LDSP tikz_custom_fontpkg latex_custom_fontpkg
+\RequirePackage{{fontspec}}
+%setmainfont[Ligatures=TeX]{{DejaVu Serif}}
+%setmainfont[ExternalLocation={dejavu}]{{DejaVuSerif.otf}}%
+% [Ligatures=TeX,
+% BoldFont=DejaVuSerif-Bold.otf,
+% ItalicFont=DejaVuSerif-Italic.otf,
+% BoldItalicFont=DejaVuSerif-BoldItalic.otf]
+%setmainfont[Ligatures=TeX]{{DejaVu Serif Condensed}}
+%setmainfont[ExternalLocation={dejavu}]{{DejaVuSerifCondensed.otf}}%
+% [Ligatures=TeX,
+% BoldFont=DejaVuSerifCondensed-Bold.otf,
+% ItalicFont=DejaVuSerifCondensed-Italic.otf,
+% BoldItalicFont=DejaVuSerifCondensed-BoldItalic.otf]
+%setmainfont[Ligatures=TeX]{{DejaVu Sans Condensed}}
+\setmainfont[ExternalLocation={dejavu}]{{DejaVuSansCondensed.otf}}%
+  [Ligatures=TeX,
+  BoldFont=DejaVuSansCondensed-Bold.otf,
+  ItalicFont=DejaVuSansCondensed-Oblique.otf,
+  BoldItalicFont=DejaVuSansCondensed-BoldOblique.otf]
+%setsansfont[Ligatures=TeX]{{DejaVu Sans Condensed}}
+\setsansfont[ExternalLocation={dejavu}]{{DejaVuSansCondensed.otf}}%
+  [Ligatures=TeX,
+  BoldFont=DejaVuSansCondensed-Bold.otf,
+  ItalicFont=DejaVuSansCondensed-Oblique.otf,
+  BoldItalicFont=DejaVuSansCondensed-BoldOblique.otf]
+%setmonofont[Ligatures=TeX]{{DejaVu Sans Mono}}
+\setmonofont[ExternalLocation={dejavu}]{{DejaVuSansMono.otf}}%
+  [Ligatures=TeX,
+  BoldFont=DejaVuSansMono-Bold.otf,
+  ItalicFont=DejaVuSansMono-Oblique.otf,
+  BoldItalicFont=DejaVuSansMono-BoldOblique.otf]
+%setromanfont[Ligatures=TeX]{{DejaVu Sans Condensed}}
+\setromanfont[ExternalLocation={dejavu}]{{DejaVuSansCondensed.otf}}%
+  [Ligatures=TeX,
+  BoldFont=DejaVuSansCondensed-Bold.otf,
+  ItalicFont=DejaVuSansCondensed-Oblique.otf,
+  BoldItalicFont=DejaVuSansCondensed-BoldOblique.otf]
+%newfontfamily\myregularfont{{DejaVu Serif}}
+%newfontfamily\myregularfont[ExternalLocation={dejavu}]{{DejaVuSerif.otf}}%
+% [Ligatures=TeX,
+% BoldFont=DejaVuSerif-Bold.otf,
+% ItalicFont=DejaVuSerif-Italic.otf,
+% BoldItalicFont=DejaVuSerif-BoldItalic.otf]
+%newfontfamily\myregularfont{{DejaVu Sans Condensed}}
+\newfontfamily\myregularfont[ExternalLocation={dejavu}]{{DejaVuSansCondensed.otf}}%
+  [Ligatures=TeX,
+  BoldFont=DejaVuSansCondensed-Bold.otf,
+  ItalicFont=DejaVuSansCondensed-Oblique.otf,
+  BoldItalicFont=DejaVuSansCondensed-BoldOblique.otf]
+%newfontfamily\mycjkfont{{Unifont}}
+%newfontfamily\mycjkfont{{WenQuanYi Micro Hei}}
+%newfontfamily\mycjkfont{{WenQuanYi Zen Hei}}
+\newfontfamily\mycjkfont[ExternalLocation={wenquanyi}]{{WenQuanYiZenHei.otf}}%
+  [Ligatures=TeX,
+  BoldFont=WenQuanYiZenHei.otf,
+  ItalicFont=WenQuanYiZenHei.otf,
+  BoldItalicFont=WenQuanYiZenHei.otf]
+\usepackage[CJK]{{ucharclasses}}
+\setTransitionsForCJK{{\mycjkfont}}{{\myregularfont}}
+% END: LDSP tikz_custom_fontpkg latex_custom_fontpkg

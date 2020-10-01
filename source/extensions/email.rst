@@ -17,14 +17,11 @@ Email Obfuscate
 :Git Repository: https://github.com/sphinx-contrib/email
 :Python 3 Fixes: https://github.com/rexut/sphinxcontrib-email/tree/python3-fixes
 
-.. todo:: activate "Email Obfuscate" extension.
-
 To obfuscate an email address use something like:
 
    ::
 
       :email:`Name Surname <user@myplace.org>`
-      :email:`Name Surname (user@myplace.org)`
 
    That renders as ``Name Surname`` with the appropriate mailto link.
 
@@ -43,11 +40,9 @@ To obfuscate an email address use something like:
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
-
-         .. include:: email/example.rsti
+      .. include:: email/example.rsti
 
 :raw-latex:`\clearpage\phantomsection`
 

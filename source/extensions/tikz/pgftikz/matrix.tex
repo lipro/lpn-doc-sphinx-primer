@@ -1,0 +1,124 @@
+\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{% Environment Config
+    font=\large,
+    Dish/.style = {% Style for dishes
+        circle, 
+        draw,
+        line width=1.2pt,
+        minimum width=20.0mm, 
+        align=center,
+        text width=12.0mm,
+    },
+    Customer/.style = {% Style for labels in dishes nodes
+        draw,
+        line width=1.2pt,
+        align=center,
+        inner sep=3pt,
+        label distance=5pt,
+        rounded corners=4pt,
+    },
+    Decor/.style = {% Style for background decoration in matrix
+        fill=black!10,
+        rounded corners=3pt,
+        inner sep=3pt,
+    },
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+% Start drawing "the shapes..." 
+\node (Dish1) [% Exelent option from Zarko's answer.
+    Dish,
+    label={[Customer,custA]270:A},
+    label={[Customer,custB]160:B},
+    label={[Customer,custC]210:C}
+] {\textbfit{Dish 1}};
+
+\node (Dish2) [
+    Dish,
+    on grid,
+    right=25.0mm of Dish1,
+    label={[Customer,custA]80:A},
+    label={[Customer,custB]280:B},
+%%  label={[Customer,custC]210:C}
+%%  You can make comment a line to avoid execute.
+] {\textbfit{Dish 2}};
+
+\node (Dish3) [
+    Dish,
+    on grid,
+    right=25.0mm of Dish2,
+%%  label={[Customer,custA]80:A},
+    label={[Customer,custB]310:B},
+%%  label={[Customer,custC]210:C}
+] {\textbfit{Dish 3}};
+
+\node (L dots) [on grid, right=20.0mm of Dish3] {\Huge . . .};
+
+% Start drawing "the matrix..." 
+\matrix[% Positioning properties
+    on grid,
+    right=40.0mm of L dots,
+    % General option for all nodes
+    matrix of nodes,
+    text height=2.5ex,
+    text depth=0.75ex,
+    text width=3.25ex,
+    font=\large\bf,
+    align=center,
+    line width=1pt,
+    column sep=10pt,
+    stA/.style={% Style option for customer A
+        draw=custA,
+        line width=1.2pt,
+        rounded corners=4pt,
+    },
+    stB/.style={% Style option for customer B
+        draw=custB,
+        line width=1.2pt,
+        rounded corners=4pt,
+    },
+    stC/.style={% Style option for customer C
+        draw=custC,
+        line width=1.2pt,
+        rounded corners=4pt,
+    },
+] (M1) {% Matrix contents  
+    {~} & 1 & 2 & 3\\ [5pt] % \\[separation]
+    A &    |[stA,fill]|    &   |[stA,fill]|    &   |[stA,fill=black!30]|\\ [5pt]
+    B &    |[stB,fill]|    &   |[stB,fill]|    &   |[stB,fill]|\\ [5pt]
+    C &    |[stC,fill]|    &   |[stC,fill=black!30]|   &   |[stC,fill=black!30]|\\ [5pt]
+};
+
+% Start drawing "the background..." 
+\begin{scope}[on background layer] % Nice trick from Zarko's answer.
+    \foreach \i in {1,...,4}{
+        \node[Decor,fit=(M1-1-\i)(M1-4-\i)]{};
+    }
+\end{scope}
+
+% Start drawing "the description..." 
+\draw node[rotate=90, on grid, left=28.0mm of M1]{\textit{Customers}};
+\draw node[on grid, above=25.0mm of M1]{\textit{Dishes}};
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

@@ -1,0 +1,11 @@
+.. _tikz/tikztiming/colored-cells:
+.. rst-class:: centered
+.. tikz:: SPI vs. UART with arbitrary colored data cells
+   :include: /extensions/tikz/tikztiming/colored-cells.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

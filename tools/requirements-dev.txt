@@ -1,0 +1,3 @@
+# The SVG2TikZ, formally known as Inkscape2TikZ, are a set of tools for
+# converting SVG graphics to TikZ/PGF code
+git+https://github.com/kjellmf/svg2tikz.git/@master#sha1=91236b5&egg=svg2tikz

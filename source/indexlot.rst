@@ -1,6 +1,6 @@
-.. Don't change this file.
-
 :topic: List of Tables
+
+.. Don't change this file.
 
 .. index:: pair: List of Tables; Li-Pro.Net Sphinx Primer
    :name: ldsp-listoftables

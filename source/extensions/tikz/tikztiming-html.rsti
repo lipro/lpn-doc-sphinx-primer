@@ -1,0 +1,50 @@
+.. tabs::
+
+   .. tab:: |tikztiming.pcinst-tick.tit|
+
+      |tikztiming.pcinst-tick.tex| [#]_, in |tikztiming.pcinst-tick.ref|.
+
+      .. include:: /extensions/tikz/tikztiming/pcinst-tick.rsti
+
+   .. tab:: |tikztiming.divider-line.tit|
+
+      |tikztiming.divider-line.tex| [#]_, in |tikztiming.divider-line.ref|.
+
+      .. include:: /extensions/tikz/tikztiming/divider-line.rsti
+
+   .. tab:: |tikztiming.colored-cells.tit|
+
+      |tikztiming.colored-cells.tex| [#]_, in |tikztiming.colored-cells.ref|.
+
+      .. include:: /extensions/tikz/tikztiming/colored-cells.rsti
+
+   .. tab:: |tikztiming.spi-opmodes.tit|
+
+      |tikztiming.spi-opmodes.tex| [#]_, in |tikztiming.spi-opmodes.ref|.
+
+      .. include:: /extensions/tikz/tikztiming/spi-opmodes.rsti
+
+   .. tab:: |tikztiming.pci-read-irqack.tit|
+
+      |tikztiming.pci-read-irqack.tex|, in |tikztiming.pci-read-irqack.ref|.
+
+      PCI timing diagrams with reference to version 2.2 of the
+      PCI specification [#]_.
+
+      .. include:: /extensions/tikz/tikztiming/pci-read-irqack.rsti
+
+   .. tab:: |tikztiming.gn4124-pdwreq.tit|
+
+      |tikztiming.gn4124-pdwreq.tex|, in |tikztiming.gn4124-pdwreq.ref|.
+
+      Packet decoder timing diagram with reference to the
+      Gennum GN4124 to Wishbone bridge user guide [#]_.
+
+      .. include:: /extensions/tikz/tikztiming/gn4124-pdwreq.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

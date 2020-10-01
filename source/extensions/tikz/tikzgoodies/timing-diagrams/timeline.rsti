@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/timing-diagrams/timeline:
+.. rst-class:: centered
+.. tikz:: Timeline-Diagram example with ticks and tasks
+   :include: /extensions/tikz/tikzgoodies/timing-diagrams/timeline.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

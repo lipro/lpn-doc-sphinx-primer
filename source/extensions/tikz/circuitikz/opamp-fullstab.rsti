@@ -1,0 +1,11 @@
+.. _tikz/circuitikz/opamp-fullstab:
+.. rst-class:: centered
+.. tikz:: Full differential Op-Amp stabilization principles
+   :include: /extensions/tikz/circuitikz/opamp-fullstab.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

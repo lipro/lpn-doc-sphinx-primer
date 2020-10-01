@@ -252,6 +252,33 @@ Seealso Admonition
 
 :raw-latex:`\clearpage\phantomsection`
 
+.. spelling::
+
+   Neque
+   porro
+   quisquam
+   Lorem
+   ipsum
+   dolor
+   sit
+   amet
+   consectetur
+   adipiscing
+   elit
+   Vivamus
+   mattis
+   commodo
+   eros
+   quis
+   posuere
+   enim
+   lobortis
+   quis
+   Nullam
+   ut
+   tempus
+   nibh
+
 .. Local variables:
    coding: utf-8
    mode: text

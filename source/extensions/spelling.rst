@@ -45,7 +45,7 @@ For more details, see :doc:`scspelling:customize` section *Private Dictionaries*
 .. confval:: spelling_word_list_filename
 
    That is a list specifying files containing a list of words known to be
-   spelled correctly but that do not appear in the refered language
+   spelled correctly but that do not appear in the referred language
    dictionary. The files should contain one word per line. Refer to the
    |PyEnchant| tutorial for details.
 

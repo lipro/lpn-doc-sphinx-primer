@@ -1,0 +1,54 @@
+\begin{tikzpicture}[scale=.7]
+
+    \tline{sc}{2};
+    \tcaption{sc}{SystemC};
+
+    \tline{ace}{0};
+    \draw (currentace) ++ (9,-.3) node {Simulated time};
+
+    \tcaption{ace}{P/T Solver};
+
+    \ttimeline{sc}{10};
+    \ttimeline{ace}{10};
+
+    \tremember{sc}{before};
+    \tlonglighttick{sc};
+    \tskip{sc}{1.5};
+    \tlonglighttick{sc};
+    \tskip{sc}{1.5};
+    \tlonglighttick{sc};
+    \tskip{sc}{2};
+    \trecall{sc}{before};
+    \tbox{sc}{6}{Functional (1)};
+
+    \ttextarrowU{sc}{
+        \begin{tabular}{c}
+            SystemC reads\\temperature
+        \end{tabular}
+    };
+
+    \tarrowUL{sc}{ace}{};
+    \draw (tmpmid) node[fill=white,inner sep=1pt] {(2)};
+    \tremember{ace}{before};
+    \tlonglighttick{ace};
+    \tskip{ace}{1.5};
+    \tlonglighttick{ace};
+    \tskip{ace}{1.5};
+    \tlonglighttick{ace};
+    \tskip{ace}{2};
+    \trecall{ace}{before};
+    \tbox{ace}{6}{Non-functional (3)};
+
+    \tarrowLU{ace}{sc}{};
+    \draw (tmpmid) node[anchor=west] {(4)};
+
+    \tbox{sc}{2}{...};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

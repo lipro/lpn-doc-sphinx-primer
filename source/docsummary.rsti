@@ -33,7 +33,7 @@
       :Contact:         |dm_contact_obfuscated|
       :Address:         |dm_address|
 
-.. only:: latex or man or texinfo or text
+.. only:: not html
 
    .. rubric:: Summary of |project|
 

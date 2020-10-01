@@ -1,0 +1,54 @@
+\begin{tikzpicture}[x=1.05cm,y=0.7cm]
+
+    \small
+
+    \stacktop{}
+    \separator
+    \cell{\texttt{p3}}        \cellcomL{11(GB)} \coordinate (p3) at (currentcell.east);
+    \separator
+    \cell{\texttt{p2}}        \cellcomL{10(GB)} \coordinate (p2) at (currentcell.east);
+    \separator
+    \cell{\texttt{p1}}        \cellcomL{ 9(GB)} \coordinate (p1) at (currentcell.east);
+    \separator
+    \cell{\texttt{@P3D.diag}} \cellcomL{ 8(GB)}
+    \cell{\texttt{\footnotesize @Object.equals}} \cellcomL{ 7(GB)}
+    \cell{\texttt{3(GB)}}     \cellcomL{ 6(GB)} \coordinate (T1) at (currentcell.east);
+    \separator
+    \cell{\texttt{@P2D.diag}} \cellcomL{ 5(GB)}
+    \cell{\texttt{\footnotesize @Object.equals}} \cellcomL{ 4(GB)}
+    \cell{\texttt{1(GB)}}     \cellcomL{ 3(GB)} \coordinate (T2) at (currentcell.east);
+    \separator
+    \cell{\texttt{\footnotesize @Object.equals}} \cellcomL{ 2(GB)}
+    \cell{\texttt{null}}      \cellcomL{ 1(GB)}
+    \cell[draw=none]{Stack}
+
+    \drawstruct{(5,1)})
+    \structcell{z=2,5}
+    \structcell{y=2,5}
+    \structcell{x=2,5}
+    \structcell{.} \coordinate (O1) at (currentcell.west);
+    \coordinate (O1l) at (currentcell.south);
+
+    \drawstruct{(9,-3)}
+    \structcell{y=1}
+    \structcell{x=1}
+    \structcell{.} \coordinate (O2) at (currentcell.west);
+    \coordinate (O2l) at (currentcell.south);
+
+    \draw[->] (p3) -- (O1);
+    \draw[->] (p2) -- (O1);
+    \draw[->] (p1) -- (O2);
+
+    \draw[->] (O1l) .. controls (O1 |- T1) .. (T1);
+    \draw[->] (O2l) .. controls (O2 |- T2) .. (T2);
+
+    \draw (10,-10) node{Heap};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

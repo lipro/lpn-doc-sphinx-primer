@@ -47,7 +47,7 @@ them more than the surrounding paragraphs.
 
 .. rst:directive:: pull-quote
 
-   :dudir:`Pull-quoted <pull-quotes>` paragraphs are similar to blockquotes
+   :dudir:`Pull-quoted <pull-quotes>` paragraphs are similar to block quotes
    but are directives for small selection of text to "pull out and quote",
    typically in a larger typeface.
 

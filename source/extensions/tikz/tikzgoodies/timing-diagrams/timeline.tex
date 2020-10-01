@@ -1,0 +1,55 @@
+\begin{tikzpicture}
+
+    \draw (-1,1.5)  node[rotate=90] (systemc) {\textsf{\large SystemC}};
+    \draw[dashed] (-1,0) -- (9,0);
+    \draw (-1,-2) node[rotate=90] (jtlm) {\textsf{\large jTLM}};
+
+    % SystemC
+    \tline{A}{2.1};
+    \tcaption{A}{A};
+    \tline{B}{1};
+    \tcaption{B}{B};
+    \ttimeline{A}{5};
+    \ttimeline{B}{5};
+
+    % jTLM
+    \tline{P}{-1.5};
+    \tcaption{P}{P};
+    \tline{Q}{-2.6};
+    \tcaption{Q}{Q};
+    \ttimeline{P}{5};
+    \ttimeline{Q}{5};
+    \ttick{A};
+    \ttextU{A}{f()};
+    \tskiptext{A}{2}{\texttt{\scriptsize wait(20)}};
+    \ttick{A};
+    \tskip{A}{1};
+    \ttick{A};
+    \ttick{B}
+    \tskip{B}{1};
+    \ttick{B};
+    \tskip{B}{1};
+    \ttick{B};
+    \tskip{B}{2};
+    \ttick{B};
+    \ttick{P}
+    \ttextU{P}{g()};
+    \tskiptext{P}{2}{\scriptsize awaitTime}
+    \ttick{P};
+    \tbox{P}{1.5}{h()};
+
+    % just so that the final picture looks pretty
+    \tbox{Q}{1.3}{i()};
+    \tskip{Q}{1};
+    \ttick{Q};
+    \tskip{Q}{.5};
+    \tbox{Q}{2}{j()};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

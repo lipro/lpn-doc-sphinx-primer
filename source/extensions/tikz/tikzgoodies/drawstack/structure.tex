@@ -1,0 +1,44 @@
+\begin{tikzpicture}[x=1.4cm,y=0.7cm]
+
+    \small
+
+    \draw (3, -1) node (Otm) {
+        \begin{tabular}{c}
+            \large{Object}\\\large{vtable}
+        \end{tabular}
+    };
+
+    \drawstruct{(0,0)}
+    \structcell[freecell]{~} \coordinate (Atm) at (currentcell.east);
+    \structcell[freecell]{\texttt{@Object.equals()}}
+    \structcell[freecell]{\texttt{@code A.m()}}
+    \structcell[freecell]{\texttt{@code A.p()}} \coordinate (A) at (currentcell.west);
+    \structname{
+        \begin{tabular}{c}
+            \large{A's vtable}
+        \end{tabular}
+    }
+
+    \drawstruct{(-4,-3)}
+    \structcell[freecell]{} \coordinate (Btm) at (currentcell.east);
+    \structcell[freecell]{\texttt{@Object.equals()}}
+    \structcell[freecell]{\texttt{@code A.m()}}
+    \structcell[freecell]{\texttt{@code B.p()}}
+    \structcell[freecell]{\texttt{@code B.q()}}
+    \structname{
+        \begin{tabular}{c}
+            \large{B's vtable}
+        \end{tabular}
+    }
+
+    \draw[->] (Btm) -- (A);
+    \draw[->] (Atm) -- (Otm);
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

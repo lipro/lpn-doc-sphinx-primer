@@ -1,0 +1,166 @@
+%% tikzlm.sty : Draw TLM diagrams in TikZ
+%% Copyright 2010 Matthieu Moy <Matthieu.Moy@imag.fr>
+% 
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+% http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+% 
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is M. Matthieu Moy.
+
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{tikzlm}[2010/08/06 Draw TLM diagrams in TikZ]
+
+\RequirePackage{tikz}
+\RequirePackage{ifthen}
+
+\usetikzlibrary{shadows}
+
+% Default styles definition.
+\tikzstyle{module}=[top color=yellow!7,bottom color=yellow!80!black!25,shading=axis,shading angle=30, draw=black,drop shadow={shadow xshift=1.5pt,shadow yshift=-1.5pt}]
+\tikzstyle{codebox}=[top color=blue!7,bottom color=blue!80!black!25,
+draw=blue!50!black!50!white, inner sep=0]
+\tikzstyle{socket}=[fill=red!10!white,draw=black]
+\tikzstyle{port}=[fill=white,draw=black]
+\tikzstyle{isocket_bg}=[fill=red!10!white,draw=black]
+\tikzstyle{tsocket_fg}=[fill=red!10!white,draw=black]
+\tikzstyle{isocket_fg}=[fill=red!70!white,draw=black,line width=.3pt]
+\tikzstyle{tsocket_bg}=[fill=blue!30!white!80!black,draw=black,line width=.3pt]
+
+\DeclareOption{nocolor}{
+  \tikzstyle{module}=[fill=white!95!black,draw=black]
+  \tikzstyle{socket}=[fill=white!60!black,draw=black]
+}
+
+\ProcessOptions
+
+\usetikzlibrary{calc}
+
+\pgfdeclarelayer{background layer}
+\pgfdeclarelayer{foreground layer}
+
+\newcommand{\scmodule}[4][minimum width=3cm, minimum height=2cm]{
+  \scmoduleShape{#2}{#3}{#4}{#1}
+}
+
+\newcommand{\tlmbus}[4][minimum width=10cm,minimum height=1cm]{
+  \scmoduleShape{#2}{#3}{#4}{#1}
+}
+
+\newcommand{\scmoduleShape}[4]{
+  \draw #1 node[module,#4] (#2) {#3};
+}
+
+\newcommand{\tlmsocksize}{10pt}
+
+\newcommand{\portorsocket}[3]{
+  \draw (#1) 
+  ++(#2:.5*\tlmsocksize) ++(#2-90:.5*\tlmsocksize) coordinate (#3_oc1)
+  ++(#2+90:.5*\tlmsocksize) coordinate (#3_out)
+  ++(#2+90:.5*\tlmsocksize) coordinate (#3_oc2)
+  ++(#2:-\tlmsocksize) coordinate (#3_ic1)
+  ++(#2-90:.5*\tlmsocksize) coordinate (#3_in)
+  ++(#2-90:.5*\tlmsocksize) coordinate (#3_ic2);
+}
+
+\newcommand{\socket}[4]{
+  \portorsocket{#1}{#2}{#3}
+
+  \draw[#4_bg] (#3_oc1) -- (#3_oc2) -- (#3_ic1) -- (#3_ic2) -- (#3_oc1);
+ 
+  \draw[#4_fg] (#3_out) -- (#3_ic1) -- (#3_ic2) -- (#3_out);
+  
+  % Redraw the border, in case the arrow overwrote it a little.
+  \draw[socket,fill=none] (#3_oc1) -- (#3_oc2) -- (#3_ic1) -- (#3_ic2) -- (#3_oc1);
+}
+
+\newcommand{\scport}[3]{
+  \portorsocket{#1}{#2}{#3}
+
+  \draw[port] (#3_oc1) -- (#3_oc2) -- (#3_ic1) --
+  (#3_ic2) -- (#3_oc1);
+  
+  \draw[->,line width=1pt] (#3_in) -- (#3_out);
+}
+
+\newcommand{\scin}[3]{
+  \scport{#1}{#2+180}{#3}
+  \draw (#3_in) coordinate (#3);
+}
+\newcommand{\scout}[3]{
+  \scport{#1}{#2}{#3}
+  \draw (#3_out) coordinate (#3);
+}
+
+\newcommand{\isocket}[3]{
+  \socket{#1}{#2}{#3}{isocket}
+  \draw (#3_out) coordinate (#3);
+}
+\newcommand{\tsocket}[3]{
+  \socket{#1}{#2}{#3}{tsocket}
+  \draw (#3_in) coordinate (#3);
+}
+
+\newcommand{\vbindbus}[2]{
+  \draw (#1) -- (#1 -| #2.north);
+}
+
+\newcommand{\hbindbus}[2]{
+  \draw (#1) -- (#1 |- #2);
+}
+
+\newcommand{\vbind}[2]{
+  \draw (#1) coordinate (tmpA);
+  \draw (#1 |- #2) coordinate (tmpB);
+  \draw (#1 -| #2) coordinate (tmpC);
+  \draw (#2) coordinate (tmpD);
+  \draw (#1) -- (barycentric cs:tmpA=0.5,tmpB=0.5) -- (barycentric cs:tmpD=0.5,tmpC=0.5) -- (#2);
+}
+
+\newcommand{\hbind}[2]{
+  \draw (#1) coordinate (tmpA);
+  \draw (#1 -| #2) coordinate (tmpB);
+  \draw (#1 |- #2) coordinate (tmpC);
+  \draw (#2) coordinate (tmpD);
+  \draw (#1) -- (barycentric cs:tmpA=0.5,tmpB=0.5) -- (barycentric cs:tmpD=0.5,tmpC=0.5) -- (#2);
+}
+
+\newcommand{\codebox}[2]{
+  \draw (#1) ++(0,-.3) node[codebox] (#1_code) {{\texttt{
+        \begin{tabular}{l}
+#2
+\end{tabular}
+}}};
+}
+
+% draw a memory map
+\tikzstyle{mmap_fill}=[fill=white!90!black]
+\tikzstyle{mmap_text}=[color=white!20!black]
+\tikzstyle{mmap_line}=[draw=white!20!black!80!blue]
+
+\newcommand{\memorymap}[3]{
+  \coordinate (mmap_topleft) at (#1);
+  \def\mmapWidth{#2}
+  \def\mmapHeight{#3}
+  
+  \draw[mmap_line] (mmap_topleft) +(0,.5) -- +(0,\mmapHeight+.5);
+  \draw[mmap_line] (mmap_topleft) +(\mmapWidth,.5) -- +(\mmapWidth,\mmapHeight+.5);
+}
+
+\newcommand{\map}[5]{
+  \draw[mmap_line,mmap_fill] (mmap_topleft) +(0,#1) rectangle +(\mmapWidth,#2);
+  \path (mmap_topleft) +(0, #1) coordinate (mmap_start);
+  \path (mmap_topleft) +(0, #2) coordinate (mmap_stop);
+  \path (mmap_topleft) +(\mmapWidth*.5,.5*#1+.5*#2) coordinate (mmap_text);
+  %\draw [<->] (mmap_start) -- (mmap_stop);
+  \draw[mmap_text] (mmap_start) node[anchor=east]{#3};
+  \draw[mmap_text] (mmap_stop)  node[anchor=east]{#4};
+  \draw[mmap_text] (mmap_text) node{#5};
+}
+

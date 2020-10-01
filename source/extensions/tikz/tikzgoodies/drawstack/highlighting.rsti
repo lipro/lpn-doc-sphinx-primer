@@ -1,0 +1,11 @@
+.. _tikz/tikzgoodies/drawstack/highlighting:
+.. rst-class:: centered
+.. tikz:: Execution stack example with highlighted note
+   :include: /extensions/tikz/tikzgoodies/drawstack/highlighting.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

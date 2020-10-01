@@ -7,7 +7,9 @@
 .. |Docutils|                   replace:: :term:`Docutils`
 .. |LaTeX|                      replace:: :term:`LaTeX`
 .. |PyEnchant|                  replace:: :term:`PyEnchant`
+.. |Pybtex|                     replace:: :term:`Pybtex`
 .. |Pygments|                   replace:: :term:`Pygments`
+.. |ReportLab|                  replace:: :term:`ReportLab`
 .. |reStructuredText|           replace:: :term:`reStructuredText`
 .. |Sphinx|                     replace:: :term:`Sphinx`
 
@@ -16,6 +18,10 @@
 .. Devices:
 
 .. Operating Systems:
+
+.. |POSIX|                      replace:: :term:`POSIX`
+.. |Unix|                       replace:: :term:`Unix`
+.. |Linux|                      replace:: :term:`Linux`
 
 .. Programming Languages:
 
@@ -32,25 +38,42 @@
 
 .. Technologies:
 
+.. |Badges|                     replace:: :term:`Badges`
+.. |badges|                     replace:: :term:`badges<Badges>`
 .. |BibTeX|                     replace:: :term:`BibTeX`
+.. |BPMN|                       replace:: :term:`BPMN`
+.. |CircuiTikZ|                 replace:: :term:`CircuiTikZ`
+.. |CORBA|                      replace:: :term:`CORBA`
 .. |CSS|                        replace:: :term:`CSS`
 .. |Enchant|                    replace:: :term:`Enchant`
+.. |EPUB|                       replace:: :term:`EPUB`
 .. |HTML|                       replace:: :term:`HTML`
+.. |MOF|                        replace:: :term:`MOF`
+.. |OCL|                        replace:: :term:`OCL`
 .. |PDF|                        replace:: :term:`PDF`
 .. |PGF/TikZ|                   replace:: :term:`PGF/TikZ`
 .. |PGF|                        replace:: :term:`PGF`
 .. |PNG|                        replace:: :term:`PNG`
+.. |QVT|                        replace:: :term:`QVT`
 .. |SVG|                        replace:: :term:`SVG`
+.. |SysML|                      replace:: :term:`SysML`
 .. |TikZ|                       replace:: :term:`TikZ`
+.. |TikZ-Timing|                replace:: :term:`TikZ-Timing`
+.. |TikZ-UML|                   replace:: :term:`TikZ-UML`
 .. |TeX|                        replace:: :term:`TeX`
+.. |UML|                        replace:: :term:`UML`
 .. |XML|                        replace:: :term:`XML`
 
 .. Abbreviations:
 
 .. |AI|         replace:: :abbr:`AI (Adobe Illustrator Artwork)`
 .. |ANSI|       replace:: :abbr:`ANSI (American National Standards Institute)`
+.. |API|        replace:: :abbr:`API (Application Programming Interface)`
+.. |AT&T|       replace:: :abbr:`AT&T (American Telephone and Telegraph Company)`
+.. |BibTeXML|   replace:: :abbr:`BibTeXML (BibTeX as XML)`
 .. |BMP|        replace:: :abbr:`BMP (Bitmap Format)`
 .. |CLI|        replace:: :abbr:`CLI (Command Line Interface)`
+.. |COSE|       replace:: :abbr:`COSE (Common Open Software Environment)`
 .. |DIB|        replace:: :abbr:`DIB (Device Independent Bitmap Format)`
 .. |BMP/DIB|    replace:: |BMP|/|DIB|
 .. |DXF|        replace:: :abbr:`DXF (AutoCAD Drawing Exchange Format)`
@@ -59,25 +82,40 @@
 .. |EMF/EMZ|    replace:: |EMF|/|EMZ|
 .. |EPS|        replace:: :abbr:`EPS (Encapsulated PostScript)`
 .. |EPS/PS|     replace:: |EPS|/|PS|
+.. |GE|         replace:: :abbr:`GE (General Electric)`
+.. |FSF|        replace:: :abbr:`FSF (Free Software Foundation)`
+.. |GNU|        replace:: :abbr:`GNU (GNU's Not Unix!)`
 .. |GIF|        replace:: :abbr:`GIF (Graphics Interchange Format)`
 .. |GUI|        replace:: :abbr:`GUI (Graphics User Interface)`
+.. |IDPF|       replace:: :abbr:`IDPF (International Digital Publishing Forum)`
+.. |IEEE|       replace:: :abbr:`IEEE (Institute of Electrical and Electronics Engineers)`
 .. |IEC|        replace:: :abbr:`IEC (International Electrotechnical Commission)`
 .. |ISO|        replace:: :abbr:`ISO (International Organization for Standardization)`
 .. |JPEG|       replace:: :abbr:`JPEG (Joint Photographic Experts Group)`
 .. |JFIF|       replace:: :abbr:`JFIF (JPEG File Interchange Format)`
 .. |JPEG/JFIF|  replace:: |JPEG|/|JFIF|
+.. |LMI|        replace:: :abbr:`LMI (Linux Mark Institute)`
+.. |MIT|        replace:: :abbr:`MIT (Massachusetts Institute of Technology)`
 .. |MS-DOS|     replace:: :abbr:`MS-DOS (Microsoft Disk Operating System)`
+.. |OEB|        replace:: :abbr:`OEB (Open eBook)`
+.. |OMG|        replace:: :abbr:`OMG (Object Management Group)`
 .. |PEP|        replace:: :abbr:`PEP (Python Enhancement Proposal)`
 .. |PS|         replace:: :abbr:`PS (PostScript)`
 .. |RFC|        replace:: :abbr:`RFC (Request for Comments)`
 .. |SMIL|       replace:: :abbr:`SMIL (Synchronized Multimedia Integration Language)`
 .. |SQL|        replace:: :abbr:`SQL (Structured Query Language)`
+.. |SUS|        replace:: :abbr:`SUS (Single UNIX Specification)`
+.. |SystemC|    replace:: :abbr:`SystemC (C++ classes for system-level modeling)`
+.. |SystemC/TLM| replace:: |SystemC|/|TLM|
 .. |TIFF|       replace:: :abbr:`TIFF (Tagged Image File Format)`
+.. |TLM|        replace:: :abbr:`TLM (Transaction Level Modeling)`
 .. |UI|         replace:: :abbr:`UI (User Interface)`
 .. |W3C|        replace:: :abbr:`W3C (World Wide Web Consortium)`
+.. |WWW|        replace:: :abbr:`WWW (World Wide Web)`
 .. |WMF|        replace:: :abbr:`WMF (Windows Metafile Format)`
 .. |WMZ|        replace:: :abbr:`WMZ (Compressed Windows Metafile Format)`
 .. |WMF/WMZ|    replace:: |WMF|/|WMZ|
+.. |YAML|       replace:: :abbr:`YAML (YAML Ain't Markup Language)`
 
 .. Local variables:
    coding: utf-8

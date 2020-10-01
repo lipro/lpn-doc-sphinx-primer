@@ -1,0 +1,11 @@
+.. _tikz/tikzuml/componentdiag:
+.. rst-class:: centered
+.. tikz:: Component diagram example
+   :include: /extensions/tikz/tikzuml/componentdiag.tex
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

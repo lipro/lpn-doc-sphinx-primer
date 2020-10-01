@@ -22,7 +22,7 @@ directive.
    1. Generate sequence-diagram from dot like text (basic feature).
    2. Multilingualism for node-label (utf-8 only).
 
-.. todo:: activate "Sequence Diagram" extension.
+:raw-latex:`\clearpage\phantomsection`
 
 Directive Body Diagram
 **********************
@@ -40,11 +40,11 @@ Directive Body Diagram
          :language: rst
          :linenos:
 
-   .. code-block:: rst
+   :which gives:
 
-      :which gives:
+      .. include:: seqdiag/directive-body/example.rsti
 
-         .. include:: seqdiag/directive-body/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Description Table
 *****************
@@ -56,11 +56,11 @@ Description Table
       :language: rst
       :linenos:
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
+   .. include:: seqdiag/description-table/example.rsti
 
-      .. include:: seqdiag/description-table/example.rsti
+:raw-latex:`\clearpage\phantomsection`
 
 Include Diagram
 ***************
@@ -73,16 +73,14 @@ Include Diagram
       .. seqdiag:: seqdiag/example.diag
          :caption: Style attributes to diagram and edges (Sequence Diagram example)
          :align: center
-         :height: 640
+         :height: 480
 
-.. code-block:: rst
+:which gives:
 
-   :which gives:
-
-      .. seqdiag:: seqdiag/example.diag
-         :caption: Style attributes to diagram and edges (Sequence Diagram example)
-         :align: center
-         :height: 640
+   .. seqdiag:: seqdiag/example.diag
+      :caption: Style attributes to diagram and edges (Sequence Diagram example)
+      :align: center
+      :height: 480
 
 :which needs:
 

@@ -1,0 +1,25 @@
+% In context of the Sphinx TikZ extension we can not use the specific
+% drawstack environment here and have to encapsulate it into a standard
+% tikzpicture environment --> write the full declaration with \stacktop{}
+% at the beginning and \stackbottom{} on the end.
+\begin{tikzpicture}[x=0.7cm,y=0.7cm]
+\stacktop{} % do not remove
+%%  now we on \begin{drawstack}
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \small
+
+    \cell{\scriptsize Uninteresting cell}
+    \cell{Interesting cell} \cellround{Yes, this one!}
+
+%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  now we into \end{drawstack}
+\stackbottom{} % do not remove
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

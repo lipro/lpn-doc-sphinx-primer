@@ -1,0 +1,43 @@
+.. rubric:: |tikzgoodies.timing-diagrams.tit|
+
+:CTAN Package:   `TikZ Goodies Timing-Diagrams Package`_
+:Documentation:  `TikZ Goodies Timing-Diagrams README`_
+:Documentation:  `TikZ Goodies Timing-Diagrams Example`_
+
+|tikzgoodies.timing-diagrams.dsc|
+
+.. pull-quote::
+
+   .. attention::
+
+      You may want to have a look at
+      :ref:`extensions/tikz/tikztiming:TikZ-Timing` too if you want to draw
+      some hardware-oriented timing diagrams.
+
+.. include:: /extensions/tikz/tikzgoodies/timing-diagrams-latex.rsti
+
+.. rubric:: |tikzgoodies.drawstack.tit|
+
+:CTAN Package:   `TikZ Goodies Drawstack Package`_
+:Documentation:  `TikZ Goodies Drawstack README`_
+:Documentation:  `TikZ Goodies Drawstack Example`_
+
+|tikzgoodies.drawstack.dsc|
+
+.. include:: /extensions/tikz/tikzgoodies/drawstack-latex.rsti
+
+.. rubric:: |tikzgoodies.tikzlm.tit|
+
+:Documentation:  `TikZ Goodies TikzLM README`_
+:Documentation:  `TikZ Goodies TikzLM Example`_ (:file:`tikzlm-example.pdf`)
+
+|tikzgoodies.tikzlm.dsc|
+
+.. include:: /extensions/tikz/tikzgoodies/tikzlm-latex.rsti
+
+.. Local variables:
+   coding: utf-8
+   mode: text
+   mode: rst
+   End:
+   vim: fileencoding=utf-8 filetype=rst :

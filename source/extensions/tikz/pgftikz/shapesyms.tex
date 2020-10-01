@@ -1,0 +1,123 @@
+\begin{tikzpicture}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+\tikzset{
+    pics/trident/.style={
+        code={
+            \draw[->] (0,0) -- (45:0.5);
+            \draw[->] (0,0) -- (0:{0.5/sqrt(2)});
+            \draw[->] (0,0) -- (-45:0.5);
+            \fill(0,0) circle[radius=2pt];
+        }
+    },
+    >={Triangle},
+    circ/.style={
+        circle,
+        draw,
+        minimum size=1.6em,
+        inner sep=1pt
+    },
+    truncated/.style={
+        path picture={
+            \draw ([xshift=-#1]path picture bounding box.north)
+               -- ([xshift=-#1]path picture bounding box.south)
+                  ([xshift=#1]path picture bounding box.north)
+               -- ([xshift=#1]path picture bounding box.south);
+        }
+    },
+    truncated/.default=1ex,
+    Dotted/.style={% https://tex.stackexchange.com/a/101263/194703
+        line cap=round,
+        dash pattern=on 0pt off 4.5\pgflinewidth,
+        shorten >=1ex,
+        shorten <=1ex
+    }
+}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+\begin{scope}[local bounding box=fit]
+    \node[circ] (i) {$\boldsymbol{i}$};
+    \draw[<-] (i)
+        -- ++ (160:1.2) coordinate (aux1);
+    \draw[<-] (i)
+        -- ++ (-160:1.2) coordinate (aux2);
+    \draw[thick] (i)
+        -- ++ (20:1.2) coordinate (aux3) pic[pos=1,sloped,thin]{trident};
+    \draw[thick] (i)
+        -- ++ (-20:1.2) coordinate (aux4) pic[pos=1,sloped,thin]{trident};
+    \path (aux1)
+        -- node(Ini){In$(i)$} (aux2) (aux3)
+        -- node{Out$(i)$}     (aux4) (aux3)
+        ++ (0,0.7) coordinate (aux6);
+    \node[below=1.1cm of Ini,circ](lc1){$\phantom{i}$};
+    \draw[thick] (lc1)
+        -- node[above]{$e$} node[below=0.5ex]{$U_eR_e$}
+        ++ (00:1) coordinate(aux5) pic[pos=1,sloped,thin]{trident};
+    \path coordinate[right=7mm of aux5] (lc2)
+           node[above=0.4em of lc2,circ](lc3){$\phantom{i}$}
+           node[below=0.4em of lc2,circ](lc4){$\phantom{i}$}; 
+\end{scope}
+
+\begin{scope}[on background layer]
+    \node[%Network cloud
+        cloud,cloud puffs=6,draw,
+        fit=(fit),fill=white,inner sep=-1em,
+        label=above:Network
+    ] (cloud) {};
+\end{scope}
+
+\path (cloud.20)
+    -- ++ (20:1.5)   node[circ](1) {$\boldsymbol{1}$}
+                     coordinate[pos=0.4] (auxTR)
+                     node[above=1em]{Sinks $\mathcal{T}$};
+\draw[->] (cloud) -- (1);
+\path (cloud.0)
+    -- ++ (0:1.5)    node[circ](t) {$\boldsymbol{t}$}
+                     node[right=1em]{$\boldsymbol{Y}_{\beta(t)}$};
+\draw[->] (cloud) -- (t);
+\path (cloud.-20)
+    -- ++ (-20:1.5)  node[circ,truncated=1.1ex](T) {$\mathcal{T}$}
+                     coordinate[pos=0.4] (auxBR);
+\draw[->] (cloud) -- (T);
+
+\draw[line width=1.8pt,Dotted] (auxTR) -- (auxBR);
+
+\path (cloud.160)
+    -- ++ (160:1.5)  node[circ](1') {$\boldsymbol{1}$}
+                     node[above=1em]{Sources $\mathcal{T}$}
+                     coordinate[pos=0.5] (auxTL) ;
+\draw (1'.-20)
+    -- ++ (-20:0.7)  pic[pos=1,sloped]{trident};
+\path (cloud.180)
+    -- ++ (180:1.7)  node[circ](s) {$\boldsymbol{s}$}
+                     node[left=1em]{$Y_s$};
+\draw (s.00)
+    -- ++ (00:0.7)   pic[pos=1,sloped]{trident};
+\path (cloud.-160)
+    -- ++ (-160:1.5) node[circ,truncated=1.1ex](S) {$\mathcal{S}$}
+                     coordinate[pos=0.5] (auxBL)  ;
+\draw (S.20)
+    -- ++ (20:0.7)  pic[pos=1,sloped]{trident};
+
+\draw[line width=1.8pt,Dotted] (auxTL) -- (auxBL);
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

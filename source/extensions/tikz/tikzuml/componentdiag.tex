@@ -1,0 +1,49 @@
+\begin{tikzpicture}
+
+    \begin{umlcomponent}{A} % component-A
+        \umlbasiccomponent{B} % component-B
+        \umlbasiccomponent[y=-2]{C} % component-C
+        \umlrequiredinterface[interface=C-interface]{C} % interface-C
+        \umlprovidedinterface[interface=B-interface, with port, distance=3cm, padding=2.5cm]{B} % interface-B
+    \end{umlcomponent}
+
+    \umlbasiccomponent[x=-9,y=1]{D} % component-D
+    \umlbasiccomponent[x=3.5,y=-7.5]{E} % component-E
+    \umlbasiccomponent[x=-2, y=-9]{F} % component-F
+    \umlbasiccomponent[x=-8,y=-8]{G} % component-G
+    \umlbasiccomponent[x=-8,y=-11]{H} % component-H
+
+    \umlassemblyconnector[interface=DA, with port, name=toto]{D}{A} % interface-DA
+    \umldelegateconnector{A-west-port}{B-west-interface}
+    \umlVHVassemblyconnector[interface=AE, with port]{A}{E} % interface-AE
+    \umlHVHassemblyconnector[interface=EF, with port, first arm]{E}{F} % interface-EF
+    \umlHVHassemblyconnector[interface=GHF, with port, arm2=-2cm, last arm]{G}{F} % interface-GHF
+    \umlHVHassemblyconnector[with port, arm2=-2cm, last arm]{H}{F}
+
+    \umlnote[x=-4, y=4, width=3.5cm]{B-west-interface}{
+        \footnotesize{I am the node named B-west-interface}
+    }
+    \umlnote[x=2, y=4, width=3.5cm]{C-east-interface}{
+        \footnotesize{I am the node named C-east-interface}
+    }
+    \umlnote[x=-9, y=-2, width=3.0cm]{toto-interface}{
+        \footnotesize{I am the node named toto-interface}
+    }
+    \umlnote[x=-6, y=-4.5, width=3.5cm]{A-south-port}{
+        \footnotesize{I am the node named A-south-port}
+    }
+    \umlnote[x=-1.5, y=-6, width=3.5cm]{AE-interface}{
+        \footnotesize{I am the node named AE-interface}
+    }
+    \umlnote[x=2, y=-11, width=3.5cm]{F-east-port}{
+        \footnotesize{I am the node named F-east-port}
+    }
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

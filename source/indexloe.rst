@@ -1,6 +1,6 @@
-.. Don't change this file.
-
 :topic: List of Equations
+
+.. Don't change this file.
 
 .. index:: pair: List of Equations; Li-Pro.Net Sphinx Primer
    :name: ldsp-listofequations

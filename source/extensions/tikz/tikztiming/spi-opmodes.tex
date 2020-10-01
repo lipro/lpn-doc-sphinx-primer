@@ -1,0 +1,49 @@
+\begin{tikztimingtable}
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% My Customized Styles
+%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Drawing
+%%
+
+CPOL =0  & LL 15{ T} LL \\
+CPOL =1  & HH 15{ T} HH \\
+         &  H 17L H \\
+Cycle \# & U R     [fill=red!25]8{2 Q}    [fill=gray]2U \\
+    MISO & D{z} R  [fill=yellow!25]8{2 Q} [fill=white]2D{z} \\
+    MOSI & D{z} R  [fill=yellow!25]8{2 Q} [fill=white]2D{z} \\
+Cycle \# & UU R    [fill=blue!25]8{2 Q}   [fill=gray]U \\
+    MISO & D{z}U R [fill=yellow!25]8{2 Q} [fill=white]D{z} \\
+    MOSI & D{z}U R [fill=yellow!25]8{2 Q} [fill=white]D{z} \\
+\extracode
+   % Add vertical lines in two colors
+    \begin{pgfonlayer}{background}
+        \begin{scope}[semitransparent,semithick]
+            \vertlines[red!50]{2.1,4.1,...,17.1}
+            \vertlines[blue!50]{3.1,5.1,...,17.1}
+        \end{scope}
+    \end{pgfonlayer}
+    % Add big group labels
+    \begin{scope}[font =\sffamily \Large ,shift={(-6em,-0.5)},anchor=east]
+        \node at (0,0){SCK};
+        \node at (0,-3){SS};
+        \node at (1ex,-8){CPHA=0}; 
+        \node at (1ex,-14){CPHA =1};
+        \end{scope}
+
+%%
+%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikztimingtable}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :

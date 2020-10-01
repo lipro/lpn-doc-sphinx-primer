@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=.7]
+
+    \tline{sc}{2};
+    \tcaption{sc}{SystemC};
+
+    \tline{ace}{0};
+    \tcaption{ace}{P/T Solver};
+
+    \draw (currentace) ++ (9,-.3) node {Simulated time};
+
+    \ttimeline{sc}{10};
+    \ttimeline{ace}{10};
+
+    \tbox{sc}{1}{(1)};
+    \ttextarrowU{sc}{end of instant $t_{i}$};
+    \tcatchup{ace}{sc};
+    \coordinate (sceoi) at (currentscL);
+
+    \tskip{sc}{6};
+    \ttick{sc};
+    \ttextarrowU{sc}{next instant $t_{i+1}$};
+
+    \tarrowCoord{(sceoi)}{(currentaceU)}{};
+    \draw (tmpmid) node[anchor=east] {(2)};
+    \tbox{ace}{6}{non-functional simu (3)};
+    % \tcalloutL{ace}{No IT};
+    \ttick{sc};
+    \tarrowLU{ace}{sc}{};
+    \draw (tmpmid) node[anchor=west] {(4)};
+    % \tcalloutU{sc}{Continue};
+    \tbox{sc}{1}{...};
+
+\end{tikzpicture}
+
+%Local variables:
+% coding: utf-8
+% mode: text
+% mode: rst
+% End:
+% vim: fileencoding=utf-8 filetype=tex :
