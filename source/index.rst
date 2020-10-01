@@ -1,9 +1,9 @@
+:topic: |project|
+
 .. Li-Pro.Net Sphinx Primer documentation master file, created by
    sphinx-quickstart on Sat Sep  5 12:37:04 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-
-:topic: |project|
 
 .. _home:
 

@@ -1,6 +1,6 @@
-.. Don't change this file, instead edit content in the .bib files.
-
 :topic: Bibliography
+
+.. Don't change this file, instead edit content in the .bib files.
 
 .. index::
    pair: Bibliography; Li-Pro.Net Sphinx Primer

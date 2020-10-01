@@ -1,7 +1,7 @@
+:topic: Glossary
+
 .. Don't add content to this file, instead edit content in files:
    glossary/*.rst
-
-:topic: Glossary
 
 :raw-latex:`\cleardoublepage\phantomsection`
 
