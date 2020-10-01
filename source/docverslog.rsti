@@ -10,8 +10,9 @@
    :widths: 10, 50, 20, 20
    :stub-columns: 1
 
-   '0.0.4', 'initial content in chapters "Concepts"', '|slz|', '2020-09-14'
-   '0.0.3', 'initial content in chapters "Extensions"', '|slz|', '2020-09-11'
+   '0.0.5', 'extended content in chapter "Extensions", template finetuning, extend local extension', '|slz|', '2020-10-01'
+   '0.0.4', 'initial content in chapter "Concepts"', '|slz|', '2020-09-14'
+   '0.0.3', 'initial content in chapter "Extensions"', '|slz|', '2020-09-11'
    '0.0.2', 'initial content in chapters "Cheat Sheet" and "Themes"', '|slz|', '2020-09-08'
    '0.0.1', 'base document skeleton', '|slz|', '2020-09-08'
    '0.0', 'preliminary, project created', '|slz|', '2020-09-05'
